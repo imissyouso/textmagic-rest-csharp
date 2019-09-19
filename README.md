@@ -9,32 +9,30 @@ https://www.textmagic.com/docs/api/
 
 All these commands can be executed only if you provide a valid username and API password in your requests.
 
-    For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
+For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
 
 ## Frameworks supported
-        - .NET 4.0 or later
-        - Windows Phone 7.1 (Mango)
+- .NET 4.0 or later
+- Windows Phone 7.1 (Mango)
 
 ## Dependencies
-    - [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
-    - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
-    - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
+- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
+- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
 
-    The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
-    ```
-    Install-Package RestSharp
-    Install-Package Newtonsoft.Json
-    Install-Package JsonSubTypes
-    ```
+The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
+```
+Install-Package RestSharp
+Install-Package Newtonsoft.Json
+Install-Package JsonSubTypes
+```
 
-    NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
+NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-
 Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextmagicRest/1.0.0/).
 
 ## Getting Started
-
 ```csharp
 using System;
 using System.IO;
