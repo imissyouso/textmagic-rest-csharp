@@ -20,8 +20,8 @@
         <!-- The description can be used in package manager UI. Note that the
              nuget.org gallery uses information you add in the portal. -->
         <description>A library generated from a Swagger doc</description>
-        <copyright>http://swagger.io/terms/</copyright>
-        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+            <copyright>http://swagger.io/terms/</copyright>
+            <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
 
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
@@ -35,8 +35,6 @@
     <files>
 
         <!-- A readme.txt will be displayed when the package is installed -->
-        <file src="..\..\README.md" target="" />
-        <file src="..\..\docs\**\*.*" target="docs" />
-
+        <file src="README.md" target="" />
     </files>
 </package>
