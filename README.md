@@ -30,7 +30,7 @@ Install-Package JsonSubTypes
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextmagicRest/1.0.0/).
+Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextmagicRest/2.0.315/).
 
 ## Getting Started
 ```csharp

@@ -3,25 +3,25 @@
     <metadata>
         <!-- The identifier that must be unique within the hosting gallery -->
         <id>$id$</id>
-        <title>Swagger Library</title>
+        <title>TextMagic - REST API Client</title>
 
         <!-- The package version number that is used when resolving dependencies -->
         <version>$version$</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
-        <authors>$author$</authors>
+        <authors>andrey.v@textmagic.biz</authors>
 
         <!-- Owners are typically nuget.org identities that allow gallery
              users to earily find other packages by the same owners.  -->
-        <owners>$author$</owners>
+        <owners>andrey.v@textmagic.biz</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
 
         <!-- The description can be used in package manager UI. Note that the
              nuget.org gallery uses information you add in the portal. -->
-        <description>A library generated from a Swagger doc</description>
-            <copyright>http://swagger.io/terms/</copyright>
-            <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+        <description>TextMagic REST API Library</description>
+        <copyright>Copyright ©  2019 TextMagic Ltd</copyright>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
 
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
