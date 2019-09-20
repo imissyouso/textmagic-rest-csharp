@@ -5,10 +5,6 @@ This library provides you with an easy solution to send SMS and receive replies 
 ## What is TextMagic?
 TextMagic's application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
 
-https://www.textmagic.com/docs/api/
-
-All these commands can be executed only if you provide a valid username and API password in your requests.
-
 For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
 
 ## Frameworks supported
@@ -30,7 +26,7 @@ Install-Package JsonSubTypes
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.317/).
+Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.318/).
 
 ## Getting Started
 ```csharp
