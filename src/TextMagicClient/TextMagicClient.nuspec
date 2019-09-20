@@ -23,6 +23,8 @@
         <copyright>Copyright ©  2019 TextMagic Ltd</copyright>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
 
+        <projectUrl>https://github.com/textmagic/textmagic-rest-csharp</projectUrl>
+
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
 
