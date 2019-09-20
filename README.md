@@ -1,6 +1,6 @@
-# TextMagic C# SDK
+# TextMagic C# / .Net SDK
 
-This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your C# / .NET application.
+This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your C# / .Net application.
 
 ## What is TextMagic?
 TextMagic's application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
@@ -26,9 +26,9 @@ Install-Package JsonSubTypes
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.320/).
+Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.322/).
 
-## Getting Started
+## C# usage example
 ```csharp
 using System;
 using System.IO;
@@ -101,6 +101,64 @@ namespace ExampleApp
         }
     }
 }
+```
+
+## VB.Net usage example
+
+```vb
+Imports System
+Imports System.IO
+Imports TextMagicClient.Api
+Imports TextMagicClient.Client
+Imports TextMagicClient.Model
+
+Module Program
+    Sub Main(args As String())
+        Configuration.Default.Username = "YOUR_USERNAME"
+        Configuration.Default.Password = "YOUR_PASSWORD"
+        Configuration.Default.BasePath = "https://rest.textmagic.com"
+
+        Dim apiInstance = New TextMagicApi()
+
+        ' Simple Ping request sample
+        Try
+            Dim result = apiInstance.Ping()
+            Console.WriteLine(result.Ping)
+            Catch ex As Exception
+            Console.WriteLine("Exception when calling TextMagicApi.Ping: " + ex.Message )
+        End Try
+
+        ' Send a new message request sample
+        Try
+            Dim sendMessageInputObject = New SendMessageInputObject With {
+            .Text = "I love TextMagic!",
+            .Phones = "+199988887766"
+            }
+            Dim result = apiInstance.SendMessage(sendMessageInputObject)
+            Console.WriteLine(result.Id)
+        Catch e As Exception
+            Console.WriteLine("Exception when calling TextMagicApi.SendMessage: " & e.Message)
+        End Try
+
+        ' Get all outgoing messages sample
+        Try
+            Dim result = apiInstance.GetAllOutboundMessages(1, 10)
+            Console.WriteLine(result.Resources(0).Id)
+        Catch e As Exception
+            Console.WriteLine("Exception when calling TextMagicApi.GetAllOutboundMessages: " & e.Message)
+        End Try
+
+        ' Upload list avatar sample, 3223 here is a sample list id
+        Try
+            Dim stream = File.Open("/CustomPath/Images/test.png", FileMode.Open)
+            Dim result = apiInstance.UploadListAvatar(stream, 3223)
+            Console.WriteLine(result.Href)
+        Catch e As Exception
+            Console.WriteLine("Exception when calling TextMagicApi.UploadListAvatar: " & e.Message)
+        End Try
+    End Sub
+End Module
+
 ```
 
 ## License
