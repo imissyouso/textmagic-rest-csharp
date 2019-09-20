@@ -1,4 +1,4 @@
-# TextMagicClient - the C# library for the TextMagic API Documentation
+# TextMagic C# SDK
 
 This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your C# / .NET application.
 
@@ -30,7 +30,7 @@ Install-Package JsonSubTypes
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.316/).
+Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.317/).
 
 ## Getting Started
 ```csharp
