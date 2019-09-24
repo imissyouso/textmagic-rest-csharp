@@ -6,7 +6,7 @@
         <title>TextMagic - REST API Client</title>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>#VERSION#</version>
+        <version>$version$</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>andrey.v@textmagic.biz</authors>
