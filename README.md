@@ -1,9 +1,9 @@
 # TextMagic C# / .Net SDK
 
-This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your C# / .Net application.
+This library provides you with an easy way to send SMS and receive replies, by integrating the TextMagic SMS Gateway into your C# / .Net application.
 
-## What is TextMagic?
-TextMagic's application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
+## What Is TextMagic?
+TextMagic’s application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
 
 For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
 
@@ -16,17 +16,17 @@ For detailed documentation, please visit [http://docs.textmagictesting.com/](htt
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
 
-The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
+The DLLs included in the package may not be the latest versions. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package RestSharp
 Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
 ```
 
-NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
+NOTE: RestSharp versions later than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.400/).
+Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.401/).
 
 ## C# usage example
 ```csharp
