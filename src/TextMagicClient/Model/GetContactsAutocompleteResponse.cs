@@ -28,228 +28,16 @@ namespace TextMagicClient.Model
     /// GetContactsAutocompleteResponse
     /// </summary>
     [DataContract]
-    public partial class GetContactsAutocompleteResponse :  IEquatable<GetContactsAutocompleteResponse>, IValidatableObject
+    public partial class GetContactsAutocompleteResponse : List<GetContactsAutocompleteResponse>,  IEquatable<GetContactsAutocompleteResponse>, IValidatableObject
     {
-        /// <summary>
-        /// Defines EntityType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EntityTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum List for value: list
-            /// </summary>
-            [EnumMember(Value = "list")]
-            List = 1,
-            
-            /// <summary>
-            /// Enum Contact for value: contact
-            /// </summary>
-            [EnumMember(Value = "contact")]
-            Contact = 2,
-            
-            /// <summary>
-            /// Enum Reply for value: reply
-            /// </summary>
-            [EnumMember(Value = "reply")]
-            Reply = 3
-        }
-
-        /// <summary>
-        /// Gets or Sets EntityType
-        /// </summary>
-        [DataMember(Name="entityType", EmitDefaultValue=false)]
-        public EntityTypeEnum EntityType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="GetContactsAutocompleteResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected GetContactsAutocompleteResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GetContactsAutocompleteResponse" /> class.
-        /// </summary>
-        /// <param name="entityId">Id of entity. 0 if object is a Reply (required).</param>
-        /// <param name="entityType">entityType (required).</param>
-        /// <param name="value">Id of contact/list if entityType is contact/list OR phone number if entityType is reply (required).</param>
-        /// <param name="label">Name of the contact/list if entityType is contact/list OR phone number if entityType is reply (required).</param>
-        /// <param name="sharedBy">If contact or list was shared by another user then name if this user will be shown (required).</param>
-        /// <param name="avatar">avatar (required).</param>
-        /// <param name="favorited">If contact was marked as favourited (required).</param>
-        /// <param name="userId">Owner id of the contact/list (if it was shared) (required).</param>
-        /// <param name="countryName">countryName (required).</param>
-        /// <param name="qposition">qposition (required).</param>
-        /// <param name="rposition">rposition (required).</param>
-        public GetContactsAutocompleteResponse(int? entityId = default(int?), EntityTypeEnum entityType = default(EntityTypeEnum), string value = default(string), string label = default(string), string sharedBy = default(string), string avatar = default(string), bool? favorited = default(bool?), int? userId = default(int?), string countryName = default(string), int? qposition = default(int?), int? rposition = default(int?))
+        public GetContactsAutocompleteResponse() : base()
         {
-            // to ensure "entityId" is required (not null)
-            if (entityId == null)
-            {
-                throw new InvalidDataException("entityId is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.EntityId = entityId;
-            }
-            // to ensure "entityType" is required (not null)
-            if (entityType == null)
-            {
-                throw new InvalidDataException("entityType is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.EntityType = entityType;
-            }
-            // to ensure "value" is required (not null)
-            if (value == null)
-            {
-                throw new InvalidDataException("value is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Value = value;
-            }
-            // to ensure "label" is required (not null)
-            if (label == null)
-            {
-                throw new InvalidDataException("label is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Label = label;
-            }
-            // to ensure "sharedBy" is required (not null)
-            if (sharedBy == null)
-            {
-                throw new InvalidDataException("sharedBy is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.SharedBy = sharedBy;
-            }
-            // to ensure "avatar" is required (not null)
-            if (avatar == null)
-            {
-                throw new InvalidDataException("avatar is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Avatar = avatar;
-            }
-            // to ensure "favorited" is required (not null)
-            if (favorited == null)
-            {
-                throw new InvalidDataException("favorited is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Favorited = favorited;
-            }
-            // to ensure "userId" is required (not null)
-            if (userId == null)
-            {
-                throw new InvalidDataException("userId is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.UserId = userId;
-            }
-            // to ensure "countryName" is required (not null)
-            if (countryName == null)
-            {
-                throw new InvalidDataException("countryName is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.CountryName = countryName;
-            }
-            // to ensure "qposition" is required (not null)
-            if (qposition == null)
-            {
-                throw new InvalidDataException("qposition is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Qposition = qposition;
-            }
-            // to ensure "rposition" is required (not null)
-            if (rposition == null)
-            {
-                throw new InvalidDataException("rposition is a required property for GetContactsAutocompleteResponse and cannot be null");
-            }
-            else
-            {
-                this.Rposition = rposition;
-            }
         }
         
-        /// <summary>
-        /// Id of entity. 0 if object is a Reply
-        /// </summary>
-        /// <value>Id of entity. 0 if object is a Reply</value>
-        [DataMember(Name="entityId", EmitDefaultValue=false)]
-        public int? EntityId { get; set; }
-
-
-        /// <summary>
-        /// Id of contact/list if entityType is contact/list OR phone number if entityType is reply
-        /// </summary>
-        /// <value>Id of contact/list if entityType is contact/list OR phone number if entityType is reply</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
-
-        /// <summary>
-        /// Name of the contact/list if entityType is contact/list OR phone number if entityType is reply
-        /// </summary>
-        /// <value>Name of the contact/list if entityType is contact/list OR phone number if entityType is reply</value>
-        [DataMember(Name="label", EmitDefaultValue=false)]
-        public string Label { get; set; }
-
-        /// <summary>
-        /// If contact or list was shared by another user then name if this user will be shown
-        /// </summary>
-        /// <value>If contact or list was shared by another user then name if this user will be shown</value>
-        [DataMember(Name="sharedBy", EmitDefaultValue=false)]
-        public string SharedBy { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Avatar
-        /// </summary>
-        [DataMember(Name="avatar", EmitDefaultValue=false)]
-        public string Avatar { get; set; }
-
-        /// <summary>
-        /// If contact was marked as favourited
-        /// </summary>
-        /// <value>If contact was marked as favourited</value>
-        [DataMember(Name="favorited", EmitDefaultValue=false)]
-        public bool? Favorited { get; set; }
-
-        /// <summary>
-        /// Owner id of the contact/list (if it was shared)
-        /// </summary>
-        /// <value>Owner id of the contact/list (if it was shared)</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public int? UserId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CountryName
-        /// </summary>
-        [DataMember(Name="countryName", EmitDefaultValue=false)]
-        public string CountryName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Qposition
-        /// </summary>
-        [DataMember(Name="qposition", EmitDefaultValue=false)]
-        public int? Qposition { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Rposition
-        /// </summary>
-        [DataMember(Name="rposition", EmitDefaultValue=false)]
-        public int? Rposition { get; set; }
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -258,17 +46,7 @@ namespace TextMagicClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GetContactsAutocompleteResponse {\n");
-            sb.Append("  EntityId: ").Append(EntityId).Append("\n");
-            sb.Append("  EntityType: ").Append(EntityType).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  Label: ").Append(Label).Append("\n");
-            sb.Append("  SharedBy: ").Append(SharedBy).Append("\n");
-            sb.Append("  Avatar: ").Append(Avatar).Append("\n");
-            sb.Append("  Favorited: ").Append(Favorited).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  CountryName: ").Append(CountryName).Append("\n");
-            sb.Append("  Qposition: ").Append(Qposition).Append("\n");
-            sb.Append("  Rposition: ").Append(Rposition).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,7 +55,7 @@ namespace TextMagicClient.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -302,62 +80,7 @@ namespace TextMagicClient.Model
             if (input == null)
                 return false;
 
-            return 
-                (
-                    this.EntityId == input.EntityId ||
-                    (this.EntityId != null &&
-                    this.EntityId.Equals(input.EntityId))
-                ) && 
-                (
-                    this.EntityType == input.EntityType ||
-                    (this.EntityType != null &&
-                    this.EntityType.Equals(input.EntityType))
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
-                ) && 
-                (
-                    this.Label == input.Label ||
-                    (this.Label != null &&
-                    this.Label.Equals(input.Label))
-                ) && 
-                (
-                    this.SharedBy == input.SharedBy ||
-                    (this.SharedBy != null &&
-                    this.SharedBy.Equals(input.SharedBy))
-                ) && 
-                (
-                    this.Avatar == input.Avatar ||
-                    (this.Avatar != null &&
-                    this.Avatar.Equals(input.Avatar))
-                ) && 
-                (
-                    this.Favorited == input.Favorited ||
-                    (this.Favorited != null &&
-                    this.Favorited.Equals(input.Favorited))
-                ) && 
-                (
-                    this.UserId == input.UserId ||
-                    (this.UserId != null &&
-                    this.UserId.Equals(input.UserId))
-                ) && 
-                (
-                    this.CountryName == input.CountryName ||
-                    (this.CountryName != null &&
-                    this.CountryName.Equals(input.CountryName))
-                ) && 
-                (
-                    this.Qposition == input.Qposition ||
-                    (this.Qposition != null &&
-                    this.Qposition.Equals(input.Qposition))
-                ) && 
-                (
-                    this.Rposition == input.Rposition ||
-                    (this.Rposition != null &&
-                    this.Rposition.Equals(input.Rposition))
-                );
+            return base.Equals(input);
         }
 
         /// <summary>
@@ -368,29 +91,7 @@ namespace TextMagicClient.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.EntityId != null)
-                    hashCode = hashCode * 59 + this.EntityId.GetHashCode();
-                if (this.EntityType != null)
-                    hashCode = hashCode * 59 + this.EntityType.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
-                if (this.SharedBy != null)
-                    hashCode = hashCode * 59 + this.SharedBy.GetHashCode();
-                if (this.Avatar != null)
-                    hashCode = hashCode * 59 + this.Avatar.GetHashCode();
-                if (this.Favorited != null)
-                    hashCode = hashCode * 59 + this.Favorited.GetHashCode();
-                if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
-                if (this.CountryName != null)
-                    hashCode = hashCode * 59 + this.CountryName.GetHashCode();
-                if (this.Qposition != null)
-                    hashCode = hashCode * 59 + this.Qposition.GetHashCode();
-                if (this.Rposition != null)
-                    hashCode = hashCode * 59 + this.Rposition.GetHashCode();
+                int hashCode = base.GetHashCode();
                 return hashCode;
             }
         }

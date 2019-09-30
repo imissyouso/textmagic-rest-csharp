@@ -704,7 +704,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetAllBulkSessions(page, limit);
-            //Assert.IsInstanceOf<GetAllBulkSessionsResponse> (response, "response is GetAllBulkSessionsResponse");
+            //Assert.IsInstanceOf<GetAllBulkSessionsPaginatedResponse> (response, "response is GetAllBulkSessionsPaginatedResponse");
         }
         
         /// <summary>
@@ -721,7 +721,7 @@ namespace TextMagicClient.Test
             //int? voice = null;
             //int? flat = null;
             //var response = instance.GetAllChats(status, page, limit, orderBy, voice, flat);
-            //Assert.IsInstanceOf<GetAllChatsResponse> (response, "response is GetAllChatsResponse");
+            //Assert.IsInstanceOf<GetAllChatsPaginatedResponse> (response, "response is GetAllChatsPaginatedResponse");
         }
         
         /// <summary>
@@ -736,7 +736,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetAllInboundMessages(page, limit, orderBy, direction);
-            //Assert.IsInstanceOf<GetAllInboundMessagesResponse> (response, "response is GetAllInboundMessagesResponse");
+            //Assert.IsInstanceOf<GetAllInboundMessagesPaginatedResponse> (response, "response is GetAllInboundMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -749,7 +749,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetAllMessageSessions(page, limit);
-            //Assert.IsInstanceOf<GetAllMessageSessionsResponse> (response, "response is GetAllMessageSessionsResponse");
+            //Assert.IsInstanceOf<GetAllMessageSessionsPaginatedResponse> (response, "response is GetAllMessageSessionsPaginatedResponse");
         }
         
         /// <summary>
@@ -763,7 +763,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //int? lastId = null;
             //var response = instance.GetAllOutboundMessages(page, limit, lastId);
-            //Assert.IsInstanceOf<GetAllOutboundMessagesResponse> (response, "response is GetAllOutboundMessagesResponse");
+            //Assert.IsInstanceOf<GetAllOutboundMessagesPaginatedResponse> (response, "response is GetAllOutboundMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -779,7 +779,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetAllScheduledMessages(page, limit, status, orderBy, direction);
-            //Assert.IsInstanceOf<GetAllScheduledMessagesResponse> (response, "response is GetAllScheduledMessagesResponse");
+            //Assert.IsInstanceOf<GetAllScheduledMessagesPaginatedResponse> (response, "response is GetAllScheduledMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -792,7 +792,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetAllTemplates(page, limit);
-            //Assert.IsInstanceOf<GetAllTemplatesResponse> (response, "response is GetAllTemplatesResponse");
+            //Assert.IsInstanceOf<GetAllTemplatesPaginatedResponse> (response, "response is GetAllTemplatesPaginatedResponse");
         }
         
         /// <summary>
@@ -856,7 +856,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetBlockedContacts(page, limit, query, orderBy, direction);
-            //Assert.IsInstanceOf<GetBlockedContactsResponse> (response, "response is GetBlockedContactsResponse");
+            //Assert.IsInstanceOf<GetBlockedContactsPaginatedResponse> (response, "response is GetBlockedContactsPaginatedResponse");
         }
         
         /// <summary>
@@ -890,7 +890,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetCallsPrices();
-            //Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+            //Assert.IsInstanceOf<GetCallsPricesResponse> (response, "response is GetCallsPricesResponse");
         }
         
         /// <summary>
@@ -935,7 +935,7 @@ namespace TextMagicClient.Test
             //string direction = null;
             //int? voice = null;
             //var response = instance.GetChatMessages(id, page, limit, query, start, end, direction, voice);
-            //Assert.IsInstanceOf<GetChatMessagesResponse> (response, "response is GetChatMessagesResponse");
+            //Assert.IsInstanceOf<GetChatMessagesPaginatedResponse> (response, "response is GetChatMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -1009,7 +1009,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetContactNotes(id, page, limit);
-            //Assert.IsInstanceOf<GetContactNotesResponse> (response, "response is GetContactNotesResponse");
+            //Assert.IsInstanceOf<GetContactNotesPaginatedResponse> (response, "response is GetContactNotesPaginatedResponse");
         }
         
         /// <summary>
@@ -1025,7 +1025,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetContacts(page, limit, shared, orderBy, direction);
-            //Assert.IsInstanceOf<GetContactsResponse> (response, "response is GetContactsResponse");
+            //Assert.IsInstanceOf<GetContactsPaginatedResponse> (response, "response is GetContactsPaginatedResponse");
         }
         
         /// <summary>
@@ -1039,7 +1039,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //int? lists = null;
             //var response = instance.GetContactsAutocomplete(query, limit, lists);
-            //Assert.IsInstanceOf<List<GetContactsAutocompleteResponse>> (response, "response is List<GetContactsAutocompleteResponse>");
+            //Assert.IsInstanceOf<GetContactsAutocompleteResponse> (response, "response is GetContactsAutocompleteResponse");
         }
         
         /// <summary>
@@ -1055,7 +1055,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetContactsByListId(id, page, limit, orderBy, direction);
-            //Assert.IsInstanceOf<GetContactsByListIdResponse> (response, "response is GetContactsByListIdResponse");
+            //Assert.IsInstanceOf<GetContactsByListIdPaginatedResponse> (response, "response is GetContactsByListIdPaginatedResponse");
         }
         
         /// <summary>
@@ -1066,7 +1066,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetCountries();
-            //Assert.IsInstanceOf<List<Country>> (response, "response is List<Country>");
+            //Assert.IsInstanceOf<GetCountriesResponse> (response, "response is GetCountriesResponse");
         }
         
         /// <summary>
@@ -1102,7 +1102,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetCustomFields(page, limit);
-            //Assert.IsInstanceOf<GetCustomFieldsResponse> (response, "response is GetCustomFieldsResponse");
+            //Assert.IsInstanceOf<GetCustomFieldsPaginatedResponse> (response, "response is GetCustomFieldsPaginatedResponse");
         }
         
         /// <summary>
@@ -1125,7 +1125,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.GetDisallowedRules();
-            //Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
+            //Assert.IsInstanceOf<GetDisallowedRulesResponse> (response, "response is GetDisallowedRulesResponse");
         }
         
         /// <summary>
@@ -1139,7 +1139,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //string query = null;
             //var response = instance.GetFavourites(page, limit, query);
-            //Assert.IsInstanceOf<GetFavouritesResponse> (response, "response is GetFavouritesResponse");
+            //Assert.IsInstanceOf<GetFavouritesPaginatedResponse> (response, "response is GetFavouritesPaginatedResponse");
         }
         
         /// <summary>
@@ -1152,7 +1152,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetForwardedCalls(page, limit);
-            //Assert.IsInstanceOf<GetForwardedCallsResponse> (response, "response is GetForwardedCallsResponse");
+            //Assert.IsInstanceOf<GetForwardedCallsPaginatedResponse> (response, "response is GetForwardedCallsPaginatedResponse");
         }
         
         /// <summary>
@@ -1188,7 +1188,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetInvoices(page, limit);
-            //Assert.IsInstanceOf<GetInvoicesResponse> (response, "response is GetInvoicesResponse");
+            //Assert.IsInstanceOf<GetInvoicesPaginatedResponse> (response, "response is GetInvoicesPaginatedResponse");
         }
         
         /// <summary>
@@ -1226,7 +1226,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetListsOfContact(id, page, limit);
-            //Assert.IsInstanceOf<GetListsOfContactResponse> (response, "response is GetListsOfContactResponse");
+            //Assert.IsInstanceOf<GetListsOfContactPaginatedResponse> (response, "response is GetListsOfContactPaginatedResponse");
         }
         
         /// <summary>
@@ -1335,7 +1335,7 @@ namespace TextMagicClient.Test
             //string statuses = null;
             //int? includeDeleted = null;
             //var response = instance.GetMessagesBySessionId(id, page, limit, statuses, includeDeleted);
-            //Assert.IsInstanceOf<GetMessagesBySessionIdResponse> (response, "response is GetMessagesBySessionIdResponse");
+            //Assert.IsInstanceOf<GetMessagesBySessionIdPaginatedResponse> (response, "response is GetMessagesBySessionIdPaginatedResponse");
         }
         
         /// <summary>
@@ -1388,7 +1388,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.GetOutboundMessagesHistory(limit, lastId, query, orderBy, direction);
-            //Assert.IsInstanceOf<GetOutboundMessagesHistoryResponse> (response, "response is GetOutboundMessagesHistoryResponse");
+            //Assert.IsInstanceOf<GetOutboundMessagesHistoryPaginatedResponse> (response, "response is GetOutboundMessagesHistoryPaginatedResponse");
         }
         
         /// <summary>
@@ -1436,7 +1436,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetSenderIds(page, limit);
-            //Assert.IsInstanceOf<GetSenderIdsResponse> (response, "response is GetSenderIdsResponse");
+            //Assert.IsInstanceOf<GetSenderIdsPaginatedResponse> (response, "response is GetSenderIdsPaginatedResponse");
         }
         
         /// <summary>
@@ -1463,7 +1463,7 @@ namespace TextMagicClient.Test
             //int? start = null;
             //int? end = null;
             //var response = instance.GetSpendingStat(page, limit, start, end);
-            //Assert.IsInstanceOf<GetSpendingStatResponse> (response, "response is GetSpendingStatResponse");
+            //Assert.IsInstanceOf<GetSpendingStatPaginatedResponse> (response, "response is GetSpendingStatPaginatedResponse");
         }
         
         /// <summary>
@@ -1562,7 +1562,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetSurveys(page, limit);
-            //Assert.IsInstanceOf<GetSurveysResponse> (response, "response is GetSurveysResponse");
+            //Assert.IsInstanceOf<GetSurveysPaginatedResponse> (response, "response is GetSurveysPaginatedResponse");
         }
         
         /// <summary>
@@ -1586,7 +1586,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? full = null;
             //var response = instance.GetTimezones(full);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<GetTimezonesResponse> (response, "response is GetTimezonesResponse");
         }
         
         /// <summary>
@@ -1622,7 +1622,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //var response = instance.GetUnsubscribers(page, limit);
-            //Assert.IsInstanceOf<GetUnsubscribersResponse> (response, "response is GetUnsubscribersResponse");
+            //Assert.IsInstanceOf<GetUnsubscribersPaginatedResponse> (response, "response is GetUnsubscribersPaginatedResponse");
         }
         
         /// <summary>
@@ -1636,7 +1636,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //int? surveyId = null;
             //var response = instance.GetUserDedicatedNumbers(page, limit, surveyId);
-            //Assert.IsInstanceOf<GetUserDedicatedNumbersResponse> (response, "response is GetUserDedicatedNumbersResponse");
+            //Assert.IsInstanceOf<GetUserDedicatedNumbersPaginatedResponse> (response, "response is GetUserDedicatedNumbersPaginatedResponse");
         }
         
         /// <summary>
@@ -1653,7 +1653,7 @@ namespace TextMagicClient.Test
             //int? favoriteOnly = null;
             //int? onlyMine = null;
             //var response = instance.GetUserLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
-            //Assert.IsInstanceOf<GetUserListsResponse> (response, "response is GetUserListsResponse");
+            //Assert.IsInstanceOf<GetUserListsPaginatedResponse> (response, "response is GetUserListsPaginatedResponse");
         }
         
         /// <summary>
@@ -1809,7 +1809,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //string query = null;
             //var response = instance.SearchChats(page, limit, query);
-            //Assert.IsInstanceOf<SearchChatsResponse> (response, "response is SearchChatsResponse");
+            //Assert.IsInstanceOf<SearchChatsPaginatedResponse> (response, "response is SearchChatsPaginatedResponse");
         }
         
         /// <summary>
@@ -1823,7 +1823,7 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //string ids = null;
             //var response = instance.SearchChatsByIds(page, limit, ids);
-            //Assert.IsInstanceOf<SearchChatsByIdsResponse> (response, "response is SearchChatsByIdsResponse");
+            //Assert.IsInstanceOf<SearchChatsByIdsPaginatedResponse> (response, "response is SearchChatsByIdsPaginatedResponse");
         }
         
         /// <summary>
@@ -1838,7 +1838,7 @@ namespace TextMagicClient.Test
             //string query = null;
             //string orderBy = null;
             //var response = instance.SearchChatsByReceipent(page, limit, query, orderBy);
-            //Assert.IsInstanceOf<SearchChatsByReceipentResponse> (response, "response is SearchChatsByReceipentResponse");
+            //Assert.IsInstanceOf<SearchChatsByReceipentPaginatedResponse> (response, "response is SearchChatsByReceipentPaginatedResponse");
         }
         
         /// <summary>
@@ -1860,7 +1860,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.SearchContacts(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
-            //Assert.IsInstanceOf<SearchContactsResponse> (response, "response is SearchContactsResponse");
+            //Assert.IsInstanceOf<SearchContactsPaginatedResponse> (response, "response is SearchContactsPaginatedResponse");
         }
         
         /// <summary>
@@ -1878,7 +1878,7 @@ namespace TextMagicClient.Test
             //string direction = null;
             //int? expand = null;
             //var response = instance.SearchInboundMessages(page, limit, ids, query, orderBy, direction, expand);
-            //Assert.IsInstanceOf<SearchInboundMessagesResponse> (response, "response is SearchInboundMessagesResponse");
+            //Assert.IsInstanceOf<SearchInboundMessagesPaginatedResponse> (response, "response is SearchInboundMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -1897,7 +1897,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.SearchLists(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
-            //Assert.IsInstanceOf<SearchListsResponse> (response, "response is SearchListsResponse");
+            //Assert.IsInstanceOf<SearchListsPaginatedResponse> (response, "response is SearchListsPaginatedResponse");
         }
         
         /// <summary>
@@ -1916,7 +1916,7 @@ namespace TextMagicClient.Test
             //int? includeDeleted = null;
             //string query = null;
             //var response = instance.SearchOutboundMessages(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
-            //Assert.IsInstanceOf<SearchOutboundMessagesResponse> (response, "response is SearchOutboundMessagesResponse");
+            //Assert.IsInstanceOf<SearchOutboundMessagesPaginatedResponse> (response, "response is SearchOutboundMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -1934,7 +1934,7 @@ namespace TextMagicClient.Test
             //string orderBy = null;
             //string direction = null;
             //var response = instance.SearchScheduledMessages(page, limit, query, ids, status, orderBy, direction);
-            //Assert.IsInstanceOf<SearchScheduledMessagesResponse> (response, "response is SearchScheduledMessagesResponse");
+            //Assert.IsInstanceOf<SearchScheduledMessagesPaginatedResponse> (response, "response is SearchScheduledMessagesPaginatedResponse");
         }
         
         /// <summary>
@@ -1950,7 +1950,7 @@ namespace TextMagicClient.Test
             //string name = null;
             //string content = null;
             //var response = instance.SearchTemplates(page, limit, ids, name, content);
-            //Assert.IsInstanceOf<SearchTemplatesResponse> (response, "response is SearchTemplatesResponse");
+            //Assert.IsInstanceOf<SearchTemplatesPaginatedResponse> (response, "response is SearchTemplatesPaginatedResponse");
         }
         
         /// <summary>

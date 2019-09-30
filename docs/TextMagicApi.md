@@ -3428,7 +3428,7 @@ Name | Type | Description  | Notes
 
 <a name="getallbulksessions"></a>
 # **GetAllBulkSessions**
-> GetAllBulkSessionsResponse GetAllBulkSessions (int? page = null, int? limit = null)
+> GetAllBulkSessionsPaginatedResponse GetAllBulkSessions (int? page = null, int? limit = null)
 
 Get all bulk sending sessions.
 
@@ -3457,7 +3457,7 @@ namespace Example
             try
             {
                 // Get all bulk sending sessions.
-                GetAllBulkSessionsResponse result = apiInstance.GetAllBulkSessions(page, limit);
+                GetAllBulkSessionsPaginatedResponse result = apiInstance.GetAllBulkSessions(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3478,7 +3478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllBulkSessionsResponse**](GetAllBulkSessionsResponse.md)
+[**GetAllBulkSessionsPaginatedResponse**](GetAllBulkSessionsPaginatedResponse.md)
 
 ### Authorization
 
@@ -3493,7 +3493,7 @@ Name | Type | Description  | Notes
 
 <a name="getallchats"></a>
 # **GetAllChats**
-> GetAllChatsResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
+> GetAllChatsPaginatedResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
 
 Get all user chats.
 
@@ -3526,7 +3526,7 @@ namespace Example
             try
             {
                 // Get all user chats.
-                GetAllChatsResponse result = apiInstance.GetAllChats(status, page, limit, orderBy, voice, flat);
+                GetAllChatsPaginatedResponse result = apiInstance.GetAllChats(status, page, limit, orderBy, voice, flat);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3551,7 +3551,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllChatsResponse**](GetAllChatsResponse.md)
+[**GetAllChatsPaginatedResponse**](GetAllChatsPaginatedResponse.md)
 
 ### Authorization
 
@@ -3566,7 +3566,7 @@ Name | Type | Description  | Notes
 
 <a name="getallinboundmessages"></a>
 # **GetAllInboundMessages**
-> GetAllInboundMessagesResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null)
+> GetAllInboundMessagesPaginatedResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null)
 
 Get all inbox messages.
 
@@ -3597,7 +3597,7 @@ namespace Example
             try
             {
                 // Get all inbox messages.
-                GetAllInboundMessagesResponse result = apiInstance.GetAllInboundMessages(page, limit, orderBy, direction);
+                GetAllInboundMessagesPaginatedResponse result = apiInstance.GetAllInboundMessages(page, limit, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3620,7 +3620,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllInboundMessagesResponse**](GetAllInboundMessagesResponse.md)
+[**GetAllInboundMessagesPaginatedResponse**](GetAllInboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -3635,7 +3635,7 @@ Name | Type | Description  | Notes
 
 <a name="getallmessagesessions"></a>
 # **GetAllMessageSessions**
-> GetAllMessageSessionsResponse GetAllMessageSessions (int? page = null, int? limit = null)
+> GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null)
 
 Get all message sending sessions.
 
@@ -3664,7 +3664,7 @@ namespace Example
             try
             {
                 // Get all message sending sessions.
-                GetAllMessageSessionsResponse result = apiInstance.GetAllMessageSessions(page, limit);
+                GetAllMessageSessionsPaginatedResponse result = apiInstance.GetAllMessageSessions(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3685,7 +3685,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllMessageSessionsResponse**](GetAllMessageSessionsResponse.md)
+[**GetAllMessageSessionsPaginatedResponse**](GetAllMessageSessionsPaginatedResponse.md)
 
 ### Authorization
 
@@ -3700,7 +3700,7 @@ Name | Type | Description  | Notes
 
 <a name="getalloutboundmessages"></a>
 # **GetAllOutboundMessages**
-> GetAllOutboundMessagesResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
+> GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
 
 Get all messages
 
@@ -3732,7 +3732,7 @@ namespace Example
             try
             {
                 // Get all messages
-                GetAllOutboundMessagesResponse result = apiInstance.GetAllOutboundMessages(page, limit, lastId);
+                GetAllOutboundMessagesPaginatedResponse result = apiInstance.GetAllOutboundMessages(page, limit, lastId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3754,7 +3754,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllOutboundMessagesResponse**](GetAllOutboundMessagesResponse.md)
+[**GetAllOutboundMessagesPaginatedResponse**](GetAllOutboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -3769,7 +3769,7 @@ Name | Type | Description  | Notes
 
 <a name="getallscheduledmessages"></a>
 # **GetAllScheduledMessages**
-> GetAllScheduledMessagesResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
+> GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
 
 Get all scheduled messages.
 
@@ -3801,7 +3801,7 @@ namespace Example
             try
             {
                 // Get all scheduled messages.
-                GetAllScheduledMessagesResponse result = apiInstance.GetAllScheduledMessages(page, limit, status, orderBy, direction);
+                GetAllScheduledMessagesPaginatedResponse result = apiInstance.GetAllScheduledMessages(page, limit, status, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3825,7 +3825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllScheduledMessagesResponse**](GetAllScheduledMessagesResponse.md)
+[**GetAllScheduledMessagesPaginatedResponse**](GetAllScheduledMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -3840,7 +3840,7 @@ Name | Type | Description  | Notes
 
 <a name="getalltemplates"></a>
 # **GetAllTemplates**
-> GetAllTemplatesResponse GetAllTemplates (int? page = null, int? limit = null)
+> GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null)
 
 Get all user templates.
 
@@ -3869,7 +3869,7 @@ namespace Example
             try
             {
                 // Get all user templates.
-                GetAllTemplatesResponse result = apiInstance.GetAllTemplates(page, limit);
+                GetAllTemplatesPaginatedResponse result = apiInstance.GetAllTemplates(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3890,7 +3890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllTemplatesResponse**](GetAllTemplatesResponse.md)
+[**GetAllTemplatesPaginatedResponse**](GetAllTemplatesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4153,7 +4153,7 @@ This endpoint does not need any parameter.
 
 <a name="getblockedcontacts"></a>
 # **GetBlockedContacts**
-> GetBlockedContactsResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
+> GetBlockedContactsPaginatedResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
 
 Get blocked contacts.
 
@@ -4185,7 +4185,7 @@ namespace Example
             try
             {
                 // Get blocked contacts.
-                GetBlockedContactsResponse result = apiInstance.GetBlockedContacts(page, limit, query, orderBy, direction);
+                GetBlockedContactsPaginatedResponse result = apiInstance.GetBlockedContacts(page, limit, query, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4209,7 +4209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlockedContactsResponse**](GetBlockedContactsResponse.md)
+[**GetBlockedContactsPaginatedResponse**](GetBlockedContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4346,7 +4346,7 @@ This endpoint does not need any parameter.
 
 <a name="getcallsprices"></a>
 # **GetCallsPrices**
-> Dictionary<string, Object> GetCallsPrices ()
+> GetCallsPricesResponse GetCallsPrices ()
 
 Check pricing for a inbound/outbound call.
 
@@ -4373,7 +4373,7 @@ namespace Example
             try
             {
                 // Check pricing for a inbound/outbound call.
-                Dictionary&lt;string, Object&gt; result = apiInstance.GetCallsPrices();
+                GetCallsPricesResponse result = apiInstance.GetCallsPrices();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4390,7 +4390,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**GetCallsPricesResponse**](GetCallsPricesResponse.md)
 
 ### Authorization
 
@@ -4535,7 +4535,7 @@ Name | Type | Description  | Notes
 
 <a name="getchatmessages"></a>
 # **GetChatMessages**
-> GetChatMessagesResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
+> GetChatMessagesPaginatedResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
 
 Fetch messages from chat with specified chat id.
 
@@ -4570,7 +4570,7 @@ namespace Example
             try
             {
                 // Fetch messages from chat with specified chat id.
-                GetChatMessagesResponse result = apiInstance.GetChatMessages(id, page, limit, query, start, end, direction, voice);
+                GetChatMessagesPaginatedResponse result = apiInstance.GetChatMessages(id, page, limit, query, start, end, direction, voice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4597,7 +4597,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetChatMessagesResponse**](GetChatMessagesResponse.md)
+[**GetChatMessagesPaginatedResponse**](GetChatMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4927,7 +4927,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactnotes"></a>
 # **GetContactNotes**
-> GetContactNotesResponse GetContactNotes (int? id, int? page = null, int? limit = null)
+> GetContactNotesPaginatedResponse GetContactNotes (int? id, int? page = null, int? limit = null)
 
 Fetch notes assigned to the given contact.
 
@@ -4957,7 +4957,7 @@ namespace Example
             try
             {
                 // Fetch notes assigned to the given contact.
-                GetContactNotesResponse result = apiInstance.GetContactNotes(id, page, limit);
+                GetContactNotesPaginatedResponse result = apiInstance.GetContactNotes(id, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4979,7 +4979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactNotesResponse**](GetContactNotesResponse.md)
+[**GetContactNotesPaginatedResponse**](GetContactNotesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4994,7 +4994,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontacts"></a>
 # **GetContacts**
-> GetContactsResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
+> GetContactsPaginatedResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
 
 Get all user contacts.
 
@@ -5026,7 +5026,7 @@ namespace Example
             try
             {
                 // Get all user contacts.
-                GetContactsResponse result = apiInstance.GetContacts(page, limit, shared, orderBy, direction);
+                GetContactsPaginatedResponse result = apiInstance.GetContacts(page, limit, shared, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5050,7 +5050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactsResponse**](GetContactsResponse.md)
+[**GetContactsPaginatedResponse**](GetContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -5065,7 +5065,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactsautocomplete"></a>
 # **GetContactsAutocomplete**
-> List<GetContactsAutocompleteResponse> GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
+> GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
 
 Get contacts autocomplete suggestions by given search term.
 
@@ -5095,7 +5095,7 @@ namespace Example
             try
             {
                 // Get contacts autocomplete suggestions by given search term.
-                List&lt;GetContactsAutocompleteResponse&gt; result = apiInstance.GetContactsAutocomplete(query, limit, lists);
+                GetContactsAutocompleteResponse result = apiInstance.GetContactsAutocomplete(query, limit, lists);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5117,7 +5117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetContactsAutocompleteResponse>**](GetContactsAutocompleteResponse.md)
+[**GetContactsAutocompleteResponse**](GetContactsAutocompleteResponse.md)
 
 ### Authorization
 
@@ -5132,7 +5132,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactsbylistid"></a>
 # **GetContactsByListId**
-> GetContactsByListIdResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
+> GetContactsByListIdPaginatedResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
 
 Fetch user contacts by given group id.
 
@@ -5166,7 +5166,7 @@ namespace Example
             try
             {
                 // Fetch user contacts by given group id.
-                GetContactsByListIdResponse result = apiInstance.GetContactsByListId(id, page, limit, orderBy, direction);
+                GetContactsByListIdPaginatedResponse result = apiInstance.GetContactsByListId(id, page, limit, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5190,7 +5190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactsByListIdResponse**](GetContactsByListIdResponse.md)
+[**GetContactsByListIdPaginatedResponse**](GetContactsByListIdPaginatedResponse.md)
 
 ### Authorization
 
@@ -5205,7 +5205,7 @@ Name | Type | Description  | Notes
 
 <a name="getcountries"></a>
 # **GetCountries**
-> List<Country> GetCountries ()
+> GetCountriesResponse GetCountries ()
 
 Return list of countries.
 
@@ -5232,7 +5232,7 @@ namespace Example
             try
             {
                 // Return list of countries.
-                List&lt;Country&gt; result = apiInstance.GetCountries();
+                GetCountriesResponse result = apiInstance.GetCountries();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5249,7 +5249,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List<Country>**](Country.md)
+[**GetCountriesResponse**](GetCountriesResponse.md)
 
 ### Authorization
 
@@ -5386,7 +5386,7 @@ Name | Type | Description  | Notes
 
 <a name="getcustomfields"></a>
 # **GetCustomFields**
-> GetCustomFieldsResponse GetCustomFields (int? page = null, int? limit = null)
+> GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null)
 
 Get all contact custom fields.
 
@@ -5415,7 +5415,7 @@ namespace Example
             try
             {
                 // Get all contact custom fields.
-                GetCustomFieldsResponse result = apiInstance.GetCustomFields(page, limit);
+                GetCustomFieldsPaginatedResponse result = apiInstance.GetCustomFields(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5436,7 +5436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetCustomFieldsResponse**](GetCustomFieldsResponse.md)
+[**GetCustomFieldsPaginatedResponse**](GetCustomFieldsPaginatedResponse.md)
 
 ### Authorization
 
@@ -5514,7 +5514,7 @@ Name | Type | Description  | Notes
 
 <a name="getdisallowedrules"></a>
 # **GetDisallowedRules**
-> List<string> GetDisallowedRules ()
+> GetDisallowedRulesResponse GetDisallowedRules ()
 
 Get an array of all rules that are disallowed to the current account.
 
@@ -5541,7 +5541,7 @@ namespace Example
             try
             {
                 // Get an array of all rules that are disallowed to the current account.
-                List&lt;string&gt; result = apiInstance.GetDisallowedRules();
+                GetDisallowedRulesResponse result = apiInstance.GetDisallowedRules();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5558,7 +5558,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**List<string>**
+[**GetDisallowedRulesResponse**](GetDisallowedRulesResponse.md)
 
 ### Authorization
 
@@ -5573,7 +5573,7 @@ This endpoint does not need any parameter.
 
 <a name="getfavourites"></a>
 # **GetFavourites**
-> GetFavouritesResponse GetFavourites (int? page = null, int? limit = null, string query = null)
+> GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null)
 
 Get favorite contacts and lists.
 
@@ -5603,7 +5603,7 @@ namespace Example
             try
             {
                 // Get favorite contacts and lists.
-                GetFavouritesResponse result = apiInstance.GetFavourites(page, limit, query);
+                GetFavouritesPaginatedResponse result = apiInstance.GetFavourites(page, limit, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5625,7 +5625,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetFavouritesResponse**](GetFavouritesResponse.md)
+[**GetFavouritesPaginatedResponse**](GetFavouritesPaginatedResponse.md)
 
 ### Authorization
 
@@ -5640,7 +5640,7 @@ Name | Type | Description  | Notes
 
 <a name="getforwardedcalls"></a>
 # **GetForwardedCalls**
-> GetForwardedCallsResponse GetForwardedCalls (int? page = null, int? limit = null)
+> GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null)
 
 Get all forwarded calls.
 
@@ -5669,7 +5669,7 @@ namespace Example
             try
             {
                 // Get all forwarded calls.
-                GetForwardedCallsResponse result = apiInstance.GetForwardedCalls(page, limit);
+                GetForwardedCallsPaginatedResponse result = apiInstance.GetForwardedCalls(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5690,7 +5690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetForwardedCallsResponse**](GetForwardedCallsResponse.md)
+[**GetForwardedCallsPaginatedResponse**](GetForwardedCallsPaginatedResponse.md)
 
 ### Authorization
 
@@ -5827,7 +5827,7 @@ This endpoint does not need any parameter.
 
 <a name="getinvoices"></a>
 # **GetInvoices**
-> GetInvoicesResponse GetInvoices (int? page = null, int? limit = null)
+> GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null)
 
 Return account invoices.
 
@@ -5856,7 +5856,7 @@ namespace Example
             try
             {
                 // Return account invoices.
-                GetInvoicesResponse result = apiInstance.GetInvoices(page, limit);
+                GetInvoicesPaginatedResponse result = apiInstance.GetInvoices(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5877,7 +5877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetInvoicesResponse**](GetInvoicesResponse.md)
+[**GetInvoicesPaginatedResponse**](GetInvoicesPaginatedResponse.md)
 
 ### Authorization
 
@@ -6018,7 +6018,7 @@ Name | Type | Description  | Notes
 
 <a name="getlistsofcontact"></a>
 # **GetListsOfContact**
-> GetListsOfContactResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
+> GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
 
 Return lists which contact belongs to.
 
@@ -6048,7 +6048,7 @@ namespace Example
             try
             {
                 // Return lists which contact belongs to.
-                GetListsOfContactResponse result = apiInstance.GetListsOfContact(id, page, limit);
+                GetListsOfContactPaginatedResponse result = apiInstance.GetListsOfContact(id, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6070,7 +6070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetListsOfContactResponse**](GetListsOfContactResponse.md)
+[**GetListsOfContactPaginatedResponse**](GetListsOfContactPaginatedResponse.md)
 
 ### Authorization
 
@@ -6470,7 +6470,7 @@ Name | Type | Description  | Notes
 
 <a name="getmessagesbysessionid"></a>
 # **GetMessagesBySessionId**
-> GetMessagesBySessionIdResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
+> GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
 
 Fetch messages by given session id.
 
@@ -6504,7 +6504,7 @@ namespace Example
             try
             {
                 // Fetch messages by given session id.
-                GetMessagesBySessionIdResponse result = apiInstance.GetMessagesBySessionId(id, page, limit, statuses, includeDeleted);
+                GetMessagesBySessionIdPaginatedResponse result = apiInstance.GetMessagesBySessionId(id, page, limit, statuses, includeDeleted);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6528,7 +6528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMessagesBySessionIdResponse**](GetMessagesBySessionIdResponse.md)
+[**GetMessagesBySessionIdPaginatedResponse**](GetMessagesBySessionIdPaginatedResponse.md)
 
 ### Authorization
 
@@ -6734,7 +6734,7 @@ Name | Type | Description  | Notes
 
 <a name="getoutboundmessageshistory"></a>
 # **GetOutboundMessagesHistory**
-> GetOutboundMessagesHistoryResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
+> GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
 
 Get history
 
@@ -6768,7 +6768,7 @@ namespace Example
             try
             {
                 // Get history
-                GetOutboundMessagesHistoryResponse result = apiInstance.GetOutboundMessagesHistory(limit, lastId, query, orderBy, direction);
+                GetOutboundMessagesHistoryPaginatedResponse result = apiInstance.GetOutboundMessagesHistory(limit, lastId, query, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6792,7 +6792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetOutboundMessagesHistoryResponse**](GetOutboundMessagesHistoryResponse.md)
+[**GetOutboundMessagesHistoryPaginatedResponse**](GetOutboundMessagesHistoryPaginatedResponse.md)
 
 ### Authorization
 
@@ -6992,7 +6992,7 @@ Name | Type | Description  | Notes
 
 <a name="getsenderids"></a>
 # **GetSenderIds**
-> GetSenderIdsResponse GetSenderIds (int? page = null, int? limit = null)
+> GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null)
 
 Get all sender IDs of current user.
 
@@ -7021,7 +7021,7 @@ namespace Example
             try
             {
                 // Get all sender IDs of current user.
-                GetSenderIdsResponse result = apiInstance.GetSenderIds(page, limit);
+                GetSenderIdsPaginatedResponse result = apiInstance.GetSenderIds(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7042,7 +7042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSenderIdsResponse**](GetSenderIdsResponse.md)
+[**GetSenderIdsPaginatedResponse**](GetSenderIdsPaginatedResponse.md)
 
 ### Authorization
 
@@ -7120,7 +7120,7 @@ Name | Type | Description  | Notes
 
 <a name="getspendingstat"></a>
 # **GetSpendingStat**
-> GetSpendingStatResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null)
+> GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null)
 
 Return account spending statistics.
 
@@ -7151,7 +7151,7 @@ namespace Example
             try
             {
                 // Return account spending statistics.
-                GetSpendingStatResponse result = apiInstance.GetSpendingStat(page, limit, start, end);
+                GetSpendingStatPaginatedResponse result = apiInstance.GetSpendingStat(page, limit, start, end);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7174,7 +7174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSpendingStatResponse**](GetSpendingStatResponse.md)
+[**GetSpendingStatPaginatedResponse**](GetSpendingStatPaginatedResponse.md)
 
 ### Authorization
 
@@ -7634,7 +7634,7 @@ Name | Type | Description  | Notes
 
 <a name="getsurveys"></a>
 # **GetSurveys**
-> GetSurveysResponse GetSurveys (int? page = null, int? limit = null)
+> GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null)
 
 Get all user surveys.
 
@@ -7663,7 +7663,7 @@ namespace Example
             try
             {
                 // Get all user surveys.
-                GetSurveysResponse result = apiInstance.GetSurveys(page, limit);
+                GetSurveysPaginatedResponse result = apiInstance.GetSurveys(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7684,7 +7684,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSurveysResponse**](GetSurveysResponse.md)
+[**GetSurveysPaginatedResponse**](GetSurveysPaginatedResponse.md)
 
 ### Authorization
 
@@ -7762,7 +7762,7 @@ Name | Type | Description  | Notes
 
 <a name="gettimezones"></a>
 # **GetTimezones**
-> Object GetTimezones (int? full = null)
+> GetTimezonesResponse GetTimezones (int? full = null)
 
 Return all available timezone IDs.
 
@@ -7790,7 +7790,7 @@ namespace Example
             try
             {
                 // Return all available timezone IDs.
-                Object result = apiInstance.GetTimezones(full);
+                GetTimezonesResponse result = apiInstance.GetTimezones(full);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7810,7 +7810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**GetTimezonesResponse**](GetTimezonesResponse.md)
 
 ### Authorization
 
@@ -7947,7 +7947,7 @@ Name | Type | Description  | Notes
 
 <a name="getunsubscribers"></a>
 # **GetUnsubscribers**
-> GetUnsubscribersResponse GetUnsubscribers (int? page = null, int? limit = null)
+> GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null)
 
 Get all contact have unsubscribed from your communication.
 
@@ -7976,7 +7976,7 @@ namespace Example
             try
             {
                 // Get all contact have unsubscribed from your communication.
-                GetUnsubscribersResponse result = apiInstance.GetUnsubscribers(page, limit);
+                GetUnsubscribersPaginatedResponse result = apiInstance.GetUnsubscribers(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7997,7 +7997,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUnsubscribersResponse**](GetUnsubscribersResponse.md)
+[**GetUnsubscribersPaginatedResponse**](GetUnsubscribersPaginatedResponse.md)
 
 ### Authorization
 
@@ -8012,7 +8012,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserdedicatednumbers"></a>
 # **GetUserDedicatedNumbers**
-> GetUserDedicatedNumbersResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
+> GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
 
 Get user's dedicated numbers.
 
@@ -8042,7 +8042,7 @@ namespace Example
             try
             {
                 // Get user's dedicated numbers.
-                GetUserDedicatedNumbersResponse result = apiInstance.GetUserDedicatedNumbers(page, limit, surveyId);
+                GetUserDedicatedNumbersPaginatedResponse result = apiInstance.GetUserDedicatedNumbers(page, limit, surveyId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8064,7 +8064,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUserDedicatedNumbersResponse**](GetUserDedicatedNumbersResponse.md)
+[**GetUserDedicatedNumbersPaginatedResponse**](GetUserDedicatedNumbersPaginatedResponse.md)
 
 ### Authorization
 
@@ -8079,7 +8079,7 @@ Name | Type | Description  | Notes
 
 <a name="getuserlists"></a>
 # **GetUserLists**
-> GetUserListsResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+> GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
 
 Get all user lists.
 
@@ -8112,7 +8112,7 @@ namespace Example
             try
             {
                 // Get all user lists.
-                GetUserListsResponse result = apiInstance.GetUserLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+                GetUserListsPaginatedResponse result = apiInstance.GetUserLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8137,7 +8137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUserListsResponse**](GetUserListsResponse.md)
+[**GetUserListsPaginatedResponse**](GetUserListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -8896,7 +8896,7 @@ Name | Type | Description  | Notes
 
 <a name="searchchats"></a>
 # **SearchChats**
-> SearchChatsResponse SearchChats (int? page = null, int? limit = null, string query = null)
+> SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null)
 
 Find chats by inbound or outbound messages text.
 
@@ -8926,7 +8926,7 @@ namespace Example
             try
             {
                 // Find chats by inbound or outbound messages text.
-                SearchChatsResponse result = apiInstance.SearchChats(page, limit, query);
+                SearchChatsPaginatedResponse result = apiInstance.SearchChats(page, limit, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8948,7 +8948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsResponse**](SearchChatsResponse.md)
+[**SearchChatsPaginatedResponse**](SearchChatsPaginatedResponse.md)
 
 ### Authorization
 
@@ -8963,7 +8963,7 @@ Name | Type | Description  | Notes
 
 <a name="searchchatsbyids"></a>
 # **SearchChatsByIds**
-> SearchChatsByIdsResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
+> SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
 
 Find chats by IDs.
 
@@ -8993,7 +8993,7 @@ namespace Example
             try
             {
                 // Find chats by IDs.
-                SearchChatsByIdsResponse result = apiInstance.SearchChatsByIds(page, limit, ids);
+                SearchChatsByIdsPaginatedResponse result = apiInstance.SearchChatsByIds(page, limit, ids);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9015,7 +9015,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsByIdsResponse**](SearchChatsByIdsResponse.md)
+[**SearchChatsByIdsPaginatedResponse**](SearchChatsByIdsPaginatedResponse.md)
 
 ### Authorization
 
@@ -9030,7 +9030,7 @@ Name | Type | Description  | Notes
 
 <a name="searchchatsbyreceipent"></a>
 # **SearchChatsByReceipent**
-> SearchChatsByReceipentResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null)
+> SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null)
 
 Find chats by recipient (contact, list name or phone number).
 
@@ -9061,7 +9061,7 @@ namespace Example
             try
             {
                 // Find chats by recipient (contact, list name or phone number).
-                SearchChatsByReceipentResponse result = apiInstance.SearchChatsByReceipent(page, limit, query, orderBy);
+                SearchChatsByReceipentPaginatedResponse result = apiInstance.SearchChatsByReceipent(page, limit, query, orderBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9084,7 +9084,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsByReceipentResponse**](SearchChatsByReceipentResponse.md)
+[**SearchChatsByReceipentPaginatedResponse**](SearchChatsByReceipentPaginatedResponse.md)
 
 ### Authorization
 
@@ -9099,7 +9099,7 @@ Name | Type | Description  | Notes
 
 <a name="searchcontacts"></a>
 # **SearchContacts**
-> SearchContactsResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
+> SearchContactsPaginatedResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
 
 Find user contacts by given parameters.
 
@@ -9137,7 +9137,7 @@ namespace Example
             try
             {
                 // Find user contacts by given parameters.
-                SearchContactsResponse result = apiInstance.SearchContacts(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
+                SearchContactsPaginatedResponse result = apiInstance.SearchContacts(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9167,7 +9167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchContactsResponse**](SearchContactsResponse.md)
+[**SearchContactsPaginatedResponse**](SearchContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -9182,7 +9182,7 @@ Name | Type | Description  | Notes
 
 <a name="searchinboundmessages"></a>
 # **SearchInboundMessages**
-> SearchInboundMessagesResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
+> SearchInboundMessagesPaginatedResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
 
 Find inbound messages by given parameters.
 
@@ -9216,7 +9216,7 @@ namespace Example
             try
             {
                 // Find inbound messages by given parameters.
-                SearchInboundMessagesResponse result = apiInstance.SearchInboundMessages(page, limit, ids, query, orderBy, direction, expand);
+                SearchInboundMessagesPaginatedResponse result = apiInstance.SearchInboundMessages(page, limit, ids, query, orderBy, direction, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9242,7 +9242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchInboundMessagesResponse**](SearchInboundMessagesResponse.md)
+[**SearchInboundMessagesPaginatedResponse**](SearchInboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -9257,7 +9257,7 @@ Name | Type | Description  | Notes
 
 <a name="searchlists"></a>
 # **SearchLists**
-> SearchListsResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
+> SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
 
 Find contact lists by given parameters.
 
@@ -9292,7 +9292,7 @@ namespace Example
             try
             {
                 // Find contact lists by given parameters.
-                SearchListsResponse result = apiInstance.SearchLists(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
+                SearchListsPaginatedResponse result = apiInstance.SearchLists(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9319,7 +9319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchListsResponse**](SearchListsResponse.md)
+[**SearchListsPaginatedResponse**](SearchListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -9334,7 +9334,7 @@ Name | Type | Description  | Notes
 
 <a name="searchoutboundmessages"></a>
 # **SearchOutboundMessages**
-> SearchOutboundMessagesResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
+> SearchOutboundMessagesPaginatedResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
 
 Find messages
 
@@ -9371,7 +9371,7 @@ namespace Example
             try
             {
                 // Find messages
-                SearchOutboundMessagesResponse result = apiInstance.SearchOutboundMessages(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
+                SearchOutboundMessagesPaginatedResponse result = apiInstance.SearchOutboundMessages(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9398,7 +9398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchOutboundMessagesResponse**](SearchOutboundMessagesResponse.md)
+[**SearchOutboundMessagesPaginatedResponse**](SearchOutboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -9413,7 +9413,7 @@ Name | Type | Description  | Notes
 
 <a name="searchscheduledmessages"></a>
 # **SearchScheduledMessages**
-> SearchScheduledMessagesResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
+> SearchScheduledMessagesPaginatedResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
 
 Find scheduled messages by given parameters.
 
@@ -9447,7 +9447,7 @@ namespace Example
             try
             {
                 // Find scheduled messages by given parameters.
-                SearchScheduledMessagesResponse result = apiInstance.SearchScheduledMessages(page, limit, query, ids, status, orderBy, direction);
+                SearchScheduledMessagesPaginatedResponse result = apiInstance.SearchScheduledMessages(page, limit, query, ids, status, orderBy, direction);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9473,7 +9473,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchScheduledMessagesResponse**](SearchScheduledMessagesResponse.md)
+[**SearchScheduledMessagesPaginatedResponse**](SearchScheduledMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -9488,7 +9488,7 @@ Name | Type | Description  | Notes
 
 <a name="searchtemplates"></a>
 # **SearchTemplates**
-> SearchTemplatesResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
+> SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
 
 Find user templates by given parameters.
 
@@ -9520,7 +9520,7 @@ namespace Example
             try
             {
                 // Find user templates by given parameters.
-                SearchTemplatesResponse result = apiInstance.SearchTemplates(page, limit, ids, name, content);
+                SearchTemplatesPaginatedResponse result = apiInstance.SearchTemplates(page, limit, ids, name, content);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9544,7 +9544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchTemplatesResponse**](SearchTemplatesResponse.md)
+[**SearchTemplatesPaginatedResponse**](SearchTemplatesPaginatedResponse.md)
 
 ### Authorization
 

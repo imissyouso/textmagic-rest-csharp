@@ -1137,8 +1137,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetAllBulkSessionsResponse</returns>
-        GetAllBulkSessionsResponse GetAllBulkSessions (int? page = null, int? limit = null);
+        /// <returns>GetAllBulkSessionsPaginatedResponse</returns>
+        GetAllBulkSessionsPaginatedResponse GetAllBulkSessions (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all bulk sending sessions.
@@ -1149,8 +1149,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetAllBulkSessionsResponse</returns>
-        ApiResponse<GetAllBulkSessionsResponse> GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetAllBulkSessionsPaginatedResponse</returns>
+        ApiResponse<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all user chats.
         /// </summary>
@@ -1164,8 +1164,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>GetAllChatsResponse</returns>
-        GetAllChatsResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
+        /// <returns>GetAllChatsPaginatedResponse</returns>
+        GetAllChatsPaginatedResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
 
         /// <summary>
         /// Get all user chats.
@@ -1180,8 +1180,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetAllChatsResponse</returns>
-        ApiResponse<GetAllChatsResponse> GetAllChatsWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
+        /// <returns>ApiResponse of GetAllChatsPaginatedResponse</returns>
+        ApiResponse<GetAllChatsPaginatedResponse> GetAllChatsWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
         /// <summary>
         /// Get all inbox messages.
         /// </summary>
@@ -1193,8 +1193,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetAllInboundMessagesResponse</returns>
-        GetAllInboundMessagesResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>GetAllInboundMessagesPaginatedResponse</returns>
+        GetAllInboundMessagesPaginatedResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all inbox messages.
@@ -1207,8 +1207,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetAllInboundMessagesResponse</returns>
-        ApiResponse<GetAllInboundMessagesResponse> GetAllInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetAllInboundMessagesPaginatedResponse</returns>
+        ApiResponse<GetAllInboundMessagesPaginatedResponse> GetAllInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all message sending sessions.
         /// </summary>
@@ -1218,8 +1218,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetAllMessageSessionsResponse</returns>
-        GetAllMessageSessionsResponse GetAllMessageSessions (int? page = null, int? limit = null);
+        /// <returns>GetAllMessageSessionsPaginatedResponse</returns>
+        GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all message sending sessions.
@@ -1230,8 +1230,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetAllMessageSessionsResponse</returns>
-        ApiResponse<GetAllMessageSessionsResponse> GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetAllMessageSessionsPaginatedResponse</returns>
+        ApiResponse<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all messages
         /// </summary>
@@ -1242,8 +1242,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>GetAllOutboundMessagesResponse</returns>
-        GetAllOutboundMessagesResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null);
+        /// <returns>GetAllOutboundMessagesPaginatedResponse</returns>
+        GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null);
 
         /// <summary>
         /// Get all messages
@@ -1255,8 +1255,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>ApiResponse of GetAllOutboundMessagesResponse</returns>
-        ApiResponse<GetAllOutboundMessagesResponse> GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
+        /// <returns>ApiResponse of GetAllOutboundMessagesPaginatedResponse</returns>
+        ApiResponse<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
         /// <summary>
         /// Get all scheduled messages.
         /// </summary>
@@ -1269,8 +1269,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetAllScheduledMessagesResponse</returns>
-        GetAllScheduledMessagesResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>GetAllScheduledMessagesPaginatedResponse</returns>
+        GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all scheduled messages.
@@ -1284,8 +1284,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetAllScheduledMessagesResponse</returns>
-        ApiResponse<GetAllScheduledMessagesResponse> GetAllScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetAllScheduledMessagesPaginatedResponse</returns>
+        ApiResponse<GetAllScheduledMessagesPaginatedResponse> GetAllScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all user templates.
         /// </summary>
@@ -1295,8 +1295,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>GetAllTemplatesResponse</returns>
-        GetAllTemplatesResponse GetAllTemplates (int? page = null, int? limit = null);
+        /// <returns>GetAllTemplatesPaginatedResponse</returns>
+        GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all user templates.
@@ -1307,8 +1307,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>ApiResponse of GetAllTemplatesResponse</returns>
-        ApiResponse<GetAllTemplatesResponse> GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetAllTemplatesPaginatedResponse</returns>
+        ApiResponse<GetAllTemplatesPaginatedResponse> GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Find available dedicated numbers to buy.
         /// </summary>
@@ -1405,8 +1405,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetBlockedContactsResponse</returns>
-        GetBlockedContactsResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>GetBlockedContactsPaginatedResponse</returns>
+        GetBlockedContactsPaginatedResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get blocked contacts.
@@ -1420,8 +1420,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetBlockedContactsResponse</returns>
-        ApiResponse<GetBlockedContactsResponse> GetBlockedContactsWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetBlockedContactsPaginatedResponse</returns>
+        ApiResponse<GetBlockedContactsPaginatedResponse> GetBlockedContactsWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get bulk message session status.
         /// </summary>
@@ -1469,8 +1469,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> GetCallsPrices ();
+        /// <returns>GetCallsPricesResponse</returns>
+        GetCallsPricesResponse GetCallsPrices ();
 
         /// <summary>
         /// Check pricing for a inbound/outbound call.
@@ -1479,8 +1479,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> GetCallsPricesWithHttpInfo ();
+        /// <returns>ApiResponse of GetCallsPricesResponse</returns>
+        ApiResponse<GetCallsPricesResponse> GetCallsPricesWithHttpInfo ();
         /// <summary>
         /// Get a single chat.
         /// </summary>
@@ -1542,8 +1542,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>GetChatMessagesResponse</returns>
-        GetChatMessagesResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
+        /// <returns>GetChatMessagesPaginatedResponse</returns>
+        GetChatMessagesPaginatedResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
 
         /// <summary>
         /// Fetch messages from chat with specified chat id.
@@ -1560,8 +1560,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetChatMessagesResponse</returns>
-        ApiResponse<GetChatMessagesResponse> GetChatMessagesWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
+        /// <returns>ApiResponse of GetChatMessagesPaginatedResponse</returns>
+        ApiResponse<GetChatMessagesPaginatedResponse> GetChatMessagesWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
         /// <summary>
         /// Get a single contact.
         /// </summary>
@@ -1677,8 +1677,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetContactNotesResponse</returns>
-        GetContactNotesResponse GetContactNotes (int? id, int? page = null, int? limit = null);
+        /// <returns>GetContactNotesPaginatedResponse</returns>
+        GetContactNotesPaginatedResponse GetContactNotes (int? id, int? page = null, int? limit = null);
 
         /// <summary>
         /// Fetch notes assigned to the given contact.
@@ -1690,8 +1690,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetContactNotesResponse</returns>
-        ApiResponse<GetContactNotesResponse> GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetContactNotesPaginatedResponse</returns>
+        ApiResponse<GetContactNotesPaginatedResponse> GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Get all user contacts.
         /// </summary>
@@ -1704,8 +1704,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetContactsResponse</returns>
-        GetContactsResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
+        /// <returns>GetContactsPaginatedResponse</returns>
+        GetContactsPaginatedResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all user contacts.
@@ -1719,8 +1719,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetContactsResponse</returns>
-        ApiResponse<GetContactsResponse> GetContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetContactsPaginatedResponse</returns>
+        ApiResponse<GetContactsPaginatedResponse> GetContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get contacts autocomplete suggestions by given search term.
         /// </summary>
@@ -1731,8 +1731,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        List<GetContactsAutocompleteResponse> GetContactsAutocomplete (string query, int? limit = null, int? lists = null);
+        /// <returns>GetContactsAutocompleteResponse</returns>
+        GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null);
 
         /// <summary>
         /// Get contacts autocomplete suggestions by given search term.
@@ -1744,8 +1744,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>ApiResponse of List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        ApiResponse<List<GetContactsAutocompleteResponse>> GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null);
+        /// <returns>ApiResponse of GetContactsAutocompleteResponse</returns>
+        ApiResponse<GetContactsAutocompleteResponse> GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null);
         /// <summary>
         /// Fetch user contacts by given group id.
         /// </summary>
@@ -1758,8 +1758,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetContactsByListIdResponse</returns>
-        GetContactsByListIdResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>GetContactsByListIdPaginatedResponse</returns>
+        GetContactsByListIdPaginatedResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Fetch user contacts by given group id.
@@ -1773,8 +1773,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetContactsByListIdResponse</returns>
-        ApiResponse<GetContactsByListIdResponse> GetContactsByListIdWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetContactsByListIdPaginatedResponse</returns>
+        ApiResponse<GetContactsByListIdPaginatedResponse> GetContactsByListIdWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Return list of countries.
         /// </summary>
@@ -1782,8 +1782,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;Country&gt;</returns>
-        List<Country> GetCountries ();
+        /// <returns>GetCountriesResponse</returns>
+        GetCountriesResponse GetCountries ();
 
         /// <summary>
         /// Return list of countries.
@@ -1792,8 +1792,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;Country&gt;</returns>
-        ApiResponse<List<Country>> GetCountriesWithHttpInfo ();
+        /// <returns>ApiResponse of GetCountriesResponse</returns>
+        ApiResponse<GetCountriesResponse> GetCountriesWithHttpInfo ();
         /// <summary>
         /// Get current user info.
         /// </summary>
@@ -1843,8 +1843,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetCustomFieldsResponse</returns>
-        GetCustomFieldsResponse GetCustomFields (int? page = null, int? limit = null);
+        /// <returns>GetCustomFieldsPaginatedResponse</returns>
+        GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all contact custom fields.
@@ -1855,8 +1855,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetCustomFieldsResponse</returns>
-        ApiResponse<GetCustomFieldsResponse> GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetCustomFieldsPaginatedResponse</returns>
+        ApiResponse<GetCustomFieldsPaginatedResponse> GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single dedicated number.
         /// </summary>
@@ -1885,8 +1885,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        List<string> GetDisallowedRules ();
+        /// <returns>GetDisallowedRulesResponse</returns>
+        GetDisallowedRulesResponse GetDisallowedRules ();
 
         /// <summary>
         /// Get an array of all rules that are disallowed to the current account.
@@ -1895,8 +1895,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> GetDisallowedRulesWithHttpInfo ();
+        /// <returns>ApiResponse of GetDisallowedRulesResponse</returns>
+        ApiResponse<GetDisallowedRulesResponse> GetDisallowedRulesWithHttpInfo ();
         /// <summary>
         /// Get favorite contacts and lists.
         /// </summary>
@@ -1907,8 +1907,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>GetFavouritesResponse</returns>
-        GetFavouritesResponse GetFavourites (int? page = null, int? limit = null, string query = null);
+        /// <returns>GetFavouritesPaginatedResponse</returns>
+        GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
         /// Get favorite contacts and lists.
@@ -1920,8 +1920,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>ApiResponse of GetFavouritesResponse</returns>
-        ApiResponse<GetFavouritesResponse> GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null);
+        /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
+        ApiResponse<GetFavouritesPaginatedResponse> GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
         /// Get all forwarded calls.
         /// </summary>
@@ -1931,8 +1931,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetForwardedCallsResponse</returns>
-        GetForwardedCallsResponse GetForwardedCalls (int? page = null, int? limit = null);
+        /// <returns>GetForwardedCallsPaginatedResponse</returns>
+        GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all forwarded calls.
@@ -1943,8 +1943,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetForwardedCallsResponse</returns>
-        ApiResponse<GetForwardedCallsResponse> GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetForwardedCallsPaginatedResponse</returns>
+        ApiResponse<GetForwardedCallsPaginatedResponse> GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single inbox message.
         /// </summary>
@@ -1994,8 +1994,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetInvoicesResponse</returns>
-        GetInvoicesResponse GetInvoices (int? page = null, int? limit = null);
+        /// <returns>GetInvoicesPaginatedResponse</returns>
+        GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null);
 
         /// <summary>
         /// Return account invoices.
@@ -2006,8 +2006,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetInvoicesResponse</returns>
-        ApiResponse<GetInvoicesResponse> GetInvoicesWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetInvoicesPaginatedResponse</returns>
+        ApiResponse<GetInvoicesPaginatedResponse> GetInvoicesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single list.
         /// </summary>
@@ -2060,8 +2060,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetListsOfContactResponse</returns>
-        GetListsOfContactResponse GetListsOfContact (int? id, int? page = null, int? limit = null);
+        /// <returns>GetListsOfContactPaginatedResponse</returns>
+        GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null);
 
         /// <summary>
         /// Return lists which contact belongs to.
@@ -2073,8 +2073,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetListsOfContactResponse</returns>
-        ApiResponse<GetListsOfContactResponse> GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetListsOfContactPaginatedResponse</returns>
+        ApiResponse<GetListsOfContactPaginatedResponse> GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Preview message
         /// </summary>
@@ -2258,8 +2258,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>GetMessagesBySessionIdResponse</returns>
-        GetMessagesBySessionIdResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
+        /// <returns>GetMessagesBySessionIdPaginatedResponse</returns>
+        GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
 
         /// <summary>
         /// Fetch messages by given session id.
@@ -2273,8 +2273,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetMessagesBySessionIdResponse</returns>
-        ApiResponse<GetMessagesBySessionIdResponse> GetMessagesBySessionIdWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
+        /// <returns>ApiResponse of GetMessagesBySessionIdPaginatedResponse</returns>
+        ApiResponse<GetMessagesBySessionIdPaginatedResponse> GetMessagesBySessionIdWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
         /// <summary>
         /// Return counters for messaging data views.
         /// </summary>
@@ -2352,8 +2352,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetOutboundMessagesHistoryResponse</returns>
-        GetOutboundMessagesHistoryResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>GetOutboundMessagesHistoryPaginatedResponse</returns>
+        GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get history
@@ -2367,8 +2367,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetOutboundMessagesHistoryResponse</returns>
-        ApiResponse<GetOutboundMessagesHistoryResponse> GetOutboundMessagesHistoryWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of GetOutboundMessagesHistoryPaginatedResponse</returns>
+        ApiResponse<GetOutboundMessagesHistoryPaginatedResponse> GetOutboundMessagesHistoryWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all device tokens assigned to the current account
         /// </summary>
@@ -2439,8 +2439,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetSenderIdsResponse</returns>
-        GetSenderIdsResponse GetSenderIds (int? page = null, int? limit = null);
+        /// <returns>GetSenderIdsPaginatedResponse</returns>
+        GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all sender IDs of current user.
@@ -2451,8 +2451,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetSenderIdsResponse</returns>
-        ApiResponse<GetSenderIdsResponse> GetSenderIdsWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetSenderIdsPaginatedResponse</returns>
+        ApiResponse<GetSenderIdsPaginatedResponse> GetSenderIdsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get current user sender settings.
         /// </summary>
@@ -2485,8 +2485,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>GetSpendingStatResponse</returns>
-        GetSpendingStatResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null);
+        /// <returns>GetSpendingStatPaginatedResponse</returns>
+        GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null);
 
         /// <summary>
         /// Return account spending statistics.
@@ -2499,8 +2499,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>ApiResponse of GetSpendingStatResponse</returns>
-        ApiResponse<GetSpendingStatResponse> GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null);
+        /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
+        ApiResponse<GetSpendingStatPaginatedResponse> GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null);
         /// <summary>
         /// Get current entities state
         /// </summary>
@@ -2661,8 +2661,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetSurveysResponse</returns>
-        GetSurveysResponse GetSurveys (int? page = null, int? limit = null);
+        /// <returns>GetSurveysPaginatedResponse</returns>
+        GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all user surveys.
@@ -2673,8 +2673,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetSurveysResponse</returns>
-        ApiResponse<GetSurveysResponse> GetSurveysWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetSurveysPaginatedResponse</returns>
+        ApiResponse<GetSurveysPaginatedResponse> GetSurveysWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single template.
         /// </summary>
@@ -2704,8 +2704,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Object</returns>
-        Object GetTimezones (int? full = null);
+        /// <returns>GetTimezonesResponse</returns>
+        GetTimezonesResponse GetTimezones (int? full = null);
 
         /// <summary>
         /// Return all available timezone IDs.
@@ -2715,8 +2715,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GetTimezonesWithHttpInfo (int? full = null);
+        /// <returns>ApiResponse of GetTimezonesResponse</returns>
+        ApiResponse<GetTimezonesResponse> GetTimezonesWithHttpInfo (int? full = null);
         /// <summary>
         /// Get total amount of unread messages in the current user chats.
         /// </summary>
@@ -2766,8 +2766,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetUnsubscribersResponse</returns>
-        GetUnsubscribersResponse GetUnsubscribers (int? page = null, int? limit = null);
+        /// <returns>GetUnsubscribersPaginatedResponse</returns>
+        GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all contact have unsubscribed from your communication.
@@ -2778,8 +2778,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetUnsubscribersResponse</returns>
-        ApiResponse<GetUnsubscribersResponse> GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>ApiResponse of GetUnsubscribersPaginatedResponse</returns>
+        ApiResponse<GetUnsubscribersPaginatedResponse> GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get user&#39;s dedicated numbers.
         /// </summary>
@@ -2790,8 +2790,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>GetUserDedicatedNumbersResponse</returns>
-        GetUserDedicatedNumbersResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null);
+        /// <returns>GetUserDedicatedNumbersPaginatedResponse</returns>
+        GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null);
 
         /// <summary>
         /// Get user&#39;s dedicated numbers.
@@ -2803,8 +2803,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>ApiResponse of GetUserDedicatedNumbersResponse</returns>
-        ApiResponse<GetUserDedicatedNumbersResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
+        /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
+        ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
         /// Get all user lists.
         /// </summary>
@@ -2818,8 +2818,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>GetUserListsResponse</returns>
-        GetUserListsResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+        /// <returns>GetUserListsPaginatedResponse</returns>
+        GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
 
         /// <summary>
         /// Get all user lists.
@@ -2834,8 +2834,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetUserListsResponse</returns>
-        ApiResponse<GetUserListsResponse> GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+        /// <returns>ApiResponse of GetUserListsPaginatedResponse</returns>
+        ApiResponse<GetUserListsPaginatedResponse> GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
         /// Get minimal valid apps versions
         /// </summary>
@@ -3094,8 +3094,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>SearchChatsResponse</returns>
-        SearchChatsResponse SearchChats (int? page = null, int? limit = null, string query = null);
+        /// <returns>SearchChatsPaginatedResponse</returns>
+        SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
         /// Find chats by inbound or outbound messages text.
@@ -3107,8 +3107,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>ApiResponse of SearchChatsResponse</returns>
-        ApiResponse<SearchChatsResponse> SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null);
+        /// <returns>ApiResponse of SearchChatsPaginatedResponse</returns>
+        ApiResponse<SearchChatsPaginatedResponse> SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
         /// Find chats by IDs.
         /// </summary>
@@ -3119,8 +3119,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>SearchChatsByIdsResponse</returns>
-        SearchChatsByIdsResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null);
+        /// <returns>SearchChatsByIdsPaginatedResponse</returns>
+        SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null);
 
         /// <summary>
         /// Find chats by IDs.
@@ -3132,8 +3132,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>ApiResponse of SearchChatsByIdsResponse</returns>
-        ApiResponse<SearchChatsByIdsResponse> SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null);
+        /// <returns>ApiResponse of SearchChatsByIdsPaginatedResponse</returns>
+        ApiResponse<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null);
         /// <summary>
         /// Find chats by recipient (contact, list name or phone number).
         /// </summary>
@@ -3145,8 +3145,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>SearchChatsByReceipentResponse</returns>
-        SearchChatsByReceipentResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null);
+        /// <returns>SearchChatsByReceipentPaginatedResponse</returns>
+        SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null);
 
         /// <summary>
         /// Find chats by recipient (contact, list name or phone number).
@@ -3159,8 +3159,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>ApiResponse of SearchChatsByReceipentResponse</returns>
-        ApiResponse<SearchChatsByReceipentResponse> SearchChatsByReceipentWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
+        /// <returns>ApiResponse of SearchChatsByReceipentPaginatedResponse</returns>
+        ApiResponse<SearchChatsByReceipentPaginatedResponse> SearchChatsByReceipentWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
         /// <summary>
         /// Find user contacts by given parameters.
         /// </summary>
@@ -3179,8 +3179,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchContactsResponse</returns>
-        SearchContactsResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
+        /// <returns>SearchContactsPaginatedResponse</returns>
+        SearchContactsPaginatedResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find user contacts by given parameters.
@@ -3200,8 +3200,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchContactsResponse</returns>
-        ApiResponse<SearchContactsResponse> SearchContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of SearchContactsPaginatedResponse</returns>
+        ApiResponse<SearchContactsPaginatedResponse> SearchContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find inbound messages by given parameters.
         /// </summary>
@@ -3216,8 +3216,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>SearchInboundMessagesResponse</returns>
-        SearchInboundMessagesResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
+        /// <returns>SearchInboundMessagesPaginatedResponse</returns>
+        SearchInboundMessagesPaginatedResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
 
         /// <summary>
         /// Find inbound messages by given parameters.
@@ -3233,8 +3233,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>ApiResponse of SearchInboundMessagesResponse</returns>
-        ApiResponse<SearchInboundMessagesResponse> SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
+        /// <returns>ApiResponse of SearchInboundMessagesPaginatedResponse</returns>
+        ApiResponse<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
         /// Find contact lists by given parameters.
         /// </summary>
@@ -3250,8 +3250,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchListsResponse</returns>
-        SearchListsResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
+        /// <returns>SearchListsPaginatedResponse</returns>
+        SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find contact lists by given parameters.
@@ -3268,8 +3268,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchListsResponse</returns>
-        ApiResponse<SearchListsResponse> SearchListsWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of SearchListsPaginatedResponse</returns>
+        ApiResponse<SearchListsPaginatedResponse> SearchListsWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find messages
         /// </summary>
@@ -3285,8 +3285,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>SearchOutboundMessagesResponse</returns>
-        SearchOutboundMessagesResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
+        /// <returns>SearchOutboundMessagesPaginatedResponse</returns>
+        SearchOutboundMessagesPaginatedResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
 
         /// <summary>
         /// Find messages
@@ -3303,8 +3303,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>ApiResponse of SearchOutboundMessagesResponse</returns>
-        ApiResponse<SearchOutboundMessagesResponse> SearchOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
+        /// <returns>ApiResponse of SearchOutboundMessagesPaginatedResponse</returns>
+        ApiResponse<SearchOutboundMessagesPaginatedResponse> SearchOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
         /// <summary>
         /// Find scheduled messages by given parameters.
         /// </summary>
@@ -3319,8 +3319,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchScheduledMessagesResponse</returns>
-        SearchScheduledMessagesResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>SearchScheduledMessagesPaginatedResponse</returns>
+        SearchScheduledMessagesPaginatedResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find scheduled messages by given parameters.
@@ -3336,8 +3336,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchScheduledMessagesResponse</returns>
-        ApiResponse<SearchScheduledMessagesResponse> SearchScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>ApiResponse of SearchScheduledMessagesPaginatedResponse</returns>
+        ApiResponse<SearchScheduledMessagesPaginatedResponse> SearchScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find user templates by given parameters.
         /// </summary>
@@ -3350,8 +3350,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>SearchTemplatesResponse</returns>
-        SearchTemplatesResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
+        /// <returns>SearchTemplatesPaginatedResponse</returns>
+        SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
 
         /// <summary>
         /// Find user templates by given parameters.
@@ -3365,8 +3365,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>ApiResponse of SearchTemplatesResponse</returns>
-        ApiResponse<SearchTemplatesResponse> SearchTemplatesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
+        /// <returns>ApiResponse of SearchTemplatesPaginatedResponse</returns>
+        ApiResponse<SearchTemplatesPaginatedResponse> SearchTemplatesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
         /// <summary>
         /// Send user email verification
         /// </summary>
@@ -5086,8 +5086,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetAllBulkSessionsResponse</returns>
-        System.Threading.Tasks.Task<GetAllBulkSessionsResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetAllBulkSessionsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all bulk sending sessions.
@@ -5098,8 +5098,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetAllBulkSessionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetAllBulkSessionsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsPaginatedResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all user chats.
         /// </summary>
@@ -5113,8 +5113,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>Task of GetAllChatsResponse</returns>
-        System.Threading.Tasks.Task<GetAllChatsResponse> GetAllChatsAsync (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
+        /// <returns>Task of GetAllChatsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllChatsPaginatedResponse> GetAllChatsAsync (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
 
         /// <summary>
         /// Get all user chats.
@@ -5129,8 +5129,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetAllChatsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllChatsResponse>> GetAllChatsAsyncWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
+        /// <returns>Task of ApiResponse (GetAllChatsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllChatsPaginatedResponse>> GetAllChatsAsyncWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
         /// <summary>
         /// Get all inbox messages.
         /// </summary>
@@ -5142,8 +5142,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetAllInboundMessagesResponse</returns>
-        System.Threading.Tasks.Task<GetAllInboundMessagesResponse> GetAllInboundMessagesAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetAllInboundMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllInboundMessagesPaginatedResponse> GetAllInboundMessagesAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all inbox messages.
@@ -5156,8 +5156,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetAllInboundMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllInboundMessagesResponse>> GetAllInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetAllInboundMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllInboundMessagesPaginatedResponse>> GetAllInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all message sending sessions.
         /// </summary>
@@ -5167,8 +5167,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetAllMessageSessionsResponse</returns>
-        System.Threading.Tasks.Task<GetAllMessageSessionsResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetAllMessageSessionsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all message sending sessions.
@@ -5179,8 +5179,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetAllMessageSessionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetAllMessageSessionsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsPaginatedResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all messages
         /// </summary>
@@ -5191,8 +5191,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>Task of GetAllOutboundMessagesResponse</returns>
-        System.Threading.Tasks.Task<GetAllOutboundMessagesResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null);
+        /// <returns>Task of GetAllOutboundMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null);
 
         /// <summary>
         /// Get all messages
@@ -5204,8 +5204,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>Task of ApiResponse (GetAllOutboundMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
+        /// <returns>Task of ApiResponse (GetAllOutboundMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesPaginatedResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
         /// <summary>
         /// Get all scheduled messages.
         /// </summary>
@@ -5218,8 +5218,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetAllScheduledMessagesResponse</returns>
-        System.Threading.Tasks.Task<GetAllScheduledMessagesResponse> GetAllScheduledMessagesAsync (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetAllScheduledMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllScheduledMessagesPaginatedResponse> GetAllScheduledMessagesAsync (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all scheduled messages.
@@ -5233,8 +5233,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetAllScheduledMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllScheduledMessagesResponse>> GetAllScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetAllScheduledMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllScheduledMessagesPaginatedResponse>> GetAllScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all user templates.
         /// </summary>
@@ -5244,8 +5244,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>Task of GetAllTemplatesResponse</returns>
-        System.Threading.Tasks.Task<GetAllTemplatesResponse> GetAllTemplatesAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetAllTemplatesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetAllTemplatesPaginatedResponse> GetAllTemplatesAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all user templates.
@@ -5256,8 +5256,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>Task of ApiResponse (GetAllTemplatesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetAllTemplatesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesPaginatedResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Find available dedicated numbers to buy.
         /// </summary>
@@ -5354,8 +5354,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetBlockedContactsResponse</returns>
-        System.Threading.Tasks.Task<GetBlockedContactsResponse> GetBlockedContactsAsync (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetBlockedContactsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetBlockedContactsPaginatedResponse> GetBlockedContactsAsync (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get blocked contacts.
@@ -5369,8 +5369,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetBlockedContactsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetBlockedContactsResponse>> GetBlockedContactsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetBlockedContactsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetBlockedContactsPaginatedResponse>> GetBlockedContactsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get bulk message session status.
         /// </summary>
@@ -5418,8 +5418,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> GetCallsPricesAsync ();
+        /// <returns>Task of GetCallsPricesResponse</returns>
+        System.Threading.Tasks.Task<GetCallsPricesResponse> GetCallsPricesAsync ();
 
         /// <summary>
         /// Check pricing for a inbound/outbound call.
@@ -5428,8 +5428,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetCallsPricesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (GetCallsPricesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetCallsPricesResponse>> GetCallsPricesAsyncWithHttpInfo ();
         /// <summary>
         /// Get a single chat.
         /// </summary>
@@ -5491,8 +5491,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>Task of GetChatMessagesResponse</returns>
-        System.Threading.Tasks.Task<GetChatMessagesResponse> GetChatMessagesAsync (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
+        /// <returns>Task of GetChatMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetChatMessagesPaginatedResponse> GetChatMessagesAsync (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
 
         /// <summary>
         /// Fetch messages from chat with specified chat id.
@@ -5509,8 +5509,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetChatMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetChatMessagesResponse>> GetChatMessagesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
+        /// <returns>Task of ApiResponse (GetChatMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetChatMessagesPaginatedResponse>> GetChatMessagesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
         /// <summary>
         /// Get a single contact.
         /// </summary>
@@ -5626,8 +5626,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetContactNotesResponse</returns>
-        System.Threading.Tasks.Task<GetContactNotesResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null);
+        /// <returns>Task of GetContactNotesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetContactNotesPaginatedResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null);
 
         /// <summary>
         /// Fetch notes assigned to the given contact.
@@ -5639,8 +5639,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetContactNotesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetContactNotesResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetContactNotesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContactNotesPaginatedResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Get all user contacts.
         /// </summary>
@@ -5653,8 +5653,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetContactsResponse</returns>
-        System.Threading.Tasks.Task<GetContactsResponse> GetContactsAsync (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetContactsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetContactsPaginatedResponse> GetContactsAsync (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get all user contacts.
@@ -5668,8 +5668,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetContactsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetContactsResponse>> GetContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetContactsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContactsPaginatedResponse>> GetContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get contacts autocomplete suggestions by given search term.
         /// </summary>
@@ -5680,8 +5680,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>Task of List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null);
+        /// <returns>Task of GetContactsAutocompleteResponse</returns>
+        System.Threading.Tasks.Task<GetContactsAutocompleteResponse> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null);
 
         /// <summary>
         /// Get contacts autocomplete suggestions by given search term.
@@ -5693,8 +5693,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (List&lt;GetContactsAutocompleteResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<GetContactsAutocompleteResponse>>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null);
+        /// <returns>Task of ApiResponse (GetContactsAutocompleteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null);
         /// <summary>
         /// Fetch user contacts by given group id.
         /// </summary>
@@ -5707,8 +5707,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetContactsByListIdResponse</returns>
-        System.Threading.Tasks.Task<GetContactsByListIdResponse> GetContactsByListIdAsync (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetContactsByListIdPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetContactsByListIdPaginatedResponse> GetContactsByListIdAsync (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Fetch user contacts by given group id.
@@ -5722,8 +5722,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetContactsByListIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetContactsByListIdResponse>> GetContactsByListIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetContactsByListIdPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContactsByListIdPaginatedResponse>> GetContactsByListIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Return list of countries.
         /// </summary>
@@ -5731,8 +5731,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;Country&gt;</returns>
-        System.Threading.Tasks.Task<List<Country>> GetCountriesAsync ();
+        /// <returns>Task of GetCountriesResponse</returns>
+        System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync ();
 
         /// <summary>
         /// Return list of countries.
@@ -5741,8 +5741,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;Country&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Country>>> GetCountriesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (GetCountriesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetCountriesResponse>> GetCountriesAsyncWithHttpInfo ();
         /// <summary>
         /// Get current user info.
         /// </summary>
@@ -5792,8 +5792,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetCustomFieldsResponse</returns>
-        System.Threading.Tasks.Task<GetCustomFieldsResponse> GetCustomFieldsAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetCustomFieldsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetCustomFieldsPaginatedResponse> GetCustomFieldsAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all contact custom fields.
@@ -5804,8 +5804,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetCustomFieldsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetCustomFieldsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsPaginatedResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single dedicated number.
         /// </summary>
@@ -5834,8 +5834,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> GetDisallowedRulesAsync ();
+        /// <returns>Task of GetDisallowedRulesResponse</returns>
+        System.Threading.Tasks.Task<GetDisallowedRulesResponse> GetDisallowedRulesAsync ();
 
         /// <summary>
         /// Get an array of all rules that are disallowed to the current account.
@@ -5844,8 +5844,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetDisallowedRulesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (GetDisallowedRulesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDisallowedRulesResponse>> GetDisallowedRulesAsyncWithHttpInfo ();
         /// <summary>
         /// Get favorite contacts and lists.
         /// </summary>
@@ -5856,8 +5856,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>Task of GetFavouritesResponse</returns>
-        System.Threading.Tasks.Task<GetFavouritesResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null);
+        /// <returns>Task of GetFavouritesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
         /// Get favorite contacts and lists.
@@ -5869,8 +5869,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>Task of ApiResponse (GetFavouritesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetFavouritesResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
+        /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
         /// Get all forwarded calls.
         /// </summary>
@@ -5880,8 +5880,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetForwardedCallsResponse</returns>
-        System.Threading.Tasks.Task<GetForwardedCallsResponse> GetForwardedCallsAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetForwardedCallsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetForwardedCallsPaginatedResponse> GetForwardedCallsAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all forwarded calls.
@@ -5892,8 +5892,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetForwardedCallsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetForwardedCallsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsPaginatedResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single inbox message.
         /// </summary>
@@ -5943,8 +5943,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetInvoicesResponse</returns>
-        System.Threading.Tasks.Task<GetInvoicesResponse> GetInvoicesAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetInvoicesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetInvoicesPaginatedResponse> GetInvoicesAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Return account invoices.
@@ -5955,8 +5955,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetInvoicesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetInvoicesResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetInvoicesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetInvoicesPaginatedResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single list.
         /// </summary>
@@ -6009,8 +6009,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetListsOfContactResponse</returns>
-        System.Threading.Tasks.Task<GetListsOfContactResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null);
+        /// <returns>Task of GetListsOfContactPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetListsOfContactPaginatedResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null);
 
         /// <summary>
         /// Return lists which contact belongs to.
@@ -6022,8 +6022,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetListsOfContactResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetListsOfContactResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetListsOfContactPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetListsOfContactPaginatedResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Preview message
         /// </summary>
@@ -6207,8 +6207,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>Task of GetMessagesBySessionIdResponse</returns>
-        System.Threading.Tasks.Task<GetMessagesBySessionIdResponse> GetMessagesBySessionIdAsync (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
+        /// <returns>Task of GetMessagesBySessionIdPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetMessagesBySessionIdPaginatedResponse> GetMessagesBySessionIdAsync (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
 
         /// <summary>
         /// Fetch messages by given session id.
@@ -6222,8 +6222,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetMessagesBySessionIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetMessagesBySessionIdResponse>> GetMessagesBySessionIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
+        /// <returns>Task of ApiResponse (GetMessagesBySessionIdPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMessagesBySessionIdPaginatedResponse>> GetMessagesBySessionIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
         /// <summary>
         /// Return counters for messaging data views.
         /// </summary>
@@ -6301,8 +6301,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetOutboundMessagesHistoryResponse</returns>
-        System.Threading.Tasks.Task<GetOutboundMessagesHistoryResponse> GetOutboundMessagesHistoryAsync (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>Task of GetOutboundMessagesHistoryPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetOutboundMessagesHistoryPaginatedResponse> GetOutboundMessagesHistoryAsync (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Get history
@@ -6316,8 +6316,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetOutboundMessagesHistoryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetOutboundMessagesHistoryResponse>> GetOutboundMessagesHistoryAsyncWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (GetOutboundMessagesHistoryPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetOutboundMessagesHistoryPaginatedResponse>> GetOutboundMessagesHistoryAsyncWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Get all device tokens assigned to the current account
         /// </summary>
@@ -6388,8 +6388,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetSenderIdsResponse</returns>
-        System.Threading.Tasks.Task<GetSenderIdsResponse> GetSenderIdsAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetSenderIdsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetSenderIdsPaginatedResponse> GetSenderIdsAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all sender IDs of current user.
@@ -6400,8 +6400,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetSenderIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSenderIdsResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetSenderIdsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetSenderIdsPaginatedResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get current user sender settings.
         /// </summary>
@@ -6434,8 +6434,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>Task of GetSpendingStatResponse</returns>
-        System.Threading.Tasks.Task<GetSpendingStatResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, int? end = null);
+        /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, int? end = null);
 
         /// <summary>
         /// Return account spending statistics.
@@ -6448,8 +6448,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>Task of ApiResponse (GetSpendingStatResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSpendingStatResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null);
+        /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null);
         /// <summary>
         /// Get current entities state
         /// </summary>
@@ -6610,8 +6610,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetSurveysResponse</returns>
-        System.Threading.Tasks.Task<GetSurveysResponse> GetSurveysAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetSurveysPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetSurveysPaginatedResponse> GetSurveysAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all user surveys.
@@ -6622,8 +6622,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetSurveysResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSurveysResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetSurveysPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetSurveysPaginatedResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get a single template.
         /// </summary>
@@ -6653,8 +6653,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetTimezonesAsync (int? full = null);
+        /// <returns>Task of GetTimezonesResponse</returns>
+        System.Threading.Tasks.Task<GetTimezonesResponse> GetTimezonesAsync (int? full = null);
 
         /// <summary>
         /// Return all available timezone IDs.
@@ -6664,8 +6664,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetTimezonesAsyncWithHttpInfo (int? full = null);
+        /// <returns>Task of ApiResponse (GetTimezonesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetTimezonesResponse>> GetTimezonesAsyncWithHttpInfo (int? full = null);
         /// <summary>
         /// Get total amount of unread messages in the current user chats.
         /// </summary>
@@ -6715,8 +6715,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetUnsubscribersResponse</returns>
-        System.Threading.Tasks.Task<GetUnsubscribersResponse> GetUnsubscribersAsync (int? page = null, int? limit = null);
+        /// <returns>Task of GetUnsubscribersPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetUnsubscribersPaginatedResponse> GetUnsubscribersAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all contact have unsubscribed from your communication.
@@ -6727,8 +6727,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetUnsubscribersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <returns>Task of ApiResponse (GetUnsubscribersPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersPaginatedResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get user&#39;s dedicated numbers.
         /// </summary>
@@ -6739,8 +6739,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>Task of GetUserDedicatedNumbersResponse</returns>
-        System.Threading.Tasks.Task<GetUserDedicatedNumbersResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null);
+        /// <returns>Task of GetUserDedicatedNumbersPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null);
 
         /// <summary>
         /// Get user&#39;s dedicated numbers.
@@ -6752,8 +6752,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>Task of ApiResponse (GetUserDedicatedNumbersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
+        /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
         /// Get all user lists.
         /// </summary>
@@ -6767,8 +6767,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of GetUserListsResponse</returns>
-        System.Threading.Tasks.Task<GetUserListsResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+        /// <returns>Task of GetUserListsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetUserListsPaginatedResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
 
         /// <summary>
         /// Get all user lists.
@@ -6783,8 +6783,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetUserListsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserListsResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+        /// <returns>Task of ApiResponse (GetUserListsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetUserListsPaginatedResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
         /// Get minimal valid apps versions
         /// </summary>
@@ -7043,8 +7043,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>Task of SearchChatsResponse</returns>
-        System.Threading.Tasks.Task<SearchChatsResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null);
+        /// <returns>Task of SearchChatsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchChatsPaginatedResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
         /// Find chats by inbound or outbound messages text.
@@ -7056,8 +7056,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>Task of ApiResponse (SearchChatsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchChatsResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
+        /// <returns>Task of ApiResponse (SearchChatsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchChatsPaginatedResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
         /// Find chats by IDs.
         /// </summary>
@@ -7068,8 +7068,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>Task of SearchChatsByIdsResponse</returns>
-        System.Threading.Tasks.Task<SearchChatsByIdsResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null);
+        /// <returns>Task of SearchChatsByIdsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null);
 
         /// <summary>
         /// Find chats by IDs.
@@ -7081,8 +7081,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>Task of ApiResponse (SearchChatsByIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null);
+        /// <returns>Task of ApiResponse (SearchChatsByIdsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsPaginatedResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null);
         /// <summary>
         /// Find chats by recipient (contact, list name or phone number).
         /// </summary>
@@ -7094,8 +7094,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>Task of SearchChatsByReceipentResponse</returns>
-        System.Threading.Tasks.Task<SearchChatsByReceipentResponse> SearchChatsByReceipentAsync (int? page = null, int? limit = null, string query = null, string orderBy = null);
+        /// <returns>Task of SearchChatsByReceipentPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchChatsByReceipentPaginatedResponse> SearchChatsByReceipentAsync (int? page = null, int? limit = null, string query = null, string orderBy = null);
 
         /// <summary>
         /// Find chats by recipient (contact, list name or phone number).
@@ -7108,8 +7108,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>Task of ApiResponse (SearchChatsByReceipentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchChatsByReceipentResponse>> SearchChatsByReceipentAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
+        /// <returns>Task of ApiResponse (SearchChatsByReceipentPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchChatsByReceipentPaginatedResponse>> SearchChatsByReceipentAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
         /// <summary>
         /// Find user contacts by given parameters.
         /// </summary>
@@ -7128,8 +7128,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchContactsResponse</returns>
-        System.Threading.Tasks.Task<SearchContactsResponse> SearchContactsAsync (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
+        /// <returns>Task of SearchContactsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchContactsPaginatedResponse> SearchContactsAsync (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find user contacts by given parameters.
@@ -7149,8 +7149,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchContactsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchContactsResponse>> SearchContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (SearchContactsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchContactsPaginatedResponse>> SearchContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find inbound messages by given parameters.
         /// </summary>
@@ -7165,8 +7165,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>Task of SearchInboundMessagesResponse</returns>
-        System.Threading.Tasks.Task<SearchInboundMessagesResponse> SearchInboundMessagesAsync (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
+        /// <returns>Task of SearchInboundMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesAsync (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
 
         /// <summary>
         /// Find inbound messages by given parameters.
@@ -7182,8 +7182,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (SearchInboundMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
+        /// <returns>Task of ApiResponse (SearchInboundMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesPaginatedResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
         /// Find contact lists by given parameters.
         /// </summary>
@@ -7199,8 +7199,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchListsResponse</returns>
-        System.Threading.Tasks.Task<SearchListsResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
+        /// <returns>Task of SearchListsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchListsPaginatedResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find contact lists by given parameters.
@@ -7217,8 +7217,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchListsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchListsResponse>> SearchListsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (SearchListsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchListsPaginatedResponse>> SearchListsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find messages
         /// </summary>
@@ -7234,8 +7234,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>Task of SearchOutboundMessagesResponse</returns>
-        System.Threading.Tasks.Task<SearchOutboundMessagesResponse> SearchOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
+        /// <returns>Task of SearchOutboundMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchOutboundMessagesPaginatedResponse> SearchOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
 
         /// <summary>
         /// Find messages
@@ -7252,8 +7252,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>Task of ApiResponse (SearchOutboundMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchOutboundMessagesResponse>> SearchOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
+        /// <returns>Task of ApiResponse (SearchOutboundMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchOutboundMessagesPaginatedResponse>> SearchOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
         /// <summary>
         /// Find scheduled messages by given parameters.
         /// </summary>
@@ -7268,8 +7268,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchScheduledMessagesResponse</returns>
-        System.Threading.Tasks.Task<SearchScheduledMessagesResponse> SearchScheduledMessagesAsync (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>Task of SearchScheduledMessagesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchScheduledMessagesPaginatedResponse> SearchScheduledMessagesAsync (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
         /// Find scheduled messages by given parameters.
@@ -7285,8 +7285,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchScheduledMessagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchScheduledMessagesResponse>> SearchScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
+        /// <returns>Task of ApiResponse (SearchScheduledMessagesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchScheduledMessagesPaginatedResponse>> SearchScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
         /// Find user templates by given parameters.
         /// </summary>
@@ -7299,8 +7299,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>Task of SearchTemplatesResponse</returns>
-        System.Threading.Tasks.Task<SearchTemplatesResponse> SearchTemplatesAsync (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
+        /// <returns>Task of SearchTemplatesPaginatedResponse</returns>
+        System.Threading.Tasks.Task<SearchTemplatesPaginatedResponse> SearchTemplatesAsync (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
 
         /// <summary>
         /// Find user templates by given parameters.
@@ -7314,8 +7314,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>Task of ApiResponse (SearchTemplatesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SearchTemplatesResponse>> SearchTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
+        /// <returns>Task of ApiResponse (SearchTemplatesPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchTemplatesPaginatedResponse>> SearchTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
         /// <summary>
         /// Send user email verification
         /// </summary>
@@ -15964,10 +15964,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetAllBulkSessionsResponse</returns>
-        public GetAllBulkSessionsResponse GetAllBulkSessions (int? page = null, int? limit = null)
+        /// <returns>GetAllBulkSessionsPaginatedResponse</returns>
+        public GetAllBulkSessionsPaginatedResponse GetAllBulkSessions (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllBulkSessionsResponse> localVarResponse = GetAllBulkSessionsWithHttpInfo(page, limit);
+             ApiResponse<GetAllBulkSessionsPaginatedResponse> localVarResponse = GetAllBulkSessionsWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -15977,8 +15977,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetAllBulkSessionsResponse</returns>
-        public ApiResponse< GetAllBulkSessionsResponse > GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetAllBulkSessionsPaginatedResponse</returns>
+        public ApiResponse< GetAllBulkSessionsPaginatedResponse > GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/bulks";
@@ -16026,9 +16026,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllBulkSessionsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllBulkSessionsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllBulkSessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBulkSessionsResponse)));
+                (GetAllBulkSessionsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBulkSessionsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16037,10 +16037,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetAllBulkSessionsResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllBulkSessionsResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetAllBulkSessionsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllBulkSessionsResponse> localVarResponse = await GetAllBulkSessionsAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetAllBulkSessionsPaginatedResponse> localVarResponse = await GetAllBulkSessionsAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -16051,8 +16051,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetAllBulkSessionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetAllBulkSessionsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsPaginatedResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/bulks";
@@ -16100,9 +16100,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllBulkSessionsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllBulkSessionsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllBulkSessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBulkSessionsResponse)));
+                (GetAllBulkSessionsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBulkSessionsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16115,10 +16115,10 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>GetAllChatsResponse</returns>
-        public GetAllChatsResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
+        /// <returns>GetAllChatsPaginatedResponse</returns>
+        public GetAllChatsPaginatedResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
         {
-             ApiResponse<GetAllChatsResponse> localVarResponse = GetAllChatsWithHttpInfo(status, page, limit, orderBy, voice, flat);
+             ApiResponse<GetAllChatsPaginatedResponse> localVarResponse = GetAllChatsWithHttpInfo(status, page, limit, orderBy, voice, flat);
              return localVarResponse.Data;
         }
 
@@ -16132,8 +16132,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetAllChatsResponse</returns>
-        public ApiResponse< GetAllChatsResponse > GetAllChatsWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
+        /// <returns>ApiResponse of GetAllChatsPaginatedResponse</returns>
+        public ApiResponse< GetAllChatsPaginatedResponse > GetAllChatsWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
         {
 
             var localVarPath = "/api/v2/chats";
@@ -16185,9 +16185,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllChatsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllChatsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllChatsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllChatsResponse)));
+                (GetAllChatsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllChatsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16200,10 +16200,10 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>Task of GetAllChatsResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllChatsResponse> GetAllChatsAsync (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
+        /// <returns>Task of GetAllChatsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllChatsPaginatedResponse> GetAllChatsAsync (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
         {
-             ApiResponse<GetAllChatsResponse> localVarResponse = await GetAllChatsAsyncWithHttpInfo(status, page, limit, orderBy, voice, flat);
+             ApiResponse<GetAllChatsPaginatedResponse> localVarResponse = await GetAllChatsAsyncWithHttpInfo(status, page, limit, orderBy, voice, flat);
              return localVarResponse.Data;
 
         }
@@ -16218,8 +16218,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetAllChatsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllChatsResponse>> GetAllChatsAsyncWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
+        /// <returns>Task of ApiResponse (GetAllChatsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllChatsPaginatedResponse>> GetAllChatsAsyncWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
         {
 
             var localVarPath = "/api/v2/chats";
@@ -16271,9 +16271,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllChatsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllChatsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllChatsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllChatsResponse)));
+                (GetAllChatsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllChatsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16284,10 +16284,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetAllInboundMessagesResponse</returns>
-        public GetAllInboundMessagesResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>GetAllInboundMessagesPaginatedResponse</returns>
+        public GetAllInboundMessagesPaginatedResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetAllInboundMessagesResponse> localVarResponse = GetAllInboundMessagesWithHttpInfo(page, limit, orderBy, direction);
+             ApiResponse<GetAllInboundMessagesPaginatedResponse> localVarResponse = GetAllInboundMessagesWithHttpInfo(page, limit, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -16299,8 +16299,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetAllInboundMessagesResponse</returns>
-        public ApiResponse< GetAllInboundMessagesResponse > GetAllInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetAllInboundMessagesPaginatedResponse</returns>
+        public ApiResponse< GetAllInboundMessagesPaginatedResponse > GetAllInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/replies";
@@ -16350,9 +16350,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllInboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllInboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllInboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllInboundMessagesResponse)));
+                (GetAllInboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllInboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16363,10 +16363,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetAllInboundMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllInboundMessagesResponse> GetAllInboundMessagesAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetAllInboundMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllInboundMessagesPaginatedResponse> GetAllInboundMessagesAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetAllInboundMessagesResponse> localVarResponse = await GetAllInboundMessagesAsyncWithHttpInfo(page, limit, orderBy, direction);
+             ApiResponse<GetAllInboundMessagesPaginatedResponse> localVarResponse = await GetAllInboundMessagesAsyncWithHttpInfo(page, limit, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -16379,8 +16379,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetAllInboundMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllInboundMessagesResponse>> GetAllInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetAllInboundMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllInboundMessagesPaginatedResponse>> GetAllInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/replies";
@@ -16430,9 +16430,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllInboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllInboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllInboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllInboundMessagesResponse)));
+                (GetAllInboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllInboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16441,10 +16441,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetAllMessageSessionsResponse</returns>
-        public GetAllMessageSessionsResponse GetAllMessageSessions (int? page = null, int? limit = null)
+        /// <returns>GetAllMessageSessionsPaginatedResponse</returns>
+        public GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllMessageSessionsResponse> localVarResponse = GetAllMessageSessionsWithHttpInfo(page, limit);
+             ApiResponse<GetAllMessageSessionsPaginatedResponse> localVarResponse = GetAllMessageSessionsWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -16454,8 +16454,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetAllMessageSessionsResponse</returns>
-        public ApiResponse< GetAllMessageSessionsResponse > GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetAllMessageSessionsPaginatedResponse</returns>
+        public ApiResponse< GetAllMessageSessionsPaginatedResponse > GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/sessions";
@@ -16503,9 +16503,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllMessageSessionsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllMessageSessionsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllMessageSessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllMessageSessionsResponse)));
+                (GetAllMessageSessionsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllMessageSessionsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16514,10 +16514,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetAllMessageSessionsResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllMessageSessionsResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetAllMessageSessionsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllMessageSessionsResponse> localVarResponse = await GetAllMessageSessionsAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetAllMessageSessionsPaginatedResponse> localVarResponse = await GetAllMessageSessionsAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -16528,8 +16528,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetAllMessageSessionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetAllMessageSessionsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsPaginatedResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/sessions";
@@ -16577,9 +16577,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllMessageSessionsResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllMessageSessionsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllMessageSessionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllMessageSessionsResponse)));
+                (GetAllMessageSessionsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllMessageSessionsPaginatedResponse)));
         }
 
         /// <summary>
@@ -16589,10 +16589,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>GetAllOutboundMessagesResponse</returns>
-        public GetAllOutboundMessagesResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
+        /// <returns>GetAllOutboundMessagesPaginatedResponse</returns>
+        public GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
         {
-             ApiResponse<GetAllOutboundMessagesResponse> localVarResponse = GetAllOutboundMessagesWithHttpInfo(page, limit, lastId);
+             ApiResponse<GetAllOutboundMessagesPaginatedResponse> localVarResponse = GetAllOutboundMessagesWithHttpInfo(page, limit, lastId);
              return localVarResponse.Data;
         }
 
@@ -16603,8 +16603,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>ApiResponse of GetAllOutboundMessagesResponse</returns>
-        public ApiResponse< GetAllOutboundMessagesResponse > GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
+        /// <returns>ApiResponse of GetAllOutboundMessagesPaginatedResponse</returns>
+        public ApiResponse< GetAllOutboundMessagesPaginatedResponse > GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
         {
 
             var localVarPath = "/api/v2/messages";
@@ -16653,9 +16653,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllOutboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllOutboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllOutboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllOutboundMessagesResponse)));
+                (GetAllOutboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllOutboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16665,10 +16665,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>Task of GetAllOutboundMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllOutboundMessagesResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null)
+        /// <returns>Task of GetAllOutboundMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null)
         {
-             ApiResponse<GetAllOutboundMessagesResponse> localVarResponse = await GetAllOutboundMessagesAsyncWithHttpInfo(page, limit, lastId);
+             ApiResponse<GetAllOutboundMessagesPaginatedResponse> localVarResponse = await GetAllOutboundMessagesAsyncWithHttpInfo(page, limit, lastId);
              return localVarResponse.Data;
 
         }
@@ -16680,8 +16680,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
-        /// <returns>Task of ApiResponse (GetAllOutboundMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
+        /// <returns>Task of ApiResponse (GetAllOutboundMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesPaginatedResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
         {
 
             var localVarPath = "/api/v2/messages";
@@ -16730,9 +16730,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllOutboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllOutboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllOutboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllOutboundMessagesResponse)));
+                (GetAllOutboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllOutboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16744,10 +16744,10 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetAllScheduledMessagesResponse</returns>
-        public GetAllScheduledMessagesResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>GetAllScheduledMessagesPaginatedResponse</returns>
+        public GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetAllScheduledMessagesResponse> localVarResponse = GetAllScheduledMessagesWithHttpInfo(page, limit, status, orderBy, direction);
+             ApiResponse<GetAllScheduledMessagesPaginatedResponse> localVarResponse = GetAllScheduledMessagesWithHttpInfo(page, limit, status, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -16760,8 +16760,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetAllScheduledMessagesResponse</returns>
-        public ApiResponse< GetAllScheduledMessagesResponse > GetAllScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetAllScheduledMessagesPaginatedResponse</returns>
+        public ApiResponse< GetAllScheduledMessagesPaginatedResponse > GetAllScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/schedules";
@@ -16812,9 +16812,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllScheduledMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllScheduledMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllScheduledMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllScheduledMessagesResponse)));
+                (GetAllScheduledMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllScheduledMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16826,10 +16826,10 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetAllScheduledMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllScheduledMessagesResponse> GetAllScheduledMessagesAsync (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetAllScheduledMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllScheduledMessagesPaginatedResponse> GetAllScheduledMessagesAsync (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetAllScheduledMessagesResponse> localVarResponse = await GetAllScheduledMessagesAsyncWithHttpInfo(page, limit, status, orderBy, direction);
+             ApiResponse<GetAllScheduledMessagesPaginatedResponse> localVarResponse = await GetAllScheduledMessagesAsyncWithHttpInfo(page, limit, status, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -16843,8 +16843,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetAllScheduledMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllScheduledMessagesResponse>> GetAllScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetAllScheduledMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllScheduledMessagesPaginatedResponse>> GetAllScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/schedules";
@@ -16895,9 +16895,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllScheduledMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllScheduledMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllScheduledMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllScheduledMessagesResponse)));
+                (GetAllScheduledMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllScheduledMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16906,10 +16906,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>GetAllTemplatesResponse</returns>
-        public GetAllTemplatesResponse GetAllTemplates (int? page = null, int? limit = null)
+        /// <returns>GetAllTemplatesPaginatedResponse</returns>
+        public GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllTemplatesResponse> localVarResponse = GetAllTemplatesWithHttpInfo(page, limit);
+             ApiResponse<GetAllTemplatesPaginatedResponse> localVarResponse = GetAllTemplatesWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -16919,8 +16919,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>ApiResponse of GetAllTemplatesResponse</returns>
-        public ApiResponse< GetAllTemplatesResponse > GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetAllTemplatesPaginatedResponse</returns>
+        public ApiResponse< GetAllTemplatesPaginatedResponse > GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/templates";
@@ -16968,9 +16968,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllTemplatesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllTemplatesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllTemplatesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllTemplatesResponse)));
+                (GetAllTemplatesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllTemplatesPaginatedResponse)));
         }
 
         /// <summary>
@@ -16979,10 +16979,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>Task of GetAllTemplatesResponse</returns>
-        public async System.Threading.Tasks.Task<GetAllTemplatesResponse> GetAllTemplatesAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetAllTemplatesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetAllTemplatesPaginatedResponse> GetAllTemplatesAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetAllTemplatesResponse> localVarResponse = await GetAllTemplatesAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetAllTemplatesPaginatedResponse> localVarResponse = await GetAllTemplatesAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -16993,8 +16993,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional)</param>
         /// <param name="limit">How many results to return (optional)</param>
-        /// <returns>Task of ApiResponse (GetAllTemplatesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetAllTemplatesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesPaginatedResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/templates";
@@ -17042,9 +17042,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetAllTemplatesResponse>(localVarStatusCode,
+            return new ApiResponse<GetAllTemplatesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetAllTemplatesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllTemplatesResponse)));
+                (GetAllTemplatesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllTemplatesPaginatedResponse)));
         }
 
         /// <summary>
@@ -17626,10 +17626,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetBlockedContactsResponse</returns>
-        public GetBlockedContactsResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>GetBlockedContactsPaginatedResponse</returns>
+        public GetBlockedContactsPaginatedResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetBlockedContactsResponse> localVarResponse = GetBlockedContactsWithHttpInfo(page, limit, query, orderBy, direction);
+             ApiResponse<GetBlockedContactsPaginatedResponse> localVarResponse = GetBlockedContactsWithHttpInfo(page, limit, query, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -17642,8 +17642,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetBlockedContactsResponse</returns>
-        public ApiResponse< GetBlockedContactsResponse > GetBlockedContactsWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetBlockedContactsPaginatedResponse</returns>
+        public ApiResponse< GetBlockedContactsPaginatedResponse > GetBlockedContactsWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts/block/list";
@@ -17694,9 +17694,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetBlockedContactsResponse>(localVarStatusCode,
+            return new ApiResponse<GetBlockedContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetBlockedContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBlockedContactsResponse)));
+                (GetBlockedContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBlockedContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -17708,10 +17708,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetBlockedContactsResponse</returns>
-        public async System.Threading.Tasks.Task<GetBlockedContactsResponse> GetBlockedContactsAsync (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetBlockedContactsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetBlockedContactsPaginatedResponse> GetBlockedContactsAsync (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetBlockedContactsResponse> localVarResponse = await GetBlockedContactsAsyncWithHttpInfo(page, limit, query, orderBy, direction);
+             ApiResponse<GetBlockedContactsPaginatedResponse> localVarResponse = await GetBlockedContactsAsyncWithHttpInfo(page, limit, query, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -17725,8 +17725,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetBlockedContactsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetBlockedContactsResponse>> GetBlockedContactsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetBlockedContactsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetBlockedContactsPaginatedResponse>> GetBlockedContactsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts/block/list";
@@ -17777,9 +17777,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetBlockedContactsResponse>(localVarStatusCode,
+            return new ApiResponse<GetBlockedContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetBlockedContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBlockedContactsResponse)));
+                (GetBlockedContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBlockedContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -18068,10 +18068,10 @@ namespace TextMagicClient.Api
         /// Check pricing for a inbound/outbound call. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> GetCallsPrices ()
+        /// <returns>GetCallsPricesResponse</returns>
+        public GetCallsPricesResponse GetCallsPrices ()
         {
-             ApiResponse<Dictionary<string, Object>> localVarResponse = GetCallsPricesWithHttpInfo();
+             ApiResponse<GetCallsPricesResponse> localVarResponse = GetCallsPricesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -18079,8 +18079,8 @@ namespace TextMagicClient.Api
         /// Check pricing for a inbound/outbound call. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public ApiResponse< Dictionary<string, Object> > GetCallsPricesWithHttpInfo ()
+        /// <returns>ApiResponse of GetCallsPricesResponse</returns>
+        public ApiResponse< GetCallsPricesResponse > GetCallsPricesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/calls/price";
@@ -18126,19 +18126,19 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+            return new ApiResponse<GetCallsPricesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+                (GetCallsPricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCallsPricesResponse)));
         }
 
         /// <summary>
         /// Check pricing for a inbound/outbound call. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetCallsPricesAsync ()
+        /// <returns>Task of GetCallsPricesResponse</returns>
+        public async System.Threading.Tasks.Task<GetCallsPricesResponse> GetCallsPricesAsync ()
         {
-             ApiResponse<Dictionary<string, Object>> localVarResponse = await GetCallsPricesAsyncWithHttpInfo();
+             ApiResponse<GetCallsPricesResponse> localVarResponse = await GetCallsPricesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -18147,8 +18147,8 @@ namespace TextMagicClient.Api
         /// Check pricing for a inbound/outbound call. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetCallsPricesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (GetCallsPricesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetCallsPricesResponse>> GetCallsPricesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/calls/price";
@@ -18194,9 +18194,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+            return new ApiResponse<GetCallsPricesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+                (GetCallsPricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCallsPricesResponse)));
         }
 
         /// <summary>
@@ -18517,10 +18517,10 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>GetChatMessagesResponse</returns>
-        public GetChatMessagesResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
+        /// <returns>GetChatMessagesPaginatedResponse</returns>
+        public GetChatMessagesPaginatedResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
         {
-             ApiResponse<GetChatMessagesResponse> localVarResponse = GetChatMessagesWithHttpInfo(id, page, limit, query, start, end, direction, voice);
+             ApiResponse<GetChatMessagesPaginatedResponse> localVarResponse = GetChatMessagesWithHttpInfo(id, page, limit, query, start, end, direction, voice);
              return localVarResponse.Data;
         }
 
@@ -18536,8 +18536,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetChatMessagesResponse</returns>
-        public ApiResponse< GetChatMessagesResponse > GetChatMessagesWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
+        /// <returns>ApiResponse of GetChatMessagesPaginatedResponse</returns>
+        public ApiResponse< GetChatMessagesPaginatedResponse > GetChatMessagesWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -18594,9 +18594,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetChatMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetChatMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetChatMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetChatMessagesResponse)));
+                (GetChatMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetChatMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -18611,10 +18611,10 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>Task of GetChatMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<GetChatMessagesResponse> GetChatMessagesAsync (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
+        /// <returns>Task of GetChatMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetChatMessagesPaginatedResponse> GetChatMessagesAsync (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
         {
-             ApiResponse<GetChatMessagesResponse> localVarResponse = await GetChatMessagesAsyncWithHttpInfo(id, page, limit, query, start, end, direction, voice);
+             ApiResponse<GetChatMessagesPaginatedResponse> localVarResponse = await GetChatMessagesAsyncWithHttpInfo(id, page, limit, query, start, end, direction, voice);
              return localVarResponse.Data;
 
         }
@@ -18631,8 +18631,8 @@ namespace TextMagicClient.Api
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetChatMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetChatMessagesResponse>> GetChatMessagesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
+        /// <returns>Task of ApiResponse (GetChatMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetChatMessagesPaginatedResponse>> GetChatMessagesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -18689,9 +18689,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetChatMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<GetChatMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetChatMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetChatMessagesResponse)));
+                (GetChatMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetChatMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -19436,10 +19436,10 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetContactNotesResponse</returns>
-        public GetContactNotesResponse GetContactNotes (int? id, int? page = null, int? limit = null)
+        /// <returns>GetContactNotesPaginatedResponse</returns>
+        public GetContactNotesPaginatedResponse GetContactNotes (int? id, int? page = null, int? limit = null)
         {
-             ApiResponse<GetContactNotesResponse> localVarResponse = GetContactNotesWithHttpInfo(id, page, limit);
+             ApiResponse<GetContactNotesPaginatedResponse> localVarResponse = GetContactNotesWithHttpInfo(id, page, limit);
              return localVarResponse.Data;
         }
 
@@ -19450,8 +19450,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetContactNotesResponse</returns>
-        public ApiResponse< GetContactNotesResponse > GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetContactNotesPaginatedResponse</returns>
+        public ApiResponse< GetContactNotesPaginatedResponse > GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -19503,9 +19503,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactNotesResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactNotesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactNotesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactNotesResponse)));
+                (GetContactNotesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactNotesPaginatedResponse)));
         }
 
         /// <summary>
@@ -19515,10 +19515,10 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetContactNotesResponse</returns>
-        public async System.Threading.Tasks.Task<GetContactNotesResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null)
+        /// <returns>Task of GetContactNotesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetContactNotesPaginatedResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null)
         {
-             ApiResponse<GetContactNotesResponse> localVarResponse = await GetContactNotesAsyncWithHttpInfo(id, page, limit);
+             ApiResponse<GetContactNotesPaginatedResponse> localVarResponse = await GetContactNotesAsyncWithHttpInfo(id, page, limit);
              return localVarResponse.Data;
 
         }
@@ -19530,8 +19530,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetContactNotesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetContactNotesResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetContactNotesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetContactNotesPaginatedResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -19583,9 +19583,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactNotesResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactNotesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactNotesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactNotesResponse)));
+                (GetContactNotesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactNotesPaginatedResponse)));
         }
 
         /// <summary>
@@ -19597,10 +19597,10 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetContactsResponse</returns>
-        public GetContactsResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
+        /// <returns>GetContactsPaginatedResponse</returns>
+        public GetContactsPaginatedResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetContactsResponse> localVarResponse = GetContactsWithHttpInfo(page, limit, shared, orderBy, direction);
+             ApiResponse<GetContactsPaginatedResponse> localVarResponse = GetContactsWithHttpInfo(page, limit, shared, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -19613,8 +19613,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetContactsResponse</returns>
-        public ApiResponse< GetContactsResponse > GetContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetContactsPaginatedResponse</returns>
+        public ApiResponse< GetContactsPaginatedResponse > GetContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts";
@@ -19665,9 +19665,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactsResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsResponse)));
+                (GetContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -19679,10 +19679,10 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetContactsResponse</returns>
-        public async System.Threading.Tasks.Task<GetContactsResponse> GetContactsAsync (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetContactsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetContactsPaginatedResponse> GetContactsAsync (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetContactsResponse> localVarResponse = await GetContactsAsyncWithHttpInfo(page, limit, shared, orderBy, direction);
+             ApiResponse<GetContactsPaginatedResponse> localVarResponse = await GetContactsAsyncWithHttpInfo(page, limit, shared, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -19696,8 +19696,8 @@ namespace TextMagicClient.Api
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetContactsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetContactsResponse>> GetContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetContactsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetContactsPaginatedResponse>> GetContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts";
@@ -19748,9 +19748,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactsResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsResponse)));
+                (GetContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -19760,10 +19760,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        public List<GetContactsAutocompleteResponse> GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
+        /// <returns>GetContactsAutocompleteResponse</returns>
+        public GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
         {
-             ApiResponse<List<GetContactsAutocompleteResponse>> localVarResponse = GetContactsAutocompleteWithHttpInfo(query, limit, lists);
+             ApiResponse<GetContactsAutocompleteResponse> localVarResponse = GetContactsAutocompleteWithHttpInfo(query, limit, lists);
              return localVarResponse.Data;
         }
 
@@ -19774,8 +19774,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>ApiResponse of List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        public ApiResponse< List<GetContactsAutocompleteResponse> > GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null)
+        /// <returns>ApiResponse of GetContactsAutocompleteResponse</returns>
+        public ApiResponse< GetContactsAutocompleteResponse > GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -19827,9 +19827,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<GetContactsAutocompleteResponse>>(localVarStatusCode,
+            return new ApiResponse<GetContactsAutocompleteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<GetContactsAutocompleteResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetContactsAutocompleteResponse>)));
+                (GetContactsAutocompleteResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsAutocompleteResponse)));
         }
 
         /// <summary>
@@ -19839,10 +19839,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>Task of List&lt;GetContactsAutocompleteResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null)
+        /// <returns>Task of GetContactsAutocompleteResponse</returns>
+        public async System.Threading.Tasks.Task<GetContactsAutocompleteResponse> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null)
         {
-             ApiResponse<List<GetContactsAutocompleteResponse>> localVarResponse = await GetContactsAutocompleteAsyncWithHttpInfo(query, limit, lists);
+             ApiResponse<GetContactsAutocompleteResponse> localVarResponse = await GetContactsAutocompleteAsyncWithHttpInfo(query, limit, lists);
              return localVarResponse.Data;
 
         }
@@ -19854,8 +19854,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find recipients by specified search query</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (List&lt;GetContactsAutocompleteResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<GetContactsAutocompleteResponse>>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null)
+        /// <returns>Task of ApiResponse (GetContactsAutocompleteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null)
         {
             // verify the required parameter 'query' is set
             if (query == null)
@@ -19907,9 +19907,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<GetContactsAutocompleteResponse>>(localVarStatusCode,
+            return new ApiResponse<GetContactsAutocompleteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<GetContactsAutocompleteResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetContactsAutocompleteResponse>)));
+                (GetContactsAutocompleteResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsAutocompleteResponse)));
         }
 
         /// <summary>
@@ -19921,10 +19921,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetContactsByListIdResponse</returns>
-        public GetContactsByListIdResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>GetContactsByListIdPaginatedResponse</returns>
+        public GetContactsByListIdPaginatedResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetContactsByListIdResponse> localVarResponse = GetContactsByListIdWithHttpInfo(id, page, limit, orderBy, direction);
+             ApiResponse<GetContactsByListIdPaginatedResponse> localVarResponse = GetContactsByListIdWithHttpInfo(id, page, limit, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -19937,8 +19937,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetContactsByListIdResponse</returns>
-        public ApiResponse< GetContactsByListIdResponse > GetContactsByListIdWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetContactsByListIdPaginatedResponse</returns>
+        public ApiResponse< GetContactsByListIdPaginatedResponse > GetContactsByListIdWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -19992,9 +19992,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactsByListIdResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactsByListIdPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactsByListIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsByListIdResponse)));
+                (GetContactsByListIdPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsByListIdPaginatedResponse)));
         }
 
         /// <summary>
@@ -20006,10 +20006,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetContactsByListIdResponse</returns>
-        public async System.Threading.Tasks.Task<GetContactsByListIdResponse> GetContactsByListIdAsync (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetContactsByListIdPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetContactsByListIdPaginatedResponse> GetContactsByListIdAsync (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetContactsByListIdResponse> localVarResponse = await GetContactsByListIdAsyncWithHttpInfo(id, page, limit, orderBy, direction);
+             ApiResponse<GetContactsByListIdPaginatedResponse> localVarResponse = await GetContactsByListIdAsyncWithHttpInfo(id, page, limit, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -20023,8 +20023,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetContactsByListIdResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetContactsByListIdResponse>> GetContactsByListIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetContactsByListIdPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetContactsByListIdPaginatedResponse>> GetContactsByListIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -20078,19 +20078,19 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetContactsByListIdResponse>(localVarStatusCode,
+            return new ApiResponse<GetContactsByListIdPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactsByListIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsByListIdResponse)));
+                (GetContactsByListIdPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactsByListIdPaginatedResponse)));
         }
 
         /// <summary>
         /// Return list of countries. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;Country&gt;</returns>
-        public List<Country> GetCountries ()
+        /// <returns>GetCountriesResponse</returns>
+        public GetCountriesResponse GetCountries ()
         {
-             ApiResponse<List<Country>> localVarResponse = GetCountriesWithHttpInfo();
+             ApiResponse<GetCountriesResponse> localVarResponse = GetCountriesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -20098,8 +20098,8 @@ namespace TextMagicClient.Api
         /// Return list of countries. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;Country&gt;</returns>
-        public ApiResponse< List<Country> > GetCountriesWithHttpInfo ()
+        /// <returns>ApiResponse of GetCountriesResponse</returns>
+        public ApiResponse< GetCountriesResponse > GetCountriesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/countries";
@@ -20145,19 +20145,19 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Country>>(localVarStatusCode,
+            return new ApiResponse<GetCountriesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Country>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Country>)));
+                (GetCountriesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCountriesResponse)));
         }
 
         /// <summary>
         /// Return list of countries. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;Country&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Country>> GetCountriesAsync ()
+        /// <returns>Task of GetCountriesResponse</returns>
+        public async System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync ()
         {
-             ApiResponse<List<Country>> localVarResponse = await GetCountriesAsyncWithHttpInfo();
+             ApiResponse<GetCountriesResponse> localVarResponse = await GetCountriesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -20166,8 +20166,8 @@ namespace TextMagicClient.Api
         /// Return list of countries. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;Country&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Country>>> GetCountriesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (GetCountriesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetCountriesResponse>> GetCountriesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/countries";
@@ -20213,9 +20213,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<Country>>(localVarStatusCode,
+            return new ApiResponse<GetCountriesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Country>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Country>)));
+                (GetCountriesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCountriesResponse)));
         }
 
         /// <summary>
@@ -20506,10 +20506,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetCustomFieldsResponse</returns>
-        public GetCustomFieldsResponse GetCustomFields (int? page = null, int? limit = null)
+        /// <returns>GetCustomFieldsPaginatedResponse</returns>
+        public GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null)
         {
-             ApiResponse<GetCustomFieldsResponse> localVarResponse = GetCustomFieldsWithHttpInfo(page, limit);
+             ApiResponse<GetCustomFieldsPaginatedResponse> localVarResponse = GetCustomFieldsWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -20519,8 +20519,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetCustomFieldsResponse</returns>
-        public ApiResponse< GetCustomFieldsResponse > GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetCustomFieldsPaginatedResponse</returns>
+        public ApiResponse< GetCustomFieldsPaginatedResponse > GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/customfields";
@@ -20568,9 +20568,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetCustomFieldsResponse>(localVarStatusCode,
+            return new ApiResponse<GetCustomFieldsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetCustomFieldsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCustomFieldsResponse)));
+                (GetCustomFieldsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCustomFieldsPaginatedResponse)));
         }
 
         /// <summary>
@@ -20579,10 +20579,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetCustomFieldsResponse</returns>
-        public async System.Threading.Tasks.Task<GetCustomFieldsResponse> GetCustomFieldsAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetCustomFieldsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetCustomFieldsPaginatedResponse> GetCustomFieldsAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetCustomFieldsResponse> localVarResponse = await GetCustomFieldsAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetCustomFieldsPaginatedResponse> localVarResponse = await GetCustomFieldsAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -20593,8 +20593,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetCustomFieldsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetCustomFieldsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsPaginatedResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/customfields";
@@ -20642,9 +20642,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetCustomFieldsResponse>(localVarStatusCode,
+            return new ApiResponse<GetCustomFieldsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetCustomFieldsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCustomFieldsResponse)));
+                (GetCustomFieldsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCustomFieldsPaginatedResponse)));
         }
 
         /// <summary>
@@ -20798,10 +20798,10 @@ namespace TextMagicClient.Api
         /// Get an array of all rules that are disallowed to the current account. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        public List<string> GetDisallowedRules ()
+        /// <returns>GetDisallowedRulesResponse</returns>
+        public GetDisallowedRulesResponse GetDisallowedRules ()
         {
-             ApiResponse<List<string>> localVarResponse = GetDisallowedRulesWithHttpInfo();
+             ApiResponse<GetDisallowedRulesResponse> localVarResponse = GetDisallowedRulesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -20809,8 +20809,8 @@ namespace TextMagicClient.Api
         /// Get an array of all rules that are disallowed to the current account. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > GetDisallowedRulesWithHttpInfo ()
+        /// <returns>ApiResponse of GetDisallowedRulesResponse</returns>
+        public ApiResponse< GetDisallowedRulesResponse > GetDisallowedRulesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/user/disallowed-rules";
@@ -20856,19 +20856,19 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<string>>(localVarStatusCode,
+            return new ApiResponse<GetDisallowedRulesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
+                (GetDisallowedRulesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDisallowedRulesResponse)));
         }
 
         /// <summary>
         /// Get an array of all rules that are disallowed to the current account. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> GetDisallowedRulesAsync ()
+        /// <returns>Task of GetDisallowedRulesResponse</returns>
+        public async System.Threading.Tasks.Task<GetDisallowedRulesResponse> GetDisallowedRulesAsync ()
         {
-             ApiResponse<List<string>> localVarResponse = await GetDisallowedRulesAsyncWithHttpInfo();
+             ApiResponse<GetDisallowedRulesResponse> localVarResponse = await GetDisallowedRulesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -20877,8 +20877,8 @@ namespace TextMagicClient.Api
         /// Get an array of all rules that are disallowed to the current account. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetDisallowedRulesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (GetDisallowedRulesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDisallowedRulesResponse>> GetDisallowedRulesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/user/disallowed-rules";
@@ -20924,9 +20924,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<string>>(localVarStatusCode,
+            return new ApiResponse<GetDisallowedRulesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
+                (GetDisallowedRulesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDisallowedRulesResponse)));
         }
 
         /// <summary>
@@ -20936,10 +20936,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>GetFavouritesResponse</returns>
-        public GetFavouritesResponse GetFavourites (int? page = null, int? limit = null, string query = null)
+        /// <returns>GetFavouritesPaginatedResponse</returns>
+        public GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null)
         {
-             ApiResponse<GetFavouritesResponse> localVarResponse = GetFavouritesWithHttpInfo(page, limit, query);
+             ApiResponse<GetFavouritesPaginatedResponse> localVarResponse = GetFavouritesWithHttpInfo(page, limit, query);
              return localVarResponse.Data;
         }
 
@@ -20950,8 +20950,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>ApiResponse of GetFavouritesResponse</returns>
-        public ApiResponse< GetFavouritesResponse > GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null)
+        /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
+        public ApiResponse< GetFavouritesPaginatedResponse > GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
 
             var localVarPath = "/api/v2/contacts/favorite";
@@ -21000,9 +21000,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetFavouritesResponse>(localVarStatusCode,
+            return new ApiResponse<GetFavouritesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetFavouritesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFavouritesResponse)));
+                (GetFavouritesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFavouritesPaginatedResponse)));
         }
 
         /// <summary>
@@ -21012,10 +21012,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>Task of GetFavouritesResponse</returns>
-        public async System.Threading.Tasks.Task<GetFavouritesResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null)
+        /// <returns>Task of GetFavouritesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null)
         {
-             ApiResponse<GetFavouritesResponse> localVarResponse = await GetFavouritesAsyncWithHttpInfo(page, limit, query);
+             ApiResponse<GetFavouritesPaginatedResponse> localVarResponse = await GetFavouritesAsyncWithHttpInfo(page, limit, query);
              return localVarResponse.Data;
 
         }
@@ -21027,8 +21027,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
-        /// <returns>Task of ApiResponse (GetFavouritesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetFavouritesResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
+        /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
 
             var localVarPath = "/api/v2/contacts/favorite";
@@ -21077,9 +21077,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetFavouritesResponse>(localVarStatusCode,
+            return new ApiResponse<GetFavouritesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetFavouritesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFavouritesResponse)));
+                (GetFavouritesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFavouritesPaginatedResponse)));
         }
 
         /// <summary>
@@ -21088,10 +21088,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetForwardedCallsResponse</returns>
-        public GetForwardedCallsResponse GetForwardedCalls (int? page = null, int? limit = null)
+        /// <returns>GetForwardedCallsPaginatedResponse</returns>
+        public GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null)
         {
-             ApiResponse<GetForwardedCallsResponse> localVarResponse = GetForwardedCallsWithHttpInfo(page, limit);
+             ApiResponse<GetForwardedCallsPaginatedResponse> localVarResponse = GetForwardedCallsWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -21101,8 +21101,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetForwardedCallsResponse</returns>
-        public ApiResponse< GetForwardedCallsResponse > GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetForwardedCallsPaginatedResponse</returns>
+        public ApiResponse< GetForwardedCallsPaginatedResponse > GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/calls";
@@ -21150,9 +21150,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetForwardedCallsResponse>(localVarStatusCode,
+            return new ApiResponse<GetForwardedCallsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetForwardedCallsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsResponse)));
+                (GetForwardedCallsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsPaginatedResponse)));
         }
 
         /// <summary>
@@ -21161,10 +21161,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetForwardedCallsResponse</returns>
-        public async System.Threading.Tasks.Task<GetForwardedCallsResponse> GetForwardedCallsAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetForwardedCallsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetForwardedCallsPaginatedResponse> GetForwardedCallsAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetForwardedCallsResponse> localVarResponse = await GetForwardedCallsAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetForwardedCallsPaginatedResponse> localVarResponse = await GetForwardedCallsAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -21175,8 +21175,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetForwardedCallsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetForwardedCallsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsPaginatedResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/calls";
@@ -21224,9 +21224,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetForwardedCallsResponse>(localVarStatusCode,
+            return new ApiResponse<GetForwardedCallsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetForwardedCallsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsResponse)));
+                (GetForwardedCallsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsPaginatedResponse)));
         }
 
         /// <summary>
@@ -21517,10 +21517,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetInvoicesResponse</returns>
-        public GetInvoicesResponse GetInvoices (int? page = null, int? limit = null)
+        /// <returns>GetInvoicesPaginatedResponse</returns>
+        public GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null)
         {
-             ApiResponse<GetInvoicesResponse> localVarResponse = GetInvoicesWithHttpInfo(page, limit);
+             ApiResponse<GetInvoicesPaginatedResponse> localVarResponse = GetInvoicesWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -21530,8 +21530,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetInvoicesResponse</returns>
-        public ApiResponse< GetInvoicesResponse > GetInvoicesWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetInvoicesPaginatedResponse</returns>
+        public ApiResponse< GetInvoicesPaginatedResponse > GetInvoicesWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/invoices";
@@ -21579,9 +21579,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetInvoicesResponse>(localVarStatusCode,
+            return new ApiResponse<GetInvoicesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetInvoicesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetInvoicesResponse)));
+                (GetInvoicesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetInvoicesPaginatedResponse)));
         }
 
         /// <summary>
@@ -21590,10 +21590,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetInvoicesResponse</returns>
-        public async System.Threading.Tasks.Task<GetInvoicesResponse> GetInvoicesAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetInvoicesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetInvoicesPaginatedResponse> GetInvoicesAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetInvoicesResponse> localVarResponse = await GetInvoicesAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetInvoicesPaginatedResponse> localVarResponse = await GetInvoicesAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -21604,8 +21604,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetInvoicesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetInvoicesResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetInvoicesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetInvoicesPaginatedResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/invoices";
@@ -21653,9 +21653,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetInvoicesResponse>(localVarStatusCode,
+            return new ApiResponse<GetInvoicesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetInvoicesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetInvoicesResponse)));
+                (GetInvoicesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetInvoicesPaginatedResponse)));
         }
 
         /// <summary>
@@ -21959,10 +21959,10 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetListsOfContactResponse</returns>
-        public GetListsOfContactResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
+        /// <returns>GetListsOfContactPaginatedResponse</returns>
+        public GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
         {
-             ApiResponse<GetListsOfContactResponse> localVarResponse = GetListsOfContactWithHttpInfo(id, page, limit);
+             ApiResponse<GetListsOfContactPaginatedResponse> localVarResponse = GetListsOfContactWithHttpInfo(id, page, limit);
              return localVarResponse.Data;
         }
 
@@ -21973,8 +21973,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetListsOfContactResponse</returns>
-        public ApiResponse< GetListsOfContactResponse > GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetListsOfContactPaginatedResponse</returns>
+        public ApiResponse< GetListsOfContactPaginatedResponse > GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -22026,9 +22026,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetListsOfContactResponse>(localVarStatusCode,
+            return new ApiResponse<GetListsOfContactPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetListsOfContactResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsOfContactResponse)));
+                (GetListsOfContactPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsOfContactPaginatedResponse)));
         }
 
         /// <summary>
@@ -22038,10 +22038,10 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetListsOfContactResponse</returns>
-        public async System.Threading.Tasks.Task<GetListsOfContactResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null)
+        /// <returns>Task of GetListsOfContactPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetListsOfContactPaginatedResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null)
         {
-             ApiResponse<GetListsOfContactResponse> localVarResponse = await GetListsOfContactAsyncWithHttpInfo(id, page, limit);
+             ApiResponse<GetListsOfContactPaginatedResponse> localVarResponse = await GetListsOfContactAsyncWithHttpInfo(id, page, limit);
              return localVarResponse.Data;
 
         }
@@ -22053,8 +22053,8 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetListsOfContactResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetListsOfContactResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetListsOfContactPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetListsOfContactPaginatedResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -22106,9 +22106,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetListsOfContactResponse>(localVarStatusCode,
+            return new ApiResponse<GetListsOfContactPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetListsOfContactResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsOfContactResponse)));
+                (GetListsOfContactPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsOfContactPaginatedResponse)));
         }
 
         /// <summary>
@@ -23035,10 +23035,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>GetMessagesBySessionIdResponse</returns>
-        public GetMessagesBySessionIdResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
+        /// <returns>GetMessagesBySessionIdPaginatedResponse</returns>
+        public GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
         {
-             ApiResponse<GetMessagesBySessionIdResponse> localVarResponse = GetMessagesBySessionIdWithHttpInfo(id, page, limit, statuses, includeDeleted);
+             ApiResponse<GetMessagesBySessionIdPaginatedResponse> localVarResponse = GetMessagesBySessionIdWithHttpInfo(id, page, limit, statuses, includeDeleted);
              return localVarResponse.Data;
         }
 
@@ -23051,8 +23051,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetMessagesBySessionIdResponse</returns>
-        public ApiResponse< GetMessagesBySessionIdResponse > GetMessagesBySessionIdWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
+        /// <returns>ApiResponse of GetMessagesBySessionIdPaginatedResponse</returns>
+        public ApiResponse< GetMessagesBySessionIdPaginatedResponse > GetMessagesBySessionIdWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -23106,9 +23106,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetMessagesBySessionIdResponse>(localVarStatusCode,
+            return new ApiResponse<GetMessagesBySessionIdPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetMessagesBySessionIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagesBySessionIdResponse)));
+                (GetMessagesBySessionIdPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagesBySessionIdPaginatedResponse)));
         }
 
         /// <summary>
@@ -23120,10 +23120,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>Task of GetMessagesBySessionIdResponse</returns>
-        public async System.Threading.Tasks.Task<GetMessagesBySessionIdResponse> GetMessagesBySessionIdAsync (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
+        /// <returns>Task of GetMessagesBySessionIdPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetMessagesBySessionIdPaginatedResponse> GetMessagesBySessionIdAsync (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
         {
-             ApiResponse<GetMessagesBySessionIdResponse> localVarResponse = await GetMessagesBySessionIdAsyncWithHttpInfo(id, page, limit, statuses, includeDeleted);
+             ApiResponse<GetMessagesBySessionIdPaginatedResponse> localVarResponse = await GetMessagesBySessionIdAsyncWithHttpInfo(id, page, limit, statuses, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -23137,8 +23137,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetMessagesBySessionIdResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetMessagesBySessionIdResponse>> GetMessagesBySessionIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
+        /// <returns>Task of ApiResponse (GetMessagesBySessionIdPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMessagesBySessionIdPaginatedResponse>> GetMessagesBySessionIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -23192,9 +23192,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetMessagesBySessionIdResponse>(localVarStatusCode,
+            return new ApiResponse<GetMessagesBySessionIdPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetMessagesBySessionIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagesBySessionIdResponse)));
+                (GetMessagesBySessionIdPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagesBySessionIdPaginatedResponse)));
         }
 
         /// <summary>
@@ -23641,10 +23641,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>GetOutboundMessagesHistoryResponse</returns>
-        public GetOutboundMessagesHistoryResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>GetOutboundMessagesHistoryPaginatedResponse</returns>
+        public GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetOutboundMessagesHistoryResponse> localVarResponse = GetOutboundMessagesHistoryWithHttpInfo(limit, lastId, query, orderBy, direction);
+             ApiResponse<GetOutboundMessagesHistoryPaginatedResponse> localVarResponse = GetOutboundMessagesHistoryWithHttpInfo(limit, lastId, query, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -23657,8 +23657,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of GetOutboundMessagesHistoryResponse</returns>
-        public ApiResponse< GetOutboundMessagesHistoryResponse > GetOutboundMessagesHistoryWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of GetOutboundMessagesHistoryPaginatedResponse</returns>
+        public ApiResponse< GetOutboundMessagesHistoryPaginatedResponse > GetOutboundMessagesHistoryWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/history";
@@ -23709,9 +23709,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetOutboundMessagesHistoryResponse>(localVarStatusCode,
+            return new ApiResponse<GetOutboundMessagesHistoryPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetOutboundMessagesHistoryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetOutboundMessagesHistoryResponse)));
+                (GetOutboundMessagesHistoryPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetOutboundMessagesHistoryPaginatedResponse)));
         }
 
         /// <summary>
@@ -23723,10 +23723,10 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of GetOutboundMessagesHistoryResponse</returns>
-        public async System.Threading.Tasks.Task<GetOutboundMessagesHistoryResponse> GetOutboundMessagesHistoryAsync (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>Task of GetOutboundMessagesHistoryPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetOutboundMessagesHistoryPaginatedResponse> GetOutboundMessagesHistoryAsync (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<GetOutboundMessagesHistoryResponse> localVarResponse = await GetOutboundMessagesHistoryAsyncWithHttpInfo(limit, lastId, query, orderBy, direction);
+             ApiResponse<GetOutboundMessagesHistoryPaginatedResponse> localVarResponse = await GetOutboundMessagesHistoryAsyncWithHttpInfo(limit, lastId, query, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -23740,8 +23740,8 @@ namespace TextMagicClient.Api
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (GetOutboundMessagesHistoryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetOutboundMessagesHistoryResponse>> GetOutboundMessagesHistoryAsyncWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (GetOutboundMessagesHistoryPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetOutboundMessagesHistoryPaginatedResponse>> GetOutboundMessagesHistoryAsyncWithHttpInfo (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/history";
@@ -23792,9 +23792,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetOutboundMessagesHistoryResponse>(localVarStatusCode,
+            return new ApiResponse<GetOutboundMessagesHistoryPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetOutboundMessagesHistoryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetOutboundMessagesHistoryResponse)));
+                (GetOutboundMessagesHistoryPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetOutboundMessagesHistoryPaginatedResponse)));
         }
 
         /// <summary>
@@ -24232,10 +24232,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetSenderIdsResponse</returns>
-        public GetSenderIdsResponse GetSenderIds (int? page = null, int? limit = null)
+        /// <returns>GetSenderIdsPaginatedResponse</returns>
+        public GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null)
         {
-             ApiResponse<GetSenderIdsResponse> localVarResponse = GetSenderIdsWithHttpInfo(page, limit);
+             ApiResponse<GetSenderIdsPaginatedResponse> localVarResponse = GetSenderIdsWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -24245,8 +24245,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetSenderIdsResponse</returns>
-        public ApiResponse< GetSenderIdsResponse > GetSenderIdsWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetSenderIdsPaginatedResponse</returns>
+        public ApiResponse< GetSenderIdsPaginatedResponse > GetSenderIdsWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/senderids";
@@ -24294,9 +24294,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSenderIdsResponse>(localVarStatusCode,
+            return new ApiResponse<GetSenderIdsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSenderIdsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSenderIdsResponse)));
+                (GetSenderIdsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSenderIdsPaginatedResponse)));
         }
 
         /// <summary>
@@ -24305,10 +24305,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetSenderIdsResponse</returns>
-        public async System.Threading.Tasks.Task<GetSenderIdsResponse> GetSenderIdsAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetSenderIdsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetSenderIdsPaginatedResponse> GetSenderIdsAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetSenderIdsResponse> localVarResponse = await GetSenderIdsAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetSenderIdsPaginatedResponse> localVarResponse = await GetSenderIdsAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -24319,8 +24319,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetSenderIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetSenderIdsResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetSenderIdsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetSenderIdsPaginatedResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/senderids";
@@ -24368,9 +24368,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSenderIdsResponse>(localVarStatusCode,
+            return new ApiResponse<GetSenderIdsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSenderIdsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSenderIdsResponse)));
+                (GetSenderIdsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSenderIdsPaginatedResponse)));
         }
 
         /// <summary>
@@ -24522,10 +24522,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>GetSpendingStatResponse</returns>
-        public GetSpendingStatResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null)
+        /// <returns>GetSpendingStatPaginatedResponse</returns>
+        public GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null)
         {
-             ApiResponse<GetSpendingStatResponse> localVarResponse = GetSpendingStatWithHttpInfo(page, limit, start, end);
+             ApiResponse<GetSpendingStatPaginatedResponse> localVarResponse = GetSpendingStatWithHttpInfo(page, limit, start, end);
              return localVarResponse.Data;
         }
 
@@ -24537,8 +24537,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>ApiResponse of GetSpendingStatResponse</returns>
-        public ApiResponse< GetSpendingStatResponse > GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null)
+        /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
+        public ApiResponse< GetSpendingStatPaginatedResponse > GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null)
         {
 
             var localVarPath = "/api/v2/stats/spending";
@@ -24588,9 +24588,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSpendingStatResponse>(localVarStatusCode,
+            return new ApiResponse<GetSpendingStatPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSpendingStatResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSpendingStatResponse)));
+                (GetSpendingStatPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSpendingStatPaginatedResponse)));
         }
 
         /// <summary>
@@ -24601,10 +24601,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>Task of GetSpendingStatResponse</returns>
-        public async System.Threading.Tasks.Task<GetSpendingStatResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, int? end = null)
+        /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, int? end = null)
         {
-             ApiResponse<GetSpendingStatResponse> localVarResponse = await GetSpendingStatAsyncWithHttpInfo(page, limit, start, end);
+             ApiResponse<GetSpendingStatPaginatedResponse> localVarResponse = await GetSpendingStatAsyncWithHttpInfo(page, limit, start, end);
              return localVarResponse.Data;
 
         }
@@ -24617,8 +24617,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
-        /// <returns>Task of ApiResponse (GetSpendingStatResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetSpendingStatResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null)
+        /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, int? end = null)
         {
 
             var localVarPath = "/api/v2/stats/spending";
@@ -24668,9 +24668,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSpendingStatResponse>(localVarStatusCode,
+            return new ApiResponse<GetSpendingStatPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSpendingStatResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSpendingStatResponse)));
+                (GetSpendingStatPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSpendingStatPaginatedResponse)));
         }
 
         /// <summary>
@@ -25722,10 +25722,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetSurveysResponse</returns>
-        public GetSurveysResponse GetSurveys (int? page = null, int? limit = null)
+        /// <returns>GetSurveysPaginatedResponse</returns>
+        public GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null)
         {
-             ApiResponse<GetSurveysResponse> localVarResponse = GetSurveysWithHttpInfo(page, limit);
+             ApiResponse<GetSurveysPaginatedResponse> localVarResponse = GetSurveysWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -25735,8 +25735,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetSurveysResponse</returns>
-        public ApiResponse< GetSurveysResponse > GetSurveysWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetSurveysPaginatedResponse</returns>
+        public ApiResponse< GetSurveysPaginatedResponse > GetSurveysWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/surveys";
@@ -25784,9 +25784,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSurveysResponse>(localVarStatusCode,
+            return new ApiResponse<GetSurveysPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSurveysResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSurveysResponse)));
+                (GetSurveysPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSurveysPaginatedResponse)));
         }
 
         /// <summary>
@@ -25795,10 +25795,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetSurveysResponse</returns>
-        public async System.Threading.Tasks.Task<GetSurveysResponse> GetSurveysAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetSurveysPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetSurveysPaginatedResponse> GetSurveysAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetSurveysResponse> localVarResponse = await GetSurveysAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetSurveysPaginatedResponse> localVarResponse = await GetSurveysAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -25809,8 +25809,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetSurveysResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetSurveysResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetSurveysPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetSurveysPaginatedResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/surveys";
@@ -25858,9 +25858,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetSurveysResponse>(localVarStatusCode,
+            return new ApiResponse<GetSurveysPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetSurveysResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSurveysResponse)));
+                (GetSurveysPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetSurveysPaginatedResponse)));
         }
 
         /// <summary>
@@ -26015,10 +26015,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Object</returns>
-        public Object GetTimezones (int? full = null)
+        /// <returns>GetTimezonesResponse</returns>
+        public GetTimezonesResponse GetTimezones (int? full = null)
         {
-             ApiResponse<Object> localVarResponse = GetTimezonesWithHttpInfo(full);
+             ApiResponse<GetTimezonesResponse> localVarResponse = GetTimezonesWithHttpInfo(full);
              return localVarResponse.Data;
         }
 
@@ -26027,8 +26027,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GetTimezonesWithHttpInfo (int? full = null)
+        /// <returns>ApiResponse of GetTimezonesResponse</returns>
+        public ApiResponse< GetTimezonesResponse > GetTimezonesWithHttpInfo (int? full = null)
         {
 
             var localVarPath = "/api/v2/timezones";
@@ -26075,9 +26075,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<GetTimezonesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (GetTimezonesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetTimezonesResponse)));
         }
 
         /// <summary>
@@ -26085,10 +26085,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetTimezonesAsync (int? full = null)
+        /// <returns>Task of GetTimezonesResponse</returns>
+        public async System.Threading.Tasks.Task<GetTimezonesResponse> GetTimezonesAsync (int? full = null)
         {
-             ApiResponse<Object> localVarResponse = await GetTimezonesAsyncWithHttpInfo(full);
+             ApiResponse<GetTimezonesResponse> localVarResponse = await GetTimezonesAsyncWithHttpInfo(full);
              return localVarResponse.Data;
 
         }
@@ -26098,8 +26098,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetTimezonesAsyncWithHttpInfo (int? full = null)
+        /// <returns>Task of ApiResponse (GetTimezonesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetTimezonesResponse>> GetTimezonesAsyncWithHttpInfo (int? full = null)
         {
 
             var localVarPath = "/api/v2/timezones";
@@ -26146,9 +26146,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<GetTimezonesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (GetTimezonesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetTimezonesResponse)));
         }
 
         /// <summary>
@@ -26439,10 +26439,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetUnsubscribersResponse</returns>
-        public GetUnsubscribersResponse GetUnsubscribers (int? page = null, int? limit = null)
+        /// <returns>GetUnsubscribersPaginatedResponse</returns>
+        public GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null)
         {
-             ApiResponse<GetUnsubscribersResponse> localVarResponse = GetUnsubscribersWithHttpInfo(page, limit);
+             ApiResponse<GetUnsubscribersPaginatedResponse> localVarResponse = GetUnsubscribersWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -26452,8 +26452,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetUnsubscribersResponse</returns>
-        public ApiResponse< GetUnsubscribersResponse > GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>ApiResponse of GetUnsubscribersPaginatedResponse</returns>
+        public ApiResponse< GetUnsubscribersPaginatedResponse > GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/unsubscribers";
@@ -26501,9 +26501,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUnsubscribersResponse>(localVarStatusCode,
+            return new ApiResponse<GetUnsubscribersPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUnsubscribersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUnsubscribersResponse)));
+                (GetUnsubscribersPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUnsubscribersPaginatedResponse)));
         }
 
         /// <summary>
@@ -26512,10 +26512,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetUnsubscribersResponse</returns>
-        public async System.Threading.Tasks.Task<GetUnsubscribersResponse> GetUnsubscribersAsync (int? page = null, int? limit = null)
+        /// <returns>Task of GetUnsubscribersPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetUnsubscribersPaginatedResponse> GetUnsubscribersAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<GetUnsubscribersResponse> localVarResponse = await GetUnsubscribersAsyncWithHttpInfo(page, limit);
+             ApiResponse<GetUnsubscribersPaginatedResponse> localVarResponse = await GetUnsubscribersAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -26526,8 +26526,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetUnsubscribersResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null)
+        /// <returns>Task of ApiResponse (GetUnsubscribersPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersPaginatedResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/api/v2/unsubscribers";
@@ -26575,9 +26575,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUnsubscribersResponse>(localVarStatusCode,
+            return new ApiResponse<GetUnsubscribersPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUnsubscribersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUnsubscribersResponse)));
+                (GetUnsubscribersPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUnsubscribersPaginatedResponse)));
         }
 
         /// <summary>
@@ -26587,10 +26587,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>GetUserDedicatedNumbersResponse</returns>
-        public GetUserDedicatedNumbersResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
+        /// <returns>GetUserDedicatedNumbersPaginatedResponse</returns>
+        public GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
         {
-             ApiResponse<GetUserDedicatedNumbersResponse> localVarResponse = GetUserDedicatedNumbersWithHttpInfo(page, limit, surveyId);
+             ApiResponse<GetUserDedicatedNumbersPaginatedResponse> localVarResponse = GetUserDedicatedNumbersWithHttpInfo(page, limit, surveyId);
              return localVarResponse.Data;
         }
 
@@ -26601,8 +26601,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>ApiResponse of GetUserDedicatedNumbersResponse</returns>
-        public ApiResponse< GetUserDedicatedNumbersResponse > GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
+        /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
+        public ApiResponse< GetUserDedicatedNumbersPaginatedResponse > GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
         {
 
             var localVarPath = "/api/v2/numbers";
@@ -26651,9 +26651,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUserDedicatedNumbersResponse>(localVarStatusCode,
+            return new ApiResponse<GetUserDedicatedNumbersPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserDedicatedNumbersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserDedicatedNumbersResponse)));
+                (GetUserDedicatedNumbersPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserDedicatedNumbersPaginatedResponse)));
         }
 
         /// <summary>
@@ -26663,10 +26663,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>Task of GetUserDedicatedNumbersResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserDedicatedNumbersResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null)
+        /// <returns>Task of GetUserDedicatedNumbersPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null)
         {
-             ApiResponse<GetUserDedicatedNumbersResponse> localVarResponse = await GetUserDedicatedNumbersAsyncWithHttpInfo(page, limit, surveyId);
+             ApiResponse<GetUserDedicatedNumbersPaginatedResponse> localVarResponse = await GetUserDedicatedNumbersAsyncWithHttpInfo(page, limit, surveyId);
              return localVarResponse.Data;
 
         }
@@ -26678,8 +26678,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
-        /// <returns>Task of ApiResponse (GetUserDedicatedNumbersResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
+        /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
         {
 
             var localVarPath = "/api/v2/numbers";
@@ -26728,9 +26728,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUserDedicatedNumbersResponse>(localVarStatusCode,
+            return new ApiResponse<GetUserDedicatedNumbersPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserDedicatedNumbersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserDedicatedNumbersResponse)));
+                (GetUserDedicatedNumbersPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserDedicatedNumbersPaginatedResponse)));
         }
 
         /// <summary>
@@ -26743,10 +26743,10 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>GetUserListsResponse</returns>
-        public GetUserListsResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        /// <returns>GetUserListsPaginatedResponse</returns>
+        public GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
         {
-             ApiResponse<GetUserListsResponse> localVarResponse = GetUserListsWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+             ApiResponse<GetUserListsPaginatedResponse> localVarResponse = GetUserListsWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
              return localVarResponse.Data;
         }
 
@@ -26760,8 +26760,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetUserListsResponse</returns>
-        public ApiResponse< GetUserListsResponse > GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        /// <returns>ApiResponse of GetUserListsPaginatedResponse</returns>
+        public ApiResponse< GetUserListsPaginatedResponse > GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
         {
 
             var localVarPath = "/api/v2/lists";
@@ -26813,9 +26813,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUserListsResponse>(localVarStatusCode,
+            return new ApiResponse<GetUserListsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserListsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsResponse)));
+                (GetUserListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsPaginatedResponse)));
         }
 
         /// <summary>
@@ -26828,10 +26828,10 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of GetUserListsResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserListsResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        /// <returns>Task of GetUserListsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetUserListsPaginatedResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
         {
-             ApiResponse<GetUserListsResponse> localVarResponse = await GetUserListsAsyncWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+             ApiResponse<GetUserListsPaginatedResponse> localVarResponse = await GetUserListsAsyncWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
              return localVarResponse.Data;
 
         }
@@ -26846,8 +26846,8 @@ namespace TextMagicClient.Api
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetUserListsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetUserListsResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        /// <returns>Task of ApiResponse (GetUserListsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetUserListsPaginatedResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
         {
 
             var localVarPath = "/api/v2/lists";
@@ -26899,9 +26899,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GetUserListsResponse>(localVarStatusCode,
+            return new ApiResponse<GetUserListsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserListsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsResponse)));
+                (GetUserListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsPaginatedResponse)));
         }
 
         /// <summary>
@@ -28753,10 +28753,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>SearchChatsResponse</returns>
-        public SearchChatsResponse SearchChats (int? page = null, int? limit = null, string query = null)
+        /// <returns>SearchChatsPaginatedResponse</returns>
+        public SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null)
         {
-             ApiResponse<SearchChatsResponse> localVarResponse = SearchChatsWithHttpInfo(page, limit, query);
+             ApiResponse<SearchChatsPaginatedResponse> localVarResponse = SearchChatsWithHttpInfo(page, limit, query);
              return localVarResponse.Data;
         }
 
@@ -28767,8 +28767,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>ApiResponse of SearchChatsResponse</returns>
-        public ApiResponse< SearchChatsResponse > SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null)
+        /// <returns>ApiResponse of SearchChatsPaginatedResponse</returns>
+        public ApiResponse< SearchChatsPaginatedResponse > SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
 
             var localVarPath = "/api/v2/chats/search";
@@ -28817,9 +28817,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsResponse)));
+                (SearchChatsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsPaginatedResponse)));
         }
 
         /// <summary>
@@ -28829,10 +28829,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>Task of SearchChatsResponse</returns>
-        public async System.Threading.Tasks.Task<SearchChatsResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null)
+        /// <returns>Task of SearchChatsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchChatsPaginatedResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null)
         {
-             ApiResponse<SearchChatsResponse> localVarResponse = await SearchChatsAsyncWithHttpInfo(page, limit, query);
+             ApiResponse<SearchChatsPaginatedResponse> localVarResponse = await SearchChatsAsyncWithHttpInfo(page, limit, query);
              return localVarResponse.Data;
 
         }
@@ -28844,8 +28844,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
-        /// <returns>Task of ApiResponse (SearchChatsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
+        /// <returns>Task of ApiResponse (SearchChatsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsPaginatedResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
 
             var localVarPath = "/api/v2/chats/search";
@@ -28894,9 +28894,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsResponse)));
+                (SearchChatsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsPaginatedResponse)));
         }
 
         /// <summary>
@@ -28906,10 +28906,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>SearchChatsByIdsResponse</returns>
-        public SearchChatsByIdsResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
+        /// <returns>SearchChatsByIdsPaginatedResponse</returns>
+        public SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
         {
-             ApiResponse<SearchChatsByIdsResponse> localVarResponse = SearchChatsByIdsWithHttpInfo(page, limit, ids);
+             ApiResponse<SearchChatsByIdsPaginatedResponse> localVarResponse = SearchChatsByIdsWithHttpInfo(page, limit, ids);
              return localVarResponse.Data;
         }
 
@@ -28920,8 +28920,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>ApiResponse of SearchChatsByIdsResponse</returns>
-        public ApiResponse< SearchChatsByIdsResponse > SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null)
+        /// <returns>ApiResponse of SearchChatsByIdsPaginatedResponse</returns>
+        public ApiResponse< SearchChatsByIdsPaginatedResponse > SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null)
         {
 
             var localVarPath = "/api/v2/chats/search/ids";
@@ -28970,9 +28970,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsByIdsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsByIdsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsByIdsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByIdsResponse)));
+                (SearchChatsByIdsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByIdsPaginatedResponse)));
         }
 
         /// <summary>
@@ -28982,10 +28982,10 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>Task of SearchChatsByIdsResponse</returns>
-        public async System.Threading.Tasks.Task<SearchChatsByIdsResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null)
+        /// <returns>Task of SearchChatsByIdsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null)
         {
-             ApiResponse<SearchChatsByIdsResponse> localVarResponse = await SearchChatsByIdsAsyncWithHttpInfo(page, limit, ids);
+             ApiResponse<SearchChatsByIdsPaginatedResponse> localVarResponse = await SearchChatsByIdsAsyncWithHttpInfo(page, limit, ids);
              return localVarResponse.Data;
 
         }
@@ -28997,8 +28997,8 @@ namespace TextMagicClient.Api
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
-        /// <returns>Task of ApiResponse (SearchChatsByIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null)
+        /// <returns>Task of ApiResponse (SearchChatsByIdsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsPaginatedResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null)
         {
 
             var localVarPath = "/api/v2/chats/search/ids";
@@ -29047,9 +29047,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsByIdsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsByIdsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsByIdsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByIdsResponse)));
+                (SearchChatsByIdsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByIdsPaginatedResponse)));
         }
 
         /// <summary>
@@ -29060,10 +29060,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>SearchChatsByReceipentResponse</returns>
-        public SearchChatsByReceipentResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null)
+        /// <returns>SearchChatsByReceipentPaginatedResponse</returns>
+        public SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null)
         {
-             ApiResponse<SearchChatsByReceipentResponse> localVarResponse = SearchChatsByReceipentWithHttpInfo(page, limit, query, orderBy);
+             ApiResponse<SearchChatsByReceipentPaginatedResponse> localVarResponse = SearchChatsByReceipentWithHttpInfo(page, limit, query, orderBy);
              return localVarResponse.Data;
         }
 
@@ -29075,8 +29075,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>ApiResponse of SearchChatsByReceipentResponse</returns>
-        public ApiResponse< SearchChatsByReceipentResponse > SearchChatsByReceipentWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null)
+        /// <returns>ApiResponse of SearchChatsByReceipentPaginatedResponse</returns>
+        public ApiResponse< SearchChatsByReceipentPaginatedResponse > SearchChatsByReceipentWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null)
         {
 
             var localVarPath = "/api/v2/chats/search/recipients";
@@ -29126,9 +29126,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsByReceipentResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsByReceipentPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsByReceipentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByReceipentResponse)));
+                (SearchChatsByReceipentPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByReceipentPaginatedResponse)));
         }
 
         /// <summary>
@@ -29139,10 +29139,10 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>Task of SearchChatsByReceipentResponse</returns>
-        public async System.Threading.Tasks.Task<SearchChatsByReceipentResponse> SearchChatsByReceipentAsync (int? page = null, int? limit = null, string query = null, string orderBy = null)
+        /// <returns>Task of SearchChatsByReceipentPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchChatsByReceipentPaginatedResponse> SearchChatsByReceipentAsync (int? page = null, int? limit = null, string query = null, string orderBy = null)
         {
-             ApiResponse<SearchChatsByReceipentResponse> localVarResponse = await SearchChatsByReceipentAsyncWithHttpInfo(page, limit, query, orderBy);
+             ApiResponse<SearchChatsByReceipentPaginatedResponse> localVarResponse = await SearchChatsByReceipentAsyncWithHttpInfo(page, limit, query, orderBy);
              return localVarResponse.Data;
 
         }
@@ -29155,8 +29155,8 @@ namespace TextMagicClient.Api
         /// <param name="limit">How many results to return (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <returns>Task of ApiResponse (SearchChatsByReceipentResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsByReceipentResponse>> SearchChatsByReceipentAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null)
+        /// <returns>Task of ApiResponse (SearchChatsByReceipentPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchChatsByReceipentPaginatedResponse>> SearchChatsByReceipentAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null)
         {
 
             var localVarPath = "/api/v2/chats/search/recipients";
@@ -29206,9 +29206,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchChatsByReceipentResponse>(localVarStatusCode,
+            return new ApiResponse<SearchChatsByReceipentPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchChatsByReceipentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByReceipentResponse)));
+                (SearchChatsByReceipentPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchChatsByReceipentPaginatedResponse)));
         }
 
         /// <summary>
@@ -29226,10 +29226,10 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchContactsResponse</returns>
-        public SearchContactsResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
+        /// <returns>SearchContactsPaginatedResponse</returns>
+        public SearchContactsPaginatedResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchContactsResponse> localVarResponse = SearchContactsWithHttpInfo(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
+             ApiResponse<SearchContactsPaginatedResponse> localVarResponse = SearchContactsWithHttpInfo(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -29248,8 +29248,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchContactsResponse</returns>
-        public ApiResponse< SearchContactsResponse > SearchContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of SearchContactsPaginatedResponse</returns>
+        public ApiResponse< SearchContactsPaginatedResponse > SearchContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts/search";
@@ -29306,9 +29306,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchContactsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchContactsResponse)));
+                (SearchContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -29326,10 +29326,10 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchContactsResponse</returns>
-        public async System.Threading.Tasks.Task<SearchContactsResponse> SearchContactsAsync (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
+        /// <returns>Task of SearchContactsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchContactsPaginatedResponse> SearchContactsAsync (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchContactsResponse> localVarResponse = await SearchContactsAsyncWithHttpInfo(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
+             ApiResponse<SearchContactsPaginatedResponse> localVarResponse = await SearchContactsAsyncWithHttpInfo(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -29349,8 +29349,8 @@ namespace TextMagicClient.Api
         /// <param name="country">2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchContactsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchContactsResponse>> SearchContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (SearchContactsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchContactsPaginatedResponse>> SearchContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/contacts/search";
@@ -29407,9 +29407,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchContactsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchContactsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchContactsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchContactsResponse)));
+                (SearchContactsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchContactsPaginatedResponse)));
         }
 
         /// <summary>
@@ -29423,10 +29423,10 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>SearchInboundMessagesResponse</returns>
-        public SearchInboundMessagesResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
+        /// <returns>SearchInboundMessagesPaginatedResponse</returns>
+        public SearchInboundMessagesPaginatedResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
         {
-             ApiResponse<SearchInboundMessagesResponse> localVarResponse = SearchInboundMessagesWithHttpInfo(page, limit, ids, query, orderBy, direction, expand);
+             ApiResponse<SearchInboundMessagesPaginatedResponse> localVarResponse = SearchInboundMessagesWithHttpInfo(page, limit, ids, query, orderBy, direction, expand);
              return localVarResponse.Data;
         }
 
@@ -29441,8 +29441,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>ApiResponse of SearchInboundMessagesResponse</returns>
-        public ApiResponse< SearchInboundMessagesResponse > SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
+        /// <returns>ApiResponse of SearchInboundMessagesPaginatedResponse</returns>
+        public ApiResponse< SearchInboundMessagesPaginatedResponse > SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
         {
 
             var localVarPath = "/api/v2/replies/search";
@@ -29495,9 +29495,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchInboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchInboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchInboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchInboundMessagesResponse)));
+                (SearchInboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchInboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -29511,10 +29511,10 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>Task of SearchInboundMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<SearchInboundMessagesResponse> SearchInboundMessagesAsync (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
+        /// <returns>Task of SearchInboundMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesAsync (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
         {
-             ApiResponse<SearchInboundMessagesResponse> localVarResponse = await SearchInboundMessagesAsyncWithHttpInfo(page, limit, ids, query, orderBy, direction, expand);
+             ApiResponse<SearchInboundMessagesPaginatedResponse> localVarResponse = await SearchInboundMessagesAsyncWithHttpInfo(page, limit, ids, query, orderBy, direction, expand);
              return localVarResponse.Data;
 
         }
@@ -29530,8 +29530,8 @@ namespace TextMagicClient.Api
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="expand">Expand by adding firstName, lastName and contactId (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (SearchInboundMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
+        /// <returns>Task of ApiResponse (SearchInboundMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesPaginatedResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
         {
 
             var localVarPath = "/api/v2/replies/search";
@@ -29584,9 +29584,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchInboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchInboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchInboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchInboundMessagesResponse)));
+                (SearchInboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchInboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -29601,10 +29601,10 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchListsResponse</returns>
-        public SearchListsResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
+        /// <returns>SearchListsPaginatedResponse</returns>
+        public SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchListsResponse> localVarResponse = SearchListsWithHttpInfo(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
+             ApiResponse<SearchListsPaginatedResponse> localVarResponse = SearchListsWithHttpInfo(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -29620,8 +29620,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchListsResponse</returns>
-        public ApiResponse< SearchListsResponse > SearchListsWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of SearchListsPaginatedResponse</returns>
+        public ApiResponse< SearchListsPaginatedResponse > SearchListsWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/lists/search";
@@ -29675,9 +29675,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchListsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchListsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchListsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchListsResponse)));
+                (SearchListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchListsPaginatedResponse)));
         }
 
         /// <summary>
@@ -29692,10 +29692,10 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchListsResponse</returns>
-        public async System.Threading.Tasks.Task<SearchListsResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
+        /// <returns>Task of SearchListsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchListsPaginatedResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchListsResponse> localVarResponse = await SearchListsAsyncWithHttpInfo(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
+             ApiResponse<SearchListsPaginatedResponse> localVarResponse = await SearchListsAsyncWithHttpInfo(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -29712,8 +29712,8 @@ namespace TextMagicClient.Api
         /// <param name="onlyDefault">Return only default lists (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchListsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchListsResponse>> SearchListsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (SearchListsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchListsPaginatedResponse>> SearchListsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/lists/search";
@@ -29767,9 +29767,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchListsResponse>(localVarStatusCode,
+            return new ApiResponse<SearchListsPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchListsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchListsResponse)));
+                (SearchListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchListsPaginatedResponse)));
         }
 
         /// <summary>
@@ -29784,10 +29784,10 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>SearchOutboundMessagesResponse</returns>
-        public SearchOutboundMessagesResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
+        /// <returns>SearchOutboundMessagesPaginatedResponse</returns>
+        public SearchOutboundMessagesPaginatedResponse SearchOutboundMessages (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
         {
-             ApiResponse<SearchOutboundMessagesResponse> localVarResponse = SearchOutboundMessagesWithHttpInfo(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
+             ApiResponse<SearchOutboundMessagesPaginatedResponse> localVarResponse = SearchOutboundMessagesWithHttpInfo(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
              return localVarResponse.Data;
         }
 
@@ -29803,8 +29803,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>ApiResponse of SearchOutboundMessagesResponse</returns>
-        public ApiResponse< SearchOutboundMessagesResponse > SearchOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
+        /// <returns>ApiResponse of SearchOutboundMessagesPaginatedResponse</returns>
+        public ApiResponse< SearchOutboundMessagesPaginatedResponse > SearchOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
         {
 
             var localVarPath = "/api/v2/messages/search";
@@ -29858,9 +29858,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchOutboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchOutboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchOutboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchOutboundMessagesResponse)));
+                (SearchOutboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchOutboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -29875,10 +29875,10 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>Task of SearchOutboundMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<SearchOutboundMessagesResponse> SearchOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
+        /// <returns>Task of SearchOutboundMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchOutboundMessagesPaginatedResponse> SearchOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
         {
-             ApiResponse<SearchOutboundMessagesResponse> localVarResponse = await SearchOutboundMessagesAsyncWithHttpInfo(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
+             ApiResponse<SearchOutboundMessagesPaginatedResponse> localVarResponse = await SearchOutboundMessagesAsyncWithHttpInfo(page, limit, lastId, ids, sessionId, statuses, includeDeleted, query);
              return localVarResponse.Data;
 
         }
@@ -29895,8 +29895,8 @@ namespace TextMagicClient.Api
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
-        /// <returns>Task of ApiResponse (SearchOutboundMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchOutboundMessagesResponse>> SearchOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
+        /// <returns>Task of ApiResponse (SearchOutboundMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchOutboundMessagesPaginatedResponse>> SearchOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null)
         {
 
             var localVarPath = "/api/v2/messages/search";
@@ -29950,9 +29950,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchOutboundMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchOutboundMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchOutboundMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchOutboundMessagesResponse)));
+                (SearchOutboundMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchOutboundMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -29966,10 +29966,10 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>SearchScheduledMessagesResponse</returns>
-        public SearchScheduledMessagesResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>SearchScheduledMessagesPaginatedResponse</returns>
+        public SearchScheduledMessagesPaginatedResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchScheduledMessagesResponse> localVarResponse = SearchScheduledMessagesWithHttpInfo(page, limit, query, ids, status, orderBy, direction);
+             ApiResponse<SearchScheduledMessagesPaginatedResponse> localVarResponse = SearchScheduledMessagesWithHttpInfo(page, limit, query, ids, status, orderBy, direction);
              return localVarResponse.Data;
         }
 
@@ -29984,8 +29984,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>ApiResponse of SearchScheduledMessagesResponse</returns>
-        public ApiResponse< SearchScheduledMessagesResponse > SearchScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>ApiResponse of SearchScheduledMessagesPaginatedResponse</returns>
+        public ApiResponse< SearchScheduledMessagesPaginatedResponse > SearchScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/schedules/search";
@@ -30038,9 +30038,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchScheduledMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchScheduledMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchScheduledMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchScheduledMessagesResponse)));
+                (SearchScheduledMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchScheduledMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -30054,10 +30054,10 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of SearchScheduledMessagesResponse</returns>
-        public async System.Threading.Tasks.Task<SearchScheduledMessagesResponse> SearchScheduledMessagesAsync (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>Task of SearchScheduledMessagesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchScheduledMessagesPaginatedResponse> SearchScheduledMessagesAsync (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
         {
-             ApiResponse<SearchScheduledMessagesResponse> localVarResponse = await SearchScheduledMessagesAsyncWithHttpInfo(page, limit, query, ids, status, orderBy, direction);
+             ApiResponse<SearchScheduledMessagesPaginatedResponse> localVarResponse = await SearchScheduledMessagesAsyncWithHttpInfo(page, limit, query, ids, status, orderBy, direction);
              return localVarResponse.Data;
 
         }
@@ -30073,8 +30073,8 @@ namespace TextMagicClient.Api
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <returns>Task of ApiResponse (SearchScheduledMessagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchScheduledMessagesResponse>> SearchScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
+        /// <returns>Task of ApiResponse (SearchScheduledMessagesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchScheduledMessagesPaginatedResponse>> SearchScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
         {
 
             var localVarPath = "/api/v2/schedules/search";
@@ -30127,9 +30127,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchScheduledMessagesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchScheduledMessagesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchScheduledMessagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchScheduledMessagesResponse)));
+                (SearchScheduledMessagesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchScheduledMessagesPaginatedResponse)));
         }
 
         /// <summary>
@@ -30141,10 +30141,10 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>SearchTemplatesResponse</returns>
-        public SearchTemplatesResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
+        /// <returns>SearchTemplatesPaginatedResponse</returns>
+        public SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
         {
-             ApiResponse<SearchTemplatesResponse> localVarResponse = SearchTemplatesWithHttpInfo(page, limit, ids, name, content);
+             ApiResponse<SearchTemplatesPaginatedResponse> localVarResponse = SearchTemplatesWithHttpInfo(page, limit, ids, name, content);
              return localVarResponse.Data;
         }
 
@@ -30157,8 +30157,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>ApiResponse of SearchTemplatesResponse</returns>
-        public ApiResponse< SearchTemplatesResponse > SearchTemplatesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
+        /// <returns>ApiResponse of SearchTemplatesPaginatedResponse</returns>
+        public ApiResponse< SearchTemplatesPaginatedResponse > SearchTemplatesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
         {
 
             var localVarPath = "/api/v2/templates/search";
@@ -30209,9 +30209,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchTemplatesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchTemplatesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchTemplatesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchTemplatesResponse)));
+                (SearchTemplatesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchTemplatesPaginatedResponse)));
         }
 
         /// <summary>
@@ -30223,10 +30223,10 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>Task of SearchTemplatesResponse</returns>
-        public async System.Threading.Tasks.Task<SearchTemplatesResponse> SearchTemplatesAsync (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
+        /// <returns>Task of SearchTemplatesPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<SearchTemplatesPaginatedResponse> SearchTemplatesAsync (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
         {
-             ApiResponse<SearchTemplatesResponse> localVarResponse = await SearchTemplatesAsyncWithHttpInfo(page, limit, ids, name, content);
+             ApiResponse<SearchTemplatesPaginatedResponse> localVarResponse = await SearchTemplatesAsyncWithHttpInfo(page, limit, ids, name, content);
              return localVarResponse.Data;
 
         }
@@ -30240,8 +30240,8 @@ namespace TextMagicClient.Api
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
-        /// <returns>Task of ApiResponse (SearchTemplatesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SearchTemplatesResponse>> SearchTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
+        /// <returns>Task of ApiResponse (SearchTemplatesPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchTemplatesPaginatedResponse>> SearchTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
         {
 
             var localVarPath = "/api/v2/templates/search";
@@ -30292,9 +30292,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<SearchTemplatesResponse>(localVarStatusCode,
+            return new ApiResponse<SearchTemplatesPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SearchTemplatesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchTemplatesResponse)));
+                (SearchTemplatesPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchTemplatesPaginatedResponse)));
         }
 
         /// <summary>
