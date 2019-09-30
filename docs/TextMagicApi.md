@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 <a name="blockcontact"></a>
 # **BlockContact**
-> ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject)
 
 Block contact from inbound and outbound communication by phone number.
 
@@ -270,12 +270,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var blockContactInputObject = new BlockContactInputObject(); // BlockContactInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Block contact from inbound and outbound communication by phone number.
-                ResourceLinkResponse result = apiInstance.BlockContact(blockContactInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.BlockContact(blockContactInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -292,7 +291,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blockContactInputObject** | [**BlockContactInputObject**](BlockContactInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -311,7 +309,7 @@ Name | Type | Description  | Notes
 
 <a name="buydedicatednumber"></a>
 # **BuyDedicatedNumber**
-> void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null)
+> void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
 
 Buy a dedicated number and assign it to the specified account.
 
@@ -335,12 +333,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var buyDedicatedNumberInputObject = new BuyDedicatedNumberInputObject(); // BuyDedicatedNumberInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Buy a dedicated number and assign it to the specified account.
-                apiInstance.BuyDedicatedNumber(buyDedicatedNumberInputObject, xIgnoreNullValues);
+                apiInstance.BuyDedicatedNumber(buyDedicatedNumberInputObject);
             }
             catch (Exception e)
             {
@@ -356,7 +353,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **buyDedicatedNumberInputObject** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -438,7 +434,7 @@ Name | Type | Description  | Notes
 
 <a name="checkphoneverificationcode"></a>
 # **CheckPhoneVerificationCode**
-> void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null)
+> void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
 
 Check user phone verification code
 
@@ -462,12 +458,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var checkPhoneVerificationCodeInputObject = new CheckPhoneVerificationCodeInputObject(); // CheckPhoneVerificationCodeInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Check user phone verification code
-                apiInstance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject, xIgnoreNullValues);
+                apiInstance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject);
             }
             catch (Exception e)
             {
@@ -483,7 +478,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -567,7 +561,7 @@ Name | Type | Description  | Notes
 
 <a name="closechatsbulk"></a>
 # **CloseChatsBulk**
-> void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null)
+> void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject)
 
 Close chats by chat ids or close all chats
 
@@ -591,12 +585,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var closeChatsBulkInputObject = new CloseChatsBulkInputObject(); // CloseChatsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Close chats by chat ids or close all chats
-                apiInstance.CloseChatsBulk(closeChatsBulkInputObject, xIgnoreNullValues);
+                apiInstance.CloseChatsBulk(closeChatsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -612,7 +605,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **closeChatsBulkInputObject** | [**CloseChatsBulkInputObject**](CloseChatsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -751,7 +743,7 @@ void (empty response body)
 
 <a name="createcontact"></a>
 # **CreateContact**
-> ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject)
 
 Create a new contact from the submitted data.
 
@@ -775,12 +767,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createContactInputObject = new CreateContactInputObject(); // CreateContactInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new contact from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateContact(createContactInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateContact(createContactInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -797,7 +788,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createContactInputObject** | [**CreateContactInputObject**](CreateContactInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -816,7 +806,7 @@ Name | Type | Description  | Notes
 
 <a name="createcontactnote"></a>
 # **CreateContactNote**
-> ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id)
 
 Create a new contact note.
 
@@ -841,12 +831,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var createContactNoteInputObject = new CreateContactNoteInputObject(); // CreateContactNoteInputObject | 
             var id = 56;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new contact note.
-                ResourceLinkResponse result = apiInstance.CreateContactNote(createContactNoteInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateContactNote(createContactNoteInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -864,7 +853,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createContactNoteInputObject** | [**CreateContactNoteInputObject**](CreateContactNoteInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -883,7 +871,7 @@ Name | Type | Description  | Notes
 
 <a name="createcustomfield"></a>
 # **CreateCustomField**
-> ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject)
 
 Create a new custom field from the submitted data.
 
@@ -907,12 +895,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createCustomFieldInputObject = new CreateCustomFieldInputObject(); // CreateCustomFieldInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new custom field from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateCustomField(createCustomFieldInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateCustomField(createCustomFieldInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -929,7 +916,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createCustomFieldInputObject** | [**CreateCustomFieldInputObject**](CreateCustomFieldInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -948,7 +934,7 @@ Name | Type | Description  | Notes
 
 <a name="createlist"></a>
 # **CreateList**
-> ResourceLinkResponse CreateList (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateList (CreateListInputObject createListInputObject)
 
 Create a new list from the submitted data.
 
@@ -972,12 +958,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createListInputObject = new CreateListInputObject(); // CreateListInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new list from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateList(createListInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateList(createListInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -994,7 +979,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createListInputObject** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1013,7 +997,7 @@ Name | Type | Description  | Notes
 
 <a name="createpushtoken"></a>
 # **CreatePushToken**
-> void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null)
+> void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject)
 
 Add or update a device token.
 
@@ -1037,12 +1021,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createPushTokenInputObject = new CreatePushTokenInputObject(); // CreatePushTokenInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Add or update a device token.
-                apiInstance.CreatePushToken(createPushTokenInputObject, xIgnoreNullValues);
+                apiInstance.CreatePushToken(createPushTokenInputObject);
             }
             catch (Exception e)
             {
@@ -1058,7 +1041,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createPushTokenInputObject** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1077,7 +1059,7 @@ void (empty response body)
 
 <a name="createsurvey"></a>
 # **CreateSurvey**
-> ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject)
 
 Create a new survey from the submitted data.
 
@@ -1101,12 +1083,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createSurveyInputObject = new CreateSurveyInputObject(); // CreateSurveyInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new survey from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateSurvey(createSurveyInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateSurvey(createSurveyInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1123,7 +1104,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createSurveyInputObject** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1142,7 +1122,7 @@ Name | Type | Description  | Notes
 
 <a name="createsurveynode"></a>
 # **CreateSurveyNode**
-> ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
 
 Create a new node from the submitted data.
 
@@ -1167,12 +1147,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var createSurveyNodeInputObject = new CreateSurveyNodeInputObject(); // CreateSurveyNodeInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new node from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateSurveyNode(createSurveyNodeInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateSurveyNode(createSurveyNodeInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1190,7 +1169,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createSurveyNodeInputObject** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1209,7 +1187,7 @@ Name | Type | Description  | Notes
 
 <a name="createtemplate"></a>
 # **CreateTemplate**
-> ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject)
 
 Create a new template from the submitted data.
 
@@ -1233,12 +1211,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createTemplateInputObject = new CreateTemplateInputObject(); // CreateTemplateInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Create a new template from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateTemplate(createTemplateInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.CreateTemplate(createTemplateInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1255,7 +1232,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createTemplateInputObject** | [**CreateTemplateInputObject**](CreateTemplateInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1450,7 +1426,7 @@ void (empty response body)
 
 <a name="deletechatmessages"></a>
 # **DeleteChatMessages**
-> void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+> void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
 
 Delete messages from chat by given messages ID(s).
 
@@ -1475,12 +1451,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var deleteChatMessagesBulkInputObject = new DeleteChatMessagesBulkInputObject(); // DeleteChatMessagesBulkInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete messages from chat by given messages ID(s).
-                apiInstance.DeleteChatMessages(deleteChatMessagesBulkInputObject, id, xIgnoreNullValues);
+                apiInstance.DeleteChatMessages(deleteChatMessagesBulkInputObject, id);
             }
             catch (Exception e)
             {
@@ -1497,7 +1472,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteChatMessagesBulkInputObject** | [**DeleteChatMessagesBulkInputObject**](DeleteChatMessagesBulkInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1516,7 +1490,7 @@ void (empty response body)
 
 <a name="deletechatsbulk"></a>
 # **DeleteChatsBulk**
-> void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
 
 Delete chats by given ID(s) or delete all chats.
 
@@ -1540,12 +1514,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteChatsBulkInputObject = new DeleteChatsBulkInputObject(); // DeleteChatsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete chats by given ID(s) or delete all chats.
-                apiInstance.DeleteChatsBulk(deleteChatsBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteChatsBulk(deleteChatsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -1561,7 +1534,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteChatsBulkInputObject** | [**DeleteChatsBulkInputObject**](DeleteChatsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1766,7 +1738,7 @@ void (empty response body)
 
 <a name="deletecontactnotesbulk"></a>
 # **DeleteContactNotesBulk**
-> void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject)
 
 Delete contact note by given ID(s) or delete all contact notes.
 
@@ -1791,12 +1763,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | 
             var deleteContactNotesBulkInputObject = new DeleteContactNotesBulkInputObject(); // DeleteContactNotesBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete contact note by given ID(s) or delete all contact notes.
-                apiInstance.DeleteContactNotesBulk(id, deleteContactNotesBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteContactNotesBulk(id, deleteContactNotesBulkInputObject);
             }
             catch (Exception e)
             {
@@ -1813,7 +1784,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**|  | 
  **deleteContactNotesBulkInputObject** | [**DeleteContactNotesBulkInputObject**](DeleteContactNotesBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -1832,7 +1802,7 @@ void (empty response body)
 
 <a name="deletecontactsbyids"></a>
 # **DeleteContactsByIds**
-> void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null)
+> void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
 
 Delete contact by given ID(s) or delete all contacts.
 
@@ -1856,12 +1826,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteContactsByIdsInputObject = new DeleteContactsByIdsInputObject(); // DeleteContactsByIdsInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete contact by given ID(s) or delete all contacts.
-                apiInstance.DeleteContactsByIds(deleteContactsByIdsInputObject, xIgnoreNullValues);
+                apiInstance.DeleteContactsByIds(deleteContactsByIdsInputObject);
             }
             catch (Exception e)
             {
@@ -1877,7 +1846,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteContactsByIdsInputObject** | [**DeleteContactsByIdsInputObject**](DeleteContactsByIdsInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2146,7 +2114,7 @@ void (empty response body)
 
 <a name="deleteinboundmessagesbulk"></a>
 # **DeleteInboundMessagesBulk**
-> void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
 
 Delete inbound messages by given ID(s) or delete all inbound messages.
 
@@ -2170,12 +2138,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteInboundMessagesBulkInputObject = new DeleteInboundMessagesBulkInputObject(); // DeleteInboundMessagesBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete inbound messages by given ID(s) or delete all inbound messages.
-                apiInstance.DeleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject);
             }
             catch (Exception e)
             {
@@ -2191,7 +2158,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteInboundMessagesBulkInputObject** | [**DeleteInboundMessagesBulkInputObject**](DeleteInboundMessagesBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2334,7 +2300,7 @@ void (empty response body)
 
 <a name="deletelistcontactsbulk"></a>
 # **DeleteListContactsBulk**
-> void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+> void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
 
 Delete contact from list by given ID(s) or all contacts from list.
 
@@ -2359,12 +2325,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var deleteListContactsBulkInputObject = new DeleteListContactsBulkInputObject(); // DeleteListContactsBulkInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete contact from list by given ID(s) or all contacts from list.
-                apiInstance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id, xIgnoreNullValues);
+                apiInstance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id);
             }
             catch (Exception e)
             {
@@ -2381,7 +2346,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteListContactsBulkInputObject** | [**DeleteListContactsBulkInputObject**](DeleteListContactsBulkInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2400,7 +2364,7 @@ void (empty response body)
 
 <a name="deletelistsbulk"></a>
 # **DeleteListsBulk**
-> void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject)
 
 Delete list by given ID(s) or delete all lists.
 
@@ -2424,12 +2388,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteListsBulkInputObject = new DeleteListsBulkInputObject(); // DeleteListsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete list by given ID(s) or delete all lists.
-                apiInstance.DeleteListsBulk(deleteListsBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteListsBulk(deleteListsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -2445,7 +2408,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteListsBulkInputObject** | [**DeleteListsBulkInputObject**](DeleteListsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2526,7 +2488,7 @@ void (empty response body)
 
 <a name="deletemessagesessionsbulk"></a>
 # **DeleteMessageSessionsBulk**
-> void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
 
 Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
@@ -2550,12 +2512,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteMessageSessionsBulkInputObject = new DeleteMessageSessionsBulkInputObject(); // DeleteMessageSessionsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
-                apiInstance.DeleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -2571,7 +2532,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteMessageSessionsBulkInputObject** | [**DeleteMessageSessionsBulkInputObject**](DeleteMessageSessionsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2654,7 +2614,7 @@ void (empty response body)
 
 <a name="deleteoutboundmessagesbulk"></a>
 # **DeleteOutboundMessagesBulk**
-> void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
 
 Delete messages by IDs
 
@@ -2680,12 +2640,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteOutboundMessagesBulkInputObject = new DeleteOutboundMessagesBulkInputObject(); // DeleteOutboundMessagesBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete messages by IDs
-                apiInstance.DeleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject);
             }
             catch (Exception e)
             {
@@ -2701,7 +2660,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteOutboundMessagesBulkInputObject** | [**DeleteOutboundMessagesBulkInputObject**](DeleteOutboundMessagesBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -2846,7 +2804,7 @@ void (empty response body)
 
 <a name="deletescheduledmessagesbulk"></a>
 # **DeleteScheduledMessagesBulk**
-> void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
 
 Delete scheduled messages by given ID(s) or delete all scheduled messages.
 
@@ -2870,12 +2828,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteScheduledMessagesBulkInputObject = new DeleteScheduledMessagesBulkInputObject(); // DeleteScheduledMessagesBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete scheduled messages by given ID(s) or delete all scheduled messages.
-                apiInstance.DeleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject);
             }
             catch (Exception e)
             {
@@ -2891,7 +2848,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteScheduledMessagesBulkInputObject** | [**DeleteScheduledMessagesBulkInputObject**](DeleteScheduledMessagesBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -3158,7 +3114,7 @@ void (empty response body)
 
 <a name="deletetemplatesbulk"></a>
 # **DeleteTemplatesBulk**
-> void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null)
+> void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
 
 Delete template by given ID(s) or delete all templates.
 
@@ -3182,12 +3138,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var deleteTemplatesBulkInputObject = new DeleteTemplatesBulkInputObject(); // DeleteTemplatesBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Delete template by given ID(s) or delete all templates.
-                apiInstance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject, xIgnoreNullValues);
+                apiInstance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject);
             }
             catch (Exception e)
             {
@@ -3203,7 +3158,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deleteTemplatesBulkInputObject** | [**DeleteTemplatesBulkInputObject**](DeleteTemplatesBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -3222,7 +3176,7 @@ void (empty response body)
 
 <a name="doauth"></a>
 # **DoAuth**
-> DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null)
+> DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject)
 
 Authenticate user by given username and password.
 
@@ -3244,12 +3198,11 @@ namespace Example
         {
             var apiInstance = new TextMagicApi();
             var doAuthInputObject = new DoAuthInputObject(); // DoAuthInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Authenticate user by given username and password.
-                DoAuthResponse result = apiInstance.DoAuth(doAuthInputObject, xIgnoreNullValues);
+                DoAuthResponse result = apiInstance.DoAuth(doAuthInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3266,7 +3219,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **doAuthInputObject** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -7424,7 +7376,7 @@ Name | Type | Description  | Notes
 
 <a name="getsubaccountswithtokens"></a>
 # **GetSubaccountsWithTokens**
-> GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null)
+> GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
 
 Get all subaccounts with their REST API tokens associated with specified app name.
 
@@ -7452,12 +7404,11 @@ namespace Example
             var getSubaccountsWithTokensInputObject = new GetSubaccountsWithTokensInputObject(); // GetSubaccountsWithTokensInputObject | 
             var page = 8.14;  // decimal? | Fetch specified results page (optional)  (default to 1)
             var limit = 56;  // int? | How many results to return (optional)  (default to 10)
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Get all subaccounts with their REST API tokens associated with specified app name.
-                GetSubaccountsWithTokensResponse result = apiInstance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit, xIgnoreNullValues);
+                GetSubaccountsWithTokensResponse result = apiInstance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7476,7 +7427,6 @@ Name | Type | Description  | Notes
  **getSubaccountsWithTokensInputObject** | [**GetSubaccountsWithTokensInputObject**](GetSubaccountsWithTokensInputObject.md)|  | 
  **page** | **decimal?**| Fetch specified results page | [optional] [default to 1]
  **limit** | **int?**| How many results to return | [optional] [default to 10]
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8261,7 +8211,7 @@ This endpoint does not need any parameter.
 
 <a name="invitesubaccount"></a>
 # **InviteSubaccount**
-> void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null)
+> void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject)
 
 Invite new subaccount.
 
@@ -8285,12 +8235,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var inviteSubaccountInputObject = new InviteSubaccountInputObject(); // InviteSubaccountInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Invite new subaccount.
-                apiInstance.InviteSubaccount(inviteSubaccountInputObject, xIgnoreNullValues);
+                apiInstance.InviteSubaccount(inviteSubaccountInputObject);
             }
             catch (Exception e)
             {
@@ -8306,7 +8255,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inviteSubaccountInputObject** | [**InviteSubaccountInputObject**](InviteSubaccountInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8325,7 +8273,7 @@ void (empty response body)
 
 <a name="markchatsreadbulk"></a>
 # **MarkChatsReadBulk**
-> void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null)
+> void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
 
 Mark several chats as read by chat ids or mark all chats as read
 
@@ -8349,12 +8297,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var markChatsReadBulkInputObject = new MarkChatsReadBulkInputObject(); // MarkChatsReadBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Mark several chats as read by chat ids or mark all chats as read
-                apiInstance.MarkChatsReadBulk(markChatsReadBulkInputObject, xIgnoreNullValues);
+                apiInstance.MarkChatsReadBulk(markChatsReadBulkInputObject);
             }
             catch (Exception e)
             {
@@ -8370,7 +8317,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **markChatsReadBulkInputObject** | [**MarkChatsReadBulkInputObject**](MarkChatsReadBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8389,7 +8335,7 @@ void (empty response body)
 
 <a name="markchatsunreadbulk"></a>
 # **MarkChatsUnreadBulk**
-> void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null)
+> void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
 
 Mark several chats as UNread by chat ids or mark all chats as UNread
 
@@ -8413,12 +8359,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var markChatsUnreadBulkInputObject = new MarkChatsUnreadBulkInputObject(); // MarkChatsUnreadBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Mark several chats as UNread by chat ids or mark all chats as UNread
-                apiInstance.MarkChatsUnreadBulk(markChatsUnreadBulkInputObject, xIgnoreNullValues);
+                apiInstance.MarkChatsUnreadBulk(markChatsUnreadBulkInputObject);
             }
             catch (Exception e)
             {
@@ -8434,7 +8379,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **markChatsUnreadBulkInputObject** | [**MarkChatsUnreadBulkInputObject**](MarkChatsUnreadBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8453,7 +8397,7 @@ void (empty response body)
 
 <a name="mergesurveynodes"></a>
 # **MergeSurveyNodes**
-> void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null)
+> void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
 
 Merge two question nodes.
 
@@ -8477,12 +8421,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var mergeSurveyNodesInputObject = new MergeSurveyNodesInputObject(); // MergeSurveyNodesInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Merge two question nodes.
-                apiInstance.MergeSurveyNodes(mergeSurveyNodesInputObject, xIgnoreNullValues);
+                apiInstance.MergeSurveyNodes(mergeSurveyNodesInputObject);
             }
             catch (Exception e)
             {
@@ -8498,7 +8441,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mergeSurveyNodesInputObject** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8517,7 +8459,7 @@ void (empty response body)
 
 <a name="mutechat"></a>
 # **MuteChat**
-> ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject)
 
 Set mute mode.
 
@@ -8541,12 +8483,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var muteChatInputObject = new MuteChatInputObject(); // MuteChatInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Set mute mode.
-                ResourceLinkResponse result = apiInstance.MuteChat(muteChatInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.MuteChat(muteChatInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8563,7 +8504,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **muteChatInputObject** | [**MuteChatInputObject**](MuteChatInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8582,7 +8522,7 @@ Name | Type | Description  | Notes
 
 <a name="mutechatsbulk"></a>
 # **MuteChatsBulk**
-> void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+> void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject)
 
 Mute several chats by chat ids or mute all chats
 
@@ -8606,12 +8546,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var muteChatsBulkInputObject = new MuteChatsBulkInputObject(); // MuteChatsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Mute several chats by chat ids or mute all chats
-                apiInstance.MuteChatsBulk(muteChatsBulkInputObject, xIgnoreNullValues);
+                apiInstance.MuteChatsBulk(muteChatsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -8627,7 +8566,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **muteChatsBulkInputObject** | [**MuteChatsBulkInputObject**](MuteChatsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8705,7 +8643,7 @@ This endpoint does not need any parameter.
 
 <a name="reopenchatsbulk"></a>
 # **ReopenChatsBulk**
-> void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null)
+> void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
 
 Reopen chats by chat ids or reopen all chats
 
@@ -8729,12 +8667,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var reopenChatsBulkInputObject = new ReopenChatsBulkInputObject(); // ReopenChatsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Reopen chats by chat ids or reopen all chats
-                apiInstance.ReopenChatsBulk(reopenChatsBulkInputObject, xIgnoreNullValues);
+                apiInstance.ReopenChatsBulk(reopenChatsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -8750,7 +8687,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reopenChatsBulkInputObject** | [**ReopenChatsBulkInputObject**](ReopenChatsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8769,7 +8705,7 @@ void (empty response body)
 
 <a name="requestnewsubaccounttoken"></a>
 # **RequestNewSubaccountToken**
-> User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null)
+> User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
 
 Request a new REST API token for subaccount.
 
@@ -8795,12 +8731,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var requestNewSubaccountTokenInputObject = new RequestNewSubaccountTokenInputObject(); // RequestNewSubaccountTokenInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Request a new REST API token for subaccount.
-                User result = apiInstance.RequestNewSubaccountToken(requestNewSubaccountTokenInputObject, xIgnoreNullValues);
+                User result = apiInstance.RequestNewSubaccountToken(requestNewSubaccountTokenInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8817,7 +8752,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestNewSubaccountTokenInputObject** | [**RequestNewSubaccountTokenInputObject**](RequestNewSubaccountTokenInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -8836,7 +8770,7 @@ Name | Type | Description  | Notes
 
 <a name="requestsenderid"></a>
 # **RequestSenderId**
-> ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject)
 
 Request for a new Sender ID.
 
@@ -8860,12 +8794,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var requestSenderIdInputObject = new RequestSenderIdInputObject(); // RequestSenderIdInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Request for a new Sender ID.
-                ResourceLinkResponse result = apiInstance.RequestSenderId(requestSenderIdInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.RequestSenderId(requestSenderIdInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8882,7 +8815,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestSenderIdInputObject** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -9685,7 +9617,7 @@ void (empty response body)
 
 <a name="sendmessage"></a>
 # **SendMessage**
-> SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null)
+> SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject)
 
 Send message
 
@@ -9711,12 +9643,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var sendMessageInputObject = new SendMessageInputObject(); // SendMessageInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Send message
-                SendMessageResponse result = apiInstance.SendMessage(sendMessageInputObject, xIgnoreNullValues);
+                SendMessageResponse result = apiInstance.SendMessage(sendMessageInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9733,7 +9664,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendMessageInputObject** | [**SendMessageInputObject**](SendMessageInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -9810,7 +9740,7 @@ void (empty response body)
 
 <a name="setchatstatus"></a>
 # **SetChatStatus**
-> ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject)
 
 Set status of the chat given by ID.
 
@@ -9834,12 +9764,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var setChatStatusInputObject = new SetChatStatusInputObject(); // SetChatStatusInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Set status of the chat given by ID.
-                ResourceLinkResponse result = apiInstance.SetChatStatus(setChatStatusInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.SetChatStatus(setChatStatusInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9856,7 +9785,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **setChatStatusInputObject** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -9938,7 +9866,7 @@ Name | Type | Description  | Notes
 
 <a name="unblockcontact"></a>
 # **UnblockContact**
-> void UnblockContact (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null)
+> void UnblockContact (UnblockContactInputObject unblockContactInputObject)
 
 Unblock contact by phone number.
 
@@ -9962,12 +9890,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var unblockContactInputObject = new UnblockContactInputObject(); // UnblockContactInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Unblock contact by phone number.
-                apiInstance.UnblockContact(unblockContactInputObject, xIgnoreNullValues);
+                apiInstance.UnblockContact(unblockContactInputObject);
             }
             catch (Exception e)
             {
@@ -9983,7 +9910,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unblockContactInputObject** | [**UnblockContactInputObject**](UnblockContactInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10002,7 +9928,7 @@ void (empty response body)
 
 <a name="unblockcontactsbulk"></a>
 # **UnblockContactsBulk**
-> void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null)
+> void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
 
 Unblock several contacts by blocked contact ids or unblock all contacts
 
@@ -10026,12 +9952,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var unblockContactsBulkInputObject = new UnblockContactsBulkInputObject(); // UnblockContactsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Unblock several contacts by blocked contact ids or unblock all contacts
-                apiInstance.UnblockContactsBulk(unblockContactsBulkInputObject, xIgnoreNullValues);
+                apiInstance.UnblockContactsBulk(unblockContactsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -10047,7 +9972,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unblockContactsBulkInputObject** | [**UnblockContactsBulkInputObject**](UnblockContactsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10066,7 +9990,7 @@ void (empty response body)
 
 <a name="unmutechatsbulk"></a>
 # **UnmuteChatsBulk**
-> void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+> void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
 
 Unmute several chats by chat ids or unmute all chats
 
@@ -10090,12 +10014,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var unmuteChatsBulkInputObject = new UnmuteChatsBulkInputObject(); // UnmuteChatsBulkInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Unmute several chats by chat ids or unmute all chats
-                apiInstance.UnmuteChatsBulk(unmuteChatsBulkInputObject, xIgnoreNullValues);
+                apiInstance.UnmuteChatsBulk(unmuteChatsBulkInputObject);
             }
             catch (Exception e)
             {
@@ -10111,7 +10034,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unmuteChatsBulkInputObject** | [**UnmuteChatsBulkInputObject**](UnmuteChatsBulkInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10130,7 +10052,7 @@ void (empty response body)
 
 <a name="unsubscribecontact"></a>
 # **UnsubscribeContact**
-> ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject)
 
 Unsubscribe contact from your communication by phone number.
 
@@ -10154,12 +10076,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var unsubscribeContactInputObject = new UnsubscribeContactInputObject(); // UnsubscribeContactInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Unsubscribe contact from your communication by phone number.
-                ResourceLinkResponse result = apiInstance.UnsubscribeContact(unsubscribeContactInputObject, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UnsubscribeContact(unsubscribeContactInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10176,7 +10097,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unsubscribeContactInputObject** | [**UnsubscribeContactInputObject**](UnsubscribeContactInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10195,7 +10115,7 @@ Name | Type | Description  | Notes
 
 <a name="updatebalancenotificationsettings"></a>
 # **UpdateBalanceNotificationSettings**
-> void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+> void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject)
 
 Update balance notification settings
 
@@ -10219,12 +10139,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateBalanceNotificationSettingsInputObject = new UpdateBalanceNotificationSettingsInputObject(); // UpdateBalanceNotificationSettingsInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update balance notification settings
-                apiInstance.UpdateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject, xIgnoreNullValues);
+                apiInstance.UpdateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject);
             }
             catch (Exception e)
             {
@@ -10240,7 +10159,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateBalanceNotificationSettingsInputObject** | [**UpdateBalanceNotificationSettingsInputObject**](UpdateBalanceNotificationSettingsInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10259,7 +10177,7 @@ void (empty response body)
 
 <a name="updatecallbacksettings"></a>
 # **UpdateCallbackSettings**
-> void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null)
+> void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject)
 
 Update callback URL settings
 
@@ -10283,12 +10201,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateCallbackSettingsInputObject = new UpdateCallbackSettingsInputObject(); // UpdateCallbackSettingsInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update callback URL settings
-                apiInstance.UpdateCallbackSettings(updateCallbackSettingsInputObject, xIgnoreNullValues);
+                apiInstance.UpdateCallbackSettings(updateCallbackSettingsInputObject);
             }
             catch (Exception e)
             {
@@ -10304,7 +10221,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCallbackSettingsInputObject** | [**UpdateCallbackSettingsInputObject**](UpdateCallbackSettingsInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10323,7 +10239,7 @@ void (empty response body)
 
 <a name="updatechatdesktopnotificationsettings"></a>
 # **UpdateChatDesktopNotificationSettings**
-> void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+> void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject)
 
 Update chat desktop notification settings
 
@@ -10347,12 +10263,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateChatDesktopNotificationSettingsInputObject = new UpdateChatDesktopNotificationSettingsInputObject(); // UpdateChatDesktopNotificationSettingsInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update chat desktop notification settings
-                apiInstance.UpdateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject, xIgnoreNullValues);
+                apiInstance.UpdateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject);
             }
             catch (Exception e)
             {
@@ -10368,7 +10283,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateChatDesktopNotificationSettingsInputObject** | [**UpdateChatDesktopNotificationSettingsInputObject**](UpdateChatDesktopNotificationSettingsInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10387,7 +10301,7 @@ void (empty response body)
 
 <a name="updatecontact"></a>
 # **UpdateContact**
-> ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id)
 
 Update existing contact.
 
@@ -10412,12 +10326,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateContactInputObject = new UpdateContactInputObject(); // UpdateContactInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing contact.
-                ResourceLinkResponse result = apiInstance.UpdateContact(updateContactInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateContact(updateContactInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10435,7 +10348,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateContactInputObject** | [**UpdateContactInputObject**](UpdateContactInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10454,7 +10366,7 @@ Name | Type | Description  | Notes
 
 <a name="updatecontactnote"></a>
 # **UpdateContactNote**
-> ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id)
 
 Update existing contact note.
 
@@ -10479,12 +10391,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateContactNoteInputObject = new UpdateContactNoteInputObject(); // UpdateContactNoteInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing contact note.
-                ResourceLinkResponse result = apiInstance.UpdateContactNote(updateContactNoteInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateContactNote(updateContactNoteInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10502,7 +10413,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateContactNoteInputObject** | [**UpdateContactNoteInputObject**](UpdateContactNoteInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10521,7 +10431,7 @@ Name | Type | Description  | Notes
 
 <a name="updatecurrentuser"></a>
 # **UpdateCurrentUser**
-> UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null)
+> UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject)
 
 Update current user info.
 
@@ -10545,12 +10455,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateCurrentUserInputObject = new UpdateCurrentUserInputObject(); // UpdateCurrentUserInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update current user info.
-                UpdateCurrentUserResponse result = apiInstance.UpdateCurrentUser(updateCurrentUserInputObject, xIgnoreNullValues);
+                UpdateCurrentUserResponse result = apiInstance.UpdateCurrentUser(updateCurrentUserInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10567,7 +10476,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCurrentUserInputObject** | [**UpdateCurrentUserInputObject**](UpdateCurrentUserInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10586,7 +10494,7 @@ Name | Type | Description  | Notes
 
 <a name="updatecustomfield"></a>
 # **UpdateCustomField**
-> ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
 
 Update existing custom field.
 
@@ -10611,12 +10519,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateCustomFieldInputObject = new UpdateCustomFieldInputObject(); // UpdateCustomFieldInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing custom field.
-                ResourceLinkResponse result = apiInstance.UpdateCustomField(updateCustomFieldInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateCustomField(updateCustomFieldInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10634,7 +10541,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldInputObject** | [**UpdateCustomFieldInputObject**](UpdateCustomFieldInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10653,7 +10559,7 @@ Name | Type | Description  | Notes
 
 <a name="updatecustomfieldvalue"></a>
 # **UpdateCustomFieldValue**
-> ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
 
 Update contact's custom field value.
 
@@ -10678,12 +10584,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateCustomFieldValueInputObject = new UpdateCustomFieldValueInputObject(); // UpdateCustomFieldValueInputObject | 
             var id = id_example;  // string | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update contact's custom field value.
-                ResourceLinkResponse result = apiInstance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10701,7 +10606,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
  **id** | **string**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10720,7 +10624,7 @@ Name | Type | Description  | Notes
 
 <a name="updateinboundmessagesnotificationsettings"></a>
 # **UpdateInboundMessagesNotificationSettings**
-> void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+> void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject)
 
 Update inbound messages notification settings
 
@@ -10744,12 +10648,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateInboundMessagesNotificationSettingsInputObject = new UpdateInboundMessagesNotificationSettingsInputObject(); // UpdateInboundMessagesNotificationSettingsInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update inbound messages notification settings
-                apiInstance.UpdateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject, xIgnoreNullValues);
+                apiInstance.UpdateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject);
             }
             catch (Exception e)
             {
@@ -10765,7 +10668,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateInboundMessagesNotificationSettingsInputObject** | [**UpdateInboundMessagesNotificationSettingsInputObject**](UpdateInboundMessagesNotificationSettingsInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10849,7 +10751,7 @@ Name | Type | Description  | Notes
 
 <a name="updatepassword"></a>
 # **UpdatePassword**
-> void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null)
+> void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject)
 
 Change user password.
 
@@ -10873,12 +10775,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updatePasswordInputObject = new UpdatePasswordInputObject(); // UpdatePasswordInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Change user password.
-                apiInstance.UpdatePassword(updatePasswordInputObject, xIgnoreNullValues);
+                apiInstance.UpdatePassword(updatePasswordInputObject);
             }
             catch (Exception e)
             {
@@ -10894,7 +10795,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updatePasswordInputObject** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10913,7 +10813,7 @@ void (empty response body)
 
 <a name="updatesendersetting"></a>
 # **UpdateSenderSetting**
-> void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null)
+> void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject)
 
 Change sender settings for specified country.
 
@@ -10937,12 +10837,11 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateSenderSettingInputObject = new UpdateSenderSettingInputObject(); // UpdateSenderSettingInputObject | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Change sender settings for specified country.
-                apiInstance.UpdateSenderSetting(updateSenderSettingInputObject, xIgnoreNullValues);
+                apiInstance.UpdateSenderSetting(updateSenderSettingInputObject);
             }
             catch (Exception e)
             {
@@ -10958,7 +10857,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateSenderSettingInputObject** | [**UpdateSenderSettingInputObject**](UpdateSenderSettingInputObject.md)|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -10977,7 +10875,7 @@ void (empty response body)
 
 <a name="updatesurvey"></a>
 # **UpdateSurvey**
-> ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id)
 
 Update existing survey.
 
@@ -11002,12 +10900,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateSurveyInputObject = new UpdateSurveyInputObject(); // UpdateSurveyInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing survey.
-                ResourceLinkResponse result = apiInstance.UpdateSurvey(updateSurveyInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateSurvey(updateSurveyInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11025,7 +10922,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateSurveyInputObject** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -11044,7 +10940,7 @@ Name | Type | Description  | Notes
 
 <a name="updatesurveynode"></a>
 # **UpdateSurveyNode**
-> ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
 
 Update existing node.
 
@@ -11069,12 +10965,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateSurveyNodeInputObject = new UpdateSurveyNodeInputObject(); // UpdateSurveyNodeInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing node.
-                ResourceLinkResponse result = apiInstance.UpdateSurveyNode(updateSurveyNodeInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateSurveyNode(updateSurveyNodeInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11092,7 +10987,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateSurveyNodeInputObject** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 
@@ -11111,7 +11005,7 @@ Name | Type | Description  | Notes
 
 <a name="updatetemplate"></a>
 # **UpdateTemplate**
-> ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null)
+> ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id)
 
 Update existing template.
 
@@ -11136,12 +11030,11 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var updateTemplateInputObject = new UpdateTemplateInputObject(); // UpdateTemplateInputObject | 
             var id = 1;  // int? | 
-            var xIgnoreNullValues = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Update existing template.
-                ResourceLinkResponse result = apiInstance.UpdateTemplate(updateTemplateInputObject, id, xIgnoreNullValues);
+                ResourceLinkResponse result = apiInstance.UpdateTemplate(updateTemplateInputObject, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11159,7 +11052,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateTemplateInputObject** | [**UpdateTemplateInputObject**](UpdateTemplateInputObject.md)|  | 
  **id** | **int?**|  | 
- **xIgnoreNullValues** | **bool?**|  | [optional] [default to true]
 
 ### Return type
 

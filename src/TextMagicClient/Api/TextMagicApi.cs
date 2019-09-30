@@ -55,9 +55,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject);
 
         /// <summary>
         /// Block contact from inbound and outbound communication by phone number.
@@ -67,9 +66,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> BlockContactWithHttpInfo (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> BlockContactWithHttpInfo (BlockContactInputObject blockContactInputObject);
         /// <summary>
         /// Buy a dedicated number and assign it to the specified account.
         /// </summary>
@@ -78,9 +76,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null);
+        void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
 
         /// <summary>
         /// Buy a dedicated number and assign it to the specified account.
@@ -90,9 +87,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> BuyDedicatedNumberWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> BuyDedicatedNumberWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
         /// <summary>
         /// Cancel a survey.
         /// </summary>
@@ -122,9 +118,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null);
+        void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Check user phone verification code
@@ -134,9 +129,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CheckPhoneVerificationCodeWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> CheckPhoneVerificationCodeWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -168,9 +162,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject);
 
         /// <summary>
         /// Close chats by chat ids or close all chats
@@ -180,9 +173,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CloseChatsBulkWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> CloseChatsBulkWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject);
         /// <summary>
         /// Close all chats that have no unread messages.
         /// </summary>
@@ -231,9 +223,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject);
 
         /// <summary>
         /// Create a new contact from the submitted data.
@@ -243,9 +234,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateContactWithHttpInfo (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateContactWithHttpInfo (CreateContactInputObject createContactInputObject);
         /// <summary>
         /// Create a new contact note.
         /// </summary>
@@ -255,9 +245,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id);
 
         /// <summary>
         /// Create a new contact note.
@@ -268,9 +257,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateContactNoteWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateContactNoteWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id);
         /// <summary>
         /// Create a new custom field from the submitted data.
         /// </summary>
@@ -279,9 +267,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject);
 
         /// <summary>
         /// Create a new custom field from the submitted data.
@@ -291,9 +278,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateCustomFieldWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateCustomFieldWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject);
         /// <summary>
         /// Create a new list from the submitted data.
         /// </summary>
@@ -302,9 +288,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateList (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateList (CreateListInputObject createListInputObject);
 
         /// <summary>
         /// Create a new list from the submitted data.
@@ -314,9 +299,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateListWithHttpInfo (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateListWithHttpInfo (CreateListInputObject createListInputObject);
         /// <summary>
         /// Add or update a device token.
         /// </summary>
@@ -325,9 +309,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null);
+        void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject);
 
         /// <summary>
         /// Add or update a device token.
@@ -337,9 +320,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreatePushTokenWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> CreatePushTokenWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject);
         /// <summary>
         /// Create a new survey from the submitted data.
         /// </summary>
@@ -348,9 +330,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject);
 
         /// <summary>
         /// Create a new survey from the submitted data.
@@ -360,9 +341,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateSurveyWithHttpInfo (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateSurveyWithHttpInfo (CreateSurveyInputObject createSurveyInputObject);
         /// <summary>
         /// Create a new node from the submitted data.
         /// </summary>
@@ -372,9 +352,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
 
         /// <summary>
         /// Create a new node from the submitted data.
@@ -385,9 +364,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateSurveyNodeWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateSurveyNodeWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
         /// <summary>
         /// Create a new template from the submitted data.
         /// </summary>
@@ -396,9 +374,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject);
 
         /// <summary>
         /// Create a new template from the submitted data.
@@ -408,9 +385,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> CreateTemplateWithHttpInfo (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> CreateTemplateWithHttpInfo (CreateTemplateInputObject createTemplateInputObject);
         /// <summary>
         /// Delete all contacts.
         /// </summary>
@@ -477,9 +453,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
 
         /// <summary>
         /// Delete messages from chat by given messages ID(s).
@@ -490,9 +465,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteChatMessagesWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteChatMessagesWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
         /// <summary>
         /// Delete chats by given ID(s) or delete all chats.
         /// </summary>
@@ -501,9 +475,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
 
         /// <summary>
         /// Delete chats by given ID(s) or delete all chats.
@@ -513,9 +486,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteChatsBulkWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteChatsBulkWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
         /// <summary>
         /// Delete a single contact.
         /// </summary>
@@ -588,9 +560,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
 
         /// <summary>
         /// Delete contact note by given ID(s) or delete all contact notes.
@@ -601,9 +572,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContactNotesBulkWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteContactNotesBulkWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
         /// <summary>
         /// Delete contact by given ID(s) or delete all contacts.
         /// </summary>
@@ -612,9 +582,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null);
+        void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
 
         /// <summary>
         /// Delete contact by given ID(s) or delete all contacts.
@@ -624,9 +593,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContactsByIdsWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteContactsByIdsWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
         /// <summary>
         /// Unassign contacts from the specified list.
         /// </summary>
@@ -721,9 +689,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
 
         /// <summary>
         /// Delete inbound messages by given ID(s) or delete all inbound messages.
@@ -733,9 +700,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
         /// Delete a single list.
         /// </summary>
@@ -787,9 +753,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
         /// Delete contact from list by given ID(s) or all contacts from list.
@@ -800,9 +765,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
         /// Delete list by given ID(s) or delete all lists.
         /// </summary>
@@ -811,9 +775,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
         /// Delete list by given ID(s) or delete all lists.
@@ -823,9 +786,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteListsBulkWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteListsBulkWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject);
         /// <summary>
         /// Delete a message session, together with all nested messages.
         /// </summary>
@@ -855,9 +817,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
 
         /// <summary>
         /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
@@ -867,9 +828,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteMessageSessionsBulkWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteMessageSessionsBulkWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
         /// <summary>
         /// Delete message
         /// </summary>
@@ -899,9 +859,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
 
         /// <summary>
         /// Delete messages by IDs
@@ -911,9 +870,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteOutboundMessagesBulkWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteOutboundMessagesBulkWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
         /// <summary>
         /// Delete a push notification device token.
         /// </summary>
@@ -966,9 +924,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
 
         /// <summary>
         /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
@@ -978,9 +935,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteScheduledMessagesBulkWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteScheduledMessagesBulkWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
         /// <summary>
         /// Delete a Sender ID.
         /// </summary>
@@ -1073,9 +1029,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null);
+        void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
 
         /// <summary>
         /// Delete template by given ID(s) or delete all templates.
@@ -1085,9 +1040,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTemplatesBulkWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> DeleteTemplatesBulkWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
         /// <summary>
         /// Authenticate user by given username and password.
         /// </summary>
@@ -1096,9 +1050,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>DoAuthResponse</returns>
-        DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null);
+        DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject);
 
         /// <summary>
         /// Authenticate user by given username and password.
@@ -1108,9 +1061,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of DoAuthResponse</returns>
-        ApiResponse<DoAuthResponse> DoAuthWithHttpInfo (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<DoAuthResponse> DoAuthWithHttpInfo (DoAuthInputObject doAuthInputObject);
         /// <summary>
         /// Carrier Lookup
         /// </summary>
@@ -2622,9 +2574,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>GetSubaccountsWithTokensResponse</returns>
-        GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null);
+        GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
 
         /// <summary>
         /// Get all subaccounts with their REST API tokens associated with specified app name.
@@ -2636,9 +2587,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of GetSubaccountsWithTokensResponse</returns>
-        ApiResponse<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null);
+        ApiResponse<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
         /// <summary>
         /// Get a survey by id.
         /// </summary>
@@ -2913,9 +2863,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null);
+        void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject);
 
         /// <summary>
         /// Invite new subaccount.
@@ -2925,9 +2874,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> InviteSubaccountWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> InviteSubaccountWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject);
         /// <summary>
         /// Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
@@ -2936,9 +2884,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null);
+        void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
 
         /// <summary>
         /// Mark several chats as read by chat ids or mark all chats as read
@@ -2948,9 +2895,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MarkChatsReadBulkWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> MarkChatsReadBulkWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
         /// <summary>
         /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
@@ -2959,9 +2905,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null);
+        void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
 
         /// <summary>
         /// Mark several chats as UNread by chat ids or mark all chats as UNread
@@ -2971,9 +2916,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MarkChatsUnreadBulkWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> MarkChatsUnreadBulkWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
         /// <summary>
         /// Merge two question nodes.
         /// </summary>
@@ -2982,9 +2926,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null);
+        void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
 
         /// <summary>
         /// Merge two question nodes.
@@ -2994,9 +2937,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MergeSurveyNodesWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> MergeSurveyNodesWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
         /// <summary>
         /// Set mute mode.
         /// </summary>
@@ -3005,9 +2947,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject);
 
         /// <summary>
         /// Set mute mode.
@@ -3017,9 +2958,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> MuteChatWithHttpInfo (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> MuteChatWithHttpInfo (MuteChatInputObject muteChatInputObject);
         /// <summary>
         /// Mute several chats by chat ids or mute all chats
         /// </summary>
@@ -3028,9 +2968,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject);
 
         /// <summary>
         /// Mute several chats by chat ids or mute all chats
@@ -3040,9 +2979,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
         /// <summary>
         /// Just does a pong.
         /// </summary>
@@ -3070,9 +3008,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
 
         /// <summary>
         /// Reopen chats by chat ids or reopen all chats
@@ -3082,9 +3019,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ReopenChatsBulkWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> ReopenChatsBulkWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
         /// <summary>
         /// Request a new REST API token for subaccount.
         /// </summary>
@@ -3093,9 +3029,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>User</returns>
-        User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null);
+        User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
 
         /// <summary>
         /// Request a new REST API token for subaccount.
@@ -3105,9 +3040,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> RequestNewSubaccountTokenWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<User> RequestNewSubaccountTokenWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
         /// <summary>
         /// Request for a new Sender ID.
         /// </summary>
@@ -3116,9 +3050,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject);
 
         /// <summary>
         /// Request for a new Sender ID.
@@ -3128,9 +3061,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> RequestSenderIdWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> RequestSenderIdWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject);
         /// <summary>
         /// Reset a survey flow.
         /// </summary>
@@ -3462,9 +3394,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>SendMessageResponse</returns>
-        SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null);
+        SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject);
 
         /// <summary>
         /// Send message
@@ -3474,9 +3405,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of SendMessageResponse</returns>
-        ApiResponse<SendMessageResponse> SendMessageWithHttpInfo (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<SendMessageResponse> SendMessageWithHttpInfo (SendMessageInputObject sendMessageInputObject);
         /// <summary>
         /// Send user phone verification
         /// </summary>
@@ -3504,9 +3434,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject);
 
         /// <summary>
         /// Set status of the chat given by ID.
@@ -3516,9 +3445,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> SetChatStatusWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> SetChatStatusWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject);
         /// <summary>
         /// Start a survey.
         /// </summary>
@@ -3548,9 +3476,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UnblockContact (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null);
+        void UnblockContact (UnblockContactInputObject unblockContactInputObject);
 
         /// <summary>
         /// Unblock contact by phone number.
@@ -3560,9 +3487,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnblockContactWithHttpInfo (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UnblockContactWithHttpInfo (UnblockContactInputObject unblockContactInputObject);
         /// <summary>
         /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
@@ -3571,9 +3497,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null);
+        void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
 
         /// <summary>
         /// Unblock several contacts by blocked contact ids or unblock all contacts
@@ -3583,9 +3508,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnblockContactsBulkWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UnblockContactsBulkWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
         /// <summary>
         /// Unmute several chats by chat ids or unmute all chats
         /// </summary>
@@ -3594,9 +3518,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
 
         /// <summary>
         /// Unmute several chats by chat ids or unmute all chats
@@ -3606,9 +3529,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnmuteChatsBulkWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UnmuteChatsBulkWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
         /// <summary>
         /// Unsubscribe contact from your communication by phone number.
         /// </summary>
@@ -3617,9 +3539,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject);
 
         /// <summary>
         /// Unsubscribe contact from your communication by phone number.
@@ -3629,9 +3550,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UnsubscribeContactWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UnsubscribeContactWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject);
         /// <summary>
         /// Update balance notification settings
         /// </summary>
@@ -3640,9 +3560,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject);
 
         /// <summary>
         /// Update balance notification settings
@@ -3652,9 +3571,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateBalanceNotificationSettingsWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdateBalanceNotificationSettingsWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject);
         /// <summary>
         /// Update callback URL settings
         /// </summary>
@@ -3663,9 +3581,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null);
+        void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject);
 
         /// <summary>
         /// Update callback URL settings
@@ -3675,9 +3592,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateCallbackSettingsWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdateCallbackSettingsWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject);
         /// <summary>
         /// Update chat desktop notification settings
         /// </summary>
@@ -3686,9 +3602,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
 
         /// <summary>
         /// Update chat desktop notification settings
@@ -3698,9 +3613,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateChatDesktopNotificationSettingsWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdateChatDesktopNotificationSettingsWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
         /// <summary>
         /// Update existing contact.
         /// </summary>
@@ -3710,9 +3624,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id);
 
         /// <summary>
         /// Update existing contact.
@@ -3723,9 +3636,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateContactWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateContactWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id);
         /// <summary>
         /// Update existing contact note.
         /// </summary>
@@ -3735,9 +3647,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id);
 
         /// <summary>
         /// Update existing contact note.
@@ -3748,9 +3659,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateContactNoteWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateContactNoteWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id);
         /// <summary>
         /// Update current user info.
         /// </summary>
@@ -3759,9 +3669,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>UpdateCurrentUserResponse</returns>
-        UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null);
+        UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject);
 
         /// <summary>
         /// Update current user info.
@@ -3771,9 +3680,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of UpdateCurrentUserResponse</returns>
-        ApiResponse<UpdateCurrentUserResponse> UpdateCurrentUserWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<UpdateCurrentUserResponse> UpdateCurrentUserWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject);
         /// <summary>
         /// Update existing custom field.
         /// </summary>
@@ -3783,9 +3691,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
 
         /// <summary>
         /// Update existing custom field.
@@ -3796,9 +3703,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateCustomFieldWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateCustomFieldWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
         /// <summary>
         /// Update contact&#39;s custom field value.
         /// </summary>
@@ -3808,9 +3714,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
 
         /// <summary>
         /// Update contact&#39;s custom field value.
@@ -3821,9 +3726,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
         /// <summary>
         /// Update inbound messages notification settings
         /// </summary>
@@ -3832,9 +3736,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
 
         /// <summary>
         /// Update inbound messages notification settings
@@ -3844,9 +3747,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
         /// Update existing list.
         /// </summary>
@@ -3878,9 +3780,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null);
+        void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject);
 
         /// <summary>
         /// Change user password.
@@ -3890,9 +3791,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdatePasswordWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdatePasswordWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject);
         /// <summary>
         /// Change sender settings for specified country.
         /// </summary>
@@ -3901,9 +3801,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null);
+        void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject);
 
         /// <summary>
         /// Change sender settings for specified country.
@@ -3913,9 +3812,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateSenderSettingWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null);
+        ApiResponse<Object> UpdateSenderSettingWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject);
         /// <summary>
         /// Update existing survey.
         /// </summary>
@@ -3925,9 +3823,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id);
 
         /// <summary>
         /// Update existing survey.
@@ -3938,9 +3835,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateSurveyWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateSurveyWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id);
         /// <summary>
         /// Update existing node.
         /// </summary>
@@ -3950,9 +3846,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
 
         /// <summary>
         /// Update existing node.
@@ -3963,9 +3858,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateSurveyNodeWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateSurveyNodeWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
         /// <summary>
         /// Update existing template.
         /// </summary>
@@ -3975,9 +3869,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null);
+        ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id);
 
         /// <summary>
         /// Update existing template.
@@ -3988,9 +3881,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateTemplateWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null);
+        ApiResponse<ResourceLinkResponse> UpdateTemplateWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id);
         /// <summary>
         /// Add an avatar for the current user.
         /// </summary>
@@ -4112,9 +4004,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> BlockContactAsync (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> BlockContactAsync (BlockContactInputObject blockContactInputObject);
 
         /// <summary>
         /// Block contact from inbound and outbound communication by phone number.
@@ -4124,9 +4015,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> BlockContactAsyncWithHttpInfo (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> BlockContactAsyncWithHttpInfo (BlockContactInputObject blockContactInputObject);
         /// <summary>
         /// Buy a dedicated number and assign it to the specified account.
         /// </summary>
@@ -4135,9 +4025,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task BuyDedicatedNumberAsync (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task BuyDedicatedNumberAsync (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
 
         /// <summary>
         /// Buy a dedicated number and assign it to the specified account.
@@ -4147,9 +4036,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> BuyDedicatedNumberAsyncWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> BuyDedicatedNumberAsyncWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
         /// <summary>
         /// Cancel a survey.
         /// </summary>
@@ -4179,9 +4067,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CheckPhoneVerificationCodeAsync (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task CheckPhoneVerificationCodeAsync (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Check user phone verification code
@@ -4191,9 +4078,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -4225,9 +4111,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CloseChatsBulkAsync (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task CloseChatsBulkAsync (CloseChatsBulkInputObject closeChatsBulkInputObject);
 
         /// <summary>
         /// Close chats by chat ids or close all chats
@@ -4237,9 +4122,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CloseChatsBulkAsyncWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CloseChatsBulkAsyncWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject);
         /// <summary>
         /// Close all chats that have no unread messages.
         /// </summary>
@@ -4288,9 +4172,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactAsync (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactAsync (CreateContactInputObject createContactInputObject);
 
         /// <summary>
         /// Create a new contact from the submitted data.
@@ -4300,9 +4183,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactAsyncWithHttpInfo (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactAsyncWithHttpInfo (CreateContactInputObject createContactInputObject);
         /// <summary>
         /// Create a new contact note.
         /// </summary>
@@ -4312,9 +4194,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactNoteAsync (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactNoteAsync (CreateContactNoteInputObject createContactNoteInputObject, int? id);
 
         /// <summary>
         /// Create a new contact note.
@@ -4325,9 +4206,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactNoteAsyncWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactNoteAsyncWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id);
         /// <summary>
         /// Create a new custom field from the submitted data.
         /// </summary>
@@ -4336,9 +4216,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateCustomFieldAsync (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateCustomFieldAsync (CreateCustomFieldInputObject createCustomFieldInputObject);
 
         /// <summary>
         /// Create a new custom field from the submitted data.
@@ -4348,9 +4227,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateCustomFieldAsyncWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateCustomFieldAsyncWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject);
         /// <summary>
         /// Create a new list from the submitted data.
         /// </summary>
@@ -4359,9 +4237,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateListAsync (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateListAsync (CreateListInputObject createListInputObject);
 
         /// <summary>
         /// Create a new list from the submitted data.
@@ -4371,9 +4248,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateListAsyncWithHttpInfo (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateListAsyncWithHttpInfo (CreateListInputObject createListInputObject);
         /// <summary>
         /// Add or update a device token.
         /// </summary>
@@ -4382,9 +4258,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreatePushTokenAsync (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task CreatePushTokenAsync (CreatePushTokenInputObject createPushTokenInputObject);
 
         /// <summary>
         /// Add or update a device token.
@@ -4394,9 +4269,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreatePushTokenAsyncWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreatePushTokenAsyncWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject);
         /// <summary>
         /// Create a new survey from the submitted data.
         /// </summary>
@@ -4405,9 +4279,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyAsync (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyAsync (CreateSurveyInputObject createSurveyInputObject);
 
         /// <summary>
         /// Create a new survey from the submitted data.
@@ -4417,9 +4290,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyAsyncWithHttpInfo (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyAsyncWithHttpInfo (CreateSurveyInputObject createSurveyInputObject);
         /// <summary>
         /// Create a new node from the submitted data.
         /// </summary>
@@ -4429,9 +4301,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyNodeAsync (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyNodeAsync (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
 
         /// <summary>
         /// Create a new node from the submitted data.
@@ -4442,9 +4313,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyNodeAsyncWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyNodeAsyncWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
         /// <summary>
         /// Create a new template from the submitted data.
         /// </summary>
@@ -4453,9 +4323,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> CreateTemplateAsync (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> CreateTemplateAsync (CreateTemplateInputObject createTemplateInputObject);
 
         /// <summary>
         /// Create a new template from the submitted data.
@@ -4465,9 +4334,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateTemplateAsyncWithHttpInfo (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateTemplateAsyncWithHttpInfo (CreateTemplateInputObject createTemplateInputObject);
         /// <summary>
         /// Delete all contacts.
         /// </summary>
@@ -4534,9 +4402,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteChatMessagesAsync (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteChatMessagesAsync (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
 
         /// <summary>
         /// Delete messages from chat by given messages ID(s).
@@ -4547,9 +4414,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatMessagesAsyncWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatMessagesAsyncWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
         /// <summary>
         /// Delete chats by given ID(s) or delete all chats.
         /// </summary>
@@ -4558,9 +4424,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteChatsBulkAsync (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteChatsBulkAsync (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
 
         /// <summary>
         /// Delete chats by given ID(s) or delete all chats.
@@ -4570,9 +4435,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsBulkAsyncWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsBulkAsyncWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
         /// <summary>
         /// Delete a single contact.
         /// </summary>
@@ -4645,9 +4509,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContactNotesBulkAsync (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteContactNotesBulkAsync (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
 
         /// <summary>
         /// Delete contact note by given ID(s) or delete all contact notes.
@@ -4658,9 +4521,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactNotesBulkAsyncWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactNotesBulkAsyncWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
         /// <summary>
         /// Delete contact by given ID(s) or delete all contacts.
         /// </summary>
@@ -4669,9 +4531,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContactsByIdsAsync (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteContactsByIdsAsync (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
 
         /// <summary>
         /// Delete contact by given ID(s) or delete all contacts.
@@ -4681,9 +4542,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsByIdsAsyncWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsByIdsAsyncWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
         /// <summary>
         /// Unassign contacts from the specified list.
         /// </summary>
@@ -4778,9 +4638,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteInboundMessagesBulkAsync (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteInboundMessagesBulkAsync (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
 
         /// <summary>
         /// Delete inbound messages by given ID(s) or delete all inbound messages.
@@ -4790,9 +4649,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
         /// Delete a single list.
         /// </summary>
@@ -4844,9 +4702,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
         /// Delete contact from list by given ID(s) or all contacts from list.
@@ -4857,9 +4714,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
         /// Delete list by given ID(s) or delete all lists.
         /// </summary>
@@ -4868,9 +4724,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
         /// Delete list by given ID(s) or delete all lists.
@@ -4880,9 +4735,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListsBulkAsyncWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListsBulkAsyncWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject);
         /// <summary>
         /// Delete a message session, together with all nested messages.
         /// </summary>
@@ -4912,9 +4766,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteMessageSessionsBulkAsync (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteMessageSessionsBulkAsync (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
 
         /// <summary>
         /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
@@ -4924,9 +4777,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessageSessionsBulkAsyncWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessageSessionsBulkAsyncWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
         /// <summary>
         /// Delete message
         /// </summary>
@@ -4956,9 +4808,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteOutboundMessagesBulkAsync (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteOutboundMessagesBulkAsync (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
 
         /// <summary>
         /// Delete messages by IDs
@@ -4968,9 +4819,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagesBulkAsyncWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagesBulkAsyncWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
         /// <summary>
         /// Delete a push notification device token.
         /// </summary>
@@ -5023,9 +4873,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteScheduledMessagesBulkAsync (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteScheduledMessagesBulkAsync (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
 
         /// <summary>
         /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
@@ -5035,9 +4884,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessagesBulkAsyncWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessagesBulkAsyncWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
         /// <summary>
         /// Delete a Sender ID.
         /// </summary>
@@ -5130,9 +4978,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTemplatesBulkAsync (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task DeleteTemplatesBulkAsync (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
 
         /// <summary>
         /// Delete template by given ID(s) or delete all templates.
@@ -5142,9 +4989,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplatesBulkAsyncWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplatesBulkAsyncWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
         /// <summary>
         /// Authenticate user by given username and password.
         /// </summary>
@@ -5153,9 +4999,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of DoAuthResponse</returns>
-        System.Threading.Tasks.Task<DoAuthResponse> DoAuthAsync (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<DoAuthResponse> DoAuthAsync (DoAuthInputObject doAuthInputObject);
 
         /// <summary>
         /// Authenticate user by given username and password.
@@ -5165,9 +5010,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (DoAuthResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DoAuthResponse>> DoAuthAsyncWithHttpInfo (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<DoAuthResponse>> DoAuthAsyncWithHttpInfo (DoAuthInputObject doAuthInputObject);
         /// <summary>
         /// Carrier Lookup
         /// </summary>
@@ -6679,9 +6523,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of GetSubaccountsWithTokensResponse</returns>
-        System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
 
         /// <summary>
         /// Get all subaccounts with their REST API tokens associated with specified app name.
@@ -6693,9 +6536,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (GetSubaccountsWithTokensResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
         /// <summary>
         /// Get a survey by id.
         /// </summary>
@@ -6970,9 +6812,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task InviteSubaccountAsync (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task InviteSubaccountAsync (InviteSubaccountInputObject inviteSubaccountInputObject);
 
         /// <summary>
         /// Invite new subaccount.
@@ -6982,9 +6823,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> InviteSubaccountAsyncWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> InviteSubaccountAsyncWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject);
         /// <summary>
         /// Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
@@ -6993,9 +6833,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MarkChatsReadBulkAsync (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task MarkChatsReadBulkAsync (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
 
         /// <summary>
         /// Mark several chats as read by chat ids or mark all chats as read
@@ -7005,9 +6844,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsReadBulkAsyncWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsReadBulkAsyncWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
         /// <summary>
         /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
@@ -7016,9 +6854,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MarkChatsUnreadBulkAsync (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task MarkChatsUnreadBulkAsync (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
 
         /// <summary>
         /// Mark several chats as UNread by chat ids or mark all chats as UNread
@@ -7028,9 +6865,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsUnreadBulkAsyncWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsUnreadBulkAsyncWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
         /// <summary>
         /// Merge two question nodes.
         /// </summary>
@@ -7039,9 +6875,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MergeSurveyNodesAsync (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task MergeSurveyNodesAsync (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
 
         /// <summary>
         /// Merge two question nodes.
@@ -7051,9 +6886,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MergeSurveyNodesAsyncWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MergeSurveyNodesAsyncWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
         /// <summary>
         /// Set mute mode.
         /// </summary>
@@ -7062,9 +6896,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> MuteChatAsync (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> MuteChatAsync (MuteChatInputObject muteChatInputObject);
 
         /// <summary>
         /// Set mute mode.
@@ -7074,9 +6907,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> MuteChatAsyncWithHttpInfo (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> MuteChatAsyncWithHttpInfo (MuteChatInputObject muteChatInputObject);
         /// <summary>
         /// Mute several chats by chat ids or mute all chats
         /// </summary>
@@ -7085,9 +6917,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MuteChatsBulkAsync (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task MuteChatsBulkAsync (MuteChatsBulkInputObject muteChatsBulkInputObject);
 
         /// <summary>
         /// Mute several chats by chat ids or mute all chats
@@ -7097,9 +6928,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
         /// <summary>
         /// Just does a pong.
         /// </summary>
@@ -7127,9 +6957,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ReopenChatsBulkAsync (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task ReopenChatsBulkAsync (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
 
         /// <summary>
         /// Reopen chats by chat ids or reopen all chats
@@ -7139,9 +6968,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReopenChatsBulkAsyncWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReopenChatsBulkAsyncWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
         /// <summary>
         /// Request a new REST API token for subaccount.
         /// </summary>
@@ -7150,9 +6978,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> RequestNewSubaccountTokenAsync (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<User> RequestNewSubaccountTokenAsync (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
 
         /// <summary>
         /// Request a new REST API token for subaccount.
@@ -7162,9 +6989,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> RequestNewSubaccountTokenAsyncWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<User>> RequestNewSubaccountTokenAsyncWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
         /// <summary>
         /// Request for a new Sender ID.
         /// </summary>
@@ -7173,9 +6999,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> RequestSenderIdAsync (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> RequestSenderIdAsync (RequestSenderIdInputObject requestSenderIdInputObject);
 
         /// <summary>
         /// Request for a new Sender ID.
@@ -7185,9 +7010,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> RequestSenderIdAsyncWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> RequestSenderIdAsyncWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject);
         /// <summary>
         /// Reset a survey flow.
         /// </summary>
@@ -7519,9 +7343,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of SendMessageResponse</returns>
-        System.Threading.Tasks.Task<SendMessageResponse> SendMessageAsync (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<SendMessageResponse> SendMessageAsync (SendMessageInputObject sendMessageInputObject);
 
         /// <summary>
         /// Send message
@@ -7531,9 +7354,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (SendMessageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SendMessageResponse>> SendMessageAsyncWithHttpInfo (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<SendMessageResponse>> SendMessageAsyncWithHttpInfo (SendMessageInputObject sendMessageInputObject);
         /// <summary>
         /// Send user phone verification
         /// </summary>
@@ -7561,9 +7383,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> SetChatStatusAsync (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> SetChatStatusAsync (SetChatStatusInputObject setChatStatusInputObject);
 
         /// <summary>
         /// Set status of the chat given by ID.
@@ -7573,9 +7394,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> SetChatStatusAsyncWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> SetChatStatusAsyncWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject);
         /// <summary>
         /// Start a survey.
         /// </summary>
@@ -7605,9 +7425,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UnblockContactAsync (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UnblockContactAsync (UnblockContactInputObject unblockContactInputObject);
 
         /// <summary>
         /// Unblock contact by phone number.
@@ -7617,9 +7436,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactAsyncWithHttpInfo (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactAsyncWithHttpInfo (UnblockContactInputObject unblockContactInputObject);
         /// <summary>
         /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
@@ -7628,9 +7446,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UnblockContactsBulkAsync (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UnblockContactsBulkAsync (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
 
         /// <summary>
         /// Unblock several contacts by blocked contact ids or unblock all contacts
@@ -7640,9 +7457,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactsBulkAsyncWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactsBulkAsyncWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
         /// <summary>
         /// Unmute several chats by chat ids or unmute all chats
         /// </summary>
@@ -7651,9 +7467,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UnmuteChatsBulkAsync (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UnmuteChatsBulkAsync (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
 
         /// <summary>
         /// Unmute several chats by chat ids or unmute all chats
@@ -7663,9 +7478,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnmuteChatsBulkAsyncWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnmuteChatsBulkAsyncWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
         /// <summary>
         /// Unsubscribe contact from your communication by phone number.
         /// </summary>
@@ -7674,9 +7488,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UnsubscribeContactAsync (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UnsubscribeContactAsync (UnsubscribeContactInputObject unsubscribeContactInputObject);
 
         /// <summary>
         /// Unsubscribe contact from your communication by phone number.
@@ -7686,9 +7499,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UnsubscribeContactAsyncWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UnsubscribeContactAsyncWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject);
         /// <summary>
         /// Update balance notification settings
         /// </summary>
@@ -7697,9 +7509,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateBalanceNotificationSettingsAsync (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdateBalanceNotificationSettingsAsync (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject);
 
         /// <summary>
         /// Update balance notification settings
@@ -7709,9 +7520,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateBalanceNotificationSettingsAsyncWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateBalanceNotificationSettingsAsyncWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject);
         /// <summary>
         /// Update callback URL settings
         /// </summary>
@@ -7720,9 +7530,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateCallbackSettingsAsync (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdateCallbackSettingsAsync (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject);
 
         /// <summary>
         /// Update callback URL settings
@@ -7732,9 +7541,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCallbackSettingsAsyncWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCallbackSettingsAsyncWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject);
         /// <summary>
         /// Update chat desktop notification settings
         /// </summary>
@@ -7743,9 +7551,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateChatDesktopNotificationSettingsAsync (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdateChatDesktopNotificationSettingsAsync (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
 
         /// <summary>
         /// Update chat desktop notification settings
@@ -7755,9 +7562,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
         /// <summary>
         /// Update existing contact.
         /// </summary>
@@ -7767,9 +7573,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactAsync (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactAsync (UpdateContactInputObject updateContactInputObject, int? id);
 
         /// <summary>
         /// Update existing contact.
@@ -7780,9 +7585,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactAsyncWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactAsyncWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id);
         /// <summary>
         /// Update existing contact note.
         /// </summary>
@@ -7792,9 +7596,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactNoteAsync (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactNoteAsync (UpdateContactNoteInputObject updateContactNoteInputObject, int? id);
 
         /// <summary>
         /// Update existing contact note.
@@ -7805,9 +7608,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactNoteAsyncWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactNoteAsyncWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id);
         /// <summary>
         /// Update current user info.
         /// </summary>
@@ -7816,9 +7618,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of UpdateCurrentUserResponse</returns>
-        System.Threading.Tasks.Task<UpdateCurrentUserResponse> UpdateCurrentUserAsync (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<UpdateCurrentUserResponse> UpdateCurrentUserAsync (UpdateCurrentUserInputObject updateCurrentUserInputObject);
 
         /// <summary>
         /// Update current user info.
@@ -7828,9 +7629,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UpdateCurrentUserResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UpdateCurrentUserResponse>> UpdateCurrentUserAsyncWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<UpdateCurrentUserResponse>> UpdateCurrentUserAsyncWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject);
         /// <summary>
         /// Update existing custom field.
         /// </summary>
@@ -7840,9 +7640,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldAsync (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldAsync (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
 
         /// <summary>
         /// Update existing custom field.
@@ -7853,9 +7652,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldAsyncWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldAsyncWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
         /// <summary>
         /// Update contact&#39;s custom field value.
         /// </summary>
@@ -7865,9 +7663,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
 
         /// <summary>
         /// Update contact&#39;s custom field value.
@@ -7878,9 +7675,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
         /// <summary>
         /// Update inbound messages notification settings
         /// </summary>
@@ -7889,9 +7685,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateInboundMessagesNotificationSettingsAsync (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdateInboundMessagesNotificationSettingsAsync (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
 
         /// <summary>
         /// Update inbound messages notification settings
@@ -7901,9 +7696,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
         /// Update existing list.
         /// </summary>
@@ -7935,9 +7729,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdatePasswordAsync (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdatePasswordAsync (UpdatePasswordInputObject updatePasswordInputObject);
 
         /// <summary>
         /// Change user password.
@@ -7947,9 +7740,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePasswordAsyncWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePasswordAsyncWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject);
         /// <summary>
         /// Change sender settings for specified country.
         /// </summary>
@@ -7958,9 +7750,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateSenderSettingAsync (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task UpdateSenderSettingAsync (UpdateSenderSettingInputObject updateSenderSettingInputObject);
 
         /// <summary>
         /// Change sender settings for specified country.
@@ -7970,9 +7761,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSenderSettingAsyncWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSenderSettingAsyncWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject);
         /// <summary>
         /// Update existing survey.
         /// </summary>
@@ -7982,9 +7772,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyAsync (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyAsync (UpdateSurveyInputObject updateSurveyInputObject, int? id);
 
         /// <summary>
         /// Update existing survey.
@@ -7995,9 +7784,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyAsyncWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyAsyncWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id);
         /// <summary>
         /// Update existing node.
         /// </summary>
@@ -8007,9 +7795,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyNodeAsync (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyNodeAsync (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
 
         /// <summary>
         /// Update existing node.
@@ -8020,9 +7807,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyNodeAsyncWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyNodeAsyncWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
         /// <summary>
         /// Update existing template.
         /// </summary>
@@ -8032,9 +7818,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateTemplateAsync (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateTemplateAsync (UpdateTemplateInputObject updateTemplateInputObject, int? id);
 
         /// <summary>
         /// Update existing template.
@@ -8045,9 +7830,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateTemplateAsyncWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateTemplateAsyncWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id);
         /// <summary>
         /// Add an avatar for the current user.
         /// </summary>
@@ -8414,11 +8198,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = BlockContactWithHttpInfo(blockContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = BlockContactWithHttpInfo(blockContactInputObject);
              return localVarResponse.Data;
         }
 
@@ -8427,9 +8210,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > BlockContactWithHttpInfo (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > BlockContactWithHttpInfo (BlockContactInputObject blockContactInputObject)
         {
             // verify the required parameter 'blockContactInputObject' is set
             if (blockContactInputObject == null)
@@ -8457,7 +8239,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (blockContactInputObject != null && blockContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(blockContactInputObject); // http body (model) parameter
@@ -8497,11 +8278,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> BlockContactAsync (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> BlockContactAsync (BlockContactInputObject blockContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await BlockContactAsyncWithHttpInfo(blockContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await BlockContactAsyncWithHttpInfo(blockContactInputObject);
              return localVarResponse.Data;
 
         }
@@ -8511,9 +8291,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> BlockContactAsyncWithHttpInfo (BlockContactInputObject blockContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> BlockContactAsyncWithHttpInfo (BlockContactInputObject blockContactInputObject)
         {
             // verify the required parameter 'blockContactInputObject' is set
             if (blockContactInputObject == null)
@@ -8541,7 +8320,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (blockContactInputObject != null && blockContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(blockContactInputObject); // http body (model) parameter
@@ -8581,11 +8359,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null)
+        public void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
         {
-             BuyDedicatedNumberWithHttpInfo(buyDedicatedNumberInputObject, xIgnoreNullValues);
+             BuyDedicatedNumberWithHttpInfo(buyDedicatedNumberInputObject);
         }
 
         /// <summary>
@@ -8593,9 +8370,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> BuyDedicatedNumberWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> BuyDedicatedNumberWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
         {
             // verify the required parameter 'buyDedicatedNumberInputObject' is set
             if (buyDedicatedNumberInputObject == null)
@@ -8623,7 +8399,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (buyDedicatedNumberInputObject != null && buyDedicatedNumberInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(buyDedicatedNumberInputObject); // http body (model) parameter
@@ -8663,11 +8438,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task BuyDedicatedNumberAsync (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task BuyDedicatedNumberAsync (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
         {
-             await BuyDedicatedNumberAsyncWithHttpInfo(buyDedicatedNumberInputObject, xIgnoreNullValues);
+             await BuyDedicatedNumberAsyncWithHttpInfo(buyDedicatedNumberInputObject);
 
         }
 
@@ -8676,9 +8450,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> BuyDedicatedNumberAsyncWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> BuyDedicatedNumberAsyncWithHttpInfo (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
         {
             // verify the required parameter 'buyDedicatedNumberInputObject' is set
             if (buyDedicatedNumberInputObject == null)
@@ -8706,7 +8479,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (buyDedicatedNumberInputObject != null && buyDedicatedNumberInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(buyDedicatedNumberInputObject); // http body (model) parameter
@@ -8893,11 +8665,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null)
+        public void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
         {
-             CheckPhoneVerificationCodeWithHttpInfo(checkPhoneVerificationCodeInputObject, xIgnoreNullValues);
+             CheckPhoneVerificationCodeWithHttpInfo(checkPhoneVerificationCodeInputObject);
         }
 
         /// <summary>
@@ -8905,9 +8676,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CheckPhoneVerificationCodeWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> CheckPhoneVerificationCodeWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
             if (checkPhoneVerificationCodeInputObject == null)
@@ -8935,7 +8705,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (checkPhoneVerificationCodeInputObject != null && checkPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(checkPhoneVerificationCodeInputObject); // http body (model) parameter
@@ -8975,11 +8744,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CheckPhoneVerificationCodeAsync (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task CheckPhoneVerificationCodeAsync (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
         {
-             await CheckPhoneVerificationCodeAsyncWithHttpInfo(checkPhoneVerificationCodeInputObject, xIgnoreNullValues);
+             await CheckPhoneVerificationCodeAsyncWithHttpInfo(checkPhoneVerificationCodeInputObject);
 
         }
 
@@ -8988,9 +8756,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
             if (checkPhoneVerificationCodeInputObject == null)
@@ -9018,7 +8785,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (checkPhoneVerificationCodeInputObject != null && checkPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(checkPhoneVerificationCodeInputObject); // http body (model) parameter
@@ -9231,11 +8997,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject)
         {
-             CloseChatsBulkWithHttpInfo(closeChatsBulkInputObject, xIgnoreNullValues);
+             CloseChatsBulkWithHttpInfo(closeChatsBulkInputObject);
         }
 
         /// <summary>
@@ -9243,9 +9008,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CloseChatsBulkWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> CloseChatsBulkWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject)
         {
             // verify the required parameter 'closeChatsBulkInputObject' is set
             if (closeChatsBulkInputObject == null)
@@ -9272,7 +9036,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (closeChatsBulkInputObject != null && closeChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(closeChatsBulkInputObject); // http body (model) parameter
@@ -9312,11 +9075,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CloseChatsBulkAsync (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task CloseChatsBulkAsync (CloseChatsBulkInputObject closeChatsBulkInputObject)
         {
-             await CloseChatsBulkAsyncWithHttpInfo(closeChatsBulkInputObject, xIgnoreNullValues);
+             await CloseChatsBulkAsyncWithHttpInfo(closeChatsBulkInputObject);
 
         }
 
@@ -9325,9 +9087,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseChatsBulkAsyncWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseChatsBulkAsyncWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject)
         {
             // verify the required parameter 'closeChatsBulkInputObject' is set
             if (closeChatsBulkInputObject == null)
@@ -9354,7 +9115,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (closeChatsBulkInputObject != null && closeChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(closeChatsBulkInputObject); // http body (model) parameter
@@ -9668,11 +9428,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateContactWithHttpInfo(createContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateContactWithHttpInfo(createContactInputObject);
              return localVarResponse.Data;
         }
 
@@ -9681,9 +9440,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateContactWithHttpInfo (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateContactWithHttpInfo (CreateContactInputObject createContactInputObject)
         {
             // verify the required parameter 'createContactInputObject' is set
             if (createContactInputObject == null)
@@ -9711,7 +9469,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createContactInputObject != null && createContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createContactInputObject); // http body (model) parameter
@@ -9751,11 +9508,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactAsync (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactAsync (CreateContactInputObject createContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateContactAsyncWithHttpInfo(createContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateContactAsyncWithHttpInfo(createContactInputObject);
              return localVarResponse.Data;
 
         }
@@ -9765,9 +9521,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactAsyncWithHttpInfo (CreateContactInputObject createContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactAsyncWithHttpInfo (CreateContactInputObject createContactInputObject)
         {
             // verify the required parameter 'createContactInputObject' is set
             if (createContactInputObject == null)
@@ -9795,7 +9550,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createContactInputObject != null && createContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createContactInputObject); // http body (model) parameter
@@ -9836,11 +9590,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateContactNote (CreateContactNoteInputObject createContactNoteInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateContactNoteWithHttpInfo(createContactNoteInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateContactNoteWithHttpInfo(createContactNoteInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -9850,9 +9603,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateContactNoteWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateContactNoteWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id)
         {
             // verify the required parameter 'createContactNoteInputObject' is set
             if (createContactNoteInputObject == null)
@@ -9884,7 +9636,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createContactNoteInputObject != null && createContactNoteInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createContactNoteInputObject); // http body (model) parameter
@@ -9925,11 +9676,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactNoteAsync (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactNoteAsync (CreateContactNoteInputObject createContactNoteInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateContactNoteAsyncWithHttpInfo(createContactNoteInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateContactNoteAsyncWithHttpInfo(createContactNoteInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -9940,9 +9690,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactNoteAsyncWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactNoteAsyncWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id)
         {
             // verify the required parameter 'createContactNoteInputObject' is set
             if (createContactNoteInputObject == null)
@@ -9974,7 +9723,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createContactNoteInputObject != null && createContactNoteInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createContactNoteInputObject); // http body (model) parameter
@@ -10014,11 +9762,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateCustomFieldWithHttpInfo(createCustomFieldInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateCustomFieldWithHttpInfo(createCustomFieldInputObject);
              return localVarResponse.Data;
         }
 
@@ -10027,9 +9774,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateCustomFieldWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateCustomFieldWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject)
         {
             // verify the required parameter 'createCustomFieldInputObject' is set
             if (createCustomFieldInputObject == null)
@@ -10057,7 +9803,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createCustomFieldInputObject != null && createCustomFieldInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createCustomFieldInputObject); // http body (model) parameter
@@ -10097,11 +9842,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateCustomFieldAsync (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateCustomFieldAsync (CreateCustomFieldInputObject createCustomFieldInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateCustomFieldAsyncWithHttpInfo(createCustomFieldInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateCustomFieldAsyncWithHttpInfo(createCustomFieldInputObject);
              return localVarResponse.Data;
 
         }
@@ -10111,9 +9855,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateCustomFieldAsyncWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateCustomFieldAsyncWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject)
         {
             // verify the required parameter 'createCustomFieldInputObject' is set
             if (createCustomFieldInputObject == null)
@@ -10141,7 +9884,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createCustomFieldInputObject != null && createCustomFieldInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createCustomFieldInputObject); // http body (model) parameter
@@ -10181,11 +9923,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateList (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateList (CreateListInputObject createListInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateListWithHttpInfo(createListInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateListWithHttpInfo(createListInputObject);
              return localVarResponse.Data;
         }
 
@@ -10194,9 +9935,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateListWithHttpInfo (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateListWithHttpInfo (CreateListInputObject createListInputObject)
         {
             // verify the required parameter 'createListInputObject' is set
             if (createListInputObject == null)
@@ -10224,7 +9964,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createListInputObject != null && createListInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createListInputObject); // http body (model) parameter
@@ -10264,11 +10003,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateListAsync (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateListAsync (CreateListInputObject createListInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateListAsyncWithHttpInfo(createListInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateListAsyncWithHttpInfo(createListInputObject);
              return localVarResponse.Data;
 
         }
@@ -10278,9 +10016,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateListAsyncWithHttpInfo (CreateListInputObject createListInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateListAsyncWithHttpInfo (CreateListInputObject createListInputObject)
         {
             // verify the required parameter 'createListInputObject' is set
             if (createListInputObject == null)
@@ -10308,7 +10045,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createListInputObject != null && createListInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createListInputObject); // http body (model) parameter
@@ -10348,11 +10084,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null)
+        public void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject)
         {
-             CreatePushTokenWithHttpInfo(createPushTokenInputObject, xIgnoreNullValues);
+             CreatePushTokenWithHttpInfo(createPushTokenInputObject);
         }
 
         /// <summary>
@@ -10360,9 +10095,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreatePushTokenWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> CreatePushTokenWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject)
         {
             // verify the required parameter 'createPushTokenInputObject' is set
             if (createPushTokenInputObject == null)
@@ -10390,7 +10124,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createPushTokenInputObject != null && createPushTokenInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createPushTokenInputObject); // http body (model) parameter
@@ -10430,11 +10163,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreatePushTokenAsync (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task CreatePushTokenAsync (CreatePushTokenInputObject createPushTokenInputObject)
         {
-             await CreatePushTokenAsyncWithHttpInfo(createPushTokenInputObject, xIgnoreNullValues);
+             await CreatePushTokenAsyncWithHttpInfo(createPushTokenInputObject);
 
         }
 
@@ -10443,9 +10175,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createPushTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreatePushTokenAsyncWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreatePushTokenAsyncWithHttpInfo (CreatePushTokenInputObject createPushTokenInputObject)
         {
             // verify the required parameter 'createPushTokenInputObject' is set
             if (createPushTokenInputObject == null)
@@ -10473,7 +10204,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createPushTokenInputObject != null && createPushTokenInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createPushTokenInputObject); // http body (model) parameter
@@ -10513,11 +10243,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateSurveyWithHttpInfo(createSurveyInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateSurveyWithHttpInfo(createSurveyInputObject);
              return localVarResponse.Data;
         }
 
@@ -10526,9 +10255,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateSurveyWithHttpInfo (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateSurveyWithHttpInfo (CreateSurveyInputObject createSurveyInputObject)
         {
             // verify the required parameter 'createSurveyInputObject' is set
             if (createSurveyInputObject == null)
@@ -10556,7 +10284,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createSurveyInputObject != null && createSurveyInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createSurveyInputObject); // http body (model) parameter
@@ -10596,11 +10323,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyAsync (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyAsync (CreateSurveyInputObject createSurveyInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateSurveyAsyncWithHttpInfo(createSurveyInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateSurveyAsyncWithHttpInfo(createSurveyInputObject);
              return localVarResponse.Data;
 
         }
@@ -10610,9 +10336,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyAsyncWithHttpInfo (CreateSurveyInputObject createSurveyInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyAsyncWithHttpInfo (CreateSurveyInputObject createSurveyInputObject)
         {
             // verify the required parameter 'createSurveyInputObject' is set
             if (createSurveyInputObject == null)
@@ -10640,7 +10365,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createSurveyInputObject != null && createSurveyInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createSurveyInputObject); // http body (model) parameter
@@ -10681,11 +10405,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateSurveyNodeWithHttpInfo(createSurveyNodeInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateSurveyNodeWithHttpInfo(createSurveyNodeInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -10695,9 +10418,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateSurveyNodeWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateSurveyNodeWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
         {
             // verify the required parameter 'createSurveyNodeInputObject' is set
             if (createSurveyNodeInputObject == null)
@@ -10729,7 +10451,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createSurveyNodeInputObject != null && createSurveyNodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createSurveyNodeInputObject); // http body (model) parameter
@@ -10770,11 +10491,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyNodeAsync (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateSurveyNodeAsync (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateSurveyNodeAsyncWithHttpInfo(createSurveyNodeInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateSurveyNodeAsyncWithHttpInfo(createSurveyNodeInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -10785,9 +10505,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyNodeAsyncWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyNodeAsyncWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
         {
             // verify the required parameter 'createSurveyNodeInputObject' is set
             if (createSurveyNodeInputObject == null)
@@ -10819,7 +10538,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createSurveyNodeInputObject != null && createSurveyNodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createSurveyNodeInputObject); // http body (model) parameter
@@ -10859,11 +10577,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = CreateTemplateWithHttpInfo(createTemplateInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = CreateTemplateWithHttpInfo(createTemplateInputObject);
              return localVarResponse.Data;
         }
 
@@ -10872,9 +10589,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > CreateTemplateWithHttpInfo (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > CreateTemplateWithHttpInfo (CreateTemplateInputObject createTemplateInputObject)
         {
             // verify the required parameter 'createTemplateInputObject' is set
             if (createTemplateInputObject == null)
@@ -10902,7 +10618,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createTemplateInputObject != null && createTemplateInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createTemplateInputObject); // http body (model) parameter
@@ -10942,11 +10657,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateTemplateAsync (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> CreateTemplateAsync (CreateTemplateInputObject createTemplateInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateTemplateAsyncWithHttpInfo(createTemplateInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await CreateTemplateAsyncWithHttpInfo(createTemplateInputObject);
              return localVarResponse.Data;
 
         }
@@ -10956,9 +10670,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateTemplateAsyncWithHttpInfo (CreateTemplateInputObject createTemplateInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateTemplateAsyncWithHttpInfo (CreateTemplateInputObject createTemplateInputObject)
         {
             // verify the required parameter 'createTemplateInputObject' is set
             if (createTemplateInputObject == null)
@@ -10986,7 +10699,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (createTemplateInputObject != null && createTemplateInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(createTemplateInputObject); // http body (model) parameter
@@ -11420,11 +11132,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
         {
-             DeleteChatMessagesWithHttpInfo(deleteChatMessagesBulkInputObject, id, xIgnoreNullValues);
+             DeleteChatMessagesWithHttpInfo(deleteChatMessagesBulkInputObject, id);
         }
 
         /// <summary>
@@ -11433,9 +11144,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteChatMessagesWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteChatMessagesWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
         {
             // verify the required parameter 'deleteChatMessagesBulkInputObject' is set
             if (deleteChatMessagesBulkInputObject == null)
@@ -11466,7 +11176,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteChatMessagesBulkInputObject != null && deleteChatMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteChatMessagesBulkInputObject); // http body (model) parameter
@@ -11507,11 +11216,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteChatMessagesAsync (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteChatMessagesAsync (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
         {
-             await DeleteChatMessagesAsyncWithHttpInfo(deleteChatMessagesBulkInputObject, id, xIgnoreNullValues);
+             await DeleteChatMessagesAsyncWithHttpInfo(deleteChatMessagesBulkInputObject, id);
 
         }
 
@@ -11521,9 +11229,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatMessagesAsyncWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatMessagesAsyncWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
         {
             // verify the required parameter 'deleteChatMessagesBulkInputObject' is set
             if (deleteChatMessagesBulkInputObject == null)
@@ -11554,7 +11261,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteChatMessagesBulkInputObject != null && deleteChatMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteChatMessagesBulkInputObject); // http body (model) parameter
@@ -11594,11 +11300,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
         {
-             DeleteChatsBulkWithHttpInfo(deleteChatsBulkInputObject, xIgnoreNullValues);
+             DeleteChatsBulkWithHttpInfo(deleteChatsBulkInputObject);
         }
 
         /// <summary>
@@ -11606,9 +11311,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteChatsBulkWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteChatsBulkWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
         {
             // verify the required parameter 'deleteChatsBulkInputObject' is set
             if (deleteChatsBulkInputObject == null)
@@ -11635,7 +11339,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteChatsBulkInputObject != null && deleteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteChatsBulkInputObject); // http body (model) parameter
@@ -11675,11 +11378,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteChatsBulkAsync (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteChatsBulkAsync (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
         {
-             await DeleteChatsBulkAsyncWithHttpInfo(deleteChatsBulkInputObject, xIgnoreNullValues);
+             await DeleteChatsBulkAsyncWithHttpInfo(deleteChatsBulkInputObject);
 
         }
 
@@ -11688,9 +11390,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsBulkAsyncWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsBulkAsyncWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
         {
             // verify the required parameter 'deleteChatsBulkInputObject' is set
             if (deleteChatsBulkInputObject == null)
@@ -11717,7 +11418,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteChatsBulkInputObject != null && deleteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteChatsBulkInputObject); // http body (model) parameter
@@ -12189,11 +11889,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteContactNotesBulk (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject)
         {
-             DeleteContactNotesBulkWithHttpInfo(id, deleteContactNotesBulkInputObject, xIgnoreNullValues);
+             DeleteContactNotesBulkWithHttpInfo(id, deleteContactNotesBulkInputObject);
         }
 
         /// <summary>
@@ -12202,9 +11901,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContactNotesBulkWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteContactNotesBulkWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -12235,7 +11933,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteContactNotesBulkInputObject != null && deleteContactNotesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteContactNotesBulkInputObject); // http body (model) parameter
@@ -12276,11 +11973,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContactNotesBulkAsync (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteContactNotesBulkAsync (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject)
         {
-             await DeleteContactNotesBulkAsyncWithHttpInfo(id, deleteContactNotesBulkInputObject, xIgnoreNullValues);
+             await DeleteContactNotesBulkAsyncWithHttpInfo(id, deleteContactNotesBulkInputObject);
 
         }
 
@@ -12290,9 +11986,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="deleteContactNotesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactNotesBulkAsyncWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactNotesBulkAsyncWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -12323,7 +12018,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteContactNotesBulkInputObject != null && deleteContactNotesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteContactNotesBulkInputObject); // http body (model) parameter
@@ -12363,11 +12057,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
         {
-             DeleteContactsByIdsWithHttpInfo(deleteContactsByIdsInputObject, xIgnoreNullValues);
+             DeleteContactsByIdsWithHttpInfo(deleteContactsByIdsInputObject);
         }
 
         /// <summary>
@@ -12375,9 +12068,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContactsByIdsWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteContactsByIdsWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
         {
             // verify the required parameter 'deleteContactsByIdsInputObject' is set
             if (deleteContactsByIdsInputObject == null)
@@ -12404,7 +12096,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteContactsByIdsInputObject != null && deleteContactsByIdsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteContactsByIdsInputObject); // http body (model) parameter
@@ -12444,11 +12135,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContactsByIdsAsync (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteContactsByIdsAsync (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
         {
-             await DeleteContactsByIdsAsyncWithHttpInfo(deleteContactsByIdsInputObject, xIgnoreNullValues);
+             await DeleteContactsByIdsAsyncWithHttpInfo(deleteContactsByIdsInputObject);
 
         }
 
@@ -12457,9 +12147,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsByIdsAsyncWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsByIdsAsyncWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
         {
             // verify the required parameter 'deleteContactsByIdsInputObject' is set
             if (deleteContactsByIdsInputObject == null)
@@ -12486,7 +12175,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteContactsByIdsInputObject != null && deleteContactsByIdsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteContactsByIdsInputObject); // http body (model) parameter
@@ -13124,11 +12812,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
         {
-             DeleteInboundMessagesBulkWithHttpInfo(deleteInboundMessagesBulkInputObject, xIgnoreNullValues);
+             DeleteInboundMessagesBulkWithHttpInfo(deleteInboundMessagesBulkInputObject);
         }
 
         /// <summary>
@@ -13136,9 +12823,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteInboundMessagesBulkInputObject' is set
             if (deleteInboundMessagesBulkInputObject == null)
@@ -13165,7 +12851,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteInboundMessagesBulkInputObject != null && deleteInboundMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteInboundMessagesBulkInputObject); // http body (model) parameter
@@ -13205,11 +12890,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteInboundMessagesBulkAsync (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteInboundMessagesBulkAsync (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
         {
-             await DeleteInboundMessagesBulkAsyncWithHttpInfo(deleteInboundMessagesBulkInputObject, xIgnoreNullValues);
+             await DeleteInboundMessagesBulkAsyncWithHttpInfo(deleteInboundMessagesBulkInputObject);
 
         }
 
@@ -13218,9 +12902,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteInboundMessagesBulkInputObject' is set
             if (deleteInboundMessagesBulkInputObject == null)
@@ -13247,7 +12930,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteInboundMessagesBulkInputObject != null && deleteInboundMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteInboundMessagesBulkInputObject); // http body (model) parameter
@@ -13576,11 +13258,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
         {
-             DeleteListContactsBulkWithHttpInfo(deleteListContactsBulkInputObject, id, xIgnoreNullValues);
+             DeleteListContactsBulkWithHttpInfo(deleteListContactsBulkInputObject, id);
         }
 
         /// <summary>
@@ -13589,9 +13270,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
         {
             // verify the required parameter 'deleteListContactsBulkInputObject' is set
             if (deleteListContactsBulkInputObject == null)
@@ -13622,7 +13302,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteListContactsBulkInputObject != null && deleteListContactsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteListContactsBulkInputObject); // http body (model) parameter
@@ -13663,11 +13342,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
         {
-             await DeleteListContactsBulkAsyncWithHttpInfo(deleteListContactsBulkInputObject, id, xIgnoreNullValues);
+             await DeleteListContactsBulkAsyncWithHttpInfo(deleteListContactsBulkInputObject, id);
 
         }
 
@@ -13677,9 +13355,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
         {
             // verify the required parameter 'deleteListContactsBulkInputObject' is set
             if (deleteListContactsBulkInputObject == null)
@@ -13710,7 +13387,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteListContactsBulkInputObject != null && deleteListContactsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteListContactsBulkInputObject); // http body (model) parameter
@@ -13750,11 +13426,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject)
         {
-             DeleteListsBulkWithHttpInfo(deleteListsBulkInputObject, xIgnoreNullValues);
+             DeleteListsBulkWithHttpInfo(deleteListsBulkInputObject);
         }
 
         /// <summary>
@@ -13762,9 +13437,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteListsBulkWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteListsBulkWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject)
         {
             // verify the required parameter 'deleteListsBulkInputObject' is set
             if (deleteListsBulkInputObject == null)
@@ -13791,7 +13465,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteListsBulkInputObject != null && deleteListsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteListsBulkInputObject); // http body (model) parameter
@@ -13831,11 +13504,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject)
         {
-             await DeleteListsBulkAsyncWithHttpInfo(deleteListsBulkInputObject, xIgnoreNullValues);
+             await DeleteListsBulkAsyncWithHttpInfo(deleteListsBulkInputObject);
 
         }
 
@@ -13844,9 +13516,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListsBulkAsyncWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListsBulkAsyncWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject)
         {
             // verify the required parameter 'deleteListsBulkInputObject' is set
             if (deleteListsBulkInputObject == null)
@@ -13873,7 +13544,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteListsBulkInputObject != null && deleteListsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteListsBulkInputObject); // http body (model) parameter
@@ -14056,11 +13726,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
         {
-             DeleteMessageSessionsBulkWithHttpInfo(deleteMessageSessionsBulkInputObject, xIgnoreNullValues);
+             DeleteMessageSessionsBulkWithHttpInfo(deleteMessageSessionsBulkInputObject);
         }
 
         /// <summary>
@@ -14068,9 +13737,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteMessageSessionsBulkWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteMessageSessionsBulkWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
         {
             // verify the required parameter 'deleteMessageSessionsBulkInputObject' is set
             if (deleteMessageSessionsBulkInputObject == null)
@@ -14097,7 +13765,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteMessageSessionsBulkInputObject != null && deleteMessageSessionsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteMessageSessionsBulkInputObject); // http body (model) parameter
@@ -14137,11 +13804,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteMessageSessionsBulkAsync (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteMessageSessionsBulkAsync (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
         {
-             await DeleteMessageSessionsBulkAsyncWithHttpInfo(deleteMessageSessionsBulkInputObject, xIgnoreNullValues);
+             await DeleteMessageSessionsBulkAsyncWithHttpInfo(deleteMessageSessionsBulkInputObject);
 
         }
 
@@ -14150,9 +13816,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessageSessionsBulkAsyncWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessageSessionsBulkAsyncWithHttpInfo (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
         {
             // verify the required parameter 'deleteMessageSessionsBulkInputObject' is set
             if (deleteMessageSessionsBulkInputObject == null)
@@ -14179,7 +13844,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteMessageSessionsBulkInputObject != null && deleteMessageSessionsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteMessageSessionsBulkInputObject); // http body (model) parameter
@@ -14362,11 +14026,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
         {
-             DeleteOutboundMessagesBulkWithHttpInfo(deleteOutboundMessagesBulkInputObject, xIgnoreNullValues);
+             DeleteOutboundMessagesBulkWithHttpInfo(deleteOutboundMessagesBulkInputObject);
         }
 
         /// <summary>
@@ -14374,9 +14037,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteOutboundMessagesBulkWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteOutboundMessagesBulkWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteOutboundMessagesBulkInputObject' is set
             if (deleteOutboundMessagesBulkInputObject == null)
@@ -14403,7 +14065,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteOutboundMessagesBulkInputObject != null && deleteOutboundMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteOutboundMessagesBulkInputObject); // http body (model) parameter
@@ -14443,11 +14104,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteOutboundMessagesBulkAsync (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteOutboundMessagesBulkAsync (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
         {
-             await DeleteOutboundMessagesBulkAsyncWithHttpInfo(deleteOutboundMessagesBulkInputObject, xIgnoreNullValues);
+             await DeleteOutboundMessagesBulkAsyncWithHttpInfo(deleteOutboundMessagesBulkInputObject);
 
         }
 
@@ -14456,9 +14116,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagesBulkAsyncWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessagesBulkAsyncWithHttpInfo (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteOutboundMessagesBulkInputObject' is set
             if (deleteOutboundMessagesBulkInputObject == null)
@@ -14485,7 +14144,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteOutboundMessagesBulkInputObject != null && deleteOutboundMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteOutboundMessagesBulkInputObject); // http body (model) parameter
@@ -14823,11 +14481,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
         {
-             DeleteScheduledMessagesBulkWithHttpInfo(deleteScheduledMessagesBulkInputObject, xIgnoreNullValues);
+             DeleteScheduledMessagesBulkWithHttpInfo(deleteScheduledMessagesBulkInputObject);
         }
 
         /// <summary>
@@ -14835,9 +14492,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteScheduledMessagesBulkWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteScheduledMessagesBulkWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteScheduledMessagesBulkInputObject' is set
             if (deleteScheduledMessagesBulkInputObject == null)
@@ -14864,7 +14520,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteScheduledMessagesBulkInputObject != null && deleteScheduledMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteScheduledMessagesBulkInputObject); // http body (model) parameter
@@ -14904,11 +14559,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteScheduledMessagesBulkAsync (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteScheduledMessagesBulkAsync (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
         {
-             await DeleteScheduledMessagesBulkAsyncWithHttpInfo(deleteScheduledMessagesBulkInputObject, xIgnoreNullValues);
+             await DeleteScheduledMessagesBulkAsyncWithHttpInfo(deleteScheduledMessagesBulkInputObject);
 
         }
 
@@ -14917,9 +14571,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessagesBulkAsyncWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessagesBulkAsyncWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
         {
             // verify the required parameter 'deleteScheduledMessagesBulkInputObject' is set
             if (deleteScheduledMessagesBulkInputObject == null)
@@ -14946,7 +14599,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteScheduledMessagesBulkInputObject != null && deleteScheduledMessagesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteScheduledMessagesBulkInputObject); // http body (model) parameter
@@ -15558,11 +15210,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null)
+        public void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
         {
-             DeleteTemplatesBulkWithHttpInfo(deleteTemplatesBulkInputObject, xIgnoreNullValues);
+             DeleteTemplatesBulkWithHttpInfo(deleteTemplatesBulkInputObject);
         }
 
         /// <summary>
@@ -15570,9 +15221,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteTemplatesBulkWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> DeleteTemplatesBulkWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
         {
             // verify the required parameter 'deleteTemplatesBulkInputObject' is set
             if (deleteTemplatesBulkInputObject == null)
@@ -15599,7 +15249,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteTemplatesBulkInputObject != null && deleteTemplatesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteTemplatesBulkInputObject); // http body (model) parameter
@@ -15639,11 +15288,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTemplatesBulkAsync (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task DeleteTemplatesBulkAsync (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
         {
-             await DeleteTemplatesBulkAsyncWithHttpInfo(deleteTemplatesBulkInputObject, xIgnoreNullValues);
+             await DeleteTemplatesBulkAsyncWithHttpInfo(deleteTemplatesBulkInputObject);
 
         }
 
@@ -15652,9 +15300,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplatesBulkAsyncWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplatesBulkAsyncWithHttpInfo (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
         {
             // verify the required parameter 'deleteTemplatesBulkInputObject' is set
             if (deleteTemplatesBulkInputObject == null)
@@ -15681,7 +15328,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (deleteTemplatesBulkInputObject != null && deleteTemplatesBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(deleteTemplatesBulkInputObject); // http body (model) parameter
@@ -15721,11 +15367,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>DoAuthResponse</returns>
-        public DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null)
+        public DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject)
         {
-             ApiResponse<DoAuthResponse> localVarResponse = DoAuthWithHttpInfo(doAuthInputObject, xIgnoreNullValues);
+             ApiResponse<DoAuthResponse> localVarResponse = DoAuthWithHttpInfo(doAuthInputObject);
              return localVarResponse.Data;
         }
 
@@ -15734,9 +15379,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of DoAuthResponse</returns>
-        public ApiResponse< DoAuthResponse > DoAuthWithHttpInfo (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< DoAuthResponse > DoAuthWithHttpInfo (DoAuthInputObject doAuthInputObject)
         {
             // verify the required parameter 'doAuthInputObject' is set
             if (doAuthInputObject == null)
@@ -15764,7 +15408,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (doAuthInputObject != null && doAuthInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(doAuthInputObject); // http body (model) parameter
@@ -15798,11 +15441,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of DoAuthResponse</returns>
-        public async System.Threading.Tasks.Task<DoAuthResponse> DoAuthAsync (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<DoAuthResponse> DoAuthAsync (DoAuthInputObject doAuthInputObject)
         {
-             ApiResponse<DoAuthResponse> localVarResponse = await DoAuthAsyncWithHttpInfo(doAuthInputObject, xIgnoreNullValues);
+             ApiResponse<DoAuthResponse> localVarResponse = await DoAuthAsyncWithHttpInfo(doAuthInputObject);
              return localVarResponse.Data;
 
         }
@@ -15812,9 +15454,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (DoAuthResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DoAuthResponse>> DoAuthAsyncWithHttpInfo (DoAuthInputObject doAuthInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DoAuthResponse>> DoAuthAsyncWithHttpInfo (DoAuthInputObject doAuthInputObject)
         {
             // verify the required parameter 'doAuthInputObject' is set
             if (doAuthInputObject == null)
@@ -15842,7 +15483,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (doAuthInputObject != null && doAuthInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(doAuthInputObject); // http body (model) parameter
@@ -25469,11 +25109,10 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>GetSubaccountsWithTokensResponse</returns>
-        public GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null)
+        public GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
-             ApiResponse<GetSubaccountsWithTokensResponse> localVarResponse = GetSubaccountsWithTokensWithHttpInfo(getSubaccountsWithTokensInputObject, page, limit, xIgnoreNullValues);
+             ApiResponse<GetSubaccountsWithTokensResponse> localVarResponse = GetSubaccountsWithTokensWithHttpInfo(getSubaccountsWithTokensInputObject, page, limit);
              return localVarResponse.Data;
         }
 
@@ -25484,9 +25123,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of GetSubaccountsWithTokensResponse</returns>
-        public ApiResponse< GetSubaccountsWithTokensResponse > GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null)
+        public ApiResponse< GetSubaccountsWithTokensResponse > GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
             // verify the required parameter 'getSubaccountsWithTokensInputObject' is set
             if (getSubaccountsWithTokensInputObject == null)
@@ -25516,7 +25154,6 @@ namespace TextMagicClient.Api
 
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (getSubaccountsWithTokensInputObject != null && getSubaccountsWithTokensInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(getSubaccountsWithTokensInputObject); // http body (model) parameter
@@ -25558,11 +25195,10 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of GetSubaccountsWithTokensResponse</returns>
-        public async System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
-             ApiResponse<GetSubaccountsWithTokensResponse> localVarResponse = await GetSubaccountsWithTokensAsyncWithHttpInfo(getSubaccountsWithTokensInputObject, page, limit, xIgnoreNullValues);
+             ApiResponse<GetSubaccountsWithTokensResponse> localVarResponse = await GetSubaccountsWithTokensAsyncWithHttpInfo(getSubaccountsWithTokensInputObject, page, limit);
              return localVarResponse.Data;
 
         }
@@ -25574,9 +25210,8 @@ namespace TextMagicClient.Api
         /// <param name="getSubaccountsWithTokensInputObject"></param>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (GetSubaccountsWithTokensResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
             // verify the required parameter 'getSubaccountsWithTokensInputObject' is set
             if (getSubaccountsWithTokensInputObject == null)
@@ -25606,7 +25241,6 @@ namespace TextMagicClient.Api
 
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (getSubaccountsWithTokensInputObject != null && getSubaccountsWithTokensInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(getSubaccountsWithTokensInputObject); // http body (model) parameter
@@ -27410,11 +27044,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null)
+        public void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject)
         {
-             InviteSubaccountWithHttpInfo(inviteSubaccountInputObject, xIgnoreNullValues);
+             InviteSubaccountWithHttpInfo(inviteSubaccountInputObject);
         }
 
         /// <summary>
@@ -27422,9 +27055,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> InviteSubaccountWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> InviteSubaccountWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject)
         {
             // verify the required parameter 'inviteSubaccountInputObject' is set
             if (inviteSubaccountInputObject == null)
@@ -27451,7 +27083,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (inviteSubaccountInputObject != null && inviteSubaccountInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inviteSubaccountInputObject); // http body (model) parameter
@@ -27491,11 +27122,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task InviteSubaccountAsync (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task InviteSubaccountAsync (InviteSubaccountInputObject inviteSubaccountInputObject)
         {
-             await InviteSubaccountAsyncWithHttpInfo(inviteSubaccountInputObject, xIgnoreNullValues);
+             await InviteSubaccountAsyncWithHttpInfo(inviteSubaccountInputObject);
 
         }
 
@@ -27504,9 +27134,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inviteSubaccountInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> InviteSubaccountAsyncWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> InviteSubaccountAsyncWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject)
         {
             // verify the required parameter 'inviteSubaccountInputObject' is set
             if (inviteSubaccountInputObject == null)
@@ -27533,7 +27162,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (inviteSubaccountInputObject != null && inviteSubaccountInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inviteSubaccountInputObject); // http body (model) parameter
@@ -27573,11 +27201,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null)
+        public void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
         {
-             MarkChatsReadBulkWithHttpInfo(markChatsReadBulkInputObject, xIgnoreNullValues);
+             MarkChatsReadBulkWithHttpInfo(markChatsReadBulkInputObject);
         }
 
         /// <summary>
@@ -27585,9 +27212,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MarkChatsReadBulkWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> MarkChatsReadBulkWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
         {
             // verify the required parameter 'markChatsReadBulkInputObject' is set
             if (markChatsReadBulkInputObject == null)
@@ -27614,7 +27240,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (markChatsReadBulkInputObject != null && markChatsReadBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(markChatsReadBulkInputObject); // http body (model) parameter
@@ -27654,11 +27279,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MarkChatsReadBulkAsync (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task MarkChatsReadBulkAsync (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
         {
-             await MarkChatsReadBulkAsyncWithHttpInfo(markChatsReadBulkInputObject, xIgnoreNullValues);
+             await MarkChatsReadBulkAsyncWithHttpInfo(markChatsReadBulkInputObject);
 
         }
 
@@ -27667,9 +27291,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsReadBulkAsyncWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsReadBulkAsyncWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
         {
             // verify the required parameter 'markChatsReadBulkInputObject' is set
             if (markChatsReadBulkInputObject == null)
@@ -27696,7 +27319,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (markChatsReadBulkInputObject != null && markChatsReadBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(markChatsReadBulkInputObject); // http body (model) parameter
@@ -27736,11 +27358,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null)
+        public void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
         {
-             MarkChatsUnreadBulkWithHttpInfo(markChatsUnreadBulkInputObject, xIgnoreNullValues);
+             MarkChatsUnreadBulkWithHttpInfo(markChatsUnreadBulkInputObject);
         }
 
         /// <summary>
@@ -27748,9 +27369,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MarkChatsUnreadBulkWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> MarkChatsUnreadBulkWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
         {
             // verify the required parameter 'markChatsUnreadBulkInputObject' is set
             if (markChatsUnreadBulkInputObject == null)
@@ -27777,7 +27397,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (markChatsUnreadBulkInputObject != null && markChatsUnreadBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(markChatsUnreadBulkInputObject); // http body (model) parameter
@@ -27817,11 +27436,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MarkChatsUnreadBulkAsync (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task MarkChatsUnreadBulkAsync (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
         {
-             await MarkChatsUnreadBulkAsyncWithHttpInfo(markChatsUnreadBulkInputObject, xIgnoreNullValues);
+             await MarkChatsUnreadBulkAsyncWithHttpInfo(markChatsUnreadBulkInputObject);
 
         }
 
@@ -27830,9 +27448,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsUnreadBulkAsyncWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsUnreadBulkAsyncWithHttpInfo (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
         {
             // verify the required parameter 'markChatsUnreadBulkInputObject' is set
             if (markChatsUnreadBulkInputObject == null)
@@ -27859,7 +27476,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (markChatsUnreadBulkInputObject != null && markChatsUnreadBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(markChatsUnreadBulkInputObject); // http body (model) parameter
@@ -27899,11 +27515,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null)
+        public void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
         {
-             MergeSurveyNodesWithHttpInfo(mergeSurveyNodesInputObject, xIgnoreNullValues);
+             MergeSurveyNodesWithHttpInfo(mergeSurveyNodesInputObject);
         }
 
         /// <summary>
@@ -27911,9 +27526,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MergeSurveyNodesWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> MergeSurveyNodesWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
         {
             // verify the required parameter 'mergeSurveyNodesInputObject' is set
             if (mergeSurveyNodesInputObject == null)
@@ -27940,7 +27554,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (mergeSurveyNodesInputObject != null && mergeSurveyNodesInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(mergeSurveyNodesInputObject); // http body (model) parameter
@@ -27980,11 +27593,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MergeSurveyNodesAsync (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task MergeSurveyNodesAsync (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
         {
-             await MergeSurveyNodesAsyncWithHttpInfo(mergeSurveyNodesInputObject, xIgnoreNullValues);
+             await MergeSurveyNodesAsyncWithHttpInfo(mergeSurveyNodesInputObject);
 
         }
 
@@ -27993,9 +27605,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mergeSurveyNodesInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MergeSurveyNodesAsyncWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MergeSurveyNodesAsyncWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
         {
             // verify the required parameter 'mergeSurveyNodesInputObject' is set
             if (mergeSurveyNodesInputObject == null)
@@ -28022,7 +27633,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (mergeSurveyNodesInputObject != null && mergeSurveyNodesInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(mergeSurveyNodesInputObject); // http body (model) parameter
@@ -28062,11 +27672,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = MuteChatWithHttpInfo(muteChatInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = MuteChatWithHttpInfo(muteChatInputObject);
              return localVarResponse.Data;
         }
 
@@ -28075,9 +27684,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > MuteChatWithHttpInfo (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > MuteChatWithHttpInfo (MuteChatInputObject muteChatInputObject)
         {
             // verify the required parameter 'muteChatInputObject' is set
             if (muteChatInputObject == null)
@@ -28105,7 +27713,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (muteChatInputObject != null && muteChatInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(muteChatInputObject); // http body (model) parameter
@@ -28145,11 +27752,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> MuteChatAsync (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> MuteChatAsync (MuteChatInputObject muteChatInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await MuteChatAsyncWithHttpInfo(muteChatInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await MuteChatAsyncWithHttpInfo(muteChatInputObject);
              return localVarResponse.Data;
 
         }
@@ -28159,9 +27765,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> MuteChatAsyncWithHttpInfo (MuteChatInputObject muteChatInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> MuteChatAsyncWithHttpInfo (MuteChatInputObject muteChatInputObject)
         {
             // verify the required parameter 'muteChatInputObject' is set
             if (muteChatInputObject == null)
@@ -28189,7 +27794,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (muteChatInputObject != null && muteChatInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(muteChatInputObject); // http body (model) parameter
@@ -28229,11 +27833,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject)
         {
-             MuteChatsBulkWithHttpInfo(muteChatsBulkInputObject, xIgnoreNullValues);
+             MuteChatsBulkWithHttpInfo(muteChatsBulkInputObject);
         }
 
         /// <summary>
@@ -28241,9 +27844,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject)
         {
             // verify the required parameter 'muteChatsBulkInputObject' is set
             if (muteChatsBulkInputObject == null)
@@ -28270,7 +27872,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (muteChatsBulkInputObject != null && muteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(muteChatsBulkInputObject); // http body (model) parameter
@@ -28310,11 +27911,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MuteChatsBulkAsync (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task MuteChatsBulkAsync (MuteChatsBulkInputObject muteChatsBulkInputObject)
         {
-             await MuteChatsBulkAsyncWithHttpInfo(muteChatsBulkInputObject, xIgnoreNullValues);
+             await MuteChatsBulkAsyncWithHttpInfo(muteChatsBulkInputObject);
 
         }
 
@@ -28323,9 +27923,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject)
         {
             // verify the required parameter 'muteChatsBulkInputObject' is set
             if (muteChatsBulkInputObject == null)
@@ -28352,7 +27951,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (muteChatsBulkInputObject != null && muteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(muteChatsBulkInputObject); // http body (model) parameter
@@ -28527,11 +28125,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
         {
-             ReopenChatsBulkWithHttpInfo(reopenChatsBulkInputObject, xIgnoreNullValues);
+             ReopenChatsBulkWithHttpInfo(reopenChatsBulkInputObject);
         }
 
         /// <summary>
@@ -28539,9 +28136,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ReopenChatsBulkWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> ReopenChatsBulkWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
         {
             // verify the required parameter 'reopenChatsBulkInputObject' is set
             if (reopenChatsBulkInputObject == null)
@@ -28568,7 +28164,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (reopenChatsBulkInputObject != null && reopenChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(reopenChatsBulkInputObject); // http body (model) parameter
@@ -28608,11 +28203,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ReopenChatsBulkAsync (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task ReopenChatsBulkAsync (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
         {
-             await ReopenChatsBulkAsyncWithHttpInfo(reopenChatsBulkInputObject, xIgnoreNullValues);
+             await ReopenChatsBulkAsyncWithHttpInfo(reopenChatsBulkInputObject);
 
         }
 
@@ -28621,9 +28215,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReopenChatsBulkAsyncWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReopenChatsBulkAsyncWithHttpInfo (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
         {
             // verify the required parameter 'reopenChatsBulkInputObject' is set
             if (reopenChatsBulkInputObject == null)
@@ -28650,7 +28243,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (reopenChatsBulkInputObject != null && reopenChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(reopenChatsBulkInputObject); // http body (model) parameter
@@ -28690,11 +28282,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>User</returns>
-        public User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null)
+        public User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
         {
-             ApiResponse<User> localVarResponse = RequestNewSubaccountTokenWithHttpInfo(requestNewSubaccountTokenInputObject, xIgnoreNullValues);
+             ApiResponse<User> localVarResponse = RequestNewSubaccountTokenWithHttpInfo(requestNewSubaccountTokenInputObject);
              return localVarResponse.Data;
         }
 
@@ -28703,9 +28294,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > RequestNewSubaccountTokenWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< User > RequestNewSubaccountTokenWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
         {
             // verify the required parameter 'requestNewSubaccountTokenInputObject' is set
             if (requestNewSubaccountTokenInputObject == null)
@@ -28733,7 +28323,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (requestNewSubaccountTokenInputObject != null && requestNewSubaccountTokenInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(requestNewSubaccountTokenInputObject); // http body (model) parameter
@@ -28773,11 +28362,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> RequestNewSubaccountTokenAsync (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<User> RequestNewSubaccountTokenAsync (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
         {
-             ApiResponse<User> localVarResponse = await RequestNewSubaccountTokenAsyncWithHttpInfo(requestNewSubaccountTokenInputObject, xIgnoreNullValues);
+             ApiResponse<User> localVarResponse = await RequestNewSubaccountTokenAsyncWithHttpInfo(requestNewSubaccountTokenInputObject);
              return localVarResponse.Data;
 
         }
@@ -28787,9 +28375,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> RequestNewSubaccountTokenAsyncWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> RequestNewSubaccountTokenAsyncWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
         {
             // verify the required parameter 'requestNewSubaccountTokenInputObject' is set
             if (requestNewSubaccountTokenInputObject == null)
@@ -28817,7 +28404,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (requestNewSubaccountTokenInputObject != null && requestNewSubaccountTokenInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(requestNewSubaccountTokenInputObject); // http body (model) parameter
@@ -28857,11 +28443,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = RequestSenderIdWithHttpInfo(requestSenderIdInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = RequestSenderIdWithHttpInfo(requestSenderIdInputObject);
              return localVarResponse.Data;
         }
 
@@ -28870,9 +28455,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > RequestSenderIdWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > RequestSenderIdWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject)
         {
             // verify the required parameter 'requestSenderIdInputObject' is set
             if (requestSenderIdInputObject == null)
@@ -28900,7 +28484,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (requestSenderIdInputObject != null && requestSenderIdInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(requestSenderIdInputObject); // http body (model) parameter
@@ -28940,11 +28523,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> RequestSenderIdAsync (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> RequestSenderIdAsync (RequestSenderIdInputObject requestSenderIdInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await RequestSenderIdAsyncWithHttpInfo(requestSenderIdInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await RequestSenderIdAsyncWithHttpInfo(requestSenderIdInputObject);
              return localVarResponse.Data;
 
         }
@@ -28954,9 +28536,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> RequestSenderIdAsyncWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> RequestSenderIdAsyncWithHttpInfo (RequestSenderIdInputObject requestSenderIdInputObject)
         {
             // verify the required parameter 'requestSenderIdInputObject' is set
             if (requestSenderIdInputObject == null)
@@ -28984,7 +28565,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (requestSenderIdInputObject != null && requestSenderIdInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(requestSenderIdInputObject); // http body (model) parameter
@@ -30855,11 +30435,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>SendMessageResponse</returns>
-        public SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null)
+        public SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject)
         {
-             ApiResponse<SendMessageResponse> localVarResponse = SendMessageWithHttpInfo(sendMessageInputObject, xIgnoreNullValues);
+             ApiResponse<SendMessageResponse> localVarResponse = SendMessageWithHttpInfo(sendMessageInputObject);
              return localVarResponse.Data;
         }
 
@@ -30868,9 +30447,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of SendMessageResponse</returns>
-        public ApiResponse< SendMessageResponse > SendMessageWithHttpInfo (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< SendMessageResponse > SendMessageWithHttpInfo (SendMessageInputObject sendMessageInputObject)
         {
             // verify the required parameter 'sendMessageInputObject' is set
             if (sendMessageInputObject == null)
@@ -30898,7 +30476,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (sendMessageInputObject != null && sendMessageInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(sendMessageInputObject); // http body (model) parameter
@@ -30938,11 +30515,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of SendMessageResponse</returns>
-        public async System.Threading.Tasks.Task<SendMessageResponse> SendMessageAsync (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<SendMessageResponse> SendMessageAsync (SendMessageInputObject sendMessageInputObject)
         {
-             ApiResponse<SendMessageResponse> localVarResponse = await SendMessageAsyncWithHttpInfo(sendMessageInputObject, xIgnoreNullValues);
+             ApiResponse<SendMessageResponse> localVarResponse = await SendMessageAsyncWithHttpInfo(sendMessageInputObject);
              return localVarResponse.Data;
 
         }
@@ -30952,9 +30528,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (SendMessageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SendMessageResponse>> SendMessageAsyncWithHttpInfo (SendMessageInputObject sendMessageInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SendMessageResponse>> SendMessageAsyncWithHttpInfo (SendMessageInputObject sendMessageInputObject)
         {
             // verify the required parameter 'sendMessageInputObject' is set
             if (sendMessageInputObject == null)
@@ -30982,7 +30557,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (sendMessageInputObject != null && sendMessageInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(sendMessageInputObject); // http body (model) parameter
@@ -31155,11 +30729,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = SetChatStatusWithHttpInfo(setChatStatusInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = SetChatStatusWithHttpInfo(setChatStatusInputObject);
              return localVarResponse.Data;
         }
 
@@ -31168,9 +30741,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > SetChatStatusWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > SetChatStatusWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject)
         {
             // verify the required parameter 'setChatStatusInputObject' is set
             if (setChatStatusInputObject == null)
@@ -31198,7 +30770,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (setChatStatusInputObject != null && setChatStatusInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(setChatStatusInputObject); // http body (model) parameter
@@ -31238,11 +30809,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> SetChatStatusAsync (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> SetChatStatusAsync (SetChatStatusInputObject setChatStatusInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await SetChatStatusAsyncWithHttpInfo(setChatStatusInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await SetChatStatusAsyncWithHttpInfo(setChatStatusInputObject);
              return localVarResponse.Data;
 
         }
@@ -31252,9 +30822,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> SetChatStatusAsyncWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> SetChatStatusAsyncWithHttpInfo (SetChatStatusInputObject setChatStatusInputObject)
         {
             // verify the required parameter 'setChatStatusInputObject' is set
             if (setChatStatusInputObject == null)
@@ -31282,7 +30851,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (setChatStatusInputObject != null && setChatStatusInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(setChatStatusInputObject); // http body (model) parameter
@@ -31469,11 +31037,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UnblockContact (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null)
+        public void UnblockContact (UnblockContactInputObject unblockContactInputObject)
         {
-             UnblockContactWithHttpInfo(unblockContactInputObject, xIgnoreNullValues);
+             UnblockContactWithHttpInfo(unblockContactInputObject);
         }
 
         /// <summary>
@@ -31481,9 +31048,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UnblockContactWithHttpInfo (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UnblockContactWithHttpInfo (UnblockContactInputObject unblockContactInputObject)
         {
             // verify the required parameter 'unblockContactInputObject' is set
             if (unblockContactInputObject == null)
@@ -31510,7 +31076,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unblockContactInputObject != null && unblockContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unblockContactInputObject); // http body (model) parameter
@@ -31550,11 +31115,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UnblockContactAsync (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UnblockContactAsync (UnblockContactInputObject unblockContactInputObject)
         {
-             await UnblockContactAsyncWithHttpInfo(unblockContactInputObject, xIgnoreNullValues);
+             await UnblockContactAsyncWithHttpInfo(unblockContactInputObject);
 
         }
 
@@ -31563,9 +31127,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactAsyncWithHttpInfo (UnblockContactInputObject unblockContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactAsyncWithHttpInfo (UnblockContactInputObject unblockContactInputObject)
         {
             // verify the required parameter 'unblockContactInputObject' is set
             if (unblockContactInputObject == null)
@@ -31592,7 +31155,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unblockContactInputObject != null && unblockContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unblockContactInputObject); // http body (model) parameter
@@ -31632,11 +31194,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
         {
-             UnblockContactsBulkWithHttpInfo(unblockContactsBulkInputObject, xIgnoreNullValues);
+             UnblockContactsBulkWithHttpInfo(unblockContactsBulkInputObject);
         }
 
         /// <summary>
@@ -31644,9 +31205,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UnblockContactsBulkWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UnblockContactsBulkWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
         {
             // verify the required parameter 'unblockContactsBulkInputObject' is set
             if (unblockContactsBulkInputObject == null)
@@ -31673,7 +31233,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unblockContactsBulkInputObject != null && unblockContactsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unblockContactsBulkInputObject); // http body (model) parameter
@@ -31713,11 +31272,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UnblockContactsBulkAsync (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UnblockContactsBulkAsync (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
         {
-             await UnblockContactsBulkAsyncWithHttpInfo(unblockContactsBulkInputObject, xIgnoreNullValues);
+             await UnblockContactsBulkAsyncWithHttpInfo(unblockContactsBulkInputObject);
 
         }
 
@@ -31726,9 +31284,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactsBulkAsyncWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactsBulkAsyncWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
         {
             // verify the required parameter 'unblockContactsBulkInputObject' is set
             if (unblockContactsBulkInputObject == null)
@@ -31755,7 +31312,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unblockContactsBulkInputObject != null && unblockContactsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unblockContactsBulkInputObject); // http body (model) parameter
@@ -31795,11 +31351,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
         {
-             UnmuteChatsBulkWithHttpInfo(unmuteChatsBulkInputObject, xIgnoreNullValues);
+             UnmuteChatsBulkWithHttpInfo(unmuteChatsBulkInputObject);
         }
 
         /// <summary>
@@ -31807,9 +31362,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UnmuteChatsBulkWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UnmuteChatsBulkWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
         {
             // verify the required parameter 'unmuteChatsBulkInputObject' is set
             if (unmuteChatsBulkInputObject == null)
@@ -31836,7 +31390,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unmuteChatsBulkInputObject != null && unmuteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unmuteChatsBulkInputObject); // http body (model) parameter
@@ -31876,11 +31429,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UnmuteChatsBulkAsync (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UnmuteChatsBulkAsync (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
         {
-             await UnmuteChatsBulkAsyncWithHttpInfo(unmuteChatsBulkInputObject, xIgnoreNullValues);
+             await UnmuteChatsBulkAsyncWithHttpInfo(unmuteChatsBulkInputObject);
 
         }
 
@@ -31889,9 +31441,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnmuteChatsBulkAsyncWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnmuteChatsBulkAsyncWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
         {
             // verify the required parameter 'unmuteChatsBulkInputObject' is set
             if (unmuteChatsBulkInputObject == null)
@@ -31918,7 +31469,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unmuteChatsBulkInputObject != null && unmuteChatsBulkInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unmuteChatsBulkInputObject); // http body (model) parameter
@@ -31958,11 +31508,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UnsubscribeContactWithHttpInfo(unsubscribeContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UnsubscribeContactWithHttpInfo(unsubscribeContactInputObject);
              return localVarResponse.Data;
         }
 
@@ -31971,9 +31520,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UnsubscribeContactWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UnsubscribeContactWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject)
         {
             // verify the required parameter 'unsubscribeContactInputObject' is set
             if (unsubscribeContactInputObject == null)
@@ -32001,7 +31549,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unsubscribeContactInputObject != null && unsubscribeContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unsubscribeContactInputObject); // http body (model) parameter
@@ -32041,11 +31588,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UnsubscribeContactAsync (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UnsubscribeContactAsync (UnsubscribeContactInputObject unsubscribeContactInputObject)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UnsubscribeContactAsyncWithHttpInfo(unsubscribeContactInputObject, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UnsubscribeContactAsyncWithHttpInfo(unsubscribeContactInputObject);
              return localVarResponse.Data;
 
         }
@@ -32055,9 +31601,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UnsubscribeContactAsyncWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UnsubscribeContactAsyncWithHttpInfo (UnsubscribeContactInputObject unsubscribeContactInputObject)
         {
             // verify the required parameter 'unsubscribeContactInputObject' is set
             if (unsubscribeContactInputObject == null)
@@ -32085,7 +31630,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (unsubscribeContactInputObject != null && unsubscribeContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(unsubscribeContactInputObject); // http body (model) parameter
@@ -32125,11 +31669,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public void UpdateBalanceNotificationSettings (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject)
         {
-             UpdateBalanceNotificationSettingsWithHttpInfo(updateBalanceNotificationSettingsInputObject, xIgnoreNullValues);
+             UpdateBalanceNotificationSettingsWithHttpInfo(updateBalanceNotificationSettingsInputObject);
         }
 
         /// <summary>
@@ -32137,9 +31680,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateBalanceNotificationSettingsWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdateBalanceNotificationSettingsWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateBalanceNotificationSettingsInputObject' is set
             if (updateBalanceNotificationSettingsInputObject == null)
@@ -32166,7 +31708,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateBalanceNotificationSettingsInputObject != null && updateBalanceNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateBalanceNotificationSettingsInputObject); // http body (model) parameter
@@ -32206,11 +31747,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateBalanceNotificationSettingsAsync (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdateBalanceNotificationSettingsAsync (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject)
         {
-             await UpdateBalanceNotificationSettingsAsyncWithHttpInfo(updateBalanceNotificationSettingsInputObject, xIgnoreNullValues);
+             await UpdateBalanceNotificationSettingsAsyncWithHttpInfo(updateBalanceNotificationSettingsInputObject);
 
         }
 
@@ -32219,9 +31759,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateBalanceNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateBalanceNotificationSettingsAsyncWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateBalanceNotificationSettingsAsyncWithHttpInfo (UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateBalanceNotificationSettingsInputObject' is set
             if (updateBalanceNotificationSettingsInputObject == null)
@@ -32248,7 +31787,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateBalanceNotificationSettingsInputObject != null && updateBalanceNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateBalanceNotificationSettingsInputObject); // http body (model) parameter
@@ -32288,11 +31826,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null)
+        public void UpdateCallbackSettings (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject)
         {
-             UpdateCallbackSettingsWithHttpInfo(updateCallbackSettingsInputObject, xIgnoreNullValues);
+             UpdateCallbackSettingsWithHttpInfo(updateCallbackSettingsInputObject);
         }
 
         /// <summary>
@@ -32300,9 +31837,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateCallbackSettingsWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdateCallbackSettingsWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject)
         {
             // verify the required parameter 'updateCallbackSettingsInputObject' is set
             if (updateCallbackSettingsInputObject == null)
@@ -32330,7 +31866,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCallbackSettingsInputObject != null && updateCallbackSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCallbackSettingsInputObject); // http body (model) parameter
@@ -32370,11 +31905,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateCallbackSettingsAsync (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdateCallbackSettingsAsync (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject)
         {
-             await UpdateCallbackSettingsAsyncWithHttpInfo(updateCallbackSettingsInputObject, xIgnoreNullValues);
+             await UpdateCallbackSettingsAsyncWithHttpInfo(updateCallbackSettingsInputObject);
 
         }
 
@@ -32383,9 +31917,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCallbackSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCallbackSettingsAsyncWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateCallbackSettingsAsyncWithHttpInfo (UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject)
         {
             // verify the required parameter 'updateCallbackSettingsInputObject' is set
             if (updateCallbackSettingsInputObject == null)
@@ -32413,7 +31946,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCallbackSettingsInputObject != null && updateCallbackSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCallbackSettingsInputObject); // http body (model) parameter
@@ -32453,11 +31985,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public void UpdateChatDesktopNotificationSettings (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject)
         {
-             UpdateChatDesktopNotificationSettingsWithHttpInfo(updateChatDesktopNotificationSettingsInputObject, xIgnoreNullValues);
+             UpdateChatDesktopNotificationSettingsWithHttpInfo(updateChatDesktopNotificationSettingsInputObject);
         }
 
         /// <summary>
@@ -32465,9 +31996,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateChatDesktopNotificationSettingsWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdateChatDesktopNotificationSettingsWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateChatDesktopNotificationSettingsInputObject' is set
             if (updateChatDesktopNotificationSettingsInputObject == null)
@@ -32495,7 +32025,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateChatDesktopNotificationSettingsInputObject != null && updateChatDesktopNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateChatDesktopNotificationSettingsInputObject); // http body (model) parameter
@@ -32535,11 +32064,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateChatDesktopNotificationSettingsAsync (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdateChatDesktopNotificationSettingsAsync (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject)
         {
-             await UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo(updateChatDesktopNotificationSettingsInputObject, xIgnoreNullValues);
+             await UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo(updateChatDesktopNotificationSettingsInputObject);
 
         }
 
@@ -32548,9 +32076,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateChatDesktopNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateChatDesktopNotificationSettingsInputObject' is set
             if (updateChatDesktopNotificationSettingsInputObject == null)
@@ -32578,7 +32105,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateChatDesktopNotificationSettingsInputObject != null && updateChatDesktopNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateChatDesktopNotificationSettingsInputObject); // http body (model) parameter
@@ -32619,11 +32145,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateContactWithHttpInfo(updateContactInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateContactWithHttpInfo(updateContactInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -32633,9 +32158,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateContactWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateContactWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id)
         {
             // verify the required parameter 'updateContactInputObject' is set
             if (updateContactInputObject == null)
@@ -32667,7 +32191,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateContactInputObject != null && updateContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateContactInputObject); // http body (model) parameter
@@ -32708,11 +32231,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactAsync (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactAsync (UpdateContactInputObject updateContactInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateContactAsyncWithHttpInfo(updateContactInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateContactAsyncWithHttpInfo(updateContactInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -32723,9 +32245,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactAsyncWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactAsyncWithHttpInfo (UpdateContactInputObject updateContactInputObject, int? id)
         {
             // verify the required parameter 'updateContactInputObject' is set
             if (updateContactInputObject == null)
@@ -32757,7 +32278,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateContactInputObject != null && updateContactInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateContactInputObject); // http body (model) parameter
@@ -32798,11 +32318,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateContactNote (UpdateContactNoteInputObject updateContactNoteInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateContactNoteWithHttpInfo(updateContactNoteInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateContactNoteWithHttpInfo(updateContactNoteInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -32812,9 +32331,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateContactNoteWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateContactNoteWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id)
         {
             // verify the required parameter 'updateContactNoteInputObject' is set
             if (updateContactNoteInputObject == null)
@@ -32846,7 +32364,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateContactNoteInputObject != null && updateContactNoteInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateContactNoteInputObject); // http body (model) parameter
@@ -32887,11 +32404,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactNoteAsync (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactNoteAsync (UpdateContactNoteInputObject updateContactNoteInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateContactNoteAsyncWithHttpInfo(updateContactNoteInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateContactNoteAsyncWithHttpInfo(updateContactNoteInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -32902,9 +32418,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactNoteInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactNoteAsyncWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateContactNoteAsyncWithHttpInfo (UpdateContactNoteInputObject updateContactNoteInputObject, int? id)
         {
             // verify the required parameter 'updateContactNoteInputObject' is set
             if (updateContactNoteInputObject == null)
@@ -32936,7 +32451,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateContactNoteInputObject != null && updateContactNoteInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateContactNoteInputObject); // http body (model) parameter
@@ -32976,11 +32490,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>UpdateCurrentUserResponse</returns>
-        public UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null)
+        public UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject)
         {
-             ApiResponse<UpdateCurrentUserResponse> localVarResponse = UpdateCurrentUserWithHttpInfo(updateCurrentUserInputObject, xIgnoreNullValues);
+             ApiResponse<UpdateCurrentUserResponse> localVarResponse = UpdateCurrentUserWithHttpInfo(updateCurrentUserInputObject);
              return localVarResponse.Data;
         }
 
@@ -32989,9 +32502,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of UpdateCurrentUserResponse</returns>
-        public ApiResponse< UpdateCurrentUserResponse > UpdateCurrentUserWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse< UpdateCurrentUserResponse > UpdateCurrentUserWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject)
         {
             // verify the required parameter 'updateCurrentUserInputObject' is set
             if (updateCurrentUserInputObject == null)
@@ -33019,7 +32531,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCurrentUserInputObject != null && updateCurrentUserInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCurrentUserInputObject); // http body (model) parameter
@@ -33059,11 +32570,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of UpdateCurrentUserResponse</returns>
-        public async System.Threading.Tasks.Task<UpdateCurrentUserResponse> UpdateCurrentUserAsync (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<UpdateCurrentUserResponse> UpdateCurrentUserAsync (UpdateCurrentUserInputObject updateCurrentUserInputObject)
         {
-             ApiResponse<UpdateCurrentUserResponse> localVarResponse = await UpdateCurrentUserAsyncWithHttpInfo(updateCurrentUserInputObject, xIgnoreNullValues);
+             ApiResponse<UpdateCurrentUserResponse> localVarResponse = await UpdateCurrentUserAsyncWithHttpInfo(updateCurrentUserInputObject);
              return localVarResponse.Data;
 
         }
@@ -33073,9 +32583,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCurrentUserInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UpdateCurrentUserResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UpdateCurrentUserResponse>> UpdateCurrentUserAsyncWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateCurrentUserResponse>> UpdateCurrentUserAsyncWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject)
         {
             // verify the required parameter 'updateCurrentUserInputObject' is set
             if (updateCurrentUserInputObject == null)
@@ -33103,7 +32612,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCurrentUserInputObject != null && updateCurrentUserInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCurrentUserInputObject); // http body (model) parameter
@@ -33144,11 +32652,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateCustomFieldWithHttpInfo(updateCustomFieldInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateCustomFieldWithHttpInfo(updateCustomFieldInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -33158,9 +32665,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
         {
             // verify the required parameter 'updateCustomFieldInputObject' is set
             if (updateCustomFieldInputObject == null)
@@ -33192,7 +32698,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCustomFieldInputObject != null && updateCustomFieldInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCustomFieldInputObject); // http body (model) parameter
@@ -33233,11 +32738,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldAsync (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldAsync (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateCustomFieldAsyncWithHttpInfo(updateCustomFieldInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateCustomFieldAsyncWithHttpInfo(updateCustomFieldInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -33248,9 +32752,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldAsyncWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldAsyncWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
         {
             // verify the required parameter 'updateCustomFieldInputObject' is set
             if (updateCustomFieldInputObject == null)
@@ -33282,7 +32785,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCustomFieldInputObject != null && updateCustomFieldInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCustomFieldInputObject); // http body (model) parameter
@@ -33323,11 +32825,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateCustomFieldValueWithHttpInfo(updateCustomFieldValueInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateCustomFieldValueWithHttpInfo(updateCustomFieldValueInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -33337,9 +32838,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
         {
             // verify the required parameter 'updateCustomFieldValueInputObject' is set
             if (updateCustomFieldValueInputObject == null)
@@ -33371,7 +32871,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCustomFieldValueInputObject != null && updateCustomFieldValueInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCustomFieldValueInputObject); // http body (model) parameter
@@ -33412,11 +32911,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateCustomFieldValueAsyncWithHttpInfo(updateCustomFieldValueInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateCustomFieldValueAsyncWithHttpInfo(updateCustomFieldValueInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -33427,9 +32925,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
         {
             // verify the required parameter 'updateCustomFieldValueInputObject' is set
             if (updateCustomFieldValueInputObject == null)
@@ -33461,7 +32958,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateCustomFieldValueInputObject != null && updateCustomFieldValueInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateCustomFieldValueInputObject); // http body (model) parameter
@@ -33501,11 +32997,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public void UpdateInboundMessagesNotificationSettings (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject)
         {
-             UpdateInboundMessagesNotificationSettingsWithHttpInfo(updateInboundMessagesNotificationSettingsInputObject, xIgnoreNullValues);
+             UpdateInboundMessagesNotificationSettingsWithHttpInfo(updateInboundMessagesNotificationSettingsInputObject);
         }
 
         /// <summary>
@@ -33513,9 +33008,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateInboundMessagesNotificationSettingsInputObject' is set
             if (updateInboundMessagesNotificationSettingsInputObject == null)
@@ -33542,7 +33036,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateInboundMessagesNotificationSettingsInputObject != null && updateInboundMessagesNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateInboundMessagesNotificationSettingsInputObject); // http body (model) parameter
@@ -33582,11 +33075,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateInboundMessagesNotificationSettingsAsync (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdateInboundMessagesNotificationSettingsAsync (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject)
         {
-             await UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo(updateInboundMessagesNotificationSettingsInputObject, xIgnoreNullValues);
+             await UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo(updateInboundMessagesNotificationSettingsInputObject);
 
         }
 
@@ -33595,9 +33087,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateInboundMessagesNotificationSettingsInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject)
         {
             // verify the required parameter 'updateInboundMessagesNotificationSettingsInputObject' is set
             if (updateInboundMessagesNotificationSettingsInputObject == null)
@@ -33624,7 +33115,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateInboundMessagesNotificationSettingsInputObject != null && updateInboundMessagesNotificationSettingsInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateInboundMessagesNotificationSettingsInputObject); // http body (model) parameter
@@ -33831,11 +33321,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null)
+        public void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject)
         {
-             UpdatePasswordWithHttpInfo(updatePasswordInputObject, xIgnoreNullValues);
+             UpdatePasswordWithHttpInfo(updatePasswordInputObject);
         }
 
         /// <summary>
@@ -33843,9 +33332,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdatePasswordWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdatePasswordWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject)
         {
             // verify the required parameter 'updatePasswordInputObject' is set
             if (updatePasswordInputObject == null)
@@ -33872,7 +33360,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updatePasswordInputObject != null && updatePasswordInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updatePasswordInputObject); // http body (model) parameter
@@ -33912,11 +33399,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdatePasswordAsync (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdatePasswordAsync (UpdatePasswordInputObject updatePasswordInputObject)
         {
-             await UpdatePasswordAsyncWithHttpInfo(updatePasswordInputObject, xIgnoreNullValues);
+             await UpdatePasswordAsyncWithHttpInfo(updatePasswordInputObject);
 
         }
 
@@ -33925,9 +33411,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatePasswordInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePasswordAsyncWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePasswordAsyncWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject)
         {
             // verify the required parameter 'updatePasswordInputObject' is set
             if (updatePasswordInputObject == null)
@@ -33954,7 +33439,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updatePasswordInputObject != null && updatePasswordInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updatePasswordInputObject); // http body (model) parameter
@@ -33994,11 +33478,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns></returns>
-        public void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null)
+        public void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject)
         {
-             UpdateSenderSettingWithHttpInfo(updateSenderSettingInputObject, xIgnoreNullValues);
+             UpdateSenderSettingWithHttpInfo(updateSenderSettingInputObject);
         }
 
         /// <summary>
@@ -34006,9 +33489,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateSenderSettingWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null)
+        public ApiResponse<Object> UpdateSenderSettingWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject)
         {
             // verify the required parameter 'updateSenderSettingInputObject' is set
             if (updateSenderSettingInputObject == null)
@@ -34035,7 +33517,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSenderSettingInputObject != null && updateSenderSettingInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSenderSettingInputObject); // http body (model) parameter
@@ -34075,11 +33556,10 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateSenderSettingAsync (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task UpdateSenderSettingAsync (UpdateSenderSettingInputObject updateSenderSettingInputObject)
         {
-             await UpdateSenderSettingAsyncWithHttpInfo(updateSenderSettingInputObject, xIgnoreNullValues);
+             await UpdateSenderSettingAsyncWithHttpInfo(updateSenderSettingInputObject);
 
         }
 
@@ -34088,9 +33568,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSenderSettingAsyncWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSenderSettingAsyncWithHttpInfo (UpdateSenderSettingInputObject updateSenderSettingInputObject)
         {
             // verify the required parameter 'updateSenderSettingInputObject' is set
             if (updateSenderSettingInputObject == null)
@@ -34117,7 +33596,6 @@ namespace TextMagicClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSenderSettingInputObject != null && updateSenderSettingInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSenderSettingInputObject); // http body (model) parameter
@@ -34158,11 +33636,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateSurveyWithHttpInfo(updateSurveyInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateSurveyWithHttpInfo(updateSurveyInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -34172,9 +33649,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateSurveyWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateSurveyWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id)
         {
             // verify the required parameter 'updateSurveyInputObject' is set
             if (updateSurveyInputObject == null)
@@ -34206,7 +33682,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSurveyInputObject != null && updateSurveyInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSurveyInputObject); // http body (model) parameter
@@ -34247,11 +33722,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyAsync (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyAsync (UpdateSurveyInputObject updateSurveyInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateSurveyAsyncWithHttpInfo(updateSurveyInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateSurveyAsyncWithHttpInfo(updateSurveyInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -34262,9 +33736,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyAsyncWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyAsyncWithHttpInfo (UpdateSurveyInputObject updateSurveyInputObject, int? id)
         {
             // verify the required parameter 'updateSurveyInputObject' is set
             if (updateSurveyInputObject == null)
@@ -34296,7 +33769,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSurveyInputObject != null && updateSurveyInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSurveyInputObject); // http body (model) parameter
@@ -34337,11 +33809,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateSurveyNodeWithHttpInfo(updateSurveyNodeInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateSurveyNodeWithHttpInfo(updateSurveyNodeInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -34351,9 +33822,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateSurveyNodeWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateSurveyNodeWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
         {
             // verify the required parameter 'updateSurveyNodeInputObject' is set
             if (updateSurveyNodeInputObject == null)
@@ -34385,7 +33855,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSurveyNodeInputObject != null && updateSurveyNodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSurveyNodeInputObject); // http body (model) parameter
@@ -34426,11 +33895,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyNodeAsync (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateSurveyNodeAsync (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateSurveyNodeAsyncWithHttpInfo(updateSurveyNodeInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateSurveyNodeAsyncWithHttpInfo(updateSurveyNodeInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -34441,9 +33909,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSurveyNodeInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyNodeAsyncWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyNodeAsyncWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
         {
             // verify the required parameter 'updateSurveyNodeInputObject' is set
             if (updateSurveyNodeInputObject == null)
@@ -34475,7 +33942,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateSurveyNodeInputObject != null && updateSurveyNodeInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateSurveyNodeInputObject); // http body (model) parameter
@@ -34516,11 +33982,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateTemplateWithHttpInfo(updateTemplateInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = UpdateTemplateWithHttpInfo(updateTemplateInputObject, id);
              return localVarResponse.Data;
         }
 
@@ -34530,9 +33995,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateTemplateWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null)
+        public ApiResponse< ResourceLinkResponse > UpdateTemplateWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id)
         {
             // verify the required parameter 'updateTemplateInputObject' is set
             if (updateTemplateInputObject == null)
@@ -34564,7 +34028,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateTemplateInputObject != null && updateTemplateInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateTemplateInputObject); // http body (model) parameter
@@ -34605,11 +34068,10 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateTemplateAsync (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateTemplateAsync (UpdateTemplateInputObject updateTemplateInputObject, int? id)
         {
-             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateTemplateAsyncWithHttpInfo(updateTemplateInputObject, id, xIgnoreNullValues);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateTemplateAsyncWithHttpInfo(updateTemplateInputObject, id);
              return localVarResponse.Data;
 
         }
@@ -34620,9 +34082,8 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
         /// <param name="id"></param>
-        /// <param name="xIgnoreNullValues"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateTemplateAsyncWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id, bool? xIgnoreNullValues = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateTemplateAsyncWithHttpInfo (UpdateTemplateInputObject updateTemplateInputObject, int? id)
         {
             // verify the required parameter 'updateTemplateInputObject' is set
             if (updateTemplateInputObject == null)
@@ -34654,7 +34115,6 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (xIgnoreNullValues != null) localVarHeaderParams.Add("X-Ignore-Null-Values", this.Configuration.ApiClient.ParameterToString(xIgnoreNullValues)); // header parameter
             if (updateTemplateInputObject != null && updateTemplateInputObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(updateTemplateInputObject); // http body (model) parameter

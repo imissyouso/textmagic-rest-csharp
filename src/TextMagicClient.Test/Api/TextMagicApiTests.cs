@@ -85,8 +85,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //BlockContactInputObject blockContactInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.BlockContact(blockContactInputObject, xIgnoreNullValues);
+            //var response = instance.BlockContact(blockContactInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -98,8 +97,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //BuyDedicatedNumberInputObject buyDedicatedNumberInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.BuyDedicatedNumber(buyDedicatedNumberInputObject, xIgnoreNullValues);
+            //instance.BuyDedicatedNumber(buyDedicatedNumberInputObject);
             
         }
         
@@ -123,8 +121,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject, xIgnoreNullValues);
+            //instance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject);
             
         }
         
@@ -149,8 +146,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CloseChatsBulkInputObject closeChatsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.CloseChatsBulk(closeChatsBulkInputObject, xIgnoreNullValues);
+            //instance.CloseChatsBulk(closeChatsBulkInputObject);
             
         }
         
@@ -185,8 +181,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateContactInputObject createContactInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateContact(createContactInputObject, xIgnoreNullValues);
+            //var response = instance.CreateContact(createContactInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -199,8 +194,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //CreateContactNoteInputObject createContactNoteInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateContactNote(createContactNoteInputObject, id, xIgnoreNullValues);
+            //var response = instance.CreateContactNote(createContactNoteInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -212,8 +206,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateCustomFieldInputObject createCustomFieldInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateCustomField(createCustomFieldInputObject, xIgnoreNullValues);
+            //var response = instance.CreateCustomField(createCustomFieldInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -225,8 +218,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateListInputObject createListInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateList(createListInputObject, xIgnoreNullValues);
+            //var response = instance.CreateList(createListInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -238,8 +230,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreatePushTokenInputObject createPushTokenInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.CreatePushToken(createPushTokenInputObject, xIgnoreNullValues);
+            //instance.CreatePushToken(createPushTokenInputObject);
             
         }
         
@@ -251,8 +242,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateSurveyInputObject createSurveyInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateSurvey(createSurveyInputObject, xIgnoreNullValues);
+            //var response = instance.CreateSurvey(createSurveyInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -265,8 +255,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //CreateSurveyNodeInputObject createSurveyNodeInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateSurveyNode(createSurveyNodeInputObject, id, xIgnoreNullValues);
+            //var response = instance.CreateSurveyNode(createSurveyNodeInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -278,8 +267,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CreateTemplateInputObject createTemplateInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.CreateTemplate(createTemplateInputObject, xIgnoreNullValues);
+            //var response = instance.CreateTemplate(createTemplateInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -325,8 +313,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteChatMessages(deleteChatMessagesBulkInputObject, id, xIgnoreNullValues);
+            //instance.DeleteChatMessages(deleteChatMessagesBulkInputObject, id);
             
         }
         
@@ -338,8 +325,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteChatsBulkInputObject deleteChatsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteChatsBulk(deleteChatsBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteChatsBulk(deleteChatsBulkInputObject);
             
         }
         
@@ -388,8 +374,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
             //DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteContactNotesBulk(id, deleteContactNotesBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteContactNotesBulk(id, deleteContactNotesBulkInputObject);
             
         }
         
@@ -401,8 +386,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteContactsByIdsInputObject deleteContactsByIdsInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteContactsByIds(deleteContactsByIdsInputObject, xIgnoreNullValues);
+            //instance.DeleteContactsByIds(deleteContactsByIdsInputObject);
             
         }
         
@@ -463,8 +447,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject);
             
         }
         
@@ -501,8 +484,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteListContactsBulkInputObject deleteListContactsBulkInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id, xIgnoreNullValues);
+            //instance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id);
             
         }
         
@@ -514,8 +496,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteListsBulkInputObject deleteListsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteListsBulk(deleteListsBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteListsBulk(deleteListsBulkInputObject);
             
         }
         
@@ -539,8 +520,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject);
             
         }
         
@@ -564,8 +544,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject);
             
         }
         
@@ -602,8 +581,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject);
             
         }
         
@@ -663,8 +641,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject, xIgnoreNullValues);
+            //instance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject);
             
         }
         
@@ -676,8 +653,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DoAuthInputObject doAuthInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.DoAuth(doAuthInputObject, xIgnoreNullValues);
+            //var response = instance.DoAuth(doAuthInputObject);
             //Assert.IsInstanceOf<DoAuthResponse> (response, "response is DoAuthResponse");
         }
         
@@ -1536,8 +1512,7 @@ namespace TextMagicClient.Test
             //GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject = null;
             //decimal? page = null;
             //int? limit = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit, xIgnoreNullValues);
+            //var response = instance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit);
             //Assert.IsInstanceOf<GetSubaccountsWithTokensResponse> (response, "response is GetSubaccountsWithTokensResponse");
         }
         
@@ -1700,8 +1675,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //InviteSubaccountInputObject inviteSubaccountInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.InviteSubaccount(inviteSubaccountInputObject, xIgnoreNullValues);
+            //instance.InviteSubaccount(inviteSubaccountInputObject);
             
         }
         
@@ -1713,8 +1687,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MarkChatsReadBulkInputObject markChatsReadBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.MarkChatsReadBulk(markChatsReadBulkInputObject, xIgnoreNullValues);
+            //instance.MarkChatsReadBulk(markChatsReadBulkInputObject);
             
         }
         
@@ -1726,8 +1699,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.MarkChatsUnreadBulk(markChatsUnreadBulkInputObject, xIgnoreNullValues);
+            //instance.MarkChatsUnreadBulk(markChatsUnreadBulkInputObject);
             
         }
         
@@ -1739,8 +1711,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MergeSurveyNodesInputObject mergeSurveyNodesInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.MergeSurveyNodes(mergeSurveyNodesInputObject, xIgnoreNullValues);
+            //instance.MergeSurveyNodes(mergeSurveyNodesInputObject);
             
         }
         
@@ -1752,8 +1723,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MuteChatInputObject muteChatInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.MuteChat(muteChatInputObject, xIgnoreNullValues);
+            //var response = instance.MuteChat(muteChatInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -1765,8 +1735,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MuteChatsBulkInputObject muteChatsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.MuteChatsBulk(muteChatsBulkInputObject, xIgnoreNullValues);
+            //instance.MuteChatsBulk(muteChatsBulkInputObject);
             
         }
         
@@ -1789,8 +1758,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //ReopenChatsBulkInputObject reopenChatsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.ReopenChatsBulk(reopenChatsBulkInputObject, xIgnoreNullValues);
+            //instance.ReopenChatsBulk(reopenChatsBulkInputObject);
             
         }
         
@@ -1802,8 +1770,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.RequestNewSubaccountToken(requestNewSubaccountTokenInputObject, xIgnoreNullValues);
+            //var response = instance.RequestNewSubaccountToken(requestNewSubaccountTokenInputObject);
             //Assert.IsInstanceOf<User> (response, "response is User");
         }
         
@@ -1815,8 +1782,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //RequestSenderIdInputObject requestSenderIdInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.RequestSenderId(requestSenderIdInputObject, xIgnoreNullValues);
+            //var response = instance.RequestSenderId(requestSenderIdInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2006,8 +1972,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SendMessageInputObject sendMessageInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.SendMessage(sendMessageInputObject, xIgnoreNullValues);
+            //var response = instance.SendMessage(sendMessageInputObject);
             //Assert.IsInstanceOf<SendMessageResponse> (response, "response is SendMessageResponse");
         }
         
@@ -2030,8 +1995,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SetChatStatusInputObject setChatStatusInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.SetChatStatus(setChatStatusInputObject, xIgnoreNullValues);
+            //var response = instance.SetChatStatus(setChatStatusInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2055,8 +2019,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UnblockContactInputObject unblockContactInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UnblockContact(unblockContactInputObject, xIgnoreNullValues);
+            //instance.UnblockContact(unblockContactInputObject);
             
         }
         
@@ -2068,8 +2031,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UnblockContactsBulkInputObject unblockContactsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UnblockContactsBulk(unblockContactsBulkInputObject, xIgnoreNullValues);
+            //instance.UnblockContactsBulk(unblockContactsBulkInputObject);
             
         }
         
@@ -2081,8 +2043,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UnmuteChatsBulkInputObject unmuteChatsBulkInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UnmuteChatsBulk(unmuteChatsBulkInputObject, xIgnoreNullValues);
+            //instance.UnmuteChatsBulk(unmuteChatsBulkInputObject);
             
         }
         
@@ -2094,8 +2055,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UnsubscribeContactInputObject unsubscribeContactInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UnsubscribeContact(unsubscribeContactInputObject, xIgnoreNullValues);
+            //var response = instance.UnsubscribeContact(unsubscribeContactInputObject);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2107,8 +2067,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateBalanceNotificationSettingsInputObject updateBalanceNotificationSettingsInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject, xIgnoreNullValues);
+            //instance.UpdateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject);
             
         }
         
@@ -2120,8 +2079,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateCallbackSettingsInputObject updateCallbackSettingsInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdateCallbackSettings(updateCallbackSettingsInputObject, xIgnoreNullValues);
+            //instance.UpdateCallbackSettings(updateCallbackSettingsInputObject);
             
         }
         
@@ -2133,8 +2091,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject, xIgnoreNullValues);
+            //instance.UpdateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject);
             
         }
         
@@ -2147,8 +2104,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateContactInputObject updateContactInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateContact(updateContactInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateContact(updateContactInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2161,8 +2117,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateContactNoteInputObject updateContactNoteInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateContactNote(updateContactNoteInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateContactNote(updateContactNoteInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2174,8 +2129,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateCurrentUserInputObject updateCurrentUserInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateCurrentUser(updateCurrentUserInputObject, xIgnoreNullValues);
+            //var response = instance.UpdateCurrentUser(updateCurrentUserInputObject);
             //Assert.IsInstanceOf<UpdateCurrentUserResponse> (response, "response is UpdateCurrentUserResponse");
         }
         
@@ -2188,8 +2142,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateCustomFieldInputObject updateCustomFieldInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateCustomField(updateCustomFieldInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateCustomField(updateCustomFieldInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2202,8 +2155,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject = null;
             //string id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2215,8 +2167,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject, xIgnoreNullValues);
+            //instance.UpdateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject);
             
         }
         
@@ -2241,8 +2192,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdatePasswordInputObject updatePasswordInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdatePassword(updatePasswordInputObject, xIgnoreNullValues);
+            //instance.UpdatePassword(updatePasswordInputObject);
             
         }
         
@@ -2254,8 +2204,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateSenderSettingInputObject updateSenderSettingInputObject = null;
-            //bool? xIgnoreNullValues = null;
-            //instance.UpdateSenderSetting(updateSenderSettingInputObject, xIgnoreNullValues);
+            //instance.UpdateSenderSetting(updateSenderSettingInputObject);
             
         }
         
@@ -2268,8 +2217,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateSurveyInputObject updateSurveyInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateSurvey(updateSurveyInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateSurvey(updateSurveyInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2282,8 +2230,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateSurveyNodeInputObject updateSurveyNodeInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateSurveyNode(updateSurveyNodeInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateSurveyNode(updateSurveyNodeInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2296,8 +2243,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateTemplateInputObject updateTemplateInputObject = null;
             //int? id = null;
-            //bool? xIgnoreNullValues = null;
-            //var response = instance.UpdateTemplate(updateTemplateInputObject, id, xIgnoreNullValues);
+            //var response = instance.UpdateTemplate(updateTemplateInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
