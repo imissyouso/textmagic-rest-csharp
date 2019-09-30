@@ -81,7 +81,7 @@ Contact: support@textmagi.biz
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\TextMagicClient\TextMagicClient.csproj">
-          <Project>{8ABD9D52-CDF2-4C2C-8D7F-771362DBA2A3}</Project>
+          <Project>{7C7D0EC1-ADE5-40A1-BF5D-5DB1FFFCB5E0}</Project>
           <Name>TextMagicClient</Name>
       </ProjectReference>
   </ItemGroup>

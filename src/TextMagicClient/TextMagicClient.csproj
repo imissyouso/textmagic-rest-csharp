@@ -12,7 +12,7 @@ Contact: support@textmagi.biz
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8ABD9D52-CDF2-4C2C-8D7F-771362DBA2A3}</ProjectGuid>
+    <ProjectGuid>{7C7D0EC1-ADE5-40A1-BF5D-5DB1FFFCB5E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TextMagicClient</RootNamespace>
