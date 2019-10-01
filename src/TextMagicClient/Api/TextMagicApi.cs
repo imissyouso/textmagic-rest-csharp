@@ -410,7 +410,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// Delete all messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -420,7 +420,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// Delete all messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -834,7 +834,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// Delete a single message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -845,7 +845,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// Delete a single message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -855,7 +855,7 @@ namespace TextMagicClient.Api
         /// Delete messages by IDs
         /// </summary>
         /// <remarks>
-        /// Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -866,7 +866,7 @@ namespace TextMagicClient.Api
         /// Delete messages by IDs
         /// </summary>
         /// <remarks>
-        /// Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -1046,7 +1046,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -1057,7 +1057,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -1236,7 +1236,7 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// Get all user oubound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -1249,7 +1249,7 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// Get all user oubound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -1750,7 +1750,7 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -1765,7 +1765,7 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -2079,7 +2079,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// Get messages preview (with tags merged) up to 100 messages per session.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -2106,7 +2106,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// Get messages preview (with tags merged) up to 100 messages per session.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -2132,7 +2132,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// Check pricing for a new outbound message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -2160,7 +2160,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// Check pricing for a new outbound message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -2187,7 +2187,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// Get message prices for all countries.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMessagePricesResponse</returns>
@@ -2197,7 +2197,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// Get message prices for all countries.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMessagePricesResponse</returns>
@@ -2250,7 +2250,7 @@ namespace TextMagicClient.Api
         /// Fetch messages by given session id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2265,7 +2265,7 @@ namespace TextMagicClient.Api
         /// Fetch messages by given session id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2323,7 +2323,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// Get a single outgoing message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2334,7 +2334,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// Get a single outgoing message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2344,7 +2344,7 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// Get outbound messages history.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -2359,7 +2359,7 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// Get outbound messages history.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -2568,7 +2568,7 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// When more than one token related to app name, last key will be returned.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -2581,7 +2581,7 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// When more than one token related to app name, last key will be returned.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -3025,7 +3025,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// Returning user object, key and app name.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -3036,7 +3036,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// Returning user object, key and app name.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -3274,7 +3274,7 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// Find outbound messages by given parameters.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -3292,7 +3292,7 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// Find outbound messages by given parameters.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -3390,7 +3390,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// The main entrypoint to send messages. See examples above for the reference.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -3401,7 +3401,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// The main entrypoint to send messages. See examples above for the reference.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -3954,7 +3954,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// Upload a new file to insert it as a link.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -3965,7 +3965,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// Upload a new file to insert it as a link.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -4359,7 +4359,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// Delete all messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -4369,7 +4369,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// Delete all messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -4783,7 +4783,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// Delete a single message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4794,7 +4794,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// Delete a single message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4804,7 +4804,7 @@ namespace TextMagicClient.Api
         /// Delete messages by IDs
         /// </summary>
         /// <remarks>
-        /// Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -4815,7 +4815,7 @@ namespace TextMagicClient.Api
         /// Delete messages by IDs
         /// </summary>
         /// <remarks>
-        /// Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -4995,7 +4995,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -5006,7 +5006,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -5185,7 +5185,7 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// Get all user oubound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -5198,7 +5198,7 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// Get all user oubound messages.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -5699,7 +5699,7 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -5714,7 +5714,7 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -6028,7 +6028,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// Get messages preview (with tags merged) up to 100 messages per session.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -6055,7 +6055,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// Get messages preview (with tags merged) up to 100 messages per session.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -6081,7 +6081,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// Check pricing for a new outbound message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -6109,7 +6109,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// Check pricing for a new outbound message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -6136,7 +6136,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// Get message prices for all countries.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMessagePricesResponse</returns>
@@ -6146,7 +6146,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// Get message prices for all countries.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
@@ -6199,7 +6199,7 @@ namespace TextMagicClient.Api
         /// Fetch messages by given session id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6214,7 +6214,7 @@ namespace TextMagicClient.Api
         /// Fetch messages by given session id.
         /// </summary>
         /// <remarks>
-        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6272,7 +6272,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// Get a single outgoing message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6283,7 +6283,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// Get a single outgoing message.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6293,7 +6293,7 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// Get outbound messages history.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -6308,7 +6308,7 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// Get outbound messages history.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -6517,7 +6517,7 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// When more than one token related to app name, last key will be returned.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -6530,7 +6530,7 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// When more than one token related to app name, last key will be returned.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -6974,7 +6974,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// Returning user object, key and app name.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -6985,7 +6985,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// Returning user object, key and app name.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -7223,7 +7223,7 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// Find outbound messages by given parameters.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -7241,7 +7241,7 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// Find outbound messages by given parameters.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -7339,7 +7339,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// The main entrypoint to send messages. See examples above for the reference.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -7350,7 +7350,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// The main entrypoint to send messages. See examples above for the reference.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -7903,7 +7903,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// Upload a new file to insert it as a link.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -7914,7 +7914,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// Upload a new file to insert it as a link.
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -10865,7 +10865,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages Delete all messages.
+        /// Delete all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -10875,7 +10875,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages Delete all messages.
+        /// Delete all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10930,7 +10930,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages Delete all messages.
+        /// Delete all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -10941,7 +10941,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages Delete all messages.
+        /// Delete all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -13879,7 +13879,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message Delete a single message.
+        /// Delete message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13890,7 +13890,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message Delete a single message.
+        /// Delete message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13950,7 +13950,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message Delete a single message.
+        /// Delete message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13962,7 +13962,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message Delete a single message.
+        /// Delete message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14022,7 +14022,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// Delete messages by IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14033,7 +14033,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// Delete messages by IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14100,7 +14100,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// Delete messages by IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14112,7 +14112,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs Delete outbound messages by given ID(s) or delete all outbound messages.
+        /// Delete messages by IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -15363,7 +15363,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// Authenticate user by given username and password. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15375,7 +15375,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// Authenticate user by given username and password. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15437,7 +15437,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// Authenticate user by given username and password. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15450,7 +15450,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+        /// Authenticate user by given username and password. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -16583,7 +16583,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages Get all user oubound messages.
+        /// Get all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -16597,7 +16597,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages Get all user oubound messages.
+        /// Get all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -16659,7 +16659,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages Get all user oubound messages.
+        /// Get all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -16674,7 +16674,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages Get all user oubound messages.
+        /// Get all messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -19913,7 +19913,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Fetch user contacts by given group id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -19929,7 +19929,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Fetch user contacts by given group id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -19998,7 +19998,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Fetch user contacts by given group id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -20015,7 +20015,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Fetch user contacts by given group id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -22112,7 +22112,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
+        /// Preview message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22140,7 +22140,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
+        /// Preview message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22230,7 +22230,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
+        /// Preview message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22259,7 +22259,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
+        /// Preview message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22349,7 +22349,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check price 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22378,7 +22378,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check price 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22470,7 +22470,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check price 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22500,7 +22500,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check price 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22592,7 +22592,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing Get message prices for all countries.
+        /// Get pricing 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMessagePricesResponse</returns>
@@ -22603,7 +22603,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing Get message prices for all countries.
+        /// Get pricing 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMessagePricesResponse</returns>
@@ -22659,7 +22659,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing Get message prices for all countries.
+        /// Get pricing 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMessagePricesResponse</returns>
@@ -22671,7 +22671,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing Get message prices for all countries.
+        /// Get pricing 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
@@ -23027,7 +23027,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// Fetch messages by given session id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23043,7 +23043,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// Fetch messages by given session id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23112,7 +23112,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// Fetch messages by given session id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23129,7 +23129,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+        /// Fetch messages by given session id. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23486,7 +23486,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message Get a single outgoing message.
+        /// Get a single message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23498,7 +23498,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message Get a single outgoing message.
+        /// Get a single message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23559,7 +23559,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message Get a single outgoing message.
+        /// Get a single message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23572,7 +23572,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message Get a single outgoing message.
+        /// Get a single message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23633,7 +23633,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history Get outbound messages history.
+        /// Get history 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -23649,7 +23649,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history Get outbound messages history.
+        /// Get history 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -23715,7 +23715,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history Get outbound messages history.
+        /// Get history 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -23732,7 +23732,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history Get outbound messages history.
+        /// Get history 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">How many results to return (optional, default to 10)</param>
@@ -25103,7 +25103,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+        /// Get all subaccounts with their REST API tokens associated with specified app name. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -25117,7 +25117,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+        /// Get all subaccounts with their REST API tokens associated with specified app name. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -25189,7 +25189,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+        /// Get all subaccounts with their REST API tokens associated with specified app name. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -25204,7 +25204,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+        /// Get all subaccounts with their REST API tokens associated with specified app name. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
@@ -28278,7 +28278,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. Returning user object, key and app name.
+        /// Request a new REST API token for subaccount. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28290,7 +28290,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. Returning user object, key and app name.
+        /// Request a new REST API token for subaccount. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28358,7 +28358,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. Returning user object, key and app name.
+        /// Request a new REST API token for subaccount. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28371,7 +28371,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. Returning user object, key and app name.
+        /// Request a new REST API token for subaccount. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -29773,7 +29773,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages Find outbound messages by given parameters.
+        /// Find messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -29792,7 +29792,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages Find outbound messages by given parameters.
+        /// Find messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -29864,7 +29864,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages Find outbound messages by given parameters.
+        /// Find messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -29884,7 +29884,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages Find outbound messages by given parameters.
+        /// Find messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page (optional, default to 1)</param>
@@ -30431,7 +30431,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message The main entrypoint to send messages. See examples above for the reference.
+        /// Send message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30443,7 +30443,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message The main entrypoint to send messages. See examples above for the reference.
+        /// Send message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30511,7 +30511,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message The main entrypoint to send messages. See examples above for the reference.
+        /// Send message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30524,7 +30524,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message The main entrypoint to send messages. See examples above for the reference.
+        /// Send message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -34613,7 +34613,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment Upload a new file to insert it as a link.
+        /// Upload message attachment 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34625,7 +34625,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment Upload a new file to insert it as a link.
+        /// Upload message attachment 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34686,7 +34686,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment Upload a new file to insert it as a link.
+        /// Upload message attachment 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34699,7 +34699,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment Upload a new file to insert it as a link.
+        /// Upload message attachment 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>

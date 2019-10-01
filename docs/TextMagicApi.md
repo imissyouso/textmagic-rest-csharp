@@ -1312,8 +1312,6 @@ void (empty response body)
 
 Delete all messages
 
-Delete all messages.
-
 ### Example
 ```csharp
 using System;
@@ -2554,8 +2552,6 @@ void (empty response body)
 
 Delete message
 
-Delete a single message.
-
 ### Example
 ```csharp
 using System;
@@ -2617,8 +2613,6 @@ void (empty response body)
 > void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
 
 Delete messages by IDs
-
-Delete outbound messages by given ID(s) or delete all outbound messages.
 
 ### Example
 ```csharp
@@ -3180,8 +3174,6 @@ void (empty response body)
 
 Authenticate user by given username and password.
 
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
-
 ### Example
 ```csharp
 using System;
@@ -3703,8 +3695,6 @@ Name | Type | Description  | Notes
 > GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
 
 Get all messages
-
-Get all user oubound messages.
 
 ### Example
 ```csharp
@@ -5136,8 +5126,6 @@ Name | Type | Description  | Notes
 
 Fetch user contacts by given group id.
 
-A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
-
 ### Example
 ```csharp
 using System;
@@ -6089,8 +6077,6 @@ Name | Type | Description  | Notes
 
 Preview message
 
-Get messages preview (with tags merged) up to 100 messages per session.
-
 ### Example
 ```csharp
 using System;
@@ -6185,8 +6171,6 @@ Name | Type | Description  | Notes
 > GetMessagePriceResponse GetMessagePrice (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
 
 Check price
-
-Check pricing for a new outbound message.
 
 ### Example
 ```csharp
@@ -6284,8 +6268,6 @@ Name | Type | Description  | Notes
 > GetMessagePricesResponse GetMessagePrices ()
 
 Get pricing
-
-Get message prices for all countries.
 
 ### Example
 ```csharp
@@ -6473,8 +6455,6 @@ Name | Type | Description  | Notes
 > GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
 
 Fetch messages by given session id.
-
-A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
 
 ### Example
 ```csharp
@@ -6673,8 +6653,6 @@ Name | Type | Description  | Notes
 
 Get a single message
 
-Get a single outgoing message.
-
 ### Example
 ```csharp
 using System;
@@ -6737,8 +6715,6 @@ Name | Type | Description  | Notes
 > GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory (int? limit = null, int? lastId = null, string query = null, string orderBy = null, string direction = null)
 
 Get history
-
-Get outbound messages history.
 
 ### Example
 ```csharp
@@ -7379,8 +7355,6 @@ Name | Type | Description  | Notes
 > GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
 
 Get all subaccounts with their REST API tokens associated with specified app name.
-
-When more than one token related to app name, last key will be returned.
 
 ### Example
 ```csharp
@@ -8709,8 +8683,6 @@ void (empty response body)
 
 Request a new REST API token for subaccount.
 
-Returning user object, key and app name.
-
 ### Example
 ```csharp
 using System;
@@ -9338,8 +9310,6 @@ Name | Type | Description  | Notes
 
 Find messages
 
-Find outbound messages by given parameters.
-
 ### Example
 ```csharp
 using System;
@@ -9620,8 +9590,6 @@ void (empty response body)
 > SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject)
 
 Send message
-
-The main entrypoint to send messages. See examples above for the reference.
 
 ### Example
 ```csharp
@@ -11265,8 +11233,6 @@ Name | Type | Description  | Notes
 > UploadMessageAttachmentResponse UploadMessageAttachment (System.IO.Stream file)
 
 Upload message attachment
-
-Upload a new file to insert it as a link.
 
 ### Example
 ```csharp
