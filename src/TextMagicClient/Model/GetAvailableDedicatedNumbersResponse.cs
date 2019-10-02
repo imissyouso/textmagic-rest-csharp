@@ -39,7 +39,7 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="GetAvailableDedicatedNumbersResponse" /> class.
         /// </summary>
         /// <param name="numbers">Array of phone number strings. (required).</param>
-        /// <param name="price">Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.@TODO (required).</param>
+        /// <param name="price">Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.TODO (required).</param>
         public GetAvailableDedicatedNumbersResponse(List<string> numbers = default(List<string>), float? price = default(float?))
         {
             // to ensure "numbers" is required (not null)
@@ -70,9 +70,9 @@ namespace TextMagicClient.Model
         public List<string> Numbers { get; set; }
 
         /// <summary>
-        /// Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.@TODO
+        /// Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.TODO
         /// </summary>
-        /// <value>Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.@TODO</value>
+        /// <value>Dedicated number monthly fee for this country. Returned in current [account](/docs/api/account/) currency.TODO</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public float? Price { get; set; }
 

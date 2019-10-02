@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class MessageOut :  IEquatable<MessageOut>, IValidatableObject
     {
         /// <summary>
-        /// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
+        /// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
         /// </summary>
-        /// <value>Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. </value>
+        /// <value>Delivery status of the message. TODO: Please see the table below to see different delivery statuses. </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -118,9 +118,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
+        /// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
         /// </summary>
-        /// <value>Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. </value>
+        /// <value>Delivery status of the message. TODO: Please see the table below to see different delivery statuses. </value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
         /// <summary>
@@ -135,7 +135,7 @@ namespace TextMagicClient.Model
         /// <param name="sender">Message sender (phone number or alphanumeric Sender ID)..</param>
         /// <param name="receiver">Recipient phone number..</param>
         /// <param name="text">text (required).</param>
-        /// <param name="status">Delivery status of the message. @TODO: Please see the table below to see different delivery statuses.  (required).</param>
+        /// <param name="status">Delivery status of the message. TODO: Please see the table below to see different delivery statuses.  (required).</param>
         /// <param name="contactId">contactId (required).</param>
         /// <param name="sessionId">sessionId (required).</param>
         /// <param name="messageTime">Sending time. (required).</param>
@@ -143,7 +143,7 @@ namespace TextMagicClient.Model
         /// <param name="deleted">deleted.</param>
         /// <param name="charset">Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  (required).</param>
         /// <param name="charsetLabel">charsetLabel (required).</param>
-        /// <param name="firstName">@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  (required).</param>
+        /// <param name="firstName">TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="country">Two-letter ISO country code of the recipient phone number.  (required).</param>
         /// <param name="phone">phone.</param>
@@ -368,9 +368,9 @@ namespace TextMagicClient.Model
         public string CharsetLabel { get; set; }
 
         /// <summary>
-        /// @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
+        /// TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
         /// </summary>
-        /// <value>@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). </value>
+        /// <value>TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). </value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
