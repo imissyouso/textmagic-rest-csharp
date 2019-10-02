@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMessagingCountersResponse" /> class.
         /// </summary>
-        /// <param name="contacts">contacts (required).</param>
-        /// <param name="sent">sent (required).</param>
-        /// <param name="received">received (required).</param>
+        /// <param name="contacts">Total contacts amount. (required).</param>
+        /// <param name="sent">Total sent messages amount. (required).</param>
+        /// <param name="received">Total received messages amount. (required).</param>
         public GetMessagingCountersResponse(int? contacts = default(int?), int? sent = default(int?), int? received = default(int?))
         {
             // to ensure "contacts" is required (not null)
@@ -73,20 +73,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Contacts
+        /// Total contacts amount.
         /// </summary>
+        /// <value>Total contacts amount.</value>
         [DataMember(Name="contacts", EmitDefaultValue=false)]
         public int? Contacts { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sent
+        /// Total sent messages amount.
         /// </summary>
+        /// <value>Total sent messages amount.</value>
         [DataMember(Name="sent", EmitDefaultValue=false)]
         public int? Sent { get; set; }
 
         /// <summary>
-        /// Gets or Sets Received
+        /// Total received messages amount.
         /// </summary>
+        /// <value>Total received messages amount.</value>
         [DataMember(Name="received", EmitDefaultValue=false)]
         public int? Received { get; set; }
 

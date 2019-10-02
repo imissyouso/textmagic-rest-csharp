@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Timezone" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="area">area (required).</param>
-        /// <param name="dst">dst (required).</param>
+        /// <param name="id">Internal timezone ID. (required).</param>
+        /// <param name="area">Timezone area. (required).</param>
+        /// <param name="dst">Is Daylight saving time used in this timezone? (required).</param>
         /// <param name="offset">offset (required).</param>
-        /// <param name="timezone">timezone (required).</param>
+        /// <param name="timezone">User-friendly timezone name (with spaces replaced by underscores). (required).</param>
         public Timezone(int? id = default(int?), string area = default(string), int? dst = default(int?), int? offset = default(int?), string timezone = default(string))
         {
             // to ensure "id" is required (not null)
@@ -93,20 +93,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Internal timezone ID.
         /// </summary>
+        /// <value>Internal timezone ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Area
+        /// Timezone area.
         /// </summary>
+        /// <value>Timezone area.</value>
         [DataMember(Name="area", EmitDefaultValue=false)]
         public string Area { get; set; }
 
         /// <summary>
-        /// Gets or Sets Dst
+        /// Is Daylight saving time used in this timezone?
         /// </summary>
+        /// <value>Is Daylight saving time used in this timezone?</value>
         [DataMember(Name="dst", EmitDefaultValue=false)]
         public int? Dst { get; set; }
 
@@ -117,8 +120,9 @@ namespace TextMagicClient.Model
         public int? Offset { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Timezone
+        /// User-friendly timezone name (with spaces replaced by underscores).
         /// </summary>
+        /// <value>User-friendly timezone name (with spaces replaced by underscores).</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string _Timezone { get; set; }
 

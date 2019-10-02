@@ -39,13 +39,13 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="UserStatement" /> class.
         /// </summary>
         /// <param name="id">id (required).</param>
-        /// <param name="userId">userId (required).</param>
-        /// <param name="date">date (required).</param>
+        /// <param name="userId">User statement ID. (required).</param>
+        /// <param name="date">User statement date. (required).</param>
         /// <param name="balance">balance (required).</param>
-        /// <param name="delta">delta (required).</param>
-        /// <param name="type">type (required).</param>
-        /// <param name="value">value (required).</param>
-        /// <param name="comment">comment (required).</param>
+        /// <param name="delta">Balance change amount. (required).</param>
+        /// <param name="type">Type of statement (what you have been charged for): *   **sms** for sending SMS *   **number** for renewing a dedicated number *   **schedule** for scheduling text messages *   **topup** for adding credits to your account  (required).</param>
+        /// <param name="value">Value differs by **type**: *   for **sms**, it is the sent messages amount *   for **number**, it is a dedicated phone number *   for **schedule**, it is a scheduled messages amount *   for **top-up**, it is an invoice ID  (required).</param>
+        /// <param name="comment">Optional comment. (required).</param>
         public UserStatement(int? id = default(int?), int? userId = default(int?), DateTime? date = default(DateTime?), double? balance = default(double?), float? delta = default(float?), string type = default(string), string value = default(string), string comment = default(string))
         {
             // to ensure "id" is required (not null)
@@ -129,14 +129,16 @@ namespace TextMagicClient.Model
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// User statement ID.
         /// </summary>
+        /// <value>User statement ID.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// User statement date.
         /// </summary>
+        /// <value>User statement date.</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
 
@@ -147,26 +149,30 @@ namespace TextMagicClient.Model
         public double? Balance { get; set; }
 
         /// <summary>
-        /// Gets or Sets Delta
+        /// Balance change amount.
         /// </summary>
+        /// <value>Balance change amount.</value>
         [DataMember(Name="delta", EmitDefaultValue=false)]
         public float? Delta { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Type of statement (what you have been charged for): *   **sms** for sending SMS *   **number** for renewing a dedicated number *   **schedule** for scheduling text messages *   **topup** for adding credits to your account 
         /// </summary>
+        /// <value>Type of statement (what you have been charged for): *   **sms** for sending SMS *   **number** for renewing a dedicated number *   **schedule** for scheduling text messages *   **topup** for adding credits to your account </value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value differs by **type**: *   for **sms**, it is the sent messages amount *   for **number**, it is a dedicated phone number *   for **schedule**, it is a scheduled messages amount *   for **top-up**, it is an invoice ID 
         /// </summary>
+        /// <value>Value differs by **type**: *   for **sms**, it is the sent messages amount *   for **number**, it is a dedicated phone number *   for **schedule**, it is a scheduled messages amount *   for **top-up**, it is an invoice ID </value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        /// Optional comment.
         /// </summary>
+        /// <value>Optional comment.</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 

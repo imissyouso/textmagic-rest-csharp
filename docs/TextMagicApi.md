@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
-[**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close subaccount.
+[**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close sub-account
 [**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Create a new custom field from the submitted data.
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**CreateTemplate**](TextMagicApi.md#createtemplate) | **POST** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#deleteallcontacts) | **DELETE** /api/v2/contact/all | Delete all contacts.
 [**DeleteAllOutboundMessages**](TextMagicApi.md#deletealloutboundmessages) | **DELETE** /api/v2/message/all | Delete all messages
-[**DeleteAvatar**](TextMagicApi.md#deleteavatar) | **DELETE** /api/v2/user/avatar | Delete an avatar for the current user.\\
+[**DeleteAvatar**](TextMagicApi.md#deleteavatar) | **DELETE** /api/v2/user/avatar | Delete an avatar
 [**DeleteChatMessages**](TextMagicApi.md#deletechatmessages) | **POST** /api/v2/chats/{id}/messages/delete | Delete chat messages by ID(s)
 [**DeleteChatsBulk**](TextMagicApi.md#deletechatsbulk) | **POST** /api/v2/chats/delete | Delete chats (bulk)
 [**DeleteContact**](TextMagicApi.md#deletecontact) | **DELETE** /api/v2/contacts/{id} | Delete a single contact.
@@ -86,15 +86,15 @@ Method | HTTP request | Description
 [**GetContactsAutocomplete**](TextMagicApi.md#getcontactsautocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
 [**GetContactsByListId**](TextMagicApi.md#getcontactsbylistid) | **GET** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
 [**GetCountries**](TextMagicApi.md#getcountries) | **GET** /api/v2/countries | Return list of countries.
-[**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current user info.
+[**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current account information
 [**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get a single custom field.
 [**GetCustomFields**](TextMagicApi.md#getcustomfields) | **GET** /api/v2/customfields | Get all contact custom fields.
 [**GetDedicatedNumber**](TextMagicApi.md#getdedicatednumber) | **GET** /api/v2/numbers/{id} | Get the details of a specific dedicated number
-[**GetDisallowedRules**](TextMagicApi.md#getdisallowedrules) | **GET** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
+[**GetDisallowedRules**](TextMagicApi.md#getdisallowedrules) | **GET** /api/v2/user/disallowed-rules | Get disallowed permissions
 [**GetFavourites**](TextMagicApi.md#getfavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists.
 [**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#getinboundmessagesnotificationsettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
-[**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Return account invoices.
+[**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Get all invoices
 [**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get a single list.
 [**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
 [**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
@@ -104,8 +104,8 @@ Method | HTTP request | Description
 [**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#getmessagesessionstat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#getmessagesbysessionid) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
-[**GetMessagingCounters**](TextMagicApi.md#getmessagingcounters) | **GET** /api/v2/stats/messaging/data | Return counters for messaging data views.
-[**GetMessagingStat**](TextMagicApi.md#getmessagingstat) | **GET** /api/v2/stats/messaging | Return messaging statistics.
+[**GetMessagingCounters**](TextMagicApi.md#getmessagingcounters) | **GET** /api/v2/stats/messaging/data | Get sent/received messages counters values
+[**GetMessagingStat**](TextMagicApi.md#getmessagingstat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**GetOutboundMessage**](TextMagicApi.md#getoutboundmessage) | **GET** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#getoutboundmessageshistory) | **GET** /api/v2/history | Get history
 [**GetPushTokens**](TextMagicApi.md#getpushtokens) | **GET** /api/v2/push/tokens | Get all device tokens assigned to the current account
@@ -113,11 +113,11 @@ Method | HTTP request | Description
 [**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get the details of a specific Sender ID
 [**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all your approved Sender IDs
 [**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current sender settings
-[**GetSpendingStat**](TextMagicApi.md#getspendingstat) | **GET** /api/v2/stats/spending | Return account spending statistics.
+[**GetSpendingStat**](TextMagicApi.md#getspendingstat) | **GET** /api/v2/stats/spending | Get spending statistics
 [**GetState**](TextMagicApi.md#getstate) | **GET** /api/v2/state | Get current entities state
-[**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get a single subaccount.
-[**GetSubaccounts**](TextMagicApi.md#getsubaccounts) | **GET** /api/v2/subaccounts | Get all subaccounts of current user.
-[**GetSubaccountsWithTokens**](TextMagicApi.md#getsubaccountswithtokens) | **POST** /api/v2/subaccounts/tokens/list | Get all subaccounts with their REST API tokens associated with specified app name.
+[**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
+[**GetSubaccounts**](TextMagicApi.md#getsubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
+[**GetSubaccountsWithTokens**](TextMagicApi.md#getsubaccountswithtokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
 [**GetSurvey**](TextMagicApi.md#getsurvey) | **GET** /api/v2/surveys/{id} | Get a survey by id.
 [**GetSurveyNode**](TextMagicApi.md#getsurveynode) | **GET** /api/v2/surveys/nodes/{id} | Get a node by id.
 [**GetSurveyNodes**](TextMagicApi.md#getsurveynodes) | **GET** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
@@ -130,7 +130,7 @@ Method | HTTP request | Description
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
 [**GetUserLists**](TextMagicApi.md#getuserlists) | **GET** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
-[**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite new subaccount.
+[**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#mergesurveynodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
@@ -138,7 +138,7 @@ Method | HTTP request | Description
 [**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Just does a pong.
 [**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
-[**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
+[**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Apply for a new Sender ID
 [**ResetSurvey**](TextMagicApi.md#resetsurvey) | **PUT** /api/v2/surveys/{id}/reset | Reset a survey flow.
 [**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by message text
@@ -165,7 +165,7 @@ Method | HTTP request | Description
 [**UpdateChatDesktopNotificationSettings**](TextMagicApi.md#updatechatdesktopnotificationsettings) | **PUT** /api/v2/user/desktop/notification | Update chat desktop notification settings
 [**UpdateContact**](TextMagicApi.md#updatecontact) | **PUT** /api/v2/contacts/{id} | Update existing contact.
 [**UpdateContactNote**](TextMagicApi.md#updatecontactnote) | **PUT** /api/v2/notes/{id} | Update existing contact note.
-[**UpdateCurrentUser**](TextMagicApi.md#updatecurrentuser) | **PUT** /api/v2/user | Update current user info.
+[**UpdateCurrentUser**](TextMagicApi.md#updatecurrentuser) | **PUT** /api/v2/user | Edit current account info
 [**UpdateCustomField**](TextMagicApi.md#updatecustomfield) | **PUT** /api/v2/customfields/{id} | Update existing custom field.
 [**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
@@ -175,7 +175,7 @@ Method | HTTP request | Description
 [**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
 [**UpdateSurveyNode**](TextMagicApi.md#updatesurveynode) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
-[**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Add an avatar for the current user.
+[**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
 [**UploadListAvatar**](TextMagicApi.md#uploadlistavatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list.
 [**UploadMessageAttachment**](TextMagicApi.md#uploadmessageattachment) | **POST** /api/v2/messages/attachment | Upload message attachment
@@ -819,7 +819,7 @@ void (empty response body)
 # **CloseSubaccount**
 > void CloseSubaccount (int? id)
 
-Close subaccount.
+Close sub-account
 
 ### Example
 ```csharp
@@ -844,7 +844,7 @@ namespace Example
 
             try
             {
-                // Close subaccount.
+                // Close sub-account
                 apiInstance.CloseSubaccount(id);
             }
             catch (Exception e)
@@ -1508,7 +1508,7 @@ void (empty response body)
 # **DeleteAvatar**
 > void DeleteAvatar ()
 
-Delete an avatar for the current user.\\
+Delete an avatar
 
 ### Example
 ```csharp
@@ -1532,7 +1532,7 @@ namespace Example
 
             try
             {
-                // Delete an avatar for the current user.\\
+                // Delete an avatar
                 apiInstance.DeleteAvatar();
             }
             catch (Exception e)
@@ -5414,7 +5414,7 @@ This endpoint does not need any parameter.
 # **GetCurrentUser**
 > User GetCurrentUser ()
 
-Get current user info.
+Get current account information
 
 ### Example
 ```csharp
@@ -5438,7 +5438,7 @@ namespace Example
 
             try
             {
-                // Get current user info.
+                // Get current account information
                 User result = apiInstance.GetCurrentUser();
                 Debug.WriteLine(result);
             }
@@ -5664,6 +5664,8 @@ Name | Type | Description  | Notes
 # **GetDisallowedRules**
 > GetDisallowedRulesResponse GetDisallowedRules ()
 
+Get disallowed permissions
+
 Get an array of all rules that are disallowed to the current account.
 
 ### Example
@@ -5688,7 +5690,7 @@ namespace Example
 
             try
             {
-                // Get an array of all rules that are disallowed to the current account.
+                // Get disallowed permissions
                 GetDisallowedRulesResponse result = apiInstance.GetDisallowedRules();
                 Debug.WriteLine(result);
             }
@@ -5912,7 +5914,9 @@ This endpoint does not need any parameter.
 # **GetInvoices**
 > GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null)
 
-Return account invoices.
+Get all invoices
+
+With the TextMagic API, you can check the invoices and transactions for your account.
 
 ### Example
 ```csharp
@@ -5938,7 +5942,7 @@ namespace Example
 
             try
             {
-                // Return account invoices.
+                // Get all invoices
                 GetInvoicesPaginatedResponse result = apiInstance.GetInvoices(page, limit);
                 Debug.WriteLine(result);
             }
@@ -6628,7 +6632,9 @@ Name | Type | Description  | Notes
 # **GetMessagingCounters**
 > GetMessagingCountersResponse GetMessagingCounters ()
 
-Return counters for messaging data views.
+Get sent/received messages counters values
+
+Get total contacts, sent messages and received messages counters values.
 
 ### Example
 ```csharp
@@ -6652,7 +6658,7 @@ namespace Example
 
             try
             {
-                // Return counters for messaging data views.
+                // Get sent/received messages counters values
                 GetMessagingCountersResponse result = apiInstance.GetMessagingCounters();
                 Debug.WriteLine(result);
             }
@@ -6687,7 +6693,7 @@ This endpoint does not need any parameter.
 # **GetMessagingStat**
 > GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, string end = null)
 
-Return messaging statistics.
+Get messaging statistics
 
 ### Example
 ```csharp
@@ -6708,13 +6714,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var by = by_example;  // string | Group results by specified period: off, day, month or year. Default is off (optional)  (default to off)
-            var start = 56;  // int? | Start date in unix timestamp format. Default is 7 days ago (optional) 
-            var end = end_example;  // string | End date in unix timestamp format. Default is now (optional) 
+            var by = "off";  // string | *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (optional)  (default to off)
+            var start = 1430438400;  // int? | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional) 
+            var end = 1431648000;  // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional) 
 
             try
             {
-                // Return messaging statistics.
+                // Get messaging statistics
                 GetMessagingStatResponse result = apiInstance.GetMessagingStat(by, start, end);
                 Debug.WriteLine(result);
             }
@@ -6731,9 +6737,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **by** | **string**| Group results by specified period: off, day, month or year. Default is off | [optional] [default to off]
- **start** | **int?**| Start date in unix timestamp format. Default is 7 days ago | [optional] 
- **end** | **string**| End date in unix timestamp format. Default is now | [optional] 
+ **by** | **string**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [optional] [default to off]
+ **start** | **int?**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
+ **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
 
@@ -7205,9 +7211,9 @@ Name | Type | Description  | Notes
 
 <a name="getspendingstat"></a>
 # **GetSpendingStat**
-> GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, int? end = null)
+> GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, string end = null)
 
-Return account spending statistics.
+Get spending statistics
 
 ### Example
 ```csharp
@@ -7230,12 +7236,12 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
             var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
-            var start = 56;  // int? | Optional. Start date in unix timestamp format. Default is 7 days ago (optional) 
-            var end = 56;  // int? | Optional. End date in unix timestamp format. Default is now (optional) 
+            var start = 1430438400;  // int? | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional) 
+            var end = 1431648000;  // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional) 
 
             try
             {
-                // Return account spending statistics.
+                // Get spending statistics
                 GetSpendingStatPaginatedResponse result = apiInstance.GetSpendingStat(page, limit, start, end);
                 Debug.WriteLine(result);
             }
@@ -7254,8 +7260,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int?**| The number of results per page. | [optional] [default to 10]
- **start** | **int?**| Optional. Start date in unix timestamp format. Default is 7 days ago | [optional] 
- **end** | **int?**| Optional. End date in unix timestamp format. Default is now | [optional] 
+ **start** | **int?**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
+ **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
 
@@ -7335,7 +7341,7 @@ This endpoint does not need any parameter.
 # **GetSubaccount**
 > User GetSubaccount (int? id)
 
-Get a single subaccount.
+Get sub-account information
 
 ### Example
 ```csharp
@@ -7360,7 +7366,7 @@ namespace Example
 
             try
             {
-                // Get a single subaccount.
+                // Get sub-account information
                 User result = apiInstance.GetSubaccount(id);
                 Debug.WriteLine(result);
             }
@@ -7398,7 +7404,7 @@ Name | Type | Description  | Notes
 # **GetSubaccounts**
 > User GetSubaccounts (int? page = null, int? limit = null)
 
-Get all subaccounts of current user.
+Get sub-accounts list
 
 ### Example
 ```csharp
@@ -7424,7 +7430,7 @@ namespace Example
 
             try
             {
-                // Get all subaccounts of current user.
+                // Get sub-accounts list
                 User result = apiInstance.GetSubaccounts(page, limit);
                 Debug.WriteLine(result);
             }
@@ -7463,9 +7469,9 @@ Name | Type | Description  | Notes
 # **GetSubaccountsWithTokens**
 > GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
 
-Get all subaccounts with their REST API tokens associated with specified app name.
+Get all sub-accounts with their REST API tokens associated with app name
 
-When more than one token related to app name, last key will be returned.
+Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
 
 ### Example
 ```csharp
@@ -7492,7 +7498,7 @@ namespace Example
 
             try
             {
-                // Get all subaccounts with their REST API tokens associated with specified app name.
+                // Get all sub-accounts with their REST API tokens associated with app name
                 GetSubaccountsWithTokensResponse result = apiInstance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit);
                 Debug.WriteLine(result);
             }
@@ -8300,7 +8306,7 @@ This endpoint does not need any parameter.
 # **InviteSubaccount**
 > void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject)
 
-Invite new subaccount.
+Invite a new sub-account
 
 ### Example
 ```csharp
@@ -8325,7 +8331,7 @@ namespace Example
 
             try
             {
-                // Invite new subaccount.
+                // Invite a new sub-account
                 apiInstance.InviteSubaccount(inviteSubaccountInputObject);
             }
             catch (Exception e)
@@ -8802,7 +8808,7 @@ void (empty response body)
 # **RequestNewSubaccountToken**
 > User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
 
-Request a new REST API token for subaccount.
+Request a new REST API token for sub-account
 
 Returning user object, key and app name.
 
@@ -8829,7 +8835,7 @@ namespace Example
 
             try
             {
-                // Request a new REST API token for subaccount.
+                // Request a new REST API token for sub-account
                 User result = apiInstance.RequestNewSubaccountToken(requestNewSubaccountTokenInputObject);
                 Debug.WriteLine(result);
             }
@@ -10603,7 +10609,7 @@ Name | Type | Description  | Notes
 # **UpdateCurrentUser**
 > UpdateCurrentUserResponse UpdateCurrentUser (UpdateCurrentUserInputObject updateCurrentUserInputObject)
 
-Update current user info.
+Edit current account info
 
 ### Example
 ```csharp
@@ -10628,7 +10634,7 @@ namespace Example
 
             try
             {
-                // Update current user info.
+                // Edit current account info
                 UpdateCurrentUserResponse result = apiInstance.UpdateCurrentUser(updateCurrentUserInputObject);
                 Debug.WriteLine(result);
             }
@@ -11244,7 +11250,7 @@ Name | Type | Description  | Notes
 # **UploadAvatar**
 > void UploadAvatar (System.IO.Stream image)
 
-Add an avatar for the current user.
+Upload an avatar
 
 ### Example
 ```csharp
@@ -11269,7 +11275,7 @@ namespace Example
 
             try
             {
-                // Add an avatar for the current user.
+                // Upload an avatar
                 apiInstance.UploadAvatar(image);
             }
             catch (Exception e)

@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Invoice" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="bundle">bundle (required).</param>
-        /// <param name="currency">currency (required).</param>
-        /// <param name="vat">vat (required).</param>
-        /// <param name="paymentMethod">paymentMethod (required).</param>
+        /// <param name="id">The invoice ID. (required).</param>
+        /// <param name="bundle">Top up amount. (required).</param>
+        /// <param name="currency">Top up currency. (required).</param>
+        /// <param name="vat">VAT charged (if any). (required).</param>
+        /// <param name="paymentMethod">Payment method description. (required).</param>
         public Invoice(int? id = default(int?), int? bundle = default(int?), string currency = default(string), float? vat = default(float?), string paymentMethod = default(string))
         {
             // to ensure "id" is required (not null)
@@ -93,32 +93,37 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The invoice ID.
         /// </summary>
+        /// <value>The invoice ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Bundle
+        /// Top up amount.
         /// </summary>
+        /// <value>Top up amount.</value>
         [DataMember(Name="bundle", EmitDefaultValue=false)]
         public int? Bundle { get; set; }
 
         /// <summary>
-        /// Gets or Sets Currency
+        /// Top up currency.
         /// </summary>
+        /// <value>Top up currency.</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vat
+        /// VAT charged (if any).
         /// </summary>
+        /// <value>VAT charged (if any).</value>
         [DataMember(Name="vat", EmitDefaultValue=false)]
         public float? Vat { get; set; }
 
         /// <summary>
-        /// Gets or Sets PaymentMethod
+        /// Payment method description.
         /// </summary>
+        /// <value>Payment method description.</value>
         [DataMember(Name="paymentMethod", EmitDefaultValue=false)]
         public string PaymentMethod { get; set; }
 

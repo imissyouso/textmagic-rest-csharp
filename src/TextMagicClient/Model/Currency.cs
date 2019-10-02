@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Currency" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="unicodeSymbol">unicodeSymbol (required).</param>
-        /// <param name="htmlSymbol">htmlSymbol (required).</param>
+        /// <param name="id">Three-letter ISO currency ID. (required).</param>
+        /// <param name="unicodeSymbol">Unicode-compatible currency symbol. (required).</param>
+        /// <param name="htmlSymbol">HTML-compatible currency symbol. (required).</param>
         public Currency(string id = default(string), string unicodeSymbol = default(string), string htmlSymbol = default(string))
         {
             // to ensure "id" is required (not null)
@@ -73,20 +73,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Three-letter ISO currency ID.
         /// </summary>
+        /// <value>Three-letter ISO currency ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets UnicodeSymbol
+        /// Unicode-compatible currency symbol.
         /// </summary>
+        /// <value>Unicode-compatible currency symbol.</value>
         [DataMember(Name="unicodeSymbol", EmitDefaultValue=false)]
         public string UnicodeSymbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets HtmlSymbol
+        /// HTML-compatible currency symbol.
         /// </summary>
+        /// <value>HTML-compatible currency symbol.</value>
         [DataMember(Name="htmlSymbol", EmitDefaultValue=false)]
         public string HtmlSymbol { get; set; }
 

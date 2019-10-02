@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class InviteSubaccountInputObject :  IEquatable<InviteSubaccountInputObject>, IValidatableObject
     {
         /// <summary>
-        /// Subaccount role: A for administrator or U for regular user
+        /// Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
         /// </summary>
-        /// <value>Subaccount role: A for administrator or U for regular user</value>
+        /// <value>Type of account: *   **A** for Administrator sub-account *   **U** for Regular User </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RoleEnum
         {
@@ -52,9 +52,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// Subaccount role: A for administrator or U for regular user
+        /// Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
         /// </summary>
-        /// <value>Subaccount role: A for administrator or U for regular user</value>
+        /// <value>Type of account: *   **A** for Administrator sub-account *   **U** for Regular User </value>
         [DataMember(Name="role", EmitDefaultValue=false)]
         public RoleEnum Role { get; set; }
         /// <summary>
@@ -65,8 +65,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InviteSubaccountInputObject" /> class.
         /// </summary>
-        /// <param name="email">Subaccount email (required).</param>
-        /// <param name="role">Subaccount role: A for administrator or U for regular user (required).</param>
+        /// <param name="email">Invitation email will be sent to this email address. (required).</param>
+        /// <param name="role">Type of account: *   **A** for Administrator sub-account *   **U** for Regular User  (required).</param>
         public InviteSubaccountInputObject(string email = default(string), RoleEnum role = default(RoleEnum))
         {
             // to ensure "email" is required (not null)
@@ -90,9 +90,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Subaccount email
+        /// Invitation email will be sent to this email address.
         /// </summary>
-        /// <value>Subaccount email</value>
+        /// <value>Invitation email will be sent to this email address.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 

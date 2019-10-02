@@ -33,13 +33,13 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateCurrentUserResponse" /> class.
         /// </summary>
-        /// <param name="username">username.</param>
-        /// <param name="firstName">firstName.</param>
-        /// <param name="lastName">lastName.</param>
-        /// <param name="email">email.</param>
+        /// <param name="username">Username..</param>
+        /// <param name="firstName">Account first name..</param>
+        /// <param name="lastName">Account last name..</param>
+        /// <param name="email">User email address..</param>
         /// <param name="phone">phone.</param>
-        /// <param name="company">company.</param>
-        /// <param name="timezone">timezone id.</param>
+        /// <param name="company">Account company name..</param>
+        /// <param name="timezone">Internal timezone ID.</param>
         public UpdateCurrentUserResponse(string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), string phone = default(string), string company = default(string), int? timezone = default(int?))
         {
             this.Username = username;
@@ -52,26 +52,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Username
+        /// Username.
         /// </summary>
+        /// <value>Username.</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Account first name.
         /// </summary>
+        /// <value>Account first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Account last name.
         /// </summary>
+        /// <value>Account last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Email
+        /// User email address.
         /// </summary>
+        /// <value>User email address.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
@@ -82,15 +86,16 @@ namespace TextMagicClient.Model
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Company
+        /// Account company name.
         /// </summary>
+        /// <value>Account company name.</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
 
         /// <summary>
-        /// timezone id
+        /// Internal timezone ID
         /// </summary>
-        /// <value>timezone id</value>
+        /// <value>Internal timezone ID</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public int? Timezone { get; set; }
 

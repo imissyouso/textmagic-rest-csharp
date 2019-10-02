@@ -34,12 +34,12 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="UpdateCurrentUserInputObject" /> class.
         /// </summary>
         /// <param name="username">username.</param>
-        /// <param name="firstName">firstName.</param>
-        /// <param name="lastName">lastName.</param>
+        /// <param name="firstName">Account first name..</param>
+        /// <param name="lastName">Account last name..</param>
         /// <param name="email">email.</param>
         /// <param name="phone">phone.</param>
-        /// <param name="company">company.</param>
-        /// <param name="timezone">timezone id.</param>
+        /// <param name="company">Account company name..</param>
+        /// <param name="timezone">The timezome internal id.</param>
         public UpdateCurrentUserInputObject(string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), string phone = default(string), string company = default(string), int? timezone = default(int?))
         {
             this.Username = username;
@@ -58,14 +58,16 @@ namespace TextMagicClient.Model
         public string Username { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Account first name.
         /// </summary>
+        /// <value>Account first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Account last name.
         /// </summary>
+        /// <value>Account last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
@@ -82,15 +84,16 @@ namespace TextMagicClient.Model
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Company
+        /// Account company name.
         /// </summary>
+        /// <value>Account company name.</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
 
         /// <summary>
-        /// timezone id
+        /// The timezome internal id
         /// </summary>
-        /// <value>timezone id</value>
+        /// <value>The timezome internal id</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public int? Timezone { get; set; }
 

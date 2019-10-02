@@ -1472,7 +1472,7 @@ namespace TextMagicClient.Test
             //int? page = null;
             //int? limit = null;
             //int? start = null;
-            //int? end = null;
+            //string end = null;
             //var response = instance.GetSpendingStat(page, limit, start, end);
             //Assert.IsInstanceOf<GetSpendingStatPaginatedResponse> (response, "response is GetSpendingStatPaginatedResponse");
         }
