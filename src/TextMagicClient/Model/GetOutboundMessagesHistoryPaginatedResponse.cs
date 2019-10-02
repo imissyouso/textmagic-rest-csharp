@@ -40,7 +40,7 @@ namespace TextMagicClient.Model
         /// </summary>
         /// <param name="lastId">lastId (required).</param>
         /// <param name="nextLastId">nextLastId (required).</param>
-        /// <param name="limit">limit (required).</param>
+        /// <param name="limit">The number of results per page. (required).</param>
         /// <param name="resources">resources (required).</param>
         public GetOutboundMessagesHistoryPaginatedResponse(int? lastId = default(int?), int? nextLastId = default(int?), int? limit = default(int?), List<MessageOut> resources = default(List<MessageOut>))
         {
@@ -95,8 +95,9 @@ namespace TextMagicClient.Model
         public int? NextLastId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Limit
+        /// The number of results per page.
         /// </summary>
+        /// <value>The number of results per page.</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 

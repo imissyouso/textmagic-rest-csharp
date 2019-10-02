@@ -38,13 +38,13 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageSession" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="startTime">startTime (required).</param>
-        /// <param name="text">text (required).</param>
-        /// <param name="source">source (required).</param>
-        /// <param name="referenceId">referenceId (required).</param>
-        /// <param name="price">price (required).</param>
-        /// <param name="numbersCount">numbersCount (required).</param>
+        /// <param name="id">Session ID. (required).</param>
+        /// <param name="startTime">Session creation time. (required).</param>
+        /// <param name="text">Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags.  (required).</param>
+        /// <param name="source">*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/)  (required).</param>
+        /// <param name="referenceId">Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details).  (required).</param>
+        /// <param name="price">Session cost (in account currency). (required).</param>
+        /// <param name="numbersCount">Session recipient count. (required).</param>
         /// <param name="destination">destination (required).</param>
         public MessageSession(int? id = default(int?), string startTime = default(string), string text = default(string), string source = default(string), string referenceId = default(string), decimal? price = default(decimal?), int? numbersCount = default(int?), string destination = default(string))
         {
@@ -123,44 +123,51 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Session ID.
         /// </summary>
+        /// <value>Session ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartTime
+        /// Session creation time.
         /// </summary>
+        /// <value>Session creation time.</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        /// Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags. 
         /// </summary>
+        /// <value>Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags. </value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets Source
+        /// *   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/) 
         /// </summary>
+        /// <value>*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/) </value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReferenceId
+        /// Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details). 
         /// </summary>
+        /// <value>Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details). </value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Session cost (in account currency).
         /// </summary>
+        /// <value>Session cost (in account currency).</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public decimal? Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets NumbersCount
+        /// Session recipient count.
         /// </summary>
+        /// <value>Session recipient count.</value>
         [DataMember(Name="numbersCount", EmitDefaultValue=false)]
         public int? NumbersCount { get; set; }
 

@@ -75,6 +75,38 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'Sender'
+        /// </summary>
+        [Test]
+        public void SenderTest()
+        {
+            // TODO unit test for the property 'Sender'
+        }
+        /// <summary>
+        /// Test the property 'Receiver'
+        /// </summary>
+        [Test]
+        public void ReceiverTest()
+        {
+            // TODO unit test for the property 'Receiver'
+        }
+        /// <summary>
+        /// Test the property 'Text'
+        /// </summary>
+        [Test]
+        public void TextTest()
+        {
+            // TODO unit test for the property 'Text'
+        }
+        /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Test]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+        /// <summary>
         /// Test the property 'ContactId'
         /// </summary>
         [Test]
@@ -91,14 +123,6 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'SessionId'
         }
         /// <summary>
-        /// Test the property 'Receiver'
-        /// </summary>
-        [Test]
-        public void ReceiverTest()
-        {
-            // TODO unit test for the property 'Receiver'
-        }
-        /// <summary>
         /// Test the property 'MessageTime'
         /// </summary>
         [Test]
@@ -107,28 +131,12 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'MessageTime'
         }
         /// <summary>
-        /// Test the property 'Status'
-        /// </summary>
-        [Test]
-        public void StatusTest()
-        {
-            // TODO unit test for the property 'Status'
-        }
-        /// <summary>
         /// Test the property 'Avatar'
         /// </summary>
         [Test]
         public void AvatarTest()
         {
             // TODO unit test for the property 'Avatar'
-        }
-        /// <summary>
-        /// Test the property 'Text'
-        /// </summary>
-        [Test]
-        public void TextTest()
-        {
-            // TODO unit test for the property 'Text'
         }
         /// <summary>
         /// Test the property 'Deleted'
@@ -177,14 +185,6 @@ namespace TextMagicClient.Test
         public void CountryTest()
         {
             // TODO unit test for the property 'Country'
-        }
-        /// <summary>
-        /// Test the property 'Sender'
-        /// </summary>
-        [Test]
-        public void SenderTest()
-        {
-            // TODO unit test for the property 'Sender'
         }
         /// <summary>
         /// Test the property 'Phone'

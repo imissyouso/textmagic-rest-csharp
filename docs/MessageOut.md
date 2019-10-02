@@ -3,24 +3,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
+**Id** | **int?** | Message ID. | 
+**Sender** | **string** | Message sender (phone number or alphanumeric Sender ID). | [optional] 
+**Receiver** | **string** | Recipient phone number. | [optional] 
+**Text** | **string** |  | 
+**Status** | **string** | Delivery status of the message. @TODO: Please see the table below to see different delivery statuses.  | 
 **ContactId** | **int?** |  | 
 **SessionId** | **int?** |  | 
-**Receiver** | **string** |  | [optional] 
-**MessageTime** | **DateTime?** |  | 
-**Status** | **string** | q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend | 
+**MessageTime** | **DateTime?** | Sending time. | 
 **Avatar** | **string** |  | 
-**Text** | **string** |  | 
 **Deleted** | **bool?** |  | [optional] 
-**Charset** | **string** |  | 
+**Charset** | **string** | Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  | 
 **CharsetLabel** | **string** |  | 
-**FirstName** | **string** |  | 
-**LastName** | **string** |  | 
-**Country** | **string** |  | 
-**Sender** | **string** |  | [optional] 
+**FirstName** | **string** | @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  | 
+**LastName** | **string** | Contact last name. | 
+**Country** | **string** | Two-letter ISO country code of the recipient phone number.  | 
 **Phone** | **string** |  | [optional] 
 **Price** | **float?** |  | [optional] 
-**PartsCount** | **int?** |  | 
+**PartsCount** | **int?** | Message parts (multiples of 160 characters) count. | 
 **FromEmail** | **string** |  | [optional] 
 **FromNumber** | **string** |  | [optional] 
 **SmscId** | **string** |  | [optional] 

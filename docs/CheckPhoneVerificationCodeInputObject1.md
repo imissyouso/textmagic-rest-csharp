@@ -1,12 +1,10 @@
-# TextMagicClient.Model.GetForwardedCallsPaginatedResponse
+# TextMagicClient.Model.CheckPhoneVerificationCodeInputObject1
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Page** | **int?** |  | 
-**PageCount** | **int?** |  | 
-**Limit** | **int?** |  | 
-**Resources** | [**List&lt;ForwardedCall&gt;**](ForwardedCall.md) |  | 
+**Code** | **int?** | Verification code that was received by the user and entered into the form field. | 
+**VerifyId** | **string** | VerifyId from Step 1 to match both requests together. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

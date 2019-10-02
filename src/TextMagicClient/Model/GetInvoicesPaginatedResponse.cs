@@ -39,8 +39,8 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="GetInvoicesPaginatedResponse" /> class.
         /// </summary>
         /// <param name="page">page (required).</param>
-        /// <param name="pageCount">pageCount (required).</param>
-        /// <param name="limit">limit (required).</param>
+        /// <param name="pageCount">The total number of pages. (required).</param>
+        /// <param name="limit">The number of results per page. (required).</param>
         /// <param name="resources">resources (required).</param>
         public GetInvoicesPaginatedResponse(int? page = default(int?), int? pageCount = default(int?), int? limit = default(int?), List<Invoice> resources = default(List<Invoice>))
         {
@@ -89,14 +89,16 @@ namespace TextMagicClient.Model
         public int? Page { get; set; }
 
         /// <summary>
-        /// Gets or Sets PageCount
+        /// The total number of pages.
         /// </summary>
+        /// <value>The total number of pages.</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Limit
+        /// The number of results per page.
         /// </summary>
+        /// <value>The number of results per page.</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 

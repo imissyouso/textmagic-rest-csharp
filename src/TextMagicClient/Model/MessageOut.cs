@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class MessageOut :  IEquatable<MessageOut>, IValidatableObject
     {
         /// <summary>
-        /// q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend
+        /// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
         /// </summary>
-        /// <value>q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend</value>
+        /// <value>Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -118,9 +118,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend
+        /// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
         /// </summary>
-        /// <value>q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend</value>
+        /// <value>Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. </value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
         /// <summary>
@@ -131,24 +131,24 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageOut" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
+        /// <param name="id">Message ID. (required).</param>
+        /// <param name="sender">Message sender (phone number or alphanumeric Sender ID)..</param>
+        /// <param name="receiver">Recipient phone number..</param>
+        /// <param name="text">text (required).</param>
+        /// <param name="status">Delivery status of the message. @TODO: Please see the table below to see different delivery statuses.  (required).</param>
         /// <param name="contactId">contactId (required).</param>
         /// <param name="sessionId">sessionId (required).</param>
-        /// <param name="receiver">receiver.</param>
-        /// <param name="messageTime">messageTime (required).</param>
-        /// <param name="status">q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend (required).</param>
+        /// <param name="messageTime">Sending time. (required).</param>
         /// <param name="avatar">avatar (required).</param>
-        /// <param name="text">text (required).</param>
         /// <param name="deleted">deleted.</param>
-        /// <param name="charset">charset (required).</param>
+        /// <param name="charset">Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  (required).</param>
         /// <param name="charsetLabel">charsetLabel (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="lastName">lastName (required).</param>
-        /// <param name="country">country (required).</param>
-        /// <param name="sender">sender.</param>
+        /// <param name="firstName">@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  (required).</param>
+        /// <param name="lastName">Contact last name. (required).</param>
+        /// <param name="country">Two-letter ISO country code of the recipient phone number.  (required).</param>
         /// <param name="phone">phone.</param>
         /// <param name="price">price.</param>
-        /// <param name="partsCount">partsCount (required).</param>
+        /// <param name="partsCount">Message parts (multiples of 160 characters) count. (required).</param>
         /// <param name="fromEmail">fromEmail.</param>
         /// <param name="fromNumber">fromNumber.</param>
         /// <param name="smscId">smscId.</param>
@@ -159,7 +159,7 @@ namespace TextMagicClient.Model
         /// <param name="userId">userId.</param>
         /// <param name="creditsPrice">creditsPrice.</param>
         /// <param name="chars">chars.</param>
-        public MessageOut(int? id = default(int?), int? contactId = default(int?), int? sessionId = default(int?), string receiver = default(string), DateTime? messageTime = default(DateTime?), StatusEnum status = default(StatusEnum), string avatar = default(string), string text = default(string), bool? deleted = default(bool?), string charset = default(string), string charsetLabel = default(string), string firstName = default(string), string lastName = default(string), string country = default(string), string sender = default(string), string phone = default(string), float? price = default(float?), int? partsCount = default(int?), string fromEmail = default(string), string fromNumber = default(string), string smscId = default(string), string contact = default(string), string source = default(string), int? deliveredCount = default(int?), int? numbersCount = default(int?), int? userId = default(int?), string creditsPrice = default(string), int? chars = default(int?))
+        public MessageOut(int? id = default(int?), string sender = default(string), string receiver = default(string), string text = default(string), StatusEnum status = default(StatusEnum), int? contactId = default(int?), int? sessionId = default(int?), DateTime? messageTime = default(DateTime?), string avatar = default(string), bool? deleted = default(bool?), string charset = default(string), string charsetLabel = default(string), string firstName = default(string), string lastName = default(string), string country = default(string), string phone = default(string), float? price = default(float?), int? partsCount = default(int?), string fromEmail = default(string), string fromNumber = default(string), string smscId = default(string), string contact = default(string), string source = default(string), int? deliveredCount = default(int?), int? numbersCount = default(int?), int? userId = default(int?), string creditsPrice = default(string), int? chars = default(int?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -169,6 +169,24 @@ namespace TextMagicClient.Model
             else
             {
                 this.Id = id;
+            }
+            // to ensure "text" is required (not null)
+            if (text == null)
+            {
+                throw new InvalidDataException("text is a required property for MessageOut and cannot be null");
+            }
+            else
+            {
+                this.Text = text;
+            }
+            // to ensure "status" is required (not null)
+            if (status == null)
+            {
+                throw new InvalidDataException("status is a required property for MessageOut and cannot be null");
+            }
+            else
+            {
+                this.Status = status;
             }
             // to ensure "contactId" is required (not null)
             if (contactId == null)
@@ -197,15 +215,6 @@ namespace TextMagicClient.Model
             {
                 this.MessageTime = messageTime;
             }
-            // to ensure "status" is required (not null)
-            if (status == null)
-            {
-                throw new InvalidDataException("status is a required property for MessageOut and cannot be null");
-            }
-            else
-            {
-                this.Status = status;
-            }
             // to ensure "avatar" is required (not null)
             if (avatar == null)
             {
@@ -214,15 +223,6 @@ namespace TextMagicClient.Model
             else
             {
                 this.Avatar = avatar;
-            }
-            // to ensure "text" is required (not null)
-            if (text == null)
-            {
-                throw new InvalidDataException("text is a required property for MessageOut and cannot be null");
-            }
-            else
-            {
-                this.Text = text;
             }
             // to ensure "charset" is required (not null)
             if (charset == null)
@@ -278,9 +278,9 @@ namespace TextMagicClient.Model
             {
                 this.PartsCount = partsCount;
             }
+            this.Sender = sender;
             this.Receiver = receiver;
             this.Deleted = deleted;
-            this.Sender = sender;
             this.Phone = phone;
             this.Price = price;
             this.FromEmail = fromEmail;
@@ -296,10 +296,32 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Message ID.
         /// </summary>
+        /// <value>Message ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Message sender (phone number or alphanumeric Sender ID).
+        /// </summary>
+        /// <value>Message sender (phone number or alphanumeric Sender ID).</value>
+        [DataMember(Name="sender", EmitDefaultValue=false)]
+        public string Sender { get; set; }
+
+        /// <summary>
+        /// Recipient phone number.
+        /// </summary>
+        /// <value>Recipient phone number.</value>
+        [DataMember(Name="receiver", EmitDefaultValue=false)]
+        public string Receiver { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Text
+        /// </summary>
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
+
 
         /// <summary>
         /// Gets or Sets ContactId
@@ -314,17 +336,11 @@ namespace TextMagicClient.Model
         public int? SessionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Receiver
+        /// Sending time.
         /// </summary>
-        [DataMember(Name="receiver", EmitDefaultValue=false)]
-        public string Receiver { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MessageTime
-        /// </summary>
+        /// <value>Sending time.</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
-
 
         /// <summary>
         /// Gets or Sets Avatar
@@ -333,20 +349,15 @@ namespace TextMagicClient.Model
         public string Avatar { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
-        /// </summary>
-        [DataMember(Name="text", EmitDefaultValue=false)]
-        public string Text { get; set; }
-
-        /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Gets or Sets Charset
+        /// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
         /// </summary>
+        /// <value>Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS </value>
         [DataMember(Name="charset", EmitDefaultValue=false)]
         public string Charset { get; set; }
 
@@ -357,28 +368,25 @@ namespace TextMagicClient.Model
         public string CharsetLabel { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
         /// </summary>
+        /// <value>@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). </value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Contact last name.
         /// </summary>
+        /// <value>Contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Country
+        /// Two-letter ISO country code of the recipient phone number. 
         /// </summary>
+        /// <value>Two-letter ISO country code of the recipient phone number. </value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Sender
-        /// </summary>
-        [DataMember(Name="sender", EmitDefaultValue=false)]
-        public string Sender { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
@@ -393,8 +401,9 @@ namespace TextMagicClient.Model
         public float? Price { get; set; }
 
         /// <summary>
-        /// Gets or Sets PartsCount
+        /// Message parts (multiples of 160 characters) count.
         /// </summary>
+        /// <value>Message parts (multiples of 160 characters) count.</value>
         [DataMember(Name="partsCount", EmitDefaultValue=false)]
         public int? PartsCount { get; set; }
 
@@ -467,20 +476,20 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class MessageOut {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Sender: ").Append(Sender).Append("\n");
+            sb.Append("  Receiver: ").Append(Receiver).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            sb.Append("  Receiver: ").Append(Receiver).Append("\n");
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Avatar: ").Append(Avatar).Append("\n");
-            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  Charset: ").Append(Charset).Append("\n");
             sb.Append("  CharsetLabel: ").Append(CharsetLabel).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
-            sb.Append("  Sender: ").Append(Sender).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  PartsCount: ").Append(PartsCount).Append("\n");
@@ -534,6 +543,26 @@ namespace TextMagicClient.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.Sender == input.Sender ||
+                    (this.Sender != null &&
+                    this.Sender.Equals(input.Sender))
+                ) && 
+                (
+                    this.Receiver == input.Receiver ||
+                    (this.Receiver != null &&
+                    this.Receiver.Equals(input.Receiver))
+                ) && 
+                (
+                    this.Text == input.Text ||
+                    (this.Text != null &&
+                    this.Text.Equals(input.Text))
+                ) && 
+                (
+                    this.Status == input.Status ||
+                    (this.Status != null &&
+                    this.Status.Equals(input.Status))
+                ) && 
+                (
                     this.ContactId == input.ContactId ||
                     (this.ContactId != null &&
                     this.ContactId.Equals(input.ContactId))
@@ -544,29 +573,14 @@ namespace TextMagicClient.Model
                     this.SessionId.Equals(input.SessionId))
                 ) && 
                 (
-                    this.Receiver == input.Receiver ||
-                    (this.Receiver != null &&
-                    this.Receiver.Equals(input.Receiver))
-                ) && 
-                (
                     this.MessageTime == input.MessageTime ||
                     (this.MessageTime != null &&
                     this.MessageTime.Equals(input.MessageTime))
                 ) && 
                 (
-                    this.Status == input.Status ||
-                    (this.Status != null &&
-                    this.Status.Equals(input.Status))
-                ) && 
-                (
                     this.Avatar == input.Avatar ||
                     (this.Avatar != null &&
                     this.Avatar.Equals(input.Avatar))
-                ) && 
-                (
-                    this.Text == input.Text ||
-                    (this.Text != null &&
-                    this.Text.Equals(input.Text))
                 ) && 
                 (
                     this.Deleted == input.Deleted ||
@@ -597,11 +611,6 @@ namespace TextMagicClient.Model
                     this.Country == input.Country ||
                     (this.Country != null &&
                     this.Country.Equals(input.Country))
-                ) && 
-                (
-                    this.Sender == input.Sender ||
-                    (this.Sender != null &&
-                    this.Sender.Equals(input.Sender))
                 ) && 
                 (
                     this.Phone == input.Phone ||
@@ -681,20 +690,22 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Sender != null)
+                    hashCode = hashCode * 59 + this.Sender.GetHashCode();
+                if (this.Receiver != null)
+                    hashCode = hashCode * 59 + this.Receiver.GetHashCode();
+                if (this.Text != null)
+                    hashCode = hashCode * 59 + this.Text.GetHashCode();
+                if (this.Status != null)
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.ContactId != null)
                     hashCode = hashCode * 59 + this.ContactId.GetHashCode();
                 if (this.SessionId != null)
                     hashCode = hashCode * 59 + this.SessionId.GetHashCode();
-                if (this.Receiver != null)
-                    hashCode = hashCode * 59 + this.Receiver.GetHashCode();
                 if (this.MessageTime != null)
                     hashCode = hashCode * 59 + this.MessageTime.GetHashCode();
-                if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Avatar != null)
                     hashCode = hashCode * 59 + this.Avatar.GetHashCode();
-                if (this.Text != null)
-                    hashCode = hashCode * 59 + this.Text.GetHashCode();
                 if (this.Deleted != null)
                     hashCode = hashCode * 59 + this.Deleted.GetHashCode();
                 if (this.Charset != null)
@@ -707,8 +718,6 @@ namespace TextMagicClient.Model
                     hashCode = hashCode * 59 + this.LastName.GetHashCode();
                 if (this.Country != null)
                     hashCode = hashCode * 59 + this.Country.GetHashCode();
-                if (this.Sender != null)
-                    hashCode = hashCode * 59 + this.Sender.GetHashCode();
                 if (this.Phone != null)
                     hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 if (this.Price != null)

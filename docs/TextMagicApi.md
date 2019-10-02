@@ -8,10 +8,12 @@ Method | HTTP request | Description
 [**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
 [**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
 [**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
+[**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#checkphoneverificationcode) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
+[**CheckPhoneVerificationCode_0**](TextMagicApi.md#checkphoneverificationcode_0) | **PUT** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
-[**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats by chat ids or close all chats
-[**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close all chats that have no unread messages.
+[**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
+[**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
 [**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close subaccount.
 [**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
@@ -20,12 +22,12 @@ Method | HTTP request | Description
 [**CreatePushToken**](TextMagicApi.md#createpushtoken) | **POST** /api/v2/push/tokens | Add or update a device token.
 [**CreateSurvey**](TextMagicApi.md#createsurvey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
 [**CreateSurveyNode**](TextMagicApi.md#createsurveynode) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
-[**CreateTemplate**](TextMagicApi.md#createtemplate) | **POST** /api/v2/templates | Create a new template from the submitted data.
+[**CreateTemplate**](TextMagicApi.md#createtemplate) | **POST** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#deleteallcontacts) | **DELETE** /api/v2/contact/all | Delete all contacts.
 [**DeleteAllOutboundMessages**](TextMagicApi.md#deletealloutboundmessages) | **DELETE** /api/v2/message/all | Delete all messages
 [**DeleteAvatar**](TextMagicApi.md#deleteavatar) | **DELETE** /api/v2/user/avatar | Delete an avatar for the current user.\\
-[**DeleteChatMessages**](TextMagicApi.md#deletechatmessages) | **POST** /api/v2/chats/{id}/messages/delete | Delete messages from chat by given messages ID(s).
-[**DeleteChatsBulk**](TextMagicApi.md#deletechatsbulk) | **POST** /api/v2/chats/delete | Delete chats by given ID(s) or delete all chats.
+[**DeleteChatMessages**](TextMagicApi.md#deletechatmessages) | **POST** /api/v2/chats/{id}/messages/delete | Delete chat messages by ID(s)
+[**DeleteChatsBulk**](TextMagicApi.md#deletechatsbulk) | **POST** /api/v2/chats/delete | Delete chats (bulk)
 [**DeleteContact**](TextMagicApi.md#deletecontact) | **DELETE** /api/v2/contacts/{id} | Delete a single contact.
 [**DeleteContactAvatar**](TextMagicApi.md#deletecontactavatar) | **DELETE** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
 [**DeleteContactNote**](TextMagicApi.md#deletecontactnote) | **DELETE** /api/v2/notes/{id} | Delete a single contact note.
@@ -34,35 +36,35 @@ Method | HTTP request | Description
 [**DeleteContactsFromList**](TextMagicApi.md#deletecontactsfromlist) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
 [**DeleteCustomField**](TextMagicApi.md#deletecustomfield) | **DELETE** /api/v2/customfields/{id} | Delete a single custom field.
 [**DeleteDedicatedNumber**](TextMagicApi.md#deletededicatednumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription.
-[**DeleteInboundMessage**](TextMagicApi.md#deleteinboundmessage) | **DELETE** /api/v2/replies/{id} | Delete the incoming message.
-[**DeleteInboundMessagesBulk**](TextMagicApi.md#deleteinboundmessagesbulk) | **POST** /api/v2/replies/delete | Delete inbound messages by given ID(s) or delete all inbound messages.
+[**DeleteInboundMessage**](TextMagicApi.md#deleteinboundmessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
+[**DeleteInboundMessagesBulk**](TextMagicApi.md#deleteinboundmessagesbulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
 [**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a single list.
 [**DeleteListAvatar**](TextMagicApi.md#deletelistavatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
 [**DeleteListContactsBulk**](TextMagicApi.md#deletelistcontactsbulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
 [**DeleteListsBulk**](TextMagicApi.md#deletelistsbulk) | **POST** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
-[**DeleteMessageSession**](TextMagicApi.md#deletemessagesession) | **DELETE** /api/v2/sessions/{id} | Delete a message session, together with all nested messages.
-[**DeleteMessageSessionsBulk**](TextMagicApi.md#deletemessagesessionsbulk) | **POST** /api/v2/sessions/delete | Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+[**DeleteMessageSession**](TextMagicApi.md#deletemessagesession) | **DELETE** /api/v2/sessions/{id} | Delete a session
+[**DeleteMessageSessionsBulk**](TextMagicApi.md#deletemessagesessionsbulk) | **POST** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#deleteoutboundmessage) | **DELETE** /api/v2/messages/{id} | Delete message
-[**DeleteOutboundMessagesBulk**](TextMagicApi.md#deleteoutboundmessagesbulk) | **POST** /api/v2/messages/delete | Delete messages by IDs
+[**DeleteOutboundMessagesBulk**](TextMagicApi.md#deleteoutboundmessagesbulk) | **POST** /api/v2/messages/delete | Delete messages (bulk)
 [**DeletePushToken**](TextMagicApi.md#deletepushtoken) | **DELETE** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
-[**DeleteScheduledMessage**](TextMagicApi.md#deletescheduledmessage) | **DELETE** /api/v2/schedules/{id} | Delete a message session, together with all nested messages.
-[**DeleteScheduledMessagesBulk**](TextMagicApi.md#deletescheduledmessagesbulk) | **POST** /api/v2/schedules/delete | Delete scheduled messages by given ID(s) or delete all scheduled messages.
+[**DeleteScheduledMessage**](TextMagicApi.md#deletescheduledmessage) | **DELETE** /api/v2/schedules/{id} | Delete a single scheduled message
+[**DeleteScheduledMessagesBulk**](TextMagicApi.md#deletescheduledmessagesbulk) | **POST** /api/v2/schedules/delete | Delete scheduled messages (bulk)
 [**DeleteSenderId**](TextMagicApi.md#deletesenderid) | **DELETE** /api/v2/senderids/{id} | Delete a Sender ID.
 [**DeleteSurvey**](TextMagicApi.md#deletesurvey) | **DELETE** /api/v2/surveys/{id} | Delete a survey.
 [**DeleteSurveyNode**](TextMagicApi.md#deletesurveynode) | **DELETE** /api/v2/surveys/nodes/{id} | Delete a node.
-[**DeleteTemplate**](TextMagicApi.md#deletetemplate) | **DELETE** /api/v2/templates/{id} | Delete a single template.
-[**DeleteTemplatesBulk**](TextMagicApi.md#deletetemplatesbulk) | **POST** /api/v2/templates/delete | Delete template by given ID(s) or delete all templates.
+[**DeleteTemplate**](TextMagicApi.md#deletetemplate) | **DELETE** /api/v2/templates/{id} | Delete a template
+[**DeleteTemplatesBulk**](TextMagicApi.md#deletetemplatesbulk) | **POST** /api/v2/templates/delete | Delete templates (bulk)
 [**DoAuth**](TextMagicApi.md#doauth) | **POST** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#docarrierlookup) | **GET** /api/v2/lookups/{phone} | Carrier Lookup
 [**DoEmailLookup**](TextMagicApi.md#doemaillookup) | **GET** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
 [**DuplicateSurvey**](TextMagicApi.md#duplicatesurvey) | **PUT** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#getallbulksessions) | **GET** /api/v2/bulks | Get all bulk sending sessions.
-[**GetAllChats**](TextMagicApi.md#getallchats) | **GET** /api/v2/chats | Get all user chats.
-[**GetAllInboundMessages**](TextMagicApi.md#getallinboundmessages) | **GET** /api/v2/replies | Get all inbox messages.
-[**GetAllMessageSessions**](TextMagicApi.md#getallmessagesessions) | **GET** /api/v2/sessions | Get all message sending sessions.
+[**GetAllChats**](TextMagicApi.md#getallchats) | **GET** /api/v2/chats | Get all chats
+[**GetAllInboundMessages**](TextMagicApi.md#getallinboundmessages) | **GET** /api/v2/replies | Get all inbound messages
+[**GetAllMessageSessions**](TextMagicApi.md#getallmessagesessions) | **GET** /api/v2/sessions | Get all sessions
 [**GetAllOutboundMessages**](TextMagicApi.md#getalloutboundmessages) | **GET** /api/v2/messages | Get all messages
-[**GetAllScheduledMessages**](TextMagicApi.md#getallscheduledmessages) | **GET** /api/v2/schedules | Get all scheduled messages.
-[**GetAllTemplates**](TextMagicApi.md#getalltemplates) | **GET** /api/v2/templates | Get all user templates.
+[**GetAllScheduledMessages**](TextMagicApi.md#getallscheduledmessages) | **GET** /api/v2/schedules | Get all scheduled messages
+[**GetAllTemplates**](TextMagicApi.md#getalltemplates) | **GET** /api/v2/templates | Get all templates
 [**GetAvailableDedicatedNumbers**](TextMagicApi.md#getavailablededicatednumbers) | **GET** /api/v2/numbers/available | Find available dedicated numbers to buy.
 [**GetAvailableSenderSettingOptions**](TextMagicApi.md#getavailablesendersettingoptions) | **GET** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
 [**GetBalanceNotificationOptions**](TextMagicApi.md#getbalancenotificationoptions) | **GET** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
@@ -71,9 +73,9 @@ Method | HTTP request | Description
 [**GetBulkSession**](TextMagicApi.md#getbulksession) | **GET** /api/v2/bulks/{id} | Get bulk message session status.
 [**GetCallbackSettings**](TextMagicApi.md#getcallbacksettings) | **GET** /api/v2/callback/settings | Fetch callback URL settings
 [**GetCallsPrices**](TextMagicApi.md#getcallsprices) | **GET** /api/v2/calls/price | Check pricing for a inbound/outbound call.
-[**GetChat**](TextMagicApi.md#getchat) | **GET** /api/v2/chats/{id} | Get a single chat.
-[**GetChatByPhone**](TextMagicApi.md#getchatbyphone) | **GET** /api/v2/chats/{phone}/by/phone | Find chats by phone.
-[**GetChatMessages**](TextMagicApi.md#getchatmessages) | **GET** /api/v2/chats/{id}/message | Fetch messages from chat with specified chat id.
+[**GetChat**](TextMagicApi.md#getchat) | **GET** /api/v2/chats/{id} | Get a single chat
+[**GetChatByPhone**](TextMagicApi.md#getchatbyphone) | **GET** /api/v2/chats/{phone}/by/phone | Find chats by phone
+[**GetChatMessages**](TextMagicApi.md#getchatmessages) | **GET** /api/v2/chats/{id}/message | Get chat messages
 [**GetContact**](TextMagicApi.md#getcontact) | **GET** /api/v2/contacts/{id} | Get a single contact.
 [**GetContactByPhone**](TextMagicApi.md#getcontactbyphone) | **GET** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
 [**GetContactIfBlocked**](TextMagicApi.md#getcontactifblocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
@@ -90,8 +92,7 @@ Method | HTTP request | Description
 [**GetDedicatedNumber**](TextMagicApi.md#getdedicatednumber) | **GET** /api/v2/numbers/{id} | Get a single dedicated number.
 [**GetDisallowedRules**](TextMagicApi.md#getdisallowedrules) | **GET** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
 [**GetFavourites**](TextMagicApi.md#getfavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists.
-[**GetForwardedCalls**](TextMagicApi.md#getforwardedcalls) | **GET** /api/v2/calls | Get all forwarded calls.
-[**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbox message.
+[**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#getinboundmessagesnotificationsettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Return account invoices.
 [**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get a single list.
@@ -100,15 +101,15 @@ Method | HTTP request | Description
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check price
 [**GetMessagePrices**](TextMagicApi.md#getmessageprices) | **GET** /api/v2/messages/prices | Get pricing
-[**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a message session.
-[**GetMessageSessionStat**](TextMagicApi.md#getmessagesessionstat) | **GET** /api/v2/sessions/{id}/stat | Get sending session statistics.
-[**GetMessagesBySessionId**](TextMagicApi.md#getmessagesbysessionid) | **GET** /api/v2/sessions/{id}/messages | Fetch messages by given session id.
+[**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a session details
+[**GetMessageSessionStat**](TextMagicApi.md#getmessagesessionstat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
+[**GetMessagesBySessionId**](TextMagicApi.md#getmessagesbysessionid) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
 [**GetMessagingCounters**](TextMagicApi.md#getmessagingcounters) | **GET** /api/v2/stats/messaging/data | Return counters for messaging data views.
 [**GetMessagingStat**](TextMagicApi.md#getmessagingstat) | **GET** /api/v2/stats/messaging | Return messaging statistics.
 [**GetOutboundMessage**](TextMagicApi.md#getoutboundmessage) | **GET** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#getoutboundmessageshistory) | **GET** /api/v2/history | Get history
 [**GetPushTokens**](TextMagicApi.md#getpushtokens) | **GET** /api/v2/push/tokens | Get all device tokens assigned to the current account
-[**GetScheduledMessage**](TextMagicApi.md#getscheduledmessage) | **GET** /api/v2/schedules/{id} | Get message schedule.
+[**GetScheduledMessage**](TextMagicApi.md#getscheduledmessage) | **GET** /api/v2/schedules/{id} | Get a single scheduled message
 [**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get a single Sender ID.
 [**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all sender IDs of current user.
 [**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current user sender settings.
@@ -121,42 +122,43 @@ Method | HTTP request | Description
 [**GetSurveyNode**](TextMagicApi.md#getsurveynode) | **GET** /api/v2/surveys/nodes/{id} | Get a node by id.
 [**GetSurveyNodes**](TextMagicApi.md#getsurveynodes) | **GET** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
 [**GetSurveys**](TextMagicApi.md#getsurveys) | **GET** /api/v2/surveys | Get all user surveys.
-[**GetTemplate**](TextMagicApi.md#gettemplate) | **GET** /api/v2/templates/{id} | Get a single template.
+[**GetTemplate**](TextMagicApi.md#gettemplate) | **GET** /api/v2/templates/{id} | Get a template details
 [**GetTimezones**](TextMagicApi.md#gettimezones) | **GET** /api/v2/timezones | Return all available timezone IDs.
-[**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get total amount of unread messages in the current user chats.
+[**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get user&#39;s dedicated numbers.
 [**GetUserLists**](TextMagicApi.md#getuserlists) | **GET** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite new subaccount.
-[**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark several chats as read by chat ids or mark all chats as read
-[**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark several chats as UNread by chat ids or mark all chats as UNread
+[**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
+[**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#mergesurveynodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
-[**MuteChat**](TextMagicApi.md#mutechat) | **POST** /api/v2/chats/mute | Set mute mode.
-[**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute several chats by chat ids or mute all chats
+[**MuteChat**](TextMagicApi.md#mutechat) | **POST** /api/v2/chats/mute | Mute chat sounds
+[**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Just does a pong.
-[**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats by chat ids or reopen all chats
+[**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
 [**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Request for a new Sender ID.
 [**ResetSurvey**](TextMagicApi.md#resetsurvey) | **PUT** /api/v2/surveys/{id}/reset | Reset a survey flow.
-[**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by inbound or outbound messages text.
-[**SearchChatsByIds**](TextMagicApi.md#searchchatsbyids) | **GET** /api/v2/chats/search/ids | Find chats by IDs.
-[**SearchChatsByReceipent**](TextMagicApi.md#searchchatsbyreceipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient (contact, list name or phone number).
+[**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by message text
+[**SearchChatsByIds**](TextMagicApi.md#searchchatsbyids) | **GET** /api/v2/chats/search/ids | Find chats (bulk)
+[**SearchChatsByReceipent**](TextMagicApi.md#searchchatsbyreceipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient
 [**SearchContacts**](TextMagicApi.md#searchcontacts) | **GET** /api/v2/contacts/search | Find user contacts by given parameters.
-[**SearchInboundMessages**](TextMagicApi.md#searchinboundmessages) | **GET** /api/v2/replies/search | Find inbound messages by given parameters.
+[**SearchInboundMessages**](TextMagicApi.md#searchinboundmessages) | **GET** /api/v2/replies/search | Find inbound messages
 [**SearchLists**](TextMagicApi.md#searchlists) | **GET** /api/v2/lists/search | Find contact lists by given parameters.
 [**SearchOutboundMessages**](TextMagicApi.md#searchoutboundmessages) | **GET** /api/v2/messages/search | Find messages
-[**SearchScheduledMessages**](TextMagicApi.md#searchscheduledmessages) | **GET** /api/v2/schedules/search | Find scheduled messages by given parameters.
-[**SearchTemplates**](TextMagicApi.md#searchtemplates) | **GET** /api/v2/templates/search | Find user templates by given parameters.
+[**SearchScheduledMessages**](TextMagicApi.md#searchscheduledmessages) | **GET** /api/v2/schedules/search | Find scheduled messages
+[**SearchTemplates**](TextMagicApi.md#searchtemplates) | **GET** /api/v2/templates/search | Find templates by criteria
 [**SendEmailVerificationCode**](TextMagicApi.md#sendemailverificationcode) | **GET** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#sendmessage) | **POST** /api/v2/messages | Send message
 [**SendPhoneVerificationCode**](TextMagicApi.md#sendphoneverificationcode) | **GET** /api/v2/user/phone/verification | Send user phone verification
-[**SetChatStatus**](TextMagicApi.md#setchatstatus) | **POST** /api/v2/chats/status | Set status of the chat given by ID.
+[**SendPhoneVerificationCode_0**](TextMagicApi.md#sendphoneverificationcode_0) | **POST** /api/v2/verify | Step 1: Send a verification code 
+[**SetChatStatus**](TextMagicApi.md#setchatstatus) | **POST** /api/v2/chats/status | Change chat status
 [**StartSurvey**](TextMagicApi.md#startsurvey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#unblockcontact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
 [**UnblockContactsBulk**](TextMagicApi.md#unblockcontactsbulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
-[**UnmuteChatsBulk**](TextMagicApi.md#unmutechatsbulk) | **POST** /api/v2/chats/unmute/bulk | Unmute several chats by chat ids or unmute all chats
+[**UnmuteChatsBulk**](TextMagicApi.md#unmutechatsbulk) | **POST** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
 [**UnsubscribeContact**](TextMagicApi.md#unsubscribecontact) | **POST** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
 [**UpdateBalanceNotificationSettings**](TextMagicApi.md#updatebalancenotificationsettings) | **PUT** /api/v2/user/notification/balance | Update balance notification settings
 [**UpdateCallbackSettings**](TextMagicApi.md#updatecallbacksettings) | **PUT** /api/v2/callback/settings | Update callback URL settings
@@ -172,7 +174,7 @@ Method | HTTP request | Description
 [**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings for specified country.
 [**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
 [**UpdateSurveyNode**](TextMagicApi.md#updatesurveynode) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
-[**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update existing template.
+[**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Add an avatar for the current user.
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
 [**UploadListAvatar**](TextMagicApi.md#uploadlistavatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list.
@@ -432,6 +434,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="cancelverification"></a>
+# **CancelVerification**
+> void CancelVerification (string verifyId)
+
+Cancel verification process
+
+You can cancel the verification not earlier than 30 seconds after the initial request.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class CancelVerificationExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var verifyId = "123e4567-e89b-12d3-a456-426655440000";  // string | the verifyId that you received in Step 1.
+
+            try
+            {
+                // Cancel verification process
+                apiInstance.CancelVerification(verifyId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.CancelVerification: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **verifyId** | **string**| the verifyId that you received in Step 1. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="checkphoneverificationcode"></a>
 # **CheckPhoneVerificationCode**
 > void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
@@ -478,6 +544,70 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="checkphoneverificationcode_0"></a>
+# **CheckPhoneVerificationCode_0**
+> void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+
+Step 2: Check the verification code 
+
+Check received code from user with the code which was actually sent.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class CheckPhoneVerificationCode_0Example
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var checkPhoneVerificationCodeInputObject = new CheckPhoneVerificationCodeInputObject1(); // CheckPhoneVerificationCodeInputObject1 | 
+
+            try
+            {
+                // Step 2: Check the verification code 
+                apiInstance.CheckPhoneVerificationCode_0(checkPhoneVerificationCodeInputObject);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.CheckPhoneVerificationCode_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject1**](CheckPhoneVerificationCodeInputObject1.md)|  | 
 
 ### Return type
 
@@ -563,6 +693,8 @@ Name | Type | Description  | Notes
 # **CloseChatsBulk**
 > void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject)
 
+Close chats (bulk)
+
 Close chats by chat ids or close all chats
 
 ### Example
@@ -588,7 +720,7 @@ namespace Example
 
             try
             {
-                // Close chats by chat ids or close all chats
+                // Close chats (bulk)
                 apiInstance.CloseChatsBulk(closeChatsBulkInputObject);
             }
             catch (Exception e)
@@ -625,6 +757,8 @@ void (empty response body)
 # **CloseReadChats**
 > void CloseReadChats ()
 
+Close read chats
+
 Close all chats that have no unread messages.
 
 ### Example
@@ -649,7 +783,7 @@ namespace Example
 
             try
             {
-                // Close all chats that have no unread messages.
+                // Close read chats
                 apiInstance.CloseReadChats();
             }
             catch (Exception e)
@@ -1189,7 +1323,7 @@ Name | Type | Description  | Notes
 # **CreateTemplate**
 > ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject)
 
-Create a new template from the submitted data.
+Create a template
 
 ### Example
 ```csharp
@@ -1214,7 +1348,7 @@ namespace Example
 
             try
             {
-                // Create a new template from the submitted data.
+                // Create a template
                 ResourceLinkResponse result = apiInstance.CreateTemplate(createTemplateInputObject);
                 Debug.WriteLine(result);
             }
@@ -1311,6 +1445,8 @@ void (empty response body)
 > void DeleteAllOutboundMessages ()
 
 Delete all messages
+
+Delete all messages.
 
 ### Example
 ```csharp
@@ -1426,6 +1562,8 @@ void (empty response body)
 # **DeleteChatMessages**
 > void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id)
 
+Delete chat messages by ID(s)
+
 Delete messages from chat by given messages ID(s).
 
 ### Example
@@ -1452,7 +1590,7 @@ namespace Example
 
             try
             {
-                // Delete messages from chat by given messages ID(s).
+                // Delete chat messages by ID(s)
                 apiInstance.DeleteChatMessages(deleteChatMessagesBulkInputObject, id);
             }
             catch (Exception e)
@@ -1490,6 +1628,8 @@ void (empty response body)
 # **DeleteChatsBulk**
 > void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject)
 
+Delete chats (bulk)
+
 Delete chats by given ID(s) or delete all chats.
 
 ### Example
@@ -1515,7 +1655,7 @@ namespace Example
 
             try
             {
-                // Delete chats by given ID(s) or delete all chats.
+                // Delete chats (bulk)
                 apiInstance.DeleteChatsBulk(deleteChatsBulkInputObject);
             }
             catch (Exception e)
@@ -2052,7 +2192,9 @@ void (empty response body)
 # **DeleteInboundMessage**
 > void DeleteInboundMessage (int? id)
 
-Delete the incoming message.
+Delete a single inbound message
+
+> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```csharp
@@ -2073,11 +2215,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
+            var id = 1;  // int? | The unique numeric ID for the inbound message.
 
             try
             {
-                // Delete the incoming message.
+                // Delete a single inbound message
                 apiInstance.DeleteInboundMessage(id);
             }
             catch (Exception e)
@@ -2093,7 +2235,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
+ **id** | **int?**| The unique numeric ID for the inbound message. | 
 
 ### Return type
 
@@ -2114,7 +2256,9 @@ void (empty response body)
 # **DeleteInboundMessagesBulk**
 > void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject)
 
-Delete inbound messages by given ID(s) or delete all inbound messages.
+Delete inbound messages (bulk)
+
+> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```csharp
@@ -2139,7 +2283,7 @@ namespace Example
 
             try
             {
-                // Delete inbound messages by given ID(s) or delete all inbound messages.
+                // Delete inbound messages (bulk)
                 apiInstance.DeleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject);
             }
             catch (Exception e)
@@ -2426,7 +2570,7 @@ void (empty response body)
 # **DeleteMessageSession**
 > void DeleteMessageSession (int? id)
 
-Delete a message session, together with all nested messages.
+Delete a session
 
 ### Example
 ```csharp
@@ -2451,7 +2595,7 @@ namespace Example
 
             try
             {
-                // Delete a message session, together with all nested messages.
+                // Delete a session
                 apiInstance.DeleteMessageSession(id);
             }
             catch (Exception e)
@@ -2488,7 +2632,7 @@ void (empty response body)
 # **DeleteMessageSessionsBulk**
 > void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
 
-Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+Delete sessions (bulk)
 
 ### Example
 ```csharp
@@ -2513,7 +2657,7 @@ namespace Example
 
             try
             {
-                // Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+                // Delete sessions (bulk)
                 apiInstance.DeleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject);
             }
             catch (Exception e)
@@ -2551,6 +2695,8 @@ void (empty response body)
 > void DeleteOutboundMessage (int? id)
 
 Delete message
+
+Delete a single message.
 
 ### Example
 ```csharp
@@ -2612,7 +2758,9 @@ void (empty response body)
 # **DeleteOutboundMessagesBulk**
 > void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject)
 
-Delete messages by IDs
+Delete messages (bulk)
+
+Delete outbound messages by given ID(s) or delete all outbound messages.
 
 ### Example
 ```csharp
@@ -2637,7 +2785,7 @@ namespace Example
 
             try
             {
-                // Delete messages by IDs
+                // Delete messages (bulk)
                 apiInstance.DeleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject);
             }
             catch (Exception e)
@@ -2738,7 +2886,7 @@ void (empty response body)
 # **DeleteScheduledMessage**
 > void DeleteScheduledMessage (int? id)
 
-Delete a message session, together with all nested messages.
+Delete a single scheduled message
 
 ### Example
 ```csharp
@@ -2763,7 +2911,7 @@ namespace Example
 
             try
             {
-                // Delete a message session, together with all nested messages.
+                // Delete a single scheduled message
                 apiInstance.DeleteScheduledMessage(id);
             }
             catch (Exception e)
@@ -2800,7 +2948,7 @@ void (empty response body)
 # **DeleteScheduledMessagesBulk**
 > void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject)
 
-Delete scheduled messages by given ID(s) or delete all scheduled messages.
+Delete scheduled messages (bulk)
 
 ### Example
 ```csharp
@@ -2825,7 +2973,7 @@ namespace Example
 
             try
             {
-                // Delete scheduled messages by given ID(s) or delete all scheduled messages.
+                // Delete scheduled messages (bulk)
                 apiInstance.DeleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject);
             }
             catch (Exception e)
@@ -3048,7 +3196,7 @@ void (empty response body)
 # **DeleteTemplate**
 > void DeleteTemplate (int? id)
 
-Delete a single template.
+Delete a template
 
 ### Example
 ```csharp
@@ -3073,7 +3221,7 @@ namespace Example
 
             try
             {
-                // Delete a single template.
+                // Delete a template
                 apiInstance.DeleteTemplate(id);
             }
             catch (Exception e)
@@ -3110,7 +3258,7 @@ void (empty response body)
 # **DeleteTemplatesBulk**
 > void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject)
 
-Delete template by given ID(s) or delete all templates.
+Delete templates (bulk)
 
 ### Example
 ```csharp
@@ -3135,7 +3283,7 @@ namespace Example
 
             try
             {
-                // Delete template by given ID(s) or delete all templates.
+                // Delete templates (bulk)
                 apiInstance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject);
             }
             catch (Exception e)
@@ -3173,6 +3321,8 @@ void (empty response body)
 > DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject)
 
 Authenticate user by given username and password.
+
+Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
 
 ### Example
 ```csharp
@@ -3443,8 +3593,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -3465,8 +3615,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -3487,7 +3637,7 @@ Name | Type | Description  | Notes
 # **GetAllChats**
 > GetAllChatsPaginatedResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null)
 
-Get all user chats.
+Get all chats
 
 ### Example
 ```csharp
@@ -3509,15 +3659,15 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var status = status_example;  // string | Fetch only (a)ctive, (c)losed or (d)eleted chats (optional) 
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var voice = 56;  // int? | Fetch results with voice calls (optional)  (default to 0)
             var flat = 1;  // int? | Should additional contact info be included (optional)  (default to 0)
 
             try
             {
-                // Get all user chats.
+                // Get all chats
                 GetAllChatsPaginatedResponse result = apiInstance.GetAllChats(status, page, limit, orderBy, voice, flat);
                 Debug.WriteLine(result);
             }
@@ -3535,8 +3685,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **status** | **string**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional] 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **voice** | **int?**| Fetch results with voice calls | [optional] [default to 0]
  **flat** | **int?**| Should additional contact info be included | [optional] [default to 0]
@@ -3560,7 +3710,7 @@ Name | Type | Description  | Notes
 # **GetAllInboundMessages**
 > GetAllInboundMessagesPaginatedResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null)
 
-Get all inbox messages.
+Get all inbound messages
 
 ### Example
 ```csharp
@@ -3581,14 +3731,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
 
             try
             {
-                // Get all inbox messages.
+                // Get all inbound messages
                 GetAllInboundMessagesPaginatedResponse result = apiInstance.GetAllInboundMessages(page, limit, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -3605,8 +3755,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
 
@@ -3629,7 +3779,7 @@ Name | Type | Description  | Notes
 # **GetAllMessageSessions**
 > GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null)
 
-Get all message sending sessions.
+Get all sessions
 
 ### Example
 ```csharp
@@ -3650,12 +3800,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
-                // Get all message sending sessions.
+                // Get all sessions
                 GetAllMessageSessionsPaginatedResponse result = apiInstance.GetAllMessageSessions(page, limit);
                 Debug.WriteLine(result);
             }
@@ -3672,8 +3822,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -3696,6 +3846,8 @@ Name | Type | Description  | Notes
 
 Get all messages
 
+Get all user oubound messages.
+
 ### Example
 ```csharp
 using System;
@@ -3715,8 +3867,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var lastId = 56;  // int? | Filter results by ID, selecting all values lesser than the specified ID. Note that \\'page\\' parameter is ignored when \\'lastId\\' is specified (optional) 
 
             try
@@ -3738,8 +3890,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **lastId** | **int?**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
 
 ### Return type
@@ -3761,7 +3913,7 @@ Name | Type | Description  | Notes
 # **GetAllScheduledMessages**
 > GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null)
 
-Get all scheduled messages.
+Get all scheduled messages
 
 ### Example
 ```csharp
@@ -3782,15 +3934,15 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var status = status_example;  // string | Fetch schedules with the specific status: a - actual, c - completed, x - all (optional)  (default to x)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
 
             try
             {
-                // Get all scheduled messages.
+                // Get all scheduled messages
                 GetAllScheduledMessagesPaginatedResponse result = apiInstance.GetAllScheduledMessages(page, limit, status, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -3807,8 +3959,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
@@ -3832,7 +3984,7 @@ Name | Type | Description  | Notes
 # **GetAllTemplates**
 > GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null)
 
-Get all user templates.
+Get all templates
 
 ### Example
 ```csharp
@@ -3853,12 +4005,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 1;  // int? | Fetch specified results page (optional) 
-            var limit = 10;  // int? | How many results to return (optional) 
+            var page = 1;  // int? | Fetch specified results page. (optional) 
+            var limit = 10;  // int? | The number of results per page. (optional) 
 
             try
             {
-                // Get all user templates.
+                // Get all templates
                 GetAllTemplatesPaginatedResponse result = apiInstance.GetAllTemplates(page, limit);
                 Debug.WriteLine(result);
             }
@@ -3875,8 +4027,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] 
- **limit** | **int?**| How many results to return | [optional] 
+ **page** | **int?**| Fetch specified results page. | [optional] 
+ **limit** | **int?**| The number of results per page. | [optional] 
 
 ### Return type
 
@@ -4166,8 +4318,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find blocked contacts by specified search query (optional) 
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
@@ -4191,8 +4343,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find blocked contacts by specified search query | [optional] 
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
@@ -4397,7 +4549,7 @@ This endpoint does not need any parameter.
 # **GetChat**
 > Chat GetChat (int? id)
 
-Get a single chat.
+Get a single chat
 
 ### Example
 ```csharp
@@ -4422,7 +4574,7 @@ namespace Example
 
             try
             {
-                // Get a single chat.
+                // Get a single chat
                 Chat result = apiInstance.GetChat(id);
                 Debug.WriteLine(result);
             }
@@ -4460,7 +4612,7 @@ Name | Type | Description  | Notes
 # **GetChatByPhone**
 > Chat GetChatByPhone (string phone, int? upsert = null, int? reopen = null)
 
-Find chats by phone.
+Find chats by phone
 
 ### Example
 ```csharp
@@ -4487,7 +4639,7 @@ namespace Example
 
             try
             {
-                // Find chats by phone.
+                // Find chats by phone
                 Chat result = apiInstance.GetChatByPhone(phone, upsert, reopen);
                 Debug.WriteLine(result);
             }
@@ -4527,7 +4679,7 @@ Name | Type | Description  | Notes
 # **GetChatMessages**
 > GetChatMessagesPaginatedResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null)
 
-Fetch messages from chat with specified chat id.
+Get chat messages
 
 ### Example
 ```csharp
@@ -4549,8 +4701,8 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | 
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find messages by specified search query (optional) 
             var start = 56;  // int? | Return messages since specified timestamp only (optional) 
             var end = 56;  // int? | Return messages up to specified timestamp only (optional) 
@@ -4559,7 +4711,7 @@ namespace Example
 
             try
             {
-                // Fetch messages from chat with specified chat id.
+                // Get chat messages
                 GetChatMessagesPaginatedResponse result = apiInstance.GetChatMessages(id, page, limit, query, start, end, direction, voice);
                 Debug.WriteLine(result);
             }
@@ -4577,8 +4729,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**|  | 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find messages by specified search query | [optional] 
  **start** | **int?**| Return messages since specified timestamp only | [optional] 
  **end** | **int?**| Return messages up to specified timestamp only | [optional] 
@@ -4941,8 +5093,8 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | 
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -4964,8 +5116,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**|  | 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -5007,8 +5159,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var shared = 56;  // int? | Should shared contacts to be included (optional)  (default to 0)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
@@ -5032,8 +5184,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **shared** | **int?**| Should shared contacts to be included | [optional] [default to 0]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
@@ -5079,7 +5231,7 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var query = "A";  // string | Find recipients by specified search query
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var lists = 56;  // int? | Should lists be returned or not (optional)  (default to 0)
 
             try
@@ -5102,7 +5254,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **string**| Find recipients by specified search query | 
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **lists** | **int?**| Should lists be returned or not | [optional] [default to 0]
 
 ### Return type
@@ -5126,6 +5278,8 @@ Name | Type | Description  | Notes
 
 Fetch user contacts by given group id.
 
+A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
+
 ### Example
 ```csharp
 using System;
@@ -5146,8 +5300,8 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | Given group Id.
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
 
@@ -5171,8 +5325,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| Given group Id. | 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
 
@@ -5397,8 +5551,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -5419,8 +5573,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -5584,8 +5738,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find contacts or lists by specified search query (optional)  (default to A)
 
             try
@@ -5607,8 +5761,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find contacts or lists by specified search query | [optional] [default to A]
 
 ### Return type
@@ -5626,76 +5780,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getforwardedcalls"></a>
-# **GetForwardedCalls**
-> GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null)
-
-Get all forwarded calls.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetForwardedCallsExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
-
-            try
-            {
-                // Get all forwarded calls.
-                GetForwardedCallsPaginatedResponse result = apiInstance.GetForwardedCalls(page, limit);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetForwardedCalls: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
-
-### Return type
-
-[**GetForwardedCallsPaginatedResponse**](GetForwardedCallsPaginatedResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getinboundmessage"></a>
 # **GetInboundMessage**
 > MessageIn GetInboundMessage (int? id)
 
-Get a single inbox message.
+Get a single inbound message
 
 ### Example
 ```csharp
@@ -5716,11 +5805,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
+            var id = 1782832;  // int? | The unique numeric ID for the inbound message.
 
             try
             {
-                // Get a single inbox message.
+                // Get a single inbound message
                 MessageIn result = apiInstance.GetInboundMessage(id);
                 Debug.WriteLine(result);
             }
@@ -5737,7 +5826,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
+ **id** | **int?**| The unique numeric ID for the inbound message. | 
 
 ### Return type
 
@@ -5838,8 +5927,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -5860,8 +5949,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -6030,8 +6119,8 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | 
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -6053,8 +6142,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**|  | 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -6076,6 +6165,8 @@ Name | Type | Description  | Notes
 > GetMessagePreviewResponse GetMessagePreview (string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
 
 Preview message
+
+Get messages preview (with tags merged) up to 100 messages per session.
 
 ### Example
 ```csharp
@@ -6171,6 +6262,8 @@ Name | Type | Description  | Notes
 > GetMessagePriceResponse GetMessagePrice (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
 
 Check price
+
+Check pricing for a new outbound message.
 
 ### Example
 ```csharp
@@ -6269,6 +6362,8 @@ Name | Type | Description  | Notes
 
 Get pricing
 
+Get message prices for all countries.
+
 ### Example
 ```csharp
 using System;
@@ -6326,7 +6421,7 @@ This endpoint does not need any parameter.
 # **GetMessageSession**
 > MessageSession GetMessageSession (int? id)
 
-Get a message session.
+Get a session details
 
 ### Example
 ```csharp
@@ -6347,11 +6442,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
+            var id = 1;  // int? | a session ID
 
             try
             {
-                // Get a message session.
+                // Get a session details
                 MessageSession result = apiInstance.GetMessageSession(id);
                 Debug.WriteLine(result);
             }
@@ -6368,7 +6463,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
+ **id** | **int?**| a session ID | 
 
 ### Return type
 
@@ -6389,7 +6484,7 @@ Name | Type | Description  | Notes
 # **GetMessageSessionStat**
 > GetMessageSessionStatResponse GetMessageSessionStat (int? id, int? includeDeleted = null)
 
-Get sending session statistics.
+Get a session statistics
 
 ### Example
 ```csharp
@@ -6415,7 +6510,7 @@ namespace Example
 
             try
             {
-                // Get sending session statistics.
+                // Get a session statistics
                 GetMessageSessionStatResponse result = apiInstance.GetMessageSessionStat(id, includeDeleted);
                 Debug.WriteLine(result);
             }
@@ -6454,7 +6549,9 @@ Name | Type | Description  | Notes
 # **GetMessagesBySessionId**
 > GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null)
 
-Fetch messages by given session id.
+Get a session messages
+
+A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
 
 ### Example
 ```csharp
@@ -6476,14 +6573,14 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var id = 1;  // int? | 
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var statuses = statuses_example;  // string | Find messages by status (optional) 
             var includeDeleted = 56;  // int? | Search also in deleted messages (optional)  (default to 0)
 
             try
             {
-                // Fetch messages by given session id.
+                // Get a session messages
                 GetMessagesBySessionIdPaginatedResponse result = apiInstance.GetMessagesBySessionId(id, page, limit, statuses, includeDeleted);
                 Debug.WriteLine(result);
             }
@@ -6501,8 +6598,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**|  | 
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **statuses** | **string**| Find messages by status | [optional] 
  **includeDeleted** | **int?**| Search also in deleted messages | [optional] [default to 0]
 
@@ -6653,6 +6750,8 @@ Name | Type | Description  | Notes
 
 Get a single message
 
+Get a single outgoing message.
+
 ### Example
 ```csharp
 using System;
@@ -6716,6 +6815,8 @@ Name | Type | Description  | Notes
 
 Get history
 
+Get outbound messages history.
+
 ### Example
 ```csharp
 using System;
@@ -6735,7 +6836,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var lastId = 56;  // int? | Filter results by ID, selecting all values lesser than the specified ID. (optional) 
             var query = query_example;  // string | Find message by specified search query (optional) 
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
@@ -6760,7 +6861,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **lastId** | **int?**| Filter results by ID, selecting all values lesser than the specified ID. | [optional] 
  **query** | **string**| Find message by specified search query | [optional] 
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
@@ -6844,7 +6945,7 @@ This endpoint does not need any parameter.
 # **GetScheduledMessage**
 > MessagesIcs GetScheduledMessage (int? id)
 
-Get message schedule.
+Get a single scheduled message
 
 ### Example
 ```csharp
@@ -6869,7 +6970,7 @@ namespace Example
 
             try
             {
-                // Get message schedule.
+                // Get a single scheduled message
                 MessagesIcs result = apiInstance.GetScheduledMessage(id);
                 Debug.WriteLine(result);
             }
@@ -6991,8 +7092,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -7013,8 +7114,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -7119,8 +7220,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var start = 56;  // int? | Optional. Start date in unix timestamp format. Default is 7 days ago (optional) 
             var end = 56;  // int? | Optional. End date in unix timestamp format. Default is now (optional) 
 
@@ -7143,8 +7244,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **start** | **int?**| Optional. Start date in unix timestamp format. Default is 7 days ago | [optional] 
  **end** | **int?**| Optional. End date in unix timestamp format. Default is now | [optional] 
 
@@ -7310,8 +7411,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -7332,8 +7433,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -7356,6 +7457,8 @@ Name | Type | Description  | Notes
 
 Get all subaccounts with their REST API tokens associated with specified app name.
 
+When more than one token related to app name, last key will be returned.
+
 ### Example
 ```csharp
 using System;
@@ -7376,8 +7479,8 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var getSubaccountsWithTokensInputObject = new GetSubaccountsWithTokensInputObject(); // GetSubaccountsWithTokensInputObject | 
-            var page = 8.14;  // decimal? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 8.14;  // decimal? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -7399,8 +7502,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **getSubaccountsWithTokensInputObject** | [**GetSubaccountsWithTokensInputObject**](GetSubaccountsWithTokensInputObject.md)|  | 
- **page** | **decimal?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **decimal?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -7631,8 +7734,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -7653,8 +7756,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -7675,7 +7778,7 @@ Name | Type | Description  | Notes
 # **GetTemplate**
 > MessageTemplate GetTemplate (int? id)
 
-Get a single template.
+Get a template details
 
 ### Example
 ```csharp
@@ -7700,7 +7803,7 @@ namespace Example
 
             try
             {
-                // Get a single template.
+                // Get a template details
                 MessageTemplate result = apiInstance.GetTemplate(id);
                 Debug.WriteLine(result);
             }
@@ -7801,6 +7904,8 @@ Name | Type | Description  | Notes
 # **GetUnreadMessagesTotal**
 > GetUnreadMessagesTotalResponse GetUnreadMessagesTotal ()
 
+Get unread messages number
+
 Get total amount of unread messages in the current user chats.
 
 ### Example
@@ -7825,7 +7930,7 @@ namespace Example
 
             try
             {
-                // Get total amount of unread messages in the current user chats.
+                // Get unread messages number
                 GetUnreadMessagesTotalResponse result = apiInstance.GetUnreadMessagesTotal();
                 Debug.WriteLine(result);
             }
@@ -7944,8 +8049,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
 
             try
             {
@@ -7966,8 +8071,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
 
 ### Return type
 
@@ -8009,8 +8114,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var surveyId = 56;  // int? | Fetch only that numbers which are ready for the survey (optional) 
 
             try
@@ -8032,8 +8137,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **surveyId** | **int?**| Fetch only that numbers which are ready for the survey | [optional] 
 
 ### Return type
@@ -8076,8 +8181,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
             var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
             var favoriteOnly = 56;  // int? | Return only favorite lists (optional)  (default to 0)
@@ -8102,8 +8207,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
  **favoriteOnly** | **int?**| Return only favorite lists | [optional] [default to 0]
@@ -8249,6 +8354,8 @@ void (empty response body)
 # **MarkChatsReadBulk**
 > void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject)
 
+Mark chats as read (bulk)
+
 Mark several chats as read by chat ids or mark all chats as read
 
 ### Example
@@ -8274,7 +8381,7 @@ namespace Example
 
             try
             {
-                // Mark several chats as read by chat ids or mark all chats as read
+                // Mark chats as read (bulk)
                 apiInstance.MarkChatsReadBulk(markChatsReadBulkInputObject);
             }
             catch (Exception e)
@@ -8311,6 +8418,8 @@ void (empty response body)
 # **MarkChatsUnreadBulk**
 > void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject)
 
+Mark chats as unread (bulk)
+
 Mark several chats as UNread by chat ids or mark all chats as UNread
 
 ### Example
@@ -8336,7 +8445,7 @@ namespace Example
 
             try
             {
-                // Mark several chats as UNread by chat ids or mark all chats as UNread
+                // Mark chats as unread (bulk)
                 apiInstance.MarkChatsUnreadBulk(markChatsUnreadBulkInputObject);
             }
             catch (Exception e)
@@ -8435,7 +8544,7 @@ void (empty response body)
 # **MuteChat**
 > ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject)
 
-Set mute mode.
+Mute chat sounds
 
 ### Example
 ```csharp
@@ -8460,7 +8569,7 @@ namespace Example
 
             try
             {
-                // Set mute mode.
+                // Mute chat sounds
                 ResourceLinkResponse result = apiInstance.MuteChat(muteChatInputObject);
                 Debug.WriteLine(result);
             }
@@ -8498,6 +8607,8 @@ Name | Type | Description  | Notes
 # **MuteChatsBulk**
 > void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject)
 
+Mute chats (bulk)
+
 Mute several chats by chat ids or mute all chats
 
 ### Example
@@ -8523,7 +8634,7 @@ namespace Example
 
             try
             {
-                // Mute several chats by chat ids or mute all chats
+                // Mute chats (bulk)
                 apiInstance.MuteChatsBulk(muteChatsBulkInputObject);
             }
             catch (Exception e)
@@ -8619,6 +8730,8 @@ This endpoint does not need any parameter.
 # **ReopenChatsBulk**
 > void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject)
 
+Reopen chats (bulk)
+
 Reopen chats by chat ids or reopen all chats
 
 ### Example
@@ -8644,7 +8757,7 @@ namespace Example
 
             try
             {
-                // Reopen chats by chat ids or reopen all chats
+                // Reopen chats (bulk)
                 apiInstance.ReopenChatsBulk(reopenChatsBulkInputObject);
             }
             catch (Exception e)
@@ -8682,6 +8795,8 @@ void (empty response body)
 > User RequestNewSubaccountToken (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject)
 
 Request a new REST API token for subaccount.
+
+Returning user object, key and app name.
 
 ### Example
 ```csharp
@@ -8870,7 +8985,7 @@ Name | Type | Description  | Notes
 # **SearchChats**
 > SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null)
 
-Find chats by inbound or outbound messages text.
+Find chats by message text
 
 ### Example
 ```csharp
@@ -8891,13 +9006,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find chats by specified search query (optional) 
 
             try
             {
-                // Find chats by inbound or outbound messages text.
+                // Find chats by message text
                 SearchChatsPaginatedResponse result = apiInstance.SearchChats(page, limit, query);
                 Debug.WriteLine(result);
             }
@@ -8914,8 +9029,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find chats by specified search query | [optional] 
 
 ### Return type
@@ -8937,7 +9052,7 @@ Name | Type | Description  | Notes
 # **SearchChatsByIds**
 > SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
 
-Find chats by IDs.
+Find chats (bulk)
 
 ### Example
 ```csharp
@@ -8958,13 +9073,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var ids = ids_example;  // string | Find chats by ID(s) (optional) 
 
             try
             {
-                // Find chats by IDs.
+                // Find chats (bulk)
                 SearchChatsByIdsPaginatedResponse result = apiInstance.SearchChatsByIds(page, limit, ids);
                 Debug.WriteLine(result);
             }
@@ -8981,8 +9096,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **ids** | **string**| Find chats by ID(s) | [optional] 
 
 ### Return type
@@ -9003,6 +9118,8 @@ Name | Type | Description  | Notes
 <a name="searchchatsbyreceipent"></a>
 # **SearchChatsByReceipent**
 > SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null)
+
+Find chats by recipient
 
 Find chats by recipient (contact, list name or phone number).
 
@@ -9025,14 +9142,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find chats by specified search query (optional) 
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
 
             try
             {
-                // Find chats by recipient (contact, list name or phone number).
+                // Find chats by recipient
                 SearchChatsByReceipentPaginatedResponse result = apiInstance.SearchChatsByReceipent(page, limit, query, orderBy);
                 Debug.WriteLine(result);
             }
@@ -9049,8 +9166,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find chats by specified search query | [optional] 
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
 
@@ -9094,8 +9211,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var shared = 56;  // int? | Should shared contacts to be included (optional)  (default to 0)
             var ids = ids_example;  // string | Find contact by ID(s) (optional) 
             var listId = 56;  // int? | Find contact by List ID (optional) 
@@ -9125,8 +9242,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **shared** | **int?**| Should shared contacts to be included | [optional] [default to 0]
  **ids** | **string**| Find contact by ID(s) | [optional] 
  **listId** | **int?**| Find contact by List ID | [optional] 
@@ -9156,6 +9273,8 @@ Name | Type | Description  | Notes
 # **SearchInboundMessages**
 > SearchInboundMessagesPaginatedResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null)
 
+Find inbound messages
+
 Find inbound messages by given parameters.
 
 ### Example
@@ -9177,8 +9296,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var ids = ids_example;  // string | Find message by ID(s) (optional) 
             var query = query_example;  // string | Find recipients by specified search query (optional) 
             var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
@@ -9187,7 +9306,7 @@ namespace Example
 
             try
             {
-                // Find inbound messages by given parameters.
+                // Find inbound messages
                 SearchInboundMessagesPaginatedResponse result = apiInstance.SearchInboundMessages(page, limit, ids, query, orderBy, direction, expand);
                 Debug.WriteLine(result);
             }
@@ -9204,8 +9323,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **ids** | **string**| Find message by ID(s) | [optional] 
  **query** | **string**| Find recipients by specified search query | [optional] 
  **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
@@ -9252,8 +9371,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var ids = "1,2,3,4";  // string | Find lists by ID(s) (optional) 
             var query = "A";  // string | Find lists by specified search query (optional) 
             var onlyMine = 56;  // int? | Return only current user lists (optional)  (default to 0)
@@ -9280,8 +9399,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **ids** | **string**| Find lists by ID(s) | [optional] 
  **query** | **string**| Find lists by specified search query | [optional] 
  **onlyMine** | **int?**| Return only current user lists | [optional] [default to 0]
@@ -9310,6 +9429,8 @@ Name | Type | Description  | Notes
 
 Find messages
 
+Find outbound messages by given parameters.
+
 ### Example
 ```csharp
 using System;
@@ -9329,8 +9450,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var lastId = 56;  // int? | Filter results by ID, selecting all values lesser than the specified ID. Note that \\'page\\' parameter is ignored when \\'lastId\\' is specified (optional) 
             var ids = ids_example;  // string | Find message by ID(s) (optional) 
             var sessionId = 56;  // int? | Find messages by session ID (optional) 
@@ -9357,8 +9478,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **lastId** | **int?**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
  **ids** | **string**| Find message by ID(s) | [optional] 
  **sessionId** | **int?**| Find messages by session ID | [optional] 
@@ -9385,7 +9506,7 @@ Name | Type | Description  | Notes
 # **SearchScheduledMessages**
 > SearchScheduledMessagesPaginatedResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null)
 
-Find scheduled messages by given parameters.
+Find scheduled messages
 
 ### Example
 ```csharp
@@ -9406,8 +9527,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var query = query_example;  // string | Find messages by specified search query (optional) 
             var ids = ids_example;  // string | Find schedules by ID(s) (optional) 
             var status = status_example;  // string | Fetch schedules with the specific status: a - actual, c - completed, x - all (optional)  (default to x)
@@ -9416,7 +9537,7 @@ namespace Example
 
             try
             {
-                // Find scheduled messages by given parameters.
+                // Find scheduled messages
                 SearchScheduledMessagesPaginatedResponse result = apiInstance.SearchScheduledMessages(page, limit, query, ids, status, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -9433,8 +9554,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **query** | **string**| Find messages by specified search query | [optional] 
  **ids** | **string**| Find schedules by ID(s) | [optional] 
  **status** | **string**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
@@ -9460,7 +9581,7 @@ Name | Type | Description  | Notes
 # **SearchTemplates**
 > SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
 
-Find user templates by given parameters.
+Find templates by criteria
 
 ### Example
 ```csharp
@@ -9481,15 +9602,15 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page (optional)  (default to 1)
-            var limit = 56;  // int? | How many results to return (optional)  (default to 10)
+            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
             var ids = ids_example;  // string | Find template by ID(s) (optional) 
             var name = name_example;  // string | Find template by name (optional) 
             var content = content_example;  // string | Find template by content (optional) 
 
             try
             {
-                // Find user templates by given parameters.
+                // Find templates by criteria
                 SearchTemplatesPaginatedResponse result = apiInstance.SearchTemplates(page, limit, ids, name, content);
                 Debug.WriteLine(result);
             }
@@ -9506,8 +9627,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page | [optional] [default to 1]
- **limit** | **int?**| How many results to return | [optional] [default to 10]
+ **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
  **ids** | **string**| Find template by ID(s) | [optional] 
  **name** | **string**| Find template by name | [optional] 
  **content** | **string**| Find template by content | [optional] 
@@ -9590,6 +9711,8 @@ void (empty response body)
 > SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject)
 
 Send message
+
+The main entrypoint to send messages. See examples above for the reference.
 
 ### Example
 ```csharp
@@ -9706,9 +9829,76 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="sendphoneverificationcode_0"></a>
+# **SendPhoneVerificationCode_0**
+> SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+
+Step 1: Send a verification code 
+
+Sends verification code to specified phone number.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class SendPhoneVerificationCode_0Example
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var sendPhoneVerificationCodeInputObject = new SendPhoneVerificationCodeInputObject(); // SendPhoneVerificationCodeInputObject | 
+
+            try
+            {
+                // Step 1: Send a verification code 
+                SendPhoneVerificationCodeResponse result = apiInstance.SendPhoneVerificationCode_0(sendPhoneVerificationCodeInputObject);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.SendPhoneVerificationCode_0: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sendPhoneVerificationCodeInputObject** | [**SendPhoneVerificationCodeInputObject**](SendPhoneVerificationCodeInputObject.md)|  | 
+
+### Return type
+
+[**SendPhoneVerificationCodeResponse**](SendPhoneVerificationCodeResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="setchatstatus"></a>
 # **SetChatStatus**
 > ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject)
+
+Change chat status
 
 Set status of the chat given by ID.
 
@@ -9735,7 +9925,7 @@ namespace Example
 
             try
             {
-                // Set status of the chat given by ID.
+                // Change chat status
                 ResourceLinkResponse result = apiInstance.SetChatStatus(setChatStatusInputObject);
                 Debug.WriteLine(result);
             }
@@ -9960,6 +10150,8 @@ void (empty response body)
 # **UnmuteChatsBulk**
 > void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject)
 
+Unmute chats (bulk)
+
 Unmute several chats by chat ids or unmute all chats
 
 ### Example
@@ -9985,7 +10177,7 @@ namespace Example
 
             try
             {
-                // Unmute several chats by chat ids or unmute all chats
+                // Unmute chats (bulk)
                 apiInstance.UnmuteChatsBulk(unmuteChatsBulkInputObject);
             }
             catch (Exception e)
@@ -10975,7 +11167,7 @@ Name | Type | Description  | Notes
 # **UpdateTemplate**
 > ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id)
 
-Update existing template.
+Update a template
 
 ### Example
 ```csharp
@@ -11001,7 +11193,7 @@ namespace Example
 
             try
             {
-                // Update existing template.
+                // Update a template
                 ResourceLinkResponse result = apiInstance.UpdateTemplate(updateTemplateInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -11233,6 +11425,8 @@ Name | Type | Description  | Notes
 > UploadMessageAttachmentResponse UploadMessageAttachment (System.IO.Stream file)
 
 Upload message attachment
+
+Upload a new file to insert it as a link.
 
 ### Example
 ```csharp

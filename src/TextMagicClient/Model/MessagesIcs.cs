@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagesIcs" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="nextSend">nextSend (required).</param>
-        /// <param name="rrule">rrule (required).</param>
+        /// <param name="id">Schedule ID. (required).</param>
+        /// <param name="nextSend">Next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format.  (required).</param>
+        /// <param name="rrule">[iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string.  (required).</param>
         /// <param name="session">session (required).</param>
         /// <param name="lastSent">lastSent (required).</param>
         /// <param name="contactName">contactName (required).</param>
@@ -213,20 +213,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Schedule ID.
         /// </summary>
+        /// <value>Schedule ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets NextSend
+        /// Next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format. 
         /// </summary>
+        /// <value>Next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format. </value>
         [DataMember(Name="nextSend", EmitDefaultValue=false)]
         public DateTime? NextSend { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rrule
+        /// [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string. 
         /// </summary>
+        /// <value>[iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string. </value>
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
 

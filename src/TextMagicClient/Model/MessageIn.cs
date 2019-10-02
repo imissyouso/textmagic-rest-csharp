@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageIn" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="sender">sender (required).</param>
-        /// <param name="receiver">receiver (required).</param>
-        /// <param name="messageTime">messageTime (required).</param>
-        /// <param name="text">text (required).</param>
+        /// <param name="id">The ID of the inbound message. (required).</param>
+        /// <param name="sender">The sender’s phone number. (required).</param>
+        /// <param name="receiver">The receiver’s phone number (i.e. your dedicated or shared reply number). (required).</param>
+        /// <param name="messageTime">The time when the message reached the TextMagic API endpoint. (required).</param>
+        /// <param name="text">The text from the received message. (required).</param>
         /// <param name="contactId">contactId.</param>
         /// <param name="firstName">firstName.</param>
         /// <param name="lastName">lastName.</param>
@@ -109,32 +109,37 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the inbound message.
         /// </summary>
+        /// <value>The ID of the inbound message.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sender
+        /// The sender’s phone number.
         /// </summary>
+        /// <value>The sender’s phone number.</value>
         [DataMember(Name="sender", EmitDefaultValue=false)]
         public string Sender { get; set; }
 
         /// <summary>
-        /// Gets or Sets Receiver
+        /// The receiver’s phone number (i.e. your dedicated or shared reply number).
         /// </summary>
+        /// <value>The receiver’s phone number (i.e. your dedicated or shared reply number).</value>
         [DataMember(Name="receiver", EmitDefaultValue=false)]
         public string Receiver { get; set; }
 
         /// <summary>
-        /// Gets or Sets MessageTime
+        /// The time when the message reached the TextMagic API endpoint.
         /// </summary>
+        /// <value>The time when the message reached the TextMagic API endpoint.</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        /// The text from the received message.
         /// </summary>
+        /// <value>The text from the received message.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 

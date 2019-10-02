@@ -111,6 +111,27 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> CancelSurveyWithHttpInfo (int? id);
         /// <summary>
+        /// Cancel verification process
+        /// </summary>
+        /// <remarks>
+        /// You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns></returns>
+        void CancelVerification (string verifyId);
+
+        /// <summary>
+        /// Cancel verification process
+        /// </summary>
+        /// <remarks>
+        /// You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CancelVerificationWithHttpInfo (string verifyId);
+        /// <summary>
         /// Check user phone verification code
         /// </summary>
         /// <remarks>
@@ -131,6 +152,27 @@ namespace TextMagicClient.Api
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CheckPhoneVerificationCodeWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
+        /// <summary>
+        /// Step 2: Check the verification code 
+        /// </summary>
+        /// <remarks>
+        /// Check received code from user with the code which was actually sent.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns></returns>
+        void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+
+        /// <summary>
+        /// Step 2: Check the verification code 
+        /// </summary>
+        /// <remarks>
+        /// Check received code from user with the code which was actually sent.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CheckPhoneVerificationCode_0WithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -155,10 +197,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> ClearAndAssignContactsToListWithHttpInfo (ClearAndAssignContactsToListInputObject clearAndAssignContactsToListInputObject, int? id);
         /// <summary>
-        /// Close chats by chat ids or close all chats
+        /// Close chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close chats by chat ids or close all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -166,30 +208,30 @@ namespace TextMagicClient.Api
         void CloseChatsBulk (CloseChatsBulkInputObject closeChatsBulkInputObject);
 
         /// <summary>
-        /// Close chats by chat ids or close all chats
+        /// Close chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close chats by chat ids or close all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CloseChatsBulkWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject);
         /// <summary>
-        /// Close all chats that have no unread messages.
+        /// Close read chats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close all chats that have no unread messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
         void CloseReadChats ();
 
         /// <summary>
-        /// Close all chats that have no unread messages.
+        /// Close read chats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close all chats that have no unread messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -367,7 +409,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> CreateSurveyNodeWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
         /// <summary>
-        /// Create a new template from the submitted data.
+        /// Create a template
         /// </summary>
         /// <remarks>
         /// 
@@ -378,7 +420,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse CreateTemplate (CreateTemplateInputObject createTemplateInputObject);
 
         /// <summary>
-        /// Create a new template from the submitted data.
+        /// Create a template
         /// </summary>
         /// <remarks>
         /// 
@@ -410,7 +452,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete all messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -420,7 +462,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete all messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -445,10 +487,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAvatarWithHttpInfo ();
         /// <summary>
-        /// Delete messages from chat by given messages ID(s).
+        /// Delete chat messages by ID(s)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages from chat by given messages ID(s).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -457,10 +499,10 @@ namespace TextMagicClient.Api
         void DeleteChatMessages (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s).
+        /// Delete chat messages by ID(s)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages from chat by given messages ID(s).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -468,10 +510,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteChatMessagesWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats.
+        /// Delete chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete chats by given ID(s) or delete all chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -479,10 +521,10 @@ namespace TextMagicClient.Api
         void DeleteChatsBulk (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats.
+        /// Delete chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete chats by given ID(s) or delete all chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -661,31 +703,31 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteDedicatedNumberWithHttpInfo (int? id);
         /// <summary>
-        /// Delete the incoming message.
+        /// Delete a single inbound message
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns></returns>
         void DeleteInboundMessage (int? id);
 
         /// <summary>
-        /// Delete the incoming message.
+        /// Delete a single inbound message
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteInboundMessageWithHttpInfo (int? id);
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages.
+        /// Delete inbound messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -693,10 +735,10 @@ namespace TextMagicClient.Api
         void DeleteInboundMessagesBulk (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages.
+        /// Delete inbound messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -789,7 +831,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListsBulkWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject);
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a session
         /// </summary>
         /// <remarks>
         /// 
@@ -800,7 +842,7 @@ namespace TextMagicClient.Api
         void DeleteMessageSession (int? id);
 
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a session
         /// </summary>
         /// <remarks>
         /// 
@@ -810,7 +852,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteMessageSessionWithHttpInfo (int? id);
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+        /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -821,7 +863,7 @@ namespace TextMagicClient.Api
         void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+        /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -834,7 +876,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a single message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -845,17 +887,17 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a single message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOutboundMessageWithHttpInfo (int? id);
         /// <summary>
-        /// Delete messages by IDs
+        /// Delete messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -863,10 +905,10 @@ namespace TextMagicClient.Api
         void DeleteOutboundMessagesBulk (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete messages by IDs
+        /// Delete messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -896,7 +938,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeletePushTokenWithHttpInfo (string type, int? deviceId);
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -907,7 +949,7 @@ namespace TextMagicClient.Api
         void DeleteScheduledMessage (int? id);
 
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -917,7 +959,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteScheduledMessageWithHttpInfo (int? id);
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
+        /// Delete scheduled messages (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -928,7 +970,7 @@ namespace TextMagicClient.Api
         void DeleteScheduledMessagesBulk (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
+        /// Delete scheduled messages (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -1001,7 +1043,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteSurveyNodeWithHttpInfo (int? id);
         /// <summary>
-        /// Delete a single template.
+        /// Delete a template
         /// </summary>
         /// <remarks>
         /// 
@@ -1012,7 +1054,7 @@ namespace TextMagicClient.Api
         void DeleteTemplate (int? id);
 
         /// <summary>
-        /// Delete a single template.
+        /// Delete a template
         /// </summary>
         /// <remarks>
         /// 
@@ -1022,7 +1064,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteTemplateWithHttpInfo (int? id);
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates.
+        /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -1033,7 +1075,7 @@ namespace TextMagicClient.Api
         void DeleteTemplatesBulk (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates.
+        /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -1046,7 +1088,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -1057,7 +1099,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -1135,8 +1177,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetAllBulkSessionsPaginatedResponse</returns>
         GetAllBulkSessionsPaginatedResponse GetAllBulkSessions (int? page = null, int? limit = null);
 
@@ -1147,20 +1189,20 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetAllBulkSessionsPaginatedResponse</returns>
         ApiResponse<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get all user chats.
+        /// Get all chats
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -1168,79 +1210,79 @@ namespace TextMagicClient.Api
         GetAllChatsPaginatedResponse GetAllChats (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
 
         /// <summary>
-        /// Get all user chats.
+        /// Get all chats
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
         /// <returns>ApiResponse of GetAllChatsPaginatedResponse</returns>
         ApiResponse<GetAllChatsPaginatedResponse> GetAllChatsWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
         /// <summary>
-        /// Get all inbox messages.
+        /// Get all inbound messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>GetAllInboundMessagesPaginatedResponse</returns>
         GetAllInboundMessagesPaginatedResponse GetAllInboundMessages (int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all inbox messages.
+        /// Get all inbound messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>ApiResponse of GetAllInboundMessagesPaginatedResponse</returns>
         ApiResponse<GetAllInboundMessagesPaginatedResponse> GetAllInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get all message sending sessions.
+        /// Get all sessions
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetAllMessageSessionsPaginatedResponse</returns>
         GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all message sending sessions.
+        /// Get all sessions
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetAllMessageSessionsPaginatedResponse</returns>
         ApiResponse<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all user oubound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>GetAllOutboundMessagesPaginatedResponse</returns>
         GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null);
@@ -1249,23 +1291,23 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all user oubound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>ApiResponse of GetAllOutboundMessagesPaginatedResponse</returns>
         ApiResponse<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
         /// <summary>
-        /// Get all scheduled messages.
+        /// Get all scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -1273,40 +1315,40 @@ namespace TextMagicClient.Api
         GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all scheduled messages.
+        /// Get all scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>ApiResponse of GetAllScheduledMessagesPaginatedResponse</returns>
         ApiResponse<GetAllScheduledMessagesPaginatedResponse> GetAllScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get all user templates.
+        /// Get all templates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>GetAllTemplatesPaginatedResponse</returns>
         GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all user templates.
+        /// Get all templates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>ApiResponse of GetAllTemplatesPaginatedResponse</returns>
         ApiResponse<GetAllTemplatesPaginatedResponse> GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -1400,8 +1442,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -1415,8 +1457,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -1482,7 +1524,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetCallsPricesResponse</returns>
         ApiResponse<GetCallsPricesResponse> GetCallsPricesWithHttpInfo ();
         /// <summary>
-        /// Get a single chat.
+        /// Get a single chat
         /// </summary>
         /// <remarks>
         /// 
@@ -1493,7 +1535,7 @@ namespace TextMagicClient.Api
         Chat GetChat (int? id);
 
         /// <summary>
-        /// Get a single chat.
+        /// Get a single chat
         /// </summary>
         /// <remarks>
         /// 
@@ -1503,7 +1545,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Chat</returns>
         ApiResponse<Chat> GetChatWithHttpInfo (int? id);
         /// <summary>
-        /// Find chats by phone.
+        /// Find chats by phone
         /// </summary>
         /// <remarks>
         /// 
@@ -1516,7 +1558,7 @@ namespace TextMagicClient.Api
         Chat GetChatByPhone (string phone, int? upsert = null, int? reopen = null);
 
         /// <summary>
-        /// Find chats by phone.
+        /// Find chats by phone
         /// </summary>
         /// <remarks>
         /// 
@@ -1528,15 +1570,15 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Chat</returns>
         ApiResponse<Chat> GetChatByPhoneWithHttpInfo (string phone, int? upsert = null, int? reopen = null);
         /// <summary>
-        /// Fetch messages from chat with specified chat id.
+        /// Get chat messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -1546,15 +1588,15 @@ namespace TextMagicClient.Api
         GetChatMessagesPaginatedResponse GetChatMessages (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id.
+        /// Get chat messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -1675,8 +1717,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetContactNotesPaginatedResponse</returns>
         GetContactNotesPaginatedResponse GetContactNotes (int? id, int? page = null, int? limit = null);
 
@@ -1688,8 +1730,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetContactNotesPaginatedResponse</returns>
         ApiResponse<GetContactNotesPaginatedResponse> GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
@@ -1699,8 +1741,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -1714,8 +1756,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -1729,7 +1771,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>GetContactsAutocompleteResponse</returns>
         GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null);
@@ -1742,7 +1784,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>ApiResponse of GetContactsAutocompleteResponse</returns>
         ApiResponse<GetContactsAutocompleteResponse> GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null);
@@ -1750,12 +1792,12 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>GetContactsByListIdPaginatedResponse</returns>
@@ -1765,12 +1807,12 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>ApiResponse of GetContactsByListIdPaginatedResponse</returns>
@@ -1841,8 +1883,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetCustomFieldsPaginatedResponse</returns>
         GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null);
 
@@ -1853,8 +1895,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetCustomFieldsPaginatedResponse</returns>
         ApiResponse<GetCustomFieldsPaginatedResponse> GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -1904,8 +1946,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>GetFavouritesPaginatedResponse</returns>
         GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null);
@@ -1917,53 +1959,30 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
         ApiResponse<GetFavouritesPaginatedResponse> GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
-        /// Get all forwarded calls.
+        /// Get a single inbound message
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetForwardedCallsPaginatedResponse</returns>
-        GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Get all forwarded calls.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetForwardedCallsPaginatedResponse</returns>
-        ApiResponse<GetForwardedCallsPaginatedResponse> GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null);
-        /// <summary>
-        /// Get a single inbox message.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>MessageIn</returns>
         MessageIn GetInboundMessage (int? id);
 
         /// <summary>
-        /// Get a single inbox message.
+        /// Get a single inbound message
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>ApiResponse of MessageIn</returns>
         ApiResponse<MessageIn> GetInboundMessageWithHttpInfo (int? id);
         /// <summary>
@@ -1992,8 +2011,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetInvoicesPaginatedResponse</returns>
         GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null);
 
@@ -2004,8 +2023,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetInvoicesPaginatedResponse</returns>
         ApiResponse<GetInvoicesPaginatedResponse> GetInvoicesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -2058,8 +2077,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetListsOfContactPaginatedResponse</returns>
         GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null);
 
@@ -2071,15 +2090,15 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetListsOfContactPaginatedResponse</returns>
         ApiResponse<GetListsOfContactPaginatedResponse> GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get messages preview (with tags merged) up to 100 messages per session.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -2106,7 +2125,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get messages preview (with tags merged) up to 100 messages per session.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -2132,7 +2151,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// 
+        /// Check pricing for a new outbound message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -2160,7 +2179,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// 
+        /// Check pricing for a new outbound message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -2187,7 +2206,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get message prices for all countries.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMessagePricesResponse</returns>
@@ -2197,34 +2216,34 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get message prices for all countries.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMessagePricesResponse</returns>
         ApiResponse<GetMessagePricesResponse> GetMessagePricesWithHttpInfo ();
         /// <summary>
-        /// Get a message session.
+        /// Get a session details
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>MessageSession</returns>
         MessageSession GetMessageSession (int? id);
 
         /// <summary>
-        /// Get a message session.
+        /// Get a session details
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>ApiResponse of MessageSession</returns>
         ApiResponse<MessageSession> GetMessageSessionWithHttpInfo (int? id);
         /// <summary>
-        /// Get sending session statistics.
+        /// Get a session statistics
         /// </summary>
         /// <remarks>
         /// 
@@ -2236,7 +2255,7 @@ namespace TextMagicClient.Api
         GetMessageSessionStatResponse GetMessageSessionStat (int? id, int? includeDeleted = null);
 
         /// <summary>
-        /// Get sending session statistics.
+        /// Get a session statistics
         /// </summary>
         /// <remarks>
         /// 
@@ -2247,30 +2266,30 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetMessageSessionStatResponse</returns>
         ApiResponse<GetMessageSessionStatResponse> GetMessageSessionStatWithHttpInfo (int? id, int? includeDeleted = null);
         /// <summary>
-        /// Fetch messages by given session id.
+        /// Get a session messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>GetMessagesBySessionIdPaginatedResponse</returns>
         GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
 
         /// <summary>
-        /// Fetch messages by given session id.
+        /// Get a session messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>ApiResponse of GetMessagesBySessionIdPaginatedResponse</returns>
@@ -2323,7 +2342,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single outgoing message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2334,7 +2353,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single outgoing message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2344,10 +2363,10 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get outbound messages history.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -2359,10 +2378,10 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get outbound messages history.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -2389,7 +2408,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetPushTokensResponse</returns>
         ApiResponse<GetPushTokensResponse> GetPushTokensWithHttpInfo ();
         /// <summary>
-        /// Get message schedule.
+        /// Get a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -2400,7 +2419,7 @@ namespace TextMagicClient.Api
         MessagesIcs GetScheduledMessage (int? id);
 
         /// <summary>
-        /// Get message schedule.
+        /// Get a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -2437,8 +2456,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSenderIdsPaginatedResponse</returns>
         GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null);
 
@@ -2449,8 +2468,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSenderIdsPaginatedResponse</returns>
         ApiResponse<GetSenderIdsPaginatedResponse> GetSenderIdsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -2481,8 +2500,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>GetSpendingStatPaginatedResponse</returns>
@@ -2495,8 +2514,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
@@ -2548,8 +2567,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>User</returns>
         User GetSubaccounts (int? page = null, int? limit = null);
 
@@ -2560,20 +2579,20 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> GetSubaccountsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When more than one token related to app name, last key will be returned.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSubaccountsWithTokensResponse</returns>
         GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
 
@@ -2581,12 +2600,12 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When more than one token related to app name, last key will be returned.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSubaccountsWithTokensResponse</returns>
         ApiResponse<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
         /// <summary>
@@ -2659,8 +2678,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSurveysPaginatedResponse</returns>
         GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null);
 
@@ -2671,12 +2690,12 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSurveysPaginatedResponse</returns>
         ApiResponse<GetSurveysPaginatedResponse> GetSurveysWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single template.
+        /// Get a template details
         /// </summary>
         /// <remarks>
         /// 
@@ -2687,7 +2706,7 @@ namespace TextMagicClient.Api
         MessageTemplate GetTemplate (int? id);
 
         /// <summary>
-        /// Get a single template.
+        /// Get a template details
         /// </summary>
         /// <remarks>
         /// 
@@ -2718,20 +2737,20 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetTimezonesResponse</returns>
         ApiResponse<GetTimezonesResponse> GetTimezonesWithHttpInfo (int? full = null);
         /// <summary>
-        /// Get total amount of unread messages in the current user chats.
+        /// Get unread messages number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get total amount of unread messages in the current user chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetUnreadMessagesTotalResponse</returns>
         GetUnreadMessagesTotalResponse GetUnreadMessagesTotal ();
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats.
+        /// Get unread messages number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get total amount of unread messages in the current user chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetUnreadMessagesTotalResponse</returns>
@@ -2764,8 +2783,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetUnsubscribersPaginatedResponse</returns>
         GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null);
 
@@ -2776,8 +2795,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetUnsubscribersPaginatedResponse</returns>
         ApiResponse<GetUnsubscribersPaginatedResponse> GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -2787,8 +2806,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>GetUserDedicatedNumbersPaginatedResponse</returns>
         GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null);
@@ -2800,8 +2819,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
@@ -2812,8 +2831,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -2828,8 +2847,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -2877,10 +2896,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> InviteSubaccountWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject);
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read
+        /// Mark chats as read (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as read by chat ids or mark all chats as read
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -2888,20 +2907,20 @@ namespace TextMagicClient.Api
         void MarkChatsReadBulk (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read
+        /// Mark chats as read (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as read by chat ids or mark all chats as read
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MarkChatsReadBulkWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread
+        /// Mark chats as unread (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -2909,10 +2928,10 @@ namespace TextMagicClient.Api
         void MarkChatsUnreadBulk (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread
+        /// Mark chats as unread (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -2940,7 +2959,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MergeSurveyNodesWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
         /// <summary>
-        /// Set mute mode.
+        /// Mute chat sounds
         /// </summary>
         /// <remarks>
         /// 
@@ -2951,7 +2970,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject);
 
         /// <summary>
-        /// Set mute mode.
+        /// Mute chat sounds
         /// </summary>
         /// <remarks>
         /// 
@@ -2961,10 +2980,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> MuteChatWithHttpInfo (MuteChatInputObject muteChatInputObject);
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats
+        /// Mute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mute several chats by chat ids or mute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -2972,10 +2991,10 @@ namespace TextMagicClient.Api
         void MuteChatsBulk (MuteChatsBulkInputObject muteChatsBulkInputObject);
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats
+        /// Mute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mute several chats by chat ids or mute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -3001,10 +3020,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of PingResponse</returns>
         ApiResponse<PingResponse> PingWithHttpInfo ();
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats
+        /// Reopen chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Reopen chats by chat ids or reopen all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -3012,10 +3031,10 @@ namespace TextMagicClient.Api
         void ReopenChatsBulk (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats
+        /// Reopen chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Reopen chats by chat ids or reopen all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -3025,7 +3044,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning user object, key and app name.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -3036,7 +3055,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning user object, key and app name.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -3085,78 +3104,78 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> ResetSurveyWithHttpInfo (int? id);
         /// <summary>
-        /// Find chats by inbound or outbound messages text.
+        /// Find chats by message text
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>SearchChatsPaginatedResponse</returns>
         SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text.
+        /// Find chats by message text
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>ApiResponse of SearchChatsPaginatedResponse</returns>
         ApiResponse<SearchChatsPaginatedResponse> SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
-        /// Find chats by IDs.
+        /// Find chats (bulk)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>SearchChatsByIdsPaginatedResponse</returns>
         SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null);
 
         /// <summary>
-        /// Find chats by IDs.
+        /// Find chats (bulk)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>ApiResponse of SearchChatsByIdsPaginatedResponse</returns>
         ApiResponse<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null);
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number).
+        /// Find chats by recipient
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find chats by recipient (contact, list name or phone number).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>SearchChatsByReceipentPaginatedResponse</returns>
         SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent (int? page = null, int? limit = null, string query = null, string orderBy = null);
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number).
+        /// Find chats by recipient
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find chats by recipient (contact, list name or phone number).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>ApiResponse of SearchChatsByReceipentPaginatedResponse</returns>
@@ -3168,8 +3187,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -3189,8 +3208,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -3203,14 +3222,14 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchContactsPaginatedResponse</returns>
         ApiResponse<SearchContactsPaginatedResponse> SearchContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Find inbound messages by given parameters.
+        /// Find inbound messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find inbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -3220,14 +3239,14 @@ namespace TextMagicClient.Api
         SearchInboundMessagesPaginatedResponse SearchInboundMessages (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
 
         /// <summary>
-        /// Find inbound messages by given parameters.
+        /// Find inbound messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find inbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -3242,8 +3261,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -3260,8 +3279,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -3274,11 +3293,11 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find outbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -3292,11 +3311,11 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find outbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -3306,14 +3325,14 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchOutboundMessagesPaginatedResponse</returns>
         ApiResponse<SearchOutboundMessagesPaginatedResponse> SearchOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
         /// <summary>
-        /// Find scheduled messages by given parameters.
+        /// Find scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -3323,14 +3342,14 @@ namespace TextMagicClient.Api
         SearchScheduledMessagesPaginatedResponse SearchScheduledMessages (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find scheduled messages by given parameters.
+        /// Find scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -3339,14 +3358,14 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchScheduledMessagesPaginatedResponse</returns>
         ApiResponse<SearchScheduledMessagesPaginatedResponse> SearchScheduledMessagesWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Find user templates by given parameters.
+        /// Find templates by criteria
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -3354,14 +3373,14 @@ namespace TextMagicClient.Api
         SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
 
         /// <summary>
-        /// Find user templates by given parameters.
+        /// Find templates by criteria
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -3390,7 +3409,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The main entrypoint to send messages. See examples above for the reference.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -3401,7 +3420,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The main entrypoint to send messages. See examples above for the reference.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -3427,10 +3446,31 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SendPhoneVerificationCodeWithHttpInfo ();
         /// <summary>
-        /// Set status of the chat given by ID.
+        /// Step 1: Send a verification code 
         /// </summary>
         /// <remarks>
-        /// 
+        /// Sends verification code to specified phone number.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>SendPhoneVerificationCodeResponse</returns>
+        SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+
+        /// <summary>
+        /// Step 1: Send a verification code 
+        /// </summary>
+        /// <remarks>
+        /// Sends verification code to specified phone number.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>ApiResponse of SendPhoneVerificationCodeResponse</returns>
+        ApiResponse<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0WithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        /// <summary>
+        /// Change chat status
+        /// </summary>
+        /// <remarks>
+        /// Set status of the chat given by ID.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -3438,10 +3478,10 @@ namespace TextMagicClient.Api
         ResourceLinkResponse SetChatStatus (SetChatStatusInputObject setChatStatusInputObject);
 
         /// <summary>
-        /// Set status of the chat given by ID.
+        /// Change chat status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Set status of the chat given by ID.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -3511,10 +3551,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnblockContactsBulkWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats
+        /// Unmute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unmute several chats by chat ids or unmute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -3522,10 +3562,10 @@ namespace TextMagicClient.Api
         void UnmuteChatsBulk (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats
+        /// Unmute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unmute several chats by chat ids or unmute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -3861,7 +3901,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> UpdateSurveyNodeWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
         /// <summary>
-        /// Update existing template.
+        /// Update a template
         /// </summary>
         /// <remarks>
         /// 
@@ -3873,7 +3913,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateTemplate (UpdateTemplateInputObject updateTemplateInputObject, int? id);
 
         /// <summary>
-        /// Update existing template.
+        /// Update a template
         /// </summary>
         /// <remarks>
         /// 
@@ -3954,7 +3994,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload a new file to insert it as a link.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -3965,7 +4005,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload a new file to insert it as a link.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -4060,6 +4100,27 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CancelSurveyAsyncWithHttpInfo (int? id);
         /// <summary>
+        /// Cancel verification process
+        /// </summary>
+        /// <remarks>
+        /// You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CancelVerificationAsync (string verifyId);
+
+        /// <summary>
+        /// Cancel verification process
+        /// </summary>
+        /// <remarks>
+        /// You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelVerificationAsyncWithHttpInfo (string verifyId);
+        /// <summary>
         /// Check user phone verification code
         /// </summary>
         /// <remarks>
@@ -4080,6 +4141,27 @@ namespace TextMagicClient.Api
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject);
+        /// <summary>
+        /// Step 2: Check the verification code 
+        /// </summary>
+        /// <remarks>
+        /// Check received code from user with the code which was actually sent.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CheckPhoneVerificationCode_0Async (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+
+        /// <summary>
+        /// Step 2: Check the verification code 
+        /// </summary>
+        /// <remarks>
+        /// Check received code from user with the code which was actually sent.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCode_0AsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -4104,10 +4186,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ClearAndAssignContactsToListAsyncWithHttpInfo (ClearAndAssignContactsToListInputObject clearAndAssignContactsToListInputObject, int? id);
         /// <summary>
-        /// Close chats by chat ids or close all chats
+        /// Close chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close chats by chat ids or close all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -4115,30 +4197,30 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task CloseChatsBulkAsync (CloseChatsBulkInputObject closeChatsBulkInputObject);
 
         /// <summary>
-        /// Close chats by chat ids or close all chats
+        /// Close chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close chats by chat ids or close all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CloseChatsBulkAsyncWithHttpInfo (CloseChatsBulkInputObject closeChatsBulkInputObject);
         /// <summary>
-        /// Close all chats that have no unread messages.
+        /// Close read chats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close all chats that have no unread messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task CloseReadChatsAsync ();
 
         /// <summary>
-        /// Close all chats that have no unread messages.
+        /// Close read chats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Close all chats that have no unread messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -4316,7 +4398,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateSurveyNodeAsyncWithHttpInfo (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id);
         /// <summary>
-        /// Create a new template from the submitted data.
+        /// Create a template
         /// </summary>
         /// <remarks>
         /// 
@@ -4327,7 +4409,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> CreateTemplateAsync (CreateTemplateInputObject createTemplateInputObject);
 
         /// <summary>
-        /// Create a new template from the submitted data.
+        /// Create a template
         /// </summary>
         /// <remarks>
         /// 
@@ -4359,7 +4441,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete all messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -4369,7 +4451,7 @@ namespace TextMagicClient.Api
         /// Delete all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete all messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -4394,10 +4476,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAvatarAsyncWithHttpInfo ();
         /// <summary>
-        /// Delete messages from chat by given messages ID(s).
+        /// Delete chat messages by ID(s)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages from chat by given messages ID(s).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -4406,10 +4488,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteChatMessagesAsync (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s).
+        /// Delete chat messages by ID(s)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages from chat by given messages ID(s).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -4417,10 +4499,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatMessagesAsyncWithHttpInfo (DeleteChatMessagesBulkInputObject deleteChatMessagesBulkInputObject, int? id);
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats.
+        /// Delete chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete chats by given ID(s) or delete all chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -4428,10 +4510,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteChatsBulkAsync (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats.
+        /// Delete chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete chats by given ID(s) or delete all chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -4610,31 +4692,31 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDedicatedNumberAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete the incoming message.
+        /// Delete a single inbound message
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteInboundMessageAsync (int? id);
 
         /// <summary>
-        /// Delete the incoming message.
+        /// Delete a single inbound message
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessageAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages.
+        /// Delete inbound messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -4642,10 +4724,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteInboundMessagesBulkAsync (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages.
+        /// Delete inbound messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -4738,7 +4820,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListsBulkAsyncWithHttpInfo (DeleteListsBulkInputObject deleteListsBulkInputObject);
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a session
         /// </summary>
         /// <remarks>
         /// 
@@ -4749,7 +4831,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteMessageSessionAsync (int? id);
 
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a session
         /// </summary>
         /// <remarks>
         /// 
@@ -4759,7 +4841,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessageSessionAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+        /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4770,7 +4852,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteMessageSessionsBulkAsync (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject);
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+        /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4783,7 +4865,7 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a single message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4794,17 +4876,17 @@ namespace TextMagicClient.Api
         /// Delete message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a single message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundMessageAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete messages by IDs
+        /// Delete messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -4812,10 +4894,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteOutboundMessagesBulkAsync (DeleteOutboundMessagesBulkInputObject deleteOutboundMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete messages by IDs
+        /// Delete messages (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -4845,7 +4927,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePushTokenAsyncWithHttpInfo (string type, int? deviceId);
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -4856,7 +4938,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteScheduledMessageAsync (int? id);
 
         /// <summary>
-        /// Delete a message session, together with all nested messages.
+        /// Delete a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -4866,7 +4948,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessageAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
+        /// Delete scheduled messages (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4877,7 +4959,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteScheduledMessagesBulkAsync (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages.
+        /// Delete scheduled messages (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4950,7 +5032,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSurveyNodeAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete a single template.
+        /// Delete a template
         /// </summary>
         /// <remarks>
         /// 
@@ -4961,7 +5043,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteTemplateAsync (int? id);
 
         /// <summary>
-        /// Delete a single template.
+        /// Delete a template
         /// </summary>
         /// <remarks>
         /// 
@@ -4971,7 +5053,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplateAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates.
+        /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4982,7 +5064,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteTemplatesBulkAsync (DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject);
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates.
+        /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4995,7 +5077,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -5006,7 +5088,7 @@ namespace TextMagicClient.Api
         /// Authenticate user by given username and password.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -5084,8 +5166,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetAllBulkSessionsPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null);
 
@@ -5096,20 +5178,20 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetAllBulkSessionsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsPaginatedResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get all user chats.
+        /// Get all chats
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -5117,79 +5199,79 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetAllChatsPaginatedResponse> GetAllChatsAsync (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
 
         /// <summary>
-        /// Get all user chats.
+        /// Get all chats
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetAllChatsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllChatsPaginatedResponse>> GetAllChatsAsyncWithHttpInfo (string status = null, int? page = null, int? limit = null, string orderBy = null, int? voice = null, int? flat = null);
         /// <summary>
-        /// Get all inbox messages.
+        /// Get all inbound messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of GetAllInboundMessagesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetAllInboundMessagesPaginatedResponse> GetAllInboundMessagesAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all inbox messages.
+        /// Get all inbound messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of ApiResponse (GetAllInboundMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllInboundMessagesPaginatedResponse>> GetAllInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get all message sending sessions.
+        /// Get all sessions
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetAllMessageSessionsPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all message sending sessions.
+        /// Get all sessions
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetAllMessageSessionsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsPaginatedResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all user oubound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>Task of GetAllOutboundMessagesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null);
@@ -5198,23 +5280,23 @@ namespace TextMagicClient.Api
         /// Get all messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all user oubound messages.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>Task of ApiResponse (GetAllOutboundMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesPaginatedResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null);
         /// <summary>
-        /// Get all scheduled messages.
+        /// Get all scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -5222,40 +5304,40 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetAllScheduledMessagesPaginatedResponse> GetAllScheduledMessagesAsync (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all scheduled messages.
+        /// Get all scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of ApiResponse (GetAllScheduledMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllScheduledMessagesPaginatedResponse>> GetAllScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get all user templates.
+        /// Get all templates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>Task of GetAllTemplatesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetAllTemplatesPaginatedResponse> GetAllTemplatesAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all user templates.
+        /// Get all templates
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>Task of ApiResponse (GetAllTemplatesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesPaginatedResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -5349,8 +5431,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -5364,8 +5446,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -5431,7 +5513,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetCallsPricesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetCallsPricesResponse>> GetCallsPricesAsyncWithHttpInfo ();
         /// <summary>
-        /// Get a single chat.
+        /// Get a single chat
         /// </summary>
         /// <remarks>
         /// 
@@ -5442,7 +5524,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<Chat> GetChatAsync (int? id);
 
         /// <summary>
-        /// Get a single chat.
+        /// Get a single chat
         /// </summary>
         /// <remarks>
         /// 
@@ -5452,7 +5534,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (Chat)</returns>
         System.Threading.Tasks.Task<ApiResponse<Chat>> GetChatAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Find chats by phone.
+        /// Find chats by phone
         /// </summary>
         /// <remarks>
         /// 
@@ -5465,7 +5547,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<Chat> GetChatByPhoneAsync (string phone, int? upsert = null, int? reopen = null);
 
         /// <summary>
-        /// Find chats by phone.
+        /// Find chats by phone
         /// </summary>
         /// <remarks>
         /// 
@@ -5477,15 +5559,15 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (Chat)</returns>
         System.Threading.Tasks.Task<ApiResponse<Chat>> GetChatByPhoneAsyncWithHttpInfo (string phone, int? upsert = null, int? reopen = null);
         /// <summary>
-        /// Fetch messages from chat with specified chat id.
+        /// Get chat messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -5495,15 +5577,15 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetChatMessagesPaginatedResponse> GetChatMessagesAsync (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id.
+        /// Get chat messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -5624,8 +5706,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetContactNotesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetContactNotesPaginatedResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null);
 
@@ -5637,8 +5719,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetContactNotesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactNotesPaginatedResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
@@ -5648,8 +5730,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -5663,8 +5745,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -5678,7 +5760,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>Task of GetContactsAutocompleteResponse</returns>
         System.Threading.Tasks.Task<GetContactsAutocompleteResponse> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null);
@@ -5691,7 +5773,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetContactsAutocompleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null);
@@ -5699,12 +5781,12 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of GetContactsByListIdPaginatedResponse</returns>
@@ -5714,12 +5796,12 @@ namespace TextMagicClient.Api
         /// Fetch user contacts by given group id.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of ApiResponse (GetContactsByListIdPaginatedResponse)</returns>
@@ -5790,8 +5872,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetCustomFieldsPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetCustomFieldsPaginatedResponse> GetCustomFieldsAsync (int? page = null, int? limit = null);
 
@@ -5802,8 +5884,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetCustomFieldsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsPaginatedResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -5853,8 +5935,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>Task of GetFavouritesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null);
@@ -5866,53 +5948,30 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
-        /// Get all forwarded calls.
+        /// Get a single inbound message
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetForwardedCallsPaginatedResponse</returns>
-        System.Threading.Tasks.Task<GetForwardedCallsPaginatedResponse> GetForwardedCallsAsync (int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Get all forwarded calls.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetForwardedCallsPaginatedResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsPaginatedResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null);
-        /// <summary>
-        /// Get a single inbox message.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of MessageIn</returns>
         System.Threading.Tasks.Task<MessageIn> GetInboundMessageAsync (int? id);
 
         /// <summary>
-        /// Get a single inbox message.
+        /// Get a single inbound message
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of ApiResponse (MessageIn)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessageIn>> GetInboundMessageAsyncWithHttpInfo (int? id);
         /// <summary>
@@ -5941,8 +6000,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetInvoicesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetInvoicesPaginatedResponse> GetInvoicesAsync (int? page = null, int? limit = null);
 
@@ -5953,8 +6012,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetInvoicesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetInvoicesPaginatedResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -6007,8 +6066,8 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetListsOfContactPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetListsOfContactPaginatedResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null);
 
@@ -6020,15 +6079,15 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetListsOfContactPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetListsOfContactPaginatedResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get messages preview (with tags merged) up to 100 messages per session.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -6055,7 +6114,7 @@ namespace TextMagicClient.Api
         /// Preview message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get messages preview (with tags merged) up to 100 messages per session.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -6081,7 +6140,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// 
+        /// Check pricing for a new outbound message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -6109,7 +6168,7 @@ namespace TextMagicClient.Api
         /// Check price
         /// </summary>
         /// <remarks>
-        /// 
+        /// Check pricing for a new outbound message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -6136,7 +6195,7 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get message prices for all countries.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMessagePricesResponse</returns>
@@ -6146,34 +6205,34 @@ namespace TextMagicClient.Api
         /// Get pricing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get message prices for all countries.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMessagePricesResponse>> GetMessagePricesAsyncWithHttpInfo ();
         /// <summary>
-        /// Get a message session.
+        /// Get a session details
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>Task of MessageSession</returns>
         System.Threading.Tasks.Task<MessageSession> GetMessageSessionAsync (int? id);
 
         /// <summary>
-        /// Get a message session.
+        /// Get a session details
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>Task of ApiResponse (MessageSession)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessageSession>> GetMessageSessionAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get sending session statistics.
+        /// Get a session statistics
         /// </summary>
         /// <remarks>
         /// 
@@ -6185,7 +6244,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetMessageSessionStatResponse> GetMessageSessionStatAsync (int? id, int? includeDeleted = null);
 
         /// <summary>
-        /// Get sending session statistics.
+        /// Get a session statistics
         /// </summary>
         /// <remarks>
         /// 
@@ -6196,30 +6255,30 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetMessageSessionStatResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMessageSessionStatResponse>> GetMessageSessionStatAsyncWithHttpInfo (int? id, int? includeDeleted = null);
         /// <summary>
-        /// Fetch messages by given session id.
+        /// Get a session messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>Task of GetMessagesBySessionIdPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetMessagesBySessionIdPaginatedResponse> GetMessagesBySessionIdAsync (int? id, int? page = null, int? limit = null, string statuses = null, int? includeDeleted = null);
 
         /// <summary>
-        /// Fetch messages by given session id.
+        /// Get a session messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetMessagesBySessionIdPaginatedResponse)</returns>
@@ -6272,7 +6331,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single outgoing message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6283,7 +6342,7 @@ namespace TextMagicClient.Api
         /// Get a single message
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single outgoing message.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6293,10 +6352,10 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get outbound messages history.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -6308,10 +6367,10 @@ namespace TextMagicClient.Api
         /// Get history
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get outbound messages history.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -6338,7 +6397,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetPushTokensResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetPushTokensResponse>> GetPushTokensAsyncWithHttpInfo ();
         /// <summary>
-        /// Get message schedule.
+        /// Get a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -6349,7 +6408,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<MessagesIcs> GetScheduledMessageAsync (int? id);
 
         /// <summary>
-        /// Get message schedule.
+        /// Get a single scheduled message
         /// </summary>
         /// <remarks>
         /// 
@@ -6386,8 +6445,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSenderIdsPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetSenderIdsPaginatedResponse> GetSenderIdsAsync (int? page = null, int? limit = null);
 
@@ -6398,8 +6457,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSenderIdsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetSenderIdsPaginatedResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -6430,8 +6489,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
@@ -6444,8 +6503,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
@@ -6497,8 +6556,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> GetSubaccountsAsync (int? page = null, int? limit = null);
 
@@ -6509,20 +6568,20 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> GetSubaccountsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When more than one token related to app name, last key will be returned.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSubaccountsWithTokensResponse</returns>
         System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
 
@@ -6530,12 +6589,12 @@ namespace TextMagicClient.Api
         /// Get all subaccounts with their REST API tokens associated with specified app name.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When more than one token related to app name, last key will be returned.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSubaccountsWithTokensResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null);
         /// <summary>
@@ -6608,8 +6667,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSurveysPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetSurveysPaginatedResponse> GetSurveysAsync (int? page = null, int? limit = null);
 
@@ -6620,12 +6679,12 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSurveysPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetSurveysPaginatedResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single template.
+        /// Get a template details
         /// </summary>
         /// <remarks>
         /// 
@@ -6636,7 +6695,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<MessageTemplate> GetTemplateAsync (int? id);
 
         /// <summary>
-        /// Get a single template.
+        /// Get a template details
         /// </summary>
         /// <remarks>
         /// 
@@ -6667,20 +6726,20 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetTimezonesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetTimezonesResponse>> GetTimezonesAsyncWithHttpInfo (int? full = null);
         /// <summary>
-        /// Get total amount of unread messages in the current user chats.
+        /// Get unread messages number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get total amount of unread messages in the current user chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetUnreadMessagesTotalResponse</returns>
         System.Threading.Tasks.Task<GetUnreadMessagesTotalResponse> GetUnreadMessagesTotalAsync ();
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats.
+        /// Get unread messages number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get total amount of unread messages in the current user chats.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetUnreadMessagesTotalResponse)</returns>
@@ -6713,8 +6772,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetUnsubscribersPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetUnsubscribersPaginatedResponse> GetUnsubscribersAsync (int? page = null, int? limit = null);
 
@@ -6725,8 +6784,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetUnsubscribersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersPaginatedResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
@@ -6736,8 +6795,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>Task of GetUserDedicatedNumbersPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null);
@@ -6749,8 +6808,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
@@ -6761,8 +6820,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -6777,8 +6836,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -6826,10 +6885,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> InviteSubaccountAsyncWithHttpInfo (InviteSubaccountInputObject inviteSubaccountInputObject);
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read
+        /// Mark chats as read (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as read by chat ids or mark all chats as read
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -6837,20 +6896,20 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task MarkChatsReadBulkAsync (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read
+        /// Mark chats as read (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as read by chat ids or mark all chats as read
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MarkChatsReadBulkAsyncWithHttpInfo (MarkChatsReadBulkInputObject markChatsReadBulkInputObject);
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread
+        /// Mark chats as unread (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -6858,10 +6917,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task MarkChatsUnreadBulkAsync (MarkChatsUnreadBulkInputObject markChatsUnreadBulkInputObject);
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread
+        /// Mark chats as unread (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -6889,7 +6948,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MergeSurveyNodesAsyncWithHttpInfo (MergeSurveyNodesInputObject mergeSurveyNodesInputObject);
         /// <summary>
-        /// Set mute mode.
+        /// Mute chat sounds
         /// </summary>
         /// <remarks>
         /// 
@@ -6900,7 +6959,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> MuteChatAsync (MuteChatInputObject muteChatInputObject);
 
         /// <summary>
-        /// Set mute mode.
+        /// Mute chat sounds
         /// </summary>
         /// <remarks>
         /// 
@@ -6910,10 +6969,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> MuteChatAsyncWithHttpInfo (MuteChatInputObject muteChatInputObject);
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats
+        /// Mute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mute several chats by chat ids or mute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -6921,10 +6980,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task MuteChatsBulkAsync (MuteChatsBulkInputObject muteChatsBulkInputObject);
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats
+        /// Mute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mute several chats by chat ids or mute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -6950,10 +7009,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (PingResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PingResponse>> PingAsyncWithHttpInfo ();
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats
+        /// Reopen chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Reopen chats by chat ids or reopen all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -6961,10 +7020,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task ReopenChatsBulkAsync (ReopenChatsBulkInputObject reopenChatsBulkInputObject);
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats
+        /// Reopen chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Reopen chats by chat ids or reopen all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -6974,7 +7033,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning user object, key and app name.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -6985,7 +7044,7 @@ namespace TextMagicClient.Api
         /// Request a new REST API token for subaccount.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returning user object, key and app name.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -7034,78 +7093,78 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ResetSurveyAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Find chats by inbound or outbound messages text.
+        /// Find chats by message text
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>Task of SearchChatsPaginatedResponse</returns>
         System.Threading.Tasks.Task<SearchChatsPaginatedResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text.
+        /// Find chats by message text
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>Task of ApiResponse (SearchChatsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchChatsPaginatedResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
-        /// Find chats by IDs.
+        /// Find chats (bulk)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>Task of SearchChatsByIdsPaginatedResponse</returns>
         System.Threading.Tasks.Task<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null);
 
         /// <summary>
-        /// Find chats by IDs.
+        /// Find chats (bulk)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (SearchChatsByIdsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsPaginatedResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null);
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number).
+        /// Find chats by recipient
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find chats by recipient (contact, list name or phone number).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>Task of SearchChatsByReceipentPaginatedResponse</returns>
         System.Threading.Tasks.Task<SearchChatsByReceipentPaginatedResponse> SearchChatsByReceipentAsync (int? page = null, int? limit = null, string query = null, string orderBy = null);
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number).
+        /// Find chats by recipient
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find chats by recipient (contact, list name or phone number).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>Task of ApiResponse (SearchChatsByReceipentPaginatedResponse)</returns>
@@ -7117,8 +7176,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -7138,8 +7197,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -7152,14 +7211,14 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchContactsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchContactsPaginatedResponse>> SearchContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Find inbound messages by given parameters.
+        /// Find inbound messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find inbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -7169,14 +7228,14 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesAsync (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
 
         /// <summary>
-        /// Find inbound messages by given parameters.
+        /// Find inbound messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find inbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -7191,8 +7250,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -7209,8 +7268,8 @@ namespace TextMagicClient.Api
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -7223,11 +7282,11 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find outbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -7241,11 +7300,11 @@ namespace TextMagicClient.Api
         /// Find messages
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find outbound messages by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -7255,14 +7314,14 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchOutboundMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchOutboundMessagesPaginatedResponse>> SearchOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null, string ids = null, int? sessionId = null, string statuses = null, int? includeDeleted = null, string query = null);
         /// <summary>
-        /// Find scheduled messages by given parameters.
+        /// Find scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -7272,14 +7331,14 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchScheduledMessagesPaginatedResponse> SearchScheduledMessagesAsync (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find scheduled messages by given parameters.
+        /// Find scheduled messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -7288,14 +7347,14 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchScheduledMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchScheduledMessagesPaginatedResponse>> SearchScheduledMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string ids = null, string status = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Find user templates by given parameters.
+        /// Find templates by criteria
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -7303,14 +7362,14 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchTemplatesPaginatedResponse> SearchTemplatesAsync (int? page = null, int? limit = null, string ids = null, string name = null, string content = null);
 
         /// <summary>
-        /// Find user templates by given parameters.
+        /// Find templates by criteria
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -7339,7 +7398,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The main entrypoint to send messages. See examples above for the reference.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -7350,7 +7409,7 @@ namespace TextMagicClient.Api
         /// Send message
         /// </summary>
         /// <remarks>
-        /// 
+        /// The main entrypoint to send messages. See examples above for the reference.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -7376,10 +7435,31 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SendPhoneVerificationCodeAsyncWithHttpInfo ();
         /// <summary>
-        /// Set status of the chat given by ID.
+        /// Step 1: Send a verification code 
         /// </summary>
         /// <remarks>
-        /// 
+        /// Sends verification code to specified phone number.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of SendPhoneVerificationCodeResponse</returns>
+        System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0Async (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+
+        /// <summary>
+        /// Step 1: Send a verification code 
+        /// </summary>
+        /// <remarks>
+        /// Sends verification code to specified phone number.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of ApiResponse (SendPhoneVerificationCodeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCode_0AsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        /// <summary>
+        /// Change chat status
+        /// </summary>
+        /// <remarks>
+        /// Set status of the chat given by ID.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -7387,10 +7467,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> SetChatStatusAsync (SetChatStatusInputObject setChatStatusInputObject);
 
         /// <summary>
-        /// Set status of the chat given by ID.
+        /// Change chat status
         /// </summary>
         /// <remarks>
-        /// 
+        /// Set status of the chat given by ID.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -7460,10 +7540,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactsBulkAsyncWithHttpInfo (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats
+        /// Unmute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unmute several chats by chat ids or unmute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -7471,10 +7551,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task UnmuteChatsBulkAsync (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats
+        /// Unmute chats (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unmute several chats by chat ids or unmute all chats
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -7810,7 +7890,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateSurveyNodeAsyncWithHttpInfo (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id);
         /// <summary>
-        /// Update existing template.
+        /// Update a template
         /// </summary>
         /// <remarks>
         /// 
@@ -7822,7 +7902,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateTemplateAsync (UpdateTemplateInputObject updateTemplateInputObject, int? id);
 
         /// <summary>
-        /// Update existing template.
+        /// Update a template
         /// </summary>
         /// <remarks>
         /// 
@@ -7903,7 +7983,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload a new file to insert it as a link.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -7914,7 +7994,7 @@ namespace TextMagicClient.Api
         /// Upload message attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload a new file to insert it as a link.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -8661,6 +8741,151 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
+        /// Cancel verification process You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns></returns>
+        public void CancelVerification (string verifyId)
+        {
+             CancelVerificationWithHttpInfo(verifyId);
+        }
+
+        /// <summary>
+        /// Cancel verification process You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CancelVerificationWithHttpInfo (string verifyId)
+        {
+            // verify the required parameter 'verifyId' is set
+            if (verifyId == null)
+                throw new ApiException(400, "Missing required parameter 'verifyId' when calling TextMagicApi->CancelVerification");
+
+            var localVarPath = "/api/v2/verify/{verifyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (verifyId != null) localVarPathParams.Add("verifyId", this.Configuration.ApiClient.ParameterToString(verifyId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelVerification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Cancel verification process You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CancelVerificationAsync (string verifyId)
+        {
+             await CancelVerificationAsyncWithHttpInfo(verifyId);
+
+        }
+
+        /// <summary>
+        /// Cancel verification process You can cancel the verification not earlier than 30 seconds after the initial request.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyId">the verifyId that you received in Step 1.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CancelVerificationAsyncWithHttpInfo (string verifyId)
+        {
+            // verify the required parameter 'verifyId' is set
+            if (verifyId == null)
+                throw new ApiException(400, "Missing required parameter 'verifyId' when calling TextMagicApi->CancelVerification");
+
+            var localVarPath = "/api/v2/verify/{verifyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (verifyId != null) localVarPathParams.Add("verifyId", this.Configuration.ApiClient.ParameterToString(verifyId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelVerification", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// Check user phone verification code 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8811,6 +9036,165 @@ namespace TextMagicClient.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("CheckPhoneVerificationCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Step 2: Check the verification code  Check received code from user with the code which was actually sent.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns></returns>
+        public void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        {
+             CheckPhoneVerificationCode_0WithHttpInfo(checkPhoneVerificationCodeInputObject);
+        }
+
+        /// <summary>
+        /// Step 2: Check the verification code  Check received code from user with the code which was actually sent.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CheckPhoneVerificationCode_0WithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        {
+            // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
+            if (checkPhoneVerificationCodeInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCode_0");
+
+            var localVarPath = "/api/v2/verify";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (checkPhoneVerificationCodeInputObject != null && checkPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(checkPhoneVerificationCodeInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = checkPhoneVerificationCodeInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CheckPhoneVerificationCode_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Step 2: Check the verification code  Check received code from user with the code which was actually sent.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CheckPhoneVerificationCode_0Async (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        {
+             await CheckPhoneVerificationCode_0AsyncWithHttpInfo(checkPhoneVerificationCodeInputObject);
+
+        }
+
+        /// <summary>
+        /// Step 2: Check the verification code  Check received code from user with the code which was actually sent.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="checkPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCode_0AsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        {
+            // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
+            if (checkPhoneVerificationCodeInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCode_0");
+
+            var localVarPath = "/api/v2/verify";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (checkPhoneVerificationCodeInputObject != null && checkPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(checkPhoneVerificationCodeInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = checkPhoneVerificationCodeInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CheckPhoneVerificationCode_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -8993,7 +9377,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close chats by chat ids or close all chats 
+        /// Close chats (bulk) Close chats by chat ids or close all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -9004,7 +9388,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close chats by chat ids or close all chats 
+        /// Close chats (bulk) Close chats by chat ids or close all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -9071,7 +9455,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close chats by chat ids or close all chats 
+        /// Close chats (bulk) Close chats by chat ids or close all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -9083,7 +9467,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close chats by chat ids or close all chats 
+        /// Close chats (bulk) Close chats by chat ids or close all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeChatsBulkInputObject"></param>
@@ -9150,7 +9534,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close all chats that have no unread messages. 
+        /// Close read chats Close all chats that have no unread messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -9160,7 +9544,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close all chats that have no unread messages. 
+        /// Close read chats Close all chats that have no unread messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -9215,7 +9599,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close all chats that have no unread messages. 
+        /// Close read chats Close all chats that have no unread messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -9226,7 +9610,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Close all chats that have no unread messages. 
+        /// Close read chats Close all chats that have no unread messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -10573,7 +10957,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new template from the submitted data. 
+        /// Create a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -10585,7 +10969,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new template from the submitted data. 
+        /// Create a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -10653,7 +11037,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new template from the submitted data. 
+        /// Create a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -10666,7 +11050,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new template from the submitted data. 
+        /// Create a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -10865,7 +11249,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages 
+        /// Delete all messages Delete all messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -10875,7 +11259,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages 
+        /// Delete all messages Delete all messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -10930,7 +11314,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages 
+        /// Delete all messages Delete all messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -10941,7 +11325,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all messages 
+        /// Delete all messages Delete all messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -11127,7 +11511,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s). 
+        /// Delete chat messages by ID(s) Delete messages from chat by given messages ID(s).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -11139,7 +11523,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s). 
+        /// Delete chat messages by ID(s) Delete messages from chat by given messages ID(s).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -11211,7 +11595,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s). 
+        /// Delete chat messages by ID(s) Delete messages from chat by given messages ID(s).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -11224,7 +11608,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages from chat by given messages ID(s). 
+        /// Delete chat messages by ID(s) Delete messages from chat by given messages ID(s).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatMessagesBulkInputObject"></param>
@@ -11296,7 +11680,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats. 
+        /// Delete chats (bulk) Delete chats by given ID(s) or delete all chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -11307,7 +11691,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats. 
+        /// Delete chats (bulk) Delete chats by given ID(s) or delete all chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -11374,7 +11758,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats. 
+        /// Delete chats (bulk) Delete chats by given ID(s) or delete all chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -11386,7 +11770,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete chats by given ID(s) or delete all chats. 
+        /// Delete chats (bulk) Delete chats by given ID(s) or delete all chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteChatsBulkInputObject"></param>
@@ -12665,10 +13049,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete the incoming message. 
+        /// Delete a single inbound message &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns></returns>
         public void DeleteInboundMessage (int? id)
         {
@@ -12676,10 +13060,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete the incoming message. 
+        /// Delete a single inbound message &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteInboundMessageWithHttpInfo (int? id)
         {
@@ -12736,10 +13120,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete the incoming message. 
+        /// Delete a single inbound message &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteInboundMessageAsync (int? id)
         {
@@ -12748,10 +13132,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete the incoming message. 
+        /// Delete a single inbound message &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessageAsyncWithHttpInfo (int? id)
         {
@@ -12808,7 +13192,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages. 
+        /// Delete inbound messages (bulk) &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -12819,7 +13203,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages. 
+        /// Delete inbound messages (bulk) &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -12886,7 +13270,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages. 
+        /// Delete inbound messages (bulk) &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -12898,7 +13282,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete inbound messages by given ID(s) or delete all inbound messages. 
+        /// Delete inbound messages (bulk) &gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteInboundMessagesBulkInputObject"></param>
@@ -13579,7 +13963,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a session 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13590,7 +13974,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a session 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13650,7 +14034,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a session 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13662,7 +14046,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a session 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13722,7 +14106,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions. 
+        /// Delete sessions (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -13733,7 +14117,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions. 
+        /// Delete sessions (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -13800,7 +14184,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions. 
+        /// Delete sessions (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -13812,7 +14196,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions. 
+        /// Delete sessions (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -13879,7 +14263,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message 
+        /// Delete message Delete a single message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13890,7 +14274,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message 
+        /// Delete message Delete a single message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13950,7 +14334,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message 
+        /// Delete message Delete a single message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13962,7 +14346,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete message 
+        /// Delete message Delete a single message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14022,7 +14406,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs 
+        /// Delete messages (bulk) Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14033,7 +14417,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs 
+        /// Delete messages (bulk) Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14100,7 +14484,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs 
+        /// Delete messages (bulk) Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14112,7 +14496,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete messages by IDs 
+        /// Delete messages (bulk) Delete outbound messages by given ID(s) or delete all outbound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteOutboundMessagesBulkInputObject"></param>
@@ -14334,7 +14718,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14345,7 +14729,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14405,7 +14789,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14417,7 +14801,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a message session, together with all nested messages. 
+        /// Delete a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14477,7 +14861,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages. 
+        /// Delete scheduled messages (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
@@ -14488,7 +14872,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages. 
+        /// Delete scheduled messages (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
@@ -14555,7 +14939,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages. 
+        /// Delete scheduled messages (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
@@ -14567,7 +14951,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete scheduled messages by given ID(s) or delete all scheduled messages. 
+        /// Delete scheduled messages (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteScheduledMessagesBulkInputObject"></param>
@@ -15063,7 +15447,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single template. 
+        /// Delete a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15074,7 +15458,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single template. 
+        /// Delete a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15134,7 +15518,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single template. 
+        /// Delete a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15146,7 +15530,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single template. 
+        /// Delete a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15206,7 +15590,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates. 
+        /// Delete templates (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15217,7 +15601,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates. 
+        /// Delete templates (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15284,7 +15668,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates. 
+        /// Delete templates (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15296,7 +15680,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete template by given ID(s) or delete all templates. 
+        /// Delete templates (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15363,7 +15747,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. 
+        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15375,7 +15759,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. 
+        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15437,7 +15821,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. 
+        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15450,7 +15834,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Authenticate user by given username and password. 
+        /// Authenticate user by given username and password. Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="doAuthInputObject"></param>
@@ -15962,8 +16346,8 @@ namespace TextMagicClient.Api
         /// Get all bulk sending sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetAllBulkSessionsPaginatedResponse</returns>
         public GetAllBulkSessionsPaginatedResponse GetAllBulkSessions (int? page = null, int? limit = null)
         {
@@ -15975,8 +16359,8 @@ namespace TextMagicClient.Api
         /// Get all bulk sending sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetAllBulkSessionsPaginatedResponse</returns>
         public ApiResponse< GetAllBulkSessionsPaginatedResponse > GetAllBulkSessionsWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -16035,8 +16419,8 @@ namespace TextMagicClient.Api
         /// Get all bulk sending sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetAllBulkSessionsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetAllBulkSessionsPaginatedResponse> GetAllBulkSessionsAsync (int? page = null, int? limit = null)
         {
@@ -16049,8 +16433,8 @@ namespace TextMagicClient.Api
         /// Get all bulk sending sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetAllBulkSessionsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAllBulkSessionsPaginatedResponse>> GetAllBulkSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -16106,12 +16490,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user chats. 
+        /// Get all chats 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -16123,12 +16507,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user chats. 
+        /// Get all chats 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -16191,12 +16575,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user chats. 
+        /// Get all chats 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -16209,12 +16593,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user chats. 
+        /// Get all chats 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Fetch only (a)ctive, (c)losed or (d)eleted chats (optional)</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="voice">Fetch results with voice calls (optional, default to 0)</param>
         /// <param name="flat">Should additional contact info be included (optional, default to 0)</param>
@@ -16277,11 +16661,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all inbox messages. 
+        /// Get all inbound messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>GetAllInboundMessagesPaginatedResponse</returns>
@@ -16292,11 +16676,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all inbox messages. 
+        /// Get all inbound messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>ApiResponse of GetAllInboundMessagesPaginatedResponse</returns>
@@ -16356,11 +16740,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all inbox messages. 
+        /// Get all inbound messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of GetAllInboundMessagesPaginatedResponse</returns>
@@ -16372,11 +16756,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all inbox messages. 
+        /// Get all inbound messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of ApiResponse (GetAllInboundMessagesPaginatedResponse)</returns>
@@ -16436,11 +16820,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all message sending sessions. 
+        /// Get all sessions 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetAllMessageSessionsPaginatedResponse</returns>
         public GetAllMessageSessionsPaginatedResponse GetAllMessageSessions (int? page = null, int? limit = null)
         {
@@ -16449,11 +16833,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all message sending sessions. 
+        /// Get all sessions 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetAllMessageSessionsPaginatedResponse</returns>
         public ApiResponse< GetAllMessageSessionsPaginatedResponse > GetAllMessageSessionsWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -16509,11 +16893,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all message sending sessions. 
+        /// Get all sessions 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetAllMessageSessionsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetAllMessageSessionsPaginatedResponse> GetAllMessageSessionsAsync (int? page = null, int? limit = null)
         {
@@ -16523,11 +16907,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all message sending sessions. 
+        /// Get all sessions 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetAllMessageSessionsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAllMessageSessionsPaginatedResponse>> GetAllMessageSessionsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -16583,11 +16967,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages 
+        /// Get all messages Get all user oubound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>GetAllOutboundMessagesPaginatedResponse</returns>
         public GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages (int? page = null, int? limit = null, int? lastId = null)
@@ -16597,11 +16981,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages 
+        /// Get all messages Get all user oubound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>ApiResponse of GetAllOutboundMessagesPaginatedResponse</returns>
         public ApiResponse< GetAllOutboundMessagesPaginatedResponse > GetAllOutboundMessagesWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
@@ -16659,11 +17043,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages 
+        /// Get all messages Get all user oubound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>Task of GetAllOutboundMessagesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetAllOutboundMessagesPaginatedResponse> GetAllOutboundMessagesAsync (int? page = null, int? limit = null, int? lastId = null)
@@ -16674,11 +17058,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all messages 
+        /// Get all messages Get all user oubound messages.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <returns>Task of ApiResponse (GetAllOutboundMessagesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAllOutboundMessagesPaginatedResponse>> GetAllOutboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, int? lastId = null)
@@ -16736,11 +17120,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all scheduled messages. 
+        /// Get all scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -16752,11 +17136,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all scheduled messages. 
+        /// Get all scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -16818,11 +17202,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all scheduled messages. 
+        /// Get all scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -16835,11 +17219,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all scheduled messages. 
+        /// Get all scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -16901,11 +17285,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user templates. 
+        /// Get all templates 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>GetAllTemplatesPaginatedResponse</returns>
         public GetAllTemplatesPaginatedResponse GetAllTemplates (int? page = null, int? limit = null)
         {
@@ -16914,11 +17298,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user templates. 
+        /// Get all templates 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>ApiResponse of GetAllTemplatesPaginatedResponse</returns>
         public ApiResponse< GetAllTemplatesPaginatedResponse > GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -16974,11 +17358,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user templates. 
+        /// Get all templates 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>Task of GetAllTemplatesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetAllTemplatesPaginatedResponse> GetAllTemplatesAsync (int? page = null, int? limit = null)
         {
@@ -16988,11 +17372,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user templates. 
+        /// Get all templates 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional)</param>
-        /// <param name="limit">How many results to return (optional)</param>
+        /// <param name="page">Fetch specified results page. (optional)</param>
+        /// <param name="limit">The number of results per page. (optional)</param>
         /// <returns>Task of ApiResponse (GetAllTemplatesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesPaginatedResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -17621,8 +18005,8 @@ namespace TextMagicClient.Api
         /// Get blocked contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -17637,8 +18021,8 @@ namespace TextMagicClient.Api
         /// Get blocked contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -17703,8 +18087,8 @@ namespace TextMagicClient.Api
         /// Get blocked contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -17720,8 +18104,8 @@ namespace TextMagicClient.Api
         /// Get blocked contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find blocked contacts by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -18200,7 +18584,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single chat. 
+        /// Get a single chat 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -18212,7 +18596,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single chat. 
+        /// Get a single chat 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -18273,7 +18657,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single chat. 
+        /// Get a single chat 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -18286,7 +18670,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single chat. 
+        /// Get a single chat 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -18347,7 +18731,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by phone. 
+        /// Find chats by phone 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -18361,7 +18745,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by phone. 
+        /// Find chats by phone 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -18426,7 +18810,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by phone. 
+        /// Find chats by phone 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -18441,7 +18825,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by phone. 
+        /// Find chats by phone 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -18506,12 +18890,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id. 
+        /// Get chat messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -18525,12 +18909,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id. 
+        /// Get chat messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -18600,12 +18984,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id. 
+        /// Get chat messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -18620,12 +19004,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages from chat with specified chat id. 
+        /// Get chat messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="start">Return messages since specified timestamp only (optional)</param>
         /// <param name="end">Return messages up to specified timestamp only (optional)</param>
@@ -19434,8 +19818,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetContactNotesPaginatedResponse</returns>
         public GetContactNotesPaginatedResponse GetContactNotes (int? id, int? page = null, int? limit = null)
         {
@@ -19448,8 +19832,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetContactNotesPaginatedResponse</returns>
         public ApiResponse< GetContactNotesPaginatedResponse > GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
@@ -19513,8 +19897,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetContactNotesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetContactNotesPaginatedResponse> GetContactNotesAsync (int? id, int? page = null, int? limit = null)
         {
@@ -19528,8 +19912,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetContactNotesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetContactNotesPaginatedResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
@@ -19592,8 +19976,8 @@ namespace TextMagicClient.Api
         /// Get all user contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -19608,8 +19992,8 @@ namespace TextMagicClient.Api
         /// Get all user contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -19674,8 +20058,8 @@ namespace TextMagicClient.Api
         /// Get all user contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -19691,8 +20075,8 @@ namespace TextMagicClient.Api
         /// Get all user contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
@@ -19758,7 +20142,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>GetContactsAutocompleteResponse</returns>
         public GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
@@ -19772,7 +20156,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>ApiResponse of GetContactsAutocompleteResponse</returns>
         public ApiResponse< GetContactsAutocompleteResponse > GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null)
@@ -19837,7 +20221,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>Task of GetContactsAutocompleteResponse</returns>
         public async System.Threading.Tasks.Task<GetContactsAutocompleteResponse> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null)
@@ -19852,7 +20236,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lists">Should lists be returned or not (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetContactsAutocompleteResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null)
@@ -19913,12 +20297,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. 
+        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>GetContactsByListIdPaginatedResponse</returns>
@@ -19929,12 +20313,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. 
+        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>ApiResponse of GetContactsByListIdPaginatedResponse</returns>
@@ -19998,12 +20382,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. 
+        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of GetContactsByListIdPaginatedResponse</returns>
@@ -20015,12 +20399,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. 
+        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <returns>Task of ApiResponse (GetContactsByListIdPaginatedResponse)</returns>
@@ -20504,8 +20888,8 @@ namespace TextMagicClient.Api
         /// Get all contact custom fields. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetCustomFieldsPaginatedResponse</returns>
         public GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null)
         {
@@ -20517,8 +20901,8 @@ namespace TextMagicClient.Api
         /// Get all contact custom fields. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetCustomFieldsPaginatedResponse</returns>
         public ApiResponse< GetCustomFieldsPaginatedResponse > GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -20577,8 +20961,8 @@ namespace TextMagicClient.Api
         /// Get all contact custom fields. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetCustomFieldsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetCustomFieldsPaginatedResponse> GetCustomFieldsAsync (int? page = null, int? limit = null)
         {
@@ -20591,8 +20975,8 @@ namespace TextMagicClient.Api
         /// Get all contact custom fields. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetCustomFieldsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsPaginatedResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -20933,8 +21317,8 @@ namespace TextMagicClient.Api
         /// Get favorite contacts and lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>GetFavouritesPaginatedResponse</returns>
         public GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null)
@@ -20947,8 +21331,8 @@ namespace TextMagicClient.Api
         /// Get favorite contacts and lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
         public ApiResponse< GetFavouritesPaginatedResponse > GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null)
@@ -21009,8 +21393,8 @@ namespace TextMagicClient.Api
         /// Get favorite contacts and lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>Task of GetFavouritesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null)
@@ -21024,8 +21408,8 @@ namespace TextMagicClient.Api
         /// Get favorite contacts and lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
         /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
@@ -21083,157 +21467,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all forwarded calls. 
+        /// Get a single inbound message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>GetForwardedCallsPaginatedResponse</returns>
-        public GetForwardedCallsPaginatedResponse GetForwardedCalls (int? page = null, int? limit = null)
-        {
-             ApiResponse<GetForwardedCallsPaginatedResponse> localVarResponse = GetForwardedCallsWithHttpInfo(page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get all forwarded calls. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>ApiResponse of GetForwardedCallsPaginatedResponse</returns>
-        public ApiResponse< GetForwardedCallsPaginatedResponse > GetForwardedCallsWithHttpInfo (int? page = null, int? limit = null)
-        {
-
-            var localVarPath = "/api/v2/calls";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetForwardedCalls", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetForwardedCallsPaginatedResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetForwardedCallsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsPaginatedResponse)));
-        }
-
-        /// <summary>
-        /// Get all forwarded calls. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of GetForwardedCallsPaginatedResponse</returns>
-        public async System.Threading.Tasks.Task<GetForwardedCallsPaginatedResponse> GetForwardedCallsAsync (int? page = null, int? limit = null)
-        {
-             ApiResponse<GetForwardedCallsPaginatedResponse> localVarResponse = await GetForwardedCallsAsyncWithHttpInfo(page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get all forwarded calls. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
-        /// <returns>Task of ApiResponse (GetForwardedCallsPaginatedResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetForwardedCallsPaginatedResponse>> GetForwardedCallsAsyncWithHttpInfo (int? page = null, int? limit = null)
-        {
-
-            var localVarPath = "/api/v2/calls";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetForwardedCalls", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetForwardedCallsPaginatedResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetForwardedCallsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetForwardedCallsPaginatedResponse)));
-        }
-
-        /// <summary>
-        /// Get a single inbox message. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>MessageIn</returns>
         public MessageIn GetInboundMessage (int? id)
         {
@@ -21242,10 +21479,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single inbox message. 
+        /// Get a single inbound message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>ApiResponse of MessageIn</returns>
         public ApiResponse< MessageIn > GetInboundMessageWithHttpInfo (int? id)
         {
@@ -21303,10 +21540,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single inbox message. 
+        /// Get a single inbound message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of MessageIn</returns>
         public async System.Threading.Tasks.Task<MessageIn> GetInboundMessageAsync (int? id)
         {
@@ -21316,10 +21553,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single inbox message. 
+        /// Get a single inbound message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">The unique numeric ID for the inbound message.</param>
         /// <returns>Task of ApiResponse (MessageIn)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MessageIn>> GetInboundMessageAsyncWithHttpInfo (int? id)
         {
@@ -21515,8 +21752,8 @@ namespace TextMagicClient.Api
         /// Return account invoices. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetInvoicesPaginatedResponse</returns>
         public GetInvoicesPaginatedResponse GetInvoices (int? page = null, int? limit = null)
         {
@@ -21528,8 +21765,8 @@ namespace TextMagicClient.Api
         /// Return account invoices. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetInvoicesPaginatedResponse</returns>
         public ApiResponse< GetInvoicesPaginatedResponse > GetInvoicesWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -21588,8 +21825,8 @@ namespace TextMagicClient.Api
         /// Return account invoices. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetInvoicesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetInvoicesPaginatedResponse> GetInvoicesAsync (int? page = null, int? limit = null)
         {
@@ -21602,8 +21839,8 @@ namespace TextMagicClient.Api
         /// Return account invoices. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetInvoicesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetInvoicesPaginatedResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -21957,8 +22194,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetListsOfContactPaginatedResponse</returns>
         public GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
         {
@@ -21971,8 +22208,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetListsOfContactPaginatedResponse</returns>
         public ApiResponse< GetListsOfContactPaginatedResponse > GetListsOfContactWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
@@ -22036,8 +22273,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetListsOfContactPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetListsOfContactPaginatedResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null)
         {
@@ -22051,8 +22288,8 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetListsOfContactPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetListsOfContactPaginatedResponse>> GetListsOfContactAsyncWithHttpInfo (int? id, int? page = null, int? limit = null)
         {
@@ -22112,7 +22349,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message 
+        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22140,7 +22377,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message 
+        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22230,7 +22467,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message 
+        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22259,7 +22496,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Preview message 
+        /// Preview message Get messages preview (with tags merged) up to 100 messages per session.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="text">Message text. Required if template_id is not set (optional)</param>
@@ -22349,7 +22586,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price 
+        /// Check price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22378,7 +22615,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price 
+        /// Check price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22470,7 +22707,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price 
+        /// Check price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22500,7 +22737,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price 
+        /// Check price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22592,7 +22829,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing 
+        /// Get pricing Get message prices for all countries.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMessagePricesResponse</returns>
@@ -22603,7 +22840,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing 
+        /// Get pricing Get message prices for all countries.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMessagePricesResponse</returns>
@@ -22659,7 +22896,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing 
+        /// Get pricing Get message prices for all countries.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMessagePricesResponse</returns>
@@ -22671,7 +22908,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get pricing 
+        /// Get pricing Get message prices for all countries.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
@@ -22727,10 +22964,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a message session. 
+        /// Get a session details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>MessageSession</returns>
         public MessageSession GetMessageSession (int? id)
         {
@@ -22739,10 +22976,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a message session. 
+        /// Get a session details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>ApiResponse of MessageSession</returns>
         public ApiResponse< MessageSession > GetMessageSessionWithHttpInfo (int? id)
         {
@@ -22800,10 +23037,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a message session. 
+        /// Get a session details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>Task of MessageSession</returns>
         public async System.Threading.Tasks.Task<MessageSession> GetMessageSessionAsync (int? id)
         {
@@ -22813,10 +23050,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a message session. 
+        /// Get a session details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">a session ID</param>
         /// <returns>Task of ApiResponse (MessageSession)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MessageSession>> GetMessageSessionAsyncWithHttpInfo (int? id)
         {
@@ -22874,7 +23111,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get sending session statistics. 
+        /// Get a session statistics 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22887,7 +23124,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get sending session statistics. 
+        /// Get a session statistics 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22950,7 +23187,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get sending session statistics. 
+        /// Get a session statistics 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22964,7 +23201,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get sending session statistics. 
+        /// Get a session statistics 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23027,12 +23264,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. 
+        /// Get a session messages A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>GetMessagesBySessionIdPaginatedResponse</returns>
@@ -23043,12 +23280,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. 
+        /// Get a session messages A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>ApiResponse of GetMessagesBySessionIdPaginatedResponse</returns>
@@ -23112,12 +23349,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. 
+        /// Get a session messages A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>Task of GetMessagesBySessionIdPaginatedResponse</returns>
@@ -23129,12 +23366,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch messages by given session id. 
+        /// Get a session messages A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="statuses">Find messages by status (optional)</param>
         /// <param name="includeDeleted">Search also in deleted messages (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetMessagesBySessionIdPaginatedResponse)</returns>
@@ -23486,7 +23723,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message 
+        /// Get a single message Get a single outgoing message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23498,7 +23735,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message 
+        /// Get a single message Get a single outgoing message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23559,7 +23796,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message 
+        /// Get a single message Get a single outgoing message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23572,7 +23809,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single message 
+        /// Get a single message Get a single outgoing message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23633,10 +23870,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history 
+        /// Get history Get outbound messages history.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -23649,10 +23886,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history 
+        /// Get history Get outbound messages history.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -23715,10 +23952,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history 
+        /// Get history Get outbound messages history.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -23732,10 +23969,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get history 
+        /// Get history Get outbound messages history.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. (optional)</param>
         /// <param name="query">Find message by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -23933,7 +24170,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get message schedule. 
+        /// Get a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -23945,7 +24182,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get message schedule. 
+        /// Get a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24006,7 +24243,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get message schedule. 
+        /// Get a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24019,7 +24256,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get message schedule. 
+        /// Get a single scheduled message 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24230,8 +24467,8 @@ namespace TextMagicClient.Api
         /// Get all sender IDs of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSenderIdsPaginatedResponse</returns>
         public GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null)
         {
@@ -24243,8 +24480,8 @@ namespace TextMagicClient.Api
         /// Get all sender IDs of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSenderIdsPaginatedResponse</returns>
         public ApiResponse< GetSenderIdsPaginatedResponse > GetSenderIdsWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -24303,8 +24540,8 @@ namespace TextMagicClient.Api
         /// Get all sender IDs of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSenderIdsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetSenderIdsPaginatedResponse> GetSenderIdsAsync (int? page = null, int? limit = null)
         {
@@ -24317,8 +24554,8 @@ namespace TextMagicClient.Api
         /// Get all sender IDs of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSenderIdsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetSenderIdsPaginatedResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -24518,8 +24755,8 @@ namespace TextMagicClient.Api
         /// Return account spending statistics. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>GetSpendingStatPaginatedResponse</returns>
@@ -24533,8 +24770,8 @@ namespace TextMagicClient.Api
         /// Return account spending statistics. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
@@ -24597,8 +24834,8 @@ namespace TextMagicClient.Api
         /// Return account spending statistics. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
@@ -24613,8 +24850,8 @@ namespace TextMagicClient.Api
         /// Return account spending statistics. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="start">Optional. Start date in unix timestamp format. Default is 7 days ago (optional)</param>
         /// <param name="end">Optional. End date in unix timestamp format. Default is now (optional)</param>
         /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
@@ -24959,8 +25196,8 @@ namespace TextMagicClient.Api
         /// Get all subaccounts of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>User</returns>
         public User GetSubaccounts (int? page = null, int? limit = null)
         {
@@ -24972,8 +25209,8 @@ namespace TextMagicClient.Api
         /// Get all subaccounts of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of User</returns>
         public ApiResponse< User > GetSubaccountsWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -25032,8 +25269,8 @@ namespace TextMagicClient.Api
         /// Get all subaccounts of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> GetSubaccountsAsync (int? page = null, int? limit = null)
         {
@@ -25046,8 +25283,8 @@ namespace TextMagicClient.Api
         /// Get all subaccounts of current user. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<User>> GetSubaccountsAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -25103,12 +25340,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. 
+        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSubaccountsWithTokensResponse</returns>
         public GetSubaccountsWithTokensResponse GetSubaccountsWithTokens (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
@@ -25117,12 +25354,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. 
+        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSubaccountsWithTokensResponse</returns>
         public ApiResponse< GetSubaccountsWithTokensResponse > GetSubaccountsWithTokensWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
@@ -25189,12 +25426,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. 
+        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSubaccountsWithTokensResponse</returns>
         public async System.Threading.Tasks.Task<GetSubaccountsWithTokensResponse> GetSubaccountsWithTokensAsync (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
@@ -25204,12 +25441,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all subaccounts with their REST API tokens associated with specified app name. 
+        /// Get all subaccounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getSubaccountsWithTokensInputObject"></param>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSubaccountsWithTokensResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetSubaccountsWithTokensResponse>> GetSubaccountsWithTokensAsyncWithHttpInfo (GetSubaccountsWithTokensInputObject getSubaccountsWithTokensInputObject, decimal? page = null, int? limit = null)
         {
@@ -25720,8 +25957,8 @@ namespace TextMagicClient.Api
         /// Get all user surveys. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetSurveysPaginatedResponse</returns>
         public GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null)
         {
@@ -25733,8 +25970,8 @@ namespace TextMagicClient.Api
         /// Get all user surveys. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetSurveysPaginatedResponse</returns>
         public ApiResponse< GetSurveysPaginatedResponse > GetSurveysWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -25793,8 +26030,8 @@ namespace TextMagicClient.Api
         /// Get all user surveys. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetSurveysPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetSurveysPaginatedResponse> GetSurveysAsync (int? page = null, int? limit = null)
         {
@@ -25807,8 +26044,8 @@ namespace TextMagicClient.Api
         /// Get all user surveys. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetSurveysPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetSurveysPaginatedResponse>> GetSurveysAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -25864,7 +26101,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single template. 
+        /// Get a template details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -25876,7 +26113,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single template. 
+        /// Get a template details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -25937,7 +26174,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single template. 
+        /// Get a template details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -25950,7 +26187,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single template. 
+        /// Get a template details 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26152,7 +26389,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats. 
+        /// Get unread messages number Get total amount of unread messages in the current user chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetUnreadMessagesTotalResponse</returns>
@@ -26163,7 +26400,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats. 
+        /// Get unread messages number Get total amount of unread messages in the current user chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetUnreadMessagesTotalResponse</returns>
@@ -26219,7 +26456,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats. 
+        /// Get unread messages number Get total amount of unread messages in the current user chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetUnreadMessagesTotalResponse</returns>
@@ -26231,7 +26468,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get total amount of unread messages in the current user chats. 
+        /// Get unread messages number Get total amount of unread messages in the current user chats.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetUnreadMessagesTotalResponse)</returns>
@@ -26437,8 +26674,8 @@ namespace TextMagicClient.Api
         /// Get all contact have unsubscribed from your communication. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>GetUnsubscribersPaginatedResponse</returns>
         public GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null)
         {
@@ -26450,8 +26687,8 @@ namespace TextMagicClient.Api
         /// Get all contact have unsubscribed from your communication. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>ApiResponse of GetUnsubscribersPaginatedResponse</returns>
         public ApiResponse< GetUnsubscribersPaginatedResponse > GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -26510,8 +26747,8 @@ namespace TextMagicClient.Api
         /// Get all contact have unsubscribed from your communication. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of GetUnsubscribersPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetUnsubscribersPaginatedResponse> GetUnsubscribersAsync (int? page = null, int? limit = null)
         {
@@ -26524,8 +26761,8 @@ namespace TextMagicClient.Api
         /// Get all contact have unsubscribed from your communication. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (GetUnsubscribersPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersPaginatedResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
@@ -26584,8 +26821,8 @@ namespace TextMagicClient.Api
         /// Get user&#39;s dedicated numbers. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>GetUserDedicatedNumbersPaginatedResponse</returns>
         public GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
@@ -26598,8 +26835,8 @@ namespace TextMagicClient.Api
         /// Get user&#39;s dedicated numbers. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         public ApiResponse< GetUserDedicatedNumbersPaginatedResponse > GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
@@ -26660,8 +26897,8 @@ namespace TextMagicClient.Api
         /// Get user&#39;s dedicated numbers. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>Task of GetUserDedicatedNumbersPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null)
@@ -26675,8 +26912,8 @@ namespace TextMagicClient.Api
         /// Get user&#39;s dedicated numbers. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null)
@@ -26737,8 +26974,8 @@ namespace TextMagicClient.Api
         /// Get all user lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -26754,8 +26991,8 @@ namespace TextMagicClient.Api
         /// Get all user lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -26822,8 +27059,8 @@ namespace TextMagicClient.Api
         /// Get all user lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -26840,8 +27077,8 @@ namespace TextMagicClient.Api
         /// Get all user lists. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
         /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
@@ -27197,7 +27434,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read 
+        /// Mark chats as read (bulk) Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -27208,7 +27445,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read 
+        /// Mark chats as read (bulk) Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -27275,7 +27512,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read 
+        /// Mark chats as read (bulk) Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -27287,7 +27524,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as read by chat ids or mark all chats as read 
+        /// Mark chats as read (bulk) Mark several chats as read by chat ids or mark all chats as read
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsReadBulkInputObject"></param>
@@ -27354,7 +27591,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread 
+        /// Mark chats as unread (bulk) Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -27365,7 +27602,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread 
+        /// Mark chats as unread (bulk) Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -27432,7 +27669,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread 
+        /// Mark chats as unread (bulk) Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -27444,7 +27681,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mark several chats as UNread by chat ids or mark all chats as UNread 
+        /// Mark chats as unread (bulk) Mark several chats as UNread by chat ids or mark all chats as UNread
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="markChatsUnreadBulkInputObject"></param>
@@ -27668,7 +27905,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set mute mode. 
+        /// Mute chat sounds 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
@@ -27680,7 +27917,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set mute mode. 
+        /// Mute chat sounds 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
@@ -27748,7 +27985,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set mute mode. 
+        /// Mute chat sounds 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
@@ -27761,7 +27998,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set mute mode. 
+        /// Mute chat sounds 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatInputObject"></param>
@@ -27829,7 +28066,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats 
+        /// Mute chats (bulk) Mute several chats by chat ids or mute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -27840,7 +28077,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats 
+        /// Mute chats (bulk) Mute several chats by chat ids or mute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -27907,7 +28144,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats 
+        /// Mute chats (bulk) Mute several chats by chat ids or mute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -27919,7 +28156,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Mute several chats by chat ids or mute all chats 
+        /// Mute chats (bulk) Mute several chats by chat ids or mute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="muteChatsBulkInputObject"></param>
@@ -28121,7 +28358,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats 
+        /// Reopen chats (bulk) Reopen chats by chat ids or reopen all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -28132,7 +28369,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats 
+        /// Reopen chats (bulk) Reopen chats by chat ids or reopen all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -28199,7 +28436,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats 
+        /// Reopen chats (bulk) Reopen chats by chat ids or reopen all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -28211,7 +28448,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reopen chats by chat ids or reopen all chats 
+        /// Reopen chats (bulk) Reopen chats by chat ids or reopen all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reopenChatsBulkInputObject"></param>
@@ -28278,7 +28515,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. 
+        /// Request a new REST API token for subaccount. Returning user object, key and app name.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28290,7 +28527,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. 
+        /// Request a new REST API token for subaccount. Returning user object, key and app name.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28358,7 +28595,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. 
+        /// Request a new REST API token for subaccount. Returning user object, key and app name.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28371,7 +28608,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request a new REST API token for subaccount. 
+        /// Request a new REST API token for subaccount. Returning user object, key and app name.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestNewSubaccountTokenInputObject"></param>
@@ -28747,11 +28984,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text. 
+        /// Find chats by message text 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>SearchChatsPaginatedResponse</returns>
         public SearchChatsPaginatedResponse SearchChats (int? page = null, int? limit = null, string query = null)
@@ -28761,11 +28998,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text. 
+        /// Find chats by message text 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>ApiResponse of SearchChatsPaginatedResponse</returns>
         public ApiResponse< SearchChatsPaginatedResponse > SearchChatsWithHttpInfo (int? page = null, int? limit = null, string query = null)
@@ -28823,11 +29060,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text. 
+        /// Find chats by message text 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>Task of SearchChatsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<SearchChatsPaginatedResponse> SearchChatsAsync (int? page = null, int? limit = null, string query = null)
@@ -28838,11 +29075,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by inbound or outbound messages text. 
+        /// Find chats by message text 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <returns>Task of ApiResponse (SearchChatsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SearchChatsPaginatedResponse>> SearchChatsAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
@@ -28900,11 +29137,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by IDs. 
+        /// Find chats (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>SearchChatsByIdsPaginatedResponse</returns>
         public SearchChatsByIdsPaginatedResponse SearchChatsByIds (int? page = null, int? limit = null, string ids = null)
@@ -28914,11 +29151,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by IDs. 
+        /// Find chats (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>ApiResponse of SearchChatsByIdsPaginatedResponse</returns>
         public ApiResponse< SearchChatsByIdsPaginatedResponse > SearchChatsByIdsWithHttpInfo (int? page = null, int? limit = null, string ids = null)
@@ -28976,11 +29213,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by IDs. 
+        /// Find chats (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>Task of SearchChatsByIdsPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<SearchChatsByIdsPaginatedResponse> SearchChatsByIdsAsync (int? page = null, int? limit = null, string ids = null)
@@ -28991,11 +29228,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by IDs. 
+        /// Find chats (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find chats by ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (SearchChatsByIdsPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SearchChatsByIdsPaginatedResponse>> SearchChatsByIdsAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null)
@@ -29053,11 +29290,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number). 
+        /// Find chats by recipient Find chats by recipient (contact, list name or phone number).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>SearchChatsByReceipentPaginatedResponse</returns>
@@ -29068,11 +29305,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number). 
+        /// Find chats by recipient Find chats by recipient (contact, list name or phone number).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>ApiResponse of SearchChatsByReceipentPaginatedResponse</returns>
@@ -29132,11 +29369,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number). 
+        /// Find chats by recipient Find chats by recipient (contact, list name or phone number).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>Task of SearchChatsByReceipentPaginatedResponse</returns>
@@ -29148,11 +29385,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find chats by recipient (contact, list name or phone number). 
+        /// Find chats by recipient Find chats by recipient (contact, list name or phone number).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find chats by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
         /// <returns>Task of ApiResponse (SearchChatsByReceipentPaginatedResponse)</returns>
@@ -29215,8 +29452,8 @@ namespace TextMagicClient.Api
         /// Find user contacts by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -29237,8 +29474,8 @@ namespace TextMagicClient.Api
         /// Find user contacts by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -29315,8 +29552,8 @@ namespace TextMagicClient.Api
         /// Find user contacts by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -29338,8 +29575,8 @@ namespace TextMagicClient.Api
         /// Find user contacts by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="shared">Should shared contacts to be included (optional, default to 0)</param>
         /// <param name="ids">Find contact by ID(s) (optional)</param>
         /// <param name="listId">Find contact by List ID (optional)</param>
@@ -29413,11 +29650,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find inbound messages by given parameters. 
+        /// Find inbound messages Find inbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -29431,11 +29668,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find inbound messages by given parameters. 
+        /// Find inbound messages Find inbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -29501,11 +29738,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find inbound messages by given parameters. 
+        /// Find inbound messages Find inbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -29520,11 +29757,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find inbound messages by given parameters. 
+        /// Find inbound messages Find inbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="query">Find recipients by specified search query (optional)</param>
         /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
@@ -29593,8 +29830,8 @@ namespace TextMagicClient.Api
         /// Find contact lists by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -29612,8 +29849,8 @@ namespace TextMagicClient.Api
         /// Find contact lists by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -29684,8 +29921,8 @@ namespace TextMagicClient.Api
         /// Find contact lists by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -29704,8 +29941,8 @@ namespace TextMagicClient.Api
         /// Find contact lists by given parameters. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find lists by ID(s) (optional)</param>
         /// <param name="query">Find lists by specified search query (optional)</param>
         /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
@@ -29773,11 +30010,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages 
+        /// Find messages Find outbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -29792,11 +30029,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages 
+        /// Find messages Find outbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -29864,11 +30101,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages 
+        /// Find messages Find outbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -29884,11 +30121,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find messages 
+        /// Find messages Find outbound messages by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="lastId">Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified (optional)</param>
         /// <param name="ids">Find message by ID(s) (optional)</param>
         /// <param name="sessionId">Find messages by session ID (optional)</param>
@@ -29956,11 +30193,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find scheduled messages by given parameters. 
+        /// Find scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -29974,11 +30211,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find scheduled messages by given parameters. 
+        /// Find scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -30044,11 +30281,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find scheduled messages by given parameters. 
+        /// Find scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -30063,11 +30300,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find scheduled messages by given parameters. 
+        /// Find scheduled messages 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="query">Find messages by specified search query (optional)</param>
         /// <param name="ids">Find schedules by ID(s) (optional)</param>
         /// <param name="status">Fetch schedules with the specific status: a - actual, c - completed, x - all (optional, default to x)</param>
@@ -30133,11 +30370,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user templates by given parameters. 
+        /// Find templates by criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -30149,11 +30386,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user templates by given parameters. 
+        /// Find templates by criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -30215,11 +30452,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user templates by given parameters. 
+        /// Find templates by criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -30232,11 +30469,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user templates by given parameters. 
+        /// Find templates by criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page (optional, default to 1)</param>
-        /// <param name="limit">How many results to return (optional, default to 10)</param>
+        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
         /// <param name="ids">Find template by ID(s) (optional)</param>
         /// <param name="name">Find template by name (optional)</param>
         /// <param name="content">Find template by content (optional)</param>
@@ -30431,7 +30668,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message The main entrypoint to send messages. See examples above for the reference.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30443,7 +30680,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message The main entrypoint to send messages. See examples above for the reference.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30511,7 +30748,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message The main entrypoint to send messages. See examples above for the reference.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30524,7 +30761,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Send message 
+        /// Send message The main entrypoint to send messages. See examples above for the reference.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendMessageInputObject"></param>
@@ -30725,7 +30962,168 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set status of the chat given by ID. 
+        /// Step 1: Send a verification code  Sends verification code to specified phone number.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>SendPhoneVerificationCodeResponse</returns>
+        public SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        {
+             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = SendPhoneVerificationCode_0WithHttpInfo(sendPhoneVerificationCodeInputObject);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Step 1: Send a verification code  Sends verification code to specified phone number.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>ApiResponse of SendPhoneVerificationCodeResponse</returns>
+        public ApiResponse< SendPhoneVerificationCodeResponse > SendPhoneVerificationCode_0WithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        {
+            // verify the required parameter 'sendPhoneVerificationCodeInputObject' is set
+            if (sendPhoneVerificationCodeInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCode_0");
+
+            var localVarPath = "/api/v2/verify";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sendPhoneVerificationCodeInputObject != null && sendPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendPhoneVerificationCodeInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = sendPhoneVerificationCodeInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendPhoneVerificationCode_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SendPhoneVerificationCodeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SendPhoneVerificationCodeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendPhoneVerificationCodeResponse)));
+        }
+
+        /// <summary>
+        /// Step 1: Send a verification code  Sends verification code to specified phone number.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of SendPhoneVerificationCodeResponse</returns>
+        public async System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0Async (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        {
+             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = await SendPhoneVerificationCode_0AsyncWithHttpInfo(sendPhoneVerificationCodeInputObject);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Step 1: Send a verification code  Sends verification code to specified phone number.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sendPhoneVerificationCodeInputObject"></param>
+        /// <returns>Task of ApiResponse (SendPhoneVerificationCodeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCode_0AsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        {
+            // verify the required parameter 'sendPhoneVerificationCodeInputObject' is set
+            if (sendPhoneVerificationCodeInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCode_0");
+
+            var localVarPath = "/api/v2/verify";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (sendPhoneVerificationCodeInputObject != null && sendPhoneVerificationCodeInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendPhoneVerificationCodeInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = sendPhoneVerificationCodeInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendPhoneVerificationCode_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SendPhoneVerificationCodeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SendPhoneVerificationCodeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SendPhoneVerificationCodeResponse)));
+        }
+
+        /// <summary>
+        /// Change chat status Set status of the chat given by ID.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -30737,7 +31135,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set status of the chat given by ID. 
+        /// Change chat status Set status of the chat given by ID.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -30805,7 +31203,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set status of the chat given by ID. 
+        /// Change chat status Set status of the chat given by ID.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -30818,7 +31216,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Set status of the chat given by ID. 
+        /// Change chat status Set status of the chat given by ID.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setChatStatusInputObject"></param>
@@ -31347,7 +31745,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats 
+        /// Unmute chats (bulk) Unmute several chats by chat ids or unmute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -31358,7 +31756,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats 
+        /// Unmute chats (bulk) Unmute several chats by chat ids or unmute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -31425,7 +31823,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats 
+        /// Unmute chats (bulk) Unmute several chats by chat ids or unmute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -31437,7 +31835,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unmute several chats by chat ids or unmute all chats 
+        /// Unmute chats (bulk) Unmute several chats by chat ids or unmute all chats
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unmuteChatsBulkInputObject"></param>
@@ -33977,7 +34375,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing template. 
+        /// Update a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
@@ -33990,7 +34388,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing template. 
+        /// Update a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
@@ -34063,7 +34461,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing template. 
+        /// Update a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
@@ -34077,7 +34475,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing template. 
+        /// Update a template 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateTemplateInputObject"></param>
@@ -34613,7 +35011,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment 
+        /// Upload message attachment Upload a new file to insert it as a link.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34625,7 +35023,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment 
+        /// Upload message attachment Upload a new file to insert it as a link.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34686,7 +35084,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment 
+        /// Upload message attachment Upload a new file to insert it as a link.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>
@@ -34699,7 +35097,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Upload message attachment 
+        /// Upload message attachment Upload a new file to insert it as a link.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats</param>

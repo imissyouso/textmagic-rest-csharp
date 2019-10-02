@@ -114,6 +114,18 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
+        /// Test CancelVerification
+        /// </summary>
+        [Test]
+        public void CancelVerificationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string verifyId = null;
+            //instance.CancelVerification(verifyId);
+            
+        }
+        
+        /// <summary>
         /// Test CheckPhoneVerificationCode
         /// </summary>
         [Test]
@@ -122,6 +134,18 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject = null;
             //instance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject);
+            
+        }
+        
+        /// <summary>
+        /// Test CheckPhoneVerificationCode_0
+        /// </summary>
+        [Test]
+        public void CheckPhoneVerificationCode_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject = null;
+            //instance.CheckPhoneVerificationCode_0(checkPhoneVerificationCodeInputObject);
             
         }
         
@@ -1143,19 +1167,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetForwardedCalls
-        /// </summary>
-        [Test]
-        public void GetForwardedCallsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? page = null;
-            //int? limit = null;
-            //var response = instance.GetForwardedCalls(page, limit);
-            //Assert.IsInstanceOf<GetForwardedCallsPaginatedResponse> (response, "response is GetForwardedCallsPaginatedResponse");
-        }
-        
-        /// <summary>
         /// Test GetInboundMessage
         /// </summary>
         [Test]
@@ -1985,6 +1996,18 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //instance.SendPhoneVerificationCode();
             
+        }
+        
+        /// <summary>
+        /// Test SendPhoneVerificationCode_0
+        /// </summary>
+        [Test]
+        public void SendPhoneVerificationCode_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject = null;
+            //var response = instance.SendPhoneVerificationCode_0(sendPhoneVerificationCodeInputObject);
+            //Assert.IsInstanceOf<SendPhoneVerificationCodeResponse> (response, "response is SendPhoneVerificationCodeResponse");
         }
         
         /// <summary>

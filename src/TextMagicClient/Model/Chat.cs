@@ -38,13 +38,13 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
+        /// <param name="id">Chat ID. (required).</param>
         /// <param name="originalId">originalId (required).</param>
-        /// <param name="phone">phone (required).</param>
+        /// <param name="phone">Chat partner phone number. (required).</param>
         /// <param name="contact">contact (required).</param>
         /// <param name="unsubscribedContactId">unsubscribedContactId (required).</param>
-        /// <param name="unread">unread (required).</param>
-        /// <param name="updatedAt">updatedAt (required).</param>
+        /// <param name="unread">Unread incoming messages count. (required).</param>
+        /// <param name="updatedAt">Time when last incoming message arrived at this chat. (required).</param>
         /// <param name="status">status (required).</param>
         /// <param name="mute">mute (required).</param>
         /// <param name="lastMessage">lastMessage (required).</param>
@@ -193,8 +193,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Chat ID.
         /// </summary>
+        /// <value>Chat ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -205,8 +206,9 @@ namespace TextMagicClient.Model
         public int? OriginalId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Chat partner phone number.
         /// </summary>
+        /// <value>Chat partner phone number.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
@@ -223,14 +225,16 @@ namespace TextMagicClient.Model
         public int? UnsubscribedContactId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Unread
+        /// Unread incoming messages count.
         /// </summary>
+        /// <value>Unread incoming messages count.</value>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public int? Unread { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdatedAt
+        /// Time when last incoming message arrived at this chat.
         /// </summary>
+        /// <value>Time when last incoming message arrived at this chat.</value>
         [DataMember(Name="updatedAt", EmitDefaultValue=false)]
         public DateTime? UpdatedAt { get; set; }
 

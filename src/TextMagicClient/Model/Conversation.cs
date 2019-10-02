@@ -31,6 +31,33 @@ namespace TextMagicClient.Model
     public partial class Conversation :  IEquatable<Conversation>, IValidatableObject
     {
         /// <summary>
+        /// Message type: inbound or outbound. 
+        /// </summary>
+        /// <value>Message type: inbound or outbound. </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum
+        {
+            
+            /// <summary>
+            /// Enum In for value: in
+            /// </summary>
+            [EnumMember(Value = "in")]
+            In = 1,
+            
+            /// <summary>
+            /// Enum Out for value: out
+            /// </summary>
+            [EnumMember(Value = "out")]
+            Out = 2
+        }
+
+        /// <summary>
+        /// Message type: inbound or outbound. 
+        /// </summary>
+        /// <value>Message type: inbound or outbound. </value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum Direction { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -39,16 +66,16 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// </summary>
         /// <param name="id">id (required).</param>
-        /// <param name="direction">direction (required).</param>
-        /// <param name="sender">sender (required).</param>
-        /// <param name="messageTime">messageTime (required).</param>
-        /// <param name="text">text (required).</param>
-        /// <param name="receiver">receiver (required).</param>
-        /// <param name="status">status (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="lastName">lastName (required).</param>
+        /// <param name="direction">Message type: inbound or outbound.  (required).</param>
+        /// <param name="sender">Sender phone number. (required).</param>
+        /// <param name="messageTime">Time when message arrived at TextMagic. (required).</param>
+        /// <param name="text">Message text. (required).</param>
+        /// <param name="receiver">Receiver phone number. (required).</param>
+        /// <param name="status">Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details. (required).</param>
+        /// <param name="firstName">Contact first name. (required).</param>
+        /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="sessionId">sessionId (required).</param>
-        public Conversation(int? id = default(int?), string direction = default(string), string sender = default(string), DateTime? messageTime = default(DateTime?), string text = default(string), string receiver = default(string), string status = default(string), string firstName = default(string), string lastName = default(string), int? sessionId = default(int?))
+        public Conversation(int? id = default(int?), DirectionEnum direction = default(DirectionEnum), string sender = default(string), DateTime? messageTime = default(DateTime?), string text = default(string), string receiver = default(string), string status = default(string), string firstName = default(string), string lastName = default(string), int? sessionId = default(int?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -148,51 +175,53 @@ namespace TextMagicClient.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sender
+        /// Sender phone number.
         /// </summary>
+        /// <value>Sender phone number.</value>
         [DataMember(Name="sender", EmitDefaultValue=false)]
         public string Sender { get; set; }
 
         /// <summary>
-        /// Gets or Sets MessageTime
+        /// Time when message arrived at TextMagic.
         /// </summary>
+        /// <value>Time when message arrived at TextMagic.</value>
         [DataMember(Name="messageTime", EmitDefaultValue=false)]
         public DateTime? MessageTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        /// Message text.
         /// </summary>
+        /// <value>Message text.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets Receiver
+        /// Receiver phone number.
         /// </summary>
+        /// <value>Receiver phone number.</value>
         [DataMember(Name="receiver", EmitDefaultValue=false)]
         public string Receiver { get; set; }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details.
         /// </summary>
+        /// <value>Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Contact first name.
         /// </summary>
+        /// <value>Contact first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Contact last name.
         /// </summary>
+        /// <value>Contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
