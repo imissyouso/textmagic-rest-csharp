@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignContactsToList**](TextMagicApi.md#assigncontactstolist) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to the specified list.
 [**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
-[**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
+[**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number
 [**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#checkphoneverificationcode) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 [**DeleteContactsByIds**](TextMagicApi.md#deletecontactsbyids) | **POST** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
 [**DeleteContactsFromList**](TextMagicApi.md#deletecontactsfromlist) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
 [**DeleteCustomField**](TextMagicApi.md#deletecustomfield) | **DELETE** /api/v2/customfields/{id} | Delete a single custom field.
-[**DeleteDedicatedNumber**](TextMagicApi.md#deletededicatednumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription.
+[**DeleteDedicatedNumber**](TextMagicApi.md#deletededicatednumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription
 [**DeleteInboundMessage**](TextMagicApi.md#deleteinboundmessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
 [**DeleteInboundMessagesBulk**](TextMagicApi.md#deleteinboundmessagesbulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
 [**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a single list.
@@ -49,7 +49,7 @@ Method | HTTP request | Description
 [**DeletePushToken**](TextMagicApi.md#deletepushtoken) | **DELETE** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
 [**DeleteScheduledMessage**](TextMagicApi.md#deletescheduledmessage) | **DELETE** /api/v2/schedules/{id} | Delete a single scheduled message
 [**DeleteScheduledMessagesBulk**](TextMagicApi.md#deletescheduledmessagesbulk) | **POST** /api/v2/schedules/delete | Delete scheduled messages (bulk)
-[**DeleteSenderId**](TextMagicApi.md#deletesenderid) | **DELETE** /api/v2/senderids/{id} | Delete a Sender ID.
+[**DeleteSenderId**](TextMagicApi.md#deletesenderid) | **DELETE** /api/v2/senderids/{id} | Delete a Sender ID
 [**DeleteSurvey**](TextMagicApi.md#deletesurvey) | **DELETE** /api/v2/surveys/{id} | Delete a survey.
 [**DeleteSurveyNode**](TextMagicApi.md#deletesurveynode) | **DELETE** /api/v2/surveys/nodes/{id} | Delete a node.
 [**DeleteTemplate**](TextMagicApi.md#deletetemplate) | **DELETE** /api/v2/templates/{id} | Delete a template
@@ -65,8 +65,8 @@ Method | HTTP request | Description
 [**GetAllOutboundMessages**](TextMagicApi.md#getalloutboundmessages) | **GET** /api/v2/messages | Get all messages
 [**GetAllScheduledMessages**](TextMagicApi.md#getallscheduledmessages) | **GET** /api/v2/schedules | Get all scheduled messages
 [**GetAllTemplates**](TextMagicApi.md#getalltemplates) | **GET** /api/v2/templates | Get all templates
-[**GetAvailableDedicatedNumbers**](TextMagicApi.md#getavailablededicatednumbers) | **GET** /api/v2/numbers/available | Find available dedicated numbers to buy.
-[**GetAvailableSenderSettingOptions**](TextMagicApi.md#getavailablesendersettingoptions) | **GET** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+[**GetAvailableDedicatedNumbers**](TextMagicApi.md#getavailablededicatednumbers) | **GET** /api/v2/numbers/available | Find dedicated numbers available for purchase
+[**GetAvailableSenderSettingOptions**](TextMagicApi.md#getavailablesendersettingoptions) | **GET** /api/v2/sources | Get available sender settings
 [**GetBalanceNotificationOptions**](TextMagicApi.md#getbalancenotificationoptions) | **GET** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
 [**GetBalanceNotificationSettings**](TextMagicApi.md#getbalancenotificationsettings) | **GET** /api/v2/user/notification/balance | Get balance notification settings
 [**GetBlockedContacts**](TextMagicApi.md#getblockedcontacts) | **GET** /api/v2/contacts/block/list | Get blocked contacts.
@@ -89,7 +89,7 @@ Method | HTTP request | Description
 [**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current user info.
 [**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get a single custom field.
 [**GetCustomFields**](TextMagicApi.md#getcustomfields) | **GET** /api/v2/customfields | Get all contact custom fields.
-[**GetDedicatedNumber**](TextMagicApi.md#getdedicatednumber) | **GET** /api/v2/numbers/{id} | Get a single dedicated number.
+[**GetDedicatedNumber**](TextMagicApi.md#getdedicatednumber) | **GET** /api/v2/numbers/{id} | Get the details of a specific dedicated number
 [**GetDisallowedRules**](TextMagicApi.md#getdisallowedrules) | **GET** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
 [**GetFavourites**](TextMagicApi.md#getfavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists.
 [**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
@@ -110,9 +110,9 @@ Method | HTTP request | Description
 [**GetOutboundMessagesHistory**](TextMagicApi.md#getoutboundmessageshistory) | **GET** /api/v2/history | Get history
 [**GetPushTokens**](TextMagicApi.md#getpushtokens) | **GET** /api/v2/push/tokens | Get all device tokens assigned to the current account
 [**GetScheduledMessage**](TextMagicApi.md#getscheduledmessage) | **GET** /api/v2/schedules/{id} | Get a single scheduled message
-[**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get a single Sender ID.
-[**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all sender IDs of current user.
-[**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current user sender settings.
+[**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get the details of a specific Sender ID
+[**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all your approved Sender IDs
+[**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current sender settings
 [**GetSpendingStat**](TextMagicApi.md#getspendingstat) | **GET** /api/v2/stats/spending | Return account spending statistics.
 [**GetState**](TextMagicApi.md#getstate) | **GET** /api/v2/state | Get current entities state
 [**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get a single subaccount.
@@ -127,7 +127,7 @@ Method | HTTP request | Description
 [**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
-[**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get user&#39;s dedicated numbers.
+[**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
 [**GetUserLists**](TextMagicApi.md#getuserlists) | **GET** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite new subaccount.
@@ -139,7 +139,7 @@ Method | HTTP request | Description
 [**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Just does a pong.
 [**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
-[**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Request for a new Sender ID.
+[**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Apply for a new Sender ID
 [**ResetSurvey**](TextMagicApi.md#resetsurvey) | **PUT** /api/v2/surveys/{id}/reset | Reset a survey flow.
 [**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by message text
 [**SearchChatsByIds**](TextMagicApi.md#searchchatsbyids) | **GET** /api/v2/chats/search/ids | Find chats (bulk)
@@ -171,7 +171,7 @@ Method | HTTP request | Description
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
 [**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Update existing list.
 [**UpdatePassword**](TextMagicApi.md#updatepassword) | **PUT** /api/v2/user/password/change | Change user password.
-[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings for specified country.
+[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
 [**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
 [**UpdateSurveyNode**](TextMagicApi.md#updatesurveynode) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
@@ -313,7 +313,9 @@ Name | Type | Description  | Notes
 # **BuyDedicatedNumber**
 > void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject)
 
-Buy a dedicated number and assign it to the specified account.
+Buy a dedicated number
+
+To buy a dedicated number, you first need to find an available number matching your criteria using the `/api/v2/numbers/available` command described above.
 
 ### Example
 ```csharp
@@ -338,7 +340,7 @@ namespace Example
 
             try
             {
-                // Buy a dedicated number and assign it to the specified account.
+                // Buy a dedicated number
                 apiInstance.BuyDedicatedNumber(buyDedicatedNumberInputObject);
             }
             catch (Exception e)
@@ -1325,6 +1327,8 @@ Name | Type | Description  | Notes
 
 Create a template
 
+There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
+
 ### Example
 ```csharp
 using System;
@@ -2130,7 +2134,7 @@ void (empty response body)
 # **DeleteDedicatedNumber**
 > void DeleteDedicatedNumber (int? id)
 
-Cancel dedicated number subscription.
+Cancel dedicated number subscription
 
 ### Example
 ```csharp
@@ -2155,7 +2159,7 @@ namespace Example
 
             try
             {
-                // Cancel dedicated number subscription.
+                // Cancel dedicated number subscription
                 apiInstance.DeleteDedicatedNumber(id);
             }
             catch (Exception e)
@@ -3010,7 +3014,7 @@ void (empty response body)
 # **DeleteSenderId**
 > void DeleteSenderId (int? id)
 
-Delete a Sender ID.
+Delete a Sender ID
 
 ### Example
 ```csharp
@@ -3035,7 +3039,7 @@ namespace Example
 
             try
             {
-                // Delete a Sender ID.
+                // Delete a Sender ID
                 apiInstance.DeleteSenderId(id);
             }
             catch (Exception e)
@@ -4049,7 +4053,7 @@ Name | Type | Description  | Notes
 # **GetAvailableDedicatedNumbers**
 > GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers (string country, int? prefix = null, int? tollfree = null)
 
-Find available dedicated numbers to buy.
+Find dedicated numbers available for purchase
 
 ### Example
 ```csharp
@@ -4070,13 +4074,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var country = "GB";  // string | Dedicated number country. Two letters in upper case
-            var prefix = 56;  // int? | Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree = 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional)  (default to 1)
-            var tollfree = 56;  // int? | Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional)  (default to 0)
+            var country = "GB";  // string | Two-letter dedicated number country ISO code.
+            var prefix = 447155;  // int? | Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)  (default to 1)
+            var tollfree = 56;  // int? | Should we show only tollfree numbers (tollfree available only for US). (optional)  (default to 0)
 
             try
             {
-                // Find available dedicated numbers to buy.
+                // Find dedicated numbers available for purchase
                 GetAvailableDedicatedNumbersResponse result = apiInstance.GetAvailableDedicatedNumbers(country, prefix, tollfree);
                 Debug.WriteLine(result);
             }
@@ -4093,9 +4097,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **country** | **string**| Dedicated number country. Two letters in upper case | 
- **prefix** | **int?**| Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. | [optional] [default to 1]
- **tollfree** | **int?**| Should we show only tollfree numbers (tollfree available only for US). Default is false. | [optional] [default to 0]
+ **country** | **string**| Two-letter dedicated number country ISO code. | 
+ **prefix** | **int?**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional] [default to 1]
+ **tollfree** | **int?**| Should we show only tollfree numbers (tollfree available only for US). | [optional] [default to 0]
 
 ### Return type
 
@@ -4115,6 +4119,8 @@ Name | Type | Description  | Notes
 <a name="getavailablesendersettingoptions"></a>
 # **GetAvailableSenderSettingOptions**
 > GetAvailableSenderSettingOptionsResponse GetAvailableSenderSettingOptions (string country = null)
+
+Get available sender settings
 
 Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
 
@@ -4137,11 +4143,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var country = country_example;  // string | Return sender setting options available in specific country only. Two upper case characters (optional) 
+            var country = "US";  // string | Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional) 
 
             try
             {
-                // Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
+                // Get available sender settings
                 GetAvailableSenderSettingOptionsResponse result = apiInstance.GetAvailableSenderSettingOptions(country);
                 Debug.WriteLine(result);
             }
@@ -4158,7 +4164,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **country** | **string**| Return sender setting options available in specific country only. Two upper case characters | [optional] 
+ **country** | **string**| Two-letter ISO country ID. If not specified, it returns all the available sender settings. | [optional] 
 
 ### Return type
 
@@ -5595,7 +5601,7 @@ Name | Type | Description  | Notes
 # **GetDedicatedNumber**
 > UsersInbound GetDedicatedNumber (int? id)
 
-Get a single dedicated number.
+Get the details of a specific dedicated number
 
 ### Example
 ```csharp
@@ -5620,7 +5626,7 @@ namespace Example
 
             try
             {
-                // Get a single dedicated number.
+                // Get the details of a specific dedicated number
                 UsersInbound result = apiInstance.GetDedicatedNumber(id);
                 Debug.WriteLine(result);
             }
@@ -7008,7 +7014,7 @@ Name | Type | Description  | Notes
 # **GetSenderId**
 > SenderId GetSenderId (int? id)
 
-Get a single Sender ID.
+Get the details of a specific Sender ID
 
 ### Example
 ```csharp
@@ -7033,7 +7039,7 @@ namespace Example
 
             try
             {
-                // Get a single Sender ID.
+                // Get the details of a specific Sender ID
                 SenderId result = apiInstance.GetSenderId(id);
                 Debug.WriteLine(result);
             }
@@ -7071,7 +7077,7 @@ Name | Type | Description  | Notes
 # **GetSenderIds**
 > GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null)
 
-Get all sender IDs of current user.
+Get all your approved Sender IDs
 
 ### Example
 ```csharp
@@ -7097,7 +7103,7 @@ namespace Example
 
             try
             {
-                // Get all sender IDs of current user.
+                // Get all your approved Sender IDs
                 GetSenderIdsPaginatedResponse result = apiInstance.GetSenderIds(page, limit);
                 Debug.WriteLine(result);
             }
@@ -7136,7 +7142,9 @@ Name | Type | Description  | Notes
 # **GetSenderSettings**
 > GetSenderSettingsResponse GetSenderSettings (string country = null)
 
-Get current user sender settings.
+Get current sender settings
+
+@TODO
 
 ### Example
 ```csharp
@@ -7157,11 +7165,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var country = country_example;  // string | Return sender settings enabled for sending to specified country. Two upper case characters (optional) 
+            var country = "US";  // string | Return sender settings enabled for sending to specified country. Two upper case characters (optional) 
 
             try
             {
-                // Get current user sender settings.
+                // Get current sender settings
                 GetSenderSettingsResponse result = apiInstance.GetSenderSettings(country);
                 Debug.WriteLine(result);
             }
@@ -8093,7 +8101,7 @@ Name | Type | Description  | Notes
 # **GetUserDedicatedNumbers**
 > GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null)
 
-Get user's dedicated numbers.
+Get all your dedicated numbers
 
 ### Example
 ```csharp
@@ -8120,7 +8128,7 @@ namespace Example
 
             try
             {
-                // Get user's dedicated numbers.
+                // Get all your dedicated numbers
                 GetUserDedicatedNumbersPaginatedResponse result = apiInstance.GetUserDedicatedNumbers(page, limit, surveyId);
                 Debug.WriteLine(result);
             }
@@ -8859,7 +8867,9 @@ Name | Type | Description  | Notes
 # **RequestSenderId**
 > ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject)
 
-Request for a new Sender ID.
+Apply for a new Sender ID
+
+> Sender IDs are shared between all of your sub-accounts.
 
 ### Example
 ```csharp
@@ -8884,7 +8894,7 @@ namespace Example
 
             try
             {
-                // Request for a new Sender ID.
+                // Apply for a new Sender ID
                 ResourceLinkResponse result = apiInstance.RequestSenderId(requestSenderIdInputObject);
                 Debug.WriteLine(result);
             }
@@ -10975,7 +10985,9 @@ void (empty response body)
 # **UpdateSenderSetting**
 > void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject)
 
-Change sender settings for specified country.
+Change sender settings
+
+@TODO
 
 ### Example
 ```csharp
@@ -11000,7 +11012,7 @@ namespace Example
 
             try
             {
-                // Change sender settings for specified country.
+                // Change sender settings
                 apiInstance.UpdateSenderSetting(updateSenderSettingInputObject);
             }
             catch (Exception e)

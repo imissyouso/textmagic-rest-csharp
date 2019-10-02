@@ -38,10 +38,10 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetAvailableSenderSettingOptionsResponse" /> class.
         /// </summary>
-        /// <param name="dedicated">dedicated (required).</param>
-        /// <param name="user">user (required).</param>
-        /// <param name="shared">shared (required).</param>
-        /// <param name="senderIds">senderIds (required).</param>
+        /// <param name="dedicated">Array of dedicated numbers strings. (required).</param>
+        /// <param name="user">Array of verified account phone numbers (currently only one). (required).</param>
+        /// <param name="shared">Array of shared numbers strings. (required).</param>
+        /// <param name="senderIds">Array of alphanumeric sender IDs. (required).</param>
         public GetAvailableSenderSettingOptionsResponse(List<string> dedicated = default(List<string>), List<string> user = default(List<string>), List<string> shared = default(List<string>), List<string> senderIds = default(List<string>))
         {
             // to ensure "dedicated" is required (not null)
@@ -83,26 +83,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Dedicated
+        /// Array of dedicated numbers strings.
         /// </summary>
+        /// <value>Array of dedicated numbers strings.</value>
         [DataMember(Name="dedicated", EmitDefaultValue=false)]
         public List<string> Dedicated { get; set; }
 
         /// <summary>
-        /// Gets or Sets User
+        /// Array of verified account phone numbers (currently only one).
         /// </summary>
+        /// <value>Array of verified account phone numbers (currently only one).</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public List<string> User { get; set; }
 
         /// <summary>
-        /// Gets or Sets Shared
+        /// Array of shared numbers strings.
         /// </summary>
+        /// <value>Array of shared numbers strings.</value>
         [DataMember(Name="shared", EmitDefaultValue=false)]
         public List<string> Shared { get; set; }
 
         /// <summary>
-        /// Gets or Sets SenderIds
+        /// Array of alphanumeric sender IDs.
         /// </summary>
+        /// <value>Array of alphanumeric sender IDs.</value>
         [DataMember(Name="senderIds", EmitDefaultValue=false)]
         public List<string> SenderIds { get; set; }
 

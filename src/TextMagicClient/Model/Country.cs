@@ -38,8 +38,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Country" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
+        /// <param name="id">Two-letter ISO country ID. (required).</param>
+        /// <param name="name">Full country name. (required).</param>
         public Country(string id = default(string), string name = default(string))
         {
             // to ensure "id" is required (not null)
@@ -63,14 +63,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Two-letter ISO country ID.
         /// </summary>
+        /// <value>Two-letter ISO country ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Full country name.
         /// </summary>
+        /// <value>Full country name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

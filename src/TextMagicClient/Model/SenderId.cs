@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class SenderId :  IEquatable<SenderId>, IValidatableObject
     {
         /// <summary>
-        /// A - accepted, R - rejected, P - pending
+        /// *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. 
         /// </summary>
-        /// <value>A - accepted, R - rejected, P - pending</value>
+        /// <value>*   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -58,9 +58,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// A - accepted, R - rejected, P - pending
+        /// *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. 
         /// </summary>
-        /// <value>A - accepted, R - rejected, P - pending</value>
+        /// <value>*   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. </value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
         /// <summary>
@@ -71,10 +71,10 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SenderId" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="senderId">senderId (required).</param>
+        /// <param name="id">Numeric sender ID. (required).</param>
+        /// <param name="senderId">Alphanumeric ID. (required).</param>
         /// <param name="user">user (required).</param>
-        /// <param name="status">A - accepted, R - rejected, P - pending (required).</param>
+        /// <param name="status">*   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active.  (required).</param>
         public SenderId(int? id = default(int?), string senderId = default(string), User user = default(User), StatusEnum status = default(StatusEnum))
         {
             // to ensure "id" is required (not null)
@@ -116,14 +116,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Numeric sender ID.
         /// </summary>
+        /// <value>Numeric sender ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets _SenderId
+        /// Alphanumeric ID.
         /// </summary>
+        /// <value>Alphanumeric ID.</value>
         [DataMember(Name="senderId", EmitDefaultValue=false)]
         public string _SenderId { get; set; }
 

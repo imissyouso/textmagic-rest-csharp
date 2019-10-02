@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuyDedicatedNumberInputObject" /> class.
         /// </summary>
-        /// <param name="phone">Desired dedicated phone number in international E.164 format (required).</param>
-        /// <param name="country">Dedicated number country. Two charactes in upper case. (required).</param>
-        /// <param name="userId">User ID this number will be assigned to (required).</param>
+        /// <param name="phone">Dedicated phone number. (required).</param>
+        /// <param name="country">Country code phone number. (required).</param>
+        /// <param name="userId">Assigned dedicated number. This number will be available for this account only. You cannot transfer numbers between sub-accounts.  (required).</param>
         public BuyDedicatedNumberInputObject(string phone = default(string), string country = default(string), int? userId = default(int?))
         {
             // to ensure "phone" is required (not null)
@@ -73,23 +73,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Desired dedicated phone number in international E.164 format
+        /// Dedicated phone number.
         /// </summary>
-        /// <value>Desired dedicated phone number in international E.164 format</value>
+        /// <value>Dedicated phone number.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Dedicated number country. Two charactes in upper case.
+        /// Country code phone number.
         /// </summary>
-        /// <value>Dedicated number country. Two charactes in upper case.</value>
+        /// <value>Country code phone number.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
 
         /// <summary>
-        /// User ID this number will be assigned to
+        /// Assigned dedicated number. This number will be available for this account only. You cannot transfer numbers between sub-accounts. 
         /// </summary>
-        /// <value>User ID this number will be assigned to</value>
+        /// <value>Assigned dedicated number. This number will be available for this account only. You cannot transfer numbers between sub-accounts. </value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 

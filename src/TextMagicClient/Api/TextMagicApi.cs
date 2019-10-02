@@ -69,10 +69,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> BlockContactWithHttpInfo (BlockContactInputObject blockContactInputObject);
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account.
+        /// Buy a dedicated number
         /// </summary>
         /// <remarks>
-        /// 
+        /// To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -80,10 +80,10 @@ namespace TextMagicClient.Api
         void BuyDedicatedNumber (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account.
+        /// Buy a dedicated number
         /// </summary>
         /// <remarks>
-        /// 
+        /// To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -412,7 +412,7 @@ namespace TextMagicClient.Api
         /// Create a template
         /// </summary>
         /// <remarks>
-        /// 
+        /// There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -423,7 +423,7 @@ namespace TextMagicClient.Api
         /// Create a template
         /// </summary>
         /// <remarks>
-        /// 
+        /// There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -682,7 +682,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteCustomFieldWithHttpInfo (int? id);
         /// <summary>
-        /// Cancel dedicated number subscription.
+        /// Cancel dedicated number subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -693,7 +693,7 @@ namespace TextMagicClient.Api
         void DeleteDedicatedNumber (int? id);
 
         /// <summary>
-        /// Cancel dedicated number subscription.
+        /// Cancel dedicated number subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -980,7 +980,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteScheduledMessagesBulkWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
         /// <summary>
-        /// Delete a Sender ID.
+        /// Delete a Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -991,7 +991,7 @@ namespace TextMagicClient.Api
         void DeleteSenderId (int? id);
 
         /// <summary>
-        /// Delete a Sender ID.
+        /// Delete a Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -1352,49 +1352,49 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetAllTemplatesPaginatedResponse</returns>
         ApiResponse<GetAllTemplatesPaginatedResponse> GetAllTemplatesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Find available dedicated numbers to buy.
+        /// Find dedicated numbers available for purchase
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>GetAvailableDedicatedNumbersResponse</returns>
         GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers (string country, int? prefix = null, int? tollfree = null);
 
         /// <summary>
-        /// Find available dedicated numbers to buy.
+        /// Find dedicated numbers available for purchase
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>ApiResponse of GetAvailableDedicatedNumbersResponse</returns>
         ApiResponse<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersWithHttpInfo (string country, int? prefix = null, int? tollfree = null);
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+        /// Get available sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>GetAvailableSenderSettingOptionsResponse</returns>
         GetAvailableSenderSettingOptionsResponse GetAvailableSenderSettingOptions (string country = null);
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+        /// Get available sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>ApiResponse of GetAvailableSenderSettingOptionsResponse</returns>
         ApiResponse<GetAvailableSenderSettingOptionsResponse> GetAvailableSenderSettingOptionsWithHttpInfo (string country = null);
         /// <summary>
@@ -1900,7 +1900,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetCustomFieldsPaginatedResponse</returns>
         ApiResponse<GetCustomFieldsPaginatedResponse> GetCustomFieldsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single dedicated number.
+        /// Get the details of a specific dedicated number
         /// </summary>
         /// <remarks>
         /// 
@@ -1911,7 +1911,7 @@ namespace TextMagicClient.Api
         UsersInbound GetDedicatedNumber (int? id);
 
         /// <summary>
-        /// Get a single dedicated number.
+        /// Get the details of a specific dedicated number
         /// </summary>
         /// <remarks>
         /// 
@@ -2429,7 +2429,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of MessagesIcs</returns>
         ApiResponse<MessagesIcs> GetScheduledMessageWithHttpInfo (int? id);
         /// <summary>
-        /// Get a single Sender ID.
+        /// Get the details of a specific Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2440,7 +2440,7 @@ namespace TextMagicClient.Api
         SenderId GetSenderId (int? id);
 
         /// <summary>
-        /// Get a single Sender ID.
+        /// Get the details of a specific Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2450,7 +2450,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SenderId</returns>
         ApiResponse<SenderId> GetSenderIdWithHttpInfo (int? id);
         /// <summary>
-        /// Get all sender IDs of current user.
+        /// Get all your approved Sender IDs
         /// </summary>
         /// <remarks>
         /// 
@@ -2462,7 +2462,7 @@ namespace TextMagicClient.Api
         GetSenderIdsPaginatedResponse GetSenderIds (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all sender IDs of current user.
+        /// Get all your approved Sender IDs
         /// </summary>
         /// <remarks>
         /// 
@@ -2473,10 +2473,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetSenderIdsPaginatedResponse</returns>
         ApiResponse<GetSenderIdsPaginatedResponse> GetSenderIdsWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get current user sender settings.
+        /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -2484,10 +2484,10 @@ namespace TextMagicClient.Api
         GetSenderSettingsResponse GetSenderSettings (string country = null);
 
         /// <summary>
-        /// Get current user sender settings.
+        /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -2800,7 +2800,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUnsubscribersPaginatedResponse</returns>
         ApiResponse<GetUnsubscribersPaginatedResponse> GetUnsubscribersWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get user&#39;s dedicated numbers.
+        /// Get all your dedicated numbers
         /// </summary>
         /// <remarks>
         /// 
@@ -2813,7 +2813,7 @@ namespace TextMagicClient.Api
         GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers (int? page = null, int? limit = null, int? surveyId = null);
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers.
+        /// Get all your dedicated numbers
         /// </summary>
         /// <remarks>
         /// 
@@ -3062,10 +3062,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> RequestNewSubaccountTokenWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
         /// <summary>
-        /// Request for a new Sender ID.
+        /// Apply for a new Sender ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Sender IDs are shared between all of your sub-accounts.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -3073,10 +3073,10 @@ namespace TextMagicClient.Api
         ResourceLinkResponse RequestSenderId (RequestSenderIdInputObject requestSenderIdInputObject);
 
         /// <summary>
-        /// Request for a new Sender ID.
+        /// Apply for a new Sender ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Sender IDs are shared between all of your sub-accounts.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -3834,10 +3834,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdatePasswordWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject);
         /// <summary>
-        /// Change sender settings for specified country.
+        /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -3845,10 +3845,10 @@ namespace TextMagicClient.Api
         void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject);
 
         /// <summary>
-        /// Change sender settings for specified country.
+        /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -4058,10 +4058,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> BlockContactAsyncWithHttpInfo (BlockContactInputObject blockContactInputObject);
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account.
+        /// Buy a dedicated number
         /// </summary>
         /// <remarks>
-        /// 
+        /// To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -4069,10 +4069,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task BuyDedicatedNumberAsync (BuyDedicatedNumberInputObject buyDedicatedNumberInputObject);
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account.
+        /// Buy a dedicated number
         /// </summary>
         /// <remarks>
-        /// 
+        /// To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -4401,7 +4401,7 @@ namespace TextMagicClient.Api
         /// Create a template
         /// </summary>
         /// <remarks>
-        /// 
+        /// There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -4412,7 +4412,7 @@ namespace TextMagicClient.Api
         /// Create a template
         /// </summary>
         /// <remarks>
-        /// 
+        /// There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -4671,7 +4671,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCustomFieldAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Cancel dedicated number subscription.
+        /// Cancel dedicated number subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -4682,7 +4682,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteDedicatedNumberAsync (int? id);
 
         /// <summary>
-        /// Cancel dedicated number subscription.
+        /// Cancel dedicated number subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -4969,7 +4969,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduledMessagesBulkAsyncWithHttpInfo (DeleteScheduledMessagesBulkInputObject deleteScheduledMessagesBulkInputObject);
         /// <summary>
-        /// Delete a Sender ID.
+        /// Delete a Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -4980,7 +4980,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteSenderIdAsync (int? id);
 
         /// <summary>
-        /// Delete a Sender ID.
+        /// Delete a Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -5341,49 +5341,49 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetAllTemplatesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAllTemplatesPaginatedResponse>> GetAllTemplatesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Find available dedicated numbers to buy.
+        /// Find dedicated numbers available for purchase
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of GetAvailableDedicatedNumbersResponse</returns>
         System.Threading.Tasks.Task<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersAsync (string country, int? prefix = null, int? tollfree = null);
 
         /// <summary>
-        /// Find available dedicated numbers to buy.
+        /// Find dedicated numbers available for purchase
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetAvailableDedicatedNumbersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAvailableDedicatedNumbersResponse>> GetAvailableDedicatedNumbersAsyncWithHttpInfo (string country, int? prefix = null, int? tollfree = null);
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+        /// Get available sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>Task of GetAvailableSenderSettingOptionsResponse</returns>
         System.Threading.Tasks.Task<GetAvailableSenderSettingOptionsResponse> GetAvailableSenderSettingOptionsAsync (string country = null);
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+        /// Get available sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>Task of ApiResponse (GetAvailableSenderSettingOptionsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAvailableSenderSettingOptionsResponse>> GetAvailableSenderSettingOptionsAsyncWithHttpInfo (string country = null);
         /// <summary>
@@ -5889,7 +5889,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetCustomFieldsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetCustomFieldsPaginatedResponse>> GetCustomFieldsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single dedicated number.
+        /// Get the details of a specific dedicated number
         /// </summary>
         /// <remarks>
         /// 
@@ -5900,7 +5900,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<UsersInbound> GetDedicatedNumberAsync (int? id);
 
         /// <summary>
-        /// Get a single dedicated number.
+        /// Get the details of a specific dedicated number
         /// </summary>
         /// <remarks>
         /// 
@@ -6418,7 +6418,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (MessagesIcs)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessagesIcs>> GetScheduledMessageAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get a single Sender ID.
+        /// Get the details of a specific Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -6429,7 +6429,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SenderId> GetSenderIdAsync (int? id);
 
         /// <summary>
-        /// Get a single Sender ID.
+        /// Get the details of a specific Sender ID
         /// </summary>
         /// <remarks>
         /// 
@@ -6439,7 +6439,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SenderId)</returns>
         System.Threading.Tasks.Task<ApiResponse<SenderId>> GetSenderIdAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get all sender IDs of current user.
+        /// Get all your approved Sender IDs
         /// </summary>
         /// <remarks>
         /// 
@@ -6451,7 +6451,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetSenderIdsPaginatedResponse> GetSenderIdsAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all sender IDs of current user.
+        /// Get all your approved Sender IDs
         /// </summary>
         /// <remarks>
         /// 
@@ -6462,10 +6462,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetSenderIdsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetSenderIdsPaginatedResponse>> GetSenderIdsAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get current user sender settings.
+        /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -6473,10 +6473,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetSenderSettingsResponse> GetSenderSettingsAsync (string country = null);
 
         /// <summary>
-        /// Get current user sender settings.
+        /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -6789,7 +6789,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetUnsubscribersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUnsubscribersPaginatedResponse>> GetUnsubscribersAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get user&#39;s dedicated numbers.
+        /// Get all your dedicated numbers
         /// </summary>
         /// <remarks>
         /// 
@@ -6802,7 +6802,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersAsync (int? page = null, int? limit = null, int? surveyId = null);
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers.
+        /// Get all your dedicated numbers
         /// </summary>
         /// <remarks>
         /// 
@@ -7051,10 +7051,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> RequestNewSubaccountTokenAsyncWithHttpInfo (RequestNewSubaccountTokenInputObject requestNewSubaccountTokenInputObject);
         /// <summary>
-        /// Request for a new Sender ID.
+        /// Apply for a new Sender ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Sender IDs are shared between all of your sub-accounts.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -7062,10 +7062,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> RequestSenderIdAsync (RequestSenderIdInputObject requestSenderIdInputObject);
 
         /// <summary>
-        /// Request for a new Sender ID.
+        /// Apply for a new Sender ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Sender IDs are shared between all of your sub-accounts.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -7823,10 +7823,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePasswordAsyncWithHttpInfo (UpdatePasswordInputObject updatePasswordInputObject);
         /// <summary>
-        /// Change sender settings for specified country.
+        /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -7834,10 +7834,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task UpdateSenderSettingAsync (UpdateSenderSettingInputObject updateSenderSettingInputObject);
 
         /// <summary>
-        /// Change sender settings for specified country.
+        /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// @TODO
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -8435,7 +8435,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account. 
+        /// Buy a dedicated number To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -8446,7 +8446,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account. 
+        /// Buy a dedicated number To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -8514,7 +8514,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account. 
+        /// Buy a dedicated number To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -8526,7 +8526,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Buy a dedicated number and assign it to the specified account. 
+        /// Buy a dedicated number To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="buyDedicatedNumberInputObject"></param>
@@ -10957,7 +10957,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a template 
+        /// Create a template There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -10969,7 +10969,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a template 
+        /// Create a template There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -11037,7 +11037,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a template 
+        /// Create a template There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -11050,7 +11050,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a template 
+        /// Create a template There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createTemplateInputObject"></param>
@@ -12906,7 +12906,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Cancel dedicated number subscription. 
+        /// Cancel dedicated number subscription 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12917,7 +12917,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Cancel dedicated number subscription. 
+        /// Cancel dedicated number subscription 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12977,7 +12977,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Cancel dedicated number subscription. 
+        /// Cancel dedicated number subscription 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12989,7 +12989,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Cancel dedicated number subscription. 
+        /// Cancel dedicated number subscription 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15018,7 +15018,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a Sender ID. 
+        /// Delete a Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15029,7 +15029,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a Sender ID. 
+        /// Delete a Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15089,7 +15089,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a Sender ID. 
+        /// Delete a Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -15101,7 +15101,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a Sender ID. 
+        /// Delete a Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -17432,12 +17432,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find available dedicated numbers to buy. 
+        /// Find dedicated numbers available for purchase 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>GetAvailableDedicatedNumbersResponse</returns>
         public GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers (string country, int? prefix = null, int? tollfree = null)
         {
@@ -17446,12 +17446,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find available dedicated numbers to buy. 
+        /// Find dedicated numbers available for purchase 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>ApiResponse of GetAvailableDedicatedNumbersResponse</returns>
         public ApiResponse< GetAvailableDedicatedNumbersResponse > GetAvailableDedicatedNumbersWithHttpInfo (string country, int? prefix = null, int? tollfree = null)
         {
@@ -17511,12 +17511,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find available dedicated numbers to buy. 
+        /// Find dedicated numbers available for purchase 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of GetAvailableDedicatedNumbersResponse</returns>
         public async System.Threading.Tasks.Task<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersAsync (string country, int? prefix = null, int? tollfree = null)
         {
@@ -17526,12 +17526,12 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find available dedicated numbers to buy. 
+        /// Find dedicated numbers available for purchase 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Dedicated number country. Two letters in upper case</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore. (optional, default to 1)</param>
-        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). Default is false. (optional, default to 0)</param>
+        /// <param name="country">Two-letter dedicated number country ISO code.</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetAvailableDedicatedNumbersResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAvailableDedicatedNumbersResponse>> GetAvailableDedicatedNumbersAsyncWithHttpInfo (string country, int? prefix = null, int? tollfree = null)
         {
@@ -17591,10 +17591,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method. 
+        /// Get available sender settings Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>GetAvailableSenderSettingOptionsResponse</returns>
         public GetAvailableSenderSettingOptionsResponse GetAvailableSenderSettingOptions (string country = null)
         {
@@ -17603,10 +17603,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method. 
+        /// Get available sender settings Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>ApiResponse of GetAvailableSenderSettingOptionsResponse</returns>
         public ApiResponse< GetAvailableSenderSettingOptionsResponse > GetAvailableSenderSettingOptionsWithHttpInfo (string country = null)
         {
@@ -17661,10 +17661,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method. 
+        /// Get available sender settings Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>Task of GetAvailableSenderSettingOptionsResponse</returns>
         public async System.Threading.Tasks.Task<GetAvailableSenderSettingOptionsResponse> GetAvailableSenderSettingOptionsAsync (string country = null)
         {
@@ -17674,10 +17674,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method. 
+        /// Get available sender settings Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="country">Return sender setting options available in specific country only. Two upper case characters (optional)</param>
+        /// <param name="country">Two-letter ISO country ID. If not specified, it returns all the available sender settings. (optional)</param>
         /// <returns>Task of ApiResponse (GetAvailableSenderSettingOptionsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAvailableSenderSettingOptionsResponse>> GetAvailableSenderSettingOptionsAsyncWithHttpInfo (string country = null)
         {
@@ -21032,7 +21032,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single dedicated number. 
+        /// Get the details of a specific dedicated number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -21044,7 +21044,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single dedicated number. 
+        /// Get the details of a specific dedicated number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -21105,7 +21105,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single dedicated number. 
+        /// Get the details of a specific dedicated number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -21118,7 +21118,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single dedicated number. 
+        /// Get the details of a specific dedicated number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24317,7 +24317,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single Sender ID. 
+        /// Get the details of a specific Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24329,7 +24329,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single Sender ID. 
+        /// Get the details of a specific Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24390,7 +24390,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single Sender ID. 
+        /// Get the details of a specific Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24403,7 +24403,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single Sender ID. 
+        /// Get the details of a specific Sender ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24464,7 +24464,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sender IDs of current user. 
+        /// Get all your approved Sender IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -24477,7 +24477,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sender IDs of current user. 
+        /// Get all your approved Sender IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -24537,7 +24537,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sender IDs of current user. 
+        /// Get all your approved Sender IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -24551,7 +24551,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sender IDs of current user. 
+        /// Get all your approved Sender IDs 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -24611,7 +24611,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current user sender settings. 
+        /// Get current sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24623,7 +24623,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current user sender settings. 
+        /// Get current sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24681,7 +24681,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current user sender settings. 
+        /// Get current sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24694,7 +24694,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current user sender settings. 
+        /// Get current sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -26818,7 +26818,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers. 
+        /// Get all your dedicated numbers 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26832,7 +26832,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers. 
+        /// Get all your dedicated numbers 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26894,7 +26894,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers. 
+        /// Get all your dedicated numbers 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26909,7 +26909,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get user&#39;s dedicated numbers. 
+        /// Get all your dedicated numbers 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -28676,7 +28676,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request for a new Sender ID. 
+        /// Apply for a new Sender ID &gt; Sender IDs are shared between all of your sub-accounts.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -28688,7 +28688,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request for a new Sender ID. 
+        /// Apply for a new Sender ID &gt; Sender IDs are shared between all of your sub-accounts.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -28756,7 +28756,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request for a new Sender ID. 
+        /// Apply for a new Sender ID &gt; Sender IDs are shared between all of your sub-accounts.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -28769,7 +28769,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Request for a new Sender ID. 
+        /// Apply for a new Sender ID &gt; Sender IDs are shared between all of your sub-accounts.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestSenderIdInputObject"></param>
@@ -33872,7 +33872,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings for specified country. 
+        /// Change sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33883,7 +33883,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings for specified country. 
+        /// Change sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33950,7 +33950,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings for specified country. 
+        /// Change sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33962,7 +33962,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings for specified country. 
+        /// Change sender settings @TODO
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>

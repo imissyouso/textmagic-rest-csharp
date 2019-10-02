@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class UsersInbound :  IEquatable<UsersInbound>, IValidatableObject
     {
         /// <summary>
-        /// A - active, in use (at least one message was sent/received from/to this number), U - never used before
+        /// Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. 
         /// </summary>
-        /// <value>A - active, in use (at least one message was sent/received from/to this number), U - never used before</value>
+        /// <value>Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -52,9 +52,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// A - active, in use (at least one message was sent/received from/to this number), U - never used before
+        /// Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. 
         /// </summary>
-        /// <value>A - active, in use (at least one message was sent/received from/to this number), U - never used before</value>
+        /// <value>Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. </value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
         /// <summary>
@@ -65,14 +65,14 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersInbound" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
+        /// <param name="id">Dedicated number ID. (required).</param>
+        /// <param name="phone">Dedicated phone number..</param>
         /// <param name="user">user (required).</param>
-        /// <param name="purchasedAt">purchasedAt (required).</param>
-        /// <param name="expireAt">expireAt (required).</param>
-        /// <param name="status">A - active, in use (at least one message was sent/received from/to this number), U - never used before (required).</param>
+        /// <param name="purchasedAt">Time when the dedicated number was purchased. (required).</param>
+        /// <param name="expireAt">Dedicated number subscription expiration time. (required).</param>
+        /// <param name="status">Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active.  (required).</param>
         /// <param name="country">country (required).</param>
-        /// <param name="phone">phone.</param>
-        public UsersInbound(int? id = default(int?), User user = default(User), DateTime? purchasedAt = default(DateTime?), DateTime? expireAt = default(DateTime?), StatusEnum status = default(StatusEnum), Country country = default(Country), string phone = default(string))
+        public UsersInbound(int? id = default(int?), string phone = default(string), User user = default(User), DateTime? purchasedAt = default(DateTime?), DateTime? expireAt = default(DateTime?), StatusEnum status = default(StatusEnum), Country country = default(Country))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -132,10 +132,18 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Dedicated number ID.
         /// </summary>
+        /// <value>Dedicated number ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Dedicated phone number.
+        /// </summary>
+        /// <value>Dedicated phone number.</value>
+        [DataMember(Name="phone", EmitDefaultValue=false)]
+        public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets User
@@ -144,14 +152,16 @@ namespace TextMagicClient.Model
         public User User { get; set; }
 
         /// <summary>
-        /// Gets or Sets PurchasedAt
+        /// Time when the dedicated number was purchased.
         /// </summary>
+        /// <value>Time when the dedicated number was purchased.</value>
         [DataMember(Name="purchasedAt", EmitDefaultValue=false)]
         public DateTime? PurchasedAt { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExpireAt
+        /// Dedicated number subscription expiration time.
         /// </summary>
+        /// <value>Dedicated number subscription expiration time.</value>
         [DataMember(Name="expireAt", EmitDefaultValue=false)]
         public DateTime? ExpireAt { get; set; }
 
@@ -163,12 +173,6 @@ namespace TextMagicClient.Model
         public Country Country { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
-        /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
-        public string Phone { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -177,12 +181,12 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class UsersInbound {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  PurchasedAt: ").Append(PurchasedAt).Append("\n");
             sb.Append("  ExpireAt: ").Append(ExpireAt).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
-            sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -223,6 +227,11 @@ namespace TextMagicClient.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.Phone == input.Phone ||
+                    (this.Phone != null &&
+                    this.Phone.Equals(input.Phone))
+                ) && 
+                (
                     this.User == input.User ||
                     (this.User != null &&
                     this.User.Equals(input.User))
@@ -246,11 +255,6 @@ namespace TextMagicClient.Model
                     this.Country == input.Country ||
                     (this.Country != null &&
                     this.Country.Equals(input.Country))
-                ) && 
-                (
-                    this.Phone == input.Phone ||
-                    (this.Phone != null &&
-                    this.Phone.Equals(input.Phone))
                 );
         }
 
@@ -265,6 +269,8 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Phone != null)
+                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
                 if (this.PurchasedAt != null)
@@ -275,8 +281,6 @@ namespace TextMagicClient.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Country != null)
                     hashCode = hashCode * 59 + this.Country.GetHashCode();
-                if (this.Phone != null)
-                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 return hashCode;
             }
         }

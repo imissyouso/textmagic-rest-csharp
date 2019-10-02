@@ -75,6 +75,14 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'Phone'
+        /// </summary>
+        [Test]
+        public void PhoneTest()
+        {
+            // TODO unit test for the property 'Phone'
+        }
+        /// <summary>
         /// Test the property 'User'
         /// </summary>
         [Test]
@@ -113,14 +121,6 @@ namespace TextMagicClient.Test
         public void CountryTest()
         {
             // TODO unit test for the property 'Country'
-        }
-        /// <summary>
-        /// Test the property 'Phone'
-        /// </summary>
-        [Test]
-        public void PhoneTest()
-        {
-            // TODO unit test for the property 'Phone'
         }
 
     }

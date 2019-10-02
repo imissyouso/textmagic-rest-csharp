@@ -38,10 +38,10 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageTemplate" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="content">content (required).</param>
-        /// <param name="lastModified">lastModified (required).</param>
+        /// <param name="id">Template ID. (required).</param>
+        /// <param name="name">Template name. (required).</param>
+        /// <param name="content">Template text. May contain the tags listed below @TODO. (required).</param>
+        /// <param name="lastModified">Time when template was last modified. (required).</param>
         public MessageTemplate(int? id = default(int?), string name = default(string), string content = default(string), DateTime? lastModified = default(DateTime?))
         {
             // to ensure "id" is required (not null)
@@ -83,26 +83,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Template ID.
         /// </summary>
+        /// <value>Template ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Template name.
         /// </summary>
+        /// <value>Template name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Content
+        /// Template text. May contain the tags listed below @TODO.
         /// </summary>
+        /// <value>Template text. May contain the tags listed below @TODO.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastModified
+        /// Time when template was last modified.
         /// </summary>
+        /// <value>Time when template was last modified.</value>
         [DataMember(Name="lastModified", EmitDefaultValue=false)]
         public DateTime? LastModified { get; set; }
 
