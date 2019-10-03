@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMagicClient", "src\TextMagicClient\TextMagicClient.csproj", "{84708AA8-49D1-4B12-8833-290A1E7224DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMagicClient", "src\TextMagicClient\TextMagicClient.csproj", "{F537D3B5-6D20-4361-85DD-F90ECA5D4E38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMagicClient.Test", "src\TextMagicClient.Test\TextMagicClient.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84708AA8-49D1-4B12-8833-290A1E7224DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84708AA8-49D1-4B12-8833-290A1E7224DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84708AA8-49D1-4B12-8833-290A1E7224DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84708AA8-49D1-4B12-8833-290A1E7224DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F537D3B5-6D20-4361-85DD-F90ECA5D4E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F537D3B5-6D20-4361-85DD-F90ECA5D4E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F537D3B5-6D20-4361-85DD-F90ECA5D4E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F537D3B5-6D20-4361-85DD-F90ECA5D4E38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
