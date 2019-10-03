@@ -1315,17 +1315,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetMessagePrices
-        /// </summary>
-        [Test]
-        public void GetMessagePricesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetMessagePrices();
-            //Assert.IsInstanceOf<GetMessagePricesResponse> (response, "response is GetMessagePricesResponse");
-        }
-        
-        /// <summary>
         /// Test GetMessageSession
         /// </summary>
         [Test]

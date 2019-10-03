@@ -2234,25 +2234,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetMessagePriceResponse</returns>
         ApiResponse<GetMessagePriceResponse> GetMessagePriceWithHttpInfo (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
         /// <summary>
-        /// Get pricing
-        /// </summary>
-        /// <remarks>
-        /// Get message prices for all countries.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetMessagePricesResponse</returns>
-        GetMessagePricesResponse GetMessagePrices ();
-
-        /// <summary>
-        /// Get pricing
-        /// </summary>
-        /// <remarks>
-        /// Get message prices for all countries.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetMessagePricesResponse</returns>
-        ApiResponse<GetMessagePricesResponse> GetMessagePricesWithHttpInfo ();
-        /// <summary>
         /// Get a session details
         /// </summary>
         /// <remarks>
@@ -6222,25 +6203,6 @@ namespace TextMagicClient.Api
         /// <param name="localCountry">2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country (optional)</param>
         /// <returns>Task of ApiResponse (GetMessagePriceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMessagePriceResponse>> GetMessagePriceAsyncWithHttpInfo (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
-        /// <summary>
-        /// Get pricing
-        /// </summary>
-        /// <remarks>
-        /// Get message prices for all countries.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetMessagePricesResponse</returns>
-        System.Threading.Tasks.Task<GetMessagePricesResponse> GetMessagePricesAsync ();
-
-        /// <summary>
-        /// Get pricing
-        /// </summary>
-        /// <remarks>
-        /// Get message prices for all countries.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetMessagePricesResponse>> GetMessagePricesAsyncWithHttpInfo ();
         /// <summary>
         /// Get a session details
         /// </summary>
@@ -22997,141 +22959,6 @@ namespace TextMagicClient.Api
             return new ApiResponse<GetMessagePriceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetMessagePriceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagePriceResponse)));
-        }
-
-        /// <summary>
-        /// Get pricing Get message prices for all countries.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetMessagePricesResponse</returns>
-        public GetMessagePricesResponse GetMessagePrices ()
-        {
-             ApiResponse<GetMessagePricesResponse> localVarResponse = GetMessagePricesWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get pricing Get message prices for all countries.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetMessagePricesResponse</returns>
-        public ApiResponse< GetMessagePricesResponse > GetMessagePricesWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/messages/prices";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetMessagePrices", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetMessagePricesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetMessagePricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagePricesResponse)));
-        }
-
-        /// <summary>
-        /// Get pricing Get message prices for all countries.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetMessagePricesResponse</returns>
-        public async System.Threading.Tasks.Task<GetMessagePricesResponse> GetMessagePricesAsync ()
-        {
-             ApiResponse<GetMessagePricesResponse> localVarResponse = await GetMessagePricesAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get pricing Get message prices for all countries.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetMessagePricesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetMessagePricesResponse>> GetMessagePricesAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/messages/prices";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetMessagePrices", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetMessagePricesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetMessagePricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMessagePricesResponse)));
         }
 
         /// <summary>
