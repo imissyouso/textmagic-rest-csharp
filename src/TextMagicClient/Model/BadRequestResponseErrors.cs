@@ -25,7 +25,7 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// BadRequestResponseErrors
+    /// If it was a **POST** or **PUT** request (and the **message** returned is &#x60;Validation Failed&#x60;), this field may contain **errors **that describe the errors grouped by the input parameter name. 
     /// </summary>
     [DataContract]
     public partial class BadRequestResponseErrors :  IEquatable<BadRequestResponseErrors>, IValidatableObject
@@ -33,8 +33,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BadRequestResponseErrors" /> class.
         /// </summary>
-        /// <param name="common">common.</param>
-        /// <param name="fields">fields.</param>
+        /// <param name="common">Array of messages with errors related to the entire request. For example, you did not specify either the **text** or **templateId** when [sending the message](/docs/api/send-sms/). .</param>
+        /// <param name="fields">Associative array. The keys are the POST/PUT parameters names and the values are arrays with error messages for these parameters. .</param>
         public BadRequestResponseErrors(List<string> common = default(List<string>), Object fields = default(Object))
         {
             this.Common = common;
@@ -42,14 +42,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Common
+        /// Array of messages with errors related to the entire request. For example, you did not specify either the **text** or **templateId** when [sending the message](/docs/api/send-sms/). 
         /// </summary>
+        /// <value>Array of messages with errors related to the entire request. For example, you did not specify either the **text** or **templateId** when [sending the message](/docs/api/send-sms/). </value>
         [DataMember(Name="common", EmitDefaultValue=false)]
         public List<string> Common { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fields
+        /// Associative array. The keys are the POST/PUT parameters names and the values are arrays with error messages for these parameters. 
         /// </summary>
+        /// <value>Associative array. The keys are the POST/PUT parameters names and the values are arrays with error messages for these parameters. </value>
         [DataMember(Name="fields", EmitDefaultValue=false)]
         public Object Fields { get; set; }
 

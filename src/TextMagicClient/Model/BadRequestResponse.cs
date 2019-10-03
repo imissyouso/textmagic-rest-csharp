@@ -33,8 +33,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BadRequestResponse" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
-        /// <param name="message">message.</param>
+        /// <param name="code">HTTP error code..</param>
+        /// <param name="message">Brief error message. You could display this message to your user or save it in a log..</param>
         /// <param name="errors">errors.</param>
         public BadRequestResponse(int? code = default(int?), string message = default(string), BadRequestResponseErrors errors = default(BadRequestResponseErrors))
         {
@@ -44,14 +44,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Code
+        /// HTTP error code.
         /// </summary>
+        /// <value>HTTP error code.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets Message
+        /// Brief error message. You could display this message to your user or save it in a log.
         /// </summary>
+        /// <value>Brief error message. You could display this message to your user or save it in a log.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
 

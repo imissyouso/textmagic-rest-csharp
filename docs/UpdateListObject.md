@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | List name | 
-**Shared** | **bool?** | Should this list be shared with sub-accounts | 
+**Shared** | **bool?** | Should this list be shared with sub-accounts | [optional] 
 **Favorited** | **bool?** | Is list favorited. Default is false | [optional] [default to false]
 **IsDefault** | **bool?** | Is list default for new contacts (web only). | [optional] [default to false]
 

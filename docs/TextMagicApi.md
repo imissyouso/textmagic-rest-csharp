@@ -1,6 +1,6 @@
 # TextMagicClient.Api.TextMagicApi
 
-All URIs are relative to *http://my.textmagic.com*
+All URIs are relative to *http://rest.textmagic.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#checkphoneverificationcode) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
-[**CheckPhoneVerificationCode_0**](TextMagicApi.md#checkphoneverificationcode_0) | **PUT** /api/v2/verify | Step 2: Check the verification code 
+[**CheckPhoneVerificationCodeTFA**](TextMagicApi.md#checkphoneverificationcodetfa) | **PUT** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Create a new custom field from the submitted data.
-[**CreateList**](TextMagicApi.md#createlist) | **POST** /api/v2/lists | Create a new list from the submitted data.
+[**CreateList**](TextMagicApi.md#createlist) | **POST** /api/v2/lists | Create a new list
 [**CreatePushToken**](TextMagicApi.md#createpushtoken) | **POST** /api/v2/push/tokens | Add or update a device token.
 [**CreateSurvey**](TextMagicApi.md#createsurvey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
 [**CreateSurveyNode**](TextMagicApi.md#createsurveynode) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
@@ -95,8 +95,9 @@ Method | HTTP request | Description
 [**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#getinboundmessagesnotificationsettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Get all invoices
-[**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get a single list.
+[**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+[**GetLists**](TextMagicApi.md#getlists) | **GET** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check price
@@ -128,7 +129,6 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**GetUserLists**](TextMagicApi.md#getuserlists) | **GET** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
@@ -153,7 +153,7 @@ Method | HTTP request | Description
 [**SendEmailVerificationCode**](TextMagicApi.md#sendemailverificationcode) | **GET** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#sendmessage) | **POST** /api/v2/messages | Send message
 [**SendPhoneVerificationCode**](TextMagicApi.md#sendphoneverificationcode) | **GET** /api/v2/user/phone/verification | Send user phone verification
-[**SendPhoneVerificationCode_0**](TextMagicApi.md#sendphoneverificationcode_0) | **POST** /api/v2/verify | Step 1: Send a verification code 
+[**SendPhoneVerificationCodeTFA**](TextMagicApi.md#sendphoneverificationcodetfa) | **POST** /api/v2/verify | Step 1: Send a verification code 
 [**SetChatStatus**](TextMagicApi.md#setchatstatus) | **POST** /api/v2/chats/status | Change chat status
 [**StartSurvey**](TextMagicApi.md#startsurvey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#unblockcontact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
@@ -562,9 +562,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="checkphoneverificationcode_0"></a>
-# **CheckPhoneVerificationCode_0**
-> void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+<a name="checkphoneverificationcodetfa"></a>
+# **CheckPhoneVerificationCodeTFA**
+> void CheckPhoneVerificationCodeTFA (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
 
 Step 2: Check the verification code 
 
@@ -580,7 +580,7 @@ using TextMagicClient.Model;
 
 namespace Example
 {
-    public class CheckPhoneVerificationCode_0Example
+    public class CheckPhoneVerificationCodeTFAExample
     {
         public void main()
         {
@@ -594,11 +594,11 @@ namespace Example
             try
             {
                 // Step 2: Check the verification code 
-                apiInstance.CheckPhoneVerificationCode_0(checkPhoneVerificationCodeInputObject);
+                apiInstance.CheckPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TextMagicApi.CheckPhoneVerificationCode_0: " + e.Message );
+                Debug.Print("Exception when calling TextMagicApi.CheckPhoneVerificationCodeTFA: " + e.Message );
             }
         }
     }
@@ -1072,7 +1072,7 @@ Name | Type | Description  | Notes
 # **CreateList**
 > ResourceLinkResponse CreateList (CreateListInputObject createListInputObject)
 
-Create a new list from the submitted data.
+Create a new list
 
 ### Example
 ```csharp
@@ -1097,7 +1097,7 @@ namespace Example
 
             try
             {
-                // Create a new list from the submitted data.
+                // Create a new list
                 ResourceLinkResponse result = apiInstance.CreateList(createListInputObject);
                 Debug.WriteLine(result);
             }
@@ -5979,9 +5979,9 @@ Name | Type | Description  | Notes
 
 <a name="getlist"></a>
 # **GetList**
-> Group GetList (int? id)
+> List GetList (int? id)
 
-Get a single list.
+Get the details of a specific list
 
 ### Example
 ```csharp
@@ -6006,8 +6006,8 @@ namespace Example
 
             try
             {
-                // Get a single list.
-                Group result = apiInstance.GetList(id);
+                // Get the details of a specific list
+                List result = apiInstance.GetList(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6027,7 +6027,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Group**](Group.md)
+**List**
 
 ### Authorization
 
@@ -6091,6 +6091,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetListContactsIdsResponse**](GetListContactsIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getlists"></a>
+# **GetLists**
+> GetListsPaginatedResponse GetLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+
+Get all lists
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class GetListsExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var page = 56;  // int? | The current fetched page. (optional)  (default to 1)
+            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
+            var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
+            var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
+            var favoriteOnly = 56;  // int? | Return only favorite lists (optional)  (default to 0)
+            var onlyMine = 56;  // int? | Return only current user lists (optional)  (default to 0)
+
+            try
+            {
+                // Get all lists
+                GetListsPaginatedResponse result = apiInstance.GetLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.GetLists: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int?**| The current fetched page. | [optional] [default to 1]
+ **limit** | **int?**| The number of results per page. | [optional] [default to 10]
+ **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
+ **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
+ **favoriteOnly** | **int?**| Return only favorite lists | [optional] [default to 0]
+ **onlyMine** | **int?**| Return only current user lists | [optional] [default to 0]
+
+### Return type
+
+[**GetListsPaginatedResponse**](GetListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -8170,79 +8243,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getuserlists"></a>
-# **GetUserLists**
-> GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
-
-Get all user lists.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetUserListsExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
-            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
-            var orderBy = orderBy_example;  // string | Order results by some field. Default is id (optional)  (default to id)
-            var direction = direction_example;  // string | Order direction. Default is desc (optional)  (default to desc)
-            var favoriteOnly = 56;  // int? | Return only favorite lists (optional)  (default to 0)
-            var onlyMine = 56;  // int? | Return only current user lists (optional)  (default to 0)
-
-            try
-            {
-                // Get all user lists.
-                GetUserListsPaginatedResponse result = apiInstance.GetUserLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetUserLists: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
- **limit** | **int?**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **string**| Order results by some field. Default is id | [optional] [default to id]
- **direction** | **string**| Order direction. Default is desc | [optional] [default to desc]
- **favoriteOnly** | **int?**| Return only favorite lists | [optional] [default to 0]
- **onlyMine** | **int?**| Return only current user lists | [optional] [default to 0]
-
-### Return type
-
-[**GetUserListsPaginatedResponse**](GetUserListsPaginatedResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getversions"></a>
 # **GetVersions**
 > GetVersionsResponse GetVersions ()
@@ -9845,9 +9845,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="sendphoneverificationcode_0"></a>
-# **SendPhoneVerificationCode_0**
-> SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+<a name="sendphoneverificationcodetfa"></a>
+# **SendPhoneVerificationCodeTFA**
+> SendPhoneVerificationCodeResponse SendPhoneVerificationCodeTFA (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
 
 Step 1: Send a verification code 
 
@@ -9863,7 +9863,7 @@ using TextMagicClient.Model;
 
 namespace Example
 {
-    public class SendPhoneVerificationCode_0Example
+    public class SendPhoneVerificationCodeTFAExample
     {
         public void main()
         {
@@ -9877,12 +9877,12 @@ namespace Example
             try
             {
                 // Step 1: Send a verification code 
-                SendPhoneVerificationCodeResponse result = apiInstance.SendPhoneVerificationCode_0(sendPhoneVerificationCodeInputObject);
+                SendPhoneVerificationCodeResponse result = apiInstance.SendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TextMagicApi.SendPhoneVerificationCode_0: " + e.Message );
+                Debug.Print("Exception when calling TextMagicApi.SendPhoneVerificationCodeTFA: " + e.Message );
             }
         }
     }

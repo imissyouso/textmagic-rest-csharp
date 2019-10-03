@@ -161,7 +161,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns></returns>
-        void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+        void CheckPhoneVerificationCodeTFA (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Step 2: Check the verification code 
@@ -172,7 +172,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CheckPhoneVerificationCode_0WithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+        ApiResponse<Object> CheckPhoneVerificationCodeTFAWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -323,7 +323,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> CreateCustomFieldWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject);
         /// <summary>
-        /// Create a new list from the submitted data.
+        /// Create a new list
         /// </summary>
         /// <remarks>
         /// 
@@ -334,7 +334,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse CreateList (CreateListInputObject createListInputObject);
 
         /// <summary>
-        /// Create a new list from the submitted data.
+        /// Create a new list
         /// </summary>
         /// <remarks>
         /// 
@@ -2028,26 +2028,26 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetInvoicesPaginatedResponse</returns>
         ApiResponse<GetInvoicesPaginatedResponse> GetInvoicesWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single list.
+        /// Get the details of a specific list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Group</returns>
-        Group GetList (int? id);
+        /// <returns>List</returns>
+        List GetList (int? id);
 
         /// <summary>
-        /// Get a single list.
+        /// Get the details of a specific list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GetListWithHttpInfo (int? id);
+        /// <returns>ApiResponse of List</returns>
+        ApiResponse<List> GetListWithHttpInfo (int? id);
         /// <summary>
         /// Fetch all contacts IDs belonging to the list with ID.
         /// </summary>
@@ -2069,6 +2069,37 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <returns>ApiResponse of GetListContactsIdsResponse</returns>
         ApiResponse<GetListContactsIdsResponse> GetListContactsIdsWithHttpInfo (int? id);
+        /// <summary>
+        /// Get all lists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>GetListsPaginatedResponse</returns>
+        GetListsPaginatedResponse GetLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+
+        /// <summary>
+        /// Get all lists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>ApiResponse of GetListsPaginatedResponse</returns>
+        ApiResponse<GetListsPaginatedResponse> GetListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
         /// Return lists which contact belongs to.
         /// </summary>
@@ -2825,37 +2856,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Get all user lists.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>GetUserListsPaginatedResponse</returns>
-        GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
-
-        /// <summary>
-        /// Get all user lists.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetUserListsPaginatedResponse</returns>
-        ApiResponse<GetUserListsPaginatedResponse> GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
-        /// <summary>
         /// Get minimal valid apps versions
         /// </summary>
         /// <remarks>
@@ -3454,7 +3454,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>SendPhoneVerificationCodeResponse</returns>
-        SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        SendPhoneVerificationCodeResponse SendPhoneVerificationCodeTFA (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Step 1: Send a verification code 
@@ -3465,7 +3465,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>ApiResponse of SendPhoneVerificationCodeResponse</returns>
-        ApiResponse<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0WithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        ApiResponse<SendPhoneVerificationCodeResponse> SendPhoneVerificationCodeTFAWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
         /// <summary>
         /// Change chat status
         /// </summary>
@@ -4150,7 +4150,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CheckPhoneVerificationCode_0Async (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+        System.Threading.Tasks.Task CheckPhoneVerificationCodeTFAAsync (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Step 2: Check the verification code 
@@ -4161,7 +4161,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCode_0AsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeTFAAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
         /// Reset list members to the specified contacts.
         /// </summary>
@@ -4312,7 +4312,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateCustomFieldAsyncWithHttpInfo (CreateCustomFieldInputObject createCustomFieldInputObject);
         /// <summary>
-        /// Create a new list from the submitted data.
+        /// Create a new list
         /// </summary>
         /// <remarks>
         /// 
@@ -4323,7 +4323,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> CreateListAsync (CreateListInputObject createListInputObject);
 
         /// <summary>
-        /// Create a new list from the submitted data.
+        /// Create a new list
         /// </summary>
         /// <remarks>
         /// 
@@ -6017,26 +6017,26 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetInvoicesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetInvoicesPaginatedResponse>> GetInvoicesAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
-        /// Get a single list.
+        /// Get the details of a specific list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GetListAsync (int? id);
+        /// <returns>Task of List</returns>
+        System.Threading.Tasks.Task<List> GetListAsync (int? id);
 
         /// <summary>
-        /// Get a single list.
+        /// Get the details of a specific list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GetListAsyncWithHttpInfo (int? id);
+        /// <returns>Task of ApiResponse (List)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List>> GetListAsyncWithHttpInfo (int? id);
         /// <summary>
         /// Fetch all contacts IDs belonging to the list with ID.
         /// </summary>
@@ -6058,6 +6058,37 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (GetListContactsIdsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetListContactsIdsResponse>> GetListContactsIdsAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// Get all lists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>Task of GetListsPaginatedResponse</returns>
+        System.Threading.Tasks.Task<GetListsPaginatedResponse> GetListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
+
+        /// <summary>
+        /// Get all lists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>Task of ApiResponse (GetListsPaginatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetListsPaginatedResponse>> GetListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
         /// Return lists which contact belongs to.
         /// </summary>
@@ -6814,37 +6845,6 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Get all user lists.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of GetUserListsPaginatedResponse</returns>
-        System.Threading.Tasks.Task<GetUserListsPaginatedResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
-
-        /// <summary>
-        /// Get all user lists.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetUserListsPaginatedResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetUserListsPaginatedResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
-        /// <summary>
         /// Get minimal valid apps versions
         /// </summary>
         /// <remarks>
@@ -7443,7 +7443,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of SendPhoneVerificationCodeResponse</returns>
-        System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0Async (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCodeTFAAsync (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
 
         /// <summary>
         /// Step 1: Send a verification code 
@@ -7454,7 +7454,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of ApiResponse (SendPhoneVerificationCodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCode_0AsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
+        System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCodeTFAAsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject);
         /// <summary>
         /// Change chat status
         /// </summary>
@@ -9050,9 +9050,9 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns></returns>
-        public void CheckPhoneVerificationCode_0 (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        public void CheckPhoneVerificationCodeTFA (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
         {
-             CheckPhoneVerificationCode_0WithHttpInfo(checkPhoneVerificationCodeInputObject);
+             CheckPhoneVerificationCodeTFAWithHttpInfo(checkPhoneVerificationCodeInputObject);
         }
 
         /// <summary>
@@ -9061,11 +9061,11 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CheckPhoneVerificationCode_0WithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        public ApiResponse<Object> CheckPhoneVerificationCodeTFAWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
             if (checkPhoneVerificationCodeInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCode_0");
+                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCodeTFA");
 
             var localVarPath = "/api/v2/verify";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9114,7 +9114,7 @@ namespace TextMagicClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CheckPhoneVerificationCode_0", localVarResponse);
+                Exception exception = ExceptionFactory("CheckPhoneVerificationCodeTFA", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -9129,9 +9129,9 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CheckPhoneVerificationCode_0Async (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        public async System.Threading.Tasks.Task CheckPhoneVerificationCodeTFAAsync (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
         {
-             await CheckPhoneVerificationCode_0AsyncWithHttpInfo(checkPhoneVerificationCodeInputObject);
+             await CheckPhoneVerificationCodeTFAAsyncWithHttpInfo(checkPhoneVerificationCodeInputObject);
 
         }
 
@@ -9141,11 +9141,11 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="checkPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCode_0AsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeTFAAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'checkPhoneVerificationCodeInputObject' is set
             if (checkPhoneVerificationCodeInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCode_0");
+                throw new ApiException(400, "Missing required parameter 'checkPhoneVerificationCodeInputObject' when calling TextMagicApi->CheckPhoneVerificationCodeTFA");
 
             var localVarPath = "/api/v2/verify";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9194,7 +9194,7 @@ namespace TextMagicClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CheckPhoneVerificationCode_0", localVarResponse);
+                Exception exception = ExceptionFactory("CheckPhoneVerificationCodeTFA", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -10303,7 +10303,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new list from the submitted data. 
+        /// Create a new list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
@@ -10315,7 +10315,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new list from the submitted data. 
+        /// Create a new list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
@@ -10383,7 +10383,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new list from the submitted data. 
+        /// Create a new list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
@@ -10396,7 +10396,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new list from the submitted data. 
+        /// Create a new list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createListInputObject"></param>
@@ -21896,24 +21896,24 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single list. 
+        /// Get the details of a specific list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Group</returns>
-        public Group GetList (int? id)
+        /// <returns>List</returns>
+        public List GetList (int? id)
         {
-             ApiResponse<Group> localVarResponse = GetListWithHttpInfo(id);
+             ApiResponse<List> localVarResponse = GetListWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a single list. 
+        /// Get the details of a specific list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > GetListWithHttpInfo (int? id)
+        /// <returns>ApiResponse of List</returns>
+        public ApiResponse< List > GetListWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -21963,31 +21963,31 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Group>(localVarStatusCode,
+            return new ApiResponse<List>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
+                (List) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List)));
         }
 
         /// <summary>
-        /// Get a single list. 
+        /// Get the details of a specific list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GetListAsync (int? id)
+        /// <returns>Task of List</returns>
+        public async System.Threading.Tasks.Task<List> GetListAsync (int? id)
         {
-             ApiResponse<Group> localVarResponse = await GetListAsyncWithHttpInfo(id);
+             ApiResponse<List> localVarResponse = await GetListAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a single list. 
+        /// Get the details of a specific list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetListAsyncWithHttpInfo (int? id)
+        /// <returns>Task of ApiResponse (List)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List>> GetListAsyncWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -22037,9 +22037,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Group>(localVarStatusCode,
+            return new ApiResponse<List>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Group) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
+                (List) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List)));
         }
 
         /// <summary>
@@ -22187,6 +22187,177 @@ namespace TextMagicClient.Api
             return new ApiResponse<GetListContactsIdsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetListContactsIdsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListContactsIdsResponse)));
+        }
+
+        /// <summary>
+        /// Get all lists 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>GetListsPaginatedResponse</returns>
+        public GetListsPaginatedResponse GetLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        {
+             ApiResponse<GetListsPaginatedResponse> localVarResponse = GetListsWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all lists 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>ApiResponse of GetListsPaginatedResponse</returns>
+        public ApiResponse< GetListsPaginatedResponse > GetListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        {
+
+            var localVarPath = "/api/v2/lists";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+            if (direction != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "direction", direction)); // query parameter
+            if (favoriteOnly != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "favoriteOnly", favoriteOnly)); // query parameter
+            if (onlyMine != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyMine", onlyMine)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetListsPaginatedResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsPaginatedResponse)));
+        }
+
+        /// <summary>
+        /// Get all lists 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>Task of GetListsPaginatedResponse</returns>
+        public async System.Threading.Tasks.Task<GetListsPaginatedResponse> GetListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        {
+             ApiResponse<GetListsPaginatedResponse> localVarResponse = await GetListsAsyncWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all lists 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">The current fetched page. (optional, default to 1)</param>
+        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
+        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
+        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
+        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
+        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
+        /// <returns>Task of ApiResponse (GetListsPaginatedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetListsPaginatedResponse>> GetListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
+        {
+
+            var localVarPath = "/api/v2/lists";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
+            if (direction != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "direction", direction)); // query parameter
+            if (favoriteOnly != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "favoriteOnly", favoriteOnly)); // query parameter
+            if (onlyMine != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyMine", onlyMine)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLists", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetListsPaginatedResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetListsPaginatedResponse)));
         }
 
         /// <summary>
@@ -26971,177 +27142,6 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user lists. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>GetUserListsPaginatedResponse</returns>
-        public GetUserListsPaginatedResponse GetUserLists (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
-        {
-             ApiResponse<GetUserListsPaginatedResponse> localVarResponse = GetUserListsWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get all user lists. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>ApiResponse of GetUserListsPaginatedResponse</returns>
-        public ApiResponse< GetUserListsPaginatedResponse > GetUserListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
-        {
-
-            var localVarPath = "/api/v2/lists";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
-            if (direction != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "direction", direction)); // query parameter
-            if (favoriteOnly != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "favoriteOnly", favoriteOnly)); // query parameter
-            if (onlyMine != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyMine", onlyMine)); // query parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetUserLists", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetUserListsPaginatedResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsPaginatedResponse)));
-        }
-
-        /// <summary>
-        /// Get all user lists. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of GetUserListsPaginatedResponse</returns>
-        public async System.Threading.Tasks.Task<GetUserListsPaginatedResponse> GetUserListsAsync (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
-        {
-             ApiResponse<GetUserListsPaginatedResponse> localVarResponse = await GetUserListsAsyncWithHttpInfo(page, limit, orderBy, direction, favoriteOnly, onlyMine);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get all user lists. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
-        /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="orderBy">Order results by some field. Default is id (optional, default to id)</param>
-        /// <param name="direction">Order direction. Default is desc (optional, default to desc)</param>
-        /// <param name="favoriteOnly">Return only favorite lists (optional, default to 0)</param>
-        /// <param name="onlyMine">Return only current user lists (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (GetUserListsPaginatedResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetUserListsPaginatedResponse>> GetUserListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null)
-        {
-
-            var localVarPath = "/api/v2/lists";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
-            if (orderBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "orderBy", orderBy)); // query parameter
-            if (direction != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "direction", direction)); // query parameter
-            if (favoriteOnly != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "favoriteOnly", favoriteOnly)); // query parameter
-            if (onlyMine != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "onlyMine", onlyMine)); // query parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetUserLists", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetUserListsPaginatedResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetUserListsPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserListsPaginatedResponse)));
-        }
-
-        /// <summary>
         /// Get minimal valid apps versions 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -30967,9 +30967,9 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>SendPhoneVerificationCodeResponse</returns>
-        public SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0 (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        public SendPhoneVerificationCodeResponse SendPhoneVerificationCodeTFA (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
         {
-             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = SendPhoneVerificationCode_0WithHttpInfo(sendPhoneVerificationCodeInputObject);
+             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = SendPhoneVerificationCodeTFAWithHttpInfo(sendPhoneVerificationCodeInputObject);
              return localVarResponse.Data;
         }
 
@@ -30979,11 +30979,11 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>ApiResponse of SendPhoneVerificationCodeResponse</returns>
-        public ApiResponse< SendPhoneVerificationCodeResponse > SendPhoneVerificationCode_0WithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        public ApiResponse< SendPhoneVerificationCodeResponse > SendPhoneVerificationCodeTFAWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'sendPhoneVerificationCodeInputObject' is set
             if (sendPhoneVerificationCodeInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCode_0");
+                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCodeTFA");
 
             var localVarPath = "/api/v2/verify";
             var localVarPathParams = new Dictionary<String, String>();
@@ -31032,7 +31032,7 @@ namespace TextMagicClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendPhoneVerificationCode_0", localVarResponse);
+                Exception exception = ExceptionFactory("SendPhoneVerificationCodeTFA", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -31047,9 +31047,9 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of SendPhoneVerificationCodeResponse</returns>
-        public async System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCode_0Async (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        public async System.Threading.Tasks.Task<SendPhoneVerificationCodeResponse> SendPhoneVerificationCodeTFAAsync (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
         {
-             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = await SendPhoneVerificationCode_0AsyncWithHttpInfo(sendPhoneVerificationCodeInputObject);
+             ApiResponse<SendPhoneVerificationCodeResponse> localVarResponse = await SendPhoneVerificationCodeTFAAsyncWithHttpInfo(sendPhoneVerificationCodeInputObject);
              return localVarResponse.Data;
 
         }
@@ -31060,11 +31060,11 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sendPhoneVerificationCodeInputObject"></param>
         /// <returns>Task of ApiResponse (SendPhoneVerificationCodeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCode_0AsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
+        public async System.Threading.Tasks.Task<ApiResponse<SendPhoneVerificationCodeResponse>> SendPhoneVerificationCodeTFAAsyncWithHttpInfo (SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject)
         {
             // verify the required parameter 'sendPhoneVerificationCodeInputObject' is set
             if (sendPhoneVerificationCodeInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCode_0");
+                throw new ApiException(400, "Missing required parameter 'sendPhoneVerificationCodeInputObject' when calling TextMagicApi->SendPhoneVerificationCodeTFA");
 
             var localVarPath = "/api/v2/verify";
             var localVarPathParams = new Dictionary<String, String>();
@@ -31113,7 +31113,7 @@ namespace TextMagicClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SendPhoneVerificationCode_0", localVarResponse);
+                Exception exception = ExceptionFactory("SendPhoneVerificationCodeTFA", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -42,7 +42,7 @@ namespace TextMagicClient.Model
         /// <param name="pageCount">The total number of pages. (required).</param>
         /// <param name="limit">The number of results per page. (required).</param>
         /// <param name="resources">resources (required).</param>
-        public GetListsOfContactPaginatedResponse(int? page = default(int?), int? pageCount = default(int?), int? limit = default(int?), List<Group> resources = default(List<Group>))
+        public GetListsOfContactPaginatedResponse(int? page = default(int?), int? pageCount = default(int?), int? limit = default(int?), List<List> resources = default(List<List>))
         {
             // to ensure "page" is required (not null)
             if (page == null)
@@ -106,7 +106,7 @@ namespace TextMagicClient.Model
         /// Gets or Sets Resources
         /// </summary>
         [DataMember(Name="resources", EmitDefaultValue=false)]
-        public List<Group> Resources { get; set; }
+        public List<List> Resources { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

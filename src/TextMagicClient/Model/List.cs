@@ -25,18 +25,18 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// Group
+    /// List
     /// </summary>
     [DataContract]
-    public partial class Group :  IEquatable<Group>, IValidatableObject
+    public partial class List :  IEquatable<List>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Group" /> class.
+        /// Initializes a new instance of the <see cref="List" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Group() { }
+        protected List() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Group" /> class.
+        /// Initializes a new instance of the <see cref="List" /> class.
         /// </summary>
         /// <param name="id">id (required).</param>
         /// <param name="name">name (required).</param>
@@ -48,12 +48,12 @@ namespace TextMagicClient.Model
         /// <param name="shared">shared (required).</param>
         /// <param name="avatar">avatar (required).</param>
         /// <param name="isDefault">isDefault (required).</param>
-        public Group(int? id = default(int?), string name = default(string), string description = default(string), bool? favorited = default(bool?), int? membersCount = default(int?), User user = default(User), bool? service = default(bool?), bool? shared = default(bool?), GroupImage avatar = default(GroupImage), bool? isDefault = default(bool?))
+        public List(int? id = default(int?), string name = default(string), string description = default(string), bool? favorited = default(bool?), int? membersCount = default(int?), User user = default(User), bool? service = default(bool?), bool? shared = default(bool?), ListImage avatar = default(ListImage), bool? isDefault = default(bool?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
             {
-                throw new InvalidDataException("id is a required property for Group and cannot be null");
+                throw new InvalidDataException("id is a required property for List and cannot be null");
             }
             else
             {
@@ -62,7 +62,7 @@ namespace TextMagicClient.Model
             // to ensure "name" is required (not null)
             if (name == null)
             {
-                throw new InvalidDataException("name is a required property for Group and cannot be null");
+                throw new InvalidDataException("name is a required property for List and cannot be null");
             }
             else
             {
@@ -71,7 +71,7 @@ namespace TextMagicClient.Model
             // to ensure "description" is required (not null)
             if (description == null)
             {
-                throw new InvalidDataException("description is a required property for Group and cannot be null");
+                throw new InvalidDataException("description is a required property for List and cannot be null");
             }
             else
             {
@@ -80,7 +80,7 @@ namespace TextMagicClient.Model
             // to ensure "favorited" is required (not null)
             if (favorited == null)
             {
-                throw new InvalidDataException("favorited is a required property for Group and cannot be null");
+                throw new InvalidDataException("favorited is a required property for List and cannot be null");
             }
             else
             {
@@ -89,7 +89,7 @@ namespace TextMagicClient.Model
             // to ensure "membersCount" is required (not null)
             if (membersCount == null)
             {
-                throw new InvalidDataException("membersCount is a required property for Group and cannot be null");
+                throw new InvalidDataException("membersCount is a required property for List and cannot be null");
             }
             else
             {
@@ -98,7 +98,7 @@ namespace TextMagicClient.Model
             // to ensure "user" is required (not null)
             if (user == null)
             {
-                throw new InvalidDataException("user is a required property for Group and cannot be null");
+                throw new InvalidDataException("user is a required property for List and cannot be null");
             }
             else
             {
@@ -107,7 +107,7 @@ namespace TextMagicClient.Model
             // to ensure "service" is required (not null)
             if (service == null)
             {
-                throw new InvalidDataException("service is a required property for Group and cannot be null");
+                throw new InvalidDataException("service is a required property for List and cannot be null");
             }
             else
             {
@@ -116,7 +116,7 @@ namespace TextMagicClient.Model
             // to ensure "shared" is required (not null)
             if (shared == null)
             {
-                throw new InvalidDataException("shared is a required property for Group and cannot be null");
+                throw new InvalidDataException("shared is a required property for List and cannot be null");
             }
             else
             {
@@ -125,7 +125,7 @@ namespace TextMagicClient.Model
             // to ensure "avatar" is required (not null)
             if (avatar == null)
             {
-                throw new InvalidDataException("avatar is a required property for Group and cannot be null");
+                throw new InvalidDataException("avatar is a required property for List and cannot be null");
             }
             else
             {
@@ -134,7 +134,7 @@ namespace TextMagicClient.Model
             // to ensure "isDefault" is required (not null)
             if (isDefault == null)
             {
-                throw new InvalidDataException("isDefault is a required property for Group and cannot be null");
+                throw new InvalidDataException("isDefault is a required property for List and cannot be null");
             }
             else
             {
@@ -194,7 +194,7 @@ namespace TextMagicClient.Model
         /// Gets or Sets Avatar
         /// </summary>
         [DataMember(Name="avatar", EmitDefaultValue=false)]
-        public GroupImage Avatar { get; set; }
+        public ListImage Avatar { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDefault
@@ -209,7 +209,7 @@ namespace TextMagicClient.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Group {\n");
+            sb.Append("class List {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -240,15 +240,15 @@ namespace TextMagicClient.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Group);
+            return this.Equals(input as List);
         }
 
         /// <summary>
-        /// Returns true if Group instances are equal
+        /// Returns true if List instances are equal
         /// </summary>
-        /// <param name="input">Instance of Group to be compared</param>
+        /// <param name="input">Instance of List to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Group input)
+        public bool Equals(List input)
         {
             if (input == null)
                 return false;

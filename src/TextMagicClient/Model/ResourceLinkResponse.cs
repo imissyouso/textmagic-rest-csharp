@@ -38,8 +38,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourceLinkResponse" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="href">href (required).</param>
+        /// <param name="id">Resource ID. (required).</param>
+        /// <param name="href">A link to this resource. If you want to fetch it, just **GET** this address. (required).</param>
         public ResourceLinkResponse(int? id = default(int?), string href = default(string))
         {
             // to ensure "id" is required (not null)
@@ -63,14 +63,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Resource ID.
         /// </summary>
+        /// <value>Resource ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Href
+        /// A link to this resource. If you want to fetch it, just **GET** this address.
         /// </summary>
+        /// <value>A link to this resource. If you want to fetch it, just **GET** this address.</value>
         [DataMember(Name="href", EmitDefaultValue=false)]
         public string Href { get; set; }
 

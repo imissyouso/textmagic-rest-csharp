@@ -25,19 +25,39 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// Request executed with success
+    /// ListImage
     /// </summary>
     [DataContract]
-    public partial class SuccessfulResponse :  IEquatable<SuccessfulResponse>, IValidatableObject
+    public partial class ListImage :  IEquatable<ListImage>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SuccessfulResponse" /> class.
+        /// Initializes a new instance of the <see cref="ListImage" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        public SuccessfulResponse()
+        protected ListImage() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListImage" /> class.
+        /// </summary>
+        /// <param name="href">href (required).</param>
+        public ListImage(string href = default(string))
         {
+            // to ensure "href" is required (not null)
+            if (href == null)
+            {
+                throw new InvalidDataException("href is a required property for ListImage and cannot be null");
+            }
+            else
+            {
+                this.Href = href;
+            }
         }
         
+        /// <summary>
+        /// Gets or Sets Href
+        /// </summary>
+        [DataMember(Name="href", EmitDefaultValue=false)]
+        public string Href { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,7 +65,8 @@ namespace TextMagicClient.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SuccessfulResponse {\n");
+            sb.Append("class ListImage {\n");
+            sb.Append("  Href: ").Append(Href).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -66,20 +87,25 @@ namespace TextMagicClient.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SuccessfulResponse);
+            return this.Equals(input as ListImage);
         }
 
         /// <summary>
-        /// Returns true if SuccessfulResponse instances are equal
+        /// Returns true if ListImage instances are equal
         /// </summary>
-        /// <param name="input">Instance of SuccessfulResponse to be compared</param>
+        /// <param name="input">Instance of ListImage to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SuccessfulResponse input)
+        public bool Equals(ListImage input)
         {
             if (input == null)
                 return false;
 
-            return false;
+            return 
+                (
+                    this.Href == input.Href ||
+                    (this.Href != null &&
+                    this.Href.Equals(input.Href))
+                );
         }
 
         /// <summary>
@@ -91,6 +117,8 @@ namespace TextMagicClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Href != null)
+                    hashCode = hashCode * 59 + this.Href.GetHashCode();
                 return hashCode;
             }
         }

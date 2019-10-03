@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateListInputObject" /> class.
         /// </summary>
-        /// <param name="name">List name (required).</param>
-        /// <param name="shared">Should this list be shared with sub-accounts (required).</param>
-        /// <param name="favorited">Is list favorited. Default is false (default to false).</param>
-        /// <param name="isDefault">Is list default for new contacts (web only). (default to false).</param>
-        public CreateListInputObject(string name = default(string), bool? shared = default(bool?), bool? favorited = false, bool? isDefault = false)
+        /// <param name="name">List name. (required).</param>
+        /// <param name="shared">Should new list be shared among all the sub-accounts? The default is 0 (false). (default to false).</param>
+        /// <param name="favorited">Is list favorited. Default is false. (default to false).</param>
+        /// <param name="isDefault">Is list default for new contacts (web only). Default is false. (default to false).</param>
+        public CreateListInputObject(string name = default(string), bool? shared = false, bool? favorited = false, bool? isDefault = false)
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -53,10 +53,10 @@ namespace TextMagicClient.Model
             {
                 this.Name = name;
             }
-            // to ensure "shared" is required (not null)
+            // use default value if no "shared" provided
             if (shared == null)
             {
-                throw new InvalidDataException("shared is a required property for CreateListInputObject and cannot be null");
+                this.Shared = false;
             }
             else
             {
@@ -83,30 +83,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// List name
+        /// List name.
         /// </summary>
-        /// <value>List name</value>
+        /// <value>List name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Should this list be shared with sub-accounts
+        /// Should new list be shared among all the sub-accounts? The default is 0 (false).
         /// </summary>
-        /// <value>Should this list be shared with sub-accounts</value>
+        /// <value>Should new list be shared among all the sub-accounts? The default is 0 (false).</value>
         [DataMember(Name="shared", EmitDefaultValue=false)]
         public bool? Shared { get; set; }
 
         /// <summary>
-        /// Is list favorited. Default is false
+        /// Is list favorited. Default is false.
         /// </summary>
-        /// <value>Is list favorited. Default is false</value>
+        /// <value>Is list favorited. Default is false.</value>
         [DataMember(Name="favorited", EmitDefaultValue=false)]
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Is list default for new contacts (web only).
+        /// Is list default for new contacts (web only). Default is false.
         /// </summary>
-        /// <value>Is list default for new contacts (web only).</value>
+        /// <value>Is list default for new contacts (web only). Default is false.</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
 

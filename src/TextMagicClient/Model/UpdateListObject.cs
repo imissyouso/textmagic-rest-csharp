@@ -39,7 +39,7 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="UpdateListObject" /> class.
         /// </summary>
         /// <param name="name">List name (required).</param>
-        /// <param name="shared">Should this list be shared with sub-accounts (required).</param>
+        /// <param name="shared">Should this list be shared with sub-accounts.</param>
         /// <param name="favorited">Is list favorited. Default is false (default to false).</param>
         /// <param name="isDefault">Is list default for new contacts (web only). (default to false).</param>
         public UpdateListObject(string name = default(string), bool? shared = default(bool?), bool? favorited = false, bool? isDefault = false)
@@ -53,15 +53,7 @@ namespace TextMagicClient.Model
             {
                 this.Name = name;
             }
-            // to ensure "shared" is required (not null)
-            if (shared == null)
-            {
-                throw new InvalidDataException("shared is a required property for UpdateListObject and cannot be null");
-            }
-            else
-            {
-                this.Shared = shared;
-            }
+            this.Shared = shared;
             // use default value if no "favorited" provided
             if (favorited == null)
             {

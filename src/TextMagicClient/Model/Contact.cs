@@ -53,7 +53,7 @@ namespace TextMagicClient.Model
         /// <param name="phoneType">phoneType (required).</param>
         /// <param name="avatar">avatar (required).</param>
         /// <param name="notes">notes (required).</param>
-        public Contact(int? id = default(int?), bool? favorited = default(bool?), bool? blocked = default(bool?), string firstName = default(string), string lastName = default(string), string companyName = default(string), string phone = default(string), string email = default(string), Country country = default(Country), List<ContactCustomField> customFields = default(List<ContactCustomField>), User user = default(User), List<Group> lists = default(List<Group>), string phoneType = default(string), ContactImage avatar = default(ContactImage), List<ContactNote> notes = default(List<ContactNote>))
+        public Contact(int? id = default(int?), bool? favorited = default(bool?), bool? blocked = default(bool?), string firstName = default(string), string lastName = default(string), string companyName = default(string), string phone = default(string), string email = default(string), Country country = default(Country), List<ContactCustomField> customFields = default(List<ContactCustomField>), User user = default(User), List<List> lists = default(List<List>), string phoneType = default(string), ContactImage avatar = default(ContactImage), List<ContactNote> notes = default(List<ContactNote>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -262,7 +262,7 @@ namespace TextMagicClient.Model
         /// Gets or Sets Lists
         /// </summary>
         [DataMember(Name="lists", EmitDefaultValue=false)]
-        public List<Group> Lists { get; set; }
+        public List<List> Lists { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneType

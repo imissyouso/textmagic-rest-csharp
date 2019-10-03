@@ -25,29 +25,29 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// GetUserListsPaginatedResponse
+    /// GetListsPaginatedResponse
     /// </summary>
     [DataContract]
-    public partial class GetUserListsPaginatedResponse :  IEquatable<GetUserListsPaginatedResponse>, IValidatableObject
+    public partial class GetListsPaginatedResponse :  IEquatable<GetListsPaginatedResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUserListsPaginatedResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetListsPaginatedResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected GetUserListsPaginatedResponse() { }
+        protected GetListsPaginatedResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUserListsPaginatedResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetListsPaginatedResponse" /> class.
         /// </summary>
         /// <param name="page">page (required).</param>
         /// <param name="pageCount">The total number of pages. (required).</param>
         /// <param name="limit">The number of results per page. (required).</param>
         /// <param name="resources">resources (required).</param>
-        public GetUserListsPaginatedResponse(int? page = default(int?), int? pageCount = default(int?), int? limit = default(int?), List<Group> resources = default(List<Group>))
+        public GetListsPaginatedResponse(int? page = default(int?), int? pageCount = default(int?), int? limit = default(int?), List<List> resources = default(List<List>))
         {
             // to ensure "page" is required (not null)
             if (page == null)
             {
-                throw new InvalidDataException("page is a required property for GetUserListsPaginatedResponse and cannot be null");
+                throw new InvalidDataException("page is a required property for GetListsPaginatedResponse and cannot be null");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace TextMagicClient.Model
             // to ensure "pageCount" is required (not null)
             if (pageCount == null)
             {
-                throw new InvalidDataException("pageCount is a required property for GetUserListsPaginatedResponse and cannot be null");
+                throw new InvalidDataException("pageCount is a required property for GetListsPaginatedResponse and cannot be null");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace TextMagicClient.Model
             // to ensure "limit" is required (not null)
             if (limit == null)
             {
-                throw new InvalidDataException("limit is a required property for GetUserListsPaginatedResponse and cannot be null");
+                throw new InvalidDataException("limit is a required property for GetListsPaginatedResponse and cannot be null");
             }
             else
             {
@@ -74,7 +74,7 @@ namespace TextMagicClient.Model
             // to ensure "resources" is required (not null)
             if (resources == null)
             {
-                throw new InvalidDataException("resources is a required property for GetUserListsPaginatedResponse and cannot be null");
+                throw new InvalidDataException("resources is a required property for GetListsPaginatedResponse and cannot be null");
             }
             else
             {
@@ -106,7 +106,7 @@ namespace TextMagicClient.Model
         /// Gets or Sets Resources
         /// </summary>
         [DataMember(Name="resources", EmitDefaultValue=false)]
-        public List<Group> Resources { get; set; }
+        public List<List> Resources { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -115,7 +115,7 @@ namespace TextMagicClient.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class GetUserListsPaginatedResponse {\n");
+            sb.Append("class GetListsPaginatedResponse {\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
@@ -140,15 +140,15 @@ namespace TextMagicClient.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GetUserListsPaginatedResponse);
+            return this.Equals(input as GetListsPaginatedResponse);
         }
 
         /// <summary>
-        /// Returns true if GetUserListsPaginatedResponse instances are equal
+        /// Returns true if GetListsPaginatedResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of GetUserListsPaginatedResponse to be compared</param>
+        /// <param name="input">Instance of GetListsPaginatedResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GetUserListsPaginatedResponse input)
+        public bool Equals(GetListsPaginatedResponse input)
         {
             if (input == null)
                 return false;

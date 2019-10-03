@@ -138,14 +138,14 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test CheckPhoneVerificationCode_0
+        /// Test CheckPhoneVerificationCodeTFA
         /// </summary>
         [Test]
-        public void CheckPhoneVerificationCode_0Test()
+        public void CheckPhoneVerificationCodeTFATest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject = null;
-            //instance.CheckPhoneVerificationCode_0(checkPhoneVerificationCodeInputObject);
+            //instance.CheckPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject);
             
         }
         
@@ -1211,7 +1211,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
             //var response = instance.GetList(id);
-            //Assert.IsInstanceOf<Group> (response, "response is Group");
+            //Assert.IsInstanceOf<List> (response, "response is List");
         }
         
         /// <summary>
@@ -1224,6 +1224,23 @@ namespace TextMagicClient.Test
             //int? id = null;
             //var response = instance.GetListContactsIds(id);
             //Assert.IsInstanceOf<GetListContactsIdsResponse> (response, "response is GetListContactsIdsResponse");
+        }
+        
+        /// <summary>
+        /// Test GetLists
+        /// </summary>
+        [Test]
+        public void GetListsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? page = null;
+            //int? limit = null;
+            //string orderBy = null;
+            //string direction = null;
+            //int? favoriteOnly = null;
+            //int? onlyMine = null;
+            //var response = instance.GetLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
+            //Assert.IsInstanceOf<GetListsPaginatedResponse> (response, "response is GetListsPaginatedResponse");
         }
         
         /// <summary>
@@ -1651,23 +1668,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetUserLists
-        /// </summary>
-        [Test]
-        public void GetUserListsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? page = null;
-            //int? limit = null;
-            //string orderBy = null;
-            //string direction = null;
-            //int? favoriteOnly = null;
-            //int? onlyMine = null;
-            //var response = instance.GetUserLists(page, limit, orderBy, direction, favoriteOnly, onlyMine);
-            //Assert.IsInstanceOf<GetUserListsPaginatedResponse> (response, "response is GetUserListsPaginatedResponse");
-        }
-        
-        /// <summary>
         /// Test GetVersions
         /// </summary>
         [Test]
@@ -1999,14 +1999,14 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test SendPhoneVerificationCode_0
+        /// Test SendPhoneVerificationCodeTFA
         /// </summary>
         [Test]
-        public void SendPhoneVerificationCode_0Test()
+        public void SendPhoneVerificationCodeTFATest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SendPhoneVerificationCodeInputObject sendPhoneVerificationCodeInputObject = null;
-            //var response = instance.SendPhoneVerificationCode_0(sendPhoneVerificationCodeInputObject);
+            //var response = instance.SendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject);
             //Assert.IsInstanceOf<SendPhoneVerificationCodeResponse> (response, "response is SendPhoneVerificationCodeResponse");
         }
         
