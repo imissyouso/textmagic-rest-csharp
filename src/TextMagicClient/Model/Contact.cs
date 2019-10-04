@@ -38,16 +38,16 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
+        /// <param name="id">Contact ID. (required).</param>
         /// <param name="favorited">favorited (required).</param>
         /// <param name="blocked">blocked (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="lastName">lastName (required).</param>
-        /// <param name="companyName">companyName (required).</param>
-        /// <param name="phone">phone (required).</param>
-        /// <param name="email">email (required).</param>
-        /// <param name="country">country (required).</param>
-        /// <param name="customFields">customFields (required).</param>
+        /// <param name="firstName">Contact first name. (required).</param>
+        /// <param name="lastName">Contact last name. (required).</param>
+        /// <param name="companyName">Company name. (required).</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
+        /// <param name="email">Contact email address. (required).</param>
+        /// <param name="country">Contact country. (required).</param>
+        /// <param name="customFields">See [Custom Fields](/docs/api/custom-fields/) section. (required).</param>
         /// <param name="user">user (required).</param>
         /// <param name="lists">lists (required).</param>
         /// <param name="phoneType">phoneType (required).</param>
@@ -193,8 +193,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Contact ID.
         /// </summary>
+        /// <value>Contact ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -211,44 +212,51 @@ namespace TextMagicClient.Model
         public bool? Blocked { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Contact first name.
         /// </summary>
+        /// <value>Contact first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Contact last name.
         /// </summary>
+        /// <value>Contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CompanyName
+        /// Company name.
         /// </summary>
+        /// <value>Company name.</value>
         [DataMember(Name="companyName", EmitDefaultValue=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
         /// </summary>
+        /// <value>Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Email
+        /// Contact email address.
         /// </summary>
+        /// <value>Contact email address.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Gets or Sets Country
+        /// Contact country.
         /// </summary>
+        /// <value>Contact country.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public Country Country { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomFields
+        /// See [Custom Fields](/docs/api/custom-fields/) section.
         /// </summary>
+        /// <value>See [Custom Fields](/docs/api/custom-fields/) section.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public List<ContactCustomField> CustomFields { get; set; }
 

@@ -28,7 +28,7 @@ namespace TextMagicClient.Model
     /// GetContactsAutocompleteResponse
     /// </summary>
     [DataContract]
-    public partial class GetContactsAutocompleteResponse : List<GetContactsAutocompleteResponse>,  IEquatable<GetContactsAutocompleteResponse>, IValidatableObject
+    public partial class GetContactsAutocompleteResponse : List<GetContactsAutocompleteResponseItem>,  IEquatable<GetContactsAutocompleteResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetContactsAutocompleteResponse" /> class.

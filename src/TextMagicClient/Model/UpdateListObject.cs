@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateListObject" /> class.
         /// </summary>
-        /// <param name="name">List name (required).</param>
-        /// <param name="shared">Should this list be shared with sub-accounts.</param>
-        /// <param name="favorited">Is list favorited. Default is false (default to false).</param>
+        /// <param name="name">List name. (required).</param>
+        /// <param name="shared">Make this list shared or not? (default to false).</param>
+        /// <param name="favorited">Is list favorited. (default to false).</param>
         /// <param name="isDefault">Is list default for new contacts (web only). (default to false).</param>
-        public UpdateListObject(string name = default(string), bool? shared = default(bool?), bool? favorited = false, bool? isDefault = false)
+        public UpdateListObject(string name = default(string), bool? shared = false, bool? favorited = false, bool? isDefault = false)
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -53,7 +53,15 @@ namespace TextMagicClient.Model
             {
                 this.Name = name;
             }
-            this.Shared = shared;
+            // use default value if no "shared" provided
+            if (shared == null)
+            {
+                this.Shared = false;
+            }
+            else
+            {
+                this.Shared = shared;
+            }
             // use default value if no "favorited" provided
             if (favorited == null)
             {
@@ -75,23 +83,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// List name
+        /// List name.
         /// </summary>
-        /// <value>List name</value>
+        /// <value>List name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Should this list be shared with sub-accounts
+        /// Make this list shared or not?
         /// </summary>
-        /// <value>Should this list be shared with sub-accounts</value>
+        /// <value>Make this list shared or not?</value>
         [DataMember(Name="shared", EmitDefaultValue=false)]
         public bool? Shared { get; set; }
 
         /// <summary>
-        /// Is list favorited. Default is false
+        /// Is list favorited.
         /// </summary>
-        /// <value>Is list favorited. Default is false</value>
+        /// <value>Is list favorited.</value>
         [DataMember(Name="favorited", EmitDefaultValue=false)]
         public bool? Favorited { get; set; }
 

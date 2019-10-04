@@ -3,14 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
-**Name** | **string** |  | 
-**Description** | **string** |  | 
+**Id** | **int?** | List ID. | 
+**Name** | **string** | List name. | 
+**Description** | **string** | List description. | 
 **Favorited** | **bool?** |  | 
-**MembersCount** | **int?** |  | 
+**MembersCount** | **int?** | List members count. | 
 **User** | [**User**](User.md) |  | 
 **Service** | **bool?** |  | 
-**Shared** | **bool?** |  | 
+**Shared** | **bool?** | Is the list **shared** among all sub-accounts? | 
 **Avatar** | [**ListImage**](ListImage.md) |  | 
 **IsDefault** | **bool?** |  | 
 

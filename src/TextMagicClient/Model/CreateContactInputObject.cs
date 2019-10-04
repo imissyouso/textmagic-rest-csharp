@@ -38,12 +38,12 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateContactInputObject" /> class.
         /// </summary>
-        /// <param name="firstName">Contact first name.</param>
-        /// <param name="lastName">Contact last name.</param>
-        /// <param name="phone">Contact phone number in E.164 (international) format without leading + or zeroes (required).</param>
-        /// <param name="email">Contact email.</param>
-        /// <param name="companyName">Contact company name.</param>
-        /// <param name="lists">Array of list resources id contact will be assigned to (required).</param>
+        /// <param name="firstName">Contact first name..</param>
+        /// <param name="lastName">Contact last name..</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
+        /// <param name="email">Contact email address..</param>
+        /// <param name="companyName">Company name..</param>
+        /// <param name="lists">Contact [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list. (required).</param>
         /// <param name="favorited">Is contact favorited.</param>
         /// <param name="blocked">Is contact blocked for outgoing and incoming messaging.</param>
         /// <param name="type">Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).</param>
@@ -83,44 +83,44 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Contact first name
+        /// Contact first name.
         /// </summary>
-        /// <value>Contact first name</value>
+        /// <value>Contact first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Contact last name
+        /// Contact last name.
         /// </summary>
-        /// <value>Contact last name</value>
+        /// <value>Contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Contact phone number in E.164 (international) format without leading + or zeroes
+        /// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
         /// </summary>
-        /// <value>Contact phone number in E.164 (international) format without leading + or zeroes</value>
+        /// <value>Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Contact email
+        /// Contact email address.
         /// </summary>
-        /// <value>Contact email</value>
+        /// <value>Contact email address.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Contact company name
+        /// Company name.
         /// </summary>
-        /// <value>Contact company name</value>
+        /// <value>Company name.</value>
         [DataMember(Name="companyName", EmitDefaultValue=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// Array of list resources id contact will be assigned to
+        /// Contact [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list.
         /// </summary>
-        /// <value>Array of list resources id contact will be assigned to</value>
+        /// <value>Contact [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list.</value>
         [DataMember(Name="lists", EmitDefaultValue=false)]
         public string Lists { get; set; }
 

@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCustomFieldInputObject" /> class.
         /// </summary>
-        /// <param name="name">Custom field name (required).</param>
+        /// <param name="name">Custom field name. (required).</param>
         public CreateCustomFieldInputObject(string name = default(string))
         {
             // to ensure "name" is required (not null)
@@ -53,9 +53,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Custom field name
+        /// Custom field name.
         /// </summary>
-        /// <value>Custom field name</value>
+        /// <value>Custom field name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

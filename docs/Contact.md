@@ -3,16 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
+**Id** | **int?** | Contact ID. | 
 **Favorited** | **bool?** |  | 
 **Blocked** | **bool?** |  | 
-**FirstName** | **string** |  | 
-**LastName** | **string** |  | 
-**CompanyName** | **string** |  | 
-**Phone** | **string** |  | 
-**Email** | **string** |  | 
-**Country** | [**Country**](Country.md) |  | 
-**CustomFields** | [**List&lt;ContactCustomField&gt;**](ContactCustomField.md) |  | 
+**FirstName** | **string** | Contact first name. | 
+**LastName** | **string** | Contact last name. | 
+**CompanyName** | **string** | Company name. | 
+**Phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | 
+**Email** | **string** | Contact email address. | 
+**Country** | [**Country**](Country.md) | Contact country. | 
+**CustomFields** | [**List&lt;ContactCustomField&gt;**](ContactCustomField.md) | See [Custom Fields](/docs/api/custom-fields/) section. | 
 **User** | [**User**](User.md) |  | 
 **Lists** | **List&lt;List&gt;** |  | 
 **PhoneType** | **string** |  | 

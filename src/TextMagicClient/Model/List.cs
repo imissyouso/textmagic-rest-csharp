@@ -38,14 +38,14 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="List" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="description">description (required).</param>
+        /// <param name="id">List ID. (required).</param>
+        /// <param name="name">List name. (required).</param>
+        /// <param name="description">List description. (required).</param>
         /// <param name="favorited">favorited (required).</param>
-        /// <param name="membersCount">membersCount (required).</param>
+        /// <param name="membersCount">List members count. (required).</param>
         /// <param name="user">user (required).</param>
         /// <param name="service">service (required).</param>
-        /// <param name="shared">shared (required).</param>
+        /// <param name="shared">Is the list **shared** among all sub-accounts? (required).</param>
         /// <param name="avatar">avatar (required).</param>
         /// <param name="isDefault">isDefault (required).</param>
         public List(int? id = default(int?), string name = default(string), string description = default(string), bool? favorited = default(bool?), int? membersCount = default(int?), User user = default(User), bool? service = default(bool?), bool? shared = default(bool?), ListImage avatar = default(ListImage), bool? isDefault = default(bool?))
@@ -143,20 +143,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// List ID.
         /// </summary>
+        /// <value>List ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// List name.
         /// </summary>
+        /// <value>List name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// List description.
         /// </summary>
+        /// <value>List description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
@@ -167,8 +170,9 @@ namespace TextMagicClient.Model
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Gets or Sets MembersCount
+        /// List members count.
         /// </summary>
+        /// <value>List members count.</value>
         [DataMember(Name="membersCount", EmitDefaultValue=false)]
         public int? MembersCount { get; set; }
 
@@ -185,8 +189,9 @@ namespace TextMagicClient.Model
         public bool? Service { get; set; }
 
         /// <summary>
-        /// Gets or Sets Shared
+        /// Is the list **shared** among all sub-accounts?
         /// </summary>
+        /// <value>Is the list **shared** among all sub-accounts?</value>
         [DataMember(Name="shared", EmitDefaultValue=false)]
         public bool? Shared { get; set; }
 

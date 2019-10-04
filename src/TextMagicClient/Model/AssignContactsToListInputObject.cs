@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignContactsToListInputObject" /> class.
         /// </summary>
-        /// <param name="contacts">contacts (required).</param>
+        /// <param name="contacts">Comma-separated array of [Contacts](/docs/api/contacts/) IDs. (required).</param>
         public AssignContactsToListInputObject(string contacts = default(string))
         {
             // to ensure "contacts" is required (not null)
@@ -53,8 +53,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Contacts
+        /// Comma-separated array of [Contacts](/docs/api/contacts/) IDs.
         /// </summary>
+        /// <value>Comma-separated array of [Contacts](/docs/api/contacts/) IDs.</value>
         [DataMember(Name="contacts", EmitDefaultValue=false)]
         public string Contacts { get; set; }
 

@@ -5,7 +5,7 @@ All URIs are relative to *http://rest.textmagic.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignContactsToList**](TextMagicApi.md#assigncontactstolist) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
-[**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
+[**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact by phone number
 [**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number
 [**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
@@ -15,33 +15,33 @@ Method | HTTP request | Description
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
 [**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close sub-account
-[**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Create a new contact from the submitted data.
+[**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Add a new contact
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
-[**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Create a new custom field from the submitted data.
+[**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Add a new custom field
 [**CreateList**](TextMagicApi.md#createlist) | **POST** /api/v2/lists | Create a new list
 [**CreatePushToken**](TextMagicApi.md#createpushtoken) | **POST** /api/v2/push/tokens | Add or update a device token.
 [**CreateSurvey**](TextMagicApi.md#createsurvey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
 [**CreateSurveyNode**](TextMagicApi.md#createsurveynode) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
 [**CreateTemplate**](TextMagicApi.md#createtemplate) | **POST** /api/v2/templates | Create a template
-[**DeleteAllContacts**](TextMagicApi.md#deleteallcontacts) | **DELETE** /api/v2/contact/all | Delete all contacts.
+[**DeleteAllContacts**](TextMagicApi.md#deleteallcontacts) | **DELETE** /api/v2/contact/all | Delete contacts (bulk)
 [**DeleteAllOutboundMessages**](TextMagicApi.md#deletealloutboundmessages) | **DELETE** /api/v2/message/all | Delete all messages
 [**DeleteAvatar**](TextMagicApi.md#deleteavatar) | **DELETE** /api/v2/user/avatar | Delete an avatar
 [**DeleteChatMessages**](TextMagicApi.md#deletechatmessages) | **POST** /api/v2/chats/{id}/messages/delete | Delete chat messages by ID(s)
 [**DeleteChatsBulk**](TextMagicApi.md#deletechatsbulk) | **POST** /api/v2/chats/delete | Delete chats (bulk)
-[**DeleteContact**](TextMagicApi.md#deletecontact) | **DELETE** /api/v2/contacts/{id} | Delete a single contact.
-[**DeleteContactAvatar**](TextMagicApi.md#deletecontactavatar) | **DELETE** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
+[**DeleteContact**](TextMagicApi.md#deletecontact) | **DELETE** /api/v2/contacts/{id} | Delete a contact
+[**DeleteContactAvatar**](TextMagicApi.md#deletecontactavatar) | **DELETE** /api/v2/contacts/{id}/avatar | Delete an avatar
 [**DeleteContactNote**](TextMagicApi.md#deletecontactnote) | **DELETE** /api/v2/notes/{id} | Delete a single contact note.
 [**DeleteContactNotesBulk**](TextMagicApi.md#deletecontactnotesbulk) | **POST** /api/v2/contacts/{id}/notes/delete | Delete contact note by given ID(s) or delete all contact notes.
-[**DeleteContactsByIds**](TextMagicApi.md#deletecontactsbyids) | **POST** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
+[**DeleteContactsByIds**](TextMagicApi.md#deletecontactsbyids) | **POST** /api/v2/contacts/delete | Delete contacts by IDs (bulk)
 [**DeleteContactsFromList**](TextMagicApi.md#deletecontactsfromlist) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from a list
-[**DeleteCustomField**](TextMagicApi.md#deletecustomfield) | **DELETE** /api/v2/customfields/{id} | Delete a single custom field.
+[**DeleteCustomField**](TextMagicApi.md#deletecustomfield) | **DELETE** /api/v2/customfields/{id} | Delete a custom field
 [**DeleteDedicatedNumber**](TextMagicApi.md#deletededicatednumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription
 [**DeleteInboundMessage**](TextMagicApi.md#deleteinboundmessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
 [**DeleteInboundMessagesBulk**](TextMagicApi.md#deleteinboundmessagesbulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
-[**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a single list
+[**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a list
 [**DeleteListAvatar**](TextMagicApi.md#deletelistavatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list
-[**DeleteListContactsBulk**](TextMagicApi.md#deletelistcontactsbulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list
-[**DeleteListsBulk**](TextMagicApi.md#deletelistsbulk) | **POST** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists
+[**DeleteListContactsBulk**](TextMagicApi.md#deletelistcontactsbulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contacts from list (bulk)
+[**DeleteListsBulk**](TextMagicApi.md#deletelistsbulk) | **POST** /api/v2/lists/delete | Delete lists (bulk)
 [**DeleteMessageSession**](TextMagicApi.md#deletemessagesession) | **DELETE** /api/v2/sessions/{id} | Delete a session
 [**DeleteMessageSessionsBulk**](TextMagicApi.md#deletemessagesessionsbulk) | **POST** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#deleteoutboundmessage) | **DELETE** /api/v2/messages/{id} | Delete message
@@ -69,36 +69,36 @@ Method | HTTP request | Description
 [**GetAvailableSenderSettingOptions**](TextMagicApi.md#getavailablesendersettingoptions) | **GET** /api/v2/sources | Get available sender settings
 [**GetBalanceNotificationOptions**](TextMagicApi.md#getbalancenotificationoptions) | **GET** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
 [**GetBalanceNotificationSettings**](TextMagicApi.md#getbalancenotificationsettings) | **GET** /api/v2/user/notification/balance | Get balance notification settings
-[**GetBlockedContacts**](TextMagicApi.md#getblockedcontacts) | **GET** /api/v2/contacts/block/list | Get blocked contacts.
+[**GetBlockedContacts**](TextMagicApi.md#getblockedcontacts) | **GET** /api/v2/contacts/block/list | Get blocked contacts
 [**GetBulkSession**](TextMagicApi.md#getbulksession) | **GET** /api/v2/bulks/{id} | Get bulk message session status.
 [**GetCallbackSettings**](TextMagicApi.md#getcallbacksettings) | **GET** /api/v2/callback/settings | Fetch callback URL settings
 [**GetCallsPrices**](TextMagicApi.md#getcallsprices) | **GET** /api/v2/calls/price | Check pricing for a inbound/outbound call.
 [**GetChat**](TextMagicApi.md#getchat) | **GET** /api/v2/chats/{id} | Get a single chat
 [**GetChatByPhone**](TextMagicApi.md#getchatbyphone) | **GET** /api/v2/chats/{phone}/by/phone | Find chats by phone
 [**GetChatMessages**](TextMagicApi.md#getchatmessages) | **GET** /api/v2/chats/{id}/message | Get chat messages
-[**GetContact**](TextMagicApi.md#getcontact) | **GET** /api/v2/contacts/{id} | Get a single contact.
-[**GetContactByPhone**](TextMagicApi.md#getcontactbyphone) | **GET** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
+[**GetContact**](TextMagicApi.md#getcontact) | **GET** /api/v2/contacts/{id} | Get the details of a specific contact
+[**GetContactByPhone**](TextMagicApi.md#getcontactbyphone) | **GET** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**GetContactIfBlocked**](TextMagicApi.md#getcontactifblocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
 [**GetContactImportSessionProgress**](TextMagicApi.md#getcontactimportsessionprogress) | **GET** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
 [**GetContactNote**](TextMagicApi.md#getcontactnote) | **GET** /api/v2/notes/{id} | Get a single contact note.
 [**GetContactNotes**](TextMagicApi.md#getcontactnotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
-[**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all user contacts.
-[**GetContactsAutocomplete**](TextMagicApi.md#getcontactsautocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
+[**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all contacts
+[**GetContactsAutocomplete**](TextMagicApi.md#getcontactsautocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions
 [**GetContactsByListId**](TextMagicApi.md#getcontactsbylistid) | **GET** /api/v2/lists/{id}/contacts | Get all contacts in a list
 [**GetCountries**](TextMagicApi.md#getcountries) | **GET** /api/v2/countries | Return list of countries.
 [**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current account information
-[**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get a single custom field.
-[**GetCustomFields**](TextMagicApi.md#getcustomfields) | **GET** /api/v2/customfields | Get all contact custom fields.
+[**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get the details of a specific custom field
+[**GetCustomFields**](TextMagicApi.md#getcustomfields) | **GET** /api/v2/customfields | Get all custom fields
 [**GetDedicatedNumber**](TextMagicApi.md#getdedicatednumber) | **GET** /api/v2/numbers/{id} | Get the details of a specific dedicated number
 [**GetDisallowedRules**](TextMagicApi.md#getdisallowedrules) | **GET** /api/v2/user/disallowed-rules | Get disallowed permissions
-[**GetFavourites**](TextMagicApi.md#getfavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists.
+[**GetFavourites**](TextMagicApi.md#getfavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists
 [**GetInboundMessage**](TextMagicApi.md#getinboundmessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#getinboundmessagesnotificationsettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Get all invoices
 [**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get the details of a specific list
-[**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID
+[**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contacts IDs in a list
 [**GetLists**](TextMagicApi.md#getlists) | **GET** /api/v2/lists | Get all lists
-[**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
+[**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check price
 [**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a session details
@@ -125,8 +125,8 @@ Method | HTTP request | Description
 [**GetTemplate**](TextMagicApi.md#gettemplate) | **GET** /api/v2/templates/{id} | Get a template details
 [**GetTimezones**](TextMagicApi.md#gettimezones) | **GET** /api/v2/timezones | Return all available timezone IDs.
 [**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
-[**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
-[**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
+[**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
+[**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
 [**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
@@ -143,9 +143,9 @@ Method | HTTP request | Description
 [**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by message text
 [**SearchChatsByIds**](TextMagicApi.md#searchchatsbyids) | **GET** /api/v2/chats/search/ids | Find chats (bulk)
 [**SearchChatsByReceipent**](TextMagicApi.md#searchchatsbyreceipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient
-[**SearchContacts**](TextMagicApi.md#searchcontacts) | **GET** /api/v2/contacts/search | Find user contacts by given parameters.
+[**SearchContacts**](TextMagicApi.md#searchcontacts) | **GET** /api/v2/contacts/search | Find contacts by given criteria
 [**SearchInboundMessages**](TextMagicApi.md#searchinboundmessages) | **GET** /api/v2/replies/search | Find inbound messages
-[**SearchLists**](TextMagicApi.md#searchlists) | **GET** /api/v2/lists/search | Find contact lists by given parameters
+[**SearchLists**](TextMagicApi.md#searchlists) | **GET** /api/v2/lists/search | Find lists by given criteria
 [**SearchOutboundMessages**](TextMagicApi.md#searchoutboundmessages) | **GET** /api/v2/messages/search | Find messages
 [**SearchScheduledMessages**](TextMagicApi.md#searchscheduledmessages) | **GET** /api/v2/schedules/search | Find scheduled messages
 [**SearchTemplates**](TextMagicApi.md#searchtemplates) | **GET** /api/v2/templates/search | Find templates by criteria
@@ -156,26 +156,26 @@ Method | HTTP request | Description
 [**SetChatStatus**](TextMagicApi.md#setchatstatus) | **POST** /api/v2/chats/status | Change chat status
 [**StartSurvey**](TextMagicApi.md#startsurvey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#unblockcontact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
-[**UnblockContactsBulk**](TextMagicApi.md#unblockcontactsbulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
+[**UnblockContactsBulk**](TextMagicApi.md#unblockcontactsbulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
 [**UnmuteChatsBulk**](TextMagicApi.md#unmutechatsbulk) | **POST** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
-[**UnsubscribeContact**](TextMagicApi.md#unsubscribecontact) | **POST** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
+[**UnsubscribeContact**](TextMagicApi.md#unsubscribecontact) | **POST** /api/v2/unsubscribers | Manually unsubscribe a contact
 [**UpdateBalanceNotificationSettings**](TextMagicApi.md#updatebalancenotificationsettings) | **PUT** /api/v2/user/notification/balance | Update balance notification settings
 [**UpdateCallbackSettings**](TextMagicApi.md#updatecallbacksettings) | **PUT** /api/v2/callback/settings | Update callback URL settings
 [**UpdateChatDesktopNotificationSettings**](TextMagicApi.md#updatechatdesktopnotificationsettings) | **PUT** /api/v2/user/desktop/notification | Update chat desktop notification settings
-[**UpdateContact**](TextMagicApi.md#updatecontact) | **PUT** /api/v2/contacts/{id} | Update existing contact.
+[**UpdateContact**](TextMagicApi.md#updatecontact) | **PUT** /api/v2/contacts/{id} | Edit a contact
 [**UpdateContactNote**](TextMagicApi.md#updatecontactnote) | **PUT** /api/v2/notes/{id} | Update existing contact note.
 [**UpdateCurrentUser**](TextMagicApi.md#updatecurrentuser) | **PUT** /api/v2/user | Edit current account info
-[**UpdateCustomField**](TextMagicApi.md#updatecustomfield) | **PUT** /api/v2/customfields/{id} | Update existing custom field.
-[**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
+[**UpdateCustomField**](TextMagicApi.md#updatecustomfield) | **PUT** /api/v2/customfields/{id} | Edit a custom field
+[**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Edit the custom field value of a specified contact
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
-[**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Update existing list
+[**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Edit a list
 [**UpdatePassword**](TextMagicApi.md#updatepassword) | **PUT** /api/v2/user/password/change | Change user password.
 [**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
 [**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
 [**UpdateSurveyNode**](TextMagicApi.md#updatesurveynode) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
-[**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
+[**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Upload an avatar
 [**UploadListAvatar**](TextMagicApi.md#uploadlistavatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list
 [**UploadMessageAttachment**](TextMagicApi.md#uploadmessageattachment) | **POST** /api/v2/messages/attachment | Upload message attachment
 
@@ -185,6 +185,8 @@ Method | HTTP request | Description
 > ResourceLinkResponse AssignContactsToList (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
 
 Assign contacts to a list
+
+> Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
 
 ### Example
 ```csharp
@@ -205,7 +207,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var assignContactsToListInputObject = new AssignContactsToListInputObject(); // AssignContactsToListInputObject | Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+            var assignContactsToListInputObject = new AssignContactsToListInputObject(); // AssignContactsToListInputObject | 
             var id = 1;  // int? | 
 
             try
@@ -227,7 +229,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assignContactsToListInputObject** | [**AssignContactsToListInputObject**](AssignContactsToListInputObject.md)| Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user | 
+ **assignContactsToListInputObject** | [**AssignContactsToListInputObject**](AssignContactsToListInputObject.md)|  | 
  **id** | **int?**|  | 
 
 ### Return type
@@ -248,6 +250,8 @@ Name | Type | Description  | Notes
 <a name="blockcontact"></a>
 # **BlockContact**
 > ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject)
+
+Block contact by phone number
 
 Block contact from inbound and outbound communication by phone number.
 
@@ -274,7 +278,7 @@ namespace Example
 
             try
             {
-                // Block contact from inbound and outbound communication by phone number.
+                // Block contact by phone number
                 ResourceLinkResponse result = apiInstance.BlockContact(blockContactInputObject);
                 Debug.WriteLine(result);
             }
@@ -880,7 +884,7 @@ void (empty response body)
 # **CreateContact**
 > ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject)
 
-Create a new contact from the submitted data.
+Add a new contact
 
 ### Example
 ```csharp
@@ -905,7 +909,7 @@ namespace Example
 
             try
             {
-                // Create a new contact from the submitted data.
+                // Add a new contact
                 ResourceLinkResponse result = apiInstance.CreateContact(createContactInputObject);
                 Debug.WriteLine(result);
             }
@@ -1008,7 +1012,7 @@ Name | Type | Description  | Notes
 # **CreateCustomField**
 > ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject)
 
-Create a new custom field from the submitted data.
+Add a new custom field
 
 ### Example
 ```csharp
@@ -1033,7 +1037,7 @@ namespace Example
 
             try
             {
-                // Create a new custom field from the submitted data.
+                // Add a new custom field
                 ResourceLinkResponse result = apiInstance.CreateCustomField(createCustomFieldInputObject);
                 Debug.WriteLine(result);
             }
@@ -1389,7 +1393,7 @@ Name | Type | Description  | Notes
 # **DeleteAllContacts**
 > void DeleteAllContacts ()
 
-Delete all contacts.
+Delete contacts (bulk)
 
 ### Example
 ```csharp
@@ -1413,7 +1417,7 @@ namespace Example
 
             try
             {
-                // Delete all contacts.
+                // Delete contacts (bulk)
                 apiInstance.DeleteAllContacts();
             }
             catch (Exception e)
@@ -1695,7 +1699,9 @@ void (empty response body)
 # **DeleteContact**
 > void DeleteContact (int? id)
 
-Delete a single contact.
+Delete a contact
+
+> This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
 
 ### Example
 ```csharp
@@ -1720,7 +1726,7 @@ namespace Example
 
             try
             {
-                // Delete a single contact.
+                // Delete a contact
                 apiInstance.DeleteContact(id);
             }
             catch (Exception e)
@@ -1757,7 +1763,7 @@ void (empty response body)
 # **DeleteContactAvatar**
 > void DeleteContactAvatar (int? id)
 
-Delete an avatar for the contact.
+Delete an avatar
 
 ### Example
 ```csharp
@@ -1782,7 +1788,7 @@ namespace Example
 
             try
             {
-                // Delete an avatar for the contact.
+                // Delete an avatar
                 apiInstance.DeleteContactAvatar(id);
             }
             catch (Exception e)
@@ -1945,7 +1951,7 @@ void (empty response body)
 # **DeleteContactsByIds**
 > void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject)
 
-Delete contact by given ID(s) or delete all contacts.
+Delete contacts by IDs (bulk)
 
 ### Example
 ```csharp
@@ -1970,7 +1976,7 @@ namespace Example
 
             try
             {
-                // Delete contact by given ID(s) or delete all contacts.
+                // Delete contacts by IDs (bulk)
                 apiInstance.DeleteContactsByIds(deleteContactsByIdsInputObject);
             }
             catch (Exception e)
@@ -2009,6 +2015,8 @@ void (empty response body)
 
 Unassign contacts from a list
 
+> When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
+
 ### Example
 ```csharp
 using System;
@@ -2028,7 +2036,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var deleteContacsFromListObject = new DeleteContacsFromListObject(); // DeleteContacsFromListObject | Contact ID(s), separated by comma
+            var deleteContacsFromListObject = new DeleteContacsFromListObject(); // DeleteContacsFromListObject | 
             var id = 1;  // int? | 
 
             try
@@ -2049,7 +2057,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteContacsFromListObject** | [**DeleteContacsFromListObject**](DeleteContacsFromListObject.md)| Contact ID(s), separated by comma | 
+ **deleteContacsFromListObject** | [**DeleteContacsFromListObject**](DeleteContacsFromListObject.md)|  | 
  **id** | **int?**|  | 
 
 ### Return type
@@ -2071,7 +2079,9 @@ void (empty response body)
 # **DeleteCustomField**
 > void DeleteCustomField (int? id)
 
-Delete a single custom field.
+Delete a custom field
+
+> When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
 
 ### Example
 ```csharp
@@ -2096,7 +2106,7 @@ namespace Example
 
             try
             {
-                // Delete a single custom field.
+                // Delete a custom field
                 apiInstance.DeleteCustomField(id);
             }
             catch (Exception e)
@@ -2323,7 +2333,9 @@ void (empty response body)
 # **DeleteList**
 > void DeleteList (int? id)
 
-Delete a single list
+Delete a list
+
+> When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
 
 ### Example
 ```csharp
@@ -2348,7 +2360,7 @@ namespace Example
 
             try
             {
-                // Delete a single list
+                // Delete a list
                 apiInstance.DeleteList(id);
             }
             catch (Exception e)
@@ -2447,7 +2459,7 @@ void (empty response body)
 # **DeleteListContactsBulk**
 > void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
 
-Delete contact from list by given ID(s) or all contacts from list
+Delete contacts from list (bulk)
 
 ### Example
 ```csharp
@@ -2473,7 +2485,7 @@ namespace Example
 
             try
             {
-                // Delete contact from list by given ID(s) or all contacts from list
+                // Delete contacts from list (bulk)
                 apiInstance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id);
             }
             catch (Exception e)
@@ -2511,7 +2523,7 @@ void (empty response body)
 # **DeleteListsBulk**
 > void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject)
 
-Delete list by given ID(s) or delete all lists
+Delete lists (bulk)
 
 ### Example
 ```csharp
@@ -2536,7 +2548,7 @@ namespace Example
 
             try
             {
-                // Delete list by given ID(s) or delete all lists
+                // Delete lists (bulk)
                 apiInstance.DeleteListsBulk(deleteListsBulkInputObject);
             }
             catch (Exception e)
@@ -2574,6 +2586,8 @@ void (empty response body)
 > void DeleteMessageSession (int? id)
 
 Delete a session
+
+Delete a message session, together with all nested messages. > You will not be refunded for any deleted sent sessions. 
 
 ### Example
 ```csharp
@@ -2636,6 +2650,8 @@ void (empty response body)
 > void DeleteMessageSessionsBulk (DeleteMessageSessionsBulkInputObject deleteMessageSessionsBulkInputObject)
 
 Delete sessions (bulk)
+
+Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
 ### Example
 ```csharp
@@ -3263,6 +3279,8 @@ void (empty response body)
 
 Delete templates (bulk)
 
+Delete template by given ID(s) or delete all templates.
+
 ### Example
 ```csharp
 using System;
@@ -3784,6 +3802,8 @@ Name | Type | Description  | Notes
 
 Get all sessions
 
+Get all message sending sessions. > This list contains all of your sessions, including those which were sent but not via API 
+
 ### Example
 ```csharp
 using System;
@@ -4302,7 +4322,7 @@ This endpoint does not need any parameter.
 # **GetBlockedContacts**
 > GetBlockedContactsPaginatedResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null)
 
-Get blocked contacts.
+Get blocked contacts
 
 ### Example
 ```csharp
@@ -4331,7 +4351,7 @@ namespace Example
 
             try
             {
-                // Get blocked contacts.
+                // Get blocked contacts
                 GetBlockedContactsPaginatedResponse result = apiInstance.GetBlockedContacts(page, limit, query, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -4761,7 +4781,7 @@ Name | Type | Description  | Notes
 # **GetContact**
 > Contact GetContact (int? id)
 
-Get a single contact.
+Get the details of a specific contact
 
 ### Example
 ```csharp
@@ -4786,7 +4806,7 @@ namespace Example
 
             try
             {
-                // Get a single contact.
+                // Get the details of a specific contact
                 Contact result = apiInstance.GetContact(id);
                 Debug.WriteLine(result);
             }
@@ -4824,7 +4844,7 @@ Name | Type | Description  | Notes
 # **GetContactByPhone**
 > Contact GetContactByPhone (string phone)
 
-Get a single contact by phone number.
+Get the details of a specific contact by phone number
 
 ### Example
 ```csharp
@@ -4849,7 +4869,7 @@ namespace Example
 
             try
             {
-                // Get a single contact by phone number.
+                // Get the details of a specific contact by phone number
                 Contact result = apiInstance.GetContactByPhone(phone);
                 Debug.WriteLine(result);
             }
@@ -4908,7 +4928,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var phone = 9997339956475;  // string | Phone number to check
+            var phone = 447860021130;  // string | Phone number to check
 
             try
             {
@@ -5143,7 +5163,7 @@ Name | Type | Description  | Notes
 # **GetContacts**
 > GetContactsPaginatedResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null)
 
-Get all user contacts.
+Get all contacts
 
 ### Example
 ```csharp
@@ -5172,7 +5192,7 @@ namespace Example
 
             try
             {
-                // Get all user contacts.
+                // Get all contacts
                 GetContactsPaginatedResponse result = apiInstance.GetContacts(page, limit, shared, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -5214,7 +5234,9 @@ Name | Type | Description  | Notes
 # **GetContactsAutocomplete**
 > GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null)
 
-Get contacts autocomplete suggestions by given search term.
+Get contacts autocomplete suggestions
+
+Get contacts autocomplete suggestions by given search term
 
 ### Example
 ```csharp
@@ -5241,7 +5263,7 @@ namespace Example
 
             try
             {
-                // Get contacts autocomplete suggestions by given search term.
+                // Get contacts autocomplete suggestions
                 GetContactsAutocompleteResponse result = apiInstance.GetContactsAutocomplete(query, limit, lists);
                 Debug.WriteLine(result);
             }
@@ -5472,7 +5494,7 @@ This endpoint does not need any parameter.
 # **GetCustomField**
 > UserCustomField GetCustomField (int? id)
 
-Get a single custom field.
+Get the details of a specific custom field
 
 ### Example
 ```csharp
@@ -5497,7 +5519,7 @@ namespace Example
 
             try
             {
-                // Get a single custom field.
+                // Get the details of a specific custom field
                 UserCustomField result = apiInstance.GetCustomField(id);
                 Debug.WriteLine(result);
             }
@@ -5535,7 +5557,7 @@ Name | Type | Description  | Notes
 # **GetCustomFields**
 > GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null)
 
-Get all contact custom fields.
+Get all custom fields
 
 ### Example
 ```csharp
@@ -5561,7 +5583,7 @@ namespace Example
 
             try
             {
-                // Get all contact custom fields.
+                // Get all custom fields
                 GetCustomFieldsPaginatedResponse result = apiInstance.GetCustomFields(page, limit);
                 Debug.WriteLine(result);
             }
@@ -5724,7 +5746,7 @@ This endpoint does not need any parameter.
 # **GetFavourites**
 > GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null)
 
-Get favorite contacts and lists.
+Get favorite contacts and lists
 
 ### Example
 ```csharp
@@ -5751,7 +5773,7 @@ namespace Example
 
             try
             {
-                // Get favorite contacts and lists.
+                // Get favorite contacts and lists
                 GetFavouritesPaginatedResponse result = apiInstance.GetFavourites(page, limit, query);
                 Debug.WriteLine(result);
             }
@@ -6043,7 +6065,7 @@ Name | Type | Description  | Notes
 # **GetListContactsIds**
 > GetListContactsIdsResponse GetListContactsIds (int? id)
 
-Fetch all contacts IDs belonging to the list with ID
+Get all contacts IDs in a list
 
 ### Example
 ```csharp
@@ -6068,7 +6090,7 @@ namespace Example
 
             try
             {
-                // Fetch all contacts IDs belonging to the list with ID
+                // Get all contacts IDs in a list
                 GetListContactsIdsResponse result = apiInstance.GetListContactsIds(id);
                 Debug.WriteLine(result);
             }
@@ -6179,7 +6201,9 @@ Name | Type | Description  | Notes
 # **GetListsOfContact**
 > GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null)
 
-Return lists which contact belongs to.
+Get contact's lists
+
+Get all the lists in which the contact is included
 
 ### Example
 ```csharp
@@ -6206,7 +6230,7 @@ namespace Example
 
             try
             {
-                // Return lists which contact belongs to.
+                // Get contact's lists
                 GetListsOfContactPaginatedResponse result = apiInstance.GetListsOfContact(id, page, limit);
                 Debug.WriteLine(result);
             }
@@ -6276,7 +6300,7 @@ namespace Example
             var sendingTimezone = "America/Buenos_Aires";  // string | ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone (optional) 
             var contacts = "1,2,3,4";  // string | Comma separated array of contact resources id message will be sent to (optional) 
             var lists = "1,2,3,4";  // string | Comma separated array of list resources id message will be sent to (optional) 
-            var phones = "+19993322111,+19993322110";  // string | Comma separated array of E.164 phone numbers message will be sent to (optional) 
+            var phones = "447860021130,447860021131";  // string | Comma separated array of E.164 phone numbers message will be sent to (optional) 
             var cutExtra = 56;  // int? | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0 (optional)  (default to 0)
             var partsCount = 56;  // int? | Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6 (optional)  (default to 6)
             var referenceId = 1;  // int? | Custom message reference id which can be used in your application infrastructure (optional) 
@@ -6374,7 +6398,7 @@ namespace Example
             var sendingTimezone = "America/Buenos_Aires";  // string | ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone (optional) 
             var contacts = "1,2,3,4";  // string | Comma separated array of contact resources id message will be sent to (optional) 
             var lists = "1,2,3,4";  // string | Comma separated array of list resources id message will be sent to (optional) 
-            var phones = "+19993322111,+19993322110";  // string | Comma separated array of E.164 phone numbers message will be sent to (optional) 
+            var phones = "447860021130,447860021131";  // string | Comma separated array of E.164 phone numbers message will be sent to (optional) 
             var cutExtra = 56;  // int? | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is 0 (optional)  (default to 0)
             var partsCount = 56;  // int? | Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6 (optional)  (default to 6)
             var referenceId = 1;  // int? | Custom message reference id which can be used in your application infrastructure (optional) 
@@ -6443,6 +6467,8 @@ Name | Type | Description  | Notes
 > MessageSession GetMessageSession (int? id)
 
 Get a session details
+
+Get a specific session’s details
 
 ### Example
 ```csharp
@@ -7803,6 +7829,8 @@ Name | Type | Description  | Notes
 
 Get a template details
 
+Get a single template.
+
 ### Example
 ```csharp
 using System;
@@ -7988,7 +8016,7 @@ This endpoint does not need any parameter.
 # **GetUnsubscribedContact**
 > UnsubscribedContact GetUnsubscribedContact (int? id)
 
-Get a single unsubscribed contact.
+Get the details of a specific unsubscribed contact
 
 ### Example
 ```csharp
@@ -8013,7 +8041,7 @@ namespace Example
 
             try
             {
-                // Get a single unsubscribed contact.
+                // Get the details of a specific unsubscribed contact
                 UnsubscribedContact result = apiInstance.GetUnsubscribedContact(id);
                 Debug.WriteLine(result);
             }
@@ -8051,7 +8079,9 @@ Name | Type | Description  | Notes
 # **GetUnsubscribers**
 > GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null)
 
-Get all contact have unsubscribed from your communication.
+Get all unsubscribed contacts
+
+When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
 
 ### Example
 ```csharp
@@ -8077,7 +8107,7 @@ namespace Example
 
             try
             {
-                // Get all contact have unsubscribed from your communication.
+                // Get all unsubscribed contacts
                 GetUnsubscribersPaginatedResponse result = apiInstance.GetUnsubscribers(page, limit);
                 Debug.WriteLine(result);
             }
@@ -9142,7 +9172,7 @@ Name | Type | Description  | Notes
 # **SearchContacts**
 > SearchContactsPaginatedResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null)
 
-Find user contacts by given parameters.
+Find contacts by given criteria
 
 ### Example
 ```csharp
@@ -9177,7 +9207,7 @@ namespace Example
 
             try
             {
-                // Find user contacts by given parameters.
+                // Find contacts by given criteria
                 SearchContactsPaginatedResponse result = apiInstance.SearchContacts(page, limit, shared, ids, listId, includeBlocked, query, local, country, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -9302,7 +9332,7 @@ Name | Type | Description  | Notes
 # **SearchLists**
 > SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
 
-Find contact lists by given parameters
+Find lists by given criteria
 
 ### Example
 ```csharp
@@ -9334,7 +9364,7 @@ namespace Example
 
             try
             {
-                // Find contact lists by given parameters
+                // Find lists by given criteria
                 SearchListsPaginatedResponse result = apiInstance.SearchLists(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -9534,6 +9564,8 @@ Name | Type | Description  | Notes
 > SearchTemplatesPaginatedResponse SearchTemplates (int? page = null, int? limit = null, string ids = null, string name = null, string content = null)
 
 Find templates by criteria
+
+Find user templates by given parameters.
 
 ### Example
 ```csharp
@@ -10040,6 +10072,8 @@ void (empty response body)
 # **UnblockContactsBulk**
 > void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject)
 
+Unblock contacts (bulk)
+
 Unblock several contacts by blocked contact ids or unblock all contacts
 
 ### Example
@@ -10065,7 +10099,7 @@ namespace Example
 
             try
             {
-                // Unblock several contacts by blocked contact ids or unblock all contacts
+                // Unblock contacts (bulk)
                 apiInstance.UnblockContactsBulk(unblockContactsBulkInputObject);
             }
             catch (Exception e)
@@ -10166,7 +10200,9 @@ void (empty response body)
 # **UnsubscribeContact**
 > ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject)
 
-Unsubscribe contact from your communication by phone number.
+Manually unsubscribe a contact
+
+> Please note, if you unsubscribe a contact, this action cannot be reversed. 
 
 ### Example
 ```csharp
@@ -10191,7 +10227,7 @@ namespace Example
 
             try
             {
-                // Unsubscribe contact from your communication by phone number.
+                // Manually unsubscribe a contact
                 ResourceLinkResponse result = apiInstance.UnsubscribeContact(unsubscribeContactInputObject);
                 Debug.WriteLine(result);
             }
@@ -10415,7 +10451,7 @@ void (empty response body)
 # **UpdateContact**
 > ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id)
 
-Update existing contact.
+Edit a contact
 
 ### Example
 ```csharp
@@ -10441,7 +10477,7 @@ namespace Example
 
             try
             {
-                // Update existing contact.
+                // Edit a contact
                 ResourceLinkResponse result = apiInstance.UpdateContact(updateContactInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -10608,7 +10644,7 @@ Name | Type | Description  | Notes
 # **UpdateCustomField**
 > ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id)
 
-Update existing custom field.
+Edit a custom field
 
 ### Example
 ```csharp
@@ -10634,7 +10670,7 @@ namespace Example
 
             try
             {
-                // Update existing custom field.
+                // Edit a custom field
                 ResourceLinkResponse result = apiInstance.UpdateCustomField(updateCustomFieldInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -10673,7 +10709,7 @@ Name | Type | Description  | Notes
 # **UpdateCustomFieldValue**
 > ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
 
-Update contact's custom field value.
+Edit the custom field value of a specified contact
 
 ### Example
 ```csharp
@@ -10699,7 +10735,7 @@ namespace Example
 
             try
             {
-                // Update contact's custom field value.
+                // Edit the custom field value of a specified contact
                 ResourceLinkResponse result = apiInstance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -10800,7 +10836,7 @@ void (empty response body)
 # **UpdateList**
 > ResourceLinkResponse UpdateList (int? id, UpdateListObject updateListObject = null)
 
-Update existing list
+Edit a list
 
 ### Example
 ```csharp
@@ -10826,7 +10862,7 @@ namespace Example
 
             try
             {
-                // Update existing list
+                // Edit a list
                 ResourceLinkResponse result = apiInstance.UpdateList(id, updateListObject);
                 Debug.WriteLine(result);
             }
@@ -11246,7 +11282,7 @@ void (empty response body)
 # **UploadContactAvatar**
 > ResourceLinkResponse UploadContactAvatar (System.IO.Stream image, int? id)
 
-Add an avatar for the contact.
+Upload an avatar
 
 ### Example
 ```csharp
@@ -11272,7 +11308,7 @@ namespace Example
 
             try
             {
-                // Add an avatar for the contact.
+                // Upload an avatar
                 ResourceLinkResponse result = apiInstance.UploadContactAvatar(image, id);
                 Debug.WriteLine(result);
             }

@@ -28,10 +28,10 @@ namespace TextMagicClient.Api
         /// Assign contacts to a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ResourceLinkResponse</returns>
         ResourceLinkResponse AssignContactsToList (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
@@ -40,18 +40,18 @@ namespace TextMagicClient.Api
         /// Assign contacts to a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> AssignContactsToListWithHttpInfo (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number.
+        /// Block contact by phone number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Block contact from inbound and outbound communication by phone number.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -59,10 +59,10 @@ namespace TextMagicClient.Api
         ResourceLinkResponse BlockContact (BlockContactInputObject blockContactInputObject);
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number.
+        /// Block contact by phone number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Block contact from inbound and outbound communication by phone number.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -258,7 +258,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CloseSubaccountWithHttpInfo (int? id);
         /// <summary>
-        /// Create a new contact from the submitted data.
+        /// Add a new contact
         /// </summary>
         /// <remarks>
         /// 
@@ -269,7 +269,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse CreateContact (CreateContactInputObject createContactInputObject);
 
         /// <summary>
-        /// Create a new contact from the submitted data.
+        /// Add a new contact
         /// </summary>
         /// <remarks>
         /// 
@@ -302,7 +302,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> CreateContactNoteWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id);
         /// <summary>
-        /// Create a new custom field from the submitted data.
+        /// Add a new custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -313,7 +313,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse CreateCustomField (CreateCustomFieldInputObject createCustomFieldInputObject);
 
         /// <summary>
-        /// Create a new custom field from the submitted data.
+        /// Add a new custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -430,7 +430,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> CreateTemplateWithHttpInfo (CreateTemplateInputObject createTemplateInputObject);
         /// <summary>
-        /// Delete all contacts.
+        /// Delete contacts (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -440,7 +440,7 @@ namespace TextMagicClient.Api
         void DeleteAllContacts ();
 
         /// <summary>
-        /// Delete all contacts.
+        /// Delete contacts (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -531,10 +531,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteChatsBulkWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
         /// <summary>
-        /// Delete a single contact.
+        /// Delete a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -542,17 +542,17 @@ namespace TextMagicClient.Api
         void DeleteContact (int? id);
 
         /// <summary>
-        /// Delete a single contact.
+        /// Delete a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactWithHttpInfo (int? id);
         /// <summary>
-        /// Delete an avatar for the contact.
+        /// Delete an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -563,7 +563,7 @@ namespace TextMagicClient.Api
         void DeleteContactAvatar (int? id);
 
         /// <summary>
-        /// Delete an avatar for the contact.
+        /// Delete an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -617,7 +617,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactNotesBulkWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts.
+        /// Delete contacts by IDs (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -628,7 +628,7 @@ namespace TextMagicClient.Api
         void DeleteContactsByIds (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts.
+        /// Delete contacts by IDs (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -641,10 +641,10 @@ namespace TextMagicClient.Api
         /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns></returns>
         void DeleteContactsFromList (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
@@ -653,18 +653,18 @@ namespace TextMagicClient.Api
         /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactsFromListWithHttpInfo (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
         /// <summary>
-        /// Delete a single custom field.
+        /// Delete a custom field
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -672,10 +672,10 @@ namespace TextMagicClient.Api
         void DeleteCustomField (int? id);
 
         /// <summary>
-        /// Delete a single custom field.
+        /// Delete a custom field
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -745,10 +745,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
-        /// Delete a single list
+        /// Delete a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -756,10 +756,10 @@ namespace TextMagicClient.Api
         void DeleteList (int? id);
 
         /// <summary>
-        /// Delete a single list
+        /// Delete a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -787,7 +787,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListAvatarWithHttpInfo (int? id);
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list
+        /// Delete contacts from list (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -799,7 +799,7 @@ namespace TextMagicClient.Api
         void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list
+        /// Delete contacts from list (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -810,7 +810,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists
+        /// Delete lists (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -821,7 +821,7 @@ namespace TextMagicClient.Api
         void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists
+        /// Delete lists (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -834,7 +834,7 @@ namespace TextMagicClient.Api
         /// Delete a session
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -845,7 +845,7 @@ namespace TextMagicClient.Api
         /// Delete a session
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -855,7 +855,7 @@ namespace TextMagicClient.Api
         /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -866,7 +866,7 @@ namespace TextMagicClient.Api
         /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -1067,7 +1067,7 @@ namespace TextMagicClient.Api
         /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete template by given ID(s) or delete all templates.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -1078,7 +1078,7 @@ namespace TextMagicClient.Api
         /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete template by given ID(s) or delete all templates.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -1255,7 +1255,7 @@ namespace TextMagicClient.Api
         /// Get all sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -1267,7 +1267,7 @@ namespace TextMagicClient.Api
         /// Get all sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -1436,7 +1436,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetBalanceNotificationSettingsResponse</returns>
         ApiResponse<GetBalanceNotificationSettingsResponse> GetBalanceNotificationSettingsWithHttpInfo ();
         /// <summary>
-        /// Get blocked contacts.
+        /// Get blocked contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -1451,7 +1451,7 @@ namespace TextMagicClient.Api
         GetBlockedContactsPaginatedResponse GetBlockedContacts (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get blocked contacts.
+        /// Get blocked contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -1605,7 +1605,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetChatMessagesPaginatedResponse</returns>
         ApiResponse<GetChatMessagesPaginatedResponse> GetChatMessagesWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
         /// <summary>
-        /// Get a single contact.
+        /// Get the details of a specific contact
         /// </summary>
         /// <remarks>
         /// 
@@ -1616,7 +1616,7 @@ namespace TextMagicClient.Api
         Contact GetContact (int? id);
 
         /// <summary>
-        /// Get a single contact.
+        /// Get the details of a specific contact
         /// </summary>
         /// <remarks>
         /// 
@@ -1626,7 +1626,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Contact</returns>
         ApiResponse<Contact> GetContactWithHttpInfo (int? id);
         /// <summary>
-        /// Get a single contact by phone number.
+        /// Get the details of a specific contact by phone number
         /// </summary>
         /// <remarks>
         /// 
@@ -1637,7 +1637,7 @@ namespace TextMagicClient.Api
         Contact GetContactByPhone (string phone);
 
         /// <summary>
-        /// Get a single contact by phone number.
+        /// Get the details of a specific contact by phone number
         /// </summary>
         /// <remarks>
         /// 
@@ -1735,7 +1735,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetContactNotesPaginatedResponse</returns>
         ApiResponse<GetContactNotesPaginatedResponse> GetContactNotesWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all user contacts.
+        /// Get all contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -1750,7 +1750,7 @@ namespace TextMagicClient.Api
         GetContactsPaginatedResponse GetContacts (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all user contacts.
+        /// Get all contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -1764,10 +1764,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetContactsPaginatedResponse</returns>
         ApiResponse<GetContactsPaginatedResponse> GetContactsWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term.
+        /// Get contacts autocomplete suggestions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get contacts autocomplete suggestions by given search term
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -1777,10 +1777,10 @@ namespace TextMagicClient.Api
         GetContactsAutocompleteResponse GetContactsAutocomplete (string query, int? limit = null, int? lists = null);
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term.
+        /// Get contacts autocomplete suggestions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get contacts autocomplete suggestions by given search term
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -1856,7 +1856,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> GetCurrentUserWithHttpInfo ();
         /// <summary>
-        /// Get a single custom field.
+        /// Get the details of a specific custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -1867,7 +1867,7 @@ namespace TextMagicClient.Api
         UserCustomField GetCustomField (int? id);
 
         /// <summary>
-        /// Get a single custom field.
+        /// Get the details of a specific custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -1877,7 +1877,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of UserCustomField</returns>
         ApiResponse<UserCustomField> GetCustomFieldWithHttpInfo (int? id);
         /// <summary>
-        /// Get all contact custom fields.
+        /// Get all custom fields
         /// </summary>
         /// <remarks>
         /// 
@@ -1889,7 +1889,7 @@ namespace TextMagicClient.Api
         GetCustomFieldsPaginatedResponse GetCustomFields (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all contact custom fields.
+        /// Get all custom fields
         /// </summary>
         /// <remarks>
         /// 
@@ -1940,7 +1940,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetDisallowedRulesResponse</returns>
         ApiResponse<GetDisallowedRulesResponse> GetDisallowedRulesWithHttpInfo ();
         /// <summary>
-        /// Get favorite contacts and lists.
+        /// Get favorite contacts and lists
         /// </summary>
         /// <remarks>
         /// 
@@ -1953,7 +1953,7 @@ namespace TextMagicClient.Api
         GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
-        /// Get favorite contacts and lists.
+        /// Get favorite contacts and lists
         /// </summary>
         /// <remarks>
         /// 
@@ -2049,7 +2049,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of List</returns>
         ApiResponse<List> GetListWithHttpInfo (int? id);
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID
+        /// Get all contacts IDs in a list
         /// </summary>
         /// <remarks>
         /// 
@@ -2060,7 +2060,7 @@ namespace TextMagicClient.Api
         GetListContactsIdsResponse GetListContactsIds (int? id);
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID
+        /// Get all contacts IDs in a list
         /// </summary>
         /// <remarks>
         /// 
@@ -2101,10 +2101,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetListsPaginatedResponse</returns>
         ApiResponse<GetListsPaginatedResponse> GetListsWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
-        /// Return lists which contact belongs to.
+        /// Get contact&#39;s lists
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all the lists in which the contact is included
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2114,10 +2114,10 @@ namespace TextMagicClient.Api
         GetListsOfContactPaginatedResponse GetListsOfContact (int? id, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Return lists which contact belongs to.
+        /// Get contact&#39;s lists
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all the lists in which the contact is included
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2237,7 +2237,7 @@ namespace TextMagicClient.Api
         /// Get a session details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a specific session’s details
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -2248,7 +2248,7 @@ namespace TextMagicClient.Api
         /// Get a session details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a specific session’s details
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -2710,7 +2710,7 @@ namespace TextMagicClient.Api
         /// Get a template details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single template.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2721,7 +2721,7 @@ namespace TextMagicClient.Api
         /// Get a template details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single template.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -2768,7 +2768,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUnreadMessagesTotalResponse</returns>
         ApiResponse<GetUnreadMessagesTotalResponse> GetUnreadMessagesTotalWithHttpInfo ();
         /// <summary>
-        /// Get a single unsubscribed contact.
+        /// Get the details of a specific unsubscribed contact
         /// </summary>
         /// <remarks>
         /// 
@@ -2779,7 +2779,7 @@ namespace TextMagicClient.Api
         UnsubscribedContact GetUnsubscribedContact (int? id);
 
         /// <summary>
-        /// Get a single unsubscribed contact.
+        /// Get the details of a specific unsubscribed contact
         /// </summary>
         /// <remarks>
         /// 
@@ -2789,10 +2789,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of UnsubscribedContact</returns>
         ApiResponse<UnsubscribedContact> GetUnsubscribedContactWithHttpInfo (int? id);
         /// <summary>
-        /// Get all contact have unsubscribed from your communication.
+        /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -2801,10 +2801,10 @@ namespace TextMagicClient.Api
         GetUnsubscribersPaginatedResponse GetUnsubscribers (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication.
+        /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -3162,7 +3162,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchChatsByReceipentPaginatedResponse</returns>
         ApiResponse<SearchChatsByReceipentPaginatedResponse> SearchChatsByReceipentWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
         /// <summary>
-        /// Find user contacts by given parameters.
+        /// Find contacts by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -3183,7 +3183,7 @@ namespace TextMagicClient.Api
         SearchContactsPaginatedResponse SearchContacts (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find user contacts by given parameters.
+        /// Find contacts by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -3236,7 +3236,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchInboundMessagesPaginatedResponse</returns>
         ApiResponse<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
-        /// Find contact lists by given parameters
+        /// Find lists by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -3254,7 +3254,7 @@ namespace TextMagicClient.Api
         SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find contact lists by given parameters
+        /// Find lists by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -3342,7 +3342,7 @@ namespace TextMagicClient.Api
         /// Find templates by criteria
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find user templates by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -3357,7 +3357,7 @@ namespace TextMagicClient.Api
         /// Find templates by criteria
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find user templates by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -3511,10 +3511,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnblockContactWithHttpInfo (UnblockContactInputObject unblockContactInputObject);
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts
+        /// Unblock contacts (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -3522,10 +3522,10 @@ namespace TextMagicClient.Api
         void UnblockContactsBulk (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts
+        /// Unblock contacts (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -3553,10 +3553,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UnmuteChatsBulkWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number.
+        /// Manually unsubscribe a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -3564,10 +3564,10 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UnsubscribeContact (UnsubscribeContactInputObject unsubscribeContactInputObject);
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number.
+        /// Manually unsubscribe a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -3637,7 +3637,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateChatDesktopNotificationSettingsWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing contact.
+        /// Edit a contact
         /// </summary>
         /// <remarks>
         /// 
@@ -3649,7 +3649,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateContact (UpdateContactInputObject updateContactInputObject, int? id);
 
         /// <summary>
-        /// Update existing contact.
+        /// Edit a contact
         /// </summary>
         /// <remarks>
         /// 
@@ -3704,7 +3704,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of UpdateCurrentUserResponse</returns>
         ApiResponse<UpdateCurrentUserResponse> UpdateCurrentUserWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject);
         /// <summary>
-        /// Update existing custom field.
+        /// Edit a custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -3716,7 +3716,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateCustomField (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
 
         /// <summary>
-        /// Update existing custom field.
+        /// Edit a custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -3727,7 +3727,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> UpdateCustomFieldWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
         /// <summary>
-        /// Update contact&#39;s custom field value.
+        /// Edit the custom field value of a specified contact
         /// </summary>
         /// <remarks>
         /// 
@@ -3739,7 +3739,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
 
         /// <summary>
-        /// Update contact&#39;s custom field value.
+        /// Edit the custom field value of a specified contact
         /// </summary>
         /// <remarks>
         /// 
@@ -3771,7 +3771,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing list
+        /// Edit a list
         /// </summary>
         /// <remarks>
         /// 
@@ -3783,7 +3783,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateList (int? id, UpdateListObject updateListObject = null);
 
         /// <summary>
-        /// Update existing list
+        /// Edit a list
         /// </summary>
         /// <remarks>
         /// 
@@ -3926,7 +3926,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UploadAvatarWithHttpInfo (System.IO.Stream image);
         /// <summary>
-        /// Add an avatar for the contact.
+        /// Upload an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -3938,7 +3938,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UploadContactAvatar (System.IO.Stream image, int? id);
 
         /// <summary>
-        /// Add an avatar for the contact.
+        /// Upload an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -3998,10 +3998,10 @@ namespace TextMagicClient.Api
         /// Assign contacts to a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ResourceLinkResponse</returns>
         System.Threading.Tasks.Task<ResourceLinkResponse> AssignContactsToListAsync (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
@@ -4010,18 +4010,18 @@ namespace TextMagicClient.Api
         /// Assign contacts to a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> AssignContactsToListAsyncWithHttpInfo (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number.
+        /// Block contact by phone number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Block contact from inbound and outbound communication by phone number.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -4029,10 +4029,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> BlockContactAsync (BlockContactInputObject blockContactInputObject);
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number.
+        /// Block contact by phone number
         /// </summary>
         /// <remarks>
-        /// 
+        /// Block contact from inbound and outbound communication by phone number.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -4228,7 +4228,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CloseSubaccountAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Create a new contact from the submitted data.
+        /// Add a new contact
         /// </summary>
         /// <remarks>
         /// 
@@ -4239,7 +4239,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> CreateContactAsync (CreateContactInputObject createContactInputObject);
 
         /// <summary>
-        /// Create a new contact from the submitted data.
+        /// Add a new contact
         /// </summary>
         /// <remarks>
         /// 
@@ -4272,7 +4272,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateContactNoteAsyncWithHttpInfo (CreateContactNoteInputObject createContactNoteInputObject, int? id);
         /// <summary>
-        /// Create a new custom field from the submitted data.
+        /// Add a new custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -4283,7 +4283,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> CreateCustomFieldAsync (CreateCustomFieldInputObject createCustomFieldInputObject);
 
         /// <summary>
-        /// Create a new custom field from the submitted data.
+        /// Add a new custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -4400,7 +4400,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> CreateTemplateAsyncWithHttpInfo (CreateTemplateInputObject createTemplateInputObject);
         /// <summary>
-        /// Delete all contacts.
+        /// Delete contacts (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4410,7 +4410,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteAllContactsAsync ();
 
         /// <summary>
-        /// Delete all contacts.
+        /// Delete contacts (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4501,10 +4501,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsBulkAsyncWithHttpInfo (DeleteChatsBulkInputObject deleteChatsBulkInputObject);
         /// <summary>
-        /// Delete a single contact.
+        /// Delete a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4512,17 +4512,17 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteContactAsync (int? id);
 
         /// <summary>
-        /// Delete a single contact.
+        /// Delete a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete an avatar for the contact.
+        /// Delete an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -4533,7 +4533,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteContactAvatarAsync (int? id);
 
         /// <summary>
-        /// Delete an avatar for the contact.
+        /// Delete an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -4587,7 +4587,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactNotesBulkAsyncWithHttpInfo (int? id, DeleteContactNotesBulkInputObject deleteContactNotesBulkInputObject);
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts.
+        /// Delete contacts by IDs (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4598,7 +4598,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteContactsByIdsAsync (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts.
+        /// Delete contacts by IDs (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4611,10 +4611,10 @@ namespace TextMagicClient.Api
         /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteContactsFromListAsync (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
@@ -4623,18 +4623,18 @@ namespace TextMagicClient.Api
         /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsFromListAsyncWithHttpInfo (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
         /// <summary>
-        /// Delete a single custom field.
+        /// Delete a custom field
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4642,10 +4642,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteCustomFieldAsync (int? id);
 
         /// <summary>
-        /// Delete a single custom field.
+        /// Delete a custom field
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4715,10 +4715,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
-        /// Delete a single list
+        /// Delete a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4726,10 +4726,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListAsync (int? id);
 
         /// <summary>
-        /// Delete a single list
+        /// Delete a list
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4757,7 +4757,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListAvatarAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list
+        /// Delete contacts from list (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4769,7 +4769,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list
+        /// Delete contacts from list (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4780,7 +4780,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists
+        /// Delete lists (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4791,7 +4791,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists
+        /// Delete lists (bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -4804,7 +4804,7 @@ namespace TextMagicClient.Api
         /// Delete a session
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4815,7 +4815,7 @@ namespace TextMagicClient.Api
         /// Delete a session
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4825,7 +4825,7 @@ namespace TextMagicClient.Api
         /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -4836,7 +4836,7 @@ namespace TextMagicClient.Api
         /// Delete sessions (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -5037,7 +5037,7 @@ namespace TextMagicClient.Api
         /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete template by given ID(s) or delete all templates.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -5048,7 +5048,7 @@ namespace TextMagicClient.Api
         /// Delete templates (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete template by given ID(s) or delete all templates.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -5225,7 +5225,7 @@ namespace TextMagicClient.Api
         /// Get all sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -5237,7 +5237,7 @@ namespace TextMagicClient.Api
         /// Get all sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -5406,7 +5406,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetBalanceNotificationSettingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetBalanceNotificationSettingsResponse>> GetBalanceNotificationSettingsAsyncWithHttpInfo ();
         /// <summary>
-        /// Get blocked contacts.
+        /// Get blocked contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -5421,7 +5421,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetBlockedContactsPaginatedResponse> GetBlockedContactsAsync (int? page = null, int? limit = null, string query = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get blocked contacts.
+        /// Get blocked contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -5575,7 +5575,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetChatMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetChatMessagesPaginatedResponse>> GetChatMessagesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string query = null, int? start = null, int? end = null, string direction = null, int? voice = null);
         /// <summary>
-        /// Get a single contact.
+        /// Get the details of a specific contact
         /// </summary>
         /// <remarks>
         /// 
@@ -5586,7 +5586,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<Contact> GetContactAsync (int? id);
 
         /// <summary>
-        /// Get a single contact.
+        /// Get the details of a specific contact
         /// </summary>
         /// <remarks>
         /// 
@@ -5596,7 +5596,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (Contact)</returns>
         System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get a single contact by phone number.
+        /// Get the details of a specific contact by phone number
         /// </summary>
         /// <remarks>
         /// 
@@ -5607,7 +5607,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<Contact> GetContactByPhoneAsync (string phone);
 
         /// <summary>
-        /// Get a single contact by phone number.
+        /// Get the details of a specific contact by phone number
         /// </summary>
         /// <remarks>
         /// 
@@ -5705,7 +5705,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetContactNotesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactNotesPaginatedResponse>> GetContactNotesAsyncWithHttpInfo (int? id, int? page = null, int? limit = null);
         /// <summary>
-        /// Get all user contacts.
+        /// Get all contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -5720,7 +5720,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetContactsPaginatedResponse> GetContactsAsync (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Get all user contacts.
+        /// Get all contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -5734,10 +5734,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetContactsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactsPaginatedResponse>> GetContactsAsyncWithHttpInfo (int? page = null, int? limit = null, int? shared = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term.
+        /// Get contacts autocomplete suggestions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get contacts autocomplete suggestions by given search term
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -5747,10 +5747,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetContactsAutocompleteResponse> GetContactsAutocompleteAsync (string query, int? limit = null, int? lists = null);
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term.
+        /// Get contacts autocomplete suggestions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get contacts autocomplete suggestions by given search term
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -5826,7 +5826,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> GetCurrentUserAsyncWithHttpInfo ();
         /// <summary>
-        /// Get a single custom field.
+        /// Get the details of a specific custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -5837,7 +5837,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<UserCustomField> GetCustomFieldAsync (int? id);
 
         /// <summary>
-        /// Get a single custom field.
+        /// Get the details of a specific custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -5847,7 +5847,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (UserCustomField)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserCustomField>> GetCustomFieldAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get all contact custom fields.
+        /// Get all custom fields
         /// </summary>
         /// <remarks>
         /// 
@@ -5859,7 +5859,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetCustomFieldsPaginatedResponse> GetCustomFieldsAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all contact custom fields.
+        /// Get all custom fields
         /// </summary>
         /// <remarks>
         /// 
@@ -5910,7 +5910,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetDisallowedRulesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDisallowedRulesResponse>> GetDisallowedRulesAsyncWithHttpInfo ();
         /// <summary>
-        /// Get favorite contacts and lists.
+        /// Get favorite contacts and lists
         /// </summary>
         /// <remarks>
         /// 
@@ -5923,7 +5923,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null);
 
         /// <summary>
-        /// Get favorite contacts and lists.
+        /// Get favorite contacts and lists
         /// </summary>
         /// <remarks>
         /// 
@@ -6019,7 +6019,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (List)</returns>
         System.Threading.Tasks.Task<ApiResponse<List>> GetListAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID
+        /// Get all contacts IDs in a list
         /// </summary>
         /// <remarks>
         /// 
@@ -6030,7 +6030,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetListContactsIdsResponse> GetListContactsIdsAsync (int? id);
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID
+        /// Get all contacts IDs in a list
         /// </summary>
         /// <remarks>
         /// 
@@ -6071,10 +6071,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetListsPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetListsPaginatedResponse>> GetListsAsyncWithHttpInfo (int? page = null, int? limit = null, string orderBy = null, string direction = null, int? favoriteOnly = null, int? onlyMine = null);
         /// <summary>
-        /// Return lists which contact belongs to.
+        /// Get contact&#39;s lists
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all the lists in which the contact is included
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6084,10 +6084,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetListsOfContactPaginatedResponse> GetListsOfContactAsync (int? id, int? page = null, int? limit = null);
 
         /// <summary>
-        /// Return lists which contact belongs to.
+        /// Get contact&#39;s lists
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get all the lists in which the contact is included
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6207,7 +6207,7 @@ namespace TextMagicClient.Api
         /// Get a session details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a specific session’s details
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -6218,7 +6218,7 @@ namespace TextMagicClient.Api
         /// Get a session details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a specific session’s details
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -6680,7 +6680,7 @@ namespace TextMagicClient.Api
         /// Get a template details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single template.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6691,7 +6691,7 @@ namespace TextMagicClient.Api
         /// Get a template details
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a single template.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -6738,7 +6738,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetUnreadMessagesTotalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUnreadMessagesTotalResponse>> GetUnreadMessagesTotalAsyncWithHttpInfo ();
         /// <summary>
-        /// Get a single unsubscribed contact.
+        /// Get the details of a specific unsubscribed contact
         /// </summary>
         /// <remarks>
         /// 
@@ -6749,7 +6749,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<UnsubscribedContact> GetUnsubscribedContactAsync (int? id);
 
         /// <summary>
-        /// Get a single unsubscribed contact.
+        /// Get the details of a specific unsubscribed contact
         /// </summary>
         /// <remarks>
         /// 
@@ -6759,10 +6759,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (UnsubscribedContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<UnsubscribedContact>> GetUnsubscribedContactAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Get all contact have unsubscribed from your communication.
+        /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -6771,10 +6771,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetUnsubscribersPaginatedResponse> GetUnsubscribersAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication.
+        /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -7132,7 +7132,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchChatsByReceipentPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchChatsByReceipentPaginatedResponse>> SearchChatsByReceipentAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null, string orderBy = null);
         /// <summary>
-        /// Find user contacts by given parameters.
+        /// Find contacts by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -7153,7 +7153,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchContactsPaginatedResponse> SearchContactsAsync (int? page = null, int? limit = null, int? shared = null, string ids = null, int? listId = null, int? includeBlocked = null, string query = null, int? local = null, string country = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find user contacts by given parameters.
+        /// Find contacts by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -7206,7 +7206,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchInboundMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesPaginatedResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
-        /// Find contact lists by given parameters
+        /// Find lists by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -7224,7 +7224,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchListsPaginatedResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find contact lists by given parameters
+        /// Find lists by given criteria
         /// </summary>
         /// <remarks>
         /// 
@@ -7312,7 +7312,7 @@ namespace TextMagicClient.Api
         /// Find templates by criteria
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find user templates by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -7327,7 +7327,7 @@ namespace TextMagicClient.Api
         /// Find templates by criteria
         /// </summary>
         /// <remarks>
-        /// 
+        /// Find user templates by given parameters.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -7481,10 +7481,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnblockContactAsyncWithHttpInfo (UnblockContactInputObject unblockContactInputObject);
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts
+        /// Unblock contacts (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -7492,10 +7492,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task UnblockContactsBulkAsync (UnblockContactsBulkInputObject unblockContactsBulkInputObject);
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts
+        /// Unblock contacts (bulk)
         /// </summary>
         /// <remarks>
-        /// 
+        /// Unblock several contacts by blocked contact ids or unblock all contacts
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -7523,10 +7523,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UnmuteChatsBulkAsyncWithHttpInfo (UnmuteChatsBulkInputObject unmuteChatsBulkInputObject);
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number.
+        /// Manually unsubscribe a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -7534,10 +7534,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UnsubscribeContactAsync (UnsubscribeContactInputObject unsubscribeContactInputObject);
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number.
+        /// Manually unsubscribe a contact
         /// </summary>
         /// <remarks>
-        /// 
+        /// &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -7607,7 +7607,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateChatDesktopNotificationSettingsAsyncWithHttpInfo (UpdateChatDesktopNotificationSettingsInputObject updateChatDesktopNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing contact.
+        /// Edit a contact
         /// </summary>
         /// <remarks>
         /// 
@@ -7619,7 +7619,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateContactAsync (UpdateContactInputObject updateContactInputObject, int? id);
 
         /// <summary>
-        /// Update existing contact.
+        /// Edit a contact
         /// </summary>
         /// <remarks>
         /// 
@@ -7674,7 +7674,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (UpdateCurrentUserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UpdateCurrentUserResponse>> UpdateCurrentUserAsyncWithHttpInfo (UpdateCurrentUserInputObject updateCurrentUserInputObject);
         /// <summary>
-        /// Update existing custom field.
+        /// Edit a custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -7686,7 +7686,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldAsync (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
 
         /// <summary>
-        /// Update existing custom field.
+        /// Edit a custom field
         /// </summary>
         /// <remarks>
         /// 
@@ -7697,7 +7697,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldAsyncWithHttpInfo (UpdateCustomFieldInputObject updateCustomFieldInputObject, int? id);
         /// <summary>
-        /// Update contact&#39;s custom field value.
+        /// Edit the custom field value of a specified contact
         /// </summary>
         /// <remarks>
         /// 
@@ -7709,7 +7709,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
 
         /// <summary>
-        /// Update contact&#39;s custom field value.
+        /// Edit the custom field value of a specified contact
         /// </summary>
         /// <remarks>
         /// 
@@ -7741,7 +7741,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing list
+        /// Edit a list
         /// </summary>
         /// <remarks>
         /// 
@@ -7753,7 +7753,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateListAsync (int? id, UpdateListObject updateListObject = null);
 
         /// <summary>
-        /// Update existing list
+        /// Edit a list
         /// </summary>
         /// <remarks>
         /// 
@@ -7896,7 +7896,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UploadAvatarAsyncWithHttpInfo (System.IO.Stream image);
         /// <summary>
-        /// Add an avatar for the contact.
+        /// Upload an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -7908,7 +7908,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UploadContactAvatarAsync (System.IO.Stream image, int? id);
 
         /// <summary>
-        /// Add an avatar for the contact.
+        /// Upload an avatar
         /// </summary>
         /// <remarks>
         /// 
@@ -8063,10 +8063,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to a list 
+        /// Assign contacts to a list &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ResourceLinkResponse</returns>
         public ResourceLinkResponse AssignContactsToList (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
@@ -8076,10 +8076,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to a list 
+        /// Assign contacts to a list &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         public ApiResponse< ResourceLinkResponse > AssignContactsToListWithHttpInfo (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
@@ -8149,10 +8149,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to a list 
+        /// Assign contacts to a list &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ResourceLinkResponse</returns>
         public async System.Threading.Tasks.Task<ResourceLinkResponse> AssignContactsToListAsync (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
@@ -8163,10 +8163,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to a list 
+        /// Assign contacts to a list &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
+        /// <param name="assignContactsToListInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> AssignContactsToListAsyncWithHttpInfo (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
@@ -8236,7 +8236,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number. 
+        /// Block contact by phone number Block contact from inbound and outbound communication by phone number.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -8248,7 +8248,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number. 
+        /// Block contact by phone number Block contact from inbound and outbound communication by phone number.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -8316,7 +8316,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number. 
+        /// Block contact by phone number Block contact from inbound and outbound communication by phone number.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -8329,7 +8329,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Block contact from inbound and outbound communication by phone number. 
+        /// Block contact by phone number Block contact from inbound and outbound communication by phone number.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="blockContactInputObject"></param>
@@ -9770,7 +9770,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new contact from the submitted data. 
+        /// Add a new contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
@@ -9782,7 +9782,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new contact from the submitted data. 
+        /// Add a new contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
@@ -9850,7 +9850,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new contact from the submitted data. 
+        /// Add a new contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
@@ -9863,7 +9863,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new contact from the submitted data. 
+        /// Add a new contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createContactInputObject"></param>
@@ -10104,7 +10104,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new custom field from the submitted data. 
+        /// Add a new custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
@@ -10116,7 +10116,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new custom field from the submitted data. 
+        /// Add a new custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
@@ -10184,7 +10184,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new custom field from the submitted data. 
+        /// Add a new custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
@@ -10197,7 +10197,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Create a new custom field from the submitted data. 
+        /// Add a new custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createCustomFieldInputObject"></param>
@@ -11080,7 +11080,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all contacts. 
+        /// Delete contacts (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -11090,7 +11090,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all contacts. 
+        /// Delete contacts (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -11145,7 +11145,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all contacts. 
+        /// Delete contacts (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -11156,7 +11156,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete all contacts. 
+        /// Delete contacts (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -11799,7 +11799,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single contact. 
+        /// Delete a contact &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11810,7 +11810,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single contact. 
+        /// Delete a contact &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11870,7 +11870,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single contact. 
+        /// Delete a contact &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11882,7 +11882,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single contact. 
+        /// Delete a contact &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11942,7 +11942,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the contact. 
+        /// Delete an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11953,7 +11953,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the contact. 
+        /// Delete an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12014,7 +12014,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the contact. 
+        /// Delete an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12026,7 +12026,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the contact. 
+        /// Delete an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12399,7 +12399,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts. 
+        /// Delete contacts by IDs (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
@@ -12410,7 +12410,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts. 
+        /// Delete contacts by IDs (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
@@ -12477,7 +12477,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts. 
+        /// Delete contacts by IDs (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
@@ -12489,7 +12489,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact by given ID(s) or delete all contacts. 
+        /// Delete contacts by IDs (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContactsByIdsInputObject"></param>
@@ -12556,10 +12556,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from a list 
+        /// Unassign contacts from a list &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns></returns>
         public void DeleteContactsFromList (DeleteContacsFromListObject deleteContacsFromListObject, int? id)
@@ -12568,10 +12568,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from a list 
+        /// Unassign contacts from a list &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteContactsFromListWithHttpInfo (DeleteContacsFromListObject deleteContacsFromListObject, int? id)
@@ -12640,10 +12640,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from a list 
+        /// Unassign contacts from a list &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteContactsFromListAsync (DeleteContacsFromListObject deleteContacsFromListObject, int? id)
@@ -12653,10 +12653,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from a list 
+        /// Unassign contacts from a list &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
+        /// <param name="deleteContacsFromListObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsFromListAsyncWithHttpInfo (DeleteContacsFromListObject deleteContacsFromListObject, int? id)
@@ -12725,7 +12725,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single custom field. 
+        /// Delete a custom field &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12736,7 +12736,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single custom field. 
+        /// Delete a custom field &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12796,7 +12796,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single custom field. 
+        /// Delete a custom field &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -12808,7 +12808,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single custom field. 
+        /// Delete a custom field &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13311,7 +13311,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list 
+        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13322,7 +13322,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list 
+        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13382,7 +13382,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list 
+        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13394,7 +13394,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list 
+        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13599,7 +13599,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list 
+        /// Delete contacts from list (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13611,7 +13611,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list 
+        /// Delete contacts from list (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13683,7 +13683,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list 
+        /// Delete contacts from list (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13696,7 +13696,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list 
+        /// Delete contacts from list (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13768,7 +13768,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists 
+        /// Delete lists (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13779,7 +13779,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists 
+        /// Delete lists (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13846,7 +13846,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists 
+        /// Delete lists (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13858,7 +13858,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists 
+        /// Delete lists (bulk) 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13925,7 +13925,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a session 
+        /// Delete a session Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13936,7 +13936,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a session 
+        /// Delete a session Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13996,7 +13996,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a session 
+        /// Delete a session Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14008,7 +14008,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a session 
+        /// Delete a session Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -14068,7 +14068,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete sessions (bulk) 
+        /// Delete sessions (bulk) Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -14079,7 +14079,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete sessions (bulk) 
+        /// Delete sessions (bulk) Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -14146,7 +14146,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete sessions (bulk) 
+        /// Delete sessions (bulk) Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -14158,7 +14158,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete sessions (bulk) 
+        /// Delete sessions (bulk) Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMessageSessionsBulkInputObject"></param>
@@ -15552,7 +15552,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete templates (bulk) 
+        /// Delete templates (bulk) Delete template by given ID(s) or delete all templates.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15563,7 +15563,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete templates (bulk) 
+        /// Delete templates (bulk) Delete template by given ID(s) or delete all templates.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15630,7 +15630,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete templates (bulk) 
+        /// Delete templates (bulk) Delete template by given ID(s) or delete all templates.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -15642,7 +15642,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete templates (bulk) 
+        /// Delete templates (bulk) Delete template by given ID(s) or delete all templates.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteTemplatesBulkInputObject"></param>
@@ -16782,7 +16782,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sessions 
+        /// Get all sessions Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -16795,7 +16795,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sessions 
+        /// Get all sessions Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -16855,7 +16855,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sessions 
+        /// Get all sessions Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -16869,7 +16869,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all sessions 
+        /// Get all sessions Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -17964,7 +17964,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get blocked contacts. 
+        /// Get blocked contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -17980,7 +17980,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get blocked contacts. 
+        /// Get blocked contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -18046,7 +18046,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get blocked contacts. 
+        /// Get blocked contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -18063,7 +18063,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get blocked contacts. 
+        /// Get blocked contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -19041,7 +19041,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact. 
+        /// Get the details of a specific contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The contact id</param>
@@ -19053,7 +19053,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact. 
+        /// Get the details of a specific contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The contact id</param>
@@ -19114,7 +19114,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact. 
+        /// Get the details of a specific contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The contact id</param>
@@ -19127,7 +19127,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact. 
+        /// Get the details of a specific contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The contact id</param>
@@ -19188,7 +19188,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact by phone number. 
+        /// Get the details of a specific contact by phone number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -19200,7 +19200,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact by phone number. 
+        /// Get the details of a specific contact by phone number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -19261,7 +19261,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact by phone number. 
+        /// Get the details of a specific contact by phone number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -19274,7 +19274,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single contact by phone number. 
+        /// Get the details of a specific contact by phone number 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phone"></param>
@@ -19935,7 +19935,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user contacts. 
+        /// Get all contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -19951,7 +19951,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user contacts. 
+        /// Get all contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20017,7 +20017,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user contacts. 
+        /// Get all contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20034,7 +20034,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all user contacts. 
+        /// Get all contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20100,7 +20100,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term. 
+        /// Get contacts autocomplete suggestions Get contacts autocomplete suggestions by given search term
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -20114,7 +20114,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term. 
+        /// Get contacts autocomplete suggestions Get contacts autocomplete suggestions by given search term
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -20179,7 +20179,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term. 
+        /// Get contacts autocomplete suggestions Get contacts autocomplete suggestions by given search term
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -20194,7 +20194,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get contacts autocomplete suggestions by given search term. 
+        /// Get contacts autocomplete suggestions Get contacts autocomplete suggestions by given search term
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="query">Find recipients by specified search query</param>
@@ -20700,7 +20700,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single custom field. 
+        /// Get the details of a specific custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -20712,7 +20712,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single custom field. 
+        /// Get the details of a specific custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -20773,7 +20773,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single custom field. 
+        /// Get the details of a specific custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -20786,7 +20786,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single custom field. 
+        /// Get the details of a specific custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -20847,7 +20847,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact custom fields. 
+        /// Get all custom fields 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20860,7 +20860,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact custom fields. 
+        /// Get all custom fields 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20920,7 +20920,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact custom fields. 
+        /// Get all custom fields 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -20934,7 +20934,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact custom fields. 
+        /// Get all custom fields 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -21276,7 +21276,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get favorite contacts and lists. 
+        /// Get favorite contacts and lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -21290,7 +21290,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get favorite contacts and lists. 
+        /// Get favorite contacts and lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -21352,7 +21352,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get favorite contacts and lists. 
+        /// Get favorite contacts and lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -21367,7 +21367,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get favorite contacts and lists. 
+        /// Get favorite contacts and lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -22005,7 +22005,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID 
+        /// Get all contacts IDs in a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22017,7 +22017,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID 
+        /// Get all contacts IDs in a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22078,7 +22078,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID 
+        /// Get all contacts IDs in a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22091,7 +22091,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID 
+        /// Get all contacts IDs in a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22323,7 +22323,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return lists which contact belongs to. 
+        /// Get contact&#39;s lists Get all the lists in which the contact is included
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22337,7 +22337,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return lists which contact belongs to. 
+        /// Get contact&#39;s lists Get all the lists in which the contact is included
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22402,7 +22402,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return lists which contact belongs to. 
+        /// Get contact&#39;s lists Get all the lists in which the contact is included
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22417,7 +22417,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return lists which contact belongs to. 
+        /// Get contact&#39;s lists Get all the lists in which the contact is included
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22962,7 +22962,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a session details 
+        /// Get a session details Get a specific session’s details
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -22974,7 +22974,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a session details 
+        /// Get a session details Get a specific session’s details
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -23035,7 +23035,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a session details 
+        /// Get a session details Get a specific session’s details
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -23048,7 +23048,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a session details 
+        /// Get a session details Get a specific session’s details
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">a session ID</param>
@@ -26099,7 +26099,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a template details 
+        /// Get a template details Get a single template.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26111,7 +26111,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a template details 
+        /// Get a template details Get a single template.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26172,7 +26172,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a template details 
+        /// Get a template details Get a single template.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26185,7 +26185,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a template details 
+        /// Get a template details Get a single template.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26522,7 +26522,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single unsubscribed contact. 
+        /// Get the details of a specific unsubscribed contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26534,7 +26534,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single unsubscribed contact. 
+        /// Get the details of a specific unsubscribed contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26595,7 +26595,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single unsubscribed contact. 
+        /// Get the details of a specific unsubscribed contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26608,7 +26608,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get a single unsubscribed contact. 
+        /// Get the details of a specific unsubscribed contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -26669,7 +26669,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication. 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26682,7 +26682,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication. 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26742,7 +26742,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication. 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26756,7 +26756,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all contact have unsubscribed from your communication. 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29276,7 +29276,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user contacts by given parameters. 
+        /// Find contacts by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29298,7 +29298,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user contacts by given parameters. 
+        /// Find contacts by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29376,7 +29376,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user contacts by given parameters. 
+        /// Find contacts by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29399,7 +29399,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find user contacts by given parameters. 
+        /// Find contacts by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29654,7 +29654,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters 
+        /// Find lists by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29673,7 +29673,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters 
+        /// Find lists by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29745,7 +29745,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters 
+        /// Find lists by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29765,7 +29765,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters 
+        /// Find lists by given criteria 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -30197,7 +30197,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find templates by criteria 
+        /// Find templates by criteria Find user templates by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -30213,7 +30213,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find templates by criteria 
+        /// Find templates by criteria Find user templates by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -30279,7 +30279,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find templates by criteria 
+        /// Find templates by criteria Find user templates by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -30296,7 +30296,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find templates by criteria 
+        /// Find templates by criteria Find user templates by given parameters.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -31415,7 +31415,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts 
+        /// Unblock contacts (bulk) Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -31426,7 +31426,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts 
+        /// Unblock contacts (bulk) Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -31493,7 +31493,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts 
+        /// Unblock contacts (bulk) Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -31505,7 +31505,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unblock several contacts by blocked contact ids or unblock all contacts 
+        /// Unblock contacts (bulk) Unblock several contacts by blocked contact ids or unblock all contacts
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unblockContactsBulkInputObject"></param>
@@ -31729,7 +31729,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number. 
+        /// Manually unsubscribe a contact &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -31741,7 +31741,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number. 
+        /// Manually unsubscribe a contact &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -31809,7 +31809,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number. 
+        /// Manually unsubscribe a contact &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -31822,7 +31822,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unsubscribe contact from your communication by phone number. 
+        /// Manually unsubscribe a contact &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unsubscribeContactInputObject"></param>
@@ -32365,7 +32365,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing contact. 
+        /// Edit a contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
@@ -32378,7 +32378,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing contact. 
+        /// Edit a contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
@@ -32451,7 +32451,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing contact. 
+        /// Edit a contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
@@ -32465,7 +32465,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing contact. 
+        /// Edit a contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateContactInputObject"></param>
@@ -32872,7 +32872,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing custom field. 
+        /// Edit a custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
@@ -32885,7 +32885,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing custom field. 
+        /// Edit a custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
@@ -32958,7 +32958,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing custom field. 
+        /// Edit a custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
@@ -32972,7 +32972,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing custom field. 
+        /// Edit a custom field 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldInputObject"></param>
@@ -33045,7 +33045,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update contact&#39;s custom field value. 
+        /// Edit the custom field value of a specified contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
@@ -33058,7 +33058,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update contact&#39;s custom field value. 
+        /// Edit the custom field value of a specified contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
@@ -33131,7 +33131,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update contact&#39;s custom field value. 
+        /// Edit the custom field value of a specified contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
@@ -33145,7 +33145,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update contact&#39;s custom field value. 
+        /// Edit the custom field value of a specified contact 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateCustomFieldValueInputObject"></param>
@@ -33375,7 +33375,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list 
+        /// Edit a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33388,7 +33388,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list 
+        /// Edit a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33458,7 +33458,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list 
+        /// Edit a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33472,7 +33472,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list 
+        /// Edit a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -34520,7 +34520,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the contact. 
+        /// Upload an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">Contact avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34533,7 +34533,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the contact. 
+        /// Upload an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">Contact avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34599,7 +34599,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the contact. 
+        /// Upload an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">Contact avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34613,7 +34613,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the contact. 
+        /// Upload an avatar 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">Contact avatar. Should be PNG or JPG file not more than 10 MB</param>

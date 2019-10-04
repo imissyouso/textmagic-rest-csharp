@@ -39,9 +39,9 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="CreateListInputObject" /> class.
         /// </summary>
         /// <param name="name">List name. (required).</param>
-        /// <param name="shared">Should new list be shared among all the sub-accounts? The default is 0 (false). (default to false).</param>
+        /// <param name="shared">Should new list be **shared** among all the sub-accounts? (default to false).</param>
         /// <param name="favorited">Is list favorited. Default is false. (default to false).</param>
-        /// <param name="isDefault">Is list default for new contacts (web only). Default is false. (default to false).</param>
+        /// <param name="isDefault">Is list default for new contacts (web only). (default to false).</param>
         public CreateListInputObject(string name = default(string), bool? shared = false, bool? favorited = false, bool? isDefault = false)
         {
             // to ensure "name" is required (not null)
@@ -90,9 +90,9 @@ namespace TextMagicClient.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Should new list be shared among all the sub-accounts? The default is 0 (false).
+        /// Should new list be **shared** among all the sub-accounts?
         /// </summary>
-        /// <value>Should new list be shared among all the sub-accounts? The default is 0 (false).</value>
+        /// <value>Should new list be **shared** among all the sub-accounts?</value>
         [DataMember(Name="shared", EmitDefaultValue=false)]
         public bool? Shared { get; set; }
 
@@ -104,9 +104,9 @@ namespace TextMagicClient.Model
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Is list default for new contacts (web only). Default is false.
+        /// Is list default for new contacts (web only).
         /// </summary>
-        /// <value>Is list default for new contacts (web only). Default is false.</value>
+        /// <value>Is list default for new contacts (web only).</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
 

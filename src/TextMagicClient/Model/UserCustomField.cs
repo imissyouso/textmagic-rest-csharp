@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCustomField" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
+        /// <param name="id">Custom field ID. (required).</param>
+        /// <param name="name">Custom field name. (required).</param>
+        /// <param name="createdAt">Custom field creation time. (required).</param>
         public UserCustomField(int? id = default(int?), string name = default(string), DateTime? createdAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
@@ -73,20 +73,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Custom field ID.
         /// </summary>
+        /// <value>Custom field ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Custom field name.
         /// </summary>
+        /// <value>Custom field name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAt
+        /// Custom field creation time.
         /// </summary>
+        /// <value>Custom field creation time.</value>
         [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 

@@ -38,11 +38,11 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnsubscribedContact" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="phone">phone (required).</param>
-        /// <param name="unsubscribeTime">unsubscribeTime (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="lastName">lastName (required).</param>
+        /// <param name="id">Unsubscribed contact ID. (required).</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
+        /// <param name="unsubscribeTime">Time when contact has been opted-out. (required).</param>
+        /// <param name="firstName">Unsubscribed contact first name. (required).</param>
+        /// <param name="lastName">Unsubscribed contact last name. (required).</param>
         public UnsubscribedContact(int? id = default(int?), string phone = default(string), DateTime? unsubscribeTime = default(DateTime?), string firstName = default(string), string lastName = default(string))
         {
             // to ensure "id" is required (not null)
@@ -93,32 +93,37 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Unsubscribed contact ID.
         /// </summary>
+        /// <value>Unsubscribed contact ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
         /// </summary>
+        /// <value>Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets UnsubscribeTime
+        /// Time when contact has been opted-out.
         /// </summary>
+        /// <value>Time when contact has been opted-out.</value>
         [DataMember(Name="unsubscribeTime", EmitDefaultValue=false)]
         public DateTime? UnsubscribeTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Unsubscribed contact first name.
         /// </summary>
+        /// <value>Unsubscribed contact first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Unsubscribed contact last name.
         /// </summary>
+        /// <value>Unsubscribed contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
