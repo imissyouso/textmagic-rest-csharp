@@ -25,7 +25,7 @@ namespace TextMagicClient.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Assign contacts to the specified list.
+        /// Assign contacts to a list
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse AssignContactsToList (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
 
         /// <summary>
-        /// Assign contacts to the specified list.
+        /// Assign contacts to a list
         /// </summary>
         /// <remarks>
         /// 
@@ -174,7 +174,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CheckPhoneVerificationCodeTFAWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
-        /// Reset list members to the specified contacts.
+        /// Reset list members to the specified contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -186,7 +186,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse ClearAndAssignContactsToList (ClearAndAssignContactsToListInputObject clearAndAssignContactsToListInputObject, int? id);
 
         /// <summary>
-        /// Reset list members to the specified contacts.
+        /// Reset list members to the specified contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -638,7 +638,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteContactsByIdsWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
         /// <summary>
-        /// Unassign contacts from the specified list.
+        /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
         /// 
@@ -650,7 +650,7 @@ namespace TextMagicClient.Api
         void DeleteContactsFromList (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
 
         /// <summary>
-        /// Unassign contacts from the specified list.
+        /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
         /// 
@@ -745,7 +745,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteInboundMessagesBulkWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
-        /// Delete a single list.
+        /// Delete a single list
         /// </summary>
         /// <remarks>
         /// 
@@ -756,7 +756,7 @@ namespace TextMagicClient.Api
         void DeleteList (int? id);
 
         /// <summary>
-        /// Delete a single list.
+        /// Delete a single list
         /// </summary>
         /// <remarks>
         /// 
@@ -766,7 +766,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListWithHttpInfo (int? id);
         /// <summary>
-        /// Delete an avatar for the list.
+        /// Delete an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -777,7 +777,7 @@ namespace TextMagicClient.Api
         void DeleteListAvatar (int? id);
 
         /// <summary>
-        /// Delete an avatar for the list.
+        /// Delete an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -787,7 +787,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListAvatarWithHttpInfo (int? id);
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list.
+        /// Delete contact from list by given ID(s) or all contacts from list
         /// </summary>
         /// <remarks>
         /// 
@@ -799,7 +799,7 @@ namespace TextMagicClient.Api
         void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list.
+        /// Delete contact from list by given ID(s) or all contacts from list
         /// </summary>
         /// <remarks>
         /// 
@@ -810,7 +810,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteListContactsBulkWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists.
+        /// Delete list by given ID(s) or delete all lists
         /// </summary>
         /// <remarks>
         /// 
@@ -821,7 +821,7 @@ namespace TextMagicClient.Api
         void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists.
+        /// Delete list by given ID(s) or delete all lists
         /// </summary>
         /// <remarks>
         /// 
@@ -1789,7 +1789,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetContactsAutocompleteResponse</returns>
         ApiResponse<GetContactsAutocompleteResponse> GetContactsAutocompleteWithHttpInfo (string query, int? limit = null, int? lists = null);
         /// <summary>
-        /// Fetch user contacts by given group id.
+        /// Get all contacts in a list
         /// </summary>
         /// <remarks>
         /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
@@ -1804,7 +1804,7 @@ namespace TextMagicClient.Api
         GetContactsByListIdPaginatedResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Fetch user contacts by given group id.
+        /// Get all contacts in a list
         /// </summary>
         /// <remarks>
         /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
@@ -2049,7 +2049,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of List</returns>
         ApiResponse<List> GetListWithHttpInfo (int? id);
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID.
+        /// Fetch all contacts IDs belonging to the list with ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2060,7 +2060,7 @@ namespace TextMagicClient.Api
         GetListContactsIdsResponse GetListContactsIds (int? id);
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID.
+        /// Fetch all contacts IDs belonging to the list with ID
         /// </summary>
         /// <remarks>
         /// 
@@ -2488,7 +2488,7 @@ namespace TextMagicClient.Api
         /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -2499,7 +2499,7 @@ namespace TextMagicClient.Api
         /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -3236,7 +3236,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of SearchInboundMessagesPaginatedResponse</returns>
         ApiResponse<SearchInboundMessagesPaginatedResponse> SearchInboundMessagesWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
-        /// Find contact lists by given parameters.
+        /// Find contact lists by given parameters
         /// </summary>
         /// <remarks>
         /// 
@@ -3254,7 +3254,7 @@ namespace TextMagicClient.Api
         SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find contact lists by given parameters.
+        /// Find contact lists by given parameters
         /// </summary>
         /// <remarks>
         /// 
@@ -3771,7 +3771,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateInboundMessagesNotificationSettingsWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing list.
+        /// Update existing list
         /// </summary>
         /// <remarks>
         /// 
@@ -3783,7 +3783,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UpdateList (int? id, UpdateListObject updateListObject = null);
 
         /// <summary>
-        /// Update existing list.
+        /// Update existing list
         /// </summary>
         /// <remarks>
         /// 
@@ -3949,7 +3949,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
         ApiResponse<ResourceLinkResponse> UploadContactAvatarWithHttpInfo (System.IO.Stream image, int? id);
         /// <summary>
-        /// Add an avatar for the list.
+        /// Add an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -3961,7 +3961,7 @@ namespace TextMagicClient.Api
         ResourceLinkResponse UploadListAvatar (System.IO.Stream image, int? id);
 
         /// <summary>
-        /// Add an avatar for the list.
+        /// Add an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -3995,7 +3995,7 @@ namespace TextMagicClient.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Assign contacts to the specified list.
+        /// Assign contacts to a list
         /// </summary>
         /// <remarks>
         /// 
@@ -4007,7 +4007,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> AssignContactsToListAsync (AssignContactsToListInputObject assignContactsToListInputObject, int? id);
 
         /// <summary>
-        /// Assign contacts to the specified list.
+        /// Assign contacts to a list
         /// </summary>
         /// <remarks>
         /// 
@@ -4144,7 +4144,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CheckPhoneVerificationCodeTFAAsyncWithHttpInfo (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject);
         /// <summary>
-        /// Reset list members to the specified contacts.
+        /// Reset list members to the specified contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -4156,7 +4156,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> ClearAndAssignContactsToListAsync (ClearAndAssignContactsToListInputObject clearAndAssignContactsToListInputObject, int? id);
 
         /// <summary>
-        /// Reset list members to the specified contacts.
+        /// Reset list members to the specified contacts
         /// </summary>
         /// <remarks>
         /// 
@@ -4608,7 +4608,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsByIdsAsyncWithHttpInfo (DeleteContactsByIdsInputObject deleteContactsByIdsInputObject);
         /// <summary>
-        /// Unassign contacts from the specified list.
+        /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
         /// 
@@ -4620,7 +4620,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteContactsFromListAsync (DeleteContacsFromListObject deleteContacsFromListObject, int? id);
 
         /// <summary>
-        /// Unassign contacts from the specified list.
+        /// Unassign contacts from a list
         /// </summary>
         /// <remarks>
         /// 
@@ -4715,7 +4715,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInboundMessagesBulkAsyncWithHttpInfo (DeleteInboundMessagesBulkInputObject deleteInboundMessagesBulkInputObject);
         /// <summary>
-        /// Delete a single list.
+        /// Delete a single list
         /// </summary>
         /// <remarks>
         /// 
@@ -4726,7 +4726,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListAsync (int? id);
 
         /// <summary>
-        /// Delete a single list.
+        /// Delete a single list
         /// </summary>
         /// <remarks>
         /// 
@@ -4736,7 +4736,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete an avatar for the list.
+        /// Delete an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -4747,7 +4747,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListAvatarAsync (int? id);
 
         /// <summary>
-        /// Delete an avatar for the list.
+        /// Delete an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -4757,7 +4757,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListAvatarAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list.
+        /// Delete contact from list by given ID(s) or all contacts from list
         /// </summary>
         /// <remarks>
         /// 
@@ -4769,7 +4769,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListContactsBulkAsync (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list.
+        /// Delete contact from list by given ID(s) or all contacts from list
         /// </summary>
         /// <remarks>
         /// 
@@ -4780,7 +4780,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteListContactsBulkAsyncWithHttpInfo (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id);
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists.
+        /// Delete list by given ID(s) or delete all lists
         /// </summary>
         /// <remarks>
         /// 
@@ -4791,7 +4791,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task DeleteListsBulkAsync (DeleteListsBulkInputObject deleteListsBulkInputObject);
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists.
+        /// Delete list by given ID(s) or delete all lists
         /// </summary>
         /// <remarks>
         /// 
@@ -5759,7 +5759,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetContactsAutocompleteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactsAutocompleteResponse>> GetContactsAutocompleteAsyncWithHttpInfo (string query, int? limit = null, int? lists = null);
         /// <summary>
-        /// Fetch user contacts by given group id.
+        /// Get all contacts in a list
         /// </summary>
         /// <remarks>
         /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
@@ -5774,7 +5774,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetContactsByListIdPaginatedResponse> GetContactsByListIdAsync (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Fetch user contacts by given group id.
+        /// Get all contacts in a list
         /// </summary>
         /// <remarks>
         /// A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
@@ -6019,7 +6019,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (List)</returns>
         System.Threading.Tasks.Task<ApiResponse<List>> GetListAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID.
+        /// Fetch all contacts IDs belonging to the list with ID
         /// </summary>
         /// <remarks>
         /// 
@@ -6030,7 +6030,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetListContactsIdsResponse> GetListContactsIdsAsync (int? id);
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID.
+        /// Fetch all contacts IDs belonging to the list with ID
         /// </summary>
         /// <remarks>
         /// 
@@ -6458,7 +6458,7 @@ namespace TextMagicClient.Api
         /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -6469,7 +6469,7 @@ namespace TextMagicClient.Api
         /// Get current sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -7206,7 +7206,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (SearchInboundMessagesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchInboundMessagesPaginatedResponse>> SearchInboundMessagesAsyncWithHttpInfo (int? page = null, int? limit = null, string ids = null, string query = null, string orderBy = null, string direction = null, int? expand = null);
         /// <summary>
-        /// Find contact lists by given parameters.
+        /// Find contact lists by given parameters
         /// </summary>
         /// <remarks>
         /// 
@@ -7224,7 +7224,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<SearchListsPaginatedResponse> SearchListsAsync (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null);
 
         /// <summary>
-        /// Find contact lists by given parameters.
+        /// Find contact lists by given parameters
         /// </summary>
         /// <remarks>
         /// 
@@ -7741,7 +7741,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateInboundMessagesNotificationSettingsAsyncWithHttpInfo (UpdateInboundMessagesNotificationSettingsInputObject updateInboundMessagesNotificationSettingsInputObject);
         /// <summary>
-        /// Update existing list.
+        /// Update existing list
         /// </summary>
         /// <remarks>
         /// 
@@ -7753,7 +7753,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UpdateListAsync (int? id, UpdateListObject updateListObject = null);
 
         /// <summary>
-        /// Update existing list.
+        /// Update existing list
         /// </summary>
         /// <remarks>
         /// 
@@ -7919,7 +7919,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UploadContactAvatarAsyncWithHttpInfo (System.IO.Stream image, int? id);
         /// <summary>
-        /// Add an avatar for the list.
+        /// Add an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -7931,7 +7931,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<ResourceLinkResponse> UploadListAvatarAsync (System.IO.Stream image, int? id);
 
         /// <summary>
-        /// Add an avatar for the list.
+        /// Add an avatar for the list
         /// </summary>
         /// <remarks>
         /// 
@@ -8063,7 +8063,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to the specified list. 
+        /// Assign contacts to a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -8076,7 +8076,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to the specified list. 
+        /// Assign contacts to a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -8149,7 +8149,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to the specified list. 
+        /// Assign contacts to a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -8163,7 +8163,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Assign contacts to the specified list. 
+        /// Assign contacts to a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -9166,7 +9166,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reset list members to the specified contacts. 
+        /// Reset list members to the specified contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clearAndAssignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -9179,7 +9179,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reset list members to the specified contacts. 
+        /// Reset list members to the specified contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clearAndAssignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -9252,7 +9252,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reset list members to the specified contacts. 
+        /// Reset list members to the specified contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clearAndAssignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -9266,7 +9266,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Reset list members to the specified contacts. 
+        /// Reset list members to the specified contacts 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clearAndAssignContactsToListInputObject">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</param>
@@ -12556,7 +12556,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from the specified list. 
+        /// Unassign contacts from a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
@@ -12568,7 +12568,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from the specified list. 
+        /// Unassign contacts from a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
@@ -12640,7 +12640,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from the specified list. 
+        /// Unassign contacts from a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
@@ -12653,7 +12653,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Unassign contacts from the specified list. 
+        /// Unassign contacts from a list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteContacsFromListObject">Contact ID(s), separated by comma</param>
@@ -13311,7 +13311,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list. 
+        /// Delete a single list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13322,7 +13322,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list. 
+        /// Delete a single list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13382,7 +13382,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list. 
+        /// Delete a single list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13394,7 +13394,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a single list. 
+        /// Delete a single list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13454,7 +13454,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the list. 
+        /// Delete an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13465,7 +13465,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the list. 
+        /// Delete an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13526,7 +13526,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the list. 
+        /// Delete an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13538,7 +13538,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete an avatar for the list. 
+        /// Delete an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -13599,7 +13599,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list. 
+        /// Delete contact from list by given ID(s) or all contacts from list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13611,7 +13611,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list. 
+        /// Delete contact from list by given ID(s) or all contacts from list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13683,7 +13683,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list. 
+        /// Delete contact from list by given ID(s) or all contacts from list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13696,7 +13696,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete contact from list by given ID(s) or all contacts from list. 
+        /// Delete contact from list by given ID(s) or all contacts from list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListContactsBulkInputObject"></param>
@@ -13768,7 +13768,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists. 
+        /// Delete list by given ID(s) or delete all lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13779,7 +13779,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists. 
+        /// Delete list by given ID(s) or delete all lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13846,7 +13846,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists. 
+        /// Delete list by given ID(s) or delete all lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -13858,7 +13858,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete list by given ID(s) or delete all lists. 
+        /// Delete list by given ID(s) or delete all lists 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteListsBulkInputObject"></param>
@@ -20259,7 +20259,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Get all contacts in a list A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -20275,7 +20275,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Get all contacts in a list A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -20344,7 +20344,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Get all contacts in a list A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -20361,7 +20361,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch user contacts by given group id. A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+        /// Get all contacts in a list A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Given group Id.</param>
@@ -22005,7 +22005,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID. 
+        /// Fetch all contacts IDs belonging to the list with ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22017,7 +22017,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID. 
+        /// Fetch all contacts IDs belonging to the list with ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22078,7 +22078,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID. 
+        /// Fetch all contacts IDs belonging to the list with ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -22091,7 +22091,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Fetch all contacts IDs belonging to the list with ID. 
+        /// Fetch all contacts IDs belonging to the list with ID 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -24609,7 +24609,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current sender settings @TODO
+        /// Get current sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24621,7 +24621,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current sender settings @TODO
+        /// Get current sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24679,7 +24679,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current sender settings @TODO
+        /// Get current sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -24692,7 +24692,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current sender settings @TODO
+        /// Get current sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Return sender settings enabled for sending to specified country. Two upper case characters (optional)</param>
@@ -29654,7 +29654,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters. 
+        /// Find contact lists by given parameters 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29673,7 +29673,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters. 
+        /// Find contact lists by given parameters 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29745,7 +29745,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters. 
+        /// Find contact lists by given parameters 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -29765,7 +29765,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Find contact lists by given parameters. 
+        /// Find contact lists by given parameters 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -33375,7 +33375,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list. 
+        /// Update existing list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33388,7 +33388,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list. 
+        /// Update existing list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33458,7 +33458,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list. 
+        /// Update existing list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -33472,7 +33472,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Update existing list. 
+        /// Update existing list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -34679,7 +34679,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the list. 
+        /// Add an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">List avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34692,7 +34692,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the list. 
+        /// Add an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">List avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34758,7 +34758,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the list. 
+        /// Add an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">List avatar. Should be PNG or JPG file not more than 10 MB</param>
@@ -34772,7 +34772,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Add an avatar for the list. 
+        /// Add an avatar for the list 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image">List avatar. Should be PNG or JPG file not more than 10 MB</param>

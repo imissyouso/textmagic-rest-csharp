@@ -4,14 +4,14 @@ All URIs are relative to *http://rest.textmagic.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AssignContactsToList**](TextMagicApi.md#assigncontactstolist) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to the specified list.
+[**AssignContactsToList**](TextMagicApi.md#assigncontactstolist) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
 [**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
 [**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number
 [**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#checkphoneverificationcode) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
 [**CheckPhoneVerificationCodeTFA**](TextMagicApi.md#checkphoneverificationcodetfa) | **PUT** /api/v2/verify | Step 2: Check the verification code 
-[**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
+[**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
 [**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close sub-account
@@ -33,15 +33,15 @@ Method | HTTP request | Description
 [**DeleteContactNote**](TextMagicApi.md#deletecontactnote) | **DELETE** /api/v2/notes/{id} | Delete a single contact note.
 [**DeleteContactNotesBulk**](TextMagicApi.md#deletecontactnotesbulk) | **POST** /api/v2/contacts/{id}/notes/delete | Delete contact note by given ID(s) or delete all contact notes.
 [**DeleteContactsByIds**](TextMagicApi.md#deletecontactsbyids) | **POST** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
-[**DeleteContactsFromList**](TextMagicApi.md#deletecontactsfromlist) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
+[**DeleteContactsFromList**](TextMagicApi.md#deletecontactsfromlist) | **DELETE** /api/v2/lists/{id}/contacts | Unassign contacts from a list
 [**DeleteCustomField**](TextMagicApi.md#deletecustomfield) | **DELETE** /api/v2/customfields/{id} | Delete a single custom field.
 [**DeleteDedicatedNumber**](TextMagicApi.md#deletededicatednumber) | **DELETE** /api/v2/numbers/{id} | Cancel dedicated number subscription
 [**DeleteInboundMessage**](TextMagicApi.md#deleteinboundmessage) | **DELETE** /api/v2/replies/{id} | Delete a single inbound message
 [**DeleteInboundMessagesBulk**](TextMagicApi.md#deleteinboundmessagesbulk) | **POST** /api/v2/replies/delete | Delete inbound messages (bulk)
-[**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a single list.
-[**DeleteListAvatar**](TextMagicApi.md#deletelistavatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
-[**DeleteListContactsBulk**](TextMagicApi.md#deletelistcontactsbulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
-[**DeleteListsBulk**](TextMagicApi.md#deletelistsbulk) | **POST** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
+[**DeleteList**](TextMagicApi.md#deletelist) | **DELETE** /api/v2/lists/{id} | Delete a single list
+[**DeleteListAvatar**](TextMagicApi.md#deletelistavatar) | **DELETE** /api/v2/lists/{id}/avatar | Delete an avatar for the list
+[**DeleteListContactsBulk**](TextMagicApi.md#deletelistcontactsbulk) | **POST** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list
+[**DeleteListsBulk**](TextMagicApi.md#deletelistsbulk) | **POST** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists
 [**DeleteMessageSession**](TextMagicApi.md#deletemessagesession) | **DELETE** /api/v2/sessions/{id} | Delete a session
 [**DeleteMessageSessionsBulk**](TextMagicApi.md#deletemessagesessionsbulk) | **POST** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#deleteoutboundmessage) | **DELETE** /api/v2/messages/{id} | Delete message
@@ -84,7 +84,7 @@ Method | HTTP request | Description
 [**GetContactNotes**](TextMagicApi.md#getcontactnotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all user contacts.
 [**GetContactsAutocomplete**](TextMagicApi.md#getcontactsautocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
-[**GetContactsByListId**](TextMagicApi.md#getcontactsbylistid) | **GET** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
+[**GetContactsByListId**](TextMagicApi.md#getcontactsbylistid) | **GET** /api/v2/lists/{id}/contacts | Get all contacts in a list
 [**GetCountries**](TextMagicApi.md#getcountries) | **GET** /api/v2/countries | Return list of countries.
 [**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current account information
 [**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get a single custom field.
@@ -96,7 +96,7 @@ Method | HTTP request | Description
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#getinboundmessagesnotificationsettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#getinvoices) | **GET** /api/v2/invoices | Get all invoices
 [**GetList**](TextMagicApi.md#getlist) | **GET** /api/v2/lists/{id} | Get the details of a specific list
-[**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+[**GetListContactsIds**](TextMagicApi.md#getlistcontactsids) | **GET** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID
 [**GetLists**](TextMagicApi.md#getlists) | **GET** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
@@ -145,7 +145,7 @@ Method | HTTP request | Description
 [**SearchChatsByReceipent**](TextMagicApi.md#searchchatsbyreceipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient
 [**SearchContacts**](TextMagicApi.md#searchcontacts) | **GET** /api/v2/contacts/search | Find user contacts by given parameters.
 [**SearchInboundMessages**](TextMagicApi.md#searchinboundmessages) | **GET** /api/v2/replies/search | Find inbound messages
-[**SearchLists**](TextMagicApi.md#searchlists) | **GET** /api/v2/lists/search | Find contact lists by given parameters.
+[**SearchLists**](TextMagicApi.md#searchlists) | **GET** /api/v2/lists/search | Find contact lists by given parameters
 [**SearchOutboundMessages**](TextMagicApi.md#searchoutboundmessages) | **GET** /api/v2/messages/search | Find messages
 [**SearchScheduledMessages**](TextMagicApi.md#searchscheduledmessages) | **GET** /api/v2/schedules/search | Find scheduled messages
 [**SearchTemplates**](TextMagicApi.md#searchtemplates) | **GET** /api/v2/templates/search | Find templates by criteria
@@ -168,7 +168,7 @@ Method | HTTP request | Description
 [**UpdateCustomField**](TextMagicApi.md#updatecustomfield) | **PUT** /api/v2/customfields/{id} | Update existing custom field.
 [**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
-[**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Update existing list.
+[**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Update existing list
 [**UpdatePassword**](TextMagicApi.md#updatepassword) | **PUT** /api/v2/user/password/change | Change user password.
 [**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
 [**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
@@ -176,7 +176,7 @@ Method | HTTP request | Description
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
-[**UploadListAvatar**](TextMagicApi.md#uploadlistavatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list.
+[**UploadListAvatar**](TextMagicApi.md#uploadlistavatar) | **POST** /api/v2/lists/{id}/avatar | Add an avatar for the list
 [**UploadMessageAttachment**](TextMagicApi.md#uploadmessageattachment) | **POST** /api/v2/messages/attachment | Upload message attachment
 
 
@@ -184,7 +184,7 @@ Method | HTTP request | Description
 # **AssignContactsToList**
 > ResourceLinkResponse AssignContactsToList (AssignContactsToListInputObject assignContactsToListInputObject, int? id)
 
-Assign contacts to the specified list.
+Assign contacts to a list
 
 ### Example
 ```csharp
@@ -210,7 +210,7 @@ namespace Example
 
             try
             {
-                // Assign contacts to the specified list.
+                // Assign contacts to a list
                 ResourceLinkResponse result = apiInstance.AssignContactsToList(assignContactsToListInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -629,7 +629,7 @@ void (empty response body)
 # **ClearAndAssignContactsToList**
 > ResourceLinkResponse ClearAndAssignContactsToList (ClearAndAssignContactsToListInputObject clearAndAssignContactsToListInputObject, int? id)
 
-Reset list members to the specified contacts.
+Reset list members to the specified contacts
 
 ### Example
 ```csharp
@@ -655,7 +655,7 @@ namespace Example
 
             try
             {
-                // Reset list members to the specified contacts.
+                // Reset list members to the specified contacts
                 ResourceLinkResponse result = apiInstance.ClearAndAssignContactsToList(clearAndAssignContactsToListInputObject, id);
                 Debug.WriteLine(result);
             }
@@ -2007,7 +2007,7 @@ void (empty response body)
 # **DeleteContactsFromList**
 > void DeleteContactsFromList (DeleteContacsFromListObject deleteContacsFromListObject, int? id)
 
-Unassign contacts from the specified list.
+Unassign contacts from a list
 
 ### Example
 ```csharp
@@ -2033,7 +2033,7 @@ namespace Example
 
             try
             {
-                // Unassign contacts from the specified list.
+                // Unassign contacts from a list
                 apiInstance.DeleteContactsFromList(deleteContacsFromListObject, id);
             }
             catch (Exception e)
@@ -2323,7 +2323,7 @@ void (empty response body)
 # **DeleteList**
 > void DeleteList (int? id)
 
-Delete a single list.
+Delete a single list
 
 ### Example
 ```csharp
@@ -2348,7 +2348,7 @@ namespace Example
 
             try
             {
-                // Delete a single list.
+                // Delete a single list
                 apiInstance.DeleteList(id);
             }
             catch (Exception e)
@@ -2385,7 +2385,7 @@ void (empty response body)
 # **DeleteListAvatar**
 > void DeleteListAvatar (int? id)
 
-Delete an avatar for the list.
+Delete an avatar for the list
 
 ### Example
 ```csharp
@@ -2410,7 +2410,7 @@ namespace Example
 
             try
             {
-                // Delete an avatar for the list.
+                // Delete an avatar for the list
                 apiInstance.DeleteListAvatar(id);
             }
             catch (Exception e)
@@ -2447,7 +2447,7 @@ void (empty response body)
 # **DeleteListContactsBulk**
 > void DeleteListContactsBulk (DeleteListContactsBulkInputObject deleteListContactsBulkInputObject, int? id)
 
-Delete contact from list by given ID(s) or all contacts from list.
+Delete contact from list by given ID(s) or all contacts from list
 
 ### Example
 ```csharp
@@ -2473,7 +2473,7 @@ namespace Example
 
             try
             {
-                // Delete contact from list by given ID(s) or all contacts from list.
+                // Delete contact from list by given ID(s) or all contacts from list
                 apiInstance.DeleteListContactsBulk(deleteListContactsBulkInputObject, id);
             }
             catch (Exception e)
@@ -2511,7 +2511,7 @@ void (empty response body)
 # **DeleteListsBulk**
 > void DeleteListsBulk (DeleteListsBulkInputObject deleteListsBulkInputObject)
 
-Delete list by given ID(s) or delete all lists.
+Delete list by given ID(s) or delete all lists
 
 ### Example
 ```csharp
@@ -2536,7 +2536,7 @@ namespace Example
 
             try
             {
-                // Delete list by given ID(s) or delete all lists.
+                // Delete list by given ID(s) or delete all lists
                 apiInstance.DeleteListsBulk(deleteListsBulkInputObject);
             }
             catch (Exception e)
@@ -5281,7 +5281,7 @@ Name | Type | Description  | Notes
 # **GetContactsByListId**
 > GetContactsByListIdPaginatedResponse GetContactsByListId (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null)
 
-Fetch user contacts by given group id.
+Get all contacts in a list
 
 A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
 
@@ -5312,7 +5312,7 @@ namespace Example
 
             try
             {
-                // Fetch user contacts by given group id.
+                // Get all contacts in a list
                 GetContactsByListIdPaginatedResponse result = apiInstance.GetContactsByListId(id, page, limit, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -6043,7 +6043,7 @@ Name | Type | Description  | Notes
 # **GetListContactsIds**
 > GetListContactsIdsResponse GetListContactsIds (int? id)
 
-Fetch all contacts IDs belonging to the list with ID.
+Fetch all contacts IDs belonging to the list with ID
 
 ### Example
 ```csharp
@@ -6068,7 +6068,7 @@ namespace Example
 
             try
             {
-                // Fetch all contacts IDs belonging to the list with ID.
+                // Fetch all contacts IDs belonging to the list with ID
                 GetListContactsIdsResponse result = apiInstance.GetListContactsIds(id);
                 Debug.WriteLine(result);
             }
@@ -7160,8 +7160,6 @@ Name | Type | Description  | Notes
 > GetSenderSettingsResponse GetSenderSettings (string country = null)
 
 Get current sender settings
-
-@TODO
 
 ### Example
 ```csharp
@@ -9304,7 +9302,7 @@ Name | Type | Description  | Notes
 # **SearchLists**
 > SearchListsPaginatedResponse SearchLists (int? page = null, int? limit = null, string ids = null, string query = null, int? onlyMine = null, int? onlyDefault = null, string orderBy = null, string direction = null)
 
-Find contact lists by given parameters.
+Find contact lists by given parameters
 
 ### Example
 ```csharp
@@ -9336,7 +9334,7 @@ namespace Example
 
             try
             {
-                // Find contact lists by given parameters.
+                // Find contact lists by given parameters
                 SearchListsPaginatedResponse result = apiInstance.SearchLists(page, limit, ids, query, onlyMine, onlyDefault, orderBy, direction);
                 Debug.WriteLine(result);
             }
@@ -10802,7 +10800,7 @@ void (empty response body)
 # **UpdateList**
 > ResourceLinkResponse UpdateList (int? id, UpdateListObject updateListObject = null)
 
-Update existing list.
+Update existing list
 
 ### Example
 ```csharp
@@ -10828,7 +10826,7 @@ namespace Example
 
             try
             {
-                // Update existing list.
+                // Update existing list
                 ResourceLinkResponse result = apiInstance.UpdateList(id, updateListObject);
                 Debug.WriteLine(result);
             }
@@ -11315,7 +11313,7 @@ Name | Type | Description  | Notes
 # **UploadListAvatar**
 > ResourceLinkResponse UploadListAvatar (System.IO.Stream image, int? id)
 
-Add an avatar for the list.
+Add an avatar for the list
 
 ### Example
 ```csharp
@@ -11341,7 +11339,7 @@ namespace Example
 
             try
             {
-                // Add an avatar for the list.
+                // Add an avatar for the list
                 ResourceLinkResponse result = apiInstance.UploadListAvatar(image, id);
                 Debug.WriteLine(result);
             }
