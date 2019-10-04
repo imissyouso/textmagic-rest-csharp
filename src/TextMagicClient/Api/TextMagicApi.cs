@@ -3818,7 +3818,7 @@ namespace TextMagicClient.Api
         /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -3829,7 +3829,7 @@ namespace TextMagicClient.Api
         /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -7788,7 +7788,7 @@ namespace TextMagicClient.Api
         /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -7799,7 +7799,7 @@ namespace TextMagicClient.Api
         /// Change sender settings
         /// </summary>
         /// <remarks>
-        /// @TODO
+        /// 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33699,7 +33699,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings @TODO
+        /// Change sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33710,7 +33710,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings @TODO
+        /// Change sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33777,7 +33777,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings @TODO
+        /// Change sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
@@ -33789,7 +33789,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Change sender settings @TODO
+        /// Change sender settings 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updateSenderSettingInputObject"></param>
