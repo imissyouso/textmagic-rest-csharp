@@ -2179,7 +2179,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetMessagePreviewResponse</returns>
         ApiResponse<GetMessagePreviewResponse> GetMessagePreviewWithHttpInfo (string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
         /// <summary>
-        /// Check price
+        /// Check message price
         /// </summary>
         /// <remarks>
         /// Check pricing for a new outbound message.
@@ -2207,7 +2207,7 @@ namespace TextMagicClient.Api
         GetMessagePriceResponse GetMessagePrice (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
 
         /// <summary>
-        /// Check price
+        /// Check message price
         /// </summary>
         /// <remarks>
         /// Check pricing for a new outbound message.
@@ -6149,7 +6149,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetMessagePreviewResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMessagePreviewResponse>> GetMessagePreviewAsyncWithHttpInfo (string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
         /// <summary>
-        /// Check price
+        /// Check message price
         /// </summary>
         /// <remarks>
         /// Check pricing for a new outbound message.
@@ -6177,7 +6177,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetMessagePriceResponse> GetMessagePriceAsync (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null);
 
         /// <summary>
-        /// Check price
+        /// Check message price
         /// </summary>
         /// <remarks>
         /// Check pricing for a new outbound message.
@@ -22719,7 +22719,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check message price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22748,7 +22748,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check message price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22840,7 +22840,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check message price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>
@@ -22870,7 +22870,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check price Check pricing for a new outbound message.
+        /// Check message price Check pricing for a new outbound message.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeBlocked">Should we show pricing for the blocked contacts. (optional, default to 0)</param>

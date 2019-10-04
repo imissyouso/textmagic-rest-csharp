@@ -100,7 +100,7 @@ Method | HTTP request | Description
 [**GetLists**](TextMagicApi.md#getlists) | **GET** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
-[**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check price
+[**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check message price
 [**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#getmessagesessionstat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#getmessagesbysessionid) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
@@ -6367,7 +6367,7 @@ Name | Type | Description  | Notes
 # **GetMessagePrice**
 > GetMessagePriceResponse GetMessagePrice (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
 
-Check price
+Check message price
 
 Check pricing for a new outbound message.
 
@@ -6411,7 +6411,7 @@ namespace Example
 
             try
             {
-                // Check price
+                // Check message price
                 GetMessagePriceResponse result = apiInstance.GetMessagePrice(includeBlocked, text, templateId, sendingTime, sendingDateTime, sendingTimezone, contacts, lists, phones, cutExtra, partsCount, referenceId, from, rule, createChat, tts, local, localCountry);
                 Debug.WriteLine(result);
             }
