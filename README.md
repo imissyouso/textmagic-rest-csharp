@@ -1,3 +1,4 @@
+[comment]: <> (HEAD)
 # TextMagic C# / .Net SDK
 
 This library provides you with an easy way to send SMS and receive replies, by integrating the TextMagic SMS Gateway into your C# / .Net application.
@@ -6,6 +7,8 @@ This library provides you with an easy way to send SMS and receive replies, by i
 TextMagic’s application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
 
 For detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
+
+[comment]: <> (/HEAD)
 
 ## Frameworks supported
 - .NET 4.0 or later
@@ -26,7 +29,7 @@ Install-Package JsonSubTypes
 NOTE: RestSharp versions later than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## Installation
-Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.473/).
+Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.475/).
 
 ## C# usage example
 ```csharp
@@ -160,6 +163,8 @@ Module Program
 End Module
 
 ```
-
+[comment]: <> (FOOTER)
 ## License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+[comment]: <> (/FOOTER)
