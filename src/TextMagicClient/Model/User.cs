@@ -99,6 +99,7 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
         /// <param name="id">User ID. (required).</param>
+        /// <param name="displayTimeFormat">Format for representation of time.</param>
         /// <param name="username">Username. (required).</param>
         /// <param name="firstName">Account first name. (required).</param>
         /// <param name="lastName">Account last name. (required).</param>
@@ -114,7 +115,7 @@ namespace TextMagicClient.Model
         /// <param name="emailAccepted">emailAccepted (required).</param>
         /// <param name="phoneAccepted">phoneAccepted (required).</param>
         /// <param name="avatar">avatar (required).</param>
-        public User(int? id = default(int?), string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), StatusEnum status = default(StatusEnum), decimal? balance = default(decimal?), string phone = default(string), string company = default(string), Currency currency = default(Currency), Country country = default(Country), Timezone timezone = default(Timezone), SubaccountTypeEnum subaccountType = default(SubaccountTypeEnum), bool? emailAccepted = default(bool?), bool? phoneAccepted = default(bool?), UserImage avatar = default(UserImage))
+        public User(int? id = default(int?), string displayTimeFormat = default(string), string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), StatusEnum status = default(StatusEnum), decimal? balance = default(decimal?), string phone = default(string), string company = default(string), Currency currency = default(Currency), Country country = default(Country), Timezone timezone = default(Timezone), SubaccountTypeEnum subaccountType = default(SubaccountTypeEnum), bool? emailAccepted = default(bool?), bool? phoneAccepted = default(bool?), UserImage avatar = default(UserImage))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -260,6 +261,7 @@ namespace TextMagicClient.Model
             {
                 this.Avatar = avatar;
             }
+            this.DisplayTimeFormat = displayTimeFormat;
         }
         
         /// <summary>
@@ -268,6 +270,13 @@ namespace TextMagicClient.Model
         /// <value>User ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Format for representation of time
+        /// </summary>
+        /// <value>Format for representation of time</value>
+        [DataMember(Name="displayTimeFormat", EmitDefaultValue=false)]
+        public string DisplayTimeFormat { get; set; }
 
         /// <summary>
         /// Username.
@@ -364,6 +373,7 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class User {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DisplayTimeFormat: ").Append(DisplayTimeFormat).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
@@ -417,6 +427,11 @@ namespace TextMagicClient.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.DisplayTimeFormat == input.DisplayTimeFormat ||
+                    (this.DisplayTimeFormat != null &&
+                    this.DisplayTimeFormat.Equals(input.DisplayTimeFormat))
                 ) && 
                 (
                     this.Username == input.Username ||
@@ -506,6 +521,8 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.DisplayTimeFormat != null)
+                    hashCode = hashCode * 59 + this.DisplayTimeFormat.GetHashCode();
                 if (this.Username != null)
                     hashCode = hashCode * 59 + this.Username.GetHashCode();
                 if (this.FirstName != null)

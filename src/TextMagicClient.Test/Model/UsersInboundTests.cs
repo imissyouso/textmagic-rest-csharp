@@ -75,6 +75,14 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'DisplayTimeFormat'
+        /// </summary>
+        [Test]
+        public void DisplayTimeFormatTest()
+        {
+            // TODO unit test for the property 'DisplayTimeFormat'
+        }
+        /// <summary>
         /// Test the property 'Phone'
         /// </summary>
         [Test]

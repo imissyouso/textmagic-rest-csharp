@@ -48,7 +48,19 @@ namespace TextMagicClient.Model
             /// Enum Out for value: out
             /// </summary>
             [EnumMember(Value = "out")]
-            Out = 2
+            Out = 2,
+            
+            /// <summary>
+            /// Enum O for value: o
+            /// </summary>
+            [EnumMember(Value = "o")]
+            O = 3,
+            
+            /// <summary>
+            /// Enum I for value: i
+            /// </summary>
+            [EnumMember(Value = "i")]
+            I = 4
         }
 
         /// <summary>

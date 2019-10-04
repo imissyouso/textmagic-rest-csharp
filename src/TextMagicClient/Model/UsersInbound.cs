@@ -66,13 +66,14 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="UsersInbound" /> class.
         /// </summary>
         /// <param name="id">Dedicated number ID. (required).</param>
+        /// <param name="displayTimeFormat">Format for representation of time.</param>
         /// <param name="phone">Dedicated phone number..</param>
         /// <param name="user">user (required).</param>
         /// <param name="purchasedAt">Time when the dedicated number was purchased. (required).</param>
         /// <param name="expireAt">Dedicated number subscription expiration time. (required).</param>
         /// <param name="status">Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active.  (required).</param>
         /// <param name="country">country (required).</param>
-        public UsersInbound(int? id = default(int?), string phone = default(string), User user = default(User), DateTime? purchasedAt = default(DateTime?), DateTime? expireAt = default(DateTime?), StatusEnum status = default(StatusEnum), Country country = default(Country))
+        public UsersInbound(int? id = default(int?), string displayTimeFormat = default(string), string phone = default(string), User user = default(User), DateTime? purchasedAt = default(DateTime?), DateTime? expireAt = default(DateTime?), StatusEnum status = default(StatusEnum), Country country = default(Country))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -128,6 +129,7 @@ namespace TextMagicClient.Model
             {
                 this.Country = country;
             }
+            this.DisplayTimeFormat = displayTimeFormat;
             this.Phone = phone;
         }
         
@@ -137,6 +139,13 @@ namespace TextMagicClient.Model
         /// <value>Dedicated number ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Format for representation of time
+        /// </summary>
+        /// <value>Format for representation of time</value>
+        [DataMember(Name="displayTimeFormat", EmitDefaultValue=false)]
+        public string DisplayTimeFormat { get; set; }
 
         /// <summary>
         /// Dedicated phone number.
@@ -181,6 +190,7 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class UsersInbound {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DisplayTimeFormat: ").Append(DisplayTimeFormat).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  PurchasedAt: ").Append(PurchasedAt).Append("\n");
@@ -227,6 +237,11 @@ namespace TextMagicClient.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.DisplayTimeFormat == input.DisplayTimeFormat ||
+                    (this.DisplayTimeFormat != null &&
+                    this.DisplayTimeFormat.Equals(input.DisplayTimeFormat))
+                ) && 
+                (
                     this.Phone == input.Phone ||
                     (this.Phone != null &&
                     this.Phone.Equals(input.Phone))
@@ -269,6 +284,8 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.DisplayTimeFormat != null)
+                    hashCode = hashCode * 59 + this.DisplayTimeFormat.GetHashCode();
                 if (this.Phone != null)
                     hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 if (this.User != null)

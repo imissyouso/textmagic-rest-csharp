@@ -72,10 +72,11 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="SenderId" /> class.
         /// </summary>
         /// <param name="id">Numeric sender ID. (required).</param>
+        /// <param name="displayTimeFormat">Format for representation of time.</param>
         /// <param name="senderId">Alphanumeric ID. (required).</param>
         /// <param name="user">user (required).</param>
         /// <param name="status">*   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active.  (required).</param>
-        public SenderId(int? id = default(int?), string senderId = default(string), User user = default(User), StatusEnum status = default(StatusEnum))
+        public SenderId(int? id = default(int?), string displayTimeFormat = default(string), string senderId = default(string), User user = default(User), StatusEnum status = default(StatusEnum))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -113,6 +114,7 @@ namespace TextMagicClient.Model
             {
                 this.Status = status;
             }
+            this.DisplayTimeFormat = displayTimeFormat;
         }
         
         /// <summary>
@@ -121,6 +123,13 @@ namespace TextMagicClient.Model
         /// <value>Numeric sender ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Format for representation of time
+        /// </summary>
+        /// <value>Format for representation of time</value>
+        [DataMember(Name="displayTimeFormat", EmitDefaultValue=false)]
+        public string DisplayTimeFormat { get; set; }
 
         /// <summary>
         /// Alphanumeric ID.
@@ -145,6 +154,7 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class SenderId {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DisplayTimeFormat: ").Append(DisplayTimeFormat).Append("\n");
             sb.Append("  _SenderId: ").Append(_SenderId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -188,6 +198,11 @@ namespace TextMagicClient.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.DisplayTimeFormat == input.DisplayTimeFormat ||
+                    (this.DisplayTimeFormat != null &&
+                    this.DisplayTimeFormat.Equals(input.DisplayTimeFormat))
+                ) && 
+                (
                     this._SenderId == input._SenderId ||
                     (this._SenderId != null &&
                     this._SenderId.Equals(input._SenderId))
@@ -215,6 +230,8 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.DisplayTimeFormat != null)
+                    hashCode = hashCode * 59 + this.DisplayTimeFormat.GetHashCode();
                 if (this._SenderId != null)
                     hashCode = hashCode * 59 + this._SenderId.GetHashCode();
                 if (this.User != null)
