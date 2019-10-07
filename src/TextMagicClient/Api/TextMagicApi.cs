@@ -1109,11 +1109,11 @@ namespace TextMagicClient.Api
         /// Carrier Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>DoCarrierLookupResponse</returns>
         DoCarrierLookupResponse DoCarrierLookup (string phone, string country = null);
 
@@ -1121,32 +1121,32 @@ namespace TextMagicClient.Api
         /// Carrier Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>ApiResponse of DoCarrierLookupResponse</returns>
         ApiResponse<DoCarrierLookupResponse> DoCarrierLookupWithHttpInfo (string phone, string country = null);
         /// <summary>
-        /// Validate Email address using Email Lookup tool
+        /// Email Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>DoEmailLookupResponse</returns>
         DoEmailLookupResponse DoEmailLookup (string email);
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool
+        /// Email Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>ApiResponse of DoEmailLookupResponse</returns>
         ApiResponse<DoEmailLookupResponse> DoEmailLookupWithHttpInfo (string email);
         /// <summary>
@@ -1818,7 +1818,7 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetContactsByListIdPaginatedResponse</returns>
         ApiResponse<GetContactsByListIdPaginatedResponse> GetContactsByListIdWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Return list of countries.
+        /// Get countries
         /// </summary>
         /// <remarks>
         /// 
@@ -1828,7 +1828,7 @@ namespace TextMagicClient.Api
         GetCountriesResponse GetCountries ();
 
         /// <summary>
-        /// Return list of countries.
+        /// Get countries
         /// </summary>
         /// <remarks>
         /// 
@@ -2728,10 +2728,10 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of MessageTemplate</returns>
         ApiResponse<MessageTemplate> GetTemplateWithHttpInfo (int? id);
         /// <summary>
-        /// Return all available timezone IDs.
+        /// Get timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return all available timezone IDs
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -2739,10 +2739,10 @@ namespace TextMagicClient.Api
         GetTimezonesResponse GetTimezones (int? full = null);
 
         /// <summary>
-        /// Return all available timezone IDs.
+        /// Get timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return all available timezone IDs
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -2982,20 +2982,20 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
         /// <summary>
-        /// Just does a pong.
+        /// Ping
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a simple ping request
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PingResponse</returns>
         PingResponse Ping ();
 
         /// <summary>
-        /// Just does a pong.
+        /// Ping
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a simple ping request
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PingResponse</returns>
@@ -5079,11 +5079,11 @@ namespace TextMagicClient.Api
         /// Carrier Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>Task of DoCarrierLookupResponse</returns>
         System.Threading.Tasks.Task<DoCarrierLookupResponse> DoCarrierLookupAsync (string phone, string country = null);
 
@@ -5091,32 +5091,32 @@ namespace TextMagicClient.Api
         /// Carrier Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>Task of ApiResponse (DoCarrierLookupResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DoCarrierLookupResponse>> DoCarrierLookupAsyncWithHttpInfo (string phone, string country = null);
         /// <summary>
-        /// Validate Email address using Email Lookup tool
+        /// Email Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>Task of DoEmailLookupResponse</returns>
         System.Threading.Tasks.Task<DoEmailLookupResponse> DoEmailLookupAsync (string email);
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool
+        /// Email Lookup
         /// </summary>
         /// <remarks>
-        /// 
+        /// To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>Task of ApiResponse (DoEmailLookupResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DoEmailLookupResponse>> DoEmailLookupAsyncWithHttpInfo (string email);
         /// <summary>
@@ -5788,7 +5788,7 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetContactsByListIdPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetContactsByListIdPaginatedResponse>> GetContactsByListIdAsyncWithHttpInfo (int? id, int? page = null, int? limit = null, string orderBy = null, string direction = null);
         /// <summary>
-        /// Return list of countries.
+        /// Get countries
         /// </summary>
         /// <remarks>
         /// 
@@ -5798,7 +5798,7 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync ();
 
         /// <summary>
-        /// Return list of countries.
+        /// Get countries
         /// </summary>
         /// <remarks>
         /// 
@@ -6698,10 +6698,10 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (MessageTemplate)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessageTemplate>> GetTemplateAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// Return all available timezone IDs.
+        /// Get timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return all available timezone IDs
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -6709,10 +6709,10 @@ namespace TextMagicClient.Api
         System.Threading.Tasks.Task<GetTimezonesResponse> GetTimezonesAsync (int? full = null);
 
         /// <summary>
-        /// Return all available timezone IDs.
+        /// Get timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return all available timezone IDs
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -6952,20 +6952,20 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
         /// <summary>
-        /// Just does a pong.
+        /// Ping
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a simple ping request
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PingResponse</returns>
         System.Threading.Tasks.Task<PingResponse> PingAsync ();
 
         /// <summary>
-        /// Just does a pong.
+        /// Ping
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a simple ping request
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PingResponse)</returns>
@@ -15858,11 +15858,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Carrier Lookup 
+        /// Carrier Lookup This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>DoCarrierLookupResponse</returns>
         public DoCarrierLookupResponse DoCarrierLookup (string phone, string country = null)
         {
@@ -15871,11 +15871,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Carrier Lookup 
+        /// Carrier Lookup This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>ApiResponse of DoCarrierLookupResponse</returns>
         public ApiResponse< DoCarrierLookupResponse > DoCarrierLookupWithHttpInfo (string phone, string country = null)
         {
@@ -15934,11 +15934,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Carrier Lookup 
+        /// Carrier Lookup This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>Task of DoCarrierLookupResponse</returns>
         public async System.Threading.Tasks.Task<DoCarrierLookupResponse> DoCarrierLookupAsync (string phone, string country = null)
         {
@@ -15948,11 +15948,11 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Carrier Lookup 
+        /// Carrier Lookup This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="phone"></param>
-        /// <param name="country">Country code for local formatted numbers (optional, default to US)</param>
+        /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). </param>
+        /// <param name="country">This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional)</param>
         /// <returns>Task of ApiResponse (DoCarrierLookupResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DoCarrierLookupResponse>> DoCarrierLookupAsyncWithHttpInfo (string phone, string country = null)
         {
@@ -16011,10 +16011,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool 
+        /// Email Lookup To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>DoEmailLookupResponse</returns>
         public DoEmailLookupResponse DoEmailLookup (string email)
         {
@@ -16023,10 +16023,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool 
+        /// Email Lookup To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>ApiResponse of DoEmailLookupResponse</returns>
         public ApiResponse< DoEmailLookupResponse > DoEmailLookupWithHttpInfo (string email)
         {
@@ -16084,10 +16084,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool 
+        /// Email Lookup To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>Task of DoEmailLookupResponse</returns>
         public async System.Threading.Tasks.Task<DoEmailLookupResponse> DoEmailLookupAsync (string email)
         {
@@ -16097,10 +16097,10 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Validate Email address using Email Lookup tool 
+        /// Email Lookup To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email"></param>
+        /// <param name="email">Email address.</param>
         /// <returns>Task of ApiResponse (DoEmailLookupResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DoEmailLookupResponse>> DoEmailLookupAsyncWithHttpInfo (string email)
         {
@@ -20430,7 +20430,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return list of countries. 
+        /// Get countries 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetCountriesResponse</returns>
@@ -20441,7 +20441,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return list of countries. 
+        /// Get countries 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetCountriesResponse</returns>
@@ -20497,7 +20497,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return list of countries. 
+        /// Get countries 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetCountriesResponse</returns>
@@ -20509,7 +20509,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return list of countries. 
+        /// Get countries 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetCountriesResponse)</returns>
@@ -26246,7 +26246,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return all available timezone IDs. 
+        /// Get timezones Return all available timezone IDs
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -26258,7 +26258,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return all available timezone IDs. 
+        /// Get timezones Return all available timezone IDs
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -26316,7 +26316,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return all available timezone IDs. 
+        /// Get timezones Return all available timezone IDs
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -26329,7 +26329,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Return all available timezone IDs. 
+        /// Get timezones Return all available timezone IDs
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="full">Return full info about timezones in array (0 or 1). Default is 0 (optional, default to 0)</param>
@@ -28050,7 +28050,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Just does a pong. 
+        /// Ping Make a simple ping request
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PingResponse</returns>
@@ -28061,7 +28061,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Just does a pong. 
+        /// Ping Make a simple ping request
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PingResponse</returns>
@@ -28117,7 +28117,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Just does a pong. 
+        /// Ping Make a simple ping request
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PingResponse</returns>
@@ -28129,7 +28129,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Just does a pong. 
+        /// Ping Make a simple ping request
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PingResponse)</returns>

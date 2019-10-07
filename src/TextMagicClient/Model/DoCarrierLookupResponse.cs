@@ -31,6 +31,39 @@ namespace TextMagicClient.Model
     public partial class DoCarrierLookupResponse :  IEquatable<DoCarrierLookupResponse>, IValidatableObject
     {
         /// <summary>
+        /// Phone number type.
+        /// </summary>
+        /// <value>Phone number type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Mobile for value: mobile
+            /// </summary>
+            [EnumMember(Value = "mobile")]
+            Mobile = 1,
+            
+            /// <summary>
+            /// Enum Landline for value: landline
+            /// </summary>
+            [EnumMember(Value = "landline")]
+            Landline = 2,
+            
+            /// <summary>
+            /// Enum Voip for value: voip
+            /// </summary>
+            [EnumMember(Value = "voip")]
+            Voip = 3
+        }
+
+        /// <summary>
+        /// Phone number type.
+        /// </summary>
+        /// <value>Phone number type.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DoCarrierLookupResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -38,14 +71,14 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DoCarrierLookupResponse" /> class.
         /// </summary>
-        /// <param name="cost">cost (required).</param>
-        /// <param name="country">country.</param>
-        /// <param name="local">local (required).</param>
-        /// <param name="type">type (required).</param>
-        /// <param name="carrier">carrier (required).</param>
-        /// <param name="number164">number164 (required).</param>
-        /// <param name="valid">valid (required).</param>
-        public DoCarrierLookupResponse(decimal? cost = default(decimal?), Country country = default(Country), string local = default(string), string type = default(string), string carrier = default(string), string number164 = default(string), bool? valid = default(bool?))
+        /// <param name="cost">Cost to check one number is constant – 0.04 in your account currency. (required).</param>
+        /// <param name="country">Phone number country..</param>
+        /// <param name="local">Phone number in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). (required).</param>
+        /// <param name="type">Phone number type. (required).</param>
+        /// <param name="carrier">Carrier name. (required).</param>
+        /// <param name="number164">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
+        /// <param name="valid">The field shows if entered phone number is valid or not. (required).</param>
+        public DoCarrierLookupResponse(decimal? cost = default(decimal?), Country country = default(Country), string local = default(string), TypeEnum type = default(TypeEnum), string carrier = default(string), string number164 = default(string), bool? valid = default(bool?))
         {
             // to ensure "cost" is required (not null)
             if (cost == null)
@@ -105,44 +138,45 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Cost
+        /// Cost to check one number is constant – 0.04 in your account currency.
         /// </summary>
+        /// <value>Cost to check one number is constant – 0.04 in your account currency.</value>
         [DataMember(Name="cost", EmitDefaultValue=false)]
         public decimal? Cost { get; set; }
 
         /// <summary>
-        /// Gets or Sets Country
+        /// Phone number country.
         /// </summary>
+        /// <value>Phone number country.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public Country Country { get; set; }
 
         /// <summary>
-        /// Gets or Sets Local
+        /// Phone number in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
         /// </summary>
+        /// <value>Phone number in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).</value>
         [DataMember(Name="local", EmitDefaultValue=false)]
         public string Local { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Carrier
+        /// Carrier name.
         /// </summary>
+        /// <value>Carrier name.</value>
         [DataMember(Name="carrier", EmitDefaultValue=false)]
         public string Carrier { get; set; }
 
         /// <summary>
-        /// Gets or Sets Number164
+        /// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
         /// </summary>
+        /// <value>Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).</value>
         [DataMember(Name="number164", EmitDefaultValue=false)]
         public string Number164 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Valid
+        /// The field shows if entered phone number is valid or not.
         /// </summary>
+        /// <value>The field shows if entered phone number is valid or not.</value>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
 

@@ -56,7 +56,7 @@ Method | HTTP request | Description
 [**DeleteTemplatesBulk**](TextMagicApi.md#deletetemplatesbulk) | **POST** /api/v2/templates/delete | Delete templates (bulk)
 [**DoAuth**](TextMagicApi.md#doauth) | **POST** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#docarrierlookup) | **GET** /api/v2/lookups/{phone} | Carrier Lookup
-[**DoEmailLookup**](TextMagicApi.md#doemaillookup) | **GET** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
+[**DoEmailLookup**](TextMagicApi.md#doemaillookup) | **GET** /api/v2/email-lookups/{email} | Email Lookup
 [**DuplicateSurvey**](TextMagicApi.md#duplicatesurvey) | **PUT** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#getallbulksessions) | **GET** /api/v2/bulks | Get all bulk sending sessions.
 [**GetAllChats**](TextMagicApi.md#getallchats) | **GET** /api/v2/chats | Get all chats
@@ -85,7 +85,7 @@ Method | HTTP request | Description
 [**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all contacts
 [**GetContactsAutocomplete**](TextMagicApi.md#getcontactsautocomplete) | **GET** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions
 [**GetContactsByListId**](TextMagicApi.md#getcontactsbylistid) | **GET** /api/v2/lists/{id}/contacts | Get all contacts in a list
-[**GetCountries**](TextMagicApi.md#getcountries) | **GET** /api/v2/countries | Return list of countries.
+[**GetCountries**](TextMagicApi.md#getcountries) | **GET** /api/v2/countries | Get countries
 [**GetCurrentUser**](TextMagicApi.md#getcurrentuser) | **GET** /api/v2/user | Get current account information
 [**GetCustomField**](TextMagicApi.md#getcustomfield) | **GET** /api/v2/customfields/{id} | Get the details of a specific custom field
 [**GetCustomFields**](TextMagicApi.md#getcustomfields) | **GET** /api/v2/customfields | Get all custom fields
@@ -123,7 +123,7 @@ Method | HTTP request | Description
 [**GetSurveyNodes**](TextMagicApi.md#getsurveynodes) | **GET** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
 [**GetSurveys**](TextMagicApi.md#getsurveys) | **GET** /api/v2/surveys | Get all user surveys.
 [**GetTemplate**](TextMagicApi.md#gettemplate) | **GET** /api/v2/templates/{id} | Get a template details
-[**GetTimezones**](TextMagicApi.md#gettimezones) | **GET** /api/v2/timezones | Return all available timezone IDs.
+[**GetTimezones**](TextMagicApi.md#gettimezones) | **GET** /api/v2/timezones | Get timezones
 [**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
@@ -135,7 +135,7 @@ Method | HTTP request | Description
 [**MergeSurveyNodes**](TextMagicApi.md#mergesurveynodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#mutechat) | **POST** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
-[**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Just does a pong.
+[**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Ping
 [**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Apply for a new Sender ID
@@ -3404,6 +3404,8 @@ No authorization required
 
 Carrier Lookup
 
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers can be checked one by one. You cannot check multiple numbers in one request.   
+
 ### Example
 ```csharp
 using System;
@@ -3423,8 +3425,8 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var phone = "1-541-754-3010";  // string | 
-            var country = country_example;  // string | Country code for local formatted numbers (optional)  (default to US)
+            var phone = "447860021130";  // string | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
+            var country = "GB";  // string | This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  (optional) 
 
             try
             {
@@ -3445,8 +3447,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **string**|  | 
- **country** | **string**| Country code for local formatted numbers | [optional] [default to US]
+ **phone** | **string**| Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).  | 
+ **country** | **string**| This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  | [optional] 
 
 ### Return type
 
@@ -3467,7 +3469,9 @@ Name | Type | Description  | Notes
 # **DoEmailLookup**
 > DoEmailLookupResponse DoEmailLookup (string email)
 
-Validate Email address using Email Lookup tool
+Email Lookup
+
+To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
 
 ### Example
 ```csharp
@@ -3488,11 +3492,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var email = "andrey.v@textmagic.biz";  // string | 
+            var email = "john@sample.com";  // string | Email address.
 
             try
             {
-                // Validate Email address using Email Lookup tool
+                // Email Lookup
                 DoEmailLookupResponse result = apiInstance.DoEmailLookup(email);
                 Debug.WriteLine(result);
             }
@@ -3509,7 +3513,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**|  | 
+ **email** | **string**| Email address. | 
 
 ### Return type
 
@@ -5376,7 +5380,7 @@ Name | Type | Description  | Notes
 # **GetCountries**
 > GetCountriesResponse GetCountries ()
 
-Return list of countries.
+Get countries
 
 ### Example
 ```csharp
@@ -5400,7 +5404,7 @@ namespace Example
 
             try
             {
-                // Return list of countries.
+                // Get countries
                 GetCountriesResponse result = apiInstance.GetCountries();
                 Debug.WriteLine(result);
             }
@@ -7892,7 +7896,9 @@ Name | Type | Description  | Notes
 # **GetTimezones**
 > GetTimezonesResponse GetTimezones (int? full = null)
 
-Return all available timezone IDs.
+Get timezones
+
+Return all available timezone IDs
 
 ### Example
 ```csharp
@@ -7917,7 +7923,7 @@ namespace Example
 
             try
             {
-                // Return all available timezone IDs.
+                // Get timezones
                 GetTimezonesResponse result = apiInstance.GetTimezones(full);
                 Debug.WriteLine(result);
             }
@@ -8651,7 +8657,9 @@ void (empty response body)
 # **Ping**
 > PingResponse Ping ()
 
-Just does a pong.
+Ping
+
+Make a simple ping request
 
 ### Example
 ```csharp
@@ -8675,7 +8683,7 @@ namespace Example
 
             try
             {
-                // Just does a pong.
+                // Ping
                 PingResponse result = apiInstance.Ping();
                 Debug.WriteLine(result);
             }

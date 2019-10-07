@@ -75,30 +75,6 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'Address'
         }
         /// <summary>
-        /// Test the property 'AddressType'
-        /// </summary>
-        [Test]
-        public void AddressTypeTest()
-        {
-            // TODO unit test for the property 'AddressType'
-        }
-        /// <summary>
-        /// Test the property 'EmailRole'
-        /// </summary>
-        [Test]
-        public void EmailRoleTest()
-        {
-            // TODO unit test for the property 'EmailRole'
-        }
-        /// <summary>
-        /// Test the property 'Reason'
-        /// </summary>
-        [Test]
-        public void ReasonTest()
-        {
-            // TODO unit test for the property 'Reason'
-        }
-        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Test]
@@ -115,12 +91,52 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'Deliverability'
         }
         /// <summary>
+        /// Test the property 'Reason'
+        /// </summary>
+        [Test]
+        public void ReasonTest()
+        {
+            // TODO unit test for the property 'Reason'
+        }
+        /// <summary>
+        /// Test the property 'Risk'
+        /// </summary>
+        [Test]
+        public void RiskTest()
+        {
+            // TODO unit test for the property 'Risk'
+        }
+        /// <summary>
+        /// Test the property 'AddressType'
+        /// </summary>
+        [Test]
+        public void AddressTypeTest()
+        {
+            // TODO unit test for the property 'AddressType'
+        }
+        /// <summary>
         /// Test the property 'IsDisposableAddress'
         /// </summary>
         [Test]
         public void IsDisposableAddressTest()
         {
             // TODO unit test for the property 'IsDisposableAddress'
+        }
+        /// <summary>
+        /// Test the property 'Suggestion'
+        /// </summary>
+        [Test]
+        public void SuggestionTest()
+        {
+            // TODO unit test for the property 'Suggestion'
+        }
+        /// <summary>
+        /// Test the property 'EmailRole'
+        /// </summary>
+        [Test]
+        public void EmailRoleTest()
+        {
+            // TODO unit test for the property 'EmailRole'
         }
         /// <summary>
         /// Test the property 'LocalPart'
@@ -145,6 +161,14 @@ namespace TextMagicClient.Test
         public void ExchangeTest()
         {
             // TODO unit test for the property 'Exchange'
+        }
+        /// <summary>
+        /// Test the property 'Preference'
+        /// </summary>
+        [Test]
+        public void PreferenceTest()
+        {
+            // TODO unit test for the property 'Preference'
         }
         /// <summary>
         /// Test the property 'IsInWhiteList'
@@ -185,30 +209,6 @@ namespace TextMagicClient.Test
         public void HasAaaaTest()
         {
             // TODO unit test for the property 'HasAaaa'
-        }
-        /// <summary>
-        /// Test the property 'Risk'
-        /// </summary>
-        [Test]
-        public void RiskTest()
-        {
-            // TODO unit test for the property 'Risk'
-        }
-        /// <summary>
-        /// Test the property 'Preference'
-        /// </summary>
-        [Test]
-        public void PreferenceTest()
-        {
-            // TODO unit test for the property 'Preference'
-        }
-        /// <summary>
-        /// Test the property 'Suggestion'
-        /// </summary>
-        [Test]
-        public void SuggestionTest()
-        {
-            // TODO unit test for the property 'Suggestion'
         }
 
     }
