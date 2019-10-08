@@ -2792,7 +2792,7 @@ namespace TextMagicClient.Api
         /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -2804,7 +2804,7 @@ namespace TextMagicClient.Api
         /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -6762,7 +6762,7 @@ namespace TextMagicClient.Api
         /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -6774,7 +6774,7 @@ namespace TextMagicClient.Api
         /// Get all unsubscribed contacts
         /// </summary>
         /// <remarks>
-        /// When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26669,7 +26669,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26682,7 +26682,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26742,7 +26742,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
@@ -26756,7 +26756,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+        /// Get all unsubscribed contacts When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
