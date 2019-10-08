@@ -25,7 +25,7 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// Confirmation code to check
+    /// CheckPhoneVerificationCodeInputObject
     /// </summary>
     [DataContract]
     public partial class CheckPhoneVerificationCodeInputObject :  IEquatable<CheckPhoneVerificationCodeInputObject>, IValidatableObject
@@ -38,8 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CheckPhoneVerificationCodeInputObject" /> class.
         /// </summary>
-        /// <param name="code">code (required).</param>
-        public CheckPhoneVerificationCodeInputObject(int? code = default(int?))
+        /// <param name="code">Verification code that was received by the user and entered into the form field. (required).</param>
+        /// <param name="verifyId">VerifyId from Step 1 to match both requests together. (required).</param>
+        public CheckPhoneVerificationCodeInputObject(int? code = default(int?), string verifyId = default(string))
         {
             // to ensure "code" is required (not null)
             if (code == null)
@@ -50,13 +51,30 @@ namespace TextMagicClient.Model
             {
                 this.Code = code;
             }
+            // to ensure "verifyId" is required (not null)
+            if (verifyId == null)
+            {
+                throw new InvalidDataException("verifyId is a required property for CheckPhoneVerificationCodeInputObject and cannot be null");
+            }
+            else
+            {
+                this.VerifyId = verifyId;
+            }
         }
         
         /// <summary>
-        /// Gets or Sets Code
+        /// Verification code that was received by the user and entered into the form field.
         /// </summary>
+        /// <value>Verification code that was received by the user and entered into the form field.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
+
+        /// <summary>
+        /// VerifyId from Step 1 to match both requests together.
+        /// </summary>
+        /// <value>VerifyId from Step 1 to match both requests together.</value>
+        [DataMember(Name="verifyId", EmitDefaultValue=false)]
+        public string VerifyId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,6 +85,7 @@ namespace TextMagicClient.Model
             var sb = new StringBuilder();
             sb.Append("class CheckPhoneVerificationCodeInputObject {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  VerifyId: ").Append(VerifyId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,6 +124,11 @@ namespace TextMagicClient.Model
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
+                ) && 
+                (
+                    this.VerifyId == input.VerifyId ||
+                    (this.VerifyId != null &&
+                    this.VerifyId.Equals(input.VerifyId))
                 );
         }
 
@@ -119,6 +143,8 @@ namespace TextMagicClient.Model
                 int hashCode = 41;
                 if (this.Code != null)
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
+                if (this.VerifyId != null)
+                    hashCode = hashCode * 59 + this.VerifyId.GetHashCode();
                 return hashCode;
             }
         }

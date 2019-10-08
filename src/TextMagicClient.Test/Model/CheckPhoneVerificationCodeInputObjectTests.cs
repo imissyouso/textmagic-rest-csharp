@@ -74,6 +74,14 @@ namespace TextMagicClient.Test
         {
             // TODO unit test for the property 'Code'
         }
+        /// <summary>
+        /// Test the property 'VerifyId'
+        /// </summary>
+        [Test]
+        public void VerifyIdTest()
+        {
+            // TODO unit test for the property 'VerifyId'
+        }
 
     }
 

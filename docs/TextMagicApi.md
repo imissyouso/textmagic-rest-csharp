@@ -7,9 +7,7 @@ Method | HTTP request | Description
 [**AssignContactsToList**](TextMagicApi.md#assigncontactstolist) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
 [**BlockContact**](TextMagicApi.md#blockcontact) | **POST** /api/v2/contacts/block | Block contact by phone number
 [**BuyDedicatedNumber**](TextMagicApi.md#buydedicatednumber) | **POST** /api/v2/numbers | Buy a dedicated number
-[**CancelSurvey**](TextMagicApi.md#cancelsurvey) | **PUT** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#cancelverification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
-[**CheckPhoneVerificationCode**](TextMagicApi.md#checkphoneverificationcode) | **PUT** /api/v2/user/phone/verification | Check user phone verification code
 [**CheckPhoneVerificationCodeTFA**](TextMagicApi.md#checkphoneverificationcodetfa) | **PUT** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#clearandassigncontactstolist) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
@@ -19,9 +17,6 @@ Method | HTTP request | Description
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Add a new custom field
 [**CreateList**](TextMagicApi.md#createlist) | **POST** /api/v2/lists | Create a new list
-[**CreatePushToken**](TextMagicApi.md#createpushtoken) | **POST** /api/v2/push/tokens | Add or update a device token.
-[**CreateSurvey**](TextMagicApi.md#createsurvey) | **POST** /api/v2/surveys | Create a new survey from the submitted data.
-[**CreateSurveyNode**](TextMagicApi.md#createsurveynode) | **POST** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
 [**CreateTemplate**](TextMagicApi.md#createtemplate) | **POST** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#deleteallcontacts) | **DELETE** /api/v2/contact/all | Delete contacts (bulk)
 [**DeleteAllOutboundMessages**](TextMagicApi.md#deletealloutboundmessages) | **DELETE** /api/v2/message/all | Delete all messages
@@ -46,18 +41,13 @@ Method | HTTP request | Description
 [**DeleteMessageSessionsBulk**](TextMagicApi.md#deletemessagesessionsbulk) | **POST** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#deleteoutboundmessage) | **DELETE** /api/v2/messages/{id} | Delete message
 [**DeleteOutboundMessagesBulk**](TextMagicApi.md#deleteoutboundmessagesbulk) | **POST** /api/v2/messages/delete | Delete messages (bulk)
-[**DeletePushToken**](TextMagicApi.md#deletepushtoken) | **DELETE** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
 [**DeleteScheduledMessage**](TextMagicApi.md#deletescheduledmessage) | **DELETE** /api/v2/schedules/{id} | Delete a single scheduled message
 [**DeleteScheduledMessagesBulk**](TextMagicApi.md#deletescheduledmessagesbulk) | **POST** /api/v2/schedules/delete | Delete scheduled messages (bulk)
 [**DeleteSenderId**](TextMagicApi.md#deletesenderid) | **DELETE** /api/v2/senderids/{id} | Delete a Sender ID
-[**DeleteSurvey**](TextMagicApi.md#deletesurvey) | **DELETE** /api/v2/surveys/{id} | Delete a survey.
-[**DeleteSurveyNode**](TextMagicApi.md#deletesurveynode) | **DELETE** /api/v2/surveys/nodes/{id} | Delete a node.
 [**DeleteTemplate**](TextMagicApi.md#deletetemplate) | **DELETE** /api/v2/templates/{id} | Delete a template
 [**DeleteTemplatesBulk**](TextMagicApi.md#deletetemplatesbulk) | **POST** /api/v2/templates/delete | Delete templates (bulk)
-[**DoAuth**](TextMagicApi.md#doauth) | **POST** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#docarrierlookup) | **GET** /api/v2/lookups/{phone} | Carrier Lookup
 [**DoEmailLookup**](TextMagicApi.md#doemaillookup) | **GET** /api/v2/email-lookups/{email} | Email Lookup
-[**DuplicateSurvey**](TextMagicApi.md#duplicatesurvey) | **PUT** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#getallbulksessions) | **GET** /api/v2/bulks | Get all bulk sending sessions.
 [**GetAllChats**](TextMagicApi.md#getallchats) | **GET** /api/v2/chats | Get all chats
 [**GetAllInboundMessages**](TextMagicApi.md#getallinboundmessages) | **GET** /api/v2/replies | Get all inbound messages
@@ -106,7 +96,6 @@ Method | HTTP request | Description
 [**GetMessagingStat**](TextMagicApi.md#getmessagingstat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**GetOutboundMessage**](TextMagicApi.md#getoutboundmessage) | **GET** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#getoutboundmessageshistory) | **GET** /api/v2/history | Get history
-[**GetPushTokens**](TextMagicApi.md#getpushtokens) | **GET** /api/v2/push/tokens | Get all device tokens assigned to the current account
 [**GetScheduledMessage**](TextMagicApi.md#getscheduledmessage) | **GET** /api/v2/schedules/{id} | Get a single scheduled message
 [**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get the details of a specific Sender ID
 [**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all your approved Sender IDs
@@ -115,10 +104,6 @@ Method | HTTP request | Description
 [**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**GetSubaccounts**](TextMagicApi.md#getsubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
 [**GetSubaccountsWithTokens**](TextMagicApi.md#getsubaccountswithtokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
-[**GetSurvey**](TextMagicApi.md#getsurvey) | **GET** /api/v2/surveys/{id} | Get a survey by id.
-[**GetSurveyNode**](TextMagicApi.md#getsurveynode) | **GET** /api/v2/surveys/nodes/{id} | Get a node by id.
-[**GetSurveyNodes**](TextMagicApi.md#getsurveynodes) | **GET** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
-[**GetSurveys**](TextMagicApi.md#getsurveys) | **GET** /api/v2/surveys | Get all user surveys.
 [**GetTemplate**](TextMagicApi.md#gettemplate) | **GET** /api/v2/templates/{id} | Get a template details
 [**GetTimezones**](TextMagicApi.md#gettimezones) | **GET** /api/v2/timezones | Get timezones
 [**GetUnreadMessagesTotal**](TextMagicApi.md#getunreadmessagestotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
@@ -128,13 +113,11 @@ Method | HTTP request | Description
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
-[**MergeSurveyNodes**](TextMagicApi.md#mergesurveynodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#mutechat) | **POST** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Apply for a new Sender ID
-[**ResetSurvey**](TextMagicApi.md#resetsurvey) | **PUT** /api/v2/surveys/{id}/reset | Reset a survey flow.
 [**SearchChats**](TextMagicApi.md#searchchats) | **GET** /api/v2/chats/search | Find chats by message text
 [**SearchChatsByIds**](TextMagicApi.md#searchchatsbyids) | **GET** /api/v2/chats/search/ids | Find chats (bulk)
 [**SearchChatsByReceipent**](TextMagicApi.md#searchchatsbyreceipent) | **GET** /api/v2/chats/search/recipients | Find chats by recipient
@@ -144,12 +127,9 @@ Method | HTTP request | Description
 [**SearchOutboundMessages**](TextMagicApi.md#searchoutboundmessages) | **GET** /api/v2/messages/search | Find messages
 [**SearchScheduledMessages**](TextMagicApi.md#searchscheduledmessages) | **GET** /api/v2/schedules/search | Find scheduled messages
 [**SearchTemplates**](TextMagicApi.md#searchtemplates) | **GET** /api/v2/templates/search | Find templates by criteria
-[**SendEmailVerificationCode**](TextMagicApi.md#sendemailverificationcode) | **GET** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#sendmessage) | **POST** /api/v2/messages | Send message
-[**SendPhoneVerificationCode**](TextMagicApi.md#sendphoneverificationcode) | **GET** /api/v2/user/phone/verification | Send user phone verification
 [**SendPhoneVerificationCodeTFA**](TextMagicApi.md#sendphoneverificationcodetfa) | **POST** /api/v2/verify | Step 1: Send a verification code 
 [**SetChatStatus**](TextMagicApi.md#setchatstatus) | **POST** /api/v2/chats/status | Change chat status
-[**StartSurvey**](TextMagicApi.md#startsurvey) | **PUT** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#unblockcontact) | **POST** /api/v2/contacts/unblock | Unblock contact by phone number.
 [**UnblockContactsBulk**](TextMagicApi.md#unblockcontactsbulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
 [**UnmuteChatsBulk**](TextMagicApi.md#unmutechatsbulk) | **POST** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
@@ -164,10 +144,7 @@ Method | HTTP request | Description
 [**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Edit the custom field value of a specified contact
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
 [**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Edit a list
-[**UpdatePassword**](TextMagicApi.md#updatepassword) | **PUT** /api/v2/user/password/change | Change user password.
 [**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
-[**UpdateSurvey**](TextMagicApi.md#updatesurvey) | **PUT** /api/v2/surveys/{id} | Update existing survey.
-[**UpdateSurveyNode**](TextMagicApi.md#updatesurveynode) | **PUT** /api/v2/surveys/nodes/{id} | Update existing node.
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Upload an avatar
@@ -371,69 +348,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="cancelsurvey"></a>
-# **CancelSurvey**
-> ResourceLinkResponse CancelSurvey (int? id)
-
-Cancel a survey.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class CancelSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Cancel a survey.
-                ResourceLinkResponse result = apiInstance.CancelSurvey(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.CancelSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="cancelverification"></a>
 # **CancelVerification**
 > void CancelVerification (string verifyId)
@@ -498,71 +412,9 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="checkphoneverificationcode"></a>
-# **CheckPhoneVerificationCode**
-> void CheckPhoneVerificationCode (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
-
-Check user phone verification code
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class CheckPhoneVerificationCodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var checkPhoneVerificationCodeInputObject = new CheckPhoneVerificationCodeInputObject(); // CheckPhoneVerificationCodeInputObject | 
-
-            try
-            {
-                // Check user phone verification code
-                apiInstance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.CheckPhoneVerificationCode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="checkphoneverificationcodetfa"></a>
 # **CheckPhoneVerificationCodeTFA**
-> void CheckPhoneVerificationCodeTFA (CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject)
+> void CheckPhoneVerificationCodeTFA (CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject)
 
 Step 2: Check the verification code 
 
@@ -587,7 +439,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var checkPhoneVerificationCodeInputObject = new CheckPhoneVerificationCodeInputObject1(); // CheckPhoneVerificationCodeInputObject1 | 
+            var checkPhoneVerificationCodeInputObject = new CheckPhoneVerificationCodeInputObject(); // CheckPhoneVerificationCodeInputObject | 
 
             try
             {
@@ -607,7 +459,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject1**](CheckPhoneVerificationCodeInputObject1.md)|  | 
+ **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
 
 ### Return type
 
@@ -1113,196 +965,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createListInputObject** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="createpushtoken"></a>
-# **CreatePushToken**
-> void CreatePushToken (CreatePushTokenInputObject createPushTokenInputObject)
-
-Add or update a device token.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class CreatePushTokenExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var createPushTokenInputObject = new CreatePushTokenInputObject(); // CreatePushTokenInputObject | 
-
-            try
-            {
-                // Add or update a device token.
-                apiInstance.CreatePushToken(createPushTokenInputObject);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.CreatePushToken: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createPushTokenInputObject** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="createsurvey"></a>
-# **CreateSurvey**
-> ResourceLinkResponse CreateSurvey (CreateSurveyInputObject createSurveyInputObject)
-
-Create a new survey from the submitted data.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class CreateSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var createSurveyInputObject = new CreateSurveyInputObject(); // CreateSurveyInputObject | 
-
-            try
-            {
-                // Create a new survey from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateSurvey(createSurveyInputObject);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.CreateSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createSurveyInputObject** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="createsurveynode"></a>
-# **CreateSurveyNode**
-> ResourceLinkResponse CreateSurveyNode (CreateSurveyNodeInputObject createSurveyNodeInputObject, int? id)
-
-Create a new node from the submitted data.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class CreateSurveyNodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var createSurveyNodeInputObject = new CreateSurveyNodeInputObject(); // CreateSurveyNodeInputObject | 
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Create a new node from the submitted data.
-                ResourceLinkResponse result = apiInstance.CreateSurveyNode(createSurveyNodeInputObject, id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.CreateSurveyNode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createSurveyNodeInputObject** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
- **id** | **int?**|  | 
 
 ### Return type
 
@@ -2832,70 +2494,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletepushtoken"></a>
-# **DeletePushToken**
-> void DeletePushToken (string type, int? deviceId)
-
-Delete a push notification device token.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class DeletePushTokenExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var type = type_example;  // string | 
-            var deviceId = 56;  // int? | 
-
-            try
-            {
-                // Delete a push notification device token.
-                apiInstance.DeletePushToken(type, deviceId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.DeletePushToken: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **type** | **string**|  | 
- **deviceId** | **int?**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="deletescheduledmessage"></a>
 # **DeleteScheduledMessage**
 > void DeleteScheduledMessage (int? id)
@@ -3082,130 +2680,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesurvey"></a>
-# **DeleteSurvey**
-> void DeleteSurvey (int? id)
-
-Delete a survey.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class DeleteSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Delete a survey.
-                apiInstance.DeleteSurvey(id);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.DeleteSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deletesurveynode"></a>
-# **DeleteSurveyNode**
-> void DeleteSurveyNode (int? id)
-
-Delete a node.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class DeleteSurveyNodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Delete a node.
-                apiInstance.DeleteSurveyNode(id);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.DeleteSurveyNode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="deletetemplate"></a>
 # **DeleteTemplate**
 > void DeleteTemplate (int? id)
@@ -3332,67 +2806,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="doauth"></a>
-# **DoAuth**
-> DoAuthResponse DoAuth (DoAuthInputObject doAuthInputObject)
-
-Authenticate user by given username and password.
-
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class DoAuthExample
-    {
-        public void main()
-        {
-            var apiInstance = new TextMagicApi();
-            var doAuthInputObject = new DoAuthInputObject(); // DoAuthInputObject | 
-
-            try
-            {
-                // Authenticate user by given username and password.
-                DoAuthResponse result = apiInstance.DoAuth(doAuthInputObject);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.DoAuth: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **doAuthInputObject** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
-
-### Return type
-
-[**DoAuthResponse**](DoAuthResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="docarrierlookup"></a>
 # **DoCarrierLookup**
 > DoCarrierLookupResponse DoCarrierLookup (string phone, string country = null)
@@ -3513,69 +2926,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DoEmailLookupResponse**](DoEmailLookupResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="duplicatesurvey"></a>
-# **DuplicateSurvey**
-> ResourceLinkResponse DuplicateSurvey (int? id)
-
-Duplicate a survey.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class DuplicateSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Duplicate a survey.
-                ResourceLinkResponse result = apiInstance.DuplicateSurvey(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.DuplicateSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
 
 ### Authorization
 
@@ -6808,65 +6158,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpushtokens"></a>
-# **GetPushTokens**
-> GetPushTokensResponse GetPushTokens ()
-
-Get all device tokens assigned to the current account
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetPushTokensExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Get all device tokens assigned to the current account
-                GetPushTokensResponse result = apiInstance.GetPushTokens();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetPushTokens: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetPushTokensResponse**](GetPushTokensResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getscheduledmessage"></a>
 # **GetScheduledMessage**
 > MessagesIcs GetScheduledMessage (int? id)
@@ -7375,260 +6666,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetSubaccountsWithTokensResponse**](GetSubaccountsWithTokensResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsurvey"></a>
-# **GetSurvey**
-> Survey GetSurvey (int? id)
-
-Get a survey by id.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Get a survey by id.
-                Survey result = apiInstance.GetSurvey(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**Survey**](Survey.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsurveynode"></a>
-# **GetSurveyNode**
-> SurveyNode GetSurveyNode (int? id)
-
-Get a node by id.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetSurveyNodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Get a node by id.
-                SurveyNode result = apiInstance.GetSurveyNode(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetSurveyNode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**SurveyNode**](SurveyNode.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsurveynodes"></a>
-# **GetSurveyNodes**
-> GetSurveyNodesResponse GetSurveyNodes (int? id)
-
-Fetch nodes by given survey id.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetSurveyNodesExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Fetch nodes by given survey id.
-                GetSurveyNodesResponse result = apiInstance.GetSurveyNodes(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetSurveyNodes: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**GetSurveyNodesResponse**](GetSurveyNodesResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsurveys"></a>
-# **GetSurveys**
-> GetSurveysPaginatedResponse GetSurveys (int? page = null, int? limit = null)
-
-Get all user surveys.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetSurveysExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
-            var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
-
-            try
-            {
-                // Get all user surveys.
-                GetSurveysPaginatedResponse result = apiInstance.GetSurveys(page, limit);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetSurveys: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
- **limit** | **int?**| The number of results per page. | [optional] [default to 10]
-
-### Return type
-
-[**GetSurveysPaginatedResponse**](GetSurveysPaginatedResponse.md)
 
 ### Authorization
 
@@ -8219,68 +7256,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="mergesurveynodes"></a>
-# **MergeSurveyNodes**
-> void MergeSurveyNodes (MergeSurveyNodesInputObject mergeSurveyNodesInputObject)
-
-Merge two question nodes.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class MergeSurveyNodesExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var mergeSurveyNodesInputObject = new MergeSurveyNodesInputObject(); // MergeSurveyNodesInputObject | 
-
-            try
-            {
-                // Merge two question nodes.
-                apiInstance.MergeSurveyNodes(mergeSurveyNodesInputObject);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.MergeSurveyNodes: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mergeSurveyNodesInputObject** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mutechat"></a>
 # **MuteChat**
 > ResourceLinkResponse MuteChat (MuteChatInputObject muteChatInputObject)
@@ -8586,69 +7561,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestSenderIdInputObject** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="resetsurvey"></a>
-# **ResetSurvey**
-> ResourceLinkResponse ResetSurvey (int? id)
-
-Reset a survey flow.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class ResetSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Reset a survey flow.
-                ResourceLinkResponse result = apiInstance.ResetSurvey(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.ResetSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
 
 ### Return type
 
@@ -9334,64 +8246,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="sendemailverificationcode"></a>
-# **SendEmailVerificationCode**
-> void SendEmailVerificationCode ()
-
-Send user email verification
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class SendEmailVerificationCodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Send user email verification
-                apiInstance.SendEmailVerificationCode();
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.SendEmailVerificationCode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="sendmessage"></a>
 # **SendMessage**
 > SendMessageResponse SendMessage (SendMessageInputObject sendMessageInputObject)
@@ -9445,64 +8299,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SendMessageResponse**](SendMessageResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="sendphoneverificationcode"></a>
-# **SendPhoneVerificationCode**
-> void SendPhoneVerificationCode ()
-
-Send user phone verification
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class SendPhoneVerificationCodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Send user phone verification
-                apiInstance.SendPhoneVerificationCode();
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.SendPhoneVerificationCode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 
@@ -9629,69 +8425,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **setChatStatusInputObject** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="startsurvey"></a>
-# **StartSurvey**
-> ResourceLinkResponse StartSurvey (int? id)
-
-Start a survey.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class StartSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Start a survey.
-                ResourceLinkResponse result = apiInstance.StartSurvey(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.StartSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
 
 ### Return type
 
@@ -10599,68 +9332,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatepassword"></a>
-# **UpdatePassword**
-> void UpdatePassword (UpdatePasswordInputObject updatePasswordInputObject)
-
-Change user password.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class UpdatePasswordExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var updatePasswordInputObject = new UpdatePasswordInputObject(); // UpdatePasswordInputObject | 
-
-            try
-            {
-                // Change user password.
-                apiInstance.UpdatePassword(updatePasswordInputObject);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.UpdatePassword: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updatePasswordInputObject** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="updatesendersetting"></a>
 # **UpdateSenderSetting**
 > void UpdateSenderSetting (UpdateSenderSettingInputObject updateSenderSettingInputObject)
@@ -10720,136 +9391,6 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="updatesurvey"></a>
-# **UpdateSurvey**
-> ResourceLinkResponse UpdateSurvey (UpdateSurveyInputObject updateSurveyInputObject, int? id)
-
-Update existing survey.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class UpdateSurveyExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var updateSurveyInputObject = new UpdateSurveyInputObject(); // UpdateSurveyInputObject | 
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Update existing survey.
-                ResourceLinkResponse result = apiInstance.UpdateSurvey(updateSurveyInputObject, id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.UpdateSurvey: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateSurveyInputObject** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
- **id** | **int?**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="updatesurveynode"></a>
-# **UpdateSurveyNode**
-> ResourceLinkResponse UpdateSurveyNode (UpdateSurveyNodeInputObject updateSurveyNodeInputObject, int? id)
-
-Update existing node.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class UpdateSurveyNodeExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var updateSurveyNodeInputObject = new UpdateSurveyNodeInputObject(); // UpdateSurveyNodeInputObject | 
-            var id = 1;  // int? | 
-
-            try
-            {
-                // Update existing node.
-                ResourceLinkResponse result = apiInstance.UpdateSurveyNode(updateSurveyNodeInputObject, id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.UpdateSurveyNode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateSurveyNodeInputObject** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
- **id** | **int?**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

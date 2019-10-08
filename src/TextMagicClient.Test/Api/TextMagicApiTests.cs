@@ -102,18 +102,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test CancelSurvey
-        /// </summary>
-        [Test]
-        public void CancelSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.CancelSurvey(id);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
         /// Test CancelVerification
         /// </summary>
         [Test]
@@ -126,25 +114,13 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test CheckPhoneVerificationCode
-        /// </summary>
-        [Test]
-        public void CheckPhoneVerificationCodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject = null;
-            //instance.CheckPhoneVerificationCode(checkPhoneVerificationCodeInputObject);
-            
-        }
-        
-        /// <summary>
         /// Test CheckPhoneVerificationCodeTFA
         /// </summary>
         [Test]
         public void CheckPhoneVerificationCodeTFATest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CheckPhoneVerificationCodeInputObject1 checkPhoneVerificationCodeInputObject = null;
+            //CheckPhoneVerificationCodeInputObject checkPhoneVerificationCodeInputObject = null;
             //instance.CheckPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject);
             
         }
@@ -243,43 +219,6 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //CreateListInputObject createListInputObject = null;
             //var response = instance.CreateList(createListInputObject);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
-        /// Test CreatePushToken
-        /// </summary>
-        [Test]
-        public void CreatePushTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CreatePushTokenInputObject createPushTokenInputObject = null;
-            //instance.CreatePushToken(createPushTokenInputObject);
-            
-        }
-        
-        /// <summary>
-        /// Test CreateSurvey
-        /// </summary>
-        [Test]
-        public void CreateSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CreateSurveyInputObject createSurveyInputObject = null;
-            //var response = instance.CreateSurvey(createSurveyInputObject);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
-        /// Test CreateSurveyNode
-        /// </summary>
-        [Test]
-        public void CreateSurveyNodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CreateSurveyNodeInputObject createSurveyNodeInputObject = null;
-            //int? id = null;
-            //var response = instance.CreateSurveyNode(createSurveyNodeInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -573,19 +512,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test DeletePushToken
-        /// </summary>
-        [Test]
-        public void DeletePushTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string type = null;
-            //int? deviceId = null;
-            //instance.DeletePushToken(type, deviceId);
-            
-        }
-        
-        /// <summary>
         /// Test DeleteScheduledMessage
         /// </summary>
         [Test]
@@ -622,30 +548,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test DeleteSurvey
-        /// </summary>
-        [Test]
-        public void DeleteSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //instance.DeleteSurvey(id);
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteSurveyNode
-        /// </summary>
-        [Test]
-        public void DeleteSurveyNodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //instance.DeleteSurveyNode(id);
-            
-        }
-        
-        /// <summary>
         /// Test DeleteTemplate
         /// </summary>
         [Test]
@@ -667,18 +569,6 @@ namespace TextMagicClient.Test
             //DeleteTemplatesBulkInputObject deleteTemplatesBulkInputObject = null;
             //instance.DeleteTemplatesBulk(deleteTemplatesBulkInputObject);
             
-        }
-        
-        /// <summary>
-        /// Test DoAuth
-        /// </summary>
-        [Test]
-        public void DoAuthTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //DoAuthInputObject doAuthInputObject = null;
-            //var response = instance.DoAuth(doAuthInputObject);
-            //Assert.IsInstanceOf<DoAuthResponse> (response, "response is DoAuthResponse");
         }
         
         /// <summary>
@@ -704,18 +594,6 @@ namespace TextMagicClient.Test
             //string email = null;
             //var response = instance.DoEmailLookup(email);
             //Assert.IsInstanceOf<DoEmailLookupResponse> (response, "response is DoEmailLookupResponse");
-        }
-        
-        /// <summary>
-        /// Test DuplicateSurvey
-        /// </summary>
-        [Test]
-        public void DuplicateSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.DuplicateSurvey(id);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
         /// <summary>
@@ -1386,17 +1264,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetPushTokens
-        /// </summary>
-        [Test]
-        public void GetPushTokensTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetPushTokens();
-            //Assert.IsInstanceOf<GetPushTokensResponse> (response, "response is GetPushTokensResponse");
-        }
-        
-        /// <summary>
         /// Test GetScheduledMessage
         /// </summary>
         [Test]
@@ -1497,55 +1364,6 @@ namespace TextMagicClient.Test
             //int? limit = null;
             //var response = instance.GetSubaccountsWithTokens(getSubaccountsWithTokensInputObject, page, limit);
             //Assert.IsInstanceOf<GetSubaccountsWithTokensResponse> (response, "response is GetSubaccountsWithTokensResponse");
-        }
-        
-        /// <summary>
-        /// Test GetSurvey
-        /// </summary>
-        [Test]
-        public void GetSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.GetSurvey(id);
-            //Assert.IsInstanceOf<Survey> (response, "response is Survey");
-        }
-        
-        /// <summary>
-        /// Test GetSurveyNode
-        /// </summary>
-        [Test]
-        public void GetSurveyNodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.GetSurveyNode(id);
-            //Assert.IsInstanceOf<SurveyNode> (response, "response is SurveyNode");
-        }
-        
-        /// <summary>
-        /// Test GetSurveyNodes
-        /// </summary>
-        [Test]
-        public void GetSurveyNodesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.GetSurveyNodes(id);
-            //Assert.IsInstanceOf<GetSurveyNodesResponse> (response, "response is GetSurveyNodesResponse");
-        }
-        
-        /// <summary>
-        /// Test GetSurveys
-        /// </summary>
-        [Test]
-        public void GetSurveysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? page = null;
-            //int? limit = null;
-            //var response = instance.GetSurveys(page, limit);
-            //Assert.IsInstanceOf<GetSurveysPaginatedResponse> (response, "response is GetSurveysPaginatedResponse");
         }
         
         /// <summary>
@@ -1659,18 +1477,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test MergeSurveyNodes
-        /// </summary>
-        [Test]
-        public void MergeSurveyNodesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //MergeSurveyNodesInputObject mergeSurveyNodesInputObject = null;
-            //instance.MergeSurveyNodes(mergeSurveyNodesInputObject);
-            
-        }
-        
-        /// <summary>
         /// Test MuteChat
         /// </summary>
         [Test]
@@ -1727,18 +1533,6 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //RequestSenderIdInputObject requestSenderIdInputObject = null;
             //var response = instance.RequestSenderId(requestSenderIdInputObject);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
-        /// Test ResetSurvey
-        /// </summary>
-        [Test]
-        public void ResetSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.ResetSurvey(id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -1898,17 +1692,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test SendEmailVerificationCode
-        /// </summary>
-        [Test]
-        public void SendEmailVerificationCodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.SendEmailVerificationCode();
-            
-        }
-        
-        /// <summary>
         /// Test SendMessage
         /// </summary>
         [Test]
@@ -1918,17 +1701,6 @@ namespace TextMagicClient.Test
             //SendMessageInputObject sendMessageInputObject = null;
             //var response = instance.SendMessage(sendMessageInputObject);
             //Assert.IsInstanceOf<SendMessageResponse> (response, "response is SendMessageResponse");
-        }
-        
-        /// <summary>
-        /// Test SendPhoneVerificationCode
-        /// </summary>
-        [Test]
-        public void SendPhoneVerificationCodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.SendPhoneVerificationCode();
-            
         }
         
         /// <summary>
@@ -1952,18 +1724,6 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //SetChatStatusInputObject setChatStatusInputObject = null;
             //var response = instance.SetChatStatus(setChatStatusInputObject);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
-        /// Test StartSurvey
-        /// </summary>
-        [Test]
-        public void StartSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.StartSurvey(id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
@@ -2141,18 +1901,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test UpdatePassword
-        /// </summary>
-        [Test]
-        public void UpdatePasswordTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //UpdatePasswordInputObject updatePasswordInputObject = null;
-            //instance.UpdatePassword(updatePasswordInputObject);
-            
-        }
-        
-        /// <summary>
         /// Test UpdateSenderSetting
         /// </summary>
         [Test]
@@ -2162,32 +1910,6 @@ namespace TextMagicClient.Test
             //UpdateSenderSettingInputObject updateSenderSettingInputObject = null;
             //instance.UpdateSenderSetting(updateSenderSettingInputObject);
             
-        }
-        
-        /// <summary>
-        /// Test UpdateSurvey
-        /// </summary>
-        [Test]
-        public void UpdateSurveyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //UpdateSurveyInputObject updateSurveyInputObject = null;
-            //int? id = null;
-            //var response = instance.UpdateSurvey(updateSurveyInputObject, id);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
-        }
-        
-        /// <summary>
-        /// Test UpdateSurveyNode
-        /// </summary>
-        [Test]
-        public void UpdateSurveyNodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //UpdateSurveyNodeInputObject updateSurveyNodeInputObject = null;
-            //int? id = null;
-            //var response = instance.UpdateSurveyNode(updateSurveyNodeInputObject, id);
-            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
         /// <summary>
