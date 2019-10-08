@@ -81,7 +81,7 @@ OpenAPI spec version: 2
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\TextMagicClient\TextMagicClient.csproj">
-          <Project>{B87161C7-2AE6-4508-936C-829F4C83C3FF}</Project>
+          <Project>{3CC1BE95-7E18-42CA-AAE6-C98ABD958070}</Project>
           <Name>TextMagicClient</Name>
       </ProjectReference>
   </ItemGroup>
