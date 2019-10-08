@@ -1505,25 +1505,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetCallbackSettingsResponse</returns>
         ApiResponse<GetCallbackSettingsResponse> GetCallbackSettingsWithHttpInfo ();
         /// <summary>
-        /// Check pricing for a inbound/outbound call.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetCallsPricesResponse</returns>
-        GetCallsPricesResponse GetCallsPrices ();
-
-        /// <summary>
-        /// Check pricing for a inbound/outbound call.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetCallsPricesResponse</returns>
-        ApiResponse<GetCallsPricesResponse> GetCallsPricesWithHttpInfo ();
-        /// <summary>
         /// Get a single chat
         /// </summary>
         /// <remarks>
@@ -1667,27 +1648,6 @@ namespace TextMagicClient.Api
         /// <param name="phone">Phone number to check</param>
         /// <returns>ApiResponse of Contact</returns>
         ApiResponse<Contact> GetContactIfBlockedWithHttpInfo (string phone);
-        /// <summary>
-        /// Get contact import session progress.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>GetContactImportSessionProgressResponse</returns>
-        GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id);
-
-        /// <summary>
-        /// Get contact import session progress.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of GetContactImportSessionProgressResponse</returns>
-        ApiResponse<GetContactImportSessionProgressResponse> GetContactImportSessionProgressWithHttpInfo (int? id);
         /// <summary>
         /// Get a single contact note.
         /// </summary>
@@ -5418,25 +5378,6 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetCallbackSettingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetCallbackSettingsResponse>> GetCallbackSettingsAsyncWithHttpInfo ();
         /// <summary>
-        /// Check pricing for a inbound/outbound call.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetCallsPricesResponse</returns>
-        System.Threading.Tasks.Task<GetCallsPricesResponse> GetCallsPricesAsync ();
-
-        /// <summary>
-        /// Check pricing for a inbound/outbound call.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetCallsPricesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetCallsPricesResponse>> GetCallsPricesAsyncWithHttpInfo ();
-        /// <summary>
         /// Get a single chat
         /// </summary>
         /// <remarks>
@@ -5580,27 +5521,6 @@ namespace TextMagicClient.Api
         /// <param name="phone">Phone number to check</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
         System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactIfBlockedAsyncWithHttpInfo (string phone);
-        /// <summary>
-        /// Get contact import session progress.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of GetContactImportSessionProgressResponse</returns>
-        System.Threading.Tasks.Task<GetContactImportSessionProgressResponse> GetContactImportSessionProgressAsync (int? id);
-
-        /// <summary>
-        /// Get contact import session progress.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (GetContactImportSessionProgressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetContactImportSessionProgressResponse>> GetContactImportSessionProgressAsyncWithHttpInfo (int? id);
         /// <summary>
         /// Get a single contact note.
         /// </summary>
@@ -18297,141 +18217,6 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Check pricing for a inbound/outbound call. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetCallsPricesResponse</returns>
-        public GetCallsPricesResponse GetCallsPrices ()
-        {
-             ApiResponse<GetCallsPricesResponse> localVarResponse = GetCallsPricesWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Check pricing for a inbound/outbound call. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetCallsPricesResponse</returns>
-        public ApiResponse< GetCallsPricesResponse > GetCallsPricesWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/calls/price";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCallsPrices", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetCallsPricesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetCallsPricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCallsPricesResponse)));
-        }
-
-        /// <summary>
-        /// Check pricing for a inbound/outbound call. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetCallsPricesResponse</returns>
-        public async System.Threading.Tasks.Task<GetCallsPricesResponse> GetCallsPricesAsync ()
-        {
-             ApiResponse<GetCallsPricesResponse> localVarResponse = await GetCallsPricesAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Check pricing for a inbound/outbound call. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetCallsPricesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetCallsPricesResponse>> GetCallsPricesAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/calls/price";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetCallsPrices", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetCallsPricesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetCallsPricesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCallsPricesResponse)));
-        }
-
-        /// <summary>
         /// Get a single chat 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19365,153 +19150,6 @@ namespace TextMagicClient.Api
             return new ApiResponse<Contact>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Contact) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Contact)));
-        }
-
-        /// <summary>
-        /// Get contact import session progress. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>GetContactImportSessionProgressResponse</returns>
-        public GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id)
-        {
-             ApiResponse<GetContactImportSessionProgressResponse> localVarResponse = GetContactImportSessionProgressWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get contact import session progress. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of GetContactImportSessionProgressResponse</returns>
-        public ApiResponse< GetContactImportSessionProgressResponse > GetContactImportSessionProgressWithHttpInfo (int? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->GetContactImportSessionProgress");
-
-            var localVarPath = "/api/v2/contacts/import/progress/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetContactImportSessionProgress", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetContactImportSessionProgressResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactImportSessionProgressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactImportSessionProgressResponse)));
-        }
-
-        /// <summary>
-        /// Get contact import session progress. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of GetContactImportSessionProgressResponse</returns>
-        public async System.Threading.Tasks.Task<GetContactImportSessionProgressResponse> GetContactImportSessionProgressAsync (int? id)
-        {
-             ApiResponse<GetContactImportSessionProgressResponse> localVarResponse = await GetContactImportSessionProgressAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get contact import session progress. 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (GetContactImportSessionProgressResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetContactImportSessionProgressResponse>> GetContactImportSessionProgressAsyncWithHttpInfo (int? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->GetContactImportSessionProgress");
-
-            var localVarPath = "/api/v2/contacts/import/progress/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetContactImportSessionProgress", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetContactImportSessionProgressResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetContactImportSessionProgressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactImportSessionProgressResponse)));
         }
 
         /// <summary>

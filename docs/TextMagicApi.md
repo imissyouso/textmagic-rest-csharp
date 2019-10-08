@@ -72,14 +72,12 @@ Method | HTTP request | Description
 [**GetBlockedContacts**](TextMagicApi.md#getblockedcontacts) | **GET** /api/v2/contacts/block/list | Get blocked contacts
 [**GetBulkSession**](TextMagicApi.md#getbulksession) | **GET** /api/v2/bulks/{id} | Get bulk message session status.
 [**GetCallbackSettings**](TextMagicApi.md#getcallbacksettings) | **GET** /api/v2/callback/settings | Fetch callback URL settings
-[**GetCallsPrices**](TextMagicApi.md#getcallsprices) | **GET** /api/v2/calls/price | Check pricing for a inbound/outbound call.
 [**GetChat**](TextMagicApi.md#getchat) | **GET** /api/v2/chats/{id} | Get a single chat
 [**GetChatByPhone**](TextMagicApi.md#getchatbyphone) | **GET** /api/v2/chats/{phone}/by/phone | Find chats by phone
 [**GetChatMessages**](TextMagicApi.md#getchatmessages) | **GET** /api/v2/chats/{id}/message | Get chat messages
 [**GetContact**](TextMagicApi.md#getcontact) | **GET** /api/v2/contacts/{id} | Get the details of a specific contact
 [**GetContactByPhone**](TextMagicApi.md#getcontactbyphone) | **GET** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**GetContactIfBlocked**](TextMagicApi.md#getcontactifblocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
-[**GetContactImportSessionProgress**](TextMagicApi.md#getcontactimportsessionprogress) | **GET** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
 [**GetContactNote**](TextMagicApi.md#getcontactnote) | **GET** /api/v2/notes/{id} | Get a single contact note.
 [**GetContactNotes**](TextMagicApi.md#getcontactnotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all contacts
@@ -4512,65 +4510,6 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getcallsprices"></a>
-# **GetCallsPrices**
-> GetCallsPricesResponse GetCallsPrices ()
-
-Check pricing for a inbound/outbound call.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetCallsPricesExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Check pricing for a inbound/outbound call.
-                GetCallsPricesResponse result = apiInstance.GetCallsPrices();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetCallsPrices: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetCallsPricesResponse**](GetCallsPricesResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getchat"></a>
 # **GetChat**
 > Chat GetChat (int? id)
@@ -4955,69 +4894,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Contact**](Contact.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getcontactimportsessionprogress"></a>
-# **GetContactImportSessionProgress**
-> GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id)
-
-Get contact import session progress.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetContactImportSessionProgressExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-            var id = 56;  // int? | 
-
-            try
-            {
-                // Get contact import session progress.
-                GetContactImportSessionProgressResponse result = apiInstance.GetContactImportSessionProgress(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetContactImportSessionProgress: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | 
-
-### Return type
-
-[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
 
 ### Authorization
 

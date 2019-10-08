@@ -907,17 +907,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetCallsPrices
-        /// </summary>
-        [Test]
-        public void GetCallsPricesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetCallsPrices();
-            //Assert.IsInstanceOf<GetCallsPricesResponse> (response, "response is GetCallsPricesResponse");
-        }
-        
-        /// <summary>
         /// Test GetChat
         /// </summary>
         [Test]
@@ -996,18 +985,6 @@ namespace TextMagicClient.Test
             //string phone = null;
             //var response = instance.GetContactIfBlocked(phone);
             //Assert.IsInstanceOf<Contact> (response, "response is Contact");
-        }
-        
-        /// <summary>
-        /// Test GetContactImportSessionProgress
-        /// </summary>
-        [Test]
-        public void GetContactImportSessionProgressTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //var response = instance.GetContactImportSessionProgress(id);
-            //Assert.IsInstanceOf<GetContactImportSessionProgressResponse> (response, "response is GetContactImportSessionProgressResponse");
         }
         
         /// <summary>
