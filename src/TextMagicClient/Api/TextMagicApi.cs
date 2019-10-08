@@ -2533,25 +2533,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
         ApiResponse<GetSpendingStatPaginatedResponse> GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null);
         /// <summary>
-        /// Get current entities state
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetStateResponse</returns>
-        GetStateResponse GetState ();
-
-        /// <summary>
-        /// Get current entities state
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetStateResponse</returns>
-        ApiResponse<GetStateResponse> GetStateWithHttpInfo ();
-        /// <summary>
         /// Get sub-account information
         /// </summary>
         /// <remarks>
@@ -2837,25 +2818,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Get minimal valid apps versions
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetVersionsResponse</returns>
-        GetVersionsResponse GetVersions ();
-
-        /// <summary>
-        /// Get minimal valid apps versions
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetVersionsResponse</returns>
-        ApiResponse<GetVersionsResponse> GetVersionsWithHttpInfo ();
-        /// <summary>
         /// Invite a new sub-account
         /// </summary>
         /// <remarks>
@@ -2981,25 +2943,6 @@ namespace TextMagicClient.Api
         /// <param name="muteChatsBulkInputObject"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
-        /// <summary>
-        /// Ping
-        /// </summary>
-        /// <remarks>
-        /// Make a simple ping request
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PingResponse</returns>
-        PingResponse Ping ();
-
-        /// <summary>
-        /// Ping
-        /// </summary>
-        /// <remarks>
-        /// Make a simple ping request
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PingResponse</returns>
-        ApiResponse<PingResponse> PingWithHttpInfo ();
         /// <summary>
         /// Reopen chats (bulk)
         /// </summary>
@@ -6503,25 +6446,6 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null);
         /// <summary>
-        /// Get current entities state
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetStateResponse</returns>
-        System.Threading.Tasks.Task<GetStateResponse> GetStateAsync ();
-
-        /// <summary>
-        /// Get current entities state
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetStateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetStateResponse>> GetStateAsyncWithHttpInfo ();
-        /// <summary>
         /// Get sub-account information
         /// </summary>
         /// <remarks>
@@ -6807,25 +6731,6 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Get minimal valid apps versions
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetVersionsResponse</returns>
-        System.Threading.Tasks.Task<GetVersionsResponse> GetVersionsAsync ();
-
-        /// <summary>
-        /// Get minimal valid apps versions
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetVersionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetVersionsResponse>> GetVersionsAsyncWithHttpInfo ();
-        /// <summary>
         /// Invite a new sub-account
         /// </summary>
         /// <remarks>
@@ -6951,25 +6856,6 @@ namespace TextMagicClient.Api
         /// <param name="muteChatsBulkInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
-        /// <summary>
-        /// Ping
-        /// </summary>
-        /// <remarks>
-        /// Make a simple ping request
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PingResponse</returns>
-        System.Threading.Tasks.Task<PingResponse> PingAsync ();
-
-        /// <summary>
-        /// Ping
-        /// </summary>
-        /// <remarks>
-        /// Make a simple ping request
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PingResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PingResponse>> PingAsyncWithHttpInfo ();
         /// <summary>
         /// Reopen chats (bulk)
         /// </summary>
@@ -24909,141 +24795,6 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get current entities state 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetStateResponse</returns>
-        public GetStateResponse GetState ()
-        {
-             ApiResponse<GetStateResponse> localVarResponse = GetStateWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get current entities state 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetStateResponse</returns>
-        public ApiResponse< GetStateResponse > GetStateWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/state";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetState", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetStateResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetStateResponse)));
-        }
-
-        /// <summary>
-        /// Get current entities state 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetStateResponse</returns>
-        public async System.Threading.Tasks.Task<GetStateResponse> GetStateAsync ()
-        {
-             ApiResponse<GetStateResponse> localVarResponse = await GetStateAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get current entities state 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetStateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetStateResponse>> GetStateAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/state";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetState", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetStateResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetStateResponse)));
-        }
-
-        /// <summary>
         /// Get sub-account information 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26969,141 +26720,6 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Get minimal valid apps versions 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetVersionsResponse</returns>
-        public GetVersionsResponse GetVersions ()
-        {
-             ApiResponse<GetVersionsResponse> localVarResponse = GetVersionsWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get minimal valid apps versions 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetVersionsResponse</returns>
-        public ApiResponse< GetVersionsResponse > GetVersionsWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/versions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetVersions", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetVersionsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetVersionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetVersionsResponse)));
-        }
-
-        /// <summary>
-        /// Get minimal valid apps versions 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetVersionsResponse</returns>
-        public async System.Threading.Tasks.Task<GetVersionsResponse> GetVersionsAsync ()
-        {
-             ApiResponse<GetVersionsResponse> localVarResponse = await GetVersionsAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get minimal valid apps versions 
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetVersionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetVersionsResponse>> GetVersionsAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/versions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetVersions", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetVersionsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetVersionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetVersionsResponse)));
-        }
-
-        /// <summary>
         /// Invite a new sub-account 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -28047,141 +27663,6 @@ namespace TextMagicClient.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
-        }
-
-        /// <summary>
-        /// Ping Make a simple ping request
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PingResponse</returns>
-        public PingResponse Ping ()
-        {
-             ApiResponse<PingResponse> localVarResponse = PingWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Ping Make a simple ping request
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PingResponse</returns>
-        public ApiResponse< PingResponse > PingWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/ping";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("Ping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<PingResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
-        }
-
-        /// <summary>
-        /// Ping Make a simple ping request
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PingResponse</returns>
-        public async System.Threading.Tasks.Task<PingResponse> PingAsync ()
-        {
-             ApiResponse<PingResponse> localVarResponse = await PingAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Ping Make a simple ping request
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PingResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PingResponse>> PingAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/ping";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("Ping", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<PingResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
         }
 
         /// <summary>

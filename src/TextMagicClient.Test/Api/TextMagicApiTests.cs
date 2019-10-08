@@ -1484,17 +1484,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetState
-        /// </summary>
-        [Test]
-        public void GetStateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetState();
-            //Assert.IsInstanceOf<GetStateResponse> (response, "response is GetStateResponse");
-        }
-        
-        /// <summary>
         /// Test GetSubaccount
         /// </summary>
         [Test]
@@ -1657,17 +1646,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetVersions
-        /// </summary>
-        [Test]
-        public void GetVersionsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetVersions();
-            //Assert.IsInstanceOf<GetVersionsResponse> (response, "response is GetVersionsResponse");
-        }
-        
-        /// <summary>
         /// Test InviteSubaccount
         /// </summary>
         [Test]
@@ -1737,17 +1715,6 @@ namespace TextMagicClient.Test
             //MuteChatsBulkInputObject muteChatsBulkInputObject = null;
             //instance.MuteChatsBulk(muteChatsBulkInputObject);
             
-        }
-        
-        /// <summary>
-        /// Test Ping
-        /// </summary>
-        [Test]
-        public void PingTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.Ping();
-            //Assert.IsInstanceOf<PingResponse> (response, "response is PingResponse");
         }
         
         /// <summary>

@@ -114,7 +114,6 @@ Method | HTTP request | Description
 [**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all your approved Sender IDs
 [**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current sender settings
 [**GetSpendingStat**](TextMagicApi.md#getspendingstat) | **GET** /api/v2/stats/spending | Get spending statistics
-[**GetState**](TextMagicApi.md#getstate) | **GET** /api/v2/state | Get current entities state
 [**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**GetSubaccounts**](TextMagicApi.md#getsubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
 [**GetSubaccountsWithTokens**](TextMagicApi.md#getsubaccountswithtokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
@@ -128,14 +127,12 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**GetVersions**](TextMagicApi.md#getversions) | **GET** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#mergesurveynodes) | **POST** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#mutechat) | **POST** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#mutechatsbulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
-[**Ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Ping
 [**ReopenChatsBulk**](TextMagicApi.md#reopenchatsbulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#requestnewsubaccounttoken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#requestsenderid) | **POST** /api/v2/senderids | Apply for a new Sender ID
@@ -7317,65 +7314,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getstate"></a>
-# **GetState**
-> GetStateResponse GetState ()
-
-Get current entities state
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetStateExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Get current entities state
-                GetStateResponse result = apiInstance.GetState();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetState: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetStateResponse**](GetStateResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getsubaccount"></a>
 # **GetSubaccount**
 > User GetSubaccount (int? id)
@@ -8215,65 +8153,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getversions"></a>
-# **GetVersions**
-> GetVersionsResponse GetVersions ()
-
-Get minimal valid apps versions
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class GetVersionsExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Get minimal valid apps versions
-                GetVersionsResponse result = apiInstance.GetVersions();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.GetVersions: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetVersionsResponse**](GetVersionsResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="invitesubaccount"></a>
 # **InviteSubaccount**
 > void InviteSubaccount (InviteSubaccountInputObject inviteSubaccountInputObject)
@@ -8650,67 +8529,6 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="ping"></a>
-# **Ping**
-> PingResponse Ping ()
-
-Ping
-
-Make a simple ping request
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using TextMagicClient.Api;
-using TextMagicClient.Client;
-using TextMagicClient.Model;
-
-namespace Example
-{
-    public class PingExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new TextMagicApi();
-
-            try
-            {
-                // Ping
-                PingResponse result = apiInstance.Ping();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TextMagicApi.Ping: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**PingResponse**](PingResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
