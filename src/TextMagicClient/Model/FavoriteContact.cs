@@ -31,8 +31,9 @@ namespace TextMagicClient.Model
     public partial class FavoriteContact :  IEquatable<FavoriteContact>, IValidatableObject
     {
         /// <summary>
-        /// Defines EntityType
+        /// Entity type which should be marked as **favourite**.
         /// </summary>
+        /// <value>Entity type which should be marked as **favourite**.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EntityTypeEnum
         {
@@ -51,8 +52,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// Gets or Sets EntityType
+        /// Entity type which should be marked as **favourite**.
         /// </summary>
+        /// <value>Entity type which should be marked as **favourite**.</value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum EntityType { get; set; }
         /// <summary>
@@ -64,10 +66,10 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="FavoriteContact" /> class.
         /// </summary>
         /// <param name="entityId">entityId (required).</param>
-        /// <param name="entityType">entityType (required).</param>
-        /// <param name="primaryLabel">Contact first name/last name if entityType is \\&#39;contact\\&#39;, List name if entity type is \\&#39;list\\&#39; (required).</param>
-        /// <param name="secondaryLabel">Phone number if entityType is \\&#39;contact\\&#39;, List contacts number if entity type is \\&#39;list\\&#39; (required).</param>
-        /// <param name="tertiaryLabel">Contact country if entityType is \\&#39;contact\\&#39; else null (required).</param>
+        /// <param name="entityType">Entity type which should be marked as **favourite**. (required).</param>
+        /// <param name="primaryLabel">Contact first name/last name if entityType is **contact**, List name if entity type is **list** (required).</param>
+        /// <param name="secondaryLabel">Phone number if entityType is **contact**, List contacts number if entity type is **list** (required).</param>
+        /// <param name="tertiaryLabel">Contact country if entityType is **contact** else null (required).</param>
         /// <param name="avatar">avatar (required).</param>
         public FavoriteContact(int? entityId = default(int?), EntityTypeEnum entityType = default(EntityTypeEnum), string primaryLabel = default(string), string secondaryLabel = default(string), string tertiaryLabel = default(string), string avatar = default(string))
         {
@@ -135,23 +137,23 @@ namespace TextMagicClient.Model
 
 
         /// <summary>
-        /// Contact first name/last name if entityType is \\&#39;contact\\&#39;, List name if entity type is \\&#39;list\\&#39;
+        /// Contact first name/last name if entityType is **contact**, List name if entity type is **list**
         /// </summary>
-        /// <value>Contact first name/last name if entityType is \\&#39;contact\\&#39;, List name if entity type is \\&#39;list\\&#39;</value>
+        /// <value>Contact first name/last name if entityType is **contact**, List name if entity type is **list**</value>
         [DataMember(Name="primaryLabel", EmitDefaultValue=false)]
         public string PrimaryLabel { get; set; }
 
         /// <summary>
-        /// Phone number if entityType is \\&#39;contact\\&#39;, List contacts number if entity type is \\&#39;list\\&#39;
+        /// Phone number if entityType is **contact**, List contacts number if entity type is **list**
         /// </summary>
-        /// <value>Phone number if entityType is \\&#39;contact\\&#39;, List contacts number if entity type is \\&#39;list\\&#39;</value>
+        /// <value>Phone number if entityType is **contact**, List contacts number if entity type is **list**</value>
         [DataMember(Name="secondaryLabel", EmitDefaultValue=false)]
         public string SecondaryLabel { get; set; }
 
         /// <summary>
-        /// Contact country if entityType is \\&#39;contact\\&#39; else null
+        /// Contact country if entityType is **contact** else null
         /// </summary>
-        /// <value>Contact country if entityType is \\&#39;contact\\&#39; else null</value>
+        /// <value>Contact country if entityType is **contact** else null</value>
         [DataMember(Name="tertiaryLabel", EmitDefaultValue=false)]
         public string TertiaryLabel { get; set; }
 

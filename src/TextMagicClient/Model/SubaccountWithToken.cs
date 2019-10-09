@@ -31,6 +31,60 @@ namespace TextMagicClient.Model
     public partial class SubaccountWithToken :  IEquatable<SubaccountWithToken>, IValidatableObject
     {
         /// <summary>
+        /// Current account status: * **A** for Active * **T** for Trial. 
+        /// </summary>
+        /// <value>Current account status: * **A** for Active * **T** for Trial. </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum A for value: A
+            /// </summary>
+            [EnumMember(Value = "A")]
+            A = 1,
+            
+            /// <summary>
+            /// Enum T for value: T
+            /// </summary>
+            [EnumMember(Value = "T")]
+            T = 2
+        }
+
+        /// <summary>
+        /// Current account status: * **A** for Active * **T** for Trial. 
+        /// </summary>
+        /// <value>Current account status: * **A** for Active * **T** for Trial. </value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum Status { get; set; }
+        /// <summary>
+        /// Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+        /// </summary>
+        /// <value>Type of account: *   **A** for Administrator sub-account *   **U** for Regular User </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SubaccountTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum A for value: A
+            /// </summary>
+            [EnumMember(Value = "A")]
+            A = 1,
+            
+            /// <summary>
+            /// Enum U for value: U
+            /// </summary>
+            [EnumMember(Value = "U")]
+            U = 2
+        }
+
+        /// <summary>
+        /// Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+        /// </summary>
+        /// <value>Type of account: *   **A** for Administrator sub-account *   **U** for Regular User </value>
+        [DataMember(Name="subaccountType", EmitDefaultValue=false)]
+        public SubaccountTypeEnum SubaccountType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="SubaccountWithToken" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -38,24 +92,24 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubaccountWithToken" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="username">username (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="lastName">lastName (required).</param>
+        /// <param name="id">Sub-account ID. (required).</param>
+        /// <param name="username">Username. (required).</param>
+        /// <param name="firstName">Account first name. (required).</param>
+        /// <param name="lastName">Account last name. (required).</param>
         /// <param name="email">email (required).</param>
-        /// <param name="status">status (required).</param>
-        /// <param name="balance">balance (required).</param>
-        /// <param name="phone">phone (required).</param>
-        /// <param name="company">company (required).</param>
+        /// <param name="status">Current account status: * **A** for Active * **T** for Trial.  (required).</param>
+        /// <param name="balance">Account balance (in account currency). (required).</param>
+        /// <param name="phone">Contact phone number. (required).</param>
+        /// <param name="company">Account company name. (required).</param>
         /// <param name="currency">currency (required).</param>
         /// <param name="country">country (required).</param>
         /// <param name="timezone">timezone (required).</param>
-        /// <param name="subaccountType">subaccountType (required).</param>
-        /// <param name="emailAccepted">emailAccepted (required).</param>
-        /// <param name="phoneAccepted">phoneAccepted (required).</param>
+        /// <param name="subaccountType">Type of account: *   **A** for Administrator sub-account *   **U** for Regular User  (required).</param>
+        /// <param name="emailAccepted">Is account has confirmed Email. (required).</param>
+        /// <param name="phoneAccepted">Is account has confirmed Phone number. (required).</param>
         /// <param name="avatar">avatar (required).</param>
-        /// <param name="token">token (required).</param>
-        public SubaccountWithToken(int? id = default(int?), string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), string status = default(string), double? balance = default(double?), string phone = default(string), string company = default(string), Currency currency = default(Currency), Country country = default(Country), Timezone timezone = default(Timezone), string subaccountType = default(string), bool? emailAccepted = default(bool?), bool? phoneAccepted = default(bool?), UserImage avatar = default(UserImage), string token = default(string))
+        /// <param name="token">Access token of account. (required).</param>
+        public SubaccountWithToken(int? id = default(int?), string username = default(string), string firstName = default(string), string lastName = default(string), string email = default(string), StatusEnum status = default(StatusEnum), double? balance = default(double?), string phone = default(string), string company = default(string), Currency currency = default(Currency), Country country = default(Country), Timezone timezone = default(Timezone), SubaccountTypeEnum subaccountType = default(SubaccountTypeEnum), bool? emailAccepted = default(bool?), bool? phoneAccepted = default(bool?), UserImage avatar = default(UserImage), string token = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -213,26 +267,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Sub-account ID.
         /// </summary>
+        /// <value>Sub-account ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Username
+        /// Username.
         /// </summary>
+        /// <value>Username.</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Account first name.
         /// </summary>
+        /// <value>Account first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Account last name.
         /// </summary>
+        /// <value>Account last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
@@ -242,27 +300,25 @@ namespace TextMagicClient.Model
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Balance
+        /// Account balance (in account currency).
         /// </summary>
+        /// <value>Account balance (in account currency).</value>
         [DataMember(Name="balance", EmitDefaultValue=false)]
         public double? Balance { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Contact phone number.
         /// </summary>
+        /// <value>Contact phone number.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Company
+        /// Account company name.
         /// </summary>
+        /// <value>Account company name.</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
 
@@ -284,21 +340,18 @@ namespace TextMagicClient.Model
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public Timezone Timezone { get; set; }
 
-        /// <summary>
-        /// Gets or Sets SubaccountType
-        /// </summary>
-        [DataMember(Name="subaccountType", EmitDefaultValue=false)]
-        public string SubaccountType { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAccepted
+        /// Is account has confirmed Email.
         /// </summary>
+        /// <value>Is account has confirmed Email.</value>
         [DataMember(Name="emailAccepted", EmitDefaultValue=false)]
         public bool? EmailAccepted { get; set; }
 
         /// <summary>
-        /// Gets or Sets PhoneAccepted
+        /// Is account has confirmed Phone number.
         /// </summary>
+        /// <value>Is account has confirmed Phone number.</value>
         [DataMember(Name="phoneAccepted", EmitDefaultValue=false)]
         public bool? PhoneAccepted { get; set; }
 
@@ -309,8 +362,9 @@ namespace TextMagicClient.Model
         public UserImage Avatar { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token
+        /// Access token of account.
         /// </summary>
+        /// <value>Access token of account.</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
 
