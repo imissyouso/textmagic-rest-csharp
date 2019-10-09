@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **MessageTime** | **DateTime?** | Time when message arrived at TextMagic. | 
 **Text** | **string** | Message text. | 
 **Receiver** | **string** | Receiver phone number. | 
-**Status** | **string** | Message status (for chats outbound only). See [message delivery statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details. | 
+**Status** | **string** | Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details. | 
 **FirstName** | **string** | Contact first name. | 
 **LastName** | **string** | Contact last name. | 
 **SessionId** | **int?** |  | 

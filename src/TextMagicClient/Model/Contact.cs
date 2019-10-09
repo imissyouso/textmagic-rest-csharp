@@ -47,7 +47,7 @@ namespace TextMagicClient.Model
         /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
         /// <param name="email">Contact email address. (required).</param>
         /// <param name="country">Contact country. (required).</param>
-        /// <param name="customFields">See [Custom Fields](/docs/api/custom-fields/) section. (required).</param>
+        /// <param name="customFields">See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section. (required).</param>
         /// <param name="user">user (required).</param>
         /// <param name="lists">lists (required).</param>
         /// <param name="phoneType">phoneType (required).</param>
@@ -254,9 +254,9 @@ namespace TextMagicClient.Model
         public Country Country { get; set; }
 
         /// <summary>
-        /// See [Custom Fields](/docs/api/custom-fields/) section.
+        /// See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section.
         /// </summary>
-        /// <value>See [Custom Fields](/docs/api/custom-fields/) section.</value>
+        /// <value>See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section.</value>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public List<ContactCustomField> CustomFields { get; set; }
 

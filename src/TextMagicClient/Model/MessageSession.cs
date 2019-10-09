@@ -40,9 +40,9 @@ namespace TextMagicClient.Model
         /// </summary>
         /// <param name="id">Session ID. (required).</param>
         /// <param name="startTime">Session creation time. (required).</param>
-        /// <param name="text">Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags.  (required).</param>
-        /// <param name="source">*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/)  (required).</param>
-        /// <param name="referenceId">Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details).  (required).</param>
+        /// <param name="text">Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/tag#Outbound-Messages) for details), it may contain template tags.  (required).</param>
+        /// <param name="source">*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) *   **X** for [Distribution lists](http://docs.textmagictesting.com/tag#Distribution-Lists)  (required).</param>
+        /// <param name="referenceId">Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) for details).  (required).</param>
         /// <param name="price">Session cost (in account currency). (required).</param>
         /// <param name="numbersCount">Session recipient count. (required).</param>
         /// <param name="destination">destination (required).</param>
@@ -137,23 +137,23 @@ namespace TextMagicClient.Model
         public string StartTime { get; set; }
 
         /// <summary>
-        /// Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags. 
+        /// Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/tag#Outbound-Messages) for details), it may contain template tags. 
         /// </summary>
-        /// <value>Session text. If a template was used for the session text (see [Messages: Send](#tag/Outbound-Messages) for details), it may contain template tags. </value>
+        /// <value>Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/tag#Outbound-Messages) for details), it may contain template tags. </value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// *   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/) 
+        /// *   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) *   **X** for [Distribution lists](http://docs.textmagictesting.com/tag#Distribution-Lists) 
         /// </summary>
-        /// <value>*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](/docs/api/send-email-to-sms/) *   **X** for [Distribution lists](/docs/api/distribution-lists/) </value>
+        /// <value>*   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) *   **X** for [Distribution lists](http://docs.textmagictesting.com/tag#Distribution-Lists) </value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details). 
+        /// Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) for details). 
         /// </summary>
-        /// <value>Custom reference ID (see [Messages: Send](/docs/api/send-sms/) for details). </value>
+        /// <value>Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/tag#Send-Email-to-SMS) for details). </value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
         public string ReferenceId { get; set; }
 

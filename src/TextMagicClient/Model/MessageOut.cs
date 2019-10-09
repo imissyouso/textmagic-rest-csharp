@@ -143,7 +143,7 @@ namespace TextMagicClient.Model
         /// <param name="deleted">deleted.</param>
         /// <param name="charset">Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  (required).</param>
         /// <param name="charsetLabel">charsetLabel (required).</param>
-        /// <param name="firstName">TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID).  (required).</param>
+        /// <param name="firstName">Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts) (even if you submitted phone number instead of contact ID).  (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="country">Two-letter ISO country code of the recipient phone number.  (required).</param>
         /// <param name="phone">phone.</param>
@@ -368,9 +368,9 @@ namespace TextMagicClient.Model
         public string CharsetLabel { get; set; }
 
         /// <summary>
-        /// TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
+        /// Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts) (even if you submitted phone number instead of contact ID). 
         /// </summary>
-        /// <value>TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). </value>
+        /// <value>Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts) (even if you submitted phone number instead of contact ID). </value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 

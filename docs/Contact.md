@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | 
 **Email** | **string** | Contact email address. | 
 **Country** | [**Country**](Country.md) | Contact country. | 
-**CustomFields** | [**List&lt;ContactCustomField&gt;**](ContactCustomField.md) | See [Custom Fields](/docs/api/custom-fields/) section. | 
+**CustomFields** | [**List&lt;ContactCustomField&gt;**](ContactCustomField.md) | See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section. | 
 **User** | [**User**](User.md) |  | 
 **Lists** | **List&lt;List&gt;** |  | 
 **PhoneType** | **string** |  | 
