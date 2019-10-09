@@ -43,7 +43,7 @@ namespace TextMagicClient.Model
         /// <param name="phone">Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). (required).</param>
         /// <param name="email">Contact email address..</param>
         /// <param name="companyName">Contact company name.</param>
-        /// <param name="lists">Comma-separated [list](http://docs.textmagictesting.com/section#Lists) ID. Each contact must be assigned to at least one list. (required).</param>
+        /// <param name="lists">Comma-separated [list](http://docs.textmagictesting.com/#section/Lists) ID. Each contact must be assigned to at least one list. (required).</param>
         /// <param name="favorited">Is contact favorited.</param>
         /// <param name="blocked">Is contact blocked for outgoing and incoming messaging.</param>
         /// <param name="type">Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).</param>
@@ -118,9 +118,9 @@ namespace TextMagicClient.Model
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// Comma-separated [list](http://docs.textmagictesting.com/section#Lists) ID. Each contact must be assigned to at least one list.
+        /// Comma-separated [list](http://docs.textmagictesting.com/#section/Lists) ID. Each contact must be assigned to at least one list.
         /// </summary>
-        /// <value>Comma-separated [list](http://docs.textmagictesting.com/section#Lists) ID. Each contact must be assigned to at least one list.</value>
+        /// <value>Comma-separated [list](http://docs.textmagictesting.com/#section/Lists) ID. Each contact must be assigned to at least one list.</value>
         [DataMember(Name="lists", EmitDefaultValue=false)]
         public string Lists { get; set; }
 

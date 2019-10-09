@@ -83,7 +83,7 @@ namespace TextMagicClient.Model
         /// <param name="messageTime">Time when message arrived at TextMagic. (required).</param>
         /// <param name="text">Message text. (required).</param>
         /// <param name="receiver">Receiver phone number. (required).</param>
-        /// <param name="status">Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details. (required).</param>
+        /// <param name="status">Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. (required).</param>
         /// <param name="firstName">Contact first name. (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="sessionId">sessionId (required).</param>
@@ -217,9 +217,9 @@ namespace TextMagicClient.Model
         public string Receiver { get; set; }
 
         /// <summary>
-        /// Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details.
+        /// Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
         /// </summary>
-        /// <value>Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details.</value>
+        /// <value>Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
