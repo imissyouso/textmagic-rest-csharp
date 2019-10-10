@@ -39,7 +39,7 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="GetContactImportSessionProgressResponse" /> class.
         /// </summary>
         /// <param name="status">status (required).</param>
-        /// <param name="processed">How many contacts have been imported (required).</param>
+        /// <param name="processed">How many contacts have been imported. (required).</param>
         public GetContactImportSessionProgressResponse(int? status = default(int?), int? processed = default(int?))
         {
             // to ensure "status" is required (not null)
@@ -69,9 +69,9 @@ namespace TextMagicClient.Model
         public int? Status { get; set; }
 
         /// <summary>
-        /// How many contacts have been imported
+        /// How many contacts have been imported.
         /// </summary>
-        /// <value>How many contacts have been imported</value>
+        /// <value>How many contacts have been imported.</value>
         [DataMember(Name="processed", EmitDefaultValue=false)]
         public int? Processed { get; set; }
 

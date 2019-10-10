@@ -71,12 +71,12 @@ namespace TextMagicClient.Model
         /// </summary>
         /// <param name="entityId">Id of entity. 0 if object is a Reply (required).</param>
         /// <param name="entityType">entityType (required).</param>
-        /// <param name="value">Id of contact/list if entityType is contact/list OR phone number if entityType is reply (required).</param>
-        /// <param name="label">Name of the contact/list if entityType is contact/list OR phone number if entityType is reply (required).</param>
-        /// <param name="sharedBy">If contact or list was shared by another user then name if this user will be shown (required).</param>
-        /// <param name="avatar">avatar (required).</param>
-        /// <param name="favorited">If contact was marked as favourited (required).</param>
-        /// <param name="userId">Owner id of the contact/list (if it was shared) (required).</param>
+        /// <param name="value">Id of contact/list if entityType is contact/list OR phone number if entityType is reply. (required).</param>
+        /// <param name="label">Name of the contact/list if entityType is contact/list OR phone number if entityType is reply. (required).</param>
+        /// <param name="sharedBy">If contact or list was shared by another user then name if this user will be shown. (required).</param>
+        /// <param name="avatar">Contact avatar URI. (required).</param>
+        /// <param name="favorited">If contact has been marked as favorite. (required).</param>
+        /// <param name="userId">Owner id of the contact/list (if it was shared). (required).</param>
         /// <param name="countryName">countryName (required).</param>
         /// <param name="qposition">qposition (required).</param>
         /// <param name="rposition">rposition (required).</param>
@@ -192,43 +192,44 @@ namespace TextMagicClient.Model
 
 
         /// <summary>
-        /// Id of contact/list if entityType is contact/list OR phone number if entityType is reply
+        /// Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
         /// </summary>
-        /// <value>Id of contact/list if entityType is contact/list OR phone number if entityType is reply</value>
+        /// <value>Id of contact/list if entityType is contact/list OR phone number if entityType is reply.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Name of the contact/list if entityType is contact/list OR phone number if entityType is reply
+        /// Name of the contact/list if entityType is contact/list OR phone number if entityType is reply.
         /// </summary>
-        /// <value>Name of the contact/list if entityType is contact/list OR phone number if entityType is reply</value>
+        /// <value>Name of the contact/list if entityType is contact/list OR phone number if entityType is reply.</value>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// If contact or list was shared by another user then name if this user will be shown
+        /// If contact or list was shared by another user then name if this user will be shown.
         /// </summary>
-        /// <value>If contact or list was shared by another user then name if this user will be shown</value>
+        /// <value>If contact or list was shared by another user then name if this user will be shown.</value>
         [DataMember(Name="sharedBy", EmitDefaultValue=false)]
         public string SharedBy { get; set; }
 
         /// <summary>
-        /// Gets or Sets Avatar
+        /// Contact avatar URI.
         /// </summary>
+        /// <value>Contact avatar URI.</value>
         [DataMember(Name="avatar", EmitDefaultValue=false)]
         public string Avatar { get; set; }
 
         /// <summary>
-        /// If contact was marked as favourited
+        /// If contact has been marked as favorite.
         /// </summary>
-        /// <value>If contact was marked as favourited</value>
+        /// <value>If contact has been marked as favorite.</value>
         [DataMember(Name="favorited", EmitDefaultValue=false)]
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Owner id of the contact/list (if it was shared)
+        /// Owner id of the contact/list (if it was shared).
         /// </summary>
-        /// <value>Owner id of the contact/list (if it was shared)</value>
+        /// <value>Owner id of the contact/list (if it was shared).</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 

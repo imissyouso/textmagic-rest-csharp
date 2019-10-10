@@ -38,12 +38,12 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateInboundMessagesNotificationSettingsInputObject" /> class.
         /// </summary>
-        /// <param name="inboundMessageNotification">Should user receive notification about new incoming messages (required).</param>
-        /// <param name="includeSmsHistory">Include SMS history into notification Email (required).</param>
-        /// <param name="sendInHtmlFormat">Send Email notification in HTML format (required).</param>
-        /// <param name="alertEmail1">New message notification email 2.</param>
-        /// <param name="alertEmail2">New message notification email 2.</param>
-        /// <param name="alertEmail3">New message notification email 3.</param>
+        /// <param name="inboundMessageNotification">Should user receive notification about new incoming messages. (required).</param>
+        /// <param name="includeSmsHistory">Include SMS history into notification Email. (required).</param>
+        /// <param name="sendInHtmlFormat">Send Email notification in HTML format. (required).</param>
+        /// <param name="alertEmail1">New message notification email 2..</param>
+        /// <param name="alertEmail2">New message notification email 2..</param>
+        /// <param name="alertEmail3">New message notification email 3..</param>
         public UpdateInboundMessagesNotificationSettingsInputObject(bool? inboundMessageNotification = default(bool?), bool? includeSmsHistory = default(bool?), bool? sendInHtmlFormat = default(bool?), string alertEmail1 = default(string), string alertEmail2 = default(string), string alertEmail3 = default(string))
         {
             // to ensure "inboundMessageNotification" is required (not null)
@@ -79,44 +79,44 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Should user receive notification about new incoming messages
+        /// Should user receive notification about new incoming messages.
         /// </summary>
-        /// <value>Should user receive notification about new incoming messages</value>
+        /// <value>Should user receive notification about new incoming messages.</value>
         [DataMember(Name="inboundMessageNotification", EmitDefaultValue=false)]
         public bool? InboundMessageNotification { get; set; }
 
         /// <summary>
-        /// Include SMS history into notification Email
+        /// Include SMS history into notification Email.
         /// </summary>
-        /// <value>Include SMS history into notification Email</value>
+        /// <value>Include SMS history into notification Email.</value>
         [DataMember(Name="includeSmsHistory", EmitDefaultValue=false)]
         public bool? IncludeSmsHistory { get; set; }
 
         /// <summary>
-        /// Send Email notification in HTML format
+        /// Send Email notification in HTML format.
         /// </summary>
-        /// <value>Send Email notification in HTML format</value>
+        /// <value>Send Email notification in HTML format.</value>
         [DataMember(Name="sendInHtmlFormat", EmitDefaultValue=false)]
         public bool? SendInHtmlFormat { get; set; }
 
         /// <summary>
-        /// New message notification email 2
+        /// New message notification email 2.
         /// </summary>
-        /// <value>New message notification email 2</value>
+        /// <value>New message notification email 2.</value>
         [DataMember(Name="alertEmail1", EmitDefaultValue=false)]
         public string AlertEmail1 { get; set; }
 
         /// <summary>
-        /// New message notification email 2
+        /// New message notification email 2.
         /// </summary>
-        /// <value>New message notification email 2</value>
+        /// <value>New message notification email 2.</value>
         [DataMember(Name="alertEmail2", EmitDefaultValue=false)]
         public string AlertEmail2 { get; set; }
 
         /// <summary>
-        /// New message notification email 3
+        /// New message notification email 3.
         /// </summary>
-        /// <value>New message notification email 3</value>
+        /// <value>New message notification email 3.</value>
         [DataMember(Name="alertEmail3", EmitDefaultValue=false)]
         public string AlertEmail3 { get; set; }
 

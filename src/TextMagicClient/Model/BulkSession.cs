@@ -31,6 +31,51 @@ namespace TextMagicClient.Model
     public partial class BulkSession :  IEquatable<BulkSession>, IValidatableObject
     {
         /// <summary>
+        /// * **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
+        /// </summary>
+        /// <value>* **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum N for value: n
+            /// </summary>
+            [EnumMember(Value = "n")]
+            N = 1,
+            
+            /// <summary>
+            /// Enum W for value: w
+            /// </summary>
+            [EnumMember(Value = "w")]
+            W = 2,
+            
+            /// <summary>
+            /// Enum F for value: f
+            /// </summary>
+            [EnumMember(Value = "f")]
+            F = 3,
+            
+            /// <summary>
+            /// Enum C for value: c
+            /// </summary>
+            [EnumMember(Value = "c")]
+            C = 4,
+            
+            /// <summary>
+            /// Enum S for value: s
+            /// </summary>
+            [EnumMember(Value = "s")]
+            S = 5
+        }
+
+        /// <summary>
+        /// * **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
+        /// </summary>
+        /// <value>* **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended </value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum Status { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="BulkSession" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -38,14 +83,14 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BulkSession" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="status">status (required).</param>
-        /// <param name="itemsProcessed">itemsProcessed (required).</param>
-        /// <param name="itemsTotal">itemsTotal (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
+        /// <param name="id">Bulk Session ID. (required).</param>
+        /// <param name="status">* **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended  (required).</param>
+        /// <param name="itemsProcessed">Amount of messages which is already processed. (required).</param>
+        /// <param name="itemsTotal">Total amount of messages to be processed. (required).</param>
+        /// <param name="createdAt">Creation date and time of a Bulk Session. (required).</param>
         /// <param name="session">session (required).</param>
-        /// <param name="text">text (required).</param>
-        public BulkSession(int? id = default(int?), string status = default(string), int? itemsProcessed = default(int?), int? itemsTotal = default(int?), DateTime? createdAt = default(DateTime?), MessageSession session = default(MessageSession), string text = default(string))
+        /// <param name="text">Message text of a Bulk Session. (required).</param>
+        public BulkSession(int? id = default(int?), StatusEnum status = default(StatusEnum), int? itemsProcessed = default(int?), int? itemsTotal = default(int?), DateTime? createdAt = default(DateTime?), MessageSession session = default(MessageSession), string text = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -113,32 +158,31 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Bulk Session ID.
         /// </summary>
+        /// <value>Bulk Session ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemsProcessed
+        /// Amount of messages which is already processed.
         /// </summary>
+        /// <value>Amount of messages which is already processed.</value>
         [DataMember(Name="itemsProcessed", EmitDefaultValue=false)]
         public int? ItemsProcessed { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemsTotal
+        /// Total amount of messages to be processed.
         /// </summary>
+        /// <value>Total amount of messages to be processed.</value>
         [DataMember(Name="itemsTotal", EmitDefaultValue=false)]
         public int? ItemsTotal { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAt
+        /// Creation date and time of a Bulk Session.
         /// </summary>
+        /// <value>Creation date and time of a Bulk Session.</value>
         [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 
@@ -149,8 +193,9 @@ namespace TextMagicClient.Model
         public MessageSession Session { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        /// Message text of a Bulk Session.
         /// </summary>
+        /// <value>Message text of a Bulk Session.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 

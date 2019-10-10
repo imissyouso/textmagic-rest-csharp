@@ -38,24 +38,24 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendMessageInputObject" /> class.
         /// </summary>
-        /// <param name="text">Message text. Required if template_id is not set (required).</param>
-        /// <param name="templateId">Template used instead of message text. Required if text is not set.</param>
-        /// <param name="sendingTime">DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.</param>
-        /// <param name="sendingDateTime">Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone.</param>
-        /// <param name="sendingTimezone">ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.</param>
-        /// <param name="contacts">Comma separated array of contact resources id message will be sent to.</param>
-        /// <param name="lists">Comma separated array of list resources id message will be sent to.</param>
-        /// <param name="phones">Comma separated array of E.164 phone numbers message will be sent to (required).</param>
-        /// <param name="cutExtra">Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is false.</param>
-        /// <param name="partsCount">Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6.</param>
-        /// <param name="referenceId">Custom message reference id which can be used in your application infrastructure.</param>
-        /// <param name="from">One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery.</param>
-        /// <param name="rule">iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.</param>
-        /// <param name="createChat">Should sending method try to create new Chat(if not exist) with specified recipients. Default is false.</param>
-        /// <param name="tts">Send Text to Speech message. Default is false.</param>
-        /// <param name="local">Treat phone numbers passed in \\&#39;phones\\&#39; field as local. Default is false.</param>
-        /// <param name="localCountry">2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.</param>
-        public SendMessageInputObject(string text = default(string), int? templateId = default(int?), int? sendingTime = default(int?), string sendingDateTime = default(string), string sendingTimezone = default(string), string contacts = default(string), string lists = default(string), string phones = default(string), bool? cutExtra = default(bool?), int? partsCount = default(int?), int? referenceId = default(int?), string from = default(string), string rule = default(string), bool? createChat = default(bool?), bool? tts = default(bool?), bool? local = default(bool?), string localCountry = default(string))
+        /// <param name="text">Message text. Required if **template_id** is not set. (required).</param>
+        /// <param name="templateId">Template used instead of message text. Required if **text** is not set..</param>
+        /// <param name="sendingTime">DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now..</param>
+        /// <param name="sendingDateTime">Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to **sendingTimezone**..</param>
+        /// <param name="sendingTimezone">ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone..</param>
+        /// <param name="contacts">Comma separated array of contact resources id message will be sent to..</param>
+        /// <param name="lists">Comma separated array of list resources id message will be sent to..</param>
+        /// <param name="phones">Comma separated array of E.164 phone numbers message will be sent to. (required).</param>
+        /// <param name="cutExtra">Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to false).</param>
+        /// <param name="partsCount">Maximum message parts count (TextMagic allows sending 1 to 6 message parts)..</param>
+        /// <param name="referenceId">Custom message reference id which can be used in your application infrastructure..</param>
+        /// <param name="from">One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs)..</param>
+        /// <param name="rule">iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details..</param>
+        /// <param name="createChat">Should sending method try to create new Chat(if not exist) with specified recipients. (default to false).</param>
+        /// <param name="tts">Send Text to Speech message. (default to false).</param>
+        /// <param name="local">Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to false).</param>
+        /// <param name="localCountry">2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country..</param>
+        public SendMessageInputObject(string text = default(string), int? templateId = default(int?), int? sendingTime = default(int?), string sendingDateTime = default(string), string sendingTimezone = default(string), string contacts = default(string), string lists = default(string), string phones = default(string), bool? cutExtra = false, int? partsCount = default(int?), int? referenceId = default(int?), string from = default(string), string rule = default(string), bool? createChat = false, bool? tts = false, bool? local = false, string localCountry = default(string))
         {
             // to ensure "text" is required (not null)
             if (text == null)
@@ -81,133 +81,165 @@ namespace TextMagicClient.Model
             this.SendingTimezone = sendingTimezone;
             this.Contacts = contacts;
             this.Lists = lists;
-            this.CutExtra = cutExtra;
+            // use default value if no "cutExtra" provided
+            if (cutExtra == null)
+            {
+                this.CutExtra = false;
+            }
+            else
+            {
+                this.CutExtra = cutExtra;
+            }
             this.PartsCount = partsCount;
             this.ReferenceId = referenceId;
             this.From = from;
             this.Rule = rule;
-            this.CreateChat = createChat;
-            this.Tts = tts;
-            this.Local = local;
+            // use default value if no "createChat" provided
+            if (createChat == null)
+            {
+                this.CreateChat = false;
+            }
+            else
+            {
+                this.CreateChat = createChat;
+            }
+            // use default value if no "tts" provided
+            if (tts == null)
+            {
+                this.Tts = false;
+            }
+            else
+            {
+                this.Tts = tts;
+            }
+            // use default value if no "local" provided
+            if (local == null)
+            {
+                this.Local = false;
+            }
+            else
+            {
+                this.Local = local;
+            }
             this.LocalCountry = localCountry;
         }
         
         /// <summary>
-        /// Message text. Required if template_id is not set
+        /// Message text. Required if **template_id** is not set.
         /// </summary>
-        /// <value>Message text. Required if template_id is not set</value>
+        /// <value>Message text. Required if **template_id** is not set.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Template used instead of message text. Required if text is not set
+        /// Template used instead of message text. Required if **text** is not set.
         /// </summary>
-        /// <value>Template used instead of message text. Required if text is not set</value>
+        /// <value>Template used instead of message text. Required if **text** is not set.</value>
         [DataMember(Name="templateId", EmitDefaultValue=false)]
         public int? TemplateId { get; set; }
 
         /// <summary>
-        /// DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now
+        /// DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.
         /// </summary>
-        /// <value>DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now</value>
+        /// <value>DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.</value>
         [DataMember(Name="sendingTime", EmitDefaultValue=false)]
         public int? SendingTime { get; set; }
 
         /// <summary>
-        /// Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone
+        /// Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to **sendingTimezone**.
         /// </summary>
-        /// <value>Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone</value>
+        /// <value>Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to **sendingTimezone**.</value>
         [DataMember(Name="sendingDateTime", EmitDefaultValue=false)]
         public string SendingDateTime { get; set; }
 
         /// <summary>
-        /// ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone
+        /// ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.
         /// </summary>
-        /// <value>ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone</value>
+        /// <value>ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.</value>
         [DataMember(Name="sendingTimezone", EmitDefaultValue=false)]
         public string SendingTimezone { get; set; }
 
         /// <summary>
-        /// Comma separated array of contact resources id message will be sent to
+        /// Comma separated array of contact resources id message will be sent to.
         /// </summary>
-        /// <value>Comma separated array of contact resources id message will be sent to</value>
+        /// <value>Comma separated array of contact resources id message will be sent to.</value>
         [DataMember(Name="contacts", EmitDefaultValue=false)]
         public string Contacts { get; set; }
 
         /// <summary>
-        /// Comma separated array of list resources id message will be sent to
+        /// Comma separated array of list resources id message will be sent to.
         /// </summary>
-        /// <value>Comma separated array of list resources id message will be sent to</value>
+        /// <value>Comma separated array of list resources id message will be sent to.</value>
         [DataMember(Name="lists", EmitDefaultValue=false)]
         public string Lists { get; set; }
 
         /// <summary>
-        /// Comma separated array of E.164 phone numbers message will be sent to
+        /// Comma separated array of E.164 phone numbers message will be sent to.
         /// </summary>
-        /// <value>Comma separated array of E.164 phone numbers message will be sent to</value>
+        /// <value>Comma separated array of E.164 phone numbers message will be sent to.</value>
         [DataMember(Name="phones", EmitDefaultValue=false)]
         public string Phones { get; set; }
 
         /// <summary>
-        /// Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is false
+        /// Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.
         /// </summary>
-        /// <value>Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. Default is false</value>
+        /// <value>Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.</value>
         [DataMember(Name="cutExtra", EmitDefaultValue=false)]
         public bool? CutExtra { get; set; }
 
         /// <summary>
-        /// Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6
+        /// Maximum message parts count (TextMagic allows sending 1 to 6 message parts).
         /// </summary>
-        /// <value>Maximum message parts count (TextMagic allows sending 1 to 6 message parts). Default is 6</value>
+        /// <value>Maximum message parts count (TextMagic allows sending 1 to 6 message parts).</value>
         [DataMember(Name="partsCount", EmitDefaultValue=false)]
         public int? PartsCount { get; set; }
 
         /// <summary>
-        /// Custom message reference id which can be used in your application infrastructure
+        /// Custom message reference id which can be used in your application infrastructure.
         /// </summary>
-        /// <value>Custom message reference id which can be used in your application infrastructure</value>
+        /// <value>Custom message reference id which can be used in your application infrastructure.</value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
         public int? ReferenceId { get; set; }
 
         /// <summary>
-        /// One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery
+        /// One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
         /// </summary>
-        /// <value>One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery</value>
+        /// <value>One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details
+        /// iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
         /// </summary>
-        /// <value>iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details</value>
+        /// <value>iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.</value>
         [DataMember(Name="rule", EmitDefaultValue=false)]
         public string Rule { get; set; }
 
         /// <summary>
-        /// Should sending method try to create new Chat(if not exist) with specified recipients. Default is false
+        /// Should sending method try to create new Chat(if not exist) with specified recipients.
         /// </summary>
-        /// <value>Should sending method try to create new Chat(if not exist) with specified recipients. Default is false</value>
+        /// <value>Should sending method try to create new Chat(if not exist) with specified recipients.</value>
         [DataMember(Name="createChat", EmitDefaultValue=false)]
         public bool? CreateChat { get; set; }
 
         /// <summary>
-        /// Send Text to Speech message. Default is false
+        /// Send Text to Speech message.
         /// </summary>
-        /// <value>Send Text to Speech message. Default is false</value>
+        /// <value>Send Text to Speech message.</value>
         [DataMember(Name="tts", EmitDefaultValue=false)]
         public bool? Tts { get; set; }
 
         /// <summary>
-        /// Treat phone numbers passed in \\&#39;phones\\&#39; field as local. Default is false
+        /// Treat phone numbers passed in \\&#39;phones\\&#39; field as local.
         /// </summary>
-        /// <value>Treat phone numbers passed in \\&#39;phones\\&#39; field as local. Default is false</value>
+        /// <value>Treat phone numbers passed in \\&#39;phones\\&#39; field as local.</value>
         [DataMember(Name="local", EmitDefaultValue=false)]
         public bool? Local { get; set; }
 
         /// <summary>
-        /// 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country
+        /// 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.
         /// </summary>
-        /// <value>2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country</value>
+        /// <value>2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.</value>
         [DataMember(Name="localCountry", EmitDefaultValue=false)]
         public string LocalCountry { get; set; }
 

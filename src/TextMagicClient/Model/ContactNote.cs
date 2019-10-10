@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactNote" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        /// <param name="note">note (required).</param>
+        /// <param name="id">Contact note ID. (required).</param>
+        /// <param name="createdAt">Contact note creation time. (required).</param>
+        /// <param name="note">Contact note text. (required).</param>
         /// <param name="user">user (required).</param>
         public ContactNote(int? id = default(int?), DateTime? createdAt = default(DateTime?), string note = default(string), User user = default(User))
         {
@@ -83,20 +83,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Contact note ID.
         /// </summary>
+        /// <value>Contact note ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAt
+        /// Contact note creation time.
         /// </summary>
+        /// <value>Contact note creation time.</value>
         [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 
         /// <summary>
-        /// Gets or Sets Note
+        /// Contact note text.
         /// </summary>
+        /// <value>Contact note text.</value>
         [DataMember(Name="note", EmitDefaultValue=false)]
         public string Note { get; set; }
 

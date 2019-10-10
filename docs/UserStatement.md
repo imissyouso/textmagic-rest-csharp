@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | 
-**UserId** | **int?** | User statement ID. | 
+**Id** | **int?** | User statement ID. | 
+**UserId** | **int?** | User ID. | 
 **Date** | **DateTime?** | User statement date. | 
 **Balance** | **double?** |  | 
 **Delta** | **float?** | Balance change amount. | 

@@ -31,6 +31,39 @@ namespace TextMagicClient.Model
     public partial class MessageSession :  IEquatable<MessageSession>, IValidatableObject
     {
         /// <summary>
+        /// Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast 
+        /// </summary>
+        /// <value>Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DestinationEnum
+        {
+            
+            /// <summary>
+            /// Enum T for value: t
+            /// </summary>
+            [EnumMember(Value = "t")]
+            T = 1,
+            
+            /// <summary>
+            /// Enum S for value: s
+            /// </summary>
+            [EnumMember(Value = "s")]
+            S = 2,
+            
+            /// <summary>
+            /// Enum V for value: v
+            /// </summary>
+            [EnumMember(Value = "v")]
+            V = 3
+        }
+
+        /// <summary>
+        /// Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast 
+        /// </summary>
+        /// <value>Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast </value>
+        [DataMember(Name="destination", EmitDefaultValue=false)]
+        public DestinationEnum Destination { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MessageSession" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -45,8 +78,8 @@ namespace TextMagicClient.Model
         /// <param name="referenceId">Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) for details).  (required).</param>
         /// <param name="price">Session cost (in account currency). (required).</param>
         /// <param name="numbersCount">Session recipient count. (required).</param>
-        /// <param name="destination">destination (required).</param>
-        public MessageSession(int? id = default(int?), string startTime = default(string), string text = default(string), string source = default(string), string referenceId = default(string), decimal? price = default(decimal?), int? numbersCount = default(int?), string destination = default(string))
+        /// <param name="destination">Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast  (required).</param>
+        public MessageSession(int? id = default(int?), string startTime = default(string), string text = default(string), string source = default(string), string referenceId = default(string), decimal? price = default(decimal?), int? numbersCount = default(int?), DestinationEnum destination = default(DestinationEnum))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -171,11 +204,6 @@ namespace TextMagicClient.Model
         [DataMember(Name="numbersCount", EmitDefaultValue=false)]
         public int? NumbersCount { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Destination
-        /// </summary>
-        [DataMember(Name="destination", EmitDefaultValue=false)]
-        public string Destination { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

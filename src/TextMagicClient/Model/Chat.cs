@@ -31,6 +31,78 @@ namespace TextMagicClient.Model
     public partial class Chat :  IEquatable<Chat>, IValidatableObject
     {
         /// <summary>
+        /// Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
+        /// </summary>
+        /// <value>Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum A for value: a
+            /// </summary>
+            [EnumMember(Value = "a")]
+            A = 1,
+            
+            /// <summary>
+            /// Enum C for value: c
+            /// </summary>
+            [EnumMember(Value = "c")]
+            C = 2,
+            
+            /// <summary>
+            /// Enum D for value: d
+            /// </summary>
+            [EnumMember(Value = "d")]
+            D = 3
+        }
+
+        /// <summary>
+        /// Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
+        /// </summary>
+        /// <value>Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted </value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum Status { get; set; }
+        /// <summary>
+        /// Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message 
+        /// </summary>
+        /// <value>Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum
+        {
+            
+            /// <summary>
+            /// Enum Ci for value: ci
+            /// </summary>
+            [EnumMember(Value = "ci")]
+            Ci = 1,
+            
+            /// <summary>
+            /// Enum Co for value: co
+            /// </summary>
+            [EnumMember(Value = "co")]
+            Co = 2,
+            
+            /// <summary>
+            /// Enum I for value: i
+            /// </summary>
+            [EnumMember(Value = "i")]
+            I = 3,
+            
+            /// <summary>
+            /// Enum O for value: o
+            /// </summary>
+            [EnumMember(Value = "o")]
+            O = 4
+        }
+
+        /// <summary>
+        /// Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message 
+        /// </summary>
+        /// <value>Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message </value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum Direction { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -42,18 +114,18 @@ namespace TextMagicClient.Model
         /// <param name="originalId">originalId (required).</param>
         /// <param name="phone">Chat partner phone number. (required).</param>
         /// <param name="contact">contact (required).</param>
-        /// <param name="unsubscribedContactId">unsubscribedContactId (required).</param>
-        /// <param name="unread">Unread incoming messages count. (required).</param>
+        /// <param name="unsubscribedContactId">If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers). (required).</param>
+        /// <param name="unread">Total unread incoming messages. (required).</param>
         /// <param name="updatedAt">Time when last incoming message arrived at this chat. (required).</param>
-        /// <param name="status">status (required).</param>
-        /// <param name="mute">mute (required).</param>
-        /// <param name="lastMessage">lastMessage (required).</param>
-        /// <param name="direction">direction (required).</param>
-        /// <param name="from">from (required).</param>
-        /// <param name="mutedUntil">mutedUntil (required).</param>
-        /// <param name="timeLeftMute">timeLeftMute (required).</param>
+        /// <param name="status">Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted  (required).</param>
+        /// <param name="mute">Indicates when chat is muted. (required).</param>
+        /// <param name="lastMessage">The last message content of a chat. (required).</param>
+        /// <param name="direction">Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message  (required).</param>
+        /// <param name="from">If filled then value will be used as a sender number for all outgoing messages of a chat. (required).</param>
+        /// <param name="mutedUntil">Date and time until chat will be mutted. (required).</param>
+        /// <param name="timeLeftMute">Time left till chat will be unmutted (seconds). (required).</param>
         /// <param name="country">country (required).</param>
-        public Chat(int? id = default(int?), int? originalId = default(int?), string phone = default(string), Contact contact = default(Contact), int? unsubscribedContactId = default(int?), int? unread = default(int?), DateTime? updatedAt = default(DateTime?), string status = default(string), int? mute = default(int?), string lastMessage = default(string), string direction = default(string), string from = default(string), string mutedUntil = default(string), int? timeLeftMute = default(int?), Country country = default(Country))
+        public Chat(int? id = default(int?), int? originalId = default(int?), string phone = default(string), Contact contact = default(Contact), int? unsubscribedContactId = default(int?), int? unread = default(int?), DateTime? updatedAt = default(DateTime?), StatusEnum status = default(StatusEnum), int? mute = default(int?), string lastMessage = default(string), DirectionEnum direction = default(DirectionEnum), string from = default(string), DateTime? mutedUntil = default(DateTime?), int? timeLeftMute = default(int?), Country country = default(Country))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -219,15 +291,16 @@ namespace TextMagicClient.Model
         public Contact Contact { get; set; }
 
         /// <summary>
-        /// Gets or Sets UnsubscribedContactId
+        /// If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
         /// </summary>
+        /// <value>If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).</value>
         [DataMember(Name="unsubscribedContactId", EmitDefaultValue=false)]
         public int? UnsubscribedContactId { get; set; }
 
         /// <summary>
-        /// Unread incoming messages count.
+        /// Total unread incoming messages.
         /// </summary>
-        /// <value>Unread incoming messages count.</value>
+        /// <value>Total unread incoming messages.</value>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public int? Unread { get; set; }
 
@@ -238,45 +311,40 @@ namespace TextMagicClient.Model
         [DataMember(Name="updatedAt", EmitDefaultValue=false)]
         public DateTime? UpdatedAt { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Mute
+        /// Indicates when chat is muted.
         /// </summary>
+        /// <value>Indicates when chat is muted.</value>
         [DataMember(Name="mute", EmitDefaultValue=false)]
         public int? Mute { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastMessage
+        /// The last message content of a chat.
         /// </summary>
+        /// <value>The last message content of a chat.</value>
         [DataMember(Name="lastMessage", EmitDefaultValue=false)]
         public string LastMessage { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
 
         /// <summary>
-        /// Gets or Sets From
+        /// If filled then value will be used as a sender number for all outgoing messages of a chat.
         /// </summary>
+        /// <value>If filled then value will be used as a sender number for all outgoing messages of a chat.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// Gets or Sets MutedUntil
+        /// Date and time until chat will be mutted.
         /// </summary>
+        /// <value>Date and time until chat will be mutted.</value>
         [DataMember(Name="mutedUntil", EmitDefaultValue=false)]
-        public string MutedUntil { get; set; }
+        public DateTime? MutedUntil { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeLeftMute
+        /// Time left till chat will be unmutted (seconds).
         /// </summary>
+        /// <value>Time left till chat will be unmutted (seconds).</value>
         [DataMember(Name="timeLeftMute", EmitDefaultValue=false)]
         public int? TimeLeftMute { get; set; }
 

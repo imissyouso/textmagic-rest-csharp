@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetAvailableDedicatedNumbersResponse" /> class.
         /// </summary>
-        /// <param name="numbers">Array of phone number strings. (required).</param>
+        /// <param name="numbers">Array of phone numbers. (required).</param>
         /// <param name="price">Dedicated number monthly fee for this country. Returned in current [account](http://docs.textmagictesting.com/#tag/User) currency. (required).</param>
         public GetAvailableDedicatedNumbersResponse(List<string> numbers = default(List<string>), float? price = default(float?))
         {
@@ -63,9 +63,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Array of phone number strings.
+        /// Array of phone numbers.
         /// </summary>
-        /// <value>Array of phone number strings.</value>
+        /// <value>Array of phone numbers.</value>
         [DataMember(Name="numbers", EmitDefaultValue=false)]
         public List<string> Numbers { get; set; }
 

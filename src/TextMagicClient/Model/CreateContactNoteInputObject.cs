@@ -33,15 +33,16 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateContactNoteInputObject" /> class.
         /// </summary>
-        /// <param name="note">note.</param>
+        /// <param name="note">Contact Note text..</param>
         public CreateContactNoteInputObject(string note = default(string))
         {
             this.Note = note;
         }
         
         /// <summary>
-        /// Gets or Sets Note
+        /// Contact Note text.
         /// </summary>
+        /// <value>Contact Note text.</value>
         [DataMember(Name="note", EmitDefaultValue=false)]
         public string Note { get; set; }
 

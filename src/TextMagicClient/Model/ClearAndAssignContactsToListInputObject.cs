@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClearAndAssignContactsToListInputObject" /> class.
         /// </summary>
-        /// <param name="contacts">contacts (required).</param>
+        /// <param name="contacts">Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user (required).</param>
         public ClearAndAssignContactsToListInputObject(string contacts = default(string))
         {
             // to ensure "contacts" is required (not null)
@@ -53,8 +53,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Contacts
+        /// Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user
         /// </summary>
+        /// <value>Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user</value>
         [DataMember(Name="contacts", EmitDefaultValue=false)]
         public string Contacts { get; set; }
 

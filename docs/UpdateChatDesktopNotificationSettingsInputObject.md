@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PlaySound** | **bool?** | Notification sound is enable/disabled | 
-**ShowNotifications** | **bool?** | Show desktop notifications about new messages | 
+**PlaySound** | **bool?** | Enable notification sound? | 
+**ShowNotifications** | **bool?** | Show desktop notifications about new messages. | 
 **ShowText** | **bool?** | Incoming message text will be displayed in desktop notifications. | [optional] 
-**SoundId** | **int?** | Sound Id of a notification | [optional] 
+**SoundId** | **int?** | Sound Id of a notification. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

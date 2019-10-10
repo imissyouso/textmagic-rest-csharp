@@ -44,12 +44,12 @@ namespace TextMagicClient.Model
         /// <param name="email">Contact email address..</param>
         /// <param name="companyName">Contact company name.</param>
         /// <param name="lists">Comma-separated [list](http://docs.textmagictesting.com/#section/Lists) ID. Each contact must be assigned to at least one list. (required).</param>
-        /// <param name="favorited">Is contact favorited.</param>
-        /// <param name="blocked">Is contact blocked for outgoing and incoming messaging.</param>
-        /// <param name="type">Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).</param>
+        /// <param name="favorited">Is contact marked as favorite..</param>
+        /// <param name="blocked">Is contact blocked for outgoing and incoming messaging..</param>
+        /// <param name="type">Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection)..</param>
         /// <param name="customFieldValues">customFieldValues.</param>
-        /// <param name="local">Treat phone number passed in request body as local.</param>
-        /// <param name="country">2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country.</param>
+        /// <param name="local">Treat phone number passed in request body as **local**..</param>
+        /// <param name="country">2-letter ISO country code for local phone numbers, used when **local** is set to true..</param>
         public UpdateContactInputObject(string firstName = default(string), string lastName = default(string), string phone = default(string), string email = default(string), string companyName = default(string), string lists = default(string), bool? favorited = default(bool?), bool? blocked = default(bool?), int? type = default(int?), Object customFieldValues = default(Object), int? local = default(int?), string country = default(string))
         {
             // to ensure "phone" is required (not null)
@@ -125,23 +125,23 @@ namespace TextMagicClient.Model
         public string Lists { get; set; }
 
         /// <summary>
-        /// Is contact favorited
+        /// Is contact marked as favorite.
         /// </summary>
-        /// <value>Is contact favorited</value>
+        /// <value>Is contact marked as favorite.</value>
         [DataMember(Name="favorited", EmitDefaultValue=false)]
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Is contact blocked for outgoing and incoming messaging
+        /// Is contact blocked for outgoing and incoming messaging.
         /// </summary>
-        /// <value>Is contact blocked for outgoing and incoming messaging</value>
+        /// <value>Is contact blocked for outgoing and incoming messaging.</value>
         [DataMember(Name="blocked", EmitDefaultValue=false)]
         public bool? Blocked { get; set; }
 
         /// <summary>
-        /// Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection)
+        /// Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).
         /// </summary>
-        /// <value>Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection)</value>
+        /// <value>Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public int? Type { get; set; }
 
@@ -152,16 +152,16 @@ namespace TextMagicClient.Model
         public Object CustomFieldValues { get; set; }
 
         /// <summary>
-        /// Treat phone number passed in request body as local
+        /// Treat phone number passed in request body as **local**.
         /// </summary>
-        /// <value>Treat phone number passed in request body as local</value>
+        /// <value>Treat phone number passed in request body as **local**.</value>
         [DataMember(Name="local", EmitDefaultValue=false)]
         public int? Local { get; set; }
 
         /// <summary>
-        /// 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+        /// 2-letter ISO country code for local phone numbers, used when **local** is set to true.
         /// </summary>
-        /// <value>2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country</value>
+        /// <value>2-letter ISO country code for local phone numbers, used when **local** is set to true.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
 

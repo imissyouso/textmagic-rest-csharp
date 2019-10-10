@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserImage" /> class.
         /// </summary>
-        /// <param name="href">href (required).</param>
+        /// <param name="href">URI of a user avatar. (required).</param>
         public UserImage(string href = default(string))
         {
             // to ensure "href" is required (not null)
@@ -53,8 +53,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Href
+        /// URI of a user avatar.
         /// </summary>
+        /// <value>URI of a user avatar.</value>
         [DataMember(Name="href", EmitDefaultValue=false)]
         public string Href { get; set; }
 

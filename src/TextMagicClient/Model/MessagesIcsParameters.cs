@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagesIcsParameters" /> class.
         /// </summary>
-        /// <param name="text">text (required).</param>
+        /// <param name="text">Scheduled message text. (required).</param>
         /// <param name="recipients">recipients (required).</param>
         public MessagesIcsParameters(string text = default(string), MessagesIcsParametersRecipients recipients = default(MessagesIcsParametersRecipients))
         {
@@ -63,8 +63,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Text
+        /// Scheduled message text.
         /// </summary>
+        /// <value>Scheduled message text.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
 

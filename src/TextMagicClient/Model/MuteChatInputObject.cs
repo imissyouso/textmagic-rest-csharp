@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MuteChatInputObject" /> class.
         /// </summary>
-        /// <param name="id">Chat ID (required).</param>
-        /// <param name="mute">Mute value (required).</param>
-        /// <param name="_for">Mute for N hours.</param>
+        /// <param name="id">Chat ID. (required).</param>
+        /// <param name="mute">Mute notifications sound. (required).</param>
+        /// <param name="_for">Mute for N hours..</param>
         public MuteChatInputObject(int? id = default(int?), bool? mute = default(bool?), int? _for = default(int?))
         {
             // to ensure "id" is required (not null)
@@ -65,23 +65,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Chat ID
+        /// Chat ID.
         /// </summary>
-        /// <value>Chat ID</value>
+        /// <value>Chat ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Mute value
+        /// Mute notifications sound.
         /// </summary>
-        /// <value>Mute value</value>
+        /// <value>Mute notifications sound.</value>
         [DataMember(Name="mute", EmitDefaultValue=false)]
         public bool? Mute { get; set; }
 
         /// <summary>
-        /// Mute for N hours
+        /// Mute for N hours.
         /// </summary>
-        /// <value>Mute for N hours</value>
+        /// <value>Mute for N hours.</value>
         [DataMember(Name="for", EmitDefaultValue=false)]
         public int? For { get; set; }
 

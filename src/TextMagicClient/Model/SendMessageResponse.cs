@@ -38,14 +38,14 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendMessageResponse" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="href">href (required).</param>
+        /// <param name="id">Message ID. (required).</param>
+        /// <param name="href">URI of message session. (required).</param>
         /// <param name="type">type (required).</param>
-        /// <param name="sessionId">sessionId (required).</param>
-        /// <param name="bulkId">bulkId (required).</param>
+        /// <param name="sessionId">Message session ID. (required).</param>
+        /// <param name="bulkId">Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). (required).</param>
         /// <param name="messageId">messageId (required).</param>
-        /// <param name="scheduleId">scheduleId (required).</param>
-        /// <param name="chatId">chatId (required).</param>
+        /// <param name="scheduleId">Message Schedule ID. (required).</param>
+        /// <param name="chatId">Message Chat ID. (required).</param>
         public SendMessageResponse(int? id = default(int?), string href = default(string), string type = default(string), int? sessionId = default(int?), int? bulkId = default(int?), int? messageId = default(int?), int? scheduleId = default(int?), int? chatId = default(int?))
         {
             // to ensure "id" is required (not null)
@@ -123,14 +123,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Message ID.
         /// </summary>
+        /// <value>Message ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Href
+        /// URI of message session.
         /// </summary>
+        /// <value>URI of message session.</value>
         [DataMember(Name="href", EmitDefaultValue=false)]
         public string Href { get; set; }
 
@@ -141,14 +143,16 @@ namespace TextMagicClient.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets SessionId
+        /// Message session ID.
         /// </summary>
+        /// <value>Message session ID.</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public int? SessionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BulkId
+        /// Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).
         /// </summary>
+        /// <value>Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).</value>
         [DataMember(Name="bulkId", EmitDefaultValue=false)]
         public int? BulkId { get; set; }
 
@@ -159,14 +163,16 @@ namespace TextMagicClient.Model
         public int? MessageId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScheduleId
+        /// Message Schedule ID.
         /// </summary>
+        /// <value>Message Schedule ID.</value>
         [DataMember(Name="scheduleId", EmitDefaultValue=false)]
         public int? ScheduleId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChatId
+        /// Message Chat ID.
         /// </summary>
+        /// <value>Message Chat ID.</value>
         [DataMember(Name="chatId", EmitDefaultValue=false)]
         public int? ChatId { get; set; }
 

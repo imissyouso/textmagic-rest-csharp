@@ -38,8 +38,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTemplateInputObject" /> class.
         /// </summary>
-        /// <param name="name">Template name (required).</param>
-        /// <param name="content">Template text. May contain tags inside braces (required).</param>
+        /// <param name="name">Template name. (required).</param>
+        /// <param name="content">Template text. May contain tags inside braces. See [Get timezones](http://docs.textmagictesting.com/#section/Custom-fields-list-(Merge-tags)). (required).</param>
         public CreateTemplateInputObject(string name = default(string), string content = default(string))
         {
             // to ensure "name" is required (not null)
@@ -63,16 +63,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Template name
+        /// Template name.
         /// </summary>
-        /// <value>Template name</value>
+        /// <value>Template name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Template text. May contain tags inside braces
+        /// Template text. May contain tags inside braces. See [Get timezones](http://docs.textmagictesting.com/#section/Custom-fields-list-(Merge-tags)).
         /// </summary>
-        /// <value>Template text. May contain tags inside braces</value>
+        /// <value>Template text. May contain tags inside braces. See [Get timezones](http://docs.textmagictesting.com/#section/Custom-fields-list-(Merge-tags)).</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
 

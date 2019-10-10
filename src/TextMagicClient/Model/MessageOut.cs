@@ -31,9 +31,9 @@ namespace TextMagicClient.Model
     public partial class MessageOut :  IEquatable<MessageOut>, IValidatableObject
     {
         /// <summary>
-        /// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
+        /// Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
         /// </summary>
-        /// <value>Delivery status of the message. TODO: Please see the table below to see different delivery statuses. </value>
+        /// <value>Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -118,9 +118,9 @@ namespace TextMagicClient.Model
         }
 
         /// <summary>
-        /// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
+        /// Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
         /// </summary>
-        /// <value>Delivery status of the message. TODO: Please see the table below to see different delivery statuses. </value>
+        /// <value>Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. </value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
         /// <summary>
@@ -135,22 +135,22 @@ namespace TextMagicClient.Model
         /// <param name="sender">Message sender (phone number or alphanumeric Sender ID)..</param>
         /// <param name="receiver">Recipient phone number..</param>
         /// <param name="text">text (required).</param>
-        /// <param name="status">Delivery status of the message. TODO: Please see the table below to see different delivery statuses.  (required).</param>
-        /// <param name="contactId">contactId (required).</param>
-        /// <param name="sessionId">sessionId (required).</param>
+        /// <param name="status">Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.  (required).</param>
+        /// <param name="contactId">Recipient contact ID. (required).</param>
+        /// <param name="sessionId">Message Session ID of a Message. (required).</param>
         /// <param name="messageTime">Sending time. (required).</param>
         /// <param name="avatar">avatar (required).</param>
-        /// <param name="deleted">deleted.</param>
+        /// <param name="deleted">Indicates that message has been deleted..</param>
         /// <param name="charset">Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  (required).</param>
         /// <param name="charsetLabel">charsetLabel (required).</param>
         /// <param name="firstName">Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID).  (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="country">Two-letter ISO country code of the recipient phone number.  (required).</param>
-        /// <param name="phone">phone.</param>
-        /// <param name="price">price.</param>
+        /// <param name="phone">Receipent phone number..</param>
+        /// <param name="price">Message price..</param>
         /// <param name="partsCount">Message parts (multiples of 160 characters) count. (required).</param>
         /// <param name="fromEmail">fromEmail.</param>
-        /// <param name="fromNumber">fromNumber.</param>
+        /// <param name="fromNumber">Phone number which is used to send SMS..</param>
         /// <param name="smscId">smscId.</param>
         /// <param name="contact">contact.</param>
         /// <param name="source">source.</param>
@@ -324,14 +324,16 @@ namespace TextMagicClient.Model
 
 
         /// <summary>
-        /// Gets or Sets ContactId
+        /// Recipient contact ID.
         /// </summary>
+        /// <value>Recipient contact ID.</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public int? ContactId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SessionId
+        /// Message Session ID of a Message.
         /// </summary>
+        /// <value>Message Session ID of a Message.</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public int? SessionId { get; set; }
 
@@ -349,8 +351,9 @@ namespace TextMagicClient.Model
         public string Avatar { get; set; }
 
         /// <summary>
-        /// Gets or Sets Deleted
+        /// Indicates that message has been deleted.
         /// </summary>
+        /// <value>Indicates that message has been deleted.</value>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
 
@@ -389,14 +392,16 @@ namespace TextMagicClient.Model
         public string Country { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Receipent phone number.
         /// </summary>
+        /// <value>Receipent phone number.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Price
+        /// Message price.
         /// </summary>
+        /// <value>Message price.</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public float? Price { get; set; }
 
@@ -414,8 +419,9 @@ namespace TextMagicClient.Model
         public string FromEmail { get; set; }
 
         /// <summary>
-        /// Gets or Sets FromNumber
+        /// Phone number which is used to send SMS.
         /// </summary>
+        /// <value>Phone number which is used to send SMS.</value>
         [DataMember(Name="fromNumber", EmitDefaultValue=false)]
         public string FromNumber { get; set; }
 

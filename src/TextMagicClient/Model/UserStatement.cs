@@ -38,8 +38,8 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStatement" /> class.
         /// </summary>
-        /// <param name="id">id (required).</param>
-        /// <param name="userId">User statement ID. (required).</param>
+        /// <param name="id">User statement ID. (required).</param>
+        /// <param name="userId">User ID. (required).</param>
         /// <param name="date">User statement date. (required).</param>
         /// <param name="balance">balance (required).</param>
         /// <param name="delta">Balance change amount. (required).</param>
@@ -123,15 +123,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// User statement ID.
         /// </summary>
+        /// <value>User statement ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// User statement ID.
+        /// User ID.
         /// </summary>
-        /// <value>User statement ID.</value>
+        /// <value>User ID.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public int? UserId { get; set; }
 

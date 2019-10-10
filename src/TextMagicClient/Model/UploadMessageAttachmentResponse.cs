@@ -38,10 +38,10 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadMessageAttachmentResponse" /> class.
         /// </summary>
-        /// <param name="chars">chars (required).</param>
-        /// <param name="href">href (required).</param>
-        /// <param name="name">name (required).</param>
-        /// <param name="size">size (required).</param>
+        /// <param name="chars">&#x60;href&#x60; field characters count.  (required).</param>
+        /// <param name="href">This is a relative link to your file. To construct a full link, just add “[https://my.textmagic.com/”](https://my.textmagic.com/%E2%80%9D) to the beginning (like this: [https://my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9)). For most modern devices, you can omit “https://” part and write just [my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9), it will save you 8 characters.  (required).</param>
+        /// <param name="name">File name of uploaded file.  (required).</param>
+        /// <param name="size">Attachment size in bytes. (required).</param>
         public UploadMessageAttachmentResponse(int? chars = default(int?), string href = default(string), string name = default(string), int? size = default(int?))
         {
             // to ensure "chars" is required (not null)
@@ -83,26 +83,30 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Chars
+        /// &#x60;href&#x60; field characters count. 
         /// </summary>
+        /// <value>&#x60;href&#x60; field characters count. </value>
         [DataMember(Name="chars", EmitDefaultValue=false)]
         public int? Chars { get; set; }
 
         /// <summary>
-        /// Gets or Sets Href
+        /// This is a relative link to your file. To construct a full link, just add “[https://my.textmagic.com/”](https://my.textmagic.com/%E2%80%9D) to the beginning (like this: [https://my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9)). For most modern devices, you can omit “https://” part and write just [my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9), it will save you 8 characters. 
         /// </summary>
+        /// <value>This is a relative link to your file. To construct a full link, just add “[https://my.textmagic.com/”](https://my.textmagic.com/%E2%80%9D) to the beginning (like this: [https://my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9)). For most modern devices, you can omit “https://” part and write just [my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9), it will save you 8 characters. </value>
         [DataMember(Name="href", EmitDefaultValue=false)]
         public string Href { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// File name of uploaded file. 
         /// </summary>
+        /// <value>File name of uploaded file. </value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// Attachment size in bytes.
         /// </summary>
+        /// <value>Attachment size in bytes.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
 

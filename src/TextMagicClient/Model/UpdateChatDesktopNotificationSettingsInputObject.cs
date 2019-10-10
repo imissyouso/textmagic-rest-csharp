@@ -38,10 +38,10 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateChatDesktopNotificationSettingsInputObject" /> class.
         /// </summary>
-        /// <param name="playSound">Notification sound is enable/disabled (required).</param>
-        /// <param name="showNotifications">Show desktop notifications about new messages (required).</param>
+        /// <param name="playSound">Enable notification sound? (required).</param>
+        /// <param name="showNotifications">Show desktop notifications about new messages. (required).</param>
         /// <param name="showText">Incoming message text will be displayed in desktop notifications..</param>
-        /// <param name="soundId">Sound Id of a notification.</param>
+        /// <param name="soundId">Sound Id of a notification..</param>
         public UpdateChatDesktopNotificationSettingsInputObject(bool? playSound = default(bool?), bool? showNotifications = default(bool?), bool? showText = default(bool?), int? soundId = default(int?))
         {
             // to ensure "playSound" is required (not null)
@@ -67,16 +67,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Notification sound is enable/disabled
+        /// Enable notification sound?
         /// </summary>
-        /// <value>Notification sound is enable/disabled</value>
+        /// <value>Enable notification sound?</value>
         [DataMember(Name="playSound", EmitDefaultValue=false)]
         public bool? PlaySound { get; set; }
 
         /// <summary>
-        /// Show desktop notifications about new messages
+        /// Show desktop notifications about new messages.
         /// </summary>
-        /// <value>Show desktop notifications about new messages</value>
+        /// <value>Show desktop notifications about new messages.</value>
         [DataMember(Name="showNotifications", EmitDefaultValue=false)]
         public bool? ShowNotifications { get; set; }
 
@@ -88,9 +88,9 @@ namespace TextMagicClient.Model
         public bool? ShowText { get; set; }
 
         /// <summary>
-        /// Sound Id of a notification
+        /// Sound Id of a notification.
         /// </summary>
-        /// <value>Sound Id of a notification</value>
+        /// <value>Sound Id of a notification.</value>
         [DataMember(Name="soundId", EmitDefaultValue=false)]
         public int? SoundId { get; set; }
 

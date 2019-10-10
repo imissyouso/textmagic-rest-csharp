@@ -39,8 +39,8 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
         /// <param name="id">Contact ID. (required).</param>
-        /// <param name="favorited">favorited (required).</param>
-        /// <param name="blocked">blocked (required).</param>
+        /// <param name="favorited">Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites). (required).</param>
+        /// <param name="blocked">Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts). (required).</param>
         /// <param name="firstName">Contact first name. (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="companyName">Company name. (required).</param>
@@ -200,14 +200,16 @@ namespace TextMagicClient.Model
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Favorited
+        /// Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
         /// </summary>
+        /// <value>Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).</value>
         [DataMember(Name="favorited", EmitDefaultValue=false)]
         public bool? Favorited { get; set; }
 
         /// <summary>
-        /// Gets or Sets Blocked
+        /// Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts).
         /// </summary>
+        /// <value>Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts).</value>
         [DataMember(Name="blocked", EmitDefaultValue=false)]
         public bool? Blocked { get; set; }
 

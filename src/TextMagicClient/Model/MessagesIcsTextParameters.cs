@@ -31,6 +31,33 @@ namespace TextMagicClient.Model
     public partial class MessagesIcsTextParameters :  IEquatable<MessagesIcsTextParameters>, IValidatableObject
     {
         /// <summary>
+        /// Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS 
+        /// </summary>
+        /// <value>Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EncodingEnum
+        {
+            
+            /// <summary>
+            /// Enum ISO88591 for value: ISO-8859-1
+            /// </summary>
+            [EnumMember(Value = "ISO-8859-1")]
+            ISO88591 = 1,
+            
+            /// <summary>
+            /// Enum UTF16BE for value: UTF-16BE
+            /// </summary>
+            [EnumMember(Value = "UTF-16BE")]
+            UTF16BE = 2
+        }
+
+        /// <summary>
+        /// Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS 
+        /// </summary>
+        /// <value>Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS </value>
+        [DataMember(Name="encoding", EmitDefaultValue=false)]
+        public EncodingEnum Encoding { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MessagesIcsTextParameters" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -38,13 +65,13 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagesIcsTextParameters" /> class.
         /// </summary>
-        /// <param name="cost">cost (required).</param>
-        /// <param name="parts">parts (required).</param>
+        /// <param name="cost">Cost to check one number is constant – 0.04 in your account currency. (required).</param>
+        /// <param name="parts">Message parts (multiples of 160 characters) count. (required).</param>
         /// <param name="chars">chars (required).</param>
-        /// <param name="encoding">encoding (required).</param>
+        /// <param name="encoding">Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS  (required).</param>
         /// <param name="countries">countries (required).</param>
         /// <param name="charsetLabel">charsetLabel (required).</param>
-        public MessagesIcsTextParameters(decimal? cost = default(decimal?), int? parts = default(int?), int? chars = default(int?), string encoding = default(string), List<string> countries = default(List<string>), string charsetLabel = default(string))
+        public MessagesIcsTextParameters(decimal? cost = default(decimal?), int? parts = default(int?), int? chars = default(int?), EncodingEnum encoding = default(EncodingEnum), List<string> countries = default(List<string>), string charsetLabel = default(string))
         {
             // to ensure "cost" is required (not null)
             if (cost == null)
@@ -103,14 +130,16 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Cost
+        /// Cost to check one number is constant – 0.04 in your account currency.
         /// </summary>
+        /// <value>Cost to check one number is constant – 0.04 in your account currency.</value>
         [DataMember(Name="cost", EmitDefaultValue=false)]
         public decimal? Cost { get; set; }
 
         /// <summary>
-        /// Gets or Sets Parts
+        /// Message parts (multiples of 160 characters) count.
         /// </summary>
+        /// <value>Message parts (multiples of 160 characters) count.</value>
         [DataMember(Name="parts", EmitDefaultValue=false)]
         public int? Parts { get; set; }
 
@@ -120,11 +149,6 @@ namespace TextMagicClient.Model
         [DataMember(Name="chars", EmitDefaultValue=false)]
         public int? Chars { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Encoding
-        /// </summary>
-        [DataMember(Name="encoding", EmitDefaultValue=false)]
-        public string Encoding { get; set; }
 
         /// <summary>
         /// Gets or Sets Countries

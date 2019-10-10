@@ -38,17 +38,17 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBalanceNotificationOptionsResponse" /> class.
         /// </summary>
-        /// <param name="_1">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_2">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_3">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_5">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_10">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_20">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_30">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_50">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_100">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_500">Contains sign of currency in Unicode hex code (required).</param>
-        /// <param name="_1000">Contains sign of currency in Unicode hex code (required).</param>
+        /// <param name="_1">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_2">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_3">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_5">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_10">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_20">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_30">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_50">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_100">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_500">Contains sign of currency in Unicode hex code. (required).</param>
+        /// <param name="_1000">Contains sign of currency in Unicode hex code. (required).</param>
         public GetBalanceNotificationOptionsResponse(string _1 = default(string), string _2 = default(string), string _3 = default(string), string _5 = default(string), string _10 = default(string), string _20 = default(string), string _30 = default(string), string _50 = default(string), string _100 = default(string), string _500 = default(string), string _1000 = default(string))
         {
             // to ensure "_1" is required (not null)
@@ -153,79 +153,79 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="1", EmitDefaultValue=false)]
         public string _1 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="2", EmitDefaultValue=false)]
         public string _2 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="3", EmitDefaultValue=false)]
         public string _3 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="5", EmitDefaultValue=false)]
         public string _5 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="10", EmitDefaultValue=false)]
         public string _10 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="20", EmitDefaultValue=false)]
         public string _20 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="30", EmitDefaultValue=false)]
         public string _30 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="50", EmitDefaultValue=false)]
         public string _50 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="100", EmitDefaultValue=false)]
         public string _100 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="500", EmitDefaultValue=false)]
         public string _500 { get; set; }
 
         /// <summary>
-        /// Contains sign of currency in Unicode hex code
+        /// Contains sign of currency in Unicode hex code.
         /// </summary>
-        /// <value>Contains sign of currency in Unicode hex code</value>
+        /// <value>Contains sign of currency in Unicode hex code.</value>
         [DataMember(Name="1000", EmitDefaultValue=false)]
         public string _1000 { get; set; }
 

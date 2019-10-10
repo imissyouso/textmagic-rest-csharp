@@ -38,13 +38,13 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMessageSessionStatResponse" /> class.
         /// </summary>
-        /// <param name="failed">failed (required).</param>
-        /// <param name="delivered">delivered (required).</param>
-        /// <param name="accepted">accepted (required).</param>
-        /// <param name="rejected">rejected (required).</param>
-        /// <param name="scheduled">scheduled (required).</param>
+        /// <param name="failed">Amount of failed messages. (required).</param>
+        /// <param name="delivered">Amount of delivered messages. (required).</param>
+        /// <param name="accepted">Amount of accepted messages. (required).</param>
+        /// <param name="rejected">Amount of rejected messages. (required).</param>
+        /// <param name="scheduled">Amount of schedules messages. (required).</param>
         /// <param name="all">all (required).</param>
-        /// <param name="sent">sent (required).</param>
+        /// <param name="sent">Total sent messages. (required).</param>
         public GetMessageSessionStatResponse(int? failed = default(int?), int? delivered = default(int?), int? accepted = default(int?), int? rejected = default(int?), int? scheduled = default(int?), int? all = default(int?), int? sent = default(int?))
         {
             // to ensure "failed" is required (not null)
@@ -113,32 +113,37 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Failed
+        /// Amount of failed messages.
         /// </summary>
+        /// <value>Amount of failed messages.</value>
         [DataMember(Name="failed", EmitDefaultValue=false)]
         public int? Failed { get; set; }
 
         /// <summary>
-        /// Gets or Sets Delivered
+        /// Amount of delivered messages.
         /// </summary>
+        /// <value>Amount of delivered messages.</value>
         [DataMember(Name="delivered", EmitDefaultValue=false)]
         public int? Delivered { get; set; }
 
         /// <summary>
-        /// Gets or Sets Accepted
+        /// Amount of accepted messages.
         /// </summary>
+        /// <value>Amount of accepted messages.</value>
         [DataMember(Name="accepted", EmitDefaultValue=false)]
         public int? Accepted { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rejected
+        /// Amount of rejected messages.
         /// </summary>
+        /// <value>Amount of rejected messages.</value>
         [DataMember(Name="rejected", EmitDefaultValue=false)]
         public int? Rejected { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scheduled
+        /// Amount of schedules messages.
         /// </summary>
+        /// <value>Amount of schedules messages.</value>
         [DataMember(Name="scheduled", EmitDefaultValue=false)]
         public int? Scheduled { get; set; }
 
@@ -149,8 +154,9 @@ namespace TextMagicClient.Model
         public int? All { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sent
+        /// Total sent messages.
         /// </summary>
+        /// <value>Total sent messages.</value>
         [DataMember(Name="sent", EmitDefaultValue=false)]
         public int? Sent { get; set; }
 

@@ -42,7 +42,7 @@ namespace TextMagicClient.Model
         /// <param name="nextSend">Next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format.  (required).</param>
         /// <param name="rrule">[iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string.  (required).</param>
         /// <param name="session">session (required).</param>
-        /// <param name="lastSent">lastSent (required).</param>
+        /// <param name="lastSent">Date and time when last message has been sent. (required).</param>
         /// <param name="contactName">contactName (required).</param>
         /// <param name="parameters">parameters (required).</param>
         /// <param name="type">type (required).</param>
@@ -50,11 +50,11 @@ namespace TextMagicClient.Model
         /// <param name="textParameters">textParameters (required).</param>
         /// <param name="firstOccurrence">firstOccurrence (required).</param>
         /// <param name="lastOccurrence">lastOccurrence (required).</param>
-        /// <param name="recipientsCount">recipientsCount (required).</param>
-        /// <param name="timezone">timezone (required).</param>
-        /// <param name="completed">completed (required).</param>
-        /// <param name="avatar">avatar (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
+        /// <param name="recipientsCount">Amount of actual recipients. (required).</param>
+        /// <param name="timezone">User-friendly timezone name (with spaces replaced by underscores). (required).</param>
+        /// <param name="completed">Indicates that schedling has been completed. (required).</param>
+        /// <param name="avatar">null (required).</param>
+        /// <param name="createdAt">Scheduling creation time. (required).</param>
         public MessagesIcs(int? id = default(int?), DateTime? nextSend = default(DateTime?), string rrule = default(string), MessageSession session = default(MessageSession), DateTime? lastSent = default(DateTime?), string contactName = default(string), MessagesIcsParameters parameters = default(MessagesIcsParameters), string type = default(string), string summary = default(string), MessagesIcsTextParameters textParameters = default(MessagesIcsTextParameters), DateTime? firstOccurrence = default(DateTime?), DateTime? lastOccurrence = default(DateTime?), int? recipientsCount = default(int?), string timezone = default(string), bool? completed = default(bool?), string avatar = default(string), DateTime? createdAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
@@ -240,8 +240,9 @@ namespace TextMagicClient.Model
         public MessageSession Session { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastSent
+        /// Date and time when last message has been sent.
         /// </summary>
+        /// <value>Date and time when last message has been sent.</value>
         [DataMember(Name="lastSent", EmitDefaultValue=false)]
         public DateTime? LastSent { get; set; }
 
@@ -288,32 +289,37 @@ namespace TextMagicClient.Model
         public DateTime? LastOccurrence { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecipientsCount
+        /// Amount of actual recipients.
         /// </summary>
+        /// <value>Amount of actual recipients.</value>
         [DataMember(Name="recipientsCount", EmitDefaultValue=false)]
         public int? RecipientsCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Timezone
+        /// User-friendly timezone name (with spaces replaced by underscores).
         /// </summary>
+        /// <value>User-friendly timezone name (with spaces replaced by underscores).</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Completed
+        /// Indicates that schedling has been completed.
         /// </summary>
+        /// <value>Indicates that schedling has been completed.</value>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public bool? Completed { get; set; }
 
         /// <summary>
-        /// Gets or Sets Avatar
+        /// null
         /// </summary>
+        /// <value>null</value>
         [DataMember(Name="avatar", EmitDefaultValue=false)]
         public string Avatar { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAt
+        /// Scheduling creation time.
         /// </summary>
+        /// <value>Scheduling creation time.</value>
         [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 

@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **Email** | **string** | Contact email address. | [optional] 
 **CompanyName** | **string** | Company name. | [optional] 
 **Lists** | **string** | Contact [list](http://docs.textmagictesting.com/#tag/Lists) ID. Each contact must be assigned to at least one list. | 
-**Favorited** | **bool?** | Is contact favorited | [optional] 
-**Blocked** | **bool?** | Is contact blocked for outgoing and incoming messaging | [optional] 
-**Type** | **int?** | Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection) | [optional] 
+**Favorited** | **bool?** | Is contact marked as favorite. | [optional] 
+**Blocked** | **bool?** | Is contact blocked for outgoing and incoming messaging. | [optional] 
+**Type** | **int?** | Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection). | [optional] 
 **CustomFieldValues** | **Object** |  | [optional] 
 **Local** | **int?** | Treat phone number passed in request body as local | [optional] 
 **Country** | **string** | 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country | [optional] 

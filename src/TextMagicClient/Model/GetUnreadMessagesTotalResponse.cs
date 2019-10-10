@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetUnreadMessagesTotalResponse" /> class.
         /// </summary>
-        /// <param name="total">total (required).</param>
+        /// <param name="total">Amount of unread messages. (required).</param>
         public GetUnreadMessagesTotalResponse(int? total = default(int?))
         {
             // to ensure "total" is required (not null)
@@ -53,8 +53,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Total
+        /// Amount of unread messages.
         /// </summary>
+        /// <value>Amount of unread messages.</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
 

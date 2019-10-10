@@ -38,9 +38,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMessagePriceResponse" /> class.
         /// </summary>
-        /// <param name="total">total (required).</param>
-        /// <param name="parts">parts (required).</param>
-        /// <param name="countries">countries (required).</param>
+        /// <param name="total">Total price of the mesasge. (required).</param>
+        /// <param name="parts">Message parts (multiples of 160 characters) count. (required).</param>
+        /// <param name="countries">List of countries where message will be sent with pricing explanation. (required).</param>
         public GetMessagePriceResponse(decimal? total = default(decimal?), int? parts = default(int?), Object countries = default(Object))
         {
             // to ensure "total" is required (not null)
@@ -73,20 +73,23 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Gets or Sets Total
+        /// Total price of the mesasge.
         /// </summary>
+        /// <value>Total price of the mesasge.</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public decimal? Total { get; set; }
 
         /// <summary>
-        /// Gets or Sets Parts
+        /// Message parts (multiples of 160 characters) count.
         /// </summary>
+        /// <value>Message parts (multiples of 160 characters) count.</value>
         [DataMember(Name="parts", EmitDefaultValue=false)]
         public int? Parts { get; set; }
 
         /// <summary>
-        /// Gets or Sets Countries
+        /// List of countries where message will be sent with pricing explanation.
         /// </summary>
+        /// <value>List of countries where message will be sent with pricing explanation.</value>
         [DataMember(Name="countries", EmitDefaultValue=false)]
         public Object Countries { get; set; }
 

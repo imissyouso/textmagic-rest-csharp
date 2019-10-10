@@ -33,16 +33,16 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BlockContactInputObject" /> class.
         /// </summary>
-        /// <param name="phone">Contact phone number.</param>
+        /// <param name="phone">Contact phone number..</param>
         public BlockContactInputObject(string phone = default(string))
         {
             this.Phone = phone;
         }
         
         /// <summary>
-        /// Contact phone number
+        /// Contact phone number.
         /// </summary>
-        /// <value>Contact phone number</value>
+        /// <value>Contact phone number.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 

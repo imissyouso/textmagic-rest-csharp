@@ -43,9 +43,9 @@ namespace TextMagicClient.Model
         /// <param name="receiver">The receiver’s phone number (i.e. your dedicated or shared reply number). (required).</param>
         /// <param name="messageTime">The time when the message reached the TextMagic API endpoint. (required).</param>
         /// <param name="text">The text from the received message. (required).</param>
-        /// <param name="contactId">contactId.</param>
-        /// <param name="firstName">firstName.</param>
-        /// <param name="lastName">lastName.</param>
+        /// <param name="contactId">Sender contact ID..</param>
+        /// <param name="firstName">Sender contact first name..</param>
+        /// <param name="lastName">Sender contact last name..</param>
         /// <param name="avatar">avatar (required).</param>
         public MessageIn(int? id = default(int?), string sender = default(string), string receiver = default(string), DateTime? messageTime = default(DateTime?), string text = default(string), int? contactId = default(int?), string firstName = default(string), string lastName = default(string), string avatar = default(string))
         {
@@ -144,20 +144,23 @@ namespace TextMagicClient.Model
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets ContactId
+        /// Sender contact ID.
         /// </summary>
+        /// <value>Sender contact ID.</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public int? ContactId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Sender contact first name.
         /// </summary>
+        /// <value>Sender contact first name.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Sender contact last name.
         /// </summary>
+        /// <value>Sender contact last name.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 

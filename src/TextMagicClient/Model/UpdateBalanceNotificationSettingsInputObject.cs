@@ -38,12 +38,12 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateBalanceNotificationSettingsInputObject" /> class.
         /// </summary>
-        /// <param name="lowBalanceNotification">Should user receive low balance notification.</param>
-        /// <param name="alertBalance">If balance is below this value, user receive low balance notification (required).</param>
-        /// <param name="alertPhone">Low balance notification phone number.</param>
-        /// <param name="alertEmail1">Low balance notification email 1.</param>
-        /// <param name="alertEmail2">Low balance notification email 2.</param>
-        /// <param name="alertEmail3">Low balance notification email 3.</param>
+        /// <param name="lowBalanceNotification">Should user receive low balance notification..</param>
+        /// <param name="alertBalance">If balance is below this value, user receive low balance notification. (required).</param>
+        /// <param name="alertPhone">Low balance notification phone number..</param>
+        /// <param name="alertEmail1">Low balance notification email 1..</param>
+        /// <param name="alertEmail2">Low balance notification email 2..</param>
+        /// <param name="alertEmail3">Low balance notification email 3..</param>
         public UpdateBalanceNotificationSettingsInputObject(bool? lowBalanceNotification = default(bool?), string alertBalance = default(string), string alertPhone = default(string), string alertEmail1 = default(string), string alertEmail2 = default(string), string alertEmail3 = default(string))
         {
             // to ensure "alertBalance" is required (not null)
@@ -63,44 +63,44 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// Should user receive low balance notification
+        /// Should user receive low balance notification.
         /// </summary>
-        /// <value>Should user receive low balance notification</value>
+        /// <value>Should user receive low balance notification.</value>
         [DataMember(Name="lowBalanceNotification", EmitDefaultValue=false)]
         public bool? LowBalanceNotification { get; set; }
 
         /// <summary>
-        /// If balance is below this value, user receive low balance notification
+        /// If balance is below this value, user receive low balance notification.
         /// </summary>
-        /// <value>If balance is below this value, user receive low balance notification</value>
+        /// <value>If balance is below this value, user receive low balance notification.</value>
         [DataMember(Name="alertBalance", EmitDefaultValue=false)]
         public string AlertBalance { get; set; }
 
         /// <summary>
-        /// Low balance notification phone number
+        /// Low balance notification phone number.
         /// </summary>
-        /// <value>Low balance notification phone number</value>
+        /// <value>Low balance notification phone number.</value>
         [DataMember(Name="alertPhone", EmitDefaultValue=false)]
         public string AlertPhone { get; set; }
 
         /// <summary>
-        /// Low balance notification email 1
+        /// Low balance notification email 1.
         /// </summary>
-        /// <value>Low balance notification email 1</value>
+        /// <value>Low balance notification email 1.</value>
         [DataMember(Name="alertEmail1", EmitDefaultValue=false)]
         public string AlertEmail1 { get; set; }
 
         /// <summary>
-        /// Low balance notification email 2
+        /// Low balance notification email 2.
         /// </summary>
-        /// <value>Low balance notification email 2</value>
+        /// <value>Low balance notification email 2.</value>
         [DataMember(Name="alertEmail2", EmitDefaultValue=false)]
         public string AlertEmail2 { get; set; }
 
         /// <summary>
-        /// Low balance notification email 3
+        /// Low balance notification email 3.
         /// </summary>
-        /// <value>Low balance notification email 3</value>
+        /// <value>Low balance notification email 3.</value>
         [DataMember(Name="alertEmail3", EmitDefaultValue=false)]
         public string AlertEmail3 { get; set; }
 
