@@ -96,7 +96,7 @@ namespace TextMagicClient.Model
         /// <param name="username">Username. (required).</param>
         /// <param name="firstName">Account first name. (required).</param>
         /// <param name="lastName">Account last name. (required).</param>
-        /// <param name="email">email (required).</param>
+        /// <param name="email">Account Email address. (required).</param>
         /// <param name="status">Current account status: * **A** for Active * **T** for Trial.  (required).</param>
         /// <param name="balance">Account balance (in account currency). (required).</param>
         /// <param name="phone">Contact phone number. (required).</param>
@@ -295,8 +295,9 @@ namespace TextMagicClient.Model
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Email
+        /// Account Email address.
         /// </summary>
+        /// <value>Account Email address.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
 

@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReplyRate** | **float?** | the number of incoming messages divided by the number of total messages. | 
+**ReplyRate** | **float?** | The number of incoming messages divided by the number of total messages. | 
 **Date** | **DateTime?** | Time interval start, empty if the **by** parameter was set to **off**.  | 
 **DeliveryRate** | **float?** | Message delivery rate:the number of delivered messages divided by the number of total messages. | 
 **Costs** | **float?** | Cost for sent messages during this period. The costs are in the [Account](http://docs.textmagictesting.com/#tag/User) currency.  | 

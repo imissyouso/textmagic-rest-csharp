@@ -1501,6 +1501,17 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
+        /// Test Ping
+        /// </summary>
+        [Test]
+        public void PingTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.Ping();
+            //Assert.IsInstanceOf<PingResponse> (response, "response is PingResponse");
+        }
+        
+        /// <summary>
         /// Test ReopenChatsBulk
         /// </summary>
         [Test]

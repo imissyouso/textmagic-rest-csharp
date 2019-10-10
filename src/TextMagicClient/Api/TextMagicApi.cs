@@ -2564,6 +2564,25 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MuteChatsBulkWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
         /// <summary>
+        /// Ping
+        /// </summary>
+        /// <remarks>
+        /// Make a simple ping request
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>PingResponse</returns>
+        PingResponse Ping ();
+
+        /// <summary>
+        /// Ping
+        /// </summary>
+        /// <remarks>
+        /// Make a simple ping request
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of PingResponse</returns>
+        ApiResponse<PingResponse> PingWithHttpInfo ();
+        /// <summary>
         /// Reopen chats (bulk)
         /// </summary>
         /// <remarks>
@@ -5949,6 +5968,25 @@ namespace TextMagicClient.Api
         /// <param name="muteChatsBulkInputObject"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MuteChatsBulkAsyncWithHttpInfo (MuteChatsBulkInputObject muteChatsBulkInputObject);
+        /// <summary>
+        /// Ping
+        /// </summary>
+        /// <remarks>
+        /// Make a simple ping request
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of PingResponse</returns>
+        System.Threading.Tasks.Task<PingResponse> PingAsync ();
+
+        /// <summary>
+        /// Ping
+        /// </summary>
+        /// <remarks>
+        /// Make a simple ping request
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (PingResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PingResponse>> PingAsyncWithHttpInfo ();
         /// <summary>
         /// Reopen chats (bulk)
         /// </summary>
@@ -23911,6 +23949,141 @@ namespace TextMagicClient.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Ping Make a simple ping request
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>PingResponse</returns>
+        public PingResponse Ping ()
+        {
+             ApiResponse<PingResponse> localVarResponse = PingWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Ping Make a simple ping request
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of PingResponse</returns>
+        public ApiResponse< PingResponse > PingWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Ping", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PingResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
+        }
+
+        /// <summary>
+        /// Ping Make a simple ping request
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of PingResponse</returns>
+        public async System.Threading.Tasks.Task<PingResponse> PingAsync ()
+        {
+             ApiResponse<PingResponse> localVarResponse = await PingAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Ping Make a simple ping request
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (PingResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PingResponse>> PingAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/ping";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Ping", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PingResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
         }
 
         /// <summary>

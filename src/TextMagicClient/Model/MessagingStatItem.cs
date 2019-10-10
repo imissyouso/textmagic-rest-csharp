@@ -38,7 +38,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingStatItem" /> class.
         /// </summary>
-        /// <param name="replyRate">the number of incoming messages divided by the number of total messages. (required).</param>
+        /// <param name="replyRate">The number of incoming messages divided by the number of total messages. (required).</param>
         /// <param name="date">Time interval start, empty if the **by** parameter was set to **off**.  (required).</param>
         /// <param name="deliveryRate">Message delivery rate:the number of delivered messages divided by the number of total messages. (required).</param>
         /// <param name="costs">Cost for sent messages during this period. The costs are in the [Account](http://docs.textmagictesting.com/#tag/User) currency.  (required).</param>
@@ -153,9 +153,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// the number of incoming messages divided by the number of total messages.
+        /// The number of incoming messages divided by the number of total messages.
         /// </summary>
-        /// <value>the number of incoming messages divided by the number of total messages.</value>
+        /// <value>The number of incoming messages divided by the number of total messages.</value>
         [DataMember(Name="replyRate", EmitDefaultValue=false)]
         public float? ReplyRate { get; set; }
 

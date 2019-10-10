@@ -31,6 +31,39 @@ namespace TextMagicClient.Model
     public partial class PushToken :  IEquatable<PushToken>, IValidatableObject
     {
         /// <summary>
+        /// type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging 
+        /// </summary>
+        /// <value>type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum A for value: a
+            /// </summary>
+            [EnumMember(Value = "a")]
+            A = 1,
+            
+            /// <summary>
+            /// Enum G for value: g
+            /// </summary>
+            [EnumMember(Value = "g")]
+            G = 2,
+            
+            /// <summary>
+            /// Enum F for value: f
+            /// </summary>
+            [EnumMember(Value = "f")]
+            F = 3
+        }
+
+        /// <summary>
+        /// type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging 
+        /// </summary>
+        /// <value>type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging </value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="PushToken" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -38,9 +71,9 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PushToken" /> class.
         /// </summary>
-        /// <param name="type">type (required).</param>
-        /// <param name="token">token (required).</param>
-        public PushToken(string type = default(string), string token = default(string))
+        /// <param name="type">type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging  (required).</param>
+        /// <param name="token">Push token value. (required).</param>
+        public PushToken(TypeEnum type = default(TypeEnum), string token = default(string))
         {
             // to ensure "type" is required (not null)
             if (type == null)
@@ -62,15 +95,11 @@ namespace TextMagicClient.Model
             }
         }
         
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Token
+        /// Push token value.
         /// </summary>
+        /// <value>Push token value.</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
 
