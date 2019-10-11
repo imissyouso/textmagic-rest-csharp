@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**CloseChatsBulk**](TextMagicApi.md#closechatsbulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#closereadchats) | **POST** /api/v2/chats/close/read | Close read chats
 [**CloseSubaccount**](TextMagicApi.md#closesubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close sub-account
-[**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts | Add a new contact
+[**CreateContact**](TextMagicApi.md#createcontact) | **POST** /api/v2/contacts/normalized | Add a new contact
 [**CreateContactNote**](TextMagicApi.md#createcontactnote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note
 [**CreateCustomField**](TextMagicApi.md#createcustomfield) | **POST** /api/v2/customfields | Add a new custom field
 [**CreateList**](TextMagicApi.md#createlist) | **POST** /api/v2/lists | Create a new list
@@ -88,7 +88,7 @@ Method | HTTP request | Description
 [**GetLists**](TextMagicApi.md#getlists) | **GET** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#getlistsofcontact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**GetMessagePreview**](TextMagicApi.md#getmessagepreview) | **GET** /api/v2/messages/preview | Preview message
-[**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price | Check message price
+[**GetMessagePrice**](TextMagicApi.md#getmessageprice) | **GET** /api/v2/messages/price/normalized | Check message price
 [**GetMessageSession**](TextMagicApi.md#getmessagesession) | **GET** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#getmessagesessionstat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#getmessagesbysessionid) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
@@ -99,7 +99,7 @@ Method | HTTP request | Description
 [**GetScheduledMessage**](TextMagicApi.md#getscheduledmessage) | **GET** /api/v2/schedules/{id} | Get a single scheduled message
 [**GetSenderId**](TextMagicApi.md#getsenderid) | **GET** /api/v2/senderids/{id} | Get the details of a specific Sender ID
 [**GetSenderIds**](TextMagicApi.md#getsenderids) | **GET** /api/v2/senderids | Get all your approved Sender IDs
-[**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings | Get current sender settings
+[**GetSenderSettings**](TextMagicApi.md#getsendersettings) | **GET** /api/v2/sender/settings/normalized | Get current sender settings
 [**GetSpendingStat**](TextMagicApi.md#getspendingstat) | **GET** /api/v2/stats/spending | Get spending statistics
 [**GetSubaccount**](TextMagicApi.md#getsubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**GetSubaccounts**](TextMagicApi.md#getsubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
@@ -138,14 +138,14 @@ Method | HTTP request | Description
 [**UpdateBalanceNotificationSettings**](TextMagicApi.md#updatebalancenotificationsettings) | **PUT** /api/v2/user/notification/balance | Update balance notification settings
 [**UpdateCallbackSettings**](TextMagicApi.md#updatecallbacksettings) | **PUT** /api/v2/callback/settings | Update callback URL settings
 [**UpdateChatDesktopNotificationSettings**](TextMagicApi.md#updatechatdesktopnotificationsettings) | **PUT** /api/v2/user/desktop/notification | Update chat desktop notification settings
-[**UpdateContact**](TextMagicApi.md#updatecontact) | **PUT** /api/v2/contacts/{id} | Edit a contact
+[**UpdateContact**](TextMagicApi.md#updatecontact) | **PUT** /api/v2/contact/{id}/normalized | Edit a contact
 [**UpdateContactNote**](TextMagicApi.md#updatecontactnote) | **PUT** /api/v2/notes/{id} | Update a contact note
 [**UpdateCurrentUser**](TextMagicApi.md#updatecurrentuser) | **PUT** /api/v2/user | Edit current account info
 [**UpdateCustomField**](TextMagicApi.md#updatecustomfield) | **PUT** /api/v2/customfields/{id} | Edit a custom field
 [**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Edit the custom field value of a specified contact
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
 [**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Edit a list
-[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
+[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings/normalized | Change sender settings
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Upload an avatar
@@ -1993,7 +1993,7 @@ void (empty response body)
 
 Delete a list
 
-> When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
 
 ### Example
 ```csharp

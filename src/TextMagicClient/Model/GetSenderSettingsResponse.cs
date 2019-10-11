@@ -41,7 +41,7 @@ namespace TextMagicClient.Model
         /// <param name="user">user (required).</param>
         /// <param name="special">special (required).</param>
         /// <param name="other">other (required).</param>
-        public GetSenderSettingsResponse(Object user = default(Object), Object special = default(Object), Object other = default(Object))
+        public GetSenderSettingsResponse(List<SenderSettingsItem> user = default(List<SenderSettingsItem>), List<SenderSettingsItem> special = default(List<SenderSettingsItem>), List<SenderSettingsItem> other = default(List<SenderSettingsItem>))
         {
             // to ensure "user" is required (not null)
             if (user == null)
@@ -76,19 +76,19 @@ namespace TextMagicClient.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public Object User { get; set; }
+        public List<SenderSettingsItem> User { get; set; }
 
         /// <summary>
         /// Gets or Sets Special
         /// </summary>
         [DataMember(Name="special", EmitDefaultValue=false)]
-        public Object Special { get; set; }
+        public List<SenderSettingsItem> Special { get; set; }
 
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
-        public Object Other { get; set; }
+        public List<SenderSettingsItem> Other { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -137,18 +137,18 @@ namespace TextMagicClient.Model
             return 
                 (
                     this.User == input.User ||
-                    (this.User != null &&
-                    this.User.Equals(input.User))
+                    this.User != null &&
+                    this.User.SequenceEqual(input.User)
                 ) && 
                 (
                     this.Special == input.Special ||
-                    (this.Special != null &&
-                    this.Special.Equals(input.Special))
+                    this.Special != null &&
+                    this.Special.SequenceEqual(input.Special)
                 ) && 
                 (
                     this.Other == input.Other ||
-                    (this.Other != null &&
-                    this.Other.Equals(input.Other))
+                    this.Other != null &&
+                    this.Other.SequenceEqual(input.Other)
                 );
         }
 

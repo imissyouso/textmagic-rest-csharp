@@ -50,7 +50,7 @@ namespace TextMagicClient.Model
         /// <param name="customFieldValues">customFieldValues.</param>
         /// <param name="local">Treat phone number passed in request body as **local**..</param>
         /// <param name="country">2-letter ISO country code for local phone numbers, used when **local** is set to true..</param>
-        public UpdateContactInputObject(string firstName = default(string), string lastName = default(string), string phone = default(string), string email = default(string), string companyName = default(string), string lists = default(string), bool? favorited = default(bool?), bool? blocked = default(bool?), int? type = default(int?), Object customFieldValues = default(Object), int? local = default(int?), string country = default(string))
+        public UpdateContactInputObject(string firstName = default(string), string lastName = default(string), string phone = default(string), string email = default(string), string companyName = default(string), string lists = default(string), bool? favorited = default(bool?), bool? blocked = default(bool?), int? type = default(int?), List<CustomFieldListItem> customFieldValues = default(List<CustomFieldListItem>), int? local = default(int?), string country = default(string))
         {
             // to ensure "phone" is required (not null)
             if (phone == null)
@@ -149,7 +149,7 @@ namespace TextMagicClient.Model
         /// Gets or Sets CustomFieldValues
         /// </summary>
         [DataMember(Name="customFieldValues", EmitDefaultValue=false)]
-        public Object CustomFieldValues { get; set; }
+        public List<CustomFieldListItem> CustomFieldValues { get; set; }
 
         /// <summary>
         /// Treat phone number passed in request body as **local**.
@@ -266,8 +266,8 @@ namespace TextMagicClient.Model
                 ) && 
                 (
                     this.CustomFieldValues == input.CustomFieldValues ||
-                    (this.CustomFieldValues != null &&
-                    this.CustomFieldValues.Equals(input.CustomFieldValues))
+                    this.CustomFieldValues != null &&
+                    this.CustomFieldValues.SequenceEqual(input.CustomFieldValues)
                 ) && 
                 (
                     this.Local == input.Local ||

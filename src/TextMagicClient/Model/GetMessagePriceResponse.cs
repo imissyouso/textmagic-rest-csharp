@@ -40,8 +40,8 @@ namespace TextMagicClient.Model
         /// </summary>
         /// <param name="total">Total price of the mesasge. (required).</param>
         /// <param name="parts">Message parts (multiples of 160 characters) count. (required).</param>
-        /// <param name="countries">List of countries where message will be sent with pricing explanation. (required).</param>
-        public GetMessagePriceResponse(decimal? total = default(decimal?), int? parts = default(int?), Object countries = default(Object))
+        /// <param name="countries">countries (required).</param>
+        public GetMessagePriceResponse(decimal? total = default(decimal?), int? parts = default(int?), List<GetMessagePriceResponseCountriesItem> countries = default(List<GetMessagePriceResponseCountriesItem>))
         {
             // to ensure "total" is required (not null)
             if (total == null)
@@ -87,11 +87,10 @@ namespace TextMagicClient.Model
         public int? Parts { get; set; }
 
         /// <summary>
-        /// List of countries where message will be sent with pricing explanation.
+        /// Gets or Sets Countries
         /// </summary>
-        /// <value>List of countries where message will be sent with pricing explanation.</value>
         [DataMember(Name="countries", EmitDefaultValue=false)]
-        public Object Countries { get; set; }
+        public List<GetMessagePriceResponseCountriesItem> Countries { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -150,8 +149,8 @@ namespace TextMagicClient.Model
                 ) && 
                 (
                     this.Countries == input.Countries ||
-                    (this.Countries != null &&
-                    this.Countries.Equals(input.Countries))
+                    this.Countries != null &&
+                    this.Countries.SequenceEqual(input.Countries)
                 );
         }
 

@@ -641,7 +641,7 @@ namespace TextMagicClient.Api
         /// Delete a list
         /// </summary>
         /// <remarks>
-        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -652,7 +652,7 @@ namespace TextMagicClient.Api
         /// Delete a list
         /// </summary>
         /// <remarks>
-        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4046,7 +4046,7 @@ namespace TextMagicClient.Api
         /// Delete a list
         /// </summary>
         /// <remarks>
-        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -4057,7 +4057,7 @@ namespace TextMagicClient.Api
         /// Delete a list
         /// </summary>
         /// <remarks>
-        /// &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -8357,7 +8357,7 @@ namespace TextMagicClient.Api
             if (createContactInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'createContactInputObject' when calling TextMagicApi->CreateContact");
 
-            var localVarPath = "/api/v2/contacts";
+            var localVarPath = "/api/v2/contacts/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -8438,7 +8438,7 @@ namespace TextMagicClient.Api
             if (createContactInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'createContactInputObject' when calling TextMagicApi->CreateContact");
 
-            var localVarPath = "/api/v2/contacts";
+            var localVarPath = "/api/v2/contacts/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -11382,7 +11382,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// Delete a list This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11393,7 +11393,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// Delete a list This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11453,7 +11453,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// Delete a list This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -11465,7 +11465,7 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Delete a list &gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+        /// Delete a list This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -19825,7 +19825,7 @@ namespace TextMagicClient.Api
         public ApiResponse< GetMessagePriceResponse > GetMessagePriceWithHttpInfo (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
         {
 
-            var localVarPath = "/api/v2/messages/price";
+            var localVarPath = "/api/v2/messages/price/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -19947,7 +19947,7 @@ namespace TextMagicClient.Api
         public async System.Threading.Tasks.Task<ApiResponse<GetMessagePriceResponse>> GetMessagePriceAsyncWithHttpInfo (int? includeBlocked = null, string text = null, int? templateId = null, int? sendingTime = null, string sendingDateTime = null, string sendingTimezone = null, string contacts = null, string lists = null, string phones = null, int? cutExtra = null, int? partsCount = null, int? referenceId = null, string from = null, string rule = null, int? createChat = null, int? tts = null, int? local = null, string localCountry = null)
         {
 
-            var localVarPath = "/api/v2/messages/price";
+            var localVarPath = "/api/v2/messages/price/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -21546,7 +21546,7 @@ namespace TextMagicClient.Api
         public ApiResponse< GetSenderSettingsResponse > GetSenderSettingsWithHttpInfo (string country = null)
         {
 
-            var localVarPath = "/api/v2/sender/settings";
+            var localVarPath = "/api/v2/sender/settings/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -21617,7 +21617,7 @@ namespace TextMagicClient.Api
         public async System.Threading.Tasks.Task<ApiResponse<GetSenderSettingsResponse>> GetSenderSettingsAsyncWithHttpInfo (string country = null)
         {
 
-            var localVarPath = "/api/v2/sender/settings";
+            var localVarPath = "/api/v2/sender/settings/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -27735,7 +27735,7 @@ namespace TextMagicClient.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->UpdateContact");
 
-            var localVarPath = "/api/v2/contacts/{id}";
+            var localVarPath = "/api/v2/contact/{id}/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -27822,7 +27822,7 @@ namespace TextMagicClient.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->UpdateContact");
 
-            var localVarPath = "/api/v2/contacts/{id}";
+            var localVarPath = "/api/v2/contact/{id}/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -28906,7 +28906,7 @@ namespace TextMagicClient.Api
             if (updateSenderSettingInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'updateSenderSettingInputObject' when calling TextMagicApi->UpdateSenderSetting");
 
-            var localVarPath = "/api/v2/sender/settings";
+            var localVarPath = "/api/v2/sender/settings/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -28985,7 +28985,7 @@ namespace TextMagicClient.Api
             if (updateSenderSettingInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'updateSenderSettingInputObject' when calling TextMagicApi->UpdateSenderSetting");
 
-            var localVarPath = "/api/v2/sender/settings";
+            var localVarPath = "/api/v2/sender/settings/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
