@@ -110,6 +110,7 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
+[**ImportContacts**](TextMagicApi.md#importcontacts) | **POST** /api/v2/contacts/import | Import contacts from the CSV, XLS or XLSX file.
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
@@ -7063,6 +7064,70 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="importcontacts"></a>
+# **ImportContacts**
+> void ImportContacts (ImportContactsInputObject importContactsInputObject, System.IO.Stream file)
+
+Import contacts from the CSV, XLS or XLSX file.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class ImportContactsExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var importContactsInputObject = new ImportContactsInputObject(); // ImportContactsInputObject | 
+            var file = new System.IO.Stream(); // System.IO.Stream | File containing contacts in csv or xls(x) formats
+
+            try
+            {
+                // Import contacts from the CSV, XLS or XLSX file.
+                apiInstance.ImportContacts(importContactsInputObject, file);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.ImportContacts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **importContactsInputObject** | [**ImportContactsInputObject**](ImportContactsInputObject.md)|  | 
+ **file** | **System.IO.Stream**| File containing contacts in csv or xls(x) formats | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

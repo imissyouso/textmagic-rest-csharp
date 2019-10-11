@@ -141,7 +141,7 @@ namespace TextMagicClient.Model
         /// <param name="isInWhiteList">&#x60;true&#x60; if the email address exists in TextMagic whitelist.  (required).</param>
         /// <param name="isInBlackList">&#x60;true&#x60; if the email address exists in TextMagic blacklist.  (required).</param>
         /// <param name="hasMx">&#x60;true&#x60; if the email address domain has an MX record.  (required).</param>
-        /// <param name="hasAa">hasAa (required).</param>
+        /// <param name="hasAa">&#x60;true&#x60; if the email address domain has an A record (IPv4).  (required).</param>
         /// <param name="hasAaaa">&#x60;true&#x60; if the email address domain has an AAAA record (IPv6).  (required).</param>
         public DoEmailLookupResponse(string address = default(string), StatusEnum status = default(StatusEnum), string deliverability = default(string), string reason = default(string), RiskEnum risk = default(RiskEnum), AddressTypeEnum addressType = default(AddressTypeEnum), bool? isDisposableAddress = default(bool?), string suggestion = default(string), string emailRole = default(string), string localPart = default(string), string domainPart = default(string), string exchange = default(string), int? preference = default(int?), bool? isInWhiteList = default(bool?), bool? isInBlackList = default(bool?), bool? hasMx = default(bool?), bool? hasAa = default(bool?), bool? hasAaaa = default(bool?))
         {
@@ -404,8 +404,9 @@ namespace TextMagicClient.Model
         public bool? HasMx { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasAa
+        /// &#x60;true&#x60; if the email address domain has an A record (IPv4). 
         /// </summary>
+        /// <value>&#x60;true&#x60; if the email address domain has an A record (IPv4). </value>
         [DataMember(Name="hasAa", EmitDefaultValue=false)]
         public bool? HasAa { get; set; }
 
