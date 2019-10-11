@@ -27735,7 +27735,7 @@ namespace TextMagicClient.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->UpdateContact");
 
-            var localVarPath = "/api/v2/contact/{id}/normalized";
+            var localVarPath = "/api/v2/contacts/{id}/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -27822,7 +27822,7 @@ namespace TextMagicClient.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->UpdateContact");
 
-            var localVarPath = "/api/v2/contact/{id}/normalized";
+            var localVarPath = "/api/v2/contacts/{id}/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
