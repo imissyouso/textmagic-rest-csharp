@@ -23236,7 +23236,7 @@ namespace TextMagicClient.Api
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
 
-            var localVarPath = "/api/v2/contacts/import";
+            var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -23322,7 +23322,7 @@ namespace TextMagicClient.Api
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
 
-            var localVarPath = "/api/v2/contacts/import";
+            var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

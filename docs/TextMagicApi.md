@@ -110,7 +110,7 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**ImportContacts**](TextMagicApi.md#importcontacts) | **POST** /api/v2/contacts/import | Import contacts from the CSV, XLS or XLSX file.
+[**ImportContacts**](TextMagicApi.md#importcontacts) | **POST** /api/v2/contacts/import/normalized | Import contacts from the CSV, XLS or XLSX file.
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
