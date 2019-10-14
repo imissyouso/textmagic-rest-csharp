@@ -7070,7 +7070,7 @@ Name | Type | Description  | Notes
 
 <a name="importcontacts"></a>
 # **ImportContacts**
-> void ImportContacts (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+> void ImportContacts (System.IO.Stream file, List<ImportColumnMappingItem> column)
 
 Import contacts from the CSV, XLS or XLSX file.
 
@@ -7094,12 +7094,12 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var file = new System.IO.Stream(); // System.IO.Stream | File containing contacts in csv or xls(x) formats
-            var importContactsInputObject = new ImportContactsInputObject(); // ImportContactsInputObject | 
+            var column = new List<ImportColumnMappingItem>(); // List<ImportColumnMappingItem> | 
 
             try
             {
                 // Import contacts from the CSV, XLS or XLSX file.
-                apiInstance.ImportContacts(file, importContactsInputObject);
+                apiInstance.ImportContacts(file, column);
             }
             catch (Exception e)
             {
@@ -7115,7 +7115,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **System.IO.Stream**| File containing contacts in csv or xls(x) formats | 
- **importContactsInputObject** | [**ImportContactsInputObject**](ImportContactsInputObject.md)|  | 
+ **column** | [**List&lt;ImportColumnMappingItem&gt;**](ImportColumnMappingItem.md)|  | 
 
 ### Return type
 

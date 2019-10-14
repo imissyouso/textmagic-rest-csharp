@@ -2466,9 +2466,9 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns></returns>
-        void ImportContacts (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+        void ImportContacts (System.IO.Stream file, List<ImportColumnMappingItem> column);
 
         /// <summary>
         /// Import contacts from the CSV, XLS or XLSX file.
@@ -2478,9 +2478,9 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, List<ImportColumnMappingItem> column);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -5894,9 +5894,9 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, List<ImportColumnMappingItem> column);
 
         /// <summary>
         /// Import contacts from the CSV, XLS or XLSX file.
@@ -5906,9 +5906,9 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, List<ImportColumnMappingItem> column);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -23213,11 +23213,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns></returns>
-        public void ImportContacts (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        public void ImportContacts (System.IO.Stream file, List<ImportColumnMappingItem> column)
         {
-             ImportContactsWithHttpInfo(file, importContactsInputObject);
+             ImportContactsWithHttpInfo(file, column);
         }
 
         /// <summary>
@@ -23225,16 +23225,16 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, List<ImportColumnMappingItem> column)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
-            // verify the required parameter 'importContactsInputObject' is set
-            if (importContactsInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'importContactsInputObject' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'column' is set
+            if (column == null)
+                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
@@ -23259,14 +23259,7 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
-            if (importContactsInputObject != null && importContactsInputObject.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(importContactsInputObject); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = importContactsInputObject; // byte array
-            }
+            if (column != null) localVarFormParams.Add("column", this.Configuration.ApiClient.ParameterToString(column)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -23298,11 +23291,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, List<ImportColumnMappingItem> column)
         {
-             await ImportContactsAsyncWithHttpInfo(file, importContactsInputObject);
+             await ImportContactsAsyncWithHttpInfo(file, column);
 
         }
 
@@ -23311,16 +23304,16 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="importContactsInputObject"></param>
+        /// <param name="column"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, List<ImportColumnMappingItem> column)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
-            // verify the required parameter 'importContactsInputObject' is set
-            if (importContactsInputObject == null)
-                throw new ApiException(400, "Missing required parameter 'importContactsInputObject' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'column' is set
+            if (column == null)
+                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
@@ -23345,14 +23338,7 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
-            if (importContactsInputObject != null && importContactsInputObject.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(importContactsInputObject); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = importContactsInputObject; // byte array
-            }
+            if (column != null) localVarFormParams.Add("column", this.Configuration.ApiClient.ParameterToString(column)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required

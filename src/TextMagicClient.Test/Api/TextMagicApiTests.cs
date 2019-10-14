@@ -1448,8 +1448,8 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream file = null;
-            //ImportContactsInputObject importContactsInputObject = null;
-            //instance.ImportContacts(file, importContactsInputObject);
+            //List<ImportColumnMappingItem> column = null;
+            //instance.ImportContacts(file, column);
             
         }
         
