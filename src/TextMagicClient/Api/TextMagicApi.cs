@@ -2459,6 +2459,29 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns></returns>
+        void ImportContacts (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+        /// <summary>
         /// Invite a new sub-account
         /// </summary>
         /// <remarks>
@@ -5863,6 +5886,29 @@ namespace TextMagicClient.Api
         /// <param name="surveyId">Fetch only that numbers which are ready for the survey (optional)</param>
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -23160,6 +23206,177 @@ namespace TextMagicClient.Api
             return new ApiResponse<GetUserDedicatedNumbersPaginatedResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetUserDedicatedNumbersPaginatedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUserDedicatedNumbersPaginatedResponse)));
+        }
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns></returns>
+        public void ImportContacts (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        {
+             ImportContactsWithHttpInfo(file, importContactsInputObject);
+        }
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        {
+            // verify the required parameter 'file' is set
+            if (file == null)
+                throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'importContactsInputObject' is set
+            if (importContactsInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'importContactsInputObject' when calling TextMagicApi->ImportContacts");
+
+            var localVarPath = "/api/v2/contacts/import/normalized";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
+            if (importContactsInputObject != null && importContactsInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(importContactsInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = importContactsInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ImportContacts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        {
+             await ImportContactsAsyncWithHttpInfo(file, importContactsInputObject);
+
+        }
+
+        /// <summary>
+        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="file">File containing contacts in csv or xls(x) formats</param>
+        /// <param name="importContactsInputObject"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, ImportContactsInputObject importContactsInputObject)
+        {
+            // verify the required parameter 'file' is set
+            if (file == null)
+                throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'importContactsInputObject' is set
+            if (importContactsInputObject == null)
+                throw new ApiException(400, "Missing required parameter 'importContactsInputObject' when calling TextMagicApi->ImportContacts");
+
+            var localVarPath = "/api/v2/contacts/import/normalized";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
+            if (importContactsInputObject != null && importContactsInputObject.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(importContactsInputObject); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = importContactsInputObject; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ImportContacts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

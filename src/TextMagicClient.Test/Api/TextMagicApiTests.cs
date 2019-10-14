@@ -1441,6 +1441,19 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
+        /// Test ImportContacts
+        /// </summary>
+        [Test]
+        public void ImportContactsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream file = null;
+            //ImportContactsInputObject importContactsInputObject = null;
+            //instance.ImportContacts(file, importContactsInputObject);
+            
+        }
+        
+        /// <summary>
         /// Test InviteSubaccount
         /// </summary>
         [Test]
