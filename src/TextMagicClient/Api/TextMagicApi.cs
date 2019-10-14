@@ -2466,11 +2466,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns></returns>
-        void ImportContacts (System.IO.Stream file, string column, string listName = null, int? listId = null);
+        void ImportContacts (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
 
         /// <summary>
         /// Import contacts from the CSV, XLS or XLSX file.
@@ -2480,11 +2480,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column, string listName = null, int? listId = null);
+        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -5898,11 +5898,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column, string listName = null, int? listId = null);
+        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
 
         /// <summary>
         /// Import contacts from the CSV, XLS or XLSX file.
@@ -5912,11 +5912,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column, string listName = null, int? listId = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -23221,11 +23221,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns></returns>
-        public void ImportContacts (System.IO.Stream file, string column, string listName = null, int? listId = null)
+        public void ImportContacts (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
         {
              ImportContactsWithHttpInfo(file, column, listName, listId);
         }
@@ -23235,18 +23235,15 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column, string listName = null, int? listId = null)
+        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
-            // verify the required parameter 'column' is set
-            if (column == null)
-                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
@@ -23305,11 +23302,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column, string listName = null, int? listId = null)
+        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
         {
              await ImportContactsAsyncWithHttpInfo(file, column, listName, listId);
 
@@ -23320,18 +23317,15 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"></param>
+        /// <param name="column"> (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
         /// <param name="listId">List ID contacts will be imported to. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column, string listName = null, int? listId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
-            // verify the required parameter 'column' is set
-            if (column == null)
-                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
