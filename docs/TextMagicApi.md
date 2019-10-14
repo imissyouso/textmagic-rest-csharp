@@ -7070,7 +7070,7 @@ Name | Type | Description  | Notes
 
 <a name="importcontacts"></a>
 # **ImportContacts**
-> void ImportContacts (System.IO.Stream file, List<ImportColumnMappingItem> column)
+> void ImportContacts (System.IO.Stream file, string column, string listName = null, int? listId = null)
 
 Import contacts from the CSV, XLS or XLSX file.
 
@@ -7094,12 +7094,14 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var file = new System.IO.Stream(); // System.IO.Stream | File containing contacts in csv or xls(x) formats
-            var column = new List<ImportColumnMappingItem>(); // List<ImportColumnMappingItem> | 
+            var column = column_example;  // string | 
+            var listName = listName_example;  // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional) 
+            var listId = 56;  // int? | List ID contacts will be imported to. (optional) 
 
             try
             {
                 // Import contacts from the CSV, XLS or XLSX file.
-                apiInstance.ImportContacts(file, column);
+                apiInstance.ImportContacts(file, column, listName, listId);
             }
             catch (Exception e)
             {
@@ -7115,7 +7117,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **System.IO.Stream**| File containing contacts in csv or xls(x) formats | 
- **column** | [**List&lt;ImportColumnMappingItem&gt;**](ImportColumnMappingItem.md)|  | 
+ **column** | **string**|  | 
+ **listName** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. | [optional] 
+ **listId** | **int?**| List ID contacts will be imported to. | [optional] 
 
 ### Return type
 
