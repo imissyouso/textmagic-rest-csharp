@@ -7163,7 +7163,7 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var file = new System.IO.Stream(); // System.IO.Stream | File containing contacts in csv or xls(x) formats
             var column = "0:firstName;1:lastName;3:phone;4:email";  // string | Import file column mapping. String must contain substrings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where value before `:` is a number of column in file, value after `:` is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
-            var listId = null;  // int? | List ID contacts will be imported to. Ignored if `listName` is specified.  (optional) 
+            var listId = 443;  // int? | List ID contacts will be imported to. Ignored if `listName` is specified.  (optional) 
             var listName = "A new list";  // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.  (optional) 
 
             try
