@@ -2487,11 +2487,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse ImportContacts (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
+        ResourceLinkResponse ImportContacts (System.IO.Stream file, string column, int? listId = null, string listName = null);
 
         /// <summary>
         /// Import contacts
@@ -2501,11 +2501,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
+        ApiResponse<ResourceLinkResponse> ImportContactsWithHttpInfo (System.IO.Stream file, string column, int? listId = null, string listName = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -5940,11 +5940,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
+        System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column, int? listId = null, string listName = null);
 
         /// <summary>
         /// Import contacts
@@ -5954,11 +5954,11 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column, int? listId = null, string listName = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -23410,11 +23410,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse ImportContacts (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
+        public ResourceLinkResponse ImportContacts (System.IO.Stream file, string column, int? listId = null, string listName = null)
         {
              ApiResponse<ResourceLinkResponse> localVarResponse = ImportContactsWithHttpInfo(file, column, listId, listName);
              return localVarResponse.Data;
@@ -23425,15 +23425,18 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
+        public ApiResponse< ResourceLinkResponse > ImportContactsWithHttpInfo (System.IO.Stream file, string column, int? listId = null, string listName = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'column' is set
+            if (column == null)
+                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
@@ -23492,11 +23495,11 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column, int? listId = null, string listName = null)
         {
              ApiResponse<ResourceLinkResponse> localVarResponse = await ImportContactsAsyncWithHttpInfo(file, column, listId, listName);
              return localVarResponse.Data;
@@ -23508,15 +23511,18 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. </param>
         /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
         /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column, int? listId = null, string listName = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling TextMagicApi->ImportContacts");
+            // verify the required parameter 'column' is set
+            if (column == null)
+                throw new ApiException(400, "Missing required parameter 'column' when calling TextMagicApi->ImportContacts");
 
             var localVarPath = "/api/v2/contacts/import/normalized";
             var localVarPathParams = new Dictionary<String, String>();
