@@ -123,14 +123,14 @@ namespace TextMagicClient.Model
         /// Country name
         /// </summary>
         /// <value>Country name</value>
-        [DataMember(Name="country_name", EmitDefaultValue=false)]
+        [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
 
         /// <summary>
         /// Is allow to use dedicated number
         /// </summary>
         /// <value>Is allow to use dedicated number</value>
-        [DataMember(Name="allow_dedicated", EmitDefaultValue=false)]
+        [DataMember(Name="allowDedicated", EmitDefaultValue=false)]
         public bool? AllowDedicated { get; set; }
 
         /// <summary>

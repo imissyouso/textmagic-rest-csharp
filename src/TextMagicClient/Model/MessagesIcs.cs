@@ -53,7 +53,7 @@ namespace TextMagicClient.Model
         /// <param name="recipientsCount">Amount of actual recipients. (required).</param>
         /// <param name="timezone">User-friendly timezone name (with spaces replaced by underscores). (required).</param>
         /// <param name="completed">Indicates that schedling has been completed. (required).</param>
-        /// <param name="avatar">null (required).</param>
+        /// <param name="avatar">TODO (required).</param>
         /// <param name="createdAt">Scheduling creation time. (required).</param>
         public MessagesIcs(int? id = default(int?), DateTime? nextSend = default(DateTime?), string rrule = default(string), MessageSession session = default(MessageSession), DateTime? lastSent = default(DateTime?), string contactName = default(string), MessagesIcsParameters parameters = default(MessagesIcsParameters), string type = default(string), string summary = default(string), MessagesIcsTextParameters textParameters = default(MessagesIcsTextParameters), DateTime? firstOccurrence = default(DateTime?), DateTime? lastOccurrence = default(DateTime?), int? recipientsCount = default(int?), string timezone = default(string), bool? completed = default(bool?), string avatar = default(string), DateTime? createdAt = default(DateTime?))
         {
@@ -310,9 +310,9 @@ namespace TextMagicClient.Model
         public bool? Completed { get; set; }
 
         /// <summary>
-        /// null
+        /// TODO
         /// </summary>
-        /// <value>null</value>
+        /// <value>TODO</value>
         [DataMember(Name="avatar", EmitDefaultValue=false)]
         public string Avatar { get; set; }
 

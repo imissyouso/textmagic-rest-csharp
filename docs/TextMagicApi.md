@@ -68,6 +68,7 @@ Method | HTTP request | Description
 [**GetContact**](TextMagicApi.md#getcontact) | **GET** /api/v2/contacts/{id} | Get the details of a specific contact
 [**GetContactByPhone**](TextMagicApi.md#getcontactbyphone) | **GET** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**GetContactIfBlocked**](TextMagicApi.md#getcontactifblocked) | **GET** /api/v2/contacts/block/phone | Check is that phone number blocked
+[**GetContactImportSessionProgress**](TextMagicApi.md#getcontactimportsessionprogress) | **GET** /api/v2/contacts/import/progress/{id} | Check import progress
 [**GetContactNote**](TextMagicApi.md#getcontactnote) | **GET** /api/v2/notes/{id} | Get a contact note
 [**GetContactNotes**](TextMagicApi.md#getcontactnotes) | **GET** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**GetContacts**](TextMagicApi.md#getcontacts) | **GET** /api/v2/contacts | Get all contacts
@@ -110,7 +111,7 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#getunsubscribedcontact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#getunsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#getuserdedicatednumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
-[**ImportContacts**](TextMagicApi.md#importcontacts) | **POST** /api/v2/contacts/import/normalized | Import contacts from the CSV, XLS or XLSX file.
+[**ImportContacts**](TextMagicApi.md#importcontacts) | **POST** /api/v2/contacts/import/normalized | Import contacts
 [**InviteSubaccount**](TextMagicApi.md#invitesubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#markchatsreadbulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#markchatsunreadbulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
@@ -818,7 +819,7 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var createContactNoteInputObject = new CreateContactNoteInputObject(); // CreateContactNoteInputObject | 
-            var id = 56;  // int? | 
+            var id = 1;  // int? | 
 
             try
             {
@@ -1443,7 +1444,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var id = 56;  // int? | 
+            var id = 1;  // int? | 
 
             try
             {
@@ -3445,7 +3446,7 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var country = "GB";  // string | Two-letter dedicated number country ISO code.
-            var prefix = 447155;  // int? | Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)  (default to 1)
+            var prefix = 447155;  // int? | Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional) 
             var tollfree = 56;  // int? | Should we show only tollfree numbers (tollfree available only for US). (optional)  (default to 0)
 
             try
@@ -3468,7 +3469,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **country** | **string**| Two-letter dedicated number country ISO code. | 
- **prefix** | **int?**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional] [default to 1]
+ **prefix** | **int?**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [optional] 
  **tollfree** | **int?**| Should we show only tollfree numbers (tollfree available only for US). | [optional] [default to 0]
 
 ### Return type
@@ -3950,7 +3951,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var phone = phone_example;  // string | 
+            var phone = "447860021130";  // string | 
             var upsert = 56;  // int? | Create a new chat if not found (optional)  (default to 0)
             var reopen = 56;  // int? | Reopen chat if found or do not change status (optional)  (default to 0)
 
@@ -4157,7 +4158,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var phone = phone_example;  // string | 
+            var phone = "447860021130";  // string | 
 
             try
             {
@@ -4220,7 +4221,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var phone = 447860021130;  // string | Phone number to check
+            var phone = "447860021130";  // string | Phone number to check
 
             try
             {
@@ -4258,6 +4259,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getcontactimportsessionprogress"></a>
+# **GetContactImportSessionProgress**
+> GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id)
+
+Check import progress
+
+Get contact import session progress.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using TextMagicClient.Api;
+using TextMagicClient.Client;
+using TextMagicClient.Model;
+
+namespace Example
+{
+    public class GetContactImportSessionProgressExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new TextMagicApi();
+            var id = 1;  // int? | 
+
+            try
+            {
+                // Check import progress
+                GetContactImportSessionProgressResponse result = apiInstance.GetContactImportSessionProgress(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextMagicApi.GetContactImportSessionProgress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int?**|  | 
+
+### Return type
+
+[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getcontactnote"></a>
 # **GetContactNote**
 > ContactNote GetContactNote (int? id)
@@ -4283,7 +4349,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TextMagicApi();
-            var id = 56;  // int? | 
+            var id = 1;  // int? | 
 
             try
             {
@@ -4998,7 +5064,7 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
             var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
-            var query = query_example;  // string | Find contacts or lists by specified search query (optional)  (default to A)
+            var query = "A";  // string | Find contacts or lists by specified search query (optional) 
 
             try
             {
@@ -5021,7 +5087,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int?**| The number of results per page. | [optional] [default to 10]
- **query** | **string**| Find contacts or lists by specified search query | [optional] [default to A]
+ **query** | **string**| Find contacts or lists by specified search query | [optional] 
 
 ### Return type
 
@@ -5957,7 +6023,7 @@ This endpoint does not need any parameter.
 
 <a name="getmessagingstat"></a>
 # **GetMessagingStat**
-> GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, string end = null)
+> GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, int? end = null)
 
 Get messaging statistics
 
@@ -5982,7 +6048,7 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var by = "off";  // string | *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (optional)  (default to off)
             var start = 1430438400;  // int? | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional) 
-            var end = 1431648000;  // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional) 
+            var end = 1431648000;  // int? | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional) 
 
             try
             {
@@ -6005,7 +6071,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **by** | **string**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [optional] [default to off]
  **start** | **int?**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
- **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
+ **end** | **int?**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
 
@@ -6416,7 +6482,7 @@ Name | Type | Description  | Notes
 
 <a name="getspendingstat"></a>
 # **GetSpendingStat**
-> GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, string end = null)
+> GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, string start = null, string end = null)
 
 Get spending statistics
 
@@ -6441,7 +6507,7 @@ namespace Example
             var apiInstance = new TextMagicApi();
             var page = 56;  // int? | Fetch specified results page. (optional)  (default to 1)
             var limit = 56;  // int? | The number of results per page. (optional)  (default to 10)
-            var start = "2018-11-11 11:11";  // int? | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional) 
+            var start = "2018-11-11 11:11";  // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional) 
             var end = "2019-11-11 11:11";  // string | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional) 
 
             try
@@ -6465,7 +6531,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int?**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **int?**| The number of results per page. | [optional] [default to 10]
- **start** | **int?**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
+ **start** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
  **end** | **string**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
@@ -7070,7 +7136,9 @@ Name | Type | Description  | Notes
 
 <a name="importcontacts"></a>
 # **ImportContacts**
-> void ImportContacts (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
+> ResourceLinkResponse ImportContacts (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
+
+Import contacts
 
 Import contacts from the CSV, XLS or XLSX file.
 
@@ -7094,14 +7162,15 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var file = new System.IO.Stream(); // System.IO.Stream | File containing contacts in csv or xls(x) formats
-            var column = column_example;  // string |  (optional) 
-            var listName = listName_example;  // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional) 
-            var listId = 56;  // int? | List ID contacts will be imported to. (optional) 
+            var column = "0:firstName;1:lastName;3:phone;4:email";  // string | Import file column mapping. String must contain substrings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where value before `:` is a number of column in file, value after `:` is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.  (optional) 
+            var listId = 364;  // int? | List ID contacts will be imported to. Ignored if `listName` is specified.  (optional) 
+            var listName = "A new list";  // string | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.  (optional) 
 
             try
             {
-                // Import contacts from the CSV, XLS or XLSX file.
-                apiInstance.ImportContacts(file, column, listName, listId);
+                // Import contacts
+                ResourceLinkResponse result = apiInstance.ImportContacts(file, column, listId, listName);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -7117,13 +7186,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **System.IO.Stream**| File containing contacts in csv or xls(x) formats | 
- **column** | **string**|  | [optional] 
- **listName** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. | [optional] 
- **listId** | **int?**| List ID contacts will be imported to. | [optional] 
+ **column** | **string**| Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  | [optional] 
+ **listId** | **int?**| List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  | [optional] 
+ **listName** | **string**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**ResourceLinkResponse**](ResourceLinkResponse.md)
 
 ### Authorization
 
@@ -9273,7 +9342,7 @@ Name | Type | Description  | Notes
 
 <a name="updatecustomfieldvalue"></a>
 # **UpdateCustomFieldValue**
-> ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
+> ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id)
 
 Edit the custom field value of a specified contact
 
@@ -9297,7 +9366,7 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var updateCustomFieldValueInputObject = new UpdateCustomFieldValueInputObject(); // UpdateCustomFieldValueInputObject | 
-            var id = id_example;  // string | 
+            var id = 554;  // int? | 
 
             try
             {
@@ -9319,7 +9388,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
- **id** | **string**|  | 
+ **id** | **int?**|  | 
 
 ### Return type
 
@@ -9678,7 +9747,7 @@ namespace Example
 
             var apiInstance = new TextMagicApi();
             var image = new System.IO.Stream(); // System.IO.Stream | Contact avatar. Should be PNG or JPG file not more than 10 MB
-            var id = 56;  // int? | 
+            var id = 1;  // int? | 
 
             try
             {

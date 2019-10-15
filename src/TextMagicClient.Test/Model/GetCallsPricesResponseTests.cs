@@ -66,6 +66,38 @@ namespace TextMagicClient.Test
         }
 
 
+        /// <summary>
+        /// Test the property 'Outbound'
+        /// </summary>
+        [Test]
+        public void OutboundTest()
+        {
+            // TODO unit test for the property 'Outbound'
+        }
+        /// <summary>
+        /// Test the property 'Inbound'
+        /// </summary>
+        [Test]
+        public void InboundTest()
+        {
+            // TODO unit test for the property 'Inbound'
+        }
+        /// <summary>
+        /// Test the property 'Forward'
+        /// </summary>
+        [Test]
+        public void ForwardTest()
+        {
+            // TODO unit test for the property 'Forward'
+        }
+        /// <summary>
+        /// Test the property 'Country'
+        /// </summary>
+        [Test]
+        public void CountryTest()
+        {
+            // TODO unit test for the property 'Country'
+        }
 
     }
 

@@ -33,26 +33,47 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportColumnMappingItem" /> class.
         /// </summary>
-        /// <param name="columnPositionInFile">Column position in file (indexed from 0).</param>
-        /// <param name="fieldOrCustomFieldId">Field or custom field id.</param>
+        [JsonConstructorAttribute]
+        protected ImportColumnMappingItem() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ImportColumnMappingItem" /> class.
+        /// </summary>
+        /// <param name="columnPositionInFile">Column position in file (indexed from 0) (required).</param>
+        /// <param name="fieldOrCustomFieldId">Field or custom field id (required).</param>
         public ImportColumnMappingItem(string columnPositionInFile = default(string), string fieldOrCustomFieldId = default(string))
         {
-            this.ColumnPositionInFile = columnPositionInFile;
-            this.FieldOrCustomFieldId = fieldOrCustomFieldId;
+            // to ensure "columnPositionInFile" is required (not null)
+            if (columnPositionInFile == null)
+            {
+                throw new InvalidDataException("columnPositionInFile is a required property for ImportColumnMappingItem and cannot be null");
+            }
+            else
+            {
+                this.ColumnPositionInFile = columnPositionInFile;
+            }
+            // to ensure "fieldOrCustomFieldId" is required (not null)
+            if (fieldOrCustomFieldId == null)
+            {
+                throw new InvalidDataException("fieldOrCustomFieldId is a required property for ImportColumnMappingItem and cannot be null");
+            }
+            else
+            {
+                this.FieldOrCustomFieldId = fieldOrCustomFieldId;
+            }
         }
         
         /// <summary>
         /// Column position in file (indexed from 0)
         /// </summary>
         /// <value>Column position in file (indexed from 0)</value>
-        [DataMember(Name="column_position_in_file", EmitDefaultValue=false)]
+        [DataMember(Name="columnPositionInFile", EmitDefaultValue=false)]
         public string ColumnPositionInFile { get; set; }
 
         /// <summary>
         /// Field or custom field id
         /// </summary>
         /// <value>Field or custom field id</value>
-        [DataMember(Name="field_or_custom_field_id", EmitDefaultValue=false)]
+        [DataMember(Name="fieldOrCustomFieldId", EmitDefaultValue=false)]
         public string FieldOrCustomFieldId { get; set; }
 
         /// <summary>

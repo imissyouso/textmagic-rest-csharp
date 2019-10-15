@@ -866,6 +866,18 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
+        /// Test GetContactImportSessionProgress
+        /// </summary>
+        [Test]
+        public void GetContactImportSessionProgressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //var response = instance.GetContactImportSessionProgress(id);
+            //Assert.IsInstanceOf<GetContactImportSessionProgressResponse> (response, "response is GetContactImportSessionProgressResponse");
+        }
+        
+        /// <summary>
         /// Test GetContactNote
         /// </summary>
         [Test]
@@ -1230,7 +1242,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string by = null;
             //int? start = null;
-            //string end = null;
+            //int? end = null;
             //var response = instance.GetMessagingStat(by, start, end);
             //Assert.IsInstanceOf<GetMessagingStatResponse> (response, "response is GetMessagingStatResponse");
         }
@@ -1321,7 +1333,7 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? page = null;
             //int? limit = null;
-            //int? start = null;
+            //string start = null;
             //string end = null;
             //var response = instance.GetSpendingStat(page, limit, start, end);
             //Assert.IsInstanceOf<GetSpendingStatPaginatedResponse> (response, "response is GetSpendingStatPaginatedResponse");
@@ -1449,10 +1461,10 @@ namespace TextMagicClient.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream file = null;
             //string column = null;
-            //string listName = null;
             //int? listId = null;
-            //instance.ImportContacts(file, column, listName, listId);
-            
+            //string listName = null;
+            //var response = instance.ImportContacts(file, column, listId, listName);
+            //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }
         
         /// <summary>
@@ -1896,7 +1908,7 @@ namespace TextMagicClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject = null;
-            //string id = null;
+            //int? id = null;
             //var response = instance.UpdateCustomFieldValue(updateCustomFieldValueInputObject, id);
             //Assert.IsInstanceOf<ResourceLinkResponse> (response, "response is ResourceLinkResponse");
         }

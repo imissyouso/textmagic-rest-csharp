@@ -73,7 +73,7 @@ namespace TextMagicClient.Model
         /// User inbound phone ID
         /// </summary>
         /// <value>User inbound phone ID</value>
-        [DataMember(Name="user_inbound_id", EmitDefaultValue=false)]
+        [DataMember(Name="userInboundId", EmitDefaultValue=false)]
         public int? UserInboundId { get; set; }
 
         /// <summary>

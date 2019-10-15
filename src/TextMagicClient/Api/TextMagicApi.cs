@@ -1145,7 +1145,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>GetAvailableDedicatedNumbersResponse</returns>
         GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers (string country, int? prefix = null, int? tollfree = null);
@@ -1158,7 +1158,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>ApiResponse of GetAvailableDedicatedNumbersResponse</returns>
         ApiResponse<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersWithHttpInfo (string country, int? prefix = null, int? tollfree = null);
@@ -1435,6 +1435,27 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of Contact</returns>
         ApiResponse<Contact> GetContactIfBlockedWithHttpInfo (string phone);
         /// <summary>
+        /// Check import progress
+        /// </summary>
+        /// <remarks>
+        /// Get contact import session progress.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>GetContactImportSessionProgressResponse</returns>
+        GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id);
+
+        /// <summary>
+        /// Check import progress
+        /// </summary>
+        /// <remarks>
+        /// Get contact import session progress.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of GetContactImportSessionProgressResponse</returns>
+        ApiResponse<GetContactImportSessionProgressResponse> GetContactImportSessionProgressWithHttpInfo (int? id);
+        /// <summary>
         /// Get a contact note
         /// </summary>
         /// <remarks>
@@ -1694,7 +1715,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>GetFavouritesPaginatedResponse</returns>
         GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null);
 
@@ -1707,7 +1728,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
         ApiResponse<GetFavouritesPaginatedResponse> GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
@@ -2082,7 +2103,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>GetMessagingStatResponse</returns>
-        GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, string end = null);
+        GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, int? end = null);
 
         /// <summary>
         /// Get messaging statistics
@@ -2095,7 +2116,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>ApiResponse of GetMessagingStatResponse</returns>
-        ApiResponse<GetMessagingStatResponse> GetMessagingStatWithHttpInfo (string by = null, int? start = null, string end = null);
+        ApiResponse<GetMessagingStatResponse> GetMessagingStatWithHttpInfo (string by = null, int? start = null, int? end = null);
         /// <summary>
         /// Get a single message
         /// </summary>
@@ -2244,7 +2265,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>GetSpendingStatPaginatedResponse</returns>
-        GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, string end = null);
+        GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, string start = null, string end = null);
 
         /// <summary>
         /// Get spending statistics
@@ -2258,7 +2279,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
-        ApiResponse<GetSpendingStatPaginatedResponse> GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null);
+        ApiResponse<GetSpendingStatPaginatedResponse> GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, string start = null, string end = null);
         /// <summary>
         /// Get sub-account information
         /// </summary>
@@ -2459,32 +2480,32 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of GetUserDedicatedNumbersPaginatedResponse</returns>
         ApiResponse<GetUserDedicatedNumbersPaginatedResponse> GetUserDedicatedNumbersWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file.
+        /// Import contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Import contacts from the CSV, XLS or XLSX file.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns></returns>
-        void ImportContacts (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>ResourceLinkResponse</returns>
+        ResourceLinkResponse ImportContacts (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file.
+        /// Import contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Import contacts from the CSV, XLS or XLSX file.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>ApiResponse of ResourceLinkResponse</returns>
+        ApiResponse<ResourceLinkResponse> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -3265,7 +3286,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ResourceLinkResponse</returns>
-        ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
+        ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id);
 
         /// <summary>
         /// Edit the custom field value of a specified contact
@@ -3277,7 +3298,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        ApiResponse<ResourceLinkResponse> UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
+        ApiResponse<ResourceLinkResponse> UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id);
         /// <summary>
         /// Update inbound messages notification settings
         /// </summary>
@@ -4577,7 +4598,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of GetAvailableDedicatedNumbersResponse</returns>
         System.Threading.Tasks.Task<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersAsync (string country, int? prefix = null, int? tollfree = null);
@@ -4590,7 +4611,7 @@ namespace TextMagicClient.Api
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetAvailableDedicatedNumbersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetAvailableDedicatedNumbersResponse>> GetAvailableDedicatedNumbersAsyncWithHttpInfo (string country, int? prefix = null, int? tollfree = null);
@@ -4867,6 +4888,27 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (Contact)</returns>
         System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactIfBlockedAsyncWithHttpInfo (string phone);
         /// <summary>
+        /// Check import progress
+        /// </summary>
+        /// <remarks>
+        /// Get contact import session progress.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of GetContactImportSessionProgressResponse</returns>
+        System.Threading.Tasks.Task<GetContactImportSessionProgressResponse> GetContactImportSessionProgressAsync (int? id);
+
+        /// <summary>
+        /// Check import progress
+        /// </summary>
+        /// <remarks>
+        /// Get contact import session progress.
+        /// </remarks>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (GetContactImportSessionProgressResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetContactImportSessionProgressResponse>> GetContactImportSessionProgressAsyncWithHttpInfo (int? id);
+        /// <summary>
         /// Get a contact note
         /// </summary>
         /// <remarks>
@@ -5126,7 +5168,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>Task of GetFavouritesPaginatedResponse</returns>
         System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null);
 
@@ -5139,7 +5181,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null);
         /// <summary>
@@ -5514,7 +5556,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of GetMessagingStatResponse</returns>
-        System.Threading.Tasks.Task<GetMessagingStatResponse> GetMessagingStatAsync (string by = null, int? start = null, string end = null);
+        System.Threading.Tasks.Task<GetMessagingStatResponse> GetMessagingStatAsync (string by = null, int? start = null, int? end = null);
 
         /// <summary>
         /// Get messaging statistics
@@ -5527,7 +5569,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of ApiResponse (GetMessagingStatResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetMessagingStatResponse>> GetMessagingStatAsyncWithHttpInfo (string by = null, int? start = null, string end = null);
+        System.Threading.Tasks.Task<ApiResponse<GetMessagingStatResponse>> GetMessagingStatAsyncWithHttpInfo (string by = null, int? start = null, int? end = null);
         /// <summary>
         /// Get a single message
         /// </summary>
@@ -5676,7 +5718,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
-        System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, string end = null);
+        System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, string start = null, string end = null);
 
         /// <summary>
         /// Get spending statistics
@@ -5690,7 +5732,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null);
+        System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, string start = null, string end = null);
         /// <summary>
         /// Get sub-account information
         /// </summary>
@@ -5891,32 +5933,32 @@ namespace TextMagicClient.Api
         /// <returns>Task of ApiResponse (GetUserDedicatedNumbersPaginatedResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetUserDedicatedNumbersPaginatedResponse>> GetUserDedicatedNumbersAsyncWithHttpInfo (int? page = null, int? limit = null, int? surveyId = null);
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file.
+        /// Import contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Import contacts from the CSV, XLS or XLSX file.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>Task of ResourceLinkResponse</returns>
+        System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file.
+        /// Import contacts
         /// </summary>
         /// <remarks>
-        /// 
+        /// Import contacts from the CSV, XLS or XLSX file.
         /// </remarks>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null);
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null);
         /// <summary>
         /// Invite a new sub-account
         /// </summary>
@@ -6697,7 +6739,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
+        System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id);
 
         /// <summary>
         /// Edit the custom field value of a specified contact
@@ -6709,7 +6751,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id);
+        System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id);
         /// <summary>
         /// Update inbound messages notification settings
         /// </summary>
@@ -14786,7 +14828,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>GetAvailableDedicatedNumbersResponse</returns>
         public GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers (string country, int? prefix = null, int? tollfree = null)
@@ -14800,7 +14842,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>ApiResponse of GetAvailableDedicatedNumbersResponse</returns>
         public ApiResponse< GetAvailableDedicatedNumbersResponse > GetAvailableDedicatedNumbersWithHttpInfo (string country, int? prefix = null, int? tollfree = null)
@@ -14865,7 +14907,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of GetAvailableDedicatedNumbersResponse</returns>
         public async System.Threading.Tasks.Task<GetAvailableDedicatedNumbersResponse> GetAvailableDedicatedNumbersAsync (string country, int? prefix = null, int? tollfree = null)
@@ -14880,7 +14922,7 @@ namespace TextMagicClient.Api
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Two-letter dedicated number country ISO code.</param>
-        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional, default to 1)</param>
+        /// <param name="prefix">Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. (optional)</param>
         /// <param name="tollfree">Should we show only tollfree numbers (tollfree available only for US). (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (GetAvailableDedicatedNumbersResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetAvailableDedicatedNumbersResponse>> GetAvailableDedicatedNumbersAsyncWithHttpInfo (string country, int? prefix = null, int? tollfree = null)
@@ -16735,6 +16777,153 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
+        /// Check import progress Get contact import session progress.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>GetContactImportSessionProgressResponse</returns>
+        public GetContactImportSessionProgressResponse GetContactImportSessionProgress (int? id)
+        {
+             ApiResponse<GetContactImportSessionProgressResponse> localVarResponse = GetContactImportSessionProgressWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check import progress Get contact import session progress.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of GetContactImportSessionProgressResponse</returns>
+        public ApiResponse< GetContactImportSessionProgressResponse > GetContactImportSessionProgressWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->GetContactImportSessionProgress");
+
+            var localVarPath = "/api/v2/contacts/import/progress/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetContactImportSessionProgress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetContactImportSessionProgressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetContactImportSessionProgressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactImportSessionProgressResponse)));
+        }
+
+        /// <summary>
+        /// Check import progress Get contact import session progress.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of GetContactImportSessionProgressResponse</returns>
+        public async System.Threading.Tasks.Task<GetContactImportSessionProgressResponse> GetContactImportSessionProgressAsync (int? id)
+        {
+             ApiResponse<GetContactImportSessionProgressResponse> localVarResponse = await GetContactImportSessionProgressAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check import progress Get contact import session progress.
+        /// </summary>
+        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (GetContactImportSessionProgressResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetContactImportSessionProgressResponse>> GetContactImportSessionProgressAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TextMagicApi->GetContactImportSessionProgress");
+
+            var localVarPath = "/api/v2/contacts/import/progress/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetContactImportSessionProgress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetContactImportSessionProgressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetContactImportSessionProgressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetContactImportSessionProgressResponse)));
+        }
+
+        /// <summary>
         /// Get a contact note 
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
@@ -18387,7 +18576,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>GetFavouritesPaginatedResponse</returns>
         public GetFavouritesPaginatedResponse GetFavourites (int? page = null, int? limit = null, string query = null)
         {
@@ -18401,7 +18590,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>ApiResponse of GetFavouritesPaginatedResponse</returns>
         public ApiResponse< GetFavouritesPaginatedResponse > GetFavouritesWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
@@ -18463,7 +18652,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>Task of GetFavouritesPaginatedResponse</returns>
         public async System.Threading.Tasks.Task<GetFavouritesPaginatedResponse> GetFavouritesAsync (int? page = null, int? limit = null, string query = null)
         {
@@ -18478,7 +18667,7 @@ namespace TextMagicClient.Api
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Fetch specified results page. (optional, default to 1)</param>
         /// <param name="limit">The number of results per page. (optional, default to 10)</param>
-        /// <param name="query">Find contacts or lists by specified search query (optional, default to A)</param>
+        /// <param name="query">Find contacts or lists by specified search query (optional)</param>
         /// <returns>Task of ApiResponse (GetFavouritesPaginatedResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetFavouritesPaginatedResponse>> GetFavouritesAsyncWithHttpInfo (int? page = null, int? limit = null, string query = null)
         {
@@ -20681,7 +20870,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>GetMessagingStatResponse</returns>
-        public GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, string end = null)
+        public GetMessagingStatResponse GetMessagingStat (string by = null, int? start = null, int? end = null)
         {
              ApiResponse<GetMessagingStatResponse> localVarResponse = GetMessagingStatWithHttpInfo(by, start, end);
              return localVarResponse.Data;
@@ -20695,7 +20884,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>ApiResponse of GetMessagingStatResponse</returns>
-        public ApiResponse< GetMessagingStatResponse > GetMessagingStatWithHttpInfo (string by = null, int? start = null, string end = null)
+        public ApiResponse< GetMessagingStatResponse > GetMessagingStatWithHttpInfo (string by = null, int? start = null, int? end = null)
         {
 
             var localVarPath = "/api/v2/stats/messaging";
@@ -20757,7 +20946,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of GetMessagingStatResponse</returns>
-        public async System.Threading.Tasks.Task<GetMessagingStatResponse> GetMessagingStatAsync (string by = null, int? start = null, string end = null)
+        public async System.Threading.Tasks.Task<GetMessagingStatResponse> GetMessagingStatAsync (string by = null, int? start = null, int? end = null)
         {
              ApiResponse<GetMessagingStatResponse> localVarResponse = await GetMessagingStatAsyncWithHttpInfo(by, start, end);
              return localVarResponse.Data;
@@ -20772,7 +20961,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of ApiResponse (GetMessagingStatResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetMessagingStatResponse>> GetMessagingStatAsyncWithHttpInfo (string by = null, int? start = null, string end = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GetMessagingStatResponse>> GetMessagingStatAsyncWithHttpInfo (string by = null, int? start = null, int? end = null)
         {
 
             var localVarPath = "/api/v2/stats/messaging";
@@ -21729,7 +21918,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>GetSpendingStatPaginatedResponse</returns>
-        public GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, int? start = null, string end = null)
+        public GetSpendingStatPaginatedResponse GetSpendingStat (int? page = null, int? limit = null, string start = null, string end = null)
         {
              ApiResponse<GetSpendingStatPaginatedResponse> localVarResponse = GetSpendingStatWithHttpInfo(page, limit, start, end);
              return localVarResponse.Data;
@@ -21744,7 +21933,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>ApiResponse of GetSpendingStatPaginatedResponse</returns>
-        public ApiResponse< GetSpendingStatPaginatedResponse > GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null)
+        public ApiResponse< GetSpendingStatPaginatedResponse > GetSpendingStatWithHttpInfo (int? page = null, int? limit = null, string start = null, string end = null)
         {
 
             var localVarPath = "/api/v2/stats/spending";
@@ -21808,7 +21997,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of GetSpendingStatPaginatedResponse</returns>
-        public async System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, int? start = null, string end = null)
+        public async System.Threading.Tasks.Task<GetSpendingStatPaginatedResponse> GetSpendingStatAsync (int? page = null, int? limit = null, string start = null, string end = null)
         {
              ApiResponse<GetSpendingStatPaginatedResponse> localVarResponse = await GetSpendingStatAsyncWithHttpInfo(page, limit, start, end);
              return localVarResponse.Data;
@@ -21824,7 +22013,7 @@ namespace TextMagicClient.Api
         /// <param name="start">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  (optional)</param>
         /// <param name="end">Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  (optional)</param>
         /// <returns>Task of ApiResponse (GetSpendingStatPaginatedResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, int? start = null, string end = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GetSpendingStatPaginatedResponse>> GetSpendingStatAsyncWithHttpInfo (int? page = null, int? limit = null, string start = null, string end = null)
         {
 
             var localVarPath = "/api/v2/stats/spending";
@@ -23217,29 +23406,30 @@ namespace TextMagicClient.Api
         }
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// Import contacts Import contacts from the CSV, XLS or XLSX file.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns></returns>
-        public void ImportContacts (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>ResourceLinkResponse</returns>
+        public ResourceLinkResponse ImportContacts (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
         {
-             ImportContactsWithHttpInfo(file, column, listName, listId);
+             ApiResponse<ResourceLinkResponse> localVarResponse = ImportContactsWithHttpInfo(file, column, listId, listName);
+             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// Import contacts Import contacts from the CSV, XLS or XLSX file.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>ApiResponse of ResourceLinkResponse</returns>
+        public ApiResponse< ResourceLinkResponse > ImportContactsWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
@@ -23268,8 +23458,8 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (column != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "column", column)); // query parameter
-            if (listName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listName", listName)); // query parameter
             if (listId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listId", listId)); // query parameter
+            if (listName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listName", listName)); // query parameter
             if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
 
             // authentication (BasicAuth) required
@@ -23292,36 +23482,37 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ResourceLinkResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (ResourceLinkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResourceLinkResponse)));
         }
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// Import contacts Import contacts from the CSV, XLS or XLSX file.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ImportContactsAsync (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>Task of ResourceLinkResponse</returns>
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> ImportContactsAsync (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
         {
-             await ImportContactsAsyncWithHttpInfo(file, column, listName, listId);
+             ApiResponse<ResourceLinkResponse> localVarResponse = await ImportContactsAsyncWithHttpInfo(file, column, listId, listName);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Import contacts from the CSV, XLS or XLSX file. 
+        /// Import contacts Import contacts from the CSV, XLS or XLSX file.
         /// </summary>
         /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file">File containing contacts in csv or xls(x) formats</param>
-        /// <param name="column"> (optional)</param>
-        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. (optional)</param>
-        /// <param name="listId">List ID contacts will be imported to. (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, string listName = null, int? listId = null)
+        /// <param name="column">Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  (optional)</param>
+        /// <param name="listId">List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  (optional)</param>
+        /// <param name="listName">List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  (optional)</param>
+        /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> ImportContactsAsyncWithHttpInfo (System.IO.Stream file, string column = null, int? listId = null, string listName = null)
         {
             // verify the required parameter 'file' is set
             if (file == null)
@@ -23350,8 +23541,8 @@ namespace TextMagicClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (column != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "column", column)); // query parameter
-            if (listName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listName", listName)); // query parameter
             if (listId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listId", listId)); // query parameter
+            if (listName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "listName", listName)); // query parameter
             if (file != null) localVarFileParams.Add("file", this.Configuration.ApiClient.ParameterToFile("file", file));
 
             // authentication (BasicAuth) required
@@ -23374,9 +23565,9 @@ namespace TextMagicClient.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ResourceLinkResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (ResourceLinkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResourceLinkResponse)));
         }
 
         /// <summary>
@@ -28610,7 +28801,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ResourceLinkResponse</returns>
-        public ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
+        public ResourceLinkResponse UpdateCustomFieldValue (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id)
         {
              ApiResponse<ResourceLinkResponse> localVarResponse = UpdateCustomFieldValueWithHttpInfo(updateCustomFieldValueInputObject, id);
              return localVarResponse.Data;
@@ -28623,7 +28814,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of ResourceLinkResponse</returns>
-        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
+        public ApiResponse< ResourceLinkResponse > UpdateCustomFieldValueWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id)
         {
             // verify the required parameter 'updateCustomFieldValueInputObject' is set
             if (updateCustomFieldValueInputObject == null)
@@ -28696,7 +28887,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ResourceLinkResponse</returns>
-        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
+        public async System.Threading.Tasks.Task<ResourceLinkResponse> UpdateCustomFieldValueAsync (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id)
         {
              ApiResponse<ResourceLinkResponse> localVarResponse = await UpdateCustomFieldValueAsyncWithHttpInfo(updateCustomFieldValueInputObject, id);
              return localVarResponse.Data;
@@ -28710,7 +28901,7 @@ namespace TextMagicClient.Api
         /// <param name="updateCustomFieldValueInputObject"></param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (ResourceLinkResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<ResourceLinkResponse>> UpdateCustomFieldValueAsyncWithHttpInfo (UpdateCustomFieldValueInputObject updateCustomFieldValueInputObject, int? id)
         {
             // verify the required parameter 'updateCustomFieldValueInputObject' is set
             if (updateCustomFieldValueInputObject == null)

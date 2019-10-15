@@ -34,10 +34,82 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="GetCallsPricesResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        public GetCallsPricesResponse()
+        protected GetCallsPricesResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetCallsPricesResponse" /> class.
+        /// </summary>
+        /// <param name="outbound">Price for outbound message (required).</param>
+        /// <param name="inbound">Price for inbound message (required).</param>
+        /// <param name="forward">Price for forward (required).</param>
+        /// <param name="country">2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country (required).</param>
+        public GetCallsPricesResponse(decimal? outbound = default(decimal?), decimal? inbound = default(decimal?), decimal? forward = default(decimal?), string country = default(string))
         {
+            // to ensure "outbound" is required (not null)
+            if (outbound == null)
+            {
+                throw new InvalidDataException("outbound is a required property for GetCallsPricesResponse and cannot be null");
+            }
+            else
+            {
+                this.Outbound = outbound;
+            }
+            // to ensure "inbound" is required (not null)
+            if (inbound == null)
+            {
+                throw new InvalidDataException("inbound is a required property for GetCallsPricesResponse and cannot be null");
+            }
+            else
+            {
+                this.Inbound = inbound;
+            }
+            // to ensure "forward" is required (not null)
+            if (forward == null)
+            {
+                throw new InvalidDataException("forward is a required property for GetCallsPricesResponse and cannot be null");
+            }
+            else
+            {
+                this.Forward = forward;
+            }
+            // to ensure "country" is required (not null)
+            if (country == null)
+            {
+                throw new InvalidDataException("country is a required property for GetCallsPricesResponse and cannot be null");
+            }
+            else
+            {
+                this.Country = country;
+            }
         }
         
+        /// <summary>
+        /// Price for outbound message
+        /// </summary>
+        /// <value>Price for outbound message</value>
+        [DataMember(Name="outbound", EmitDefaultValue=false)]
+        public decimal? Outbound { get; set; }
+
+        /// <summary>
+        /// Price for inbound message
+        /// </summary>
+        /// <value>Price for inbound message</value>
+        [DataMember(Name="inbound", EmitDefaultValue=false)]
+        public decimal? Inbound { get; set; }
+
+        /// <summary>
+        /// Price for forward
+        /// </summary>
+        /// <value>Price for forward</value>
+        [DataMember(Name="forward", EmitDefaultValue=false)]
+        public decimal? Forward { get; set; }
+
+        /// <summary>
+        /// 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+        /// </summary>
+        /// <value>2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country</value>
+        [DataMember(Name="country", EmitDefaultValue=false)]
+        public string Country { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,6 +118,10 @@ namespace TextMagicClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GetCallsPricesResponse {\n");
+            sb.Append("  Outbound: ").Append(Outbound).Append("\n");
+            sb.Append("  Inbound: ").Append(Inbound).Append("\n");
+            sb.Append("  Forward: ").Append(Forward).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -79,7 +155,27 @@ namespace TextMagicClient.Model
             if (input == null)
                 return false;
 
-            return false;
+            return 
+                (
+                    this.Outbound == input.Outbound ||
+                    (this.Outbound != null &&
+                    this.Outbound.Equals(input.Outbound))
+                ) && 
+                (
+                    this.Inbound == input.Inbound ||
+                    (this.Inbound != null &&
+                    this.Inbound.Equals(input.Inbound))
+                ) && 
+                (
+                    this.Forward == input.Forward ||
+                    (this.Forward != null &&
+                    this.Forward.Equals(input.Forward))
+                ) && 
+                (
+                    this.Country == input.Country ||
+                    (this.Country != null &&
+                    this.Country.Equals(input.Country))
+                );
         }
 
         /// <summary>
@@ -91,6 +187,14 @@ namespace TextMagicClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Outbound != null)
+                    hashCode = hashCode * 59 + this.Outbound.GetHashCode();
+                if (this.Inbound != null)
+                    hashCode = hashCode * 59 + this.Inbound.GetHashCode();
+                if (this.Forward != null)
+                    hashCode = hashCode * 59 + this.Forward.GetHashCode();
+                if (this.Country != null)
+                    hashCode = hashCode * 59 + this.Country.GetHashCode();
                 return hashCode;
             }
         }
