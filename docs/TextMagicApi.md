@@ -147,7 +147,7 @@ Method | HTTP request | Description
 [**UpdateCustomFieldValue**](TextMagicApi.md#updatecustomfieldvalue) | **PUT** /api/v2/customfields/{id}/update | Edit the custom field value of a specified contact
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#updateinboundmessagesnotificationsettings) | **PUT** /api/v2/user/notification/inbound | Update inbound messages notification settings
 [**UpdateList**](TextMagicApi.md#updatelist) | **PUT** /api/v2/lists/{id} | Edit a list
-[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings/normalized | Change sender settings
+[**UpdateSenderSetting**](TextMagicApi.md#updatesendersetting) | **PUT** /api/v2/sender/settings | Change sender settings
 [**UpdateTemplate**](TextMagicApi.md#updatetemplate) | **PUT** /api/v2/templates/{id} | Update a template
 [**UploadAvatar**](TextMagicApi.md#uploadavatar) | **POST** /api/v2/user/avatar | Upload an avatar
 [**UploadContactAvatar**](TextMagicApi.md#uploadcontactavatar) | **POST** /api/v2/contacts/{id}/avatar | Upload an avatar

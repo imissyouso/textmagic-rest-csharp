@@ -81,7 +81,13 @@ namespace TextMagicClient.Model
             /// Enum Low for value: low
             /// </summary>
             [EnumMember(Value = "low")]
-            Low = 3
+            Low = 3,
+            
+            /// <summary>
+            /// Enum Unknown for value: unknown
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown = 4
         }
 
         /// <summary>

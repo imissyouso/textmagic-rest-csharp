@@ -29320,7 +29320,7 @@ namespace TextMagicClient.Api
             if (updateSenderSettingInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'updateSenderSettingInputObject' when calling TextMagicApi->UpdateSenderSetting");
 
-            var localVarPath = "/api/v2/sender/settings/normalized";
+            var localVarPath = "/api/v2/sender/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -29399,7 +29399,7 @@ namespace TextMagicClient.Api
             if (updateSenderSettingInputObject == null)
                 throw new ApiException(400, "Missing required parameter 'updateSenderSettingInputObject' when calling TextMagicApi->UpdateSenderSetting");
 
-            var localVarPath = "/api/v2/sender/settings/normalized";
+            var localVarPath = "/api/v2/sender/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
