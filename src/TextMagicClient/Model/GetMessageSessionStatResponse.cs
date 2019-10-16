@@ -42,9 +42,9 @@ namespace TextMagicClient.Model
         /// <param name="delivered">Amount of delivered messages. (required).</param>
         /// <param name="accepted">Amount of accepted messages. (required).</param>
         /// <param name="rejected">Amount of rejected messages. (required).</param>
-        /// <param name="scheduled">Amount of schedules messages. (required).</param>
-        /// <param name="all">all (required).</param>
-        /// <param name="sent">Total sent messages. (required).</param>
+        /// <param name="scheduled">Amount of scheduled messages. (required).</param>
+        /// <param name="all">Total amount of messages. (required).</param>
+        /// <param name="sent">Amount of sent but not yet delivered messages. (required).</param>
         public GetMessageSessionStatResponse(int? failed = default(int?), int? delivered = default(int?), int? accepted = default(int?), int? rejected = default(int?), int? scheduled = default(int?), int? all = default(int?), int? sent = default(int?))
         {
             // to ensure "failed" is required (not null)
@@ -141,22 +141,23 @@ namespace TextMagicClient.Model
         public int? Rejected { get; set; }
 
         /// <summary>
-        /// Amount of schedules messages.
+        /// Amount of scheduled messages.
         /// </summary>
-        /// <value>Amount of schedules messages.</value>
+        /// <value>Amount of scheduled messages.</value>
         [DataMember(Name="scheduled", EmitDefaultValue=false)]
         public int? Scheduled { get; set; }
 
         /// <summary>
-        /// Gets or Sets All
+        /// Total amount of messages.
         /// </summary>
+        /// <value>Total amount of messages.</value>
         [DataMember(Name="all", EmitDefaultValue=false)]
         public int? All { get; set; }
 
         /// <summary>
-        /// Total sent messages.
+        /// Amount of sent but not yet delivered messages.
         /// </summary>
-        /// <value>Total sent messages.</value>
+        /// <value>Amount of sent but not yet delivered messages.</value>
         [DataMember(Name="sent", EmitDefaultValue=false)]
         public int? Sent { get; set; }
 

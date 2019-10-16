@@ -31,6 +31,55 @@ namespace TextMagicClient.Model
     public partial class MessagesIcs :  IEquatable<MessagesIcs>, IValidatableObject
     {
         /// <summary>
+        /// Defines Type
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Once for value: Once
+            /// </summary>
+            [EnumMember(Value = "Once")]
+            Once = 1,
+            
+            /// <summary>
+            /// Enum Hourly for value: Hourly
+            /// </summary>
+            [EnumMember(Value = "Hourly")]
+            Hourly = 2,
+            
+            /// <summary>
+            /// Enum Daily for value: Daily
+            /// </summary>
+            [EnumMember(Value = "Daily")]
+            Daily = 3,
+            
+            /// <summary>
+            /// Enum Weekly for value: Weekly
+            /// </summary>
+            [EnumMember(Value = "Weekly")]
+            Weekly = 4,
+            
+            /// <summary>
+            /// Enum Monthly for value: Monthly
+            /// </summary>
+            [EnumMember(Value = "Monthly")]
+            Monthly = 5,
+            
+            /// <summary>
+            /// Enum Yearly for value: Yearly
+            /// </summary>
+            [EnumMember(Value = "Yearly")]
+            Yearly = 6
+        }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MessagesIcs" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -43,19 +92,19 @@ namespace TextMagicClient.Model
         /// <param name="rrule">[iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string.  (required).</param>
         /// <param name="session">session (required).</param>
         /// <param name="lastSent">Date and time when last message has been sent. (required).</param>
-        /// <param name="contactName">contactName (required).</param>
+        /// <param name="contactName">Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned. (required).</param>
         /// <param name="parameters">parameters (required).</param>
         /// <param name="type">type (required).</param>
-        /// <param name="summary">summary (required).</param>
+        /// <param name="summary">A human-readable summary of the sending schedule. (required).</param>
         /// <param name="textParameters">textParameters (required).</param>
-        /// <param name="firstOccurrence">firstOccurrence (required).</param>
-        /// <param name="lastOccurrence">lastOccurrence (required).</param>
+        /// <param name="firstOccurrence">First occurence date. (required).</param>
+        /// <param name="lastOccurrence">Last occurence date (could be &#x60;null&#x60; if the schedule is endless). (required).</param>
         /// <param name="recipientsCount">Amount of actual recipients. (required).</param>
         /// <param name="timezone">User-friendly timezone name (with spaces replaced by underscores). (required).</param>
         /// <param name="completed">Indicates that schedling has been completed. (required).</param>
-        /// <param name="avatar">TODO (required).</param>
+        /// <param name="avatar">A relative link to the contact avatar. (required).</param>
         /// <param name="createdAt">Scheduling creation time. (required).</param>
-        public MessagesIcs(int? id = default(int?), DateTime? nextSend = default(DateTime?), string rrule = default(string), MessageSession session = default(MessageSession), DateTime? lastSent = default(DateTime?), string contactName = default(string), MessagesIcsParameters parameters = default(MessagesIcsParameters), string type = default(string), string summary = default(string), MessagesIcsTextParameters textParameters = default(MessagesIcsTextParameters), DateTime? firstOccurrence = default(DateTime?), DateTime? lastOccurrence = default(DateTime?), int? recipientsCount = default(int?), string timezone = default(string), bool? completed = default(bool?), string avatar = default(string), DateTime? createdAt = default(DateTime?))
+        public MessagesIcs(int? id = default(int?), DateTime? nextSend = default(DateTime?), string rrule = default(string), MessageSession session = default(MessageSession), DateTime? lastSent = default(DateTime?), string contactName = default(string), MessagesIcsParameters parameters = default(MessagesIcsParameters), TypeEnum type = default(TypeEnum), string summary = default(string), MessagesIcsTextParameters textParameters = default(MessagesIcsTextParameters), DateTime? firstOccurrence = default(DateTime?), DateTime? lastOccurrence = default(DateTime?), int? recipientsCount = default(int?), string timezone = default(string), bool? completed = default(bool?), string avatar = default(string), DateTime? createdAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -247,8 +296,9 @@ namespace TextMagicClient.Model
         public DateTime? LastSent { get; set; }
 
         /// <summary>
-        /// Gets or Sets ContactName
+        /// Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.
         /// </summary>
+        /// <value>Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.</value>
         [DataMember(Name="contactName", EmitDefaultValue=false)]
         public string ContactName { get; set; }
 
@@ -258,15 +308,11 @@ namespace TextMagicClient.Model
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public MessagesIcsParameters Parameters { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Summary
+        /// A human-readable summary of the sending schedule.
         /// </summary>
+        /// <value>A human-readable summary of the sending schedule.</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public string Summary { get; set; }
 
@@ -277,14 +323,16 @@ namespace TextMagicClient.Model
         public MessagesIcsTextParameters TextParameters { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstOccurrence
+        /// First occurence date.
         /// </summary>
+        /// <value>First occurence date.</value>
         [DataMember(Name="firstOccurrence", EmitDefaultValue=false)]
         public DateTime? FirstOccurrence { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastOccurrence
+        /// Last occurence date (could be &#x60;null&#x60; if the schedule is endless).
         /// </summary>
+        /// <value>Last occurence date (could be &#x60;null&#x60; if the schedule is endless).</value>
         [DataMember(Name="lastOccurrence", EmitDefaultValue=false)]
         public DateTime? LastOccurrence { get; set; }
 
@@ -310,9 +358,9 @@ namespace TextMagicClient.Model
         public bool? Completed { get; set; }
 
         /// <summary>
-        /// TODO
+        /// A relative link to the contact avatar.
         /// </summary>
-        /// <value>TODO</value>
+        /// <value>A relative link to the contact avatar.</value>
         [DataMember(Name="avatar", EmitDefaultValue=false)]
         public string Avatar { get; set; }
 

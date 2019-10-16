@@ -31,17 +31,18 @@ namespace TextMagicClient.Model
     public partial class GetContactsAutocompleteResponseItem :  IEquatable<GetContactsAutocompleteResponseItem>, IValidatableObject
     {
         /// <summary>
-        /// Defines EntityType
+        /// Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message 
         /// </summary>
+        /// <value>Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EntityTypeEnum
         {
             
             /// <summary>
-            /// Enum List for value: list
+            /// Enum Reply for value: reply
             /// </summary>
-            [EnumMember(Value = "list")]
-            List = 1,
+            [EnumMember(Value = "reply")]
+            Reply = 1,
             
             /// <summary>
             /// Enum Contact for value: contact
@@ -50,15 +51,16 @@ namespace TextMagicClient.Model
             Contact = 2,
             
             /// <summary>
-            /// Enum Reply for value: reply
+            /// Enum List for value: list
             /// </summary>
-            [EnumMember(Value = "reply")]
-            Reply = 3
+            [EnumMember(Value = "list")]
+            List = 3
         }
 
         /// <summary>
-        /// Gets or Sets EntityType
+        /// Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message 
         /// </summary>
+        /// <value>Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message </value>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum EntityType { get; set; }
         /// <summary>
@@ -70,10 +72,10 @@ namespace TextMagicClient.Model
         /// Initializes a new instance of the <see cref="GetContactsAutocompleteResponseItem" /> class.
         /// </summary>
         /// <param name="entityId">Id of entity. 0 if object is a Reply (required).</param>
-        /// <param name="entityType">entityType (required).</param>
+        /// <param name="entityType">Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message  (required).</param>
         /// <param name="value">Id of contact/list if entityType is contact/list OR phone number if entityType is reply. (required).</param>
         /// <param name="label">Name of the contact/list if entityType is contact/list OR phone number if entityType is reply. (required).</param>
-        /// <param name="sharedBy">If contact or list was shared by another user then name if this user will be shown. (required).</param>
+        /// <param name="sharedBy">If contact or list was shared by another sub-account then name if this user will be shown. (required).</param>
         /// <param name="avatar">Contact avatar URI. (required).</param>
         /// <param name="favorited">If contact has been marked as favorite. (required).</param>
         /// <param name="userId">Owner id of the contact/list (if it was shared). (required).</param>
@@ -206,9 +208,9 @@ namespace TextMagicClient.Model
         public string Label { get; set; }
 
         /// <summary>
-        /// If contact or list was shared by another user then name if this user will be shown.
+        /// If contact or list was shared by another sub-account then name if this user will be shown.
         /// </summary>
-        /// <value>If contact or list was shared by another user then name if this user will be shown.</value>
+        /// <value>If contact or list was shared by another sub-account then name if this user will be shown.</value>
         [DataMember(Name="sharedBy", EmitDefaultValue=false)]
         public string SharedBy { get; set; }
 

@@ -142,14 +142,14 @@ namespace TextMagicClient.Model
         /// <param name="avatar">avatar (required).</param>
         /// <param name="deleted">Indicates that message has been deleted..</param>
         /// <param name="charset">Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  (required).</param>
-        /// <param name="charsetLabel">charsetLabel (required).</param>
+        /// <param name="charsetLabel">Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages  (required).</param>
         /// <param name="firstName">Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID).  (required).</param>
         /// <param name="lastName">Contact last name. (required).</param>
         /// <param name="country">Two-letter ISO country code of the recipient phone number.  (required).</param>
         /// <param name="phone">Receipent phone number..</param>
         /// <param name="price">Message price..</param>
         /// <param name="partsCount">Message parts (multiples of 160 characters) count. (required).</param>
-        /// <param name="fromEmail">fromEmail.</param>
+        /// <param name="fromEmail">User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address..</param>
         /// <param name="fromNumber">Phone number which is used to send SMS..</param>
         /// <param name="smscId">smscId.</param>
         /// <param name="contact">contact.</param>
@@ -365,8 +365,9 @@ namespace TextMagicClient.Model
         public string Charset { get; set; }
 
         /// <summary>
-        /// Gets or Sets CharsetLabel
+        /// Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
         /// </summary>
+        /// <value>Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages </value>
         [DataMember(Name="charsetLabel", EmitDefaultValue=false)]
         public string CharsetLabel { get; set; }
 
@@ -413,8 +414,9 @@ namespace TextMagicClient.Model
         public int? PartsCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets FromEmail
+        /// User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address.
         /// </summary>
+        /// <value>User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address.</value>
         [DataMember(Name="fromEmail", EmitDefaultValue=false)]
         public string FromEmail { get; set; }
 

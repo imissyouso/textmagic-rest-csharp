@@ -42,7 +42,7 @@ namespace TextMagicClient.Model
         /// <param name="forwardedCallNotification">Should user receive notification about new forwarded calls. (required).</param>
         /// <param name="includeSmsHistory">Include SMS history into notification Email. (required).</param>
         /// <param name="sendInHtmlFormat">Send Email notification in HTML format. (required).</param>
-        /// <param name="alertEmail1">New message notification email 2. (required).</param>
+        /// <param name="alertEmail1">New message notification email 1. (required).</param>
         /// <param name="alertEmail2">New message notification email 2. (required).</param>
         /// <param name="alertEmail3">New message notification email 3. (required).</param>
         public GetInboundMessagesNotificationSettingsResponse(bool? inboundMessageNotification = default(bool?), bool? forwardedCallNotification = default(bool?), bool? includeSmsHistory = default(bool?), bool? sendInHtmlFormat = default(bool?), string alertEmail1 = default(string), string alertEmail2 = default(string), string alertEmail3 = default(string))
@@ -141,9 +141,9 @@ namespace TextMagicClient.Model
         public bool? SendInHtmlFormat { get; set; }
 
         /// <summary>
-        /// New message notification email 2.
+        /// New message notification email 1.
         /// </summary>
-        /// <value>New message notification email 2.</value>
+        /// <value>New message notification email 1.</value>
         [DataMember(Name="alertEmail1", EmitDefaultValue=false)]
         public string AlertEmail1 { get; set; }
 

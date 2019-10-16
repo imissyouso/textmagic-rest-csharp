@@ -31,6 +31,45 @@ namespace TextMagicClient.Model
     public partial class SendMessageResponse :  IEquatable<SendMessageResponse>, IValidatableObject
     {
         /// <summary>
+        /// Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
+        /// </summary>
+        /// <value>Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Message for value: message
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message = 1,
+            
+            /// <summary>
+            /// Enum Session for value: session
+            /// </summary>
+            [EnumMember(Value = "session")]
+            Session = 2,
+            
+            /// <summary>
+            /// Enum Schedule for value: schedule
+            /// </summary>
+            [EnumMember(Value = "schedule")]
+            Schedule = 3,
+            
+            /// <summary>
+            /// Enum Bulk for value: bulk
+            /// </summary>
+            [EnumMember(Value = "bulk")]
+            Bulk = 4
+        }
+
+        /// <summary>
+        /// Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
+        /// </summary>
+        /// <value>Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). </value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="SendMessageResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -40,13 +79,13 @@ namespace TextMagicClient.Model
         /// </summary>
         /// <param name="id">Message ID. (required).</param>
         /// <param name="href">URI of message session. (required).</param>
-        /// <param name="type">type (required).</param>
+        /// <param name="type">Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).  (required).</param>
         /// <param name="sessionId">Message session ID. (required).</param>
         /// <param name="bulkId">Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). (required).</param>
-        /// <param name="messageId">messageId (required).</param>
+        /// <param name="messageId">Message ID. (required).</param>
         /// <param name="scheduleId">Message Schedule ID. (required).</param>
         /// <param name="chatId">Message Chat ID. (required).</param>
-        public SendMessageResponse(int? id = default(int?), string href = default(string), string type = default(string), int? sessionId = default(int?), int? bulkId = default(int?), int? messageId = default(int?), int? scheduleId = default(int?), int? chatId = default(int?))
+        public SendMessageResponse(int? id = default(int?), string href = default(string), TypeEnum type = default(TypeEnum), int? sessionId = default(int?), int? bulkId = default(int?), int? messageId = default(int?), int? scheduleId = default(int?), int? chatId = default(int?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -136,11 +175,6 @@ namespace TextMagicClient.Model
         [DataMember(Name="href", EmitDefaultValue=false)]
         public string Href { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
 
         /// <summary>
         /// Message session ID.
@@ -157,8 +191,9 @@ namespace TextMagicClient.Model
         public int? BulkId { get; set; }
 
         /// <summary>
-        /// Gets or Sets MessageId
+        /// Message ID.
         /// </summary>
+        /// <value>Message ID.</value>
         [DataMember(Name="messageId", EmitDefaultValue=false)]
         public int? MessageId { get; set; }
 

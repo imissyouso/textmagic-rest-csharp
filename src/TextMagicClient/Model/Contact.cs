@@ -31,6 +31,93 @@ namespace TextMagicClient.Model
     public partial class Contact :  IEquatable<Contact>, IValidatableObject
     {
         /// <summary>
+        /// Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
+        /// </summary>
+        /// <value>Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PhoneTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum _1 for value: -1
+            /// </summary>
+            [EnumMember(Value = "-1")]
+            _1 = 1,
+            
+            /// <summary>
+            /// Enum _0 for value: 0
+            /// </summary>
+            [EnumMember(Value = "0")]
+            _0 = 2,
+            
+            /// <summary>
+            /// Enum _1 for value: 1
+            /// </summary>
+            [EnumMember(Value = "1")]
+            _1 = 3,
+            
+            /// <summary>
+            /// Enum _2 for value: 2
+            /// </summary>
+            [EnumMember(Value = "2")]
+            _2 = 4,
+            
+            /// <summary>
+            /// Enum _3 for value: 3
+            /// </summary>
+            [EnumMember(Value = "3")]
+            _3 = 5,
+            
+            /// <summary>
+            /// Enum _4 for value: 4
+            /// </summary>
+            [EnumMember(Value = "4")]
+            _4 = 6,
+            
+            /// <summary>
+            /// Enum _5 for value: 5
+            /// </summary>
+            [EnumMember(Value = "5")]
+            _5 = 7,
+            
+            /// <summary>
+            /// Enum _6 for value: 6
+            /// </summary>
+            [EnumMember(Value = "6")]
+            _6 = 8,
+            
+            /// <summary>
+            /// Enum _7 for value: 7
+            /// </summary>
+            [EnumMember(Value = "7")]
+            _7 = 9,
+            
+            /// <summary>
+            /// Enum _8 for value: 8
+            /// </summary>
+            [EnumMember(Value = "8")]
+            _8 = 10,
+            
+            /// <summary>
+            /// Enum _9 for value: 9
+            /// </summary>
+            [EnumMember(Value = "9")]
+            _9 = 11,
+            
+            /// <summary>
+            /// Enum _10 for value: 10
+            /// </summary>
+            [EnumMember(Value = "10")]
+            _10 = 12
+        }
+
+        /// <summary>
+        /// Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
+        /// </summary>
+        /// <value>Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. </value>
+        [DataMember(Name="phoneType", EmitDefaultValue=false)]
+        public PhoneTypeEnum PhoneType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -50,10 +137,10 @@ namespace TextMagicClient.Model
         /// <param name="customFields">See [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section. (required).</param>
         /// <param name="user">user (required).</param>
         /// <param name="lists">lists (required).</param>
-        /// <param name="phoneType">phoneType (required).</param>
+        /// <param name="phoneType">Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined.  (required).</param>
         /// <param name="avatar">avatar (required).</param>
         /// <param name="notes">notes (required).</param>
-        public Contact(int? id = default(int?), bool? favorited = default(bool?), bool? blocked = default(bool?), string firstName = default(string), string lastName = default(string), string companyName = default(string), string phone = default(string), string email = default(string), Country country = default(Country), List<ContactCustomField> customFields = default(List<ContactCustomField>), User user = default(User), List<List> lists = default(List<List>), string phoneType = default(string), ContactImage avatar = default(ContactImage), List<ContactNote> notes = default(List<ContactNote>))
+        public Contact(int? id = default(int?), bool? favorited = default(bool?), bool? blocked = default(bool?), string firstName = default(string), string lastName = default(string), string companyName = default(string), string phone = default(string), string email = default(string), Country country = default(Country), List<ContactCustomField> customFields = default(List<ContactCustomField>), User user = default(User), List<List> lists = default(List<List>), PhoneTypeEnum phoneType = default(PhoneTypeEnum), ContactImage avatar = default(ContactImage), List<ContactNote> notes = default(List<ContactNote>))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -274,11 +361,6 @@ namespace TextMagicClient.Model
         [DataMember(Name="lists", EmitDefaultValue=false)]
         public List<List> Lists { get; set; }
 
-        /// <summary>
-        /// Gets or Sets PhoneType
-        /// </summary>
-        [DataMember(Name="phoneType", EmitDefaultValue=false)]
-        public string PhoneType { get; set; }
 
         /// <summary>
         /// Gets or Sets Avatar

@@ -44,10 +44,10 @@ namespace TextMagicClient.Model
         /// <param name="favorited">Is the List favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites). (required).</param>
         /// <param name="membersCount">List members count. (required).</param>
         /// <param name="user">user (required).</param>
-        /// <param name="service">service (required).</param>
+        /// <param name="service">Internal service field. (required).</param>
         /// <param name="shared">Is the list **shared** among all sub-accounts? (required).</param>
         /// <param name="avatar">avatar (required).</param>
-        /// <param name="isDefault">Indicates that List is used as a default. All new contacts will be added in this List by default. (required).</param>
+        /// <param name="isDefault">Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default. (required).</param>
         public List(int? id = default(int?), string name = default(string), string description = default(string), bool? favorited = default(bool?), int? membersCount = default(int?), User user = default(User), bool? service = default(bool?), bool? shared = default(bool?), ListImage avatar = default(ListImage), bool? isDefault = default(bool?))
         {
             // to ensure "id" is required (not null)
@@ -184,8 +184,9 @@ namespace TextMagicClient.Model
         public User User { get; set; }
 
         /// <summary>
-        /// Gets or Sets Service
+        /// Internal service field.
         /// </summary>
+        /// <value>Internal service field.</value>
         [DataMember(Name="service", EmitDefaultValue=false)]
         public bool? Service { get; set; }
 
@@ -203,9 +204,9 @@ namespace TextMagicClient.Model
         public ListImage Avatar { get; set; }
 
         /// <summary>
-        /// Indicates that List is used as a default. All new contacts will be added in this List by default.
+        /// Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.
         /// </summary>
-        /// <value>Indicates that List is used as a default. All new contacts will be added in this List by default.</value>
+        /// <value>Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.</value>
         [DataMember(Name="isDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
 
