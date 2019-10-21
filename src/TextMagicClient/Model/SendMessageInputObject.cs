@@ -50,12 +50,12 @@ namespace TextMagicClient.Model
         /// <param name="partsCount">Maximum message parts count (TextMagic allows sending 1 to 6 message parts)..</param>
         /// <param name="referenceId">Custom message reference id which can be used in your application infrastructure..</param>
         /// <param name="from">One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs)..</param>
-        /// <param name="rule">iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details..</param>
+        /// <param name="rrule">iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details..</param>
         /// <param name="createChat">Should sending method try to create new Chat(if not exist) with specified recipients. (default to false).</param>
         /// <param name="tts">Send Text to Speech message. (default to false).</param>
         /// <param name="local">Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to false).</param>
         /// <param name="localCountry">2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country..</param>
-        public SendMessageInputObject(string text = default(string), int? templateId = default(int?), int? sendingTime = default(int?), string sendingDateTime = default(string), string sendingTimezone = default(string), string contacts = default(string), string lists = default(string), string phones = default(string), bool? cutExtra = false, int? partsCount = default(int?), int? referenceId = default(int?), string from = default(string), string rule = default(string), bool? createChat = false, bool? tts = false, bool? local = false, string localCountry = default(string))
+        public SendMessageInputObject(string text = default(string), int? templateId = default(int?), int? sendingTime = default(int?), string sendingDateTime = default(string), string sendingTimezone = default(string), string contacts = default(string), string lists = default(string), string phones = default(string), bool? cutExtra = false, int? partsCount = default(int?), int? referenceId = default(int?), string from = default(string), string rrule = default(string), bool? createChat = false, bool? tts = false, bool? local = false, string localCountry = default(string))
         {
             // to ensure "text" is required (not null)
             if (text == null)
@@ -93,7 +93,7 @@ namespace TextMagicClient.Model
             this.PartsCount = partsCount;
             this.ReferenceId = referenceId;
             this.From = from;
-            this.Rule = rule;
+            this.Rrule = rrule;
             // use default value if no "createChat" provided
             if (createChat == null)
             {
@@ -212,8 +212,8 @@ namespace TextMagicClient.Model
         /// iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
         /// </summary>
         /// <value>iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.</value>
-        [DataMember(Name="rule", EmitDefaultValue=false)]
-        public string Rule { get; set; }
+        [DataMember(Name="rrule", EmitDefaultValue=false)]
+        public string Rrule { get; set; }
 
         /// <summary>
         /// Should sending method try to create new Chat(if not exist) with specified recipients.
@@ -263,7 +263,7 @@ namespace TextMagicClient.Model
             sb.Append("  PartsCount: ").Append(PartsCount).Append("\n");
             sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
-            sb.Append("  Rule: ").Append(Rule).Append("\n");
+            sb.Append("  Rrule: ").Append(Rrule).Append("\n");
             sb.Append("  CreateChat: ").Append(CreateChat).Append("\n");
             sb.Append("  Tts: ").Append(Tts).Append("\n");
             sb.Append("  Local: ").Append(Local).Append("\n");
@@ -363,9 +363,9 @@ namespace TextMagicClient.Model
                     this.From.Equals(input.From))
                 ) && 
                 (
-                    this.Rule == input.Rule ||
-                    (this.Rule != null &&
-                    this.Rule.Equals(input.Rule))
+                    this.Rrule == input.Rrule ||
+                    (this.Rrule != null &&
+                    this.Rrule.Equals(input.Rrule))
                 ) && 
                 (
                     this.CreateChat == input.CreateChat ||
@@ -422,8 +422,8 @@ namespace TextMagicClient.Model
                     hashCode = hashCode * 59 + this.ReferenceId.GetHashCode();
                 if (this.From != null)
                     hashCode = hashCode * 59 + this.From.GetHashCode();
-                if (this.Rule != null)
-                    hashCode = hashCode * 59 + this.Rule.GetHashCode();
+                if (this.Rrule != null)
+                    hashCode = hashCode * 59 + this.Rrule.GetHashCode();
                 if (this.CreateChat != null)
                     hashCode = hashCode * 59 + this.CreateChat.GetHashCode();
                 if (this.Tts != null)

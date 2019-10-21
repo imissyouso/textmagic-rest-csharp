@@ -25,7 +25,7 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// ResourceLinkResponse
+    /// Response contains paginated list of data items.
     /// </summary>
     [DataContract]
     public partial class ResourceLinkResponse :  IEquatable<ResourceLinkResponse>, IValidatableObject

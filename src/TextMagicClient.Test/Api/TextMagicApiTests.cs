@@ -1009,17 +1009,6 @@ namespace TextMagicClient.Test
         }
         
         /// <summary>
-        /// Test GetDisallowedRules
-        /// </summary>
-        [Test]
-        public void GetDisallowedRulesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetDisallowedRules();
-            //Assert.IsInstanceOf<GetDisallowedRulesResponse> (response, "response is GetDisallowedRulesResponse");
-        }
-        
-        /// <summary>
         /// Test GetFavourites
         /// </summary>
         [Test]

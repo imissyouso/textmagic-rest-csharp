@@ -1688,25 +1688,6 @@ namespace TextMagicClient.Api
         /// <returns>ApiResponse of UsersInbound</returns>
         ApiResponse<UsersInbound> GetDedicatedNumberWithHttpInfo (int? id);
         /// <summary>
-        /// Get disallowed permissions
-        /// </summary>
-        /// <remarks>
-        /// Get an array of all rules that are disallowed to the current account.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetDisallowedRulesResponse</returns>
-        GetDisallowedRulesResponse GetDisallowedRules ();
-
-        /// <summary>
-        /// Get disallowed permissions
-        /// </summary>
-        /// <remarks>
-        /// Get an array of all rules that are disallowed to the current account.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetDisallowedRulesResponse</returns>
-        ApiResponse<GetDisallowedRulesResponse> GetDisallowedRulesWithHttpInfo ();
-        /// <summary>
         /// Get favorite contacts and lists
         /// </summary>
         /// <remarks>
@@ -5140,25 +5121,6 @@ namespace TextMagicClient.Api
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (UsersInbound)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersInbound>> GetDedicatedNumberAsyncWithHttpInfo (int? id);
-        /// <summary>
-        /// Get disallowed permissions
-        /// </summary>
-        /// <remarks>
-        /// Get an array of all rules that are disallowed to the current account.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetDisallowedRulesResponse</returns>
-        System.Threading.Tasks.Task<GetDisallowedRulesResponse> GetDisallowedRulesAsync ();
-
-        /// <summary>
-        /// Get disallowed permissions
-        /// </summary>
-        /// <remarks>
-        /// Get an array of all rules that are disallowed to the current account.
-        /// </remarks>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetDisallowedRulesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetDisallowedRulesResponse>> GetDisallowedRulesAsyncWithHttpInfo ();
         /// <summary>
         /// Get favorite contacts and lists
         /// </summary>
@@ -18433,141 +18395,6 @@ namespace TextMagicClient.Api
             return new ApiResponse<UsersInbound>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UsersInbound) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersInbound)));
-        }
-
-        /// <summary>
-        /// Get disallowed permissions Get an array of all rules that are disallowed to the current account.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>GetDisallowedRulesResponse</returns>
-        public GetDisallowedRulesResponse GetDisallowedRules ()
-        {
-             ApiResponse<GetDisallowedRulesResponse> localVarResponse = GetDisallowedRulesWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get disallowed permissions Get an array of all rules that are disallowed to the current account.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of GetDisallowedRulesResponse</returns>
-        public ApiResponse< GetDisallowedRulesResponse > GetDisallowedRulesWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/user/disallowed-rules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetDisallowedRules", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetDisallowedRulesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDisallowedRulesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDisallowedRulesResponse)));
-        }
-
-        /// <summary>
-        /// Get disallowed permissions Get an array of all rules that are disallowed to the current account.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of GetDisallowedRulesResponse</returns>
-        public async System.Threading.Tasks.Task<GetDisallowedRulesResponse> GetDisallowedRulesAsync ()
-        {
-             ApiResponse<GetDisallowedRulesResponse> localVarResponse = await GetDisallowedRulesAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get disallowed permissions Get an array of all rules that are disallowed to the current account.
-        /// </summary>
-        /// <exception cref="TextMagicClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (GetDisallowedRulesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GetDisallowedRulesResponse>> GetDisallowedRulesAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/user/disallowed-rules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-            // authentication (BasicAuth) required
-            // http basic authentication required
-            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
-            {
-                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetDisallowedRules", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GetDisallowedRulesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDisallowedRulesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDisallowedRulesResponse)));
         }
 
         /// <summary>

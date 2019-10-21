@@ -163,12 +163,12 @@ namespace TextMagicClient.Test
             // TODO unit test for the property 'From'
         }
         /// <summary>
-        /// Test the property 'Rule'
+        /// Test the property 'Rrule'
         /// </summary>
         [Test]
-        public void RuleTest()
+        public void RruleTest()
         {
-            // TODO unit test for the property 'Rule'
+            // TODO unit test for the property 'Rrule'
         }
         /// <summary>
         /// Test the property 'CreateChat'

@@ -25,7 +25,7 @@ using SwaggerDateConverter = TextMagicClient.Client.SwaggerDateConverter;
 namespace TextMagicClient.Model
 {
     /// <summary>
-    /// Returned when the form has errors
+    /// Returned when input data validation process has been failed.
     /// </summary>
     [DataContract]
     public partial class BadRequestResponse :  IEquatable<BadRequestResponse>, IValidatableObject
@@ -33,7 +33,7 @@ namespace TextMagicClient.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BadRequestResponse" /> class.
         /// </summary>
-        /// <param name="code">HTTP error code..</param>
+        /// <param name="code">Error code. Meanings of error codes are similar to [HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)..</param>
         /// <param name="message">Brief error message. You could display this message to your user or save it in a log..</param>
         /// <param name="errors">errors.</param>
         public BadRequestResponse(int? code = default(int?), string message = default(string), BadRequestResponseErrors errors = default(BadRequestResponseErrors))
@@ -44,9 +44,9 @@ namespace TextMagicClient.Model
         }
         
         /// <summary>
-        /// HTTP error code.
+        /// Error code. Meanings of error codes are similar to [HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
         /// </summary>
-        /// <value>HTTP error code.</value>
+        /// <value>Error code. Meanings of error codes are similar to [HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
 

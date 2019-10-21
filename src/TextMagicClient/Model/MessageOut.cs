@@ -151,15 +151,7 @@ namespace TextMagicClient.Model
         /// <param name="partsCount">Message parts (multiples of 160 characters) count. (required).</param>
         /// <param name="fromEmail">User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address..</param>
         /// <param name="fromNumber">Phone number which is used to send SMS..</param>
-        /// <param name="smscId">smscId.</param>
-        /// <param name="contact">contact.</param>
-        /// <param name="source">source.</param>
-        /// <param name="deliveredCount">deliveredCount.</param>
-        /// <param name="numbersCount">numbersCount.</param>
-        /// <param name="userId">userId.</param>
-        /// <param name="creditsPrice">creditsPrice.</param>
-        /// <param name="chars">chars.</param>
-        public MessageOut(int? id = default(int?), string sender = default(string), string receiver = default(string), string text = default(string), StatusEnum status = default(StatusEnum), int? contactId = default(int?), int? sessionId = default(int?), DateTime? messageTime = default(DateTime?), string avatar = default(string), bool? deleted = default(bool?), string charset = default(string), string charsetLabel = default(string), string firstName = default(string), string lastName = default(string), string country = default(string), string phone = default(string), float? price = default(float?), int? partsCount = default(int?), string fromEmail = default(string), string fromNumber = default(string), string smscId = default(string), string contact = default(string), string source = default(string), int? deliveredCount = default(int?), int? numbersCount = default(int?), int? userId = default(int?), string creditsPrice = default(string), int? chars = default(int?))
+        public MessageOut(int? id = default(int?), string sender = default(string), string receiver = default(string), string text = default(string), StatusEnum status = default(StatusEnum), int? contactId = default(int?), int? sessionId = default(int?), DateTime? messageTime = default(DateTime?), string avatar = default(string), bool? deleted = default(bool?), string charset = default(string), string charsetLabel = default(string), string firstName = default(string), string lastName = default(string), string country = default(string), string phone = default(string), float? price = default(float?), int? partsCount = default(int?), string fromEmail = default(string), string fromNumber = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -285,14 +277,6 @@ namespace TextMagicClient.Model
             this.Price = price;
             this.FromEmail = fromEmail;
             this.FromNumber = fromNumber;
-            this.SmscId = smscId;
-            this.Contact = contact;
-            this.Source = source;
-            this.DeliveredCount = deliveredCount;
-            this.NumbersCount = numbersCount;
-            this.UserId = userId;
-            this.CreditsPrice = creditsPrice;
-            this.Chars = chars;
         }
         
         /// <summary>
@@ -428,54 +412,6 @@ namespace TextMagicClient.Model
         public string FromNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets SmscId
-        /// </summary>
-        [DataMember(Name="smscId", EmitDefaultValue=false)]
-        public string SmscId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Contact
-        /// </summary>
-        [DataMember(Name="contact", EmitDefaultValue=false)]
-        public string Contact { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Source
-        /// </summary>
-        [DataMember(Name="source", EmitDefaultValue=false)]
-        public string Source { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DeliveredCount
-        /// </summary>
-        [DataMember(Name="deliveredCount", EmitDefaultValue=false)]
-        public int? DeliveredCount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NumbersCount
-        /// </summary>
-        [DataMember(Name="numbersCount", EmitDefaultValue=false)]
-        public int? NumbersCount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets UserId
-        /// </summary>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public int? UserId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CreditsPrice
-        /// </summary>
-        [DataMember(Name="creditsPrice", EmitDefaultValue=false)]
-        public string CreditsPrice { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Chars
-        /// </summary>
-        [DataMember(Name="chars", EmitDefaultValue=false)]
-        public int? Chars { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -503,14 +439,6 @@ namespace TextMagicClient.Model
             sb.Append("  PartsCount: ").Append(PartsCount).Append("\n");
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
             sb.Append("  FromNumber: ").Append(FromNumber).Append("\n");
-            sb.Append("  SmscId: ").Append(SmscId).Append("\n");
-            sb.Append("  Contact: ").Append(Contact).Append("\n");
-            sb.Append("  Source: ").Append(Source).Append("\n");
-            sb.Append("  DeliveredCount: ").Append(DeliveredCount).Append("\n");
-            sb.Append("  NumbersCount: ").Append(NumbersCount).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
-            sb.Append("  CreditsPrice: ").Append(CreditsPrice).Append("\n");
-            sb.Append("  Chars: ").Append(Chars).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -644,46 +572,6 @@ namespace TextMagicClient.Model
                     this.FromNumber == input.FromNumber ||
                     (this.FromNumber != null &&
                     this.FromNumber.Equals(input.FromNumber))
-                ) && 
-                (
-                    this.SmscId == input.SmscId ||
-                    (this.SmscId != null &&
-                    this.SmscId.Equals(input.SmscId))
-                ) && 
-                (
-                    this.Contact == input.Contact ||
-                    (this.Contact != null &&
-                    this.Contact.Equals(input.Contact))
-                ) && 
-                (
-                    this.Source == input.Source ||
-                    (this.Source != null &&
-                    this.Source.Equals(input.Source))
-                ) && 
-                (
-                    this.DeliveredCount == input.DeliveredCount ||
-                    (this.DeliveredCount != null &&
-                    this.DeliveredCount.Equals(input.DeliveredCount))
-                ) && 
-                (
-                    this.NumbersCount == input.NumbersCount ||
-                    (this.NumbersCount != null &&
-                    this.NumbersCount.Equals(input.NumbersCount))
-                ) && 
-                (
-                    this.UserId == input.UserId ||
-                    (this.UserId != null &&
-                    this.UserId.Equals(input.UserId))
-                ) && 
-                (
-                    this.CreditsPrice == input.CreditsPrice ||
-                    (this.CreditsPrice != null &&
-                    this.CreditsPrice.Equals(input.CreditsPrice))
-                ) && 
-                (
-                    this.Chars == input.Chars ||
-                    (this.Chars != null &&
-                    this.Chars.Equals(input.Chars))
                 );
         }
 
@@ -736,22 +624,6 @@ namespace TextMagicClient.Model
                     hashCode = hashCode * 59 + this.FromEmail.GetHashCode();
                 if (this.FromNumber != null)
                     hashCode = hashCode * 59 + this.FromNumber.GetHashCode();
-                if (this.SmscId != null)
-                    hashCode = hashCode * 59 + this.SmscId.GetHashCode();
-                if (this.Contact != null)
-                    hashCode = hashCode * 59 + this.Contact.GetHashCode();
-                if (this.Source != null)
-                    hashCode = hashCode * 59 + this.Source.GetHashCode();
-                if (this.DeliveredCount != null)
-                    hashCode = hashCode * 59 + this.DeliveredCount.GetHashCode();
-                if (this.NumbersCount != null)
-                    hashCode = hashCode * 59 + this.NumbersCount.GetHashCode();
-                if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
-                if (this.CreditsPrice != null)
-                    hashCode = hashCode * 59 + this.CreditsPrice.GetHashCode();
-                if (this.Chars != null)
-                    hashCode = hashCode * 59 + this.Chars.GetHashCode();
                 return hashCode;
             }
         }
